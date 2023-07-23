@@ -34,7 +34,7 @@ debugger0_a: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamicall
 
 The file isn't stripped of debug information which makes it easier.
 
-Start GDB in quite mode and then set the disassembly format to intel (which I prefer)
+Start GDB in quite mode and then set the disassembly format to intel, which I prefer.
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/GDB_baby_step_1]
 └─$ gdb -q debugger0_a 
