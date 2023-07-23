@@ -49,10 +49,17 @@ Archive:  files.zip
   inflating: files/acceptable_books/17879.txt.utf-8  
   inflating: files/14789.txt.utf-8   
 ```
+
 The path to the file is visible in the middle of the file listing but lets search for it anyway
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoGym/General_Skills/Fist_Find]
 └─$ find files -name uber-secret.txt
 files/adequate_books/more_books/.secret/deeper_secrets/deepest_secrets/uber-secret.txt
+```
 
+Finally, display the flag
+```
+┌──(kali㉿kali)-[/picoCTF/picoGym/General_Skills/Fist_Find]
+└─$ cat files/adequate_books/more_books/.secret/deeper_secrets/deepest_secrets/uber-secret.txt
+picoCTF{<REDACTED>}
 ```
