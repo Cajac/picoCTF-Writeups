@@ -50,6 +50,7 @@ The file listing is looong so we definetly needs to search for the flag with gre
  * output only the matching text (-o), and 
  * suppress output of file names (-h).
 ```
+
 ┌──(kali㉿kali)-[/picoCTF/picoGym/General_Skills/Big_Zip]
 └─$ grep -r -E -o -h 'picoCTF{.*}' big-zip-files
 picoCTF{<REDACTED>}
