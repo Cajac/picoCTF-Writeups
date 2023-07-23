@@ -43,10 +43,10 @@ The RBP register points to the current stack frame.
 ```
 
 In more detail the following happens:
- * The stack at position rbp-0x4 is set to 0x9fe1a
- * Then the value at position rbp-0x4 is compared with the value 0x2710
- * If the value at position rbp-0x4 is less than or equal to the value 0x2710 (which it isn't), jump to <main+37>
- * The value at position rbp-0x4 is subtracted by 0x65
+ * The stack at position rbp-0x4 is set to `0x9fe1a`
+ * Then the value at position rbp-0x4 is compared with the value `0x2710`
+ * If the value at position rbp-0x4 is less than or equal to the value `0x2710` (which it isn't), jump to <main+37>
+ * The value at position rbp-0x4 is subtracted by `0x65`
  * Then jump to <main+41> where the value is copied to EAX
 
 For more information on the x64 instruction set, see references below.
