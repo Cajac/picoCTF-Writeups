@@ -46,11 +46,11 @@ Archive:  big-zip-files.zip
 
 The file listing is looong so we definetly needs to search for the flag with grep. Search  
  * recusively (-r), 
- * with extended regular expressions (-e), 
+ * with extended regular expressions (-E), 
  * output only the matching text (-o), and 
  * suppress output of file names (-h).
 ```
-┌──(kali㉿kali)-[/mnt/…/picoCTF/picoGym/General_Skills/Big_Zip]
+┌──(kali㉿kali)-[/picoCTF/picoGym/General_Skills/Big_Zip]
 └─$ grep -r -E -o -h 'picoCTF{.*}' big-zip-files
 picoCTF{<REDACTED>}
 ```
