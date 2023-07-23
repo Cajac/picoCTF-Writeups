@@ -11,4 +11,3 @@
 - [First Find](First_Find.md)
   - [Challenge information](First_Find.md#challenge-information)
   - [Solution](First_Find.md#solution)
-
