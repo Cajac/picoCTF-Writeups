@@ -57,7 +57,7 @@ The path to the file is visible in the middle of the file listing but lets searc
 files/adequate_books/more_books/.secret/deeper_secrets/deepest_secrets/uber-secret.txt
 ```
 
-Finally, display the flag
+Finally, display the flag with cat
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoGym/General_Skills/Fist_Find]
 └─$ cat files/adequate_books/more_books/.secret/deeper_secrets/deepest_secrets/uber-secret.txt
