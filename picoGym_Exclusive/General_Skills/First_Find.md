@@ -2,7 +2,6 @@
 
 - [Challenge information](First_Find.md#challenge-information)
 - [Solution](First_Find.md#solution)
-  - [Kali commandline solution](First_Find.md#kali-commandline-solution)
 
 ## Challenge information
 ```
@@ -18,8 +17,6 @@ Hints:
 ```
 
 ## Solution
-
-### Kali commandline solution
 
 Unzip the file
 ```
