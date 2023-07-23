@@ -10,3 +10,6 @@ These pages are created to:
 
 The solutions contains step-by-step walkthroughs but doesn't display the flags.  
 Instead the flags are displayd as `picoCTF{<REDACTED>}`.
+
+## Challenges
+- [PicoGym Exclusive Challenges](picoGym_Exclusive/README.md)
