@@ -27,7 +27,6 @@ Start by checking the file type with `file`.
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/GDB_baby_step_2]
 └─$ file debugger0_b 
 debugger0_b: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=95b0203be2982e75dbc01d1cc25b1309f7aec5f7, for GNU/Linux 3.2.0, not stripped
-
 ```
 
 The file isn't stripped of debug information which makes it easier.
@@ -64,7 +63,6 @@ Dump of assembler code for function main:
    0x0000000000401141 <+59>:    pop    rbp
    0x0000000000401142 <+60>:    ret    
 End of assembler dump.
-
 ```
 
 Set a breakpoint at <main+59> and then run the program.
@@ -79,7 +77,7 @@ Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
 Breakpoint 1, 0x0000000000401141 in main ()
 ```
 
-Finally, print the value of EAX.
+Then print the value of EAX.
 ```
 (gdb) print $eax
 $1 = 307019
