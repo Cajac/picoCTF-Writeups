@@ -36,7 +36,7 @@ The RBP register points to the current stack frame. For more information on the 
 <+26>:    ret
 ```
 
-The flag should be in decimal so convert it in Python:
+The flag should be in decimal format so convert it in Python:
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Bit-O-Asm-2]
 └─$ python                                                             
