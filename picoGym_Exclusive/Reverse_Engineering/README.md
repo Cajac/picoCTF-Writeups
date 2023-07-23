@@ -34,4 +34,9 @@
   - [Challenge information](GDB_baby_step_2.md#challenge-information)
   - [Solution](GDB_baby_step_2.md#gdb-solution)
   - [References](GDB_baby_step_2.md#references)
+
+- [GDB baby step 3](GDB_baby_step_3.md)
+  - [Challenge information](GDB_baby_step_3.md#challenge-information)
+  - [Solution](GDB_baby_step_3.md#gdb-solution)
+  - [References](GDB_baby_step_3.md#references)
   

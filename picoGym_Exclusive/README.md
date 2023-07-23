@@ -13,3 +13,4 @@
 - [Bit-O-Asm-4](Reverse_Engineering/Bit-O-Asm-4.md)
 - [GDB baby step 1](Reverse_Engineering/GDB_baby_step_1.md)
 - [GDB baby step 2](Reverse_Engineering/GDB_baby_step_2.md)
+- [GDB baby step 3](Reverse_Engineering/GDB_baby_step_3.md)
