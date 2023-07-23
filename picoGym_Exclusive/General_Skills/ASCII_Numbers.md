@@ -21,7 +21,7 @@ Hints:
 ## Solution
 
 This challenge can easily be solved with [CyberChef's](https://cyberchef.org/) 'From Hex' function but that's no fun.  
-Let's write a python script called `solve.py` instead.
+Let's write a python script called `solve.py` instead. The script uses the both [lambda](https://docs.python.org/3/reference/expressions.html#lambda) and [map](https://docs.python.org/3/library/functions.html#map) functions.
 ```python
 #!/usr/bin/python
 
