@@ -13,5 +13,5 @@ Instead the flags are displayd as `picoCTF{<REDACTED>}`.
 
 ## Challenges
 - [PicoGym Exclusive Challenges](picoGym_Exclusive/README.md)
- - [General Skills Challenges](picoGym_Exclusive/General_Skills/README.md)
- - [Reverse Engineering Challenges](picoGym_Exclusive/Reverse_Engineering/README.md)
+  - [General Skills Challenges](picoGym_Exclusive/General_Skills/README.md)
+  - [Reverse Engineering Challenges](picoGym_Exclusive/Reverse_Engineering/README.md)
