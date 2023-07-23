@@ -36,7 +36,7 @@ For more information on the x64 instruction set, see references below.
 <+21>:    ret
 ```
 
-The flag should be in decimal so convert it in Python:
+The flag should be in decimal format so convert it in Python:
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Bit-O-Asm-1]
 └─$ python                                                             
