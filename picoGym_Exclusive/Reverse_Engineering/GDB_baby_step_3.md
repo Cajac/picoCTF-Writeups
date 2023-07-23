@@ -32,7 +32,6 @@ Start by checking the file type with `file`.
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/GDB_baby_step_3]
 └─$ file debugger0_c 
 debugger0_c: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=a10a8fa896351748020d158a4e18bb4be15cd3aa, for GNU/Linux 3.2.0, not stripped
-
 ```
 
 The file isn't stripped of debug information which makes it easier.
@@ -81,7 +80,6 @@ Then examine the 4 bytes of memory starting at position RBP-0x4.
 ```
 
 Finally, create the flag with the hex values in the order above.
-
 
 ## References
 
