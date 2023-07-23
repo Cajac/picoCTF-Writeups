@@ -1,6 +1,7 @@
 # Writeups for picoCTF challenges
 
-Welcome to my writeups for [picoCTF](https://play.picoctf.org/login) challenges created to:
+Welcome to my writeups for [picoCTF](https://play.picoctf.org/login) challenges.  
+These pages are created to:
 * Act as a documentation for myself
 * Support my junior work colleges CTF learning
 * Be a concrete project to improve my skills in markdown, git, github, etc.
