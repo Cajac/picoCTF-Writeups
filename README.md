@@ -7,5 +7,5 @@ Welcome to my writeups for [picoCTF](https://play.picoctf.org/login) challenges 
 
 ## No spoilers
 
-The solutions contains step-by-step walkthroughs but doesn't display the flags.
+The solutions contains step-by-step walkthroughs but doesn't display the flags.  
 Instead the flags are displayd as `picoCTF{<REDACTED>}`.
