@@ -102,7 +102,7 @@ We see that the contant is `0x3269`.
 
 The flag should be in decimal format so convert it in Python:
 ```
-┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/GDB_baby_step_3]
+┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/GDB_baby_step_4]
 └─$ python                                                             
 Python 3.10.9 (main, Dec  7 2022, 13:47:07) [GCC 12.2.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
