@@ -29,7 +29,6 @@ Start by checking the file type with `file`.
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/GDB_baby_step_1]
 └─$ file debugger0_a 
 debugger0_a: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=15a10290db2cd2ec0c123cf80b88ed7d7f5cf9ff, for GNU/Linux 3.2.0, not stripped
-
 ```
 
 The file isn't stripped of debug information which makes it easier.
@@ -58,7 +57,7 @@ Dump of assembler code for function main:
 End of assembler dump.
 ```
 
-EAX is set to 0x86342.
+EAX is set to `0x86342`.
 
 The flag should be in decimal so convert it in Python:
 ```
