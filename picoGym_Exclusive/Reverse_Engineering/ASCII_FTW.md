@@ -72,4 +72,4 @@ The result then looks like this:
         00101200 0f b6 45 d0     MOVZX      EAX,byte ptr [RBP + local_38]
 ```
 
-Finally, manually recreate the flag by going down the listing line by line.
+Finally, manually create the flag by going down the listing line by line.
