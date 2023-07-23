@@ -50,7 +50,7 @@ In more detail the following happens:
 
 For more information on the x64 instruction set, see references below.
 
-The flag should be in decimal so convert it in Python:
+The flag should be in decimal format so convert it in Python:
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Bit-O-Asm-3]
 └─$ python                                                             
