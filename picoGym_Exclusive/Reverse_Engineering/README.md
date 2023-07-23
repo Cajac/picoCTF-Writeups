@@ -4,9 +4,9 @@
   - [Challenge information](ASCII_FTW.md#challenge-information)
   - [Solution](ASCII_FTW.md#solution)
 
-- [Big Zip](Big_Zip.md)
-  - [Challenge information](Big_Zip.md#challenge-information)
-  - [Solution](Big_Zip.md#solution)
+- [Bit-O-Asm-1](Bit-O-Asm-1.md)
+  - [Challenge information](Bit-O-Asm-1.md#challenge-information)
+  - [Solution](Bit-O-Asm-1.md#solution)
 
 - [First Find](First_Find.md)
   - [Challenge information](First_Find.md#challenge-information)

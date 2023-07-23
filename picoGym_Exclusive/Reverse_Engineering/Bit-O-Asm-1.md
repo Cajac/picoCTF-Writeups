@@ -50,7 +50,9 @@ Finally, create the flag like this `picoCTF{<Your_number>}`.
 
 ## References
 
-Intel 64 and IA-32 Architectures Developer's Manuals
+Intel 64 and IA-32 Architectures Developer's Manuals in PDF-format  
 [Volume 2A: Instruction Set Reference, A-M](https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-2a-manual.pdf)
+
 [Volume 2B: Instruction Set Reference, M-U](https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-2b-manual.pdf)
+
 [Volume 2C: Instruction Set Reference, V-Z](https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-2c-manual.pdf)
