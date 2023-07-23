@@ -7,8 +7,15 @@
 - [Bit-O-Asm-1](Bit-O-Asm-1.md)
   - [Challenge information](Bit-O-Asm-1.md#challenge-information)
   - [Solution](Bit-O-Asm-1.md#solution)
+  - [References](Bit-O-Asm-1.md#references)
 
-- [First Find](First_Find.md)
-  - [Challenge information](First_Find.md#challenge-information)
-  - [Solution](First_Find.md#solution)
+- [Bit-O-Asm-2](Bit-O-Asm-2.md)
+  - [Challenge information](Bit-O-Asm-2.md#challenge-information)
+  - [Solution](Bit-O-Asm-2.md#solution)
+  - [References](Bit-O-Asm-2.md#references)
 
+- [Bit-O-Asm-3](Bit-O-Asm-3.md)
+  - [Challenge information](Bit-O-Asm-3.md#challenge-information)
+  - [Solution](Bit-O-Asm-3.md#solution)
+  - [References](Bit-O-Asm-3.md#references)
+  

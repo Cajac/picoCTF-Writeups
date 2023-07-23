@@ -1,8 +1,8 @@
-# Bit-O-Asm-1
+# Bit-O-Asm-3
 
-- [Challenge information](Bit-O-Asm-1.md#challenge-information)
-- [Solution](Bit-O-Asm-1.md#solution)
-- [References](Bit-O-Asm-1.md#references)
+- [Challenge information](Bit-O-Asm-3.md#challenge-information)
+- [Solution](Bit-O-Asm-3.md#solution)
+- [References](Bit-O-Asm-3.md#references)
 
 ## Challenge information
 ```
@@ -17,33 +17,47 @@ Put your answer in the picoCTF flag format: picoCTF{n} where n is the contents o
 If the answer was 0x11 your flag would be picoCTF{17}.
 
 Hints:
-1. As with most assembly, there is a lot of noise in the instruction dump.  
-   Find the one line that pertains to this question and don't second guess yourself!
+1. Not everything in this disassembly listing is optimal.
 ```
 
 ## Solution
 
-Study the assembler listing to figure out what happens. The interesting line is prefixed with <+15>.  
-For more information on the x64 instruction set, see references below.
+Study the assembler listing to figure out what happens. The interesting lines are prefixed with <+15> through <+36>.  
+The RBP register points to the current stack frame. 
 ```
 <+0>:     endbr64 
 <+4>:     push   rbp
 <+5>:     mov    rbp,rsp
-<+8>:     mov    DWORD PTR [rbp-0x4],edi
-<+11>:    mov    QWORD PTR [rbp-0x10],rsi
-<+15>:    mov    eax,0x30
-<+20>:    pop    rbp
-<+21>:    ret
+<+8>:     mov    DWORD PTR [rbp-0x14],edi
+<+11>:    mov    QWORD PTR [rbp-0x20],rsi
+<+15>:    mov    DWORD PTR [rbp-0xc],0x9fe1a
+<+22>:    mov    DWORD PTR [rbp-0x8],0x4
+<+29>:    mov    eax,DWORD PTR [rbp-0xc]
+<+32>:    imul   eax,DWORD PTR [rbp-0x8]
+<+36>:    add    eax,0x1f5
+<+41>:    mov    DWORD PTR [rbp-0x4],eax
+<+44>:    mov    eax,DWORD PTR [rbp-0x4]
+<+47>:    pop    rbp
+<+48>:    ret
 ```
+
+In more detail the following happens:
+ * The stack at position rbp-0xc is set to 0x9fe1a
+ * The stack at position rbp-0x8 is set to 0x4
+ * EAX is set to the value at position rbp-0xc (i.e. 0x9fe1a)
+ * EAX is multiplied with the value at position rbp-0x8 (i.e. 0x4)
+ * 0x1f5 is added to EAX
+
+For more information on the x64 instruction set, see references below.
 
 The flag should be in decimal so convert it in Python:
 ```
-┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Bit-O-Asm-1]
+┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Bit-O-Asm-3]
 └─$ python                                                             
 Python 3.10.9 (main, Dec  7 2022, 13:47:07) [GCC 12.2.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
->>> 0x30
-48
+>>> 0x9fe1a*4 + 0x1f5
+2619997
 ```
 
 Finally, create the flag like this `picoCTF{<Your_number>}`.

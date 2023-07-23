@@ -1,8 +1,8 @@
-# Bit-O-Asm-1
+# Bit-O-Asm-2
 
-- [Challenge information](Bit-O-Asm-1.md#challenge-information)
-- [Solution](Bit-O-Asm-1.md#solution)
-- [References](Bit-O-Asm-1.md#references)
+- [Challenge information](Bit-O-Asm-2.md#challenge-information)
+- [Solution](Bit-O-Asm-2.md#solution)
+- [References](Bit-O-Asm-2.md#references)
 
 ## Challenge information
 ```
@@ -17,33 +17,33 @@ Put your answer in the picoCTF flag format: picoCTF{n} where n is the contents o
 If the answer was 0x11 your flag would be picoCTF{17}.
 
 Hints:
-1. As with most assembly, there is a lot of noise in the instruction dump.  
-   Find the one line that pertains to this question and don't second guess yourself!
+1. PTR's or 'pointers', reference a location in memory where values can be stored.
 ```
 
 ## Solution
 
 Study the assembler listing to figure out what happens. The interesting line is prefixed with <+15>.  
-For more information on the x64 instruction set, see references below.
+The RBP register points to the current stack frame. For more information on the x64 instruction set, see references below.
 ```
 <+0>:     endbr64 
 <+4>:     push   rbp
 <+5>:     mov    rbp,rsp
-<+8>:     mov    DWORD PTR [rbp-0x4],edi
-<+11>:    mov    QWORD PTR [rbp-0x10],rsi
-<+15>:    mov    eax,0x30
-<+20>:    pop    rbp
-<+21>:    ret
+<+8>:     mov    DWORD PTR [rbp-0x14],edi
+<+11>:    mov    QWORD PTR [rbp-0x20],rsi
+<+15>:    mov    DWORD PTR [rbp-0x4],0x9fe1a
+<+22>:    mov    eax,DWORD PTR [rbp-0x4]
+<+25>:    pop    rbp
+<+26>:    ret
 ```
 
 The flag should be in decimal so convert it in Python:
 ```
-┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Bit-O-Asm-1]
+┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Bit-O-Asm-2]
 └─$ python                                                             
 Python 3.10.9 (main, Dec  7 2022, 13:47:07) [GCC 12.2.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
->>> 0x30
-48
+>>> 0x9fe1a
+654874
 ```
 
 Finally, create the flag like this `picoCTF{<Your_number>}`.
