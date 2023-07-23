@@ -18,4 +18,14 @@
   - [Challenge information](Bit-O-Asm-3.md#challenge-information)
   - [Solution](Bit-O-Asm-3.md#solution)
   - [References](Bit-O-Asm-3.md#references)
-  
+
+- [Bit-O-Asm-4](Bit-O-Asm-4.md)
+  - [Challenge information](Bit-O-Asm-4.md#challenge-information)
+  - [Solution](Bit-O-Asm-4.md#solution)
+  - [References](Bit-O-Asm-4.md#references)
+
+  - [GDB baby step 1](GDB_baby_step_1.md)
+  - [Challenge information](GDB_baby_step_1.md#challenge-information)
+  - [GDB Solution](GDB_baby_step_1.md#gdb-solution)
+  - [Objdump Solution](GDB_baby_step_1.md#objdump-solution)
+  - [References](GDB_baby_step_1.md#references)
