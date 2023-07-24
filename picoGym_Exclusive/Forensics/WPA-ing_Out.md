@@ -23,7 +23,7 @@ Hints:
 
 ## Solution
 
-### Find out the name of the SSID field in Wireshark
+### Find out the name of the SSID
 
 We need to know the name of the network (the SSID) in question to crack the password more efficiently.
 
