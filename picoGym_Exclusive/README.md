@@ -1,11 +1,15 @@
 # picoGym Exclusive Challenges
 
 ## General Skills Challenges
+
+3 Challenges:
 - [ASCII Numbers](General_Skills/ASCII_Numbers.md)
 - [Big Zip](General_Skills/Big_Zip.md)
 - [First Find](General_Skills/First_Find.md)
 
 ## Reverse Engineering Challenges
+
+X Challenges:
 - [ASCII FTW](Reverse_Engineering/ASCII_FTW.md)
 - [Bit-O-Asm-1](Reverse_Engineering/Bit-O-Asm-1.md)
 - [Bit-O-Asm-2](Reverse_Engineering/Bit-O-Asm-2.md)
@@ -15,3 +19,6 @@
 - [GDB baby step 2](Reverse_Engineering/GDB_baby_step_2.md)
 - [GDB baby step 3](Reverse_Engineering/GDB_baby_step_3.md)
 - [GDB baby step 4](Reverse_Engineering/GDB_baby_step_4.md)
+- [Picker I](Reverse_Engineering/Picker_I.md)
+- [Picker II](Reverse_Engineering/Picker_II.md)
+- [Picker III](Reverse_Engineering/Picker_III.md)
