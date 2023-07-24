@@ -5,7 +5,7 @@
 
 ## Challenge information
 ```
-Points: 100
+Points: 200
 Tags: picoGym Exclusive, Forensics
 Author: MISTRESSVAMPY
 
@@ -29,6 +29,7 @@ We need to know the name of the network (the SSID) in question to crack the pass
 
 So open the PCAP-file in [Wireshark](https://www.wireshark.org/) and expand the properties of the first packet.
 
+![Name of the SSID field in Wireshark](Name_of_SSID_Field_in_Wireshark.png)
 
 In the status bar at the bottom of the windows you can see that the name is `wlan.ssid`.
 
@@ -44,7 +45,7 @@ Z:\CTFs\picoCTF\picoGym\Forensics\WPA-ing_Out>tshark -r wpa-ing_out.pcap -T fiel
 476f6e655f53757266696e67
 ```
 
-Oh, the output is in hex. I couldn't find any tshark parameter to change this so I used xxd to reverse the hexdump (-r)  
+Oh, the output is in hex. I couldn't find any tshark parameter to change this so I used `xxd` to reverse the hexdump (-r)  
 and output the text in plain format (-p).
 ```
 Z:\CTFs\picoCTF\picoGym\Forensics\WPA-ing_Out> tshark -r wpa-ing_out.pcap -T fields -e wlan.ssid | gsort -u | xxd -r -p
@@ -87,4 +88,4 @@ Then password is found rather fast and is redacted below.
 
 ### Create the flag
 
-The flag consists of the password in the standard flag format, i.e. picoCTF{<The password>}.
+The flag consists of the password in the standard flag format, i.e. `picoCTF{<The password>}`.
