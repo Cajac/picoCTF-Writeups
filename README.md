@@ -9,6 +9,7 @@ These pages are created to:
 ## Challenges
 
 - [PicoGym Exclusive Challenges](picoGym_Exclusive/README.md)
+  - [Forensics Challenges](picoGym_Exclusive/Forensics/README.md)
   - [General Skills Challenges](picoGym_Exclusive/General_Skills/README.md)
   - [Reverse Engineering Challenges](picoGym_Exclusive/Reverse_Engineering/README.md)
 
