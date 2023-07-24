@@ -38,4 +38,4 @@
 ## Web Exploitation Challenges
 
 X Challenge: 
-- [JAuth](Web_Exploitation/WPA-ing_Out.md)
+- [JAuth](Web_Exploitation/JAuth.md)
