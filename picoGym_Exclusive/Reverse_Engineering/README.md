@@ -1,6 +1,6 @@
 # Reverse Engineering Challenges
 
-13 Challenges:
+13 Challenges: 
 - [ASCII FTW](ASCII_FTW.md)
 - [Bit-O-Asm-1](Bit-O-Asm-1.md)
 - [Bit-O-Asm-2](Bit-O-Asm-2.md)
