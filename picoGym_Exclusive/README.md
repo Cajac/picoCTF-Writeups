@@ -33,3 +33,9 @@
 - [Picker II](Reverse_Engineering/Picker_II.md)
 - [Picker III](Reverse_Engineering/Picker_III.md)
 - [Picker IV](Reverse_Engineering/Picker_IV.md)
+
+
+## Web Exploitation Challenges
+
+X Challenge: 
+- [JAuth](Web_Exploitation/WPA-ing_Out.md)
