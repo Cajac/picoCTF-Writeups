@@ -80,7 +80,7 @@ Try entering "getRandomNumber" without the double quotes...
 
 ### Get the plaintext flag
 
-Finally, we need to decode the flag. This can be done with CyberChef's 'From Hex' recipe or with a python script.
+Finally, we need to decode the flag. This can be done with [CyberChef's](https://cyberchef.org/) 'From Hex' recipe or with a python script.
 
 Lets write a python script called `decode.py`
 ```python
@@ -99,7 +99,7 @@ char_array = map(chr, num_array)
 print(''.join(char_array))
 ```
 
-Then set the script as executable and run it
+Then set the script file as executable and run it to get the flag
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Picker_I]
 └─$ chmod a+x decode.py                                           
