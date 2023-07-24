@@ -7,7 +7,7 @@
 
 ## Forensics Challenges
 
-X Challenge: 
+1 Challenge: 
 - [WPA-ing Out](Forensics/WPA-ing_Out.md)
 
 ## General Skills Challenges
