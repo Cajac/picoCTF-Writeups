@@ -1,6 +1,6 @@
 # Reverse Engineering Challenges
 
-X Challenges:
+13 Challenges:
 - [ASCII FTW](ASCII_FTW.md)
 - [Bit-O-Asm-1](Bit-O-Asm-1.md)
 - [Bit-O-Asm-2](Bit-O-Asm-2.md)
@@ -13,3 +13,4 @@ X Challenges:
 - [Picker I](Picker_I.md)
 - [Picker II](Picker_II.md)
 - [Picker III](Picker_III.md)
+- [Picker IV](Picker_IV.md)
