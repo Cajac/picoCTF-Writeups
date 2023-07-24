@@ -23,7 +23,7 @@ Hints:
 
 ## Solution
 
-### Find out the name of the SSID
+### Find out the name of the network, the SSID
 
 We need to know the name of the network (the SSID) in question to crack the password more efficiently.
 
