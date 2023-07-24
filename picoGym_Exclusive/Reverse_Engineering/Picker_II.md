@@ -44,7 +44,7 @@ def filter(user_input):
   return True
 ```
 
-The `win` function is the same as in the previous challenge
+The `win` function is the same as in the previous 'Picker I' challenge
 ```python
 def win():
   # This line will not work locally unless you create your own 'flag.txt' in
