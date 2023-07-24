@@ -16,7 +16,7 @@ Connect to the program with netcat:
 `$ nc saturn.picoctf.net 64448`
 
 The program's source code can be downloaded here. The binary can be downloaded here.
-
+ 
 Hints:
 1. With Python, there are no binaries. With compiled languages like C, there is source code, and there are binaries.  
    Binaries are created from source code, they are a conversion from the human-readable source code, to the highly  
@@ -38,7 +38,7 @@ int main() {
   printf("Enter the address in hex to jump to, excluding '0x': ");
   scanf("%x", &val);
   printf("You input 0x%x\n", val);
-
+ 
   void (*foo)(void) = (void (*)())val;
   foo();
 }
