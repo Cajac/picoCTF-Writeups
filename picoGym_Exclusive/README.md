@@ -1,5 +1,15 @@
 # picoGym Exclusive Challenges
 
+## Binary Exploitation Challenges
+
+1 Challenge:
+- [Local Target](Binary_Exploitation/Local_Target.md)
+
+## Forensics Challenges
+
+X Challenge: 
+- [WPA-ing Out](Forensics/WPA-ing_Out.md)
+
 ## General Skills Challenges
 
 3 Challenges:
