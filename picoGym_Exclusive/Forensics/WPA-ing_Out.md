@@ -33,7 +33,7 @@ So open the PCAP-file in [Wireshark](https://www.wireshark.org/) and expand the 
 
 In the status bar at the bottom of the windows you can see that the field name for the SSID is `wlan.ssid`.
 
-Also, lets double check that this is the only SSID used in the PCAP. For this we use the commandline version of Wireshark  
+Lets double check that this is the only SSID used in the PCAP. For this we use the commandline version of Wireshark  
 called `tshark`. We only want to output the `wlan.ssid` field so we change the output to specific fields (-T fields) and
 specify our wanted field with -e. 
 
