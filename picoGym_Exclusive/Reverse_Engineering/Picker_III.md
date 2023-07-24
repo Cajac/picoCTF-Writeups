@@ -34,7 +34,7 @@ CORRUPT_MESSAGE = 'Table corrupted. Try entering \'reset\' to fix it'
 
 func_table = ''
 
-<---function declation removed--->
+<---function declations removed--->
 
 reset_table()
 
@@ -106,7 +106,7 @@ print_table                     read_variable                   write_variable  
 ==> 
 ```
 
-### Rewrite the function table to get the flag
+### Rewrite the function table to get the encoded flag
 
 Now, lets try to overwrite the function table
 ```
@@ -118,7 +118,7 @@ Table corrupted. Try entering 'reset' to fix it
 ==> reset
 ```
 
-Hhm, that didn't work. We need to study the format of the function table in more detail.
+Hhm, that didn't work. We need to study the format of the `func_table` in more detail.
 
 Remember in global variables in the beginning of the script?
 ```python
@@ -147,7 +147,8 @@ Create a 128-byte string with the letters 'win' left-aligned
 "win                                                                                                                             "
 ```
 
-Then copy-paste this as input to the `func_table` variable
+Then copy-and-paste this as input to the `func_table` variable.  
+Then "call" the first function in the function table to get the encoded flag.
 ```
 ==> 3
 Please enter variable name to write: func_table
@@ -156,4 +157,6 @@ Please enter new value of variable: "win                                        
 0x70 0x69 0x63 0x6f 0x43 0x54 0x46 0x7b 0x37 0x68 0x31 0x35 0x5f 0x31 0x35 0x5f 0x77 0x68 0x34 0x37 0x5f 0x77 0x33 0x5f 0x67 0x33 0x37 0x5f 0x77 0x31 0x37 0x68 0x5f 0x75 0x35 0x33 0x72 0x35 0x5f 0x31 0x6e 0x5f 0x63 0x68 0x34 0x72 0x67 0x33 0x5f 0x61 0x31 0x38 0x36 0x66 0x39 0x61 0x63 0x7d 
 ```
 
-Finally, to get the plaintext flag you can use either [CyberChef](https://cyberchef.org/) or the `decode.py` script as in the  [Picker I challenge](Picker_I.md).
+### Get the plaintext flag
+
+Finally, to get the plaintext flag you can use either [CyberChef](https://cyberchef.org/) or the `decode.py` script as in the [Picker I challenge](Picker_I.md) challenge.
