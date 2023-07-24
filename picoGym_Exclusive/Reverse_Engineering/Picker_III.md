@@ -37,7 +37,7 @@ func_table = ''
 <---function declations removed--->
 
 reset_table()
-
+ 
 while(USER_ALIVE):
   choice = input('==> ')
   if( choice == 'quit' or choice == 'exit' or choice == 'q' ):
@@ -76,7 +76,7 @@ However, the `win` function is not available in the function table
 ```python
 def reset_table():
   global func_table
-
+ 
   # This table is formatted for easier viewing, but it is really one line
   func_table = \
 '''\
@@ -161,7 +161,7 @@ Please enter new value of variable: "win                                        
 
 Finally, to get the plaintext flag you can use either [CyberChef](https://cyberchef.org/) or the `decode.py` script as in the [Picker I challenge](Picker_I.md) challenge.
 
-Another way to get the flag is to use `sed` and `xxd` like as below. With `sed` you sustitute (with the s-command) '0x' and spaces with "nothing", effectivly removing them. And then `xxd` will reverse (-r) the hexdump and output it in plain (-p) format.
+Another way to get the flag is to use `sed` and `xxd` as below. With `sed` you sustitute (with the s-command) '0x' and spaces with "nothing", effectively removing them. And then `xxd` will reverse (-r) the hexdump and output it in plain format (-p).
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Picker_III]
 └─$ echo "0x70 0x69 0x63 0x6f 0x43 0x54 0x46 0x7b 0x37 0x68 0x31 0x35 0x5f 0x31 0x35 0x5f 0x77 0x68 0x34 0x37 0x5f 0x77 0x33 0x5f 0x67 0x33 0x37 0x5f 0x77 0x31 0x37 0x68 0x5f 0x75 0x35 0x33 0x72 0x35 0x5f 0x31 0x6e 0x5f 0x63 0x68 0x34 0x72 0x67 0x33 0x5f 0x61 0x31 0x38 0x36 0x66 0x39 0x61 0x63 0x7d" | sed 's/0x//g'
