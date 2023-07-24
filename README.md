@@ -19,4 +19,4 @@ Instead the flags are displayd as `picoCTF{<REDACTED>}`.
 
 ## Language disclaimer
 
-I'm not a native English speaker so please forgive and spelling mistakes and grammatical errors.
+I'm not a native English speaker so please forgive any spelling mistakes or grammatical errors.
