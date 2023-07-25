@@ -37,5 +37,5 @@
 
 ## Web Exploitation Challenges
 
-X Challenge: 
+1 Challenge: 
 - [JAuth](Web_Exploitation/JAuth.md)

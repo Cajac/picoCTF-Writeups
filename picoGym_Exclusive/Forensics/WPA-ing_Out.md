@@ -31,7 +31,7 @@ So open the PCAP-file in [Wireshark](https://www.wireshark.org/) and expand the 
 
 ![Name of the SSID field in Wireshark](Name_of_SSID_Field_in_Wireshark.png)
 
-In the status bar at the bottom of the windows you can see that the field name for the SSID is `wlan.ssid`.
+In the status bar at the bottom of the window you can see that the field name for the SSID is `wlan.ssid`.
 
 Lets double check that this is the only SSID used in the PCAP. For this we use the commandline version of Wireshark  
 called `tshark`. We only want to output the `wlan.ssid` field so we change the output to specific fields (-T fields) and
@@ -45,7 +45,7 @@ Z:\CTFs\picoCTF\picoGym\Forensics\WPA-ing_Out>tshark -r wpa-ing_out.pcap -T fiel
 476f6e655f53757266696e67
 ```
 
-Oh, the output is in hex. I couldn't find any tshark parameter to change this so I used `xxd` to reverse the hexdump (-r)  
+Oh, the output is in hex. I couldn't find any tshark parameter to change this so I used `xxd` instead to reverse the hexdump (-r)  
 and output the text in plain format (-p).
 ```
 Z:\CTFs\picoCTF\picoGym\Forensics\WPA-ing_Out> tshark -r wpa-ing_out.pcap -T fields -e wlan.ssid | gsort -u | xxd -r -p
