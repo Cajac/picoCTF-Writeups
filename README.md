@@ -7,8 +7,15 @@ These pages are created to:
 * Be a concrete project to improve my skills in markdown, git, github, etc.
 
 ## Challenges
- 
-- [PicoGym Exclusive Challenges](picoGym_Exclusive/README.md)
+
+- [picoCTF 2023 Challenges](picoCTF_2023/README.md)
+  - [Binary Exploitation Challenges](picoCTF_2023/Binary_Exploitation/README.md)
+  - [Forensics Challenges](picoCTF_2023/Forensics/README.md)
+  - [General Skills Challenges](picoCTF_2023/General_Skills/README.md)
+  - [Reverse Engineering Challenges](picoCTF_2023/Reverse_Engineering/README.md)
+  - [Web Exploitation Challenges](picoCTF_2023/Web_Exploitation/README.md)
+
+- [picoGym Exclusive Challenges](picoGym_Exclusive/README.md)
   - [Binary Exploitation Challenges](picoGym_Exclusive/Binary_Exploitation/README.md)
   - [Forensics Challenges](picoGym_Exclusive/Forensics/README.md)
   - [General Skills Challenges](picoGym_Exclusive/General_Skills/README.md)

@@ -12,10 +12,8 @@
 
 ## General Skills Challenges
 
-3 Challenges:
-- [ASCII Numbers](General_Skills/ASCII_Numbers.md)
-- [Big Zip](General_Skills/Big_Zip.md)
-- [First Find](General_Skills/First_Find.md)
+1 Challenge:
+- [chrono](General_Skills/chrono.md)
 
 ## Reverse Engineering Challenges
 
