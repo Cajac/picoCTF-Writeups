@@ -45,7 +45,7 @@ Z:\CTFs\picoCTF\picoGym\Forensics\WPA-ing_Out>tshark -r wpa-ing_out.pcap -T fiel
 476f6e655f53757266696e67
 ```
 
-Oh, the output is in hex. I couldn't find any tshark parameter to change this so I used `xxd` to reverse the hexdump (-r)  
+Oh, the output is in hex. I couldn't find any tshark parameter to change this so I used `xxd` instead to reverse the hexdump (-r)  
 and output the text in plain format (-p).
 ```
 Z:\CTFs\picoCTF\picoGym\Forensics\WPA-ing_Out> tshark -r wpa-ing_out.pcap -T fields -e wlan.ssid | gsort -u | xxd -r -p
