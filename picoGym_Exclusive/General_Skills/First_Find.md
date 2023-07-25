@@ -47,7 +47,7 @@ Archive:  files.zip
   inflating: files/14789.txt.utf-8   
 ```
 
-The path to the file is visible in the middle of the file listing but lets search for it anyway
+The path to the file is visible in the middle of the file listing (prefixed with extracting) but lets search for it anyway
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoGym/General_Skills/Fist_Find]
 └─$ find files -name uber-secret.txt
