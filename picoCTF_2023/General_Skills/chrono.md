@@ -57,7 +57,7 @@ picoplayer@challenge:~$
 ```
 
 I know since previously that scheduled jobs in linux is specified in the `crontab`.  
-Other wise this might require some Googling...
+Otherwise this might require some Googling to find out...
 
 You can list your cronjobs with `crontab -l` so lets try that
 ```
