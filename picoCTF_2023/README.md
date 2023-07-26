@@ -27,7 +27,7 @@
 ## Reverse Engineering Challenges
 
 1 Challenges:
-- [ASCII FTW](Reverse_Engineering/ASCII_FTW.md)
+- [Ready Gladiator 0](Reverse_Engineering/Ready_Gladiator_0.md)
 
 ## Web Exploitation Challenges
 
