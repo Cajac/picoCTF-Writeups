@@ -8,7 +8,7 @@
 ## Forensics Challenges
 
 1 Challenge: 
-- [WPA-ing Out](Forensics/WPA-ing_Out.md)
+- [hideme](Forensics/hideme.md)
 
 ## General Skills Challenges
 
