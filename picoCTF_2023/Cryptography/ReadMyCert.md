@@ -51,7 +51,7 @@ The "quick and dirty" way to get the flag is to use [the 'From Base64' recipe in
 
 Copy the long base64 string but leave out the lines with `BEGIN CERTIFICATE REQUEST` and `END CERTIFICATE REQUEST`.
 
-Most of the output is garbage but you will see thae flag in the first line.
+Most of the output is garbage but you will see the flag in the first line.
 
 ### Use an online CSR site
 
