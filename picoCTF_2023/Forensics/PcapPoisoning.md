@@ -21,6 +21,6 @@ Hints:
 
 Open the PCAP-file in [Wireshark](https://www.wireshark.org/) and lets take the description more or less literally by just assuming the flag are available in plain in the packet capture.
 
-Lets set a display filter of `tcp.payload contains "picoCTF"`.
+Set a display filter of `tcp.payload contains "picoCTF"` and press Enter.
 
 Ah, only one packet matches and the flag is indeed visible in the ASCII details of the packet.
