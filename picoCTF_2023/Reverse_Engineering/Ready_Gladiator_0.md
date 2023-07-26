@@ -8,10 +8,10 @@
 Points: 100
 Tags: picoCTF 2023, Reverse Engineering, CoreWars
 Author: LT 'SYREAL' JONES
-
+ 
 Description:
 Can you make a CoreWars warrior that always loses, no ties?
-
+ 
 Your opponent is the Imp. The source is available here. 
 
 If you wanted to pit the Imp against himself, you could download the Imp and connect to the CoreWars server like this:
