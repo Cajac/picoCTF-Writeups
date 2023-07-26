@@ -20,7 +20,7 @@ Hints:
 
 ## Solution
 
-This challenge can easily be solved with [CyberChef's](https://cyberchef.org/) 'From Hex' function but that's no fun.
+This challenge can easily be solved with [CyberChef's 'From Hex' recipe](https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')) but that's no fun.
 
 Let's write a python script called `solve.py` instead. The script uses both [lambda](https://docs.python.org/3/reference/expressions.html#lambda) and [map](https://docs.python.org/3/library/functions.html#map) functions.
 ```python
