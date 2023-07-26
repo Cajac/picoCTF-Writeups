@@ -1,4 +1,5 @@
 # Forensics Challenges
 
-1 Challenge:
+2 Challenges:
 - [hideme](hideme.md)
+- [PcapPoisoning](PcapPoisoning.md)
