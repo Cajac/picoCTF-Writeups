@@ -8,7 +8,7 @@
 Points: 100
 Tags: picoCTF 2023, General Skills, osint
 Author: JUNI19
-
+  
 Description:
 Flag format: picoCTF{Malwarename}
 The first letter of the malware name should be capitalized and the rest lowercase.
@@ -31,3 +31,4 @@ Looking through the top search results you can see headlines such as
  * [The Petya ransomware attack made $20k less than ...](https://qz.com/1016525/the-petya-ransomware-cyberattack-has-earned-hackers-20k-less-than-wannacry-in-its-first-24-hours)
 
 So maybe 'Petya' is the malware we are looking for and indeed it is...
+ 
