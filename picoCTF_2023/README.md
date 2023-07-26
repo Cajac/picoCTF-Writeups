@@ -17,8 +17,9 @@
 
 ## General Skills Challenges
 
-1 Challenge:
+2 Challenges:
 - [chrono](General_Skills/chrono.md)
+- [money-ware](General_Skills/money-ware.md)
 
 ## Reverse Engineering Challenges
 
@@ -27,5 +28,6 @@
 
 ## Web Exploitation Challenges
 
-X Challenge: 
+X Challenges:
+- [findme](Web_Exploitation/findme.md) 
 - [MatchTheRegex](Web_Exploitation/MatchTheRegex.md)
