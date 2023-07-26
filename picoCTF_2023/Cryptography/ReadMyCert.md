@@ -47,7 +47,7 @@ As hinted by the '=' and the end of the long and cryptic string this is base64 e
 
 ### Getting the flag with CyberChef
 
-The "quick and dirty" way to get the flag is to use [the 'From Base64' recipe in CyberChef](https://cyberchef.org/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)).
+The "quick and dirty" way to get the flag is to use the ['From Base64' recipe in CyberChef](https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)).
 
 Copy the long base64 string but leave out the lines with `BEGIN CERTIFICATE REQUEST` and `END CERTIFICATE REQUEST`.
 
