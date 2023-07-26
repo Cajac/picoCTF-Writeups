@@ -1,5 +1,6 @@
 # General Skills Challenges
 
-2 Challenges:
+3 Challenges:
 - [chrono](chrono.md)
 - [money-ware](money-ware.md)
+- [Permissions](Permissions.md)
