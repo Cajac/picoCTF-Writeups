@@ -80,7 +80,7 @@ Try entering "getRandomNumber" without the double quotes...
 
 ### Get the plaintext flag
 
-Finally, we need to decode the flag. This can be done with [CyberChef's](https://cyberchef.org/) 'From Hex' recipe or with a python script.
+Finally, we need to decode the flag. This can be done with [CyberChef's 'From Hex' recipe](https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')) or with a python script.
 
 Lets write a python script called `decode.py`
 ```python
