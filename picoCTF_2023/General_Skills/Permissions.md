@@ -93,7 +93,7 @@ drwxr-xr-x    1 root   root     17 Mar  8 02:09 var
 
 We can see that it is a directory rather than a file and that the only user that have permissions to read the directory is root.
 
-So what can we do to escalate our privileges? Lets check what commands we can run via `sudo`.
+So what can we do to escalate our privileges? Lets check what commands we can run as root via `sudo`.
 This is done with `sudo -l`.
 ```
 picoplayer@challenge:/$ sudo -l
@@ -120,7 +120,7 @@ Run `sudo vi /root` and you get
 ./
 .vim/
 .bashrc
-.flag.txt
+.flag.txt                <------- Here!
 .profile
 ~      
 <---snip--->
@@ -130,13 +130,12 @@ Press `Esc` and then type `:q` (followed by enter) to quit the `vi` editor.
 
 We can see that there is a file named `.flag.txt` in the `/root` directory.
 
-Lets read the flag in the same manner with `sudo vi /root/.flag.txt`.
+Reading that file in the same manner with `sudo vi /root/.flag.txt` gets you the flag.
 
 ### An alternative solution
 
-When I looked through the file/directory listing in `/` I also notice that there is a directory called `challenge`.
+When I looked through the file and directory listing in `/` I also noticed that there is a directory called `challenge`.
 ```
-picoplayer@challenge:~$ cd /
 picoplayer@challenge:/$ ls -la
 total 0
 drwxr-xr-x    1 root   root     51 Jul 26 12:00 .
@@ -182,4 +181,4 @@ picoplayer@challenge:/challenge$ cat metadata.json
 {"flag": "picoCTF{<REDACTED>}", "username": "picoplayer", "password": "pEN9KN1qYm"}
 ```
 
-And voila there is the flag in another way...
+And voila there is the flag in another way!
