@@ -2,6 +2,10 @@
 
 - [Challenge information](hideme.md#challenge-information)
 - [Solution](hideme.md#solution)
+  - [Checking for metadata](hideme.md#checking-for-metadata)
+  - [Checking for embedded strings](hideme.md#checking-for-embedded-strings)
+  - [Checking for embedded Zip-files](hideme.md#checking-for-embedded-zip-files)
+  - [Get the flag](hideme.md#get-the-flag)
 
 ## Challenge information
 ```
@@ -25,6 +29,8 @@ In steganography challenges there are a number of checks that are more or less "
 1. Checking for metadata with [ExifTool](https://exiftool.org/)
 2. Checking for embedded strings
 3. Checking for embedded Zip-files with tools such as [Binwalk ](https://github.com/ReFirmLabs/binwalk)
+
+### Checking for metadata
 
 Lets start by checking for metadata
 ```
@@ -54,6 +60,8 @@ Megapixels                      : 0.258
 
 Nope, nothing of interest.
 
+### Checking for embedded strings
+
 Continue with checking for strings. In this case I'm using a [Windows version of strings from Sysinternals](https://learn.microsoft.com/en-us/sysinternals/downloads/strings).
 ```
 Z:\CTFs\picoCTF\picoCTF_2023\Forensics\hideme>strings -n 8 flag.png
@@ -76,6 +84,8 @@ secret/flag.pngUT
 
 No flag here either but something that looks like file paths.
 
+### Checking for embedded Zip-files
+
 Now lets check for embedded Zip-files or other interesting files with `binwalk`
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Forensics/hideme]
@@ -91,7 +101,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 
 ```
 
-Yes, there is an embedded zip-file and the file names matches what we saw in the strings output.
+Yes, there is an embedded zip-file and the file names matches what we saw earlier in the strings output.
 
 Extract the zip-file with `binwalk -e flag.png`.
 
@@ -117,9 +127,11 @@ drwxrwxrwx 1 root root    0 Jul 26 01:46 ..
 
 ```
 
-Ah, in the secrets subdirectory there is a flag.png file. 
+Ah, in the secrets subdirectory there is indeed a flag.png file. 
+
+### Get the flag
 
 To view the flag.png file in Kali linux you need a program such as `feh` or `eog`.
 These were not installed in the version I was using and needed to be installed (with 'sudo apt install xxx').
 
-Viewing the file flag.png file reveiles the flag.
+Viewing the flag.png file reveiles the flag.
