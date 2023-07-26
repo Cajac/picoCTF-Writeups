@@ -113,8 +113,7 @@ Nope, fail again.
 
 ### Checking for hidden files
 
-The previous check looked for "foresically" embedded/hidden files.  
-This check looks for "staganography" hidden/embedded files with tools such as `steghide`.
+The previous check looked for "foresically" embedded/hidden files. This check looks for "staganography" hidden/embedded files with tools such as `steghide`.
 
 Lets use the 'extract' command in `steghide` and specifying the stegofile with -sf.
 ```
