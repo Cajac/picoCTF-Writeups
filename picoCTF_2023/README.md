@@ -7,8 +7,9 @@
 
 ## Cryptography Challenges
 
-1 Challenge:
-- [HideToSee](Binary_Exploitation/HideTooSee.md)
+2 Challenges:
+- [HideToSee](Cryptography/HideTooSee.md)
+- [ReadMyCert](Cryptography/ReadMyCert.md)
 
 ## Forensics Challenges
 

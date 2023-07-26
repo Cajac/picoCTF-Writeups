@@ -1,4 +1,5 @@
 # Cryptography Challenges
 
-1 Challenge:
+2 Challenges:
 - [HideToSee](HideToSee.md)
+- [ReadMyCert](ReadMyCert.md)
