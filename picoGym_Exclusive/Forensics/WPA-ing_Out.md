@@ -25,19 +25,23 @@ Hints:
 
 ### Find out the name of the network, the SSID
 
-We need to know the name of the network (the SSID) in question to crack the password more efficiently.
+You probably could get away with cracking all the SSIDs in the PCAP file but lets make the cracking more 
+targeted by finding out the SSIDs in the PCAP. We do this for learning in two steps:
+1. Finding out the name of the SSID field in Wireshark
+2. Listing all the SSID names in `tshark` (the commandline version of Wireshark)
 
-So open the PCAP-file in [Wireshark](https://www.wireshark.org/) and expand the properties of the first packet.
+First open the PCAP-file in [Wireshark](https://www.wireshark.org/) and expand the properties of the first packet.
 
 ![Name of the SSID field in Wireshark](Name_of_SSID_Field_in_Wireshark.png)
 
 In the status bar at the bottom of the window you can see that the field name for the SSID is `wlan.ssid`.
+Now we have the name of the SSID field.
 
-Lets double check that this is the only SSID used in the PCAP. For this we use the commandline version of Wireshark  
-called `tshark`. We only want to output the `wlan.ssid` field so we change the output to specific fields (-T fields) and
+Then lets find out if there are any packets from other networks contained in the PCAP. For this we use `tshark`.
+We only want to output the `wlan.ssid` field so we change the output to specific fields (-T fields) and
 specify our wanted field with -e. 
 
-We then sort the output with a GNU-unix port of sort called `gsort` from [GnuWin32](https://getgnuwin32.sourceforge.net/).  
+We also sort the output from `tshark` with a GNU-unix port of sort called `gsort` from [GnuWin32](https://getgnuwin32.sourceforge.net/).  
 Output only a uniq list with the -u parameter.
 ```
 Z:\CTFs\picoCTF\picoGym\Forensics\WPA-ing_Out>tshark -r wpa-ing_out.pcap -T fields -e wlan.ssid | gsort -u
@@ -45,26 +49,25 @@ Z:\CTFs\picoCTF\picoGym\Forensics\WPA-ing_Out>tshark -r wpa-ing_out.pcap -T fiel
 476f6e655f53757266696e67
 ```
 
-Oh, the output is in hex. I couldn't find any tshark parameter to change this so I used `xxd` instead to reverse the hexdump (-r)  
+Oh, the output is in hex. I couldn't find any `tshark` parameter to change this so I used `xxd` instead to reverse the hexdump (-r)  
 and output the text in plain format (-p).
 ```
 Z:\CTFs\picoCTF\picoGym\Forensics\WPA-ing_Out> tshark -r wpa-ing_out.pcap -T fields -e wlan.ssid | gsort -u | xxd -r -p
 Gone_Surfing
 ```
 
-Much better! And `Gone_Surfing` is the only network contained in the PCAP.
+Much better! And 'Gone_Surfing' is the only network contained in the PCAP.
 
 ### Crack the password
 
-For cracking I used [aircrack-ng](https://aircrack-ng.org/) together with the rockyou wordlist.  
-The wordlist is included in the [Leaked-Databases section](https://github.com/danielmiessler/SecLists/tree/master/Passwords/Leaked-Databases) of Daniel Miessler's SecLists if you don't have it already.
+For cracking I used [aircrack-ng](https://aircrack-ng.org/) together with the rockyou wordlist. The wordlist is included in the [Leaked-Databases section](https://github.com/danielmiessler/SecLists/tree/master/Passwords/Leaked-Databases) of Daniel Miessler's SecLists if you don't have it already.
 
 Specify the SSID and the wordlist like this
 ```
 Z:\CTFs\picoCTF\picoGym\Forensics\WPA-ing_Out>aircrack-ng -e Gone_Surfing -w C:\Sec-Lists\Passwords\Leaked-Databases\rockyou.txt wpa-ing_out.pcap
 ```
 
-Then password is found rather fast and is redacted below.
+Then password is found very fast and is redacted below.
 ```
                                Aircrack-ng 1.6
 
