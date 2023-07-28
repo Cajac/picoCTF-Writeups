@@ -28,9 +28,10 @@
 
 ## Reverse Engineering Challenges
 
-2 Challenges:
+3 Challenges:
 - [Ready Gladiator 0](Reverse_Engineering/Ready_Gladiator_0.md)
 - [Reverse](Reverse_Engineering/Reverse.md)
+- [Safe Opener 2](Reverse_Engineering/Safe_Opener_2.md)
 
 ## Web Exploitation Challenges
 
