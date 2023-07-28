@@ -8,13 +8,13 @@
 Points: 100
 Tags: picoCTF 2023, Reverse Engineering
 Author: MUBARAK MIKAIL
-
+ 
 Description:
 What can you do with this file?
 
 I forgot the key to my safe but this file is supposed to help me with retrieving the lost key.  
 Can you help me unlock my safe?
-
+ 
 Hints:
 1. Download and try to decompile the file.
 ```
@@ -36,7 +36,7 @@ On easy challenges it's always recommended to search for the flag in plain text 
 
 A more sofisticated solution is to decompile the file in [JD-GUI](https://github.com/java-decompiler/jd-gui) and study the code.
 
-You find the flag in the openSafe function (but it's redacted here)
+You find the flag in the openSafe function (but it's redacted here).
 ```C
   public static boolean openSafe(String password)
   {
