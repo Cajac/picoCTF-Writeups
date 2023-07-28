@@ -5,3 +5,4 @@
 - [Reverse](Reverse.md)
 - [Safe Opener 2](Safe_Opener_2.md)
 - [timer](timer.md)
+- [Virtual Machine 0](Virtual_Machine_0.md)
