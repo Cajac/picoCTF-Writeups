@@ -14,12 +14,12 @@ There's an interesting script in the user's home directory
 
 The work computer is running SSH. We've been given a script which performs some basic calculations, 
 explore the script and find a flag.
-
+ 
 Hostname: saturn.picoctf.net
 Port:     55661
 Username: picoplayer
 Password: password
-
+ 
 Hints:
 (None)
 ```
