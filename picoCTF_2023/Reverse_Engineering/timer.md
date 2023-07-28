@@ -25,8 +25,8 @@ There are several ways to solve this challenge. Here are two solutions presented
 
 ### Solution #1 - Grepping for the flag
 
-APK-files are simply a Zip-file and and can be unpacked with a tool such as [7-Zip](https://www.7-zip.org/).  
-Then just use `grep` recursively on all the unpacked files
+APK-files are simply a Zip-file and can be unpacked with a tool such as [7-Zip](https://www.7-zip.org/).  
+Unpack the APK-file and then just use `grep` recursively on all the unpacked files
 ```
 Z:\CTFs\picoCTF\picoCTF_2023\Reverse_Engineering\timer\timer>grep -iR picoCTF *
 apktool.yml:  versionName: picoCTF{<REDACTED>}
@@ -37,9 +37,9 @@ As you can see the flag was present in two different files.
 
 ### Solution #2 - Decompiling with JADX-GUI
 
-A more sofisticated solution is to decompile the APK-file with [Jadx-GUI](https://github.com/skylot/jadx) and study the code.
+A more sofisticated solution is to decompile the APK-file with [Jadx-GUI](https://github.com/skylot/jadx) and study the decompiled code.
 
-Since the APK-file contains a lot of files the easiest way to find the flag is to use the 'Text search' feature.  
+Since the APK-file contains a lot of files, the fastest way to find the flag is to use the 'Text search' feature.  
 It is available both in the Navigation-menu and as a button on the tool bar.
 
 In this case, searching for `picoCTF` just gives you one hit, in `com.example.timer.BuildConfig`
