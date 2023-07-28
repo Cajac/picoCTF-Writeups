@@ -1,0 +1,57 @@
+# timer
+
+- [Challenge information](timer.md#challenge-information)
+- [Solution](timer.md#solution)
+
+## Challenge information
+```
+Points: 100
+Tags: picoCTF 2023, Reverse Engineering, android
+Author: MUBARAK MIKAIL
+ 
+Description:
+You will find the flag after analysing this apk
+
+Download here.
+ 
+Hints:
+1. Decompile
+2. mobsf or jadx
+```
+
+## Solution
+
+There are several ways to solve this challenge. Here are two solutions presented in increasing difficulty.
+
+### Solution #1 - Grepping for the flag
+
+APK-files are simply a Zip-file and and can be unpacked with a tool such as [7-Zip](https://www.7-zip.org/).  
+Then just use `grep` recursively on all the unpacked files
+```
+Z:\CTFs\picoCTF\picoCTF_2023\Reverse_Engineering\timer\timer>grep -iR picoCTF *
+apktool.yml:  versionName: picoCTF{<REDACTED>}
+smali_classes3/com/example/timer/BuildConfig.smali:.field public static final VERSION_NAME:Ljava/lang/String; = "picoCTF{<REDACTED>}"
+```
+
+As you can see the flag was present in two different files.
+
+### Solution #2 - Decompiling with JADX-GUI
+
+A more sofisticated solution is to decompile the APK-file with [Jadx-GUI](https://github.com/skylot/jadx) and study the code.
+
+Since the APK-file contains a lot of files the easiest way to find the flag is to use the 'Text search' feature.  
+It is available both in the Navigation-menu and as a button on the tool bar.
+
+In this case, searching for `picoCTF` just gives you one hit, in `com.example.timer.BuildConfig`
+```C
+package com.example.timer;
+
+/* loaded from: classes3.dex */
+public final class BuildConfig {
+    public static final String APPLICATION_ID = "com.example.timer";
+    public static final String BUILD_TYPE = "debug";
+    public static final boolean DEBUG = Boolean.parseBoolean("true");
+    public static final int VERSION_CODE = 1;
+    public static final String VERSION_NAME = "picoCTF{<REDACTED>}";
+}
+```
