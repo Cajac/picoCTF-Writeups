@@ -15,9 +15,10 @@
 
 ## Forensics Challenges
 
-2 Challenges: 
+3 Challenges: 
 - [hideme](Forensics/hideme.md)
 - [PcapPoisoning](Forensics/PcapPoisoning.md)
+- [who is it](Forensics/who_is_it.md)
 
 ## General Skills Challenges
 
