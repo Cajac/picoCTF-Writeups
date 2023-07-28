@@ -24,22 +24,17 @@ Hints:
 
 ## Solution
 
-There are several ways to solve this challenge. Here are two solutions presented in increasing difficulty.
-
-### Unzip the virtual machine
-
 Unzipping the given Zip-file gives you a .dae file. A format I had previously never heard about.
 So I Googled for a program to open it with and found [Blender](https://www.blender.org/) which is free and open source.  
 
-Start Blender.
-
 ### Physically dismantle the machine
 
+Start Blender.  
 Then in the `File` menu, choose `Import` and `Collada (.dae)`.  Select the `Virtual-Machine-0.dae` file.
 
 Zoom in and you should see the "black box" machine
 
-Picture here.
+![The Black Box in Blender](The_Black_Box_in_Blender.png)
 
 Now you need to dismantle the black box by selecting components and moving them away.
 The navigation is a bit wierd and this takes time.
