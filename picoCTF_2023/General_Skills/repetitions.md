@@ -22,9 +22,7 @@ Hints:
 
 One of the tags already gave it away. The contents of the file is [base64 encoded data](https://en.wikipedia.org/wiki/Base64). 
 Otherwise, a good indicator for base64 encoded data is a string ending with one or two equal signs ('=')
-and the string contains nothing* but letters and numbers. The ('=') is padding in base64 encoding.
-
-* There are a few exeptions: '+', '/', and '='.
+and the string contains nothing but letters and numbers (with three exeptions: '+', '/', and '='). The ('=') is padding in base64 encoding.
 
 The contents of the file is
 ```
