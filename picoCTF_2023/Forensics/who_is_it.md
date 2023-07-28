@@ -41,7 +41,7 @@ Examples of online services that can help you analyze e-mail headers are:
 Go through the e-mail header line by line until you start to find IPv4 addresses.
 
 You will find the sender IP-address in several headers such as
-`Received` header
+the `Received` header
 ```
 Received: from mail.onionmail.org (mail.onionmail.org. [173.249.33.206])
         by mx.google.com with ESMTPS id f16-20020a05600c4e9000b003a1947873d6si1882702wmq.224.2022.07.07.23.19.47
@@ -50,7 +50,7 @@ Received: from mail.onionmail.org (mail.onionmail.org. [173.249.33.206])
         Thu, 07 Jul 2022 23:19:47 -0700 (PDT)
 ```
 
-`ARC-Authentication-Results` header
+and the `ARC-Authentication-Results` header
 ```
 ARC-Authentication-Results: i=1; mx.google.com;
        dkim=pass header.i=@onionmail.org header.s=jan2022 header.b=4sU2nk5Z;
@@ -58,7 +58,7 @@ ARC-Authentication-Results: i=1; mx.google.com;
        dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=onionmail.org
 ```
 
-`Received-SPF` header
+and the `Received-SPF` header
 ```
 Received-SPF: pass (google.com: domain of lpage@onionmail.org designates 173.249.33.206 as permitted sender) client-ip=173.249.33.206;
 ```
