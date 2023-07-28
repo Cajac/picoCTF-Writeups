@@ -19,10 +19,11 @@
 
 ## General Skills Challenges
 
-3 Challenges:
+4 Challenges:
 - [chrono](General_Skills/chrono.md)
 - [money-ware](General_Skills/money-ware.md)
 - [Permissions](General_Skills/Permissions.md)
+- [repetitions](General_Skills/repetitions.md)
 
 ## Reverse Engineering Challenges
 
