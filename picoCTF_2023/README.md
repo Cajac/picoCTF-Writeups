@@ -35,6 +35,7 @@
 
 ## Web Exploitation Challenges
 
-X Challenges:
+3 Challenges:
 - [findme](Web_Exploitation/findme.md) 
 - [MatchTheRegex](Web_Exploitation/MatchTheRegex.md)
+- [SOAP](Web_Exploitation/SOAP.md)
