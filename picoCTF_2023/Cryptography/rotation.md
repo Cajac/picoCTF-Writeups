@@ -27,7 +27,7 @@ The default rotation is 13 steps. Change the amount until you find the flag. The
 
 ### Python solution
 
-Even though it takes a bit longer time it's more fun to write a small python script called `solve.py` to solve the challenge.
+Even though it takes a bit longer time it's more fun to write a small python script called `solve.py` to bruteforce the challenge.
 
 ```python
 #!/usr/bin/python
@@ -62,7 +62,6 @@ Then make the script executable and run it
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Cryptography/rotation]
 └─$ chmod +x solve.py
-
 
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Cryptography/rotation]
 └─$ ./solve.py
