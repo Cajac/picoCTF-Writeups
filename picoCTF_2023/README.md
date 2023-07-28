@@ -7,9 +7,10 @@
 
 ## Cryptography Challenges
 
-2 Challenges:
+3 Challenges:
 - [HideToSee](Cryptography/HideTooSee.md)
 - [ReadMyCert](Cryptography/ReadMyCert.md)
+- [rotation](Cryptography/rotation.md)
 
 ## Forensics Challenges
 
