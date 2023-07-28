@@ -20,11 +20,11 @@ Hints:
 
 ## Solution
 
-There are several ways to solve this challenge. Here are three solutions presented with increasing difficulty.
+There are several ways to solve this challenge. Here are three solutions presented in increasing difficulty.
 
 ### Solution #1 - Searching for strings
 
-On easy challenges it's always recommended to search for the flag in plain text with `strings`
+On easy challenges it's always recommended to search for the flag in plain text with `strings`.
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Reverse_Engineering/Reverse]
 └─$ strings -a -n 8 ret    
@@ -35,7 +35,7 @@ __isoc99_scanf
 []A\A]A^A_
 Enter the password to unlock this file: 
 You entered: %s
-Password correct, please see flag: picoCTF{<REDACTED>}
+Password correct, please see flag: picoCTF{<REDACTED>}             <----- Here
 Access denied
 GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0
 crtstuff.c
@@ -75,7 +75,7 @@ undefined8 main(void)
   printf("You entered: %s\n",local_68);
   iVar1 = strcmp(local_68,(char *)&local_38);
   if (iVar1 == 0) {
-    puts("Password correct, please see flag: picoCTF{<REDACTED>}");
+    puts("Password correct, please see flag: picoCTF{<REDACTED>}");                <----- Here
     puts((char *)&local_38);
   }
   else {
@@ -164,7 +164,7 @@ You entered: test
 Breakpoint 1, 0x0000555555555279 in main ()
 ```
 
-Examine the RSI and RDI registers and you have the flag again
+Examine the RSI and RDI registers and you have the main part of the flag again
 ```
 Breakpoint 1, 0x0000555555555279 in main ()
 (gdb) x/s $rsi
@@ -173,12 +173,12 @@ Breakpoint 1, 0x0000555555555279 in main ()
 0x7fffffffdd00: "test"
 ```
 
-NOTE -  You don't get the full flag here as only a portion of the flag is compared.
+Note however, that you don't get the full flag here as only a portion of the flag is compared.
 To get the full flag you need to run the program again and input your partial flag. Then the full flag in printed.
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Reverse_Engineering/Reverse]
 └─$ ./ret                                                     
 Enter the password to unlock this file: picoCTF{<PARTIAL FLAG>
 You entered: picoCTF{<PARTIAL FLAG>
-Password correct, please see flag: picoCTF{<FULL FLAGL>}
+Password correct, please see flag: picoCTF{<FULL FLAG>}
 ```
