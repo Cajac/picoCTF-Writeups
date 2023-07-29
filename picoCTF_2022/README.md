@@ -26,8 +26,9 @@ X Challenges:
 
 ## Reverse Engineering Challenges
 
-X Challenges:
+2 Challenges:
 - [file-run1](Reverse_Engineering/file-run1.md)
+- [file-run2](Reverse_Engineering/file-run2.md)
 
 ## Web Exploitation Challenges
 
