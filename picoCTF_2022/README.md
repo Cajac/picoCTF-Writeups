@@ -8,7 +8,7 @@ X Challenges:
 ## Cryptography Challenges
 
 X Challenges:
-- [HideToSee](Cryptography/HideTooSee.md)
+- [basic-mod1](Cryptography/basic-mod1.md)
 
 ## Forensics Challenges
 
