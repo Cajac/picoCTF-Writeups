@@ -7,8 +7,9 @@ X Challenges:
 
 ## Cryptography Challenges
 
-X Challenges:
+2 Challenges:
 - [basic-mod1](Cryptography/basic-mod1.md)
+- [basic-mod2](Cryptography/basic-mod2.md)
 
 ## Forensics Challenges
 
