@@ -28,4 +28,5 @@ Rather than solving this manually I used [this online service at Planet Calc](ht
 
 It "brute-forces" the number of rails up to a maximum number (with a default of 10).
 
-You see the flag in the output with 4 rails.
+Enter the given encoded text in the `Encoded message` text box and press 'CALCULATE'.  
+And you will get the flag in the output with 4 rails in the `Decode table`.
