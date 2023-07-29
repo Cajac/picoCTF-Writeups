@@ -41,7 +41,8 @@ X Challenges:
 
 ## Web Exploitation Challenges
 
-3 Challenges:
+4 Challenges:
 - [Includes](Web_Exploitation/Includes.md)
 - [Inspect HTML](Web_Exploitation/Inspect_HTML.md)
 - [Local Authority](Web_Exploitation/Local_Authority.md)
+- [Search source](Web_Exploitation/Search_source.md)
