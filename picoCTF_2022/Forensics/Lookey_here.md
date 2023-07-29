@@ -8,12 +8,12 @@
 Points: 100
 Tags: picoCTF 2022, Forensics, grep
 Author: LT 'SYREAL' JONES / MUBARAK MIKAIL
- 
+
 Description:
 Attackers have hidden information in a very large mass of data in the past, maybe they are still doing it.
 
 Download the data here.
- 
+
 Hints:
 1. Download the file and search for the flag based on the known prefix.
 ```
