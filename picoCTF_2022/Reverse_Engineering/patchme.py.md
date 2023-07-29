@@ -1,7 +1,7 @@
 # patchme.py
 
-- [Challenge information](patchme.py.md#challenge-information)
-- [Solution](patchme.py.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
 - [References](#references)
 
 ## Challenge information
