@@ -11,8 +11,8 @@ Tags: picoCTF 2022, Reverse Engineering, binary, gdb
 Author: LT 'SYREAL' JONES
 
 Description:
-
 Can you get the flag?
+
 Download this binary.
 
 Here's the test drive instructions:
@@ -61,7 +61,7 @@ When we issue `layout asm` we get a text based GUI-like window
 (gdb) layout asm
 ```
 
-Picture here
+![GDB Layout Asm View](GDB_Layout_Asm.png)
 
 Then we set a breakpoint on sleep and run the program
 ```
