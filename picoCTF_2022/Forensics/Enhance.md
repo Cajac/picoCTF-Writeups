@@ -8,10 +8,10 @@
 Points: 100
 Tags: picoCTF 2022, Forensics, svg
 Author: LT 'SYREAL' JONES
-
+ 
 Description:
 Download this image file and find the flag.
-
+ 
 Hints:
 (None)
 ```
