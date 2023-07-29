@@ -337,6 +337,9 @@ Ah, that's right. Gzip is one of those programs that expect a certain file exten
 Rename the file and try again
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
+└─$ mv flag.out flag.gz
+
+┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ gzip -d flag.gz    
 gzip: flag: Value too large for defined data type
 ```
@@ -565,7 +568,7 @@ newflag: lzop compressed data - version 1.040, LZO1X-1, os: Unix
 
 ### The lzop file
 
-More of the same so I'm limiting my comments now. It's more of the same...
+More of the same so I'm limiting my comments now.
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ lzop -h             
