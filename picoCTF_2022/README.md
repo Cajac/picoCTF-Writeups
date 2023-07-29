@@ -32,11 +32,12 @@ X Challenges:
 
 ## Reverse Engineering Challenges
 
-4 Challenges:
+5 Challenges:
 - [file-run1](Reverse_Engineering/file-run1.md)
 - [file-run2](Reverse_Engineering/file-run2.md)
 - [GDB Test Drive](Reverse_Engineering/GDB_Test_Drive.md)
 - [patchme.py](Reverse_Engineering/patchme.py.md)
+- [Safe Opener](Reverse_Engineering/Safe_Opener.md)
 
 ## Web Exploitation Challenges
 
