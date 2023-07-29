@@ -73,6 +73,6 @@ public class SafeOpener {
 In the `main` function we see a Base64.Encoder initialized and in the `OpenSafe` function 
 we see an encodedkey that looks like a base64 encoded password: `cGwzYXMzX2wzdF9tM18xbnQwX3RoM19zYWYz`.
 
-I then used [CyberChef's 'From Base64' recipe](https://cyberchef.org/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)) to get the password.
+I used [CyberChef's 'From Base64' recipe](https://cyberchef.org/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)) to decode the password.
 
 Finally, follow the instructions to create the flag.
