@@ -27,7 +27,7 @@ Hints:
 
 ## Solution
 
-The code for this challenge is almost identical to the [previous challenge](basic_mod1.md).
+The code for this challenge is almost identical to the [previous challenge](basic-mod1.md).
 
 For my implementation of modular inverse I found code on [StackOverflow](https://stackoverflow.com/questions/4798654/modular-multiplicative-inverse-function-in-python). It's very easy now in Python 3.8 and later...
 
