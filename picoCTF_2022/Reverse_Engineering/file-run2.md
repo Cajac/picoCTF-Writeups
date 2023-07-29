@@ -13,9 +13,9 @@ Author: WILL HONG
 Description:
 Another program, but this time, it seems to want some input. 
 What happens if you try to run it on the command line with input "Hello!"?
-
-Download the program here.
  
+Download the program here.
+
 Hints:
 1. Try running it and add the phrase "Hello!" with a space in front (i.e. "./run Hello!")
 ```
