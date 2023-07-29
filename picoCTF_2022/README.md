@@ -9,11 +9,12 @@
 
 ## Cryptography Challenges
 
-4 Challenges:
+5 Challenges:
 - [basic-mod1](Cryptography/basic-mod1.md)
 - [basic-mod2](Cryptography/basic-mod2.md)
 - [credstuff](Cryptography/credstuff.md)
 - [morse-code](Cryptography/morse-code.md)
+- [rail-fence](Cryptography/rail-fence.md)
 
 ## Forensics Challenges
 
