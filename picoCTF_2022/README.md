@@ -34,5 +34,6 @@ X Challenges:
 
 ## Web Exploitation Challenges
 
-X Challenges:
-- [Includes](Web_Exploitation/Includes.md) 
+2 Challenges:
+- [Includes](Web_Exploitation/Includes.md)
+- [Inspect HTML](Web_Exploitation/Inspect_HTML.md) 
