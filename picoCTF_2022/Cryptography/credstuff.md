@@ -34,7 +34,7 @@ leak/usernames.txt
   
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Cryptography/Credstuff]
 └─$ cd leak                  
-                                                                                                                                
+
 ┌──(kali㉿kali)-[/picoCTF_2022/Cryptography/Credstuff/leak]
 └─$ head passwords.txt 
 CMPTmLrgfYCexGzJu6TbdGwZa
@@ -47,7 +47,7 @@ kfcVXjcFkvNQQPpATErx6eVDd
 kDrPVvMakUsNd7BvmJtK3ACY4
 dvDvWjzXNk8WwqEzJ5P2FP5YH
 86L5w4sH9ZXTCPAa5ExMSPFNh
-                                                                                                  
+
 ┌──(kali㉿kali)-[/picoCTF_2022/Cryptography/Credstuff/leak]
 └─$ head usernames.txt 
 engineerrissoles
