@@ -16,8 +16,9 @@
 
 ## Forensics Challenges
 
-X Challenges: 
+2 Challenges: 
 - [Enhance!](Forensics/Enhance.md)
+- [File types](Forensics/File_types.md)
 
 ## General Skills Challenges
 
