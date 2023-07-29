@@ -2,9 +2,10 @@
 
 ## Binary Exploitation Challenges
 
-2 Challenges:
+3 Challenges:
 - [basic-file-exploit](Binary_Exploitation/basic-file-exploit.md)
 - [buffer overflow 0](Binary_Exploitation/buffer_overflow_0.md)
+- [CVE-XXXX-XXXX](Binary_Exploitation/CVE-XXXX-XXXX.md)
 
 ## Cryptography Challenges
 
