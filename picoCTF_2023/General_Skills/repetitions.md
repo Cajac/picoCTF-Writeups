@@ -54,7 +54,7 @@ Then make the script executable and run it
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/General_Skills/repetitions]
 └─$ chmod +x solve.py
-                                                                                                                                                                                                
+
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/General_Skills/repetitions]
 └─$ ./solve.py       
 picoCTF{<REDACTED>}
