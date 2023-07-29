@@ -62,14 +62,14 @@ ruthlessconfidence
 coupleelevator
 ```
 
-Lets check what line number the user is located at with `grep -n`
+Now we check what line number the user is located at with `grep -n`
 ```
 ┌──(kali㉿kali)-[/picoCTF_2022/Cryptography/Credstuff/leak]
 └─$ grep -n cultiris usernames.txt 
 378:cultiris
 ```
 
-Lets use `cat -n` in a similar fashion the get the corresponding password
+Then we use `cat -n` in a similar fashion the get the corresponding password
 ```
 ┌──(kali㉿kali)-[/picoCTF_2022/Cryptography/Credstuff/leak]
 └─$ cat -n passwords.txt| grep 378
@@ -107,7 +107,7 @@ for i in range(1, alpha_len+1):
 
 ```
 
-Now run the script to get the flag
+Finally, run the script to get the flag
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Cryptography/Credstuff]
 └─$ ./bf.py 
