@@ -17,7 +17,7 @@
 ## Forensics Challenges
 
 X Challenges: 
-- [hideme](Forensics/hideme.md)
+- [Enhance!](Forensics/Enhance.md)
 
 ## General Skills Challenges
 
