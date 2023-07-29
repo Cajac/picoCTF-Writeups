@@ -27,9 +27,10 @@ X Challenges:
 
 ## Reverse Engineering Challenges
 
-2 Challenges:
+3 Challenges:
 - [file-run1](Reverse_Engineering/file-run1.md)
 - [file-run2](Reverse_Engineering/file-run2.md)
+- [GDB Test Drive](Reverse_Engineering/GDB_Test_Drive.md)
 
 ## Web Exploitation Challenges
 
