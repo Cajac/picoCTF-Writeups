@@ -17,10 +17,11 @@
 
 ## Forensics Challenges
 
-3 Challenges: 
+4 Challenges: 
 - [Enhance!](Forensics/Enhance.md)
 - [File types](Forensics/File_types.md)
 - [Lookey here](Forensics/Lookey_here.md)
+- [Packets Primer](Forensics/Packets_Primer.md)
 
 ## General Skills Challenges
 
