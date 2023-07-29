@@ -2,8 +2,9 @@
 
 ## Binary Exploitation Challenges
 
-2 Challenges:
+3 Challenges:
 - [babygame01](Binary_Exploitation/babygame01.md)
+- [babygame02](Binary_Exploitation/babygame02.md)
 - [two-sum](Binary_Exploitation/two-sum.md)
 
 ## Cryptography Challenges
