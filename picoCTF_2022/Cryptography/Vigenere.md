@@ -32,7 +32,7 @@ There probably are more ways to solve this challenge, but here are two solutions
 
 You cabn use an online solver such as [Rumkin](https://rumkin.com/tools/cipher/vigenere/) to solve this challenge.
 
-Set the 'Operating Mode' to `Decrypt` and set the 'Cipher key' to `CYLAB`.
+Set the 'Operating Mode' to `Decrypt` and set the 'Cipher key' to `CYLAB`.  
 Then enter the cipher text in the large text field and you get the flag at the bottom of the window.
 
 ### Use a Python script
