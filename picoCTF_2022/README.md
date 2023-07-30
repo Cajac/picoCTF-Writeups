@@ -25,11 +25,6 @@
 - [Packets Primer](Forensics/Packets_Primer.md)
 - [Redaction gone wrong](Forensics/Redaction_gone_wrong.md)
 
-## General Skills Challenges
-
-X Challenges:
-- [chrono](General_Skills/chrono.md)
-
 ## Reverse Engineering Challenges
 
 5 Challenges:
