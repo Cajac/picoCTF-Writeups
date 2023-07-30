@@ -9,7 +9,7 @@
 Points: 100
 Tags: picoCTF 2022, Cryptography, Substitution_cipher
 Author: WILL HONG
-
+ 
 Description:
 A second message has come in the mail, and it seems almost identical to the first one. 
 Maybe the same thing will work again.
