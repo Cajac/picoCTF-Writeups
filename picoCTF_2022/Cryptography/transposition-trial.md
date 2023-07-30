@@ -9,7 +9,7 @@
 Points: 100
 Tags: picoCTF 2022, Cryptography, cryptography
 Author: WILL HONG
- 
+
 Description:
 Our data got corrupted on the way here. 
 Luckily, nothing got replaced, but every block of 3 got scrambled around! 
