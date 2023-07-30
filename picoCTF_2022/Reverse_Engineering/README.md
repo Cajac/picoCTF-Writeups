@@ -1,6 +1,7 @@
 # Reverse Engineering Challenges
 
-6 Challenges: 
+7 Challenges: 
+- [bloat.py](bloat.py.md)
 - [file-run1](file-run1.md)
 - [file-run2](file-run2.md)
 - [GDB Test Drive](GDB_Test_Drive.md)
