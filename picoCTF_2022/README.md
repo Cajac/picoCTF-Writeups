@@ -9,7 +9,7 @@
 
 ## Cryptography Challenges
 
-8 Challenges:
+9 Challenges:
 - [basic-mod1](Cryptography/basic-mod1.md)
 - [basic-mod2](Cryptography/basic-mod2.md)
 - [credstuff](Cryptography/credstuff.md)
@@ -18,6 +18,7 @@
 - [substitution0](Cryptography/substitution0.md)
 - [substitution1](Cryptography/substitution1.md)
 - [substitution2](Cryptography/substitution2.md)
+- [transposition-trial](Cryptography/transposition-trial.md)
 
 ## Forensics Challenges
 

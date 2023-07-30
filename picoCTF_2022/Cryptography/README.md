@@ -1,6 +1,6 @@
 # Cryptography Challenges
 
-8 Challenges:
+9 Challenges:
 - [basic-mod1](basic-mod1.md)
 - [basic-mod2](basic-mod2.md)
 - [credstuff](credstuff.md)
@@ -9,3 +9,4 @@
 - [substitution0](substitution0.md)
 - [substitution1](substitution1.md)
 - [substitution2](substitution2.md)
+- [transposition-trial](transposition-trial.md)
