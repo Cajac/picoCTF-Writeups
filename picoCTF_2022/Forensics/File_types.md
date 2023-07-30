@@ -159,19 +159,17 @@ ar: supported targets: elf64-x86-64 elf32-i386 elf32-iamcu elf32-x86-64 pei-i386
 Report bugs to <https://sourceware.org/bugzilla/>
 ```
 
-There doesn't seem to be any unpack option but there is a `p` option to print files in the archive.
-
-We try that and redirect the output to a new file called 'flag2'
+We then extract the contents with `ar x`
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
-└─$ ar p flag > flag2
+└─$ ar x flag
 ```
 
-What kind of flag might 'flag2' be?
+What kind of flag might 'flag' be?
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
-└─$ file flag2
-flag2: cpio archive 
+└─$ file flag
+flag: cpio archive 
 ```
 
 ### The cpio archive file
@@ -208,7 +206,7 @@ Examples:
 So we can extract files with `cpio -i`. Lets try that.
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
-└─$ cpio -i flag2
+└─$ cpio -i flag
 
 ^C
 ```
@@ -218,19 +216,19 @@ Hhm, the command "hanged" almost like it expected something more and I had to CT
 We could try redirecting the file instead
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
-└─$ cpio -i < flag2
+└─$ cpio -i < flag
 cpio: flag not created: newer or same age version exists
 2 blocks
 ```
 
 Better, but we get a new error instead. `cpio` doesn't like that there is a file called flag already present.
-Lets delete it and try again
+Lets rename our file and try again
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
-└─$ rm flag    
+└─$ mv flag flag.cpio    
                                                              
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
-└─$ cpio -i < flag2
+└─$ cpio -i < flag.cpio
 2 blocks
 ```
 
