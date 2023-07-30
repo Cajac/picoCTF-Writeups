@@ -1,6 +1,6 @@
 # Cryptography Challenges
 
-7 Challenges:
+8 Challenges:
 - [basic-mod1](basic-mod1.md)
 - [basic-mod2](basic-mod2.md)
 - [credstuff](credstuff.md)
@@ -8,3 +8,4 @@
 - [rail-fence](rail-fence.md)
 - [substitution0](substitution0.md)
 - [substitution1](substitution1.md)
+- [substitution2](substitution2.md)
