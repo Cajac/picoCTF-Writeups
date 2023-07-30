@@ -9,7 +9,7 @@
 
 ## Cryptography Challenges
 
-9 Challenges:
+10 Challenges:
 - [basic-mod1](Cryptography/basic-mod1.md)
 - [basic-mod2](Cryptography/basic-mod2.md)
 - [credstuff](Cryptography/credstuff.md)
@@ -19,6 +19,7 @@
 - [substitution1](Cryptography/substitution1.md)
 - [substitution2](Cryptography/substitution2.md)
 - [transposition-trial](Cryptography/transposition-trial.md)
+- [Vigenere](Cryptography/Vigenere.md)
 
 ## Forensics Challenges
 
