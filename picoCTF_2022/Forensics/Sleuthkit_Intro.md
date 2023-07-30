@@ -78,7 +78,7 @@ Supported image format types:
         vhd (Virtual Hard Drive (Microsoft))
 ```
 
-I'm not sure if we need to specify the image type or not so lets try without it
+I'm not sure if you need to specify the image type or not but lets try without it
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Intro]
 └─$ mmls disk.img
