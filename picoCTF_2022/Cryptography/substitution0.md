@@ -38,10 +38,10 @@ kjgmjioxey xo.
 Ohj sdqy xg: mxirIOS{5PW5717P710E_3V0DP710E_03055505}
 ```
 
-The description conveniently tells as that the first line is a decrytion key.  
-So 'Q' decodes to 'A', 'W' to 'B', etc.
+The description conveniently tells as that the first line is a decryption key.  
+So 'Q' decrypts to 'A', 'W' to 'B', etc.
 
-Then we have a body of text, large enough for us to use letter frequency analysis.
+Then we have a body of text, large enough for us to use letter frequency analysis should we need to.
 
 And at the last line we have what looks like our encrypted flag.
 
@@ -111,6 +111,8 @@ respecting it.
 
 The flag is: picoCTF{<REDACTED>}
 ```
+
+For additional information, please see the references below.
 
 ## References
 
