@@ -186,8 +186,8 @@ sys.exit(0)
 
 ### Third iteration of deobfuscation and simplification
 
-If we look closely we can see that the decryption of the flag is independent from the password.  
-So the functions for promping and verifying the password can be removed. As well as the greeting.  
+If we look closely we can see that the decryption of the flag is independent from the `happychance` password.  
+So the functions for promping and verifying that password can be removed. As well as the greeting.  
 Lets also remove the sys module and the unnecessary last call to `sys.exit`.
 
 Then we have this
