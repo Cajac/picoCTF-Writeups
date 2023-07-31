@@ -8,7 +8,7 @@
 Points: 100
 Tags: Beginner picoMini 2022, General Skills, base, Python
 Author: LT 'SYREAL' JONES
-  
+
 Description:
 Run the Python script and convert the given number from decimal to binary to get the flag.
 
