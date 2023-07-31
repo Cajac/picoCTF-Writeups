@@ -8,8 +8,9 @@ These pages are created to:
 
 ## Challenges
 
-- [picoCTF 2022 Challenges](picoCTF_2022/README.md)
 - [picoCTF 2023 Challenges](picoCTF_2023/README.md)
+- [picoCTF 2022 Challenges](picoCTF_2022/README.md)
+- [Beginner picoMini 2022 Challenges](Beginner_picoMini_2022/README.md)
 - [picoGym Exclusive Challenges](picoGym_Exclusive/README.md)
   
 ## No spoilers
