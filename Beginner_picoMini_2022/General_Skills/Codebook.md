@@ -23,7 +23,7 @@ Hints:
 
 ## Solution
 
-Most of the time you make sure the script is executable and then run it
+Most of the time you just make sure the script is executable and then run it
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Codebook]
 └─$ chmod +x code.py                                                        
@@ -35,9 +35,9 @@ Most of the time you make sure the script is executable and then run it
 ./code.py: 7: Syntax error: "(" unexpected
 ``` 
 
-But in this case that doesn't work. The reason for this is that the script doesn't comtain a so called 'shebang' - a comment specifying what king of program/interpreter that should execute the script. It normally look something like this `#!/usr/bin/python3`.
+But in this case that doesn't work. The reason for this is that the script doesn't contain a so called 'shebang' - a special comment specifying what kind of program/interpreter that should execute the script. It normally looks something like this `#!/usr/bin/python3`.
 
-Lets check the first lines of the script with `head`
+Lets display the first lines of the script with `head` to verify this.
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Codebook]
 └─$ head code.py 
@@ -51,7 +51,7 @@ def str_xor(secret, key):
     i = 0
 ```
 
-We need to explicitly say that Python should run the script like this
+Yes the shebang is missing and we need to explicitly say that Python should run the script like this
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Codebook]
 └─$ python code.py 
@@ -63,3 +63,4 @@ For additional information, please see the references below.
 ### References
 
 - [Real Python - Executing Python Scripts With a Shebang](https://realpython.com/python-shebang/)
+
