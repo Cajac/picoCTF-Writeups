@@ -42,7 +42,7 @@ We only want to output the `wlan.ssid` field so we change the output to specific
 specify our wanted field with -e. 
 
 We also sort the output from `tshark` with a GNU-unix port of sort called `gsort` from [GnuWin32](https://getgnuwin32.sourceforge.net/).  
-Output only a uniq list with the -u parameter.
+Output only a unique list with the -u parameter.
 ```
 Z:\CTFs\picoCTF\picoGym\Forensics\WPA-ing_Out>tshark -r wpa-ing_out.pcap -T fields -e wlan.ssid | gsort -u
 
