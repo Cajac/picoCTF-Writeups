@@ -14,7 +14,7 @@ Description:
 Fix the syntax error in the Python script to print the flag.
 
 Download Python script
-
+ 
 Hints:
 1. Are equality and assignment the same symbol?
 2. To view the file in the webshell, do: $ nano fixme2.py
