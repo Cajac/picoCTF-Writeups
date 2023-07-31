@@ -1,0 +1,60 @@
+# convertme.py
+
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+
+## Challenge information
+```
+Points: 100
+Tags: Beginner picoMini 2022, General Skills, base, Python
+Author: LT 'SYREAL' JONES
+  
+Description:
+Run the Python script and convert the given number from decimal to binary to get the flag.
+
+Download Python script
+
+Hints:
+1. Look up a decimal to binary number conversion app on the web or use your computer's calculator!
+2. The str_xor function does not need to be reverse engineered for this challenge.
+3. If you have Python on your computer, you can download the script normally and run it. 
+   Otherwise, use the wget command in the webshell.
+4. To use wget in the webshell, first right click on the download link and select 'Copy Link' or 'Copy Link Address'
+5. Type everything after the dollar sign in the webshell: $ wget , then paste the link after the space after wget and press enter. 
+   This will download the script for you in the webshell so you can run it!
+6. Finally, to run the script, type everything after the dollar sign and then press enter: $ python3 convertme.py
+```
+
+## Solution
+
+Start by running the script and see what random number is selected
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Convertme.py]
+└─$ python convertme.py 
+If 25 is in decimal base, what is it in binary base?
+Answer: 
+```
+
+You can solve the conversion in a number of ways aside from calculating the result manually:
+ * Use an online service such as [RapidTables](https://www.rapidtables.com/convert/number/base-converter.html) to do the calculation
+ * Use an interactive Python session in other window (see below)
+
+Converting the number to binary with the `bin` function
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Convertme.py]
+└─$ python             
+Python 3.11.4 (main, Jun  7 2023, 10:13:09) [GCC 12.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> bin(25)
+'0b11001'
+>>> quit()
+```
+
+Skip the initial '0b' when you enter your answer
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Convertme.py]
+└─$ python convertme.py 
+If 25 is in decimal base, what is it in binary base?
+Answer: 11001
+That is correct! Here's your flag: picoCTF{<REDACTED>}
+```
