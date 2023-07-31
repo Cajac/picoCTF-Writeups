@@ -45,7 +45,7 @@ flag = str_xor(flag_enc, 'enkidu')
   print('That is correct! Here\'s your flag: ' + flag)
 ```
 
-The print statement is idented but should be. Remove the spaces before print and save the script.
+The `print` statement is indented but should be. Remove the spaces before `print` and save the script.
 
 Then try to run it again
 ```bash
