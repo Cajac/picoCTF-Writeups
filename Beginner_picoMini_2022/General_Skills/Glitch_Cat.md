@@ -30,7 +30,7 @@ Connect to the flag printing service
 'picoCTF{gl17ch_m3_n07_' + chr(0x61) + chr(0x34) + chr(0x33) + chr(0x39) + chr(0x32) + chr(0x64) + chr(0x32) + chr(0x65) + '}'
 ```
 
-The first part of the flag looks correct, but the last part rather looks like puthon code.
+The first part of the flag looks correct, but the last part looks rather like python code.
 
 Lets try to execute it
 ```bash
@@ -38,8 +38,11 @@ Lets try to execute it
 └─$ python -c "print('picoCTF{gl17ch_m3_n07_' + chr(0x61) + chr(0x34) + chr(0x33) + chr(0x39) + chr(0x32) + chr(0x64) + chr(0x32) + chr(0x65) + '}')"
 picoCTF{<REDACTED>}
 ```
+And we get the complete flag (but redacted here).  
 
-The plus operator can also "add" strings together. This is called concatenation.
+The plus operator can also "add" strings together. This is called concatenation.  
+The `chr` function returns the ASCII-character of the value.  
+Numbers preceded with '0x' are in hexadecimal.
 
 For additional information, please see the references below.
 
