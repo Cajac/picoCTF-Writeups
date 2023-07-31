@@ -59,4 +59,4 @@ For additional information, please see the references below.
 
 ### References
 
-- [W3Schools - Python Operators](https://www.w3schools.com/python/python_operators.asp)
+- [Wikipedia - MD5](https://en.wikipedia.org/wiki/MD5)
