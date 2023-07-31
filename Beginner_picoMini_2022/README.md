@@ -2,6 +2,7 @@
 
 ## General Skills Challenges
 
-X Challenges:
+3 Challenges:
 - [Codebook](General_Skills/Codebook.md)
 - [convertme.py](General_Skills/convertme.py.md)
+- [fixme1.py](General_Skills/fixme1.py.md)
