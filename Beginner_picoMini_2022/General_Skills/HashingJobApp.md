@@ -89,7 +89,7 @@ conn.close()
 print(flag)
 ```
 
-Then I run my virtual Python environment with pwntools and get the flag
+Then I run my virtual Python environment with pwntools to get the flag
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/HashingJobApp]
 └─$ ~/python_venvs/pwntools/bin/python3  ./pwn_solve.py
