@@ -22,6 +22,8 @@ Hints:
 
 ## Solution
 
+### Manual solution
+
 Connect to the server
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/HashingJobApp]
@@ -54,9 +56,52 @@ After you have been disconnected, new text will be randomly selected.
 
 After three correct hashes are provided you get the flag.
 
+### Automated solution with pwntools
+
+A timed challenge like this is nice to automate with [pwntools](https://docs.pwntools.com/en/stable/index.html).
+
+Lets write a small Python script called `pwn_solve.py` that solves this challenge for us
+```python
+#!/usr/bin/python
+# -*- coding: latin-1 -*-
+
+import hashlib
+from pwn import *
+import re
+
+SERVER = 'saturn.picoctf.net'
+PORT = 55823
+
+def generateHash(word): 
+    return hashlib.md5(word.encode()).hexdigest()
+
+conn = remote(SERVER, PORT)
+for i in range(3):
+    question = conn.recvline().decode().strip()
+    word = re.findall('Please md5 hash the text between quotes, excluding the quotes: \'(.*)\'', question)[0]
+    answer = conn.recvline()
+    hash = generateHash(word).encode()
+    conn.sendline(hash)
+    hashline = conn.recvline()
+    correct = conn.recvline()
+flag = conn.recvline().decode().strip()
+conn.close()
+print(flag)
+```
+
+Then I run my virtual Python environment with pwntools and get the flag
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/HashingJobApp]
+└─$ ~/python_venvs/pwntools/bin/python3  ./pwn_solve.py
+[+] Opening connection to saturn.picoctf.net on port 55823: Done
+[*] Closed connection to saturn.picoctf.net port 55823
+picoCTF{<REDACTED>}
+```
+
 
 For additional information, please see the references below.
 
 ### References
 
 - [W3Schools - Python Operators](https://www.w3schools.com/python/python_operators.asp)
+- [pwntools Documentation](https://docs.pwntools.com/en/stable/index.html)
