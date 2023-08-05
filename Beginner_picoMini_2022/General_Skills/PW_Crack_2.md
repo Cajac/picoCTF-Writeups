@@ -49,7 +49,7 @@ def level_2_pw_check():
 level_2_pw_check()
 ``` 
 
-As the previous challenge, the interesting part is beginning of the IF statement
+As in the previous challenge, the interesting part is the IF statement
 ```python
 <---snip--->
     user_pw = input("Please enter correct password for flag: ")
@@ -58,7 +58,7 @@ As the previous challenge, the interesting part is beginning of the IF statement
 <---snip--->
 ```
 
-The password is encoded as ASCII-characters. To get the password in plain text you can either
+The password is encoded as ASCII-numbers. To get the password in plain text you can either
 * Lookup the characters manually in [an ASCII-table](https://www.ascii-code.com/)
 * Use an interactive Python session to give you the answer (see below)
 
@@ -73,9 +73,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> quit()
 ```
 
-So the password is `4ec9`.
-
-Finally, we run the script to get the flag
+So the password is `4ec9`. Finally, we run the script to get the flag
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/PW_Crack_2]
 └─$ python level2.py
