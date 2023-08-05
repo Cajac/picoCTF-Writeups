@@ -5,6 +5,11 @@
 1 Challenge:
 - [Local Target](Binary_Exploitation/Local_Target.md)
 
+## Cryptography Challenges
+
+1 Challenge:
+- [spelling-quiz](Cryptography/spelling-quiz.md)
+
 ## Forensics Challenges
 
 1 Challenge: 
