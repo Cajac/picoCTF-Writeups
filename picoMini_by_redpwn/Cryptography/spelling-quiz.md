@@ -84,7 +84,7 @@ It looks like the first `picoCTF{` part and the trailing `}` is omitted and we n
 
 To break the substitution cipher I installed and used [Subbreaker](https://gitlab.com/guballa/SubstitutionBreaker).
 
-It's a new tool for me so I needed to check its help
+It's was new tool for me so I needed to check its help
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/spelling-quiz]
 └─$ ~/python_venvs/subbreaker/bin/subbreaker -h        
@@ -183,3 +183,4 @@ For additional information, please see the references below.
 - [os.walk function](https://docs.python.org/3/library/os.html#os.walk)
 - [random — Generate pseudo-random numbers](https://docs.python.org/3/library/random.html)
 - [Stack Overflow - What does colon equal (:=) in Python mean?](https://stackoverflow.com/questions/26000198/what-does-colon-equal-in-python-mean)
+- [Wikipedia — Substitution cipher](https://en.wikipedia.org/wiki/Substitution_cipher)
