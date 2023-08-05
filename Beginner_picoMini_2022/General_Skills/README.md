@@ -1,6 +1,6 @@
 # General Skills Challenges
 
-7 Challenges:
+8 Challenges:
 - [Codebook](Codebook.md)
 - [convertme.py](convertme.py.md)
 - [fixme1.py](fixme1.py.md)
@@ -8,3 +8,4 @@
 - [Glitch Cat](Glitch_Cat.md)
 - [HashingJobApp](HashingJobApp.md)
 - [PW Crack 1](PW_Crack_1.md)
+- [PW Crack 2](PW_Crack_2.md)
