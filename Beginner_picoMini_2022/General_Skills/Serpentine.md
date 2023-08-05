@@ -97,14 +97,14 @@ if __name__ == "__main__":
   main()
 ```
 
-A somewhat long script. The interesting parts are the `print_flag` function
+A somewhat long script. The most interesting parts are the `print_flag` function
 ```python
 def print_flag():
   flag = str_xor(flag_enc, 'enkidu')
   print(flag)
 ```
 
-And the fact that it never is called
+And the fact that it's never called
 ```python
 <---snip--->
     elif choice == 'b':
