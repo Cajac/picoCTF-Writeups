@@ -8,7 +8,7 @@
 Points: 100
 Tags: Beginner picoMini 2022, General Skills, Python
 Author: SUJEET KUMAR
-
+ 
 Description:
 Run the runme.py script to get the flag. 
 Download the script with your browser or with wget in the webshell.
