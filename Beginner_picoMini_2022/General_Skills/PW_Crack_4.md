@@ -9,7 +9,7 @@
 Points: 100
 Tags: Beginner picoMini 2022, General Skills, password_cracking, hashing
 Author: LT 'SYREAL' JONES
-  
+
 Description:
 Can you crack the password to get the flag?
 
