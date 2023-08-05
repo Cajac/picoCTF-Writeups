@@ -67,8 +67,8 @@ level_3_pw_check()
 pos_pw_list = ["f09e", "4dcf", "87ab", "dba8", "752e", "3961", "f159"]
 ``` 
 
-The description suggests that we should brute force the solution but lets check if there is an faster way.  
-On many easier challenge you can sometimes just Google for the hash to find the corresponding plain text for it.  
+The description suggests that we should brute force the solution but lets check if there is a faster way.  
+In many easier challenges you can sometimes just Google for the hash to find the corresponding plain text for it.  
 So lets try that. Get the hash
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/PW_Crack_3]
@@ -76,7 +76,7 @@ So lets try that. Get the hash
 65d9c68e03807969851a83b28bbebed1
 ```
 
-But if you Google for it you are probably not going to find the answer.
+But if you Google for it you are probably not going to find the answer. The challenge creator was too smart for that.
 
 So lets write a brute forcer by changing the `level_3_pw_check` function slightly 
 ```python
@@ -98,7 +98,9 @@ for pw in pos_pw_list:
     level_3_pw_check(pw)
 ```
 
-Finally, we run the brute force script to get the flag
+We can leave the rest of the code unchanged.
+
+Finally, we run the brute forcer to get the flag
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/PW_Crack_3]
 └─$ python pw_crack_3_get_flag.py  
