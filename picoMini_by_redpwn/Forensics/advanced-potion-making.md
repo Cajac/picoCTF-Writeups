@@ -27,7 +27,7 @@ Lets start by checking the given file with `file`
 advanced-potion-making: data
 ```
 
-Hhm, lets check it in hex form and see if we can recognise anaything interesting
+Hhm, lets check it in hex form and see if we can recognise anything interesting
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Forensics/advanced-potion-making]
 └─$ xxd -l 100 advanced-potion-making 
