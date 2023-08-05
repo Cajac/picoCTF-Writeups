@@ -2,7 +2,7 @@
 
 ## General Skills Challenges
 
-8 Challenges:
+9 Challenges:
 - [Codebook](General_Skills/Codebook.md)
 - [convertme.py](General_Skills/convertme.py.md)
 - [fixme1.py](General_Skills/fixme1.py.md)
@@ -11,3 +11,4 @@
 - [HashingJobApp](General_Skills/HashingJobApp.md)
 - [PW Crack 1](General_Skills/PW_Crack_1.md)
 - [PW Crack 2](General_Skills/PW_Crack_2.md)
+- [PW Crack 3](General_Skills/PW_Crack_3.md)
