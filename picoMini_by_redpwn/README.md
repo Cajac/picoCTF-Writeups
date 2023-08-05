@@ -27,5 +27,6 @@
 
 ## Web Exploitation Challenges
 
-1 Challenge: 
+2 Challenges: 
+- [caas](Web_Exploitation/caas.md)
 - [login](Web_Exploitation/login.md)
