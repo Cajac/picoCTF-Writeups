@@ -1,6 +1,6 @@
 # General Skills Challenges
 
-10 Challenges:
+11 Challenges:
 - [Codebook](Codebook.md)
 - [convertme.py](convertme.py.md)
 - [fixme1.py](fixme1.py.md)
@@ -11,3 +11,4 @@
 - [PW Crack 2](PW_Crack_2.md)
 - [PW Crack 3](PW_Crack_3.md)
 - [PW Crack 4](PW_Crack_4.md)
+- [PW Crack 5](PW_Crack_5.md)
