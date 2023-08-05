@@ -50,7 +50,7 @@ def level_1_pw_check():
 level_1_pw_check()
 ``` 
 
-The most interesting part is ofcourse the beginning of the IF statement where we see the password in plain text
+The most interesting part is ofcourse the IF statement where we see the password in plain text
 ```python
 <---snip--->
     user_pw = input("Please enter correct password for flag: ")
