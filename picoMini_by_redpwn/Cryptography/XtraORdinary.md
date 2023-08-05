@@ -69,7 +69,7 @@ with open('output.txt', 'w') as f:
     f.write(ctxt.hex())
 ```
 
-The script XORs the flag with an unknown key and are then XORed again with fixed messages a random number of times.  
+The script XORs the flag with an unknown key and the result are then XORed again with fixed messages a random number of times.  
 
 And then lets check the encrypted hexencoded `output.txt` file
 ```bash
@@ -82,8 +82,8 @@ No conclusions from that.
 
 ### Break the cipher
 
-If the XORed flag is XORed an even number of times then XORing cancels each other out since `X ^ X = 0`.
-Also if we have the flag (F) XORed with the key (K) we can XOR it again with the key to get the flag back since `(F ^ K) ^ K = F`.  
+If some data is XORed an even number of times with a message then the XORing cancels each other out since `X ^ X = 0`.  
+Also, if we have the flag (F) XORed with the key (K) we can XOR the result again with the key to get the flag back since `(F ^ K) ^ K = F`.  
 Lastly, we don't need to consider the same fixed messages more than once because of the first fact above.
 
 Lets write a brute forcer script to find the right combination of extra XORing by trying all combinations of the fixed messages, that is if they are included or not in the XORing.
@@ -170,7 +170,7 @@ This is the `secret-key.txt`.
  
 ### Get the flag
 
-Now, with this information lets write another script that gives us the flag
+Now, with this information lets write another script that gives us the flag. The code is mostly the same as above.
 ```python
 #!/usr/bin/env python3
 
@@ -208,7 +208,7 @@ flag = encrypt(ctxt, secret)
 print(flag.decode())
 ```
 
-Finally, time to get the plain text by running the `get_flag.py` script
+Finally, time to get the plain text flag by running the `get_flag.py` script
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/XtraORdinary]
 └─$ ./get_flag.py
@@ -221,4 +221,4 @@ For additional information, please see the references below.
 
 - [Wikipedia — XOR cipher](https://en.wikipedia.org/wiki/XOR_cipher)
 - [itertools.product](https://docs.python.org/3/library/itertools.html#itertools.product)
-- [itertools — Functions creating iterators for efficient looping¶](https://docs.python.org/3/library/itertools.html)
+- [itertools — Functions creating iterators for efficient looping](https://docs.python.org/3/library/itertools.html)
