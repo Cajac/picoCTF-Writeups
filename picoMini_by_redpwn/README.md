@@ -7,8 +7,9 @@
 
 ## Cryptography Challenges
 
-1 Challenge:
+2 Challenges:
 - [spelling-quiz](Cryptography/spelling-quiz.md)
+- [XtraORdinary](Cryptography/XtraORdinary.md)
 
 ## Forensics Challenges
 

@@ -1,4 +1,5 @@
 # Cryptography Challenges
 
-1 Challenges:
+2 Challenges:
 - [spelling-quiz](spelling-quiz.md)
+- [XtraORdinary](XtraORdinary.md)
