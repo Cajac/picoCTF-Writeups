@@ -598,7 +598,7 @@ But there is a slight problem. Since the program is a PIE we only have relative 
         001013be 41 89 c4        MOV        R12D,EAX
 ```
 
-We need to find out where the program is loaded into memory.
+We need to find out where the program is loaded in memory.
 
 Run `gdb -q not-crypto` then execute `starti` to start the program and break at the first instruction.  
 Then run `vmmap` to get the memory map
@@ -619,10 +619,10 @@ Start              End                Offset             Perm Path
 0x00007ffffffde000 0x00007ffffffff000 0x0000000000000000 rw- [stack]
 ```
 
-For this to work you need to have [GEF](https://github.com/hugsy/gef) (GDB Enhanced Features) install.
-We can see from the output that the programs image base is at `0x0000555555554000`.
+For this to work you need to have [GEF (GDB Enhanced Features)](https://github.com/hugsy/gef) installed.
+We can see from the output that the program's image base is at `0x0000555555554000`.
 
-To rebase program in Ghidra we select `Memory Map` in the `Window menu` and then press the `Set Image Base` icon that looks like a house. Set the image base to `0x0000555555554000`.
+To rebase the program in Ghidra we select `Memory Map` in the `Window menu` and then press the `Set Image Base` icon that looks like a house. Set the image base to `0x0000555555554000`.
 
 Now we can see the real memory addresses
 ```
