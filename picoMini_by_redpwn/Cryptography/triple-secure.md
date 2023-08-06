@@ -54,7 +54,7 @@ with open('public-key.txt', 'w') as f:
     f.write(f'c: {c}\n')
 ```
 
-The script selects 3 primes (`p`, `q`, `r`) randomly and then calculates 3 different, but interdependent, modulus (`n1`, `n2`, `n3`).  
+The script randomly selects 3 primes (`p`, `q`, `r`) and then calculates 3 different, but interdependent, modulus (`n1`, `n2`, `n3`).  
 This means we could derive `p`, `q` and `r` by calculating the [GCD](https://en.wikipedia.org/wiki/Greatest_common_divisor) from pairs of `n1`, `n2` and `n3`.
 
 Alternatively, we could search for known factorizations of the modulus in databases such as [factordb](http://factordb.com/).
@@ -101,7 +101,7 @@ q = 1269637035972142421110557933884551798903790677705120768585877171971469288477
 r = 132846951895793538897077555403967847542050766700952197146228251113081712319440889155149846202888542648969351063239105740434095718011829001684551658508591803707420131965877374781379009502046474415909376904718002094203010990824838428607725944298259738507797326637681632441750845743202171364832477389321609195337
 ```
 
-Now we can proceed to decrypt the flag
+Now we can proceed to decrypt the flag.
 
 ### Decrypt and get the flag
 
@@ -145,7 +145,7 @@ For additional information, please see the references below.
 
 ### Addendum 
 
-We really don't need to do the factorization and decryption in two separate steps. Here is a `total.py` script that does everyting in one go
+We really don't need to do the factorization and decryption in two separate steps. Here is a `total.py` script that does everything in one go
 ```python
 #!/usr/bin/python
 
