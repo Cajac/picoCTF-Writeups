@@ -6,6 +6,8 @@ These pages are created to:
 * Support my junior work colleges CTF learning
 * Be a concrete project to improve my skills in markdown, git, github, etc.
 
+In total you will find more than 100 challenge solutions here.
+
 ## Challenges
 
 - [picoCTF 2023 Challenges](picoCTF_2023/README.md)
@@ -23,3 +25,8 @@ Instead the flags are displayd as `picoCTF{<REDACTED>}`.
 
 I'm not a native English speaker so please forgive any spelling mistakes or grammatical errors.
  
+ ## Acknowledgements
+
+ Some of the solutions were inspired by writeups and walkthroughs from these guys:
+ - [Dvd848](https://github.com/Dvd848)
+ - [GynvaelEN](https://www.youtube.com/@GynvaelEN)
