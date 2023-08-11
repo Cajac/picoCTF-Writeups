@@ -13,7 +13,7 @@ Author: SUSIE
 Description:
 Files can always be changed in a secret way. 
 Can you find the flag? cat.jpg
-
+ 
 Hints:
 1. Look at the details of the file
 2. Make sure to submit the flag as picoCTF{XXXXX}
