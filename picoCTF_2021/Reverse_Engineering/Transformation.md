@@ -37,16 +37,16 @@ We also have the Python code snippet that encoded the data. It uses list compreh
 
 ### CyberChef solution
 
-As the hint suggested you can use an online site such as [CyberChef](https://gchq.github.io/CyberChef/) and use the 'Encode text' recipe. 
+As the hint suggested you can use an online site such as [CyberChef](https://gchq.github.io/CyberChef/) and the 'Encode text' recipe to get the flag. 
 
-Enter 'text' in the `Operations` search bar, then drag and drop it to the `Recipe`.  
+Enter 'text' in the `Operations` search bar, then drag and drop `Encode text` to the `Recipe`.  
 Change the Encoding to `UTF-16BE (1201)`, copy the scrambled flag to the `Input` pane and press `BAKE`.
 
 The flag will be shown in the `Output` pane.
 
 ### Python solution
 
-Alternatively, we can put together a Python script. Something like this
+Alternatively, we can put together a Python script that reverses what was done. Something like this
 ```python
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
@@ -60,7 +60,7 @@ for i in range(0, len(enc_flag)):
 print(flag)
 ```
 
-Make sure it is executable and run it to get the flag
+Then, make sure the script is executable and run it to get the flag
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/Transformation]
 └─$ chmod +x solve.py 
