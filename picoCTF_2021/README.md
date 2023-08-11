@@ -13,7 +13,7 @@ X Challenges:
 ## Forensics Challenges
 
 X Challenges: 
-- [Enhance!](Forensics/Enhance.md)
+- [information](Forensics/information.md)
 
 ## General Skills Challenges
 
