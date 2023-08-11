@@ -13,7 +13,7 @@ Description:
 Can you invoke help flags for a tool or binary? 
 
 This program has extraordinarily helpful information...
- 
+
 Hints:
 1. This program will only work in the webshell or another Linux computer.
 2. To get the file accessible in your shell, enter the following in the Terminal prompt: 
