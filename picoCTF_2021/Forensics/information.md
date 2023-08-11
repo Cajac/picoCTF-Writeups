@@ -2,6 +2,7 @@
 
 - [Challenge information](#challenge-information)
 - [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -79,3 +80,9 @@ picoCTF{<REDACTED>}
 ```
 
 And there we have the flag.
+
+For additional information, please see the references below.
+
+### References
+
+- [Wikipedia - Base64](https://en.wikipedia.org/wiki/Base64)
