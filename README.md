@@ -15,7 +15,8 @@ In total you will find more than 100 challenge solutions here.
 - [Beginner picoMini 2022 Challenges](Beginner_picoMini_2022/README.md)
 - [picoMini by redpwn Challenges](picoMini_by_redpwn/README.md)
 - [picoGym Exclusive Challenges](picoGym_Exclusive/README.md)
-  
+- [picoCTF 2021 Challenges](picoCTF_2021/README.md)  
+
 ## No spoilers
 
 The solutions contains step-by-step walkthroughs but doesn't display the flags in plain text.  

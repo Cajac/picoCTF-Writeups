@@ -17,11 +17,6 @@
 1 Challenge: 
 - [advanced-potion-making](Forensics/advanced-potion-making.md)
 
-## General Skills Challenges
-
-1 Challenge:
-- [ASCII Numbers](General_Skills/ASCII_Numbers.md)
-
 ## Reverse Engineering Challenges
 
 1 Challenge:
