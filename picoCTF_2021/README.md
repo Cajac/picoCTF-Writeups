@@ -3,7 +3,7 @@
 ## Binary Exploitation Challenges
 
 X Challenges:
-- [basic-file-exploit](Binary_Exploitation/basic-file-exploit.md)
+- [Stonks](Binary_Exploitation/Stonks.md)
 
 ## Cryptography Challenges
 
