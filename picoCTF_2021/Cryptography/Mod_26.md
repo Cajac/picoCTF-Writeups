@@ -40,7 +40,7 @@ Install them with either `sudo apt install hxtools` or `sudo apt install bsdgame
 
 The tool from `hxtools` installs as `/usr/bin/rot13` and is a script that invokes the `tr` command more or less as described below.
 
-The tool from `bsdgames` installs as `/usr/games/tot13` and calls the caesar tool (which is also included in the package) but with a rotation of 13.
+The tool from `bsdgames` installs as `/usr/games/rot13` and calls the `caesar` tool (which is also included in the package) but with a rotation of 13.
 
 After one of these tools have installed you can run
 ```bash
