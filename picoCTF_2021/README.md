@@ -17,9 +17,10 @@ X Challenges:
 
 ## General Skills Challenges
 
-2 Challenges: 
+3 Challenges: 
 - [Obedient Cat](General_Skills/Obedient_Cat.md)
 - [Python Wrangling](General_Skills/Python_Wrangling.md)
+- [Wave a flag](General_Skills/Wave_a_flag.md)
 
 ## Reverse Engineering Challenges
 
