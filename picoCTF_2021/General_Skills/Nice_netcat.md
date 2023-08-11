@@ -21,6 +21,8 @@ Hints:
 
 ## Solution
 
+### Connect to the server
+
 Lets connect to the server with `nc` as instructed
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Nice_netcat]
@@ -72,7 +74,7 @@ Lets connect to the server with `nc` as instructed
 Oh, a bunch of numbers...
 
 Looking at the numbers we see that they are mainly numbers in the decimal range of 32-122, with the exception of the last 10.  
-Therefor, the could be ASCII numbers.
+Therefore, they are most likely ASCII numbers.
 
 ### Decode the flag
 
