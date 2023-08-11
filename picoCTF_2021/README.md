@@ -17,7 +17,8 @@ X Challenges:
 
 ## General Skills Challenges
 
-3 Challenges: 
+4 Challenges: 
+- [Nice netcat...](General_Skills/Nice_netcat.md)
 - [Obedient Cat](General_Skills/Obedient_Cat.md)
 - [Python Wrangling](General_Skills/Python_Wrangling.md)
 - [Wave a flag](General_Skills/Wave_a_flag.md)
