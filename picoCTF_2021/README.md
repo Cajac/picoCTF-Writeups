@@ -8,7 +8,7 @@ X Challenges:
 ## Cryptography Challenges
 
 X Challenges:
-- [basic-mod1](Cryptography/basic-mod1.md)
+- [Mod 26](Cryptography/Mod_26.md)
 
 ## Forensics Challenges
 
@@ -18,7 +18,7 @@ X Challenges:
 ## General Skills Challenges
 
 X Challenges: 
-- [Obedient Cat](General_Skills/Obedient Cat.md)
+- [Obedient Cat](General_Skills/Obedient_Cat.md)
 
 ## Reverse Engineering Challenges
 

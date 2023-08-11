@@ -20,7 +20,7 @@ In total you will find more than 100 challenge solutions here.
 ## No spoilers
 
 The solutions contains step-by-step walkthroughs but doesn't display the flags in plain text.  
-Instead the flags are displayd as `picoCTF{<REDACTED>}`.
+Instead the flags are displayd as `picoCTF{<REDACTED>}` or with just some portion of the flag visible.
 
 ## Language disclaimer
 

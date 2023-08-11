@@ -1,7 +1,8 @@
 # rotation
 
-- [Challenge information](rotation.md#challenge-information)
-- [Solution](rotation.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -67,3 +68,9 @@ Then make the script executable and run it
 └─$ ./solve.py
 ROT-18: picoCTF{<REDACTED>}
 ```
+
+For additional information, please see the references below.
+
+### References
+
+- [Wikipedia - ROT13](https://en.wikipedia.org/wiki/ROT13)
