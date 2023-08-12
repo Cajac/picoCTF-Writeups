@@ -1,7 +1,7 @@
 # Reverse
 
-- [Challenge information](Reverse.md#challenge-information)
-- [Solution](Reverse.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
 
 ## Challenge information
 ```
