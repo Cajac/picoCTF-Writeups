@@ -1,7 +1,7 @@
 # WPA-ing Out
 
-- [Challenge information](WPA-ing_Out.md#challenge-information)
-- [Solution](WPA-ing_Out.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
 
 ## Challenge information
 ```
