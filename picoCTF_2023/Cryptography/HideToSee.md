@@ -1,12 +1,8 @@
 # HideToSee
 
-- [Challenge information](HideToSee.md#challenge-information)
-- [Solution](HideToSee.md#solution)
-  - [Checking for metadata](HideToSee.md#checking-for-metadata)
-  - [Checking for embedded strings](HideToSee.md#checking-for-embedded-strings)
-  - [Checking for embedded Zip-files](HideToSee.md#checking-for-embedded-zip-files)
-  - [Checking for hidden files](HideToSee.md#checking-for-hidden-files)
-  - [Get the flag](HideToSee.md#get-the-flag)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -138,3 +134,10 @@ Ah, a flag most likely scrambled with the Atbash cipher.
 To view the flag in plaintext you can use one of these sites
  * The [Atbash cipher recipe from CyberChef](https://cyberchef.org/#recipe=Atbash_Cipher())
  * The [Atbash cipher function at Crypto Corner](https://crypto.interactive-maths.com/atbash-cipher.html)
+
+For additional information, please see the references below.
+
+### References
+
+- [Wikipedia - Atbash](https://en.wikipedia.org/wiki/Atbash)
+- [Wikipedia - Exif](https://en.wikipedia.org/wiki/Exif)
