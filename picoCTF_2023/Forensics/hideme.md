@@ -2,6 +2,7 @@
 
 - [Challenge information](#challenge-information)
 - [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -131,3 +132,10 @@ To view the flag.png file in Kali linux you need a program such as `feh` or `eog
 These were not installed in the version I was using and needed to be installed (with 'sudo apt install xxx').
 
 Viewing the flag.png file reveiles the flag.
+
+For additional information, please see the references below.
+
+## References
+
+- [Wikipedia - Exif](https://en.wikipedia.org/wiki/Exif)
+- [Wikipedia - strings (Unix)](https://en.wikipedia.org/wiki/Strings_(Unix))
