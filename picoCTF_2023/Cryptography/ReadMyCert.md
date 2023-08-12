@@ -89,6 +89,6 @@ The flag is visible (but redacted here) on the fourth line of the output which s
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Wikipedia - Certificate signing request](https://en.wikipedia.org/wiki/Certificate_signing_request)
