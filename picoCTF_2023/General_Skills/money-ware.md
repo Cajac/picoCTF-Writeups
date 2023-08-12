@@ -1,14 +1,14 @@
 # money-ware
 
-- [Challenge information](money-ware.md#challenge-information)
-- [Solution](money-ware.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
 
 ## Challenge information
 ```
 Points: 100
 Tags: picoCTF 2023, General Skills, osint
 Author: JUNI19
-  
+
 Description:
 Flag format: picoCTF{Malwarename}
 The first letter of the malware name should be capitalized and the rest lowercase.
