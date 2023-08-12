@@ -1,7 +1,8 @@
 # chrono
 
-- [Challenge information](chrono.md#challenge-information)
-- [Solution](chrono.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -65,7 +66,7 @@ picoplayer@challenge:~$ crontab -l
 no crontab for picoplayer
 ```
 
-Hm, no joy there. The configuration files are, like most other configuration, stored in the `/etc` directory so lets go there
+Hm, no joy there. The configuration files for cron are, like most other configuration, stored in the `/etc` directory so lets go there
 ```
 picoplayer@challenge:~$ cd /etc
 picoplayer@challenge:/etc$ ls -la cron*
@@ -110,3 +111,9 @@ Lets start by checking the `/etc/crontab`  file which also contains the flag.
 picoplayer@challenge:/etc$ cat crontab 
 # picoCTF{<REDACTED>}
 ```
+
+For additional information, please see the references below.
+
+## References
+
+- [Wikipedia - cron](https://en.wikipedia.org/wiki/Cron)
