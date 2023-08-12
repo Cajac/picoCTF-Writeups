@@ -1,7 +1,8 @@
 # Permissions
 
-- [Challenge information](Permissions.md#challenge-information)
-- [Solution](Permissions.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -181,4 +182,11 @@ picoplayer@challenge:/challenge$ cat metadata.json
 {"flag": "picoCTF{<REDACTED>}", "username": "picoplayer", "password": "pEN9KN1qYm"}
 ```
 
-And voila there is the flag in another way!
+And voilà there is the flag in another way!
+
+For additional information, please see the references below.
+
+## References
+
+- [Wikipedia - File-system permissions](https://en.wikipedia.org/wiki/File-system_permissions)
+- [Wikipedia - sudo](https://en.wikipedia.org/wiki/Sudo)
