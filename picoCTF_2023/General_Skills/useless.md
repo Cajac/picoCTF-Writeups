@@ -1,7 +1,8 @@
 # useless
 
-- [Challenge information](useless.md#challenge-information)
-- [Solution](useless.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -136,3 +137,9 @@ Authors
 ```
 
 Ah, the flag is included at the bottom of the man page.
+
+For additional information, please see the references below.
+
+## References
+
+- [Wikipedia - man page](https://en.wikipedia.org/wiki/Man_page)
