@@ -1,7 +1,8 @@
 # ReadMyCert
 
-- [Challenge information](ReadMyCert.md#challenge-information)
-- [Solution](ReadMyCert.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -86,3 +87,8 @@ Certificate Request:
 
 The flag is visible (but redacted here) on the fourth line of the output which shows the `CN`, i.e. the `Common Name` field as before.
 
+For additional information, please see the references below.
+
+### References
+
+- [Wikipedia - Certificate signing request](https://en.wikipedia.org/wiki/Certificate_signing_request)
