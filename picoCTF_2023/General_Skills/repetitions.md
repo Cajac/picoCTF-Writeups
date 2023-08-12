@@ -1,7 +1,8 @@
 # repetitions
 
-- [Challenge information](repetitions.md#challenge-information)
-- [Solution](repetitions.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -59,3 +60,9 @@ Then make the script executable and run it
 └─$ ./solve.py       
 picoCTF{<REDACTED>}
 ```
+
+For additional information, please see the references below.
+
+## References
+
+- [Wikipedia - Base64](https://en.wikipedia.org/wiki/Base64)
