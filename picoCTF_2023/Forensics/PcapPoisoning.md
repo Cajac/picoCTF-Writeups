@@ -1,7 +1,8 @@
 # PcapPoisoning
 
-- [Challenge information](PcapPoisoning.md#challenge-information)
-- [Solution](PcapPoisoning.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -24,3 +25,7 @@ Open the PCAP-file in [Wireshark](https://www.wireshark.org/) and lets take the 
 Set a display filter of `tcp.payload contains "picoCTF"` and press Enter.
 
 Ah, only one packet matches and the flag is indeed visible in the ASCII details of the packet.
+
+## References
+
+- [Wireshark - Display Filters](https://wiki.wireshark.org/DisplayFilters)
