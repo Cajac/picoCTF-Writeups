@@ -141,3 +141,4 @@ For additional information, please see the references below.
 
 - [Wikipedia - Atbash](https://en.wikipedia.org/wiki/Atbash)
 - [Wikipedia - Exif](https://en.wikipedia.org/wiki/Exif)
+- [Wikipedia - strings (Unix)](https://en.wikipedia.org/wiki/Strings_(Unix))
