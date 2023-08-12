@@ -71,6 +71,6 @@ ROT-18: picoCTF{<REDACTED>}
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Wikipedia - ROT13](https://en.wikipedia.org/wiki/ROT13)
