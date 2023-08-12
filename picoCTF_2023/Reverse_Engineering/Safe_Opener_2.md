@@ -1,7 +1,7 @@
 # Safe Opener 2
 
-- [Challenge information](Safe_Opener_2.md#challenge-information)
-- [Solution](Safe_Opener_2.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
 
 ## Challenge information
 ```
