@@ -1,7 +1,7 @@
 # Virtual Machine 0
 
-- [Challenge information](Virtual_Machine_0.md#challenge-information)
-- [Solution](Virtual_Machine_0.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
 
 ## Challenge information
 ```
