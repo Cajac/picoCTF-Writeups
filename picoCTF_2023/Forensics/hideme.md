@@ -1,11 +1,7 @@
 # hideme
 
-- [Challenge information](hideme.md#challenge-information)
-- [Solution](hideme.md#solution)
-  - [Checking for metadata](hideme.md#checking-for-metadata)
-  - [Checking for embedded strings](hideme.md#checking-for-embedded-strings)
-  - [Checking for embedded Zip-files](hideme.md#checking-for-embedded-zip-files)
-  - [Get the flag](hideme.md#get-the-flag)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
 
 ## Challenge information
 ```
@@ -28,7 +24,7 @@ Hints:
 In steganography challenges there are a number of checks that are more or less "standard practice". These include:
 1. Checking for metadata with [ExifTool](https://exiftool.org/)
 2. Checking for embedded strings
-3. Checking for embedded Zip-files with tools such as [Binwalk ](https://github.com/ReFirmLabs/binwalk)
+3. Checking for embedded Zip-files with tools such as [Binwalk](https://github.com/ReFirmLabs/binwalk)
 
 ### Checking for metadata
 
