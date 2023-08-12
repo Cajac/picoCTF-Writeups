@@ -1,7 +1,7 @@
 # who is it
 
-- [Challenge information](who_is_it.md#challenge-information)
-- [Solution](who_is_it.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
 
 ## Challenge information
 ```
