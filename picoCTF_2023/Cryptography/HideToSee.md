@@ -137,7 +137,7 @@ To view the flag in plaintext you can use one of these sites
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Wikipedia - Atbash](https://en.wikipedia.org/wiki/Atbash)
 - [Wikipedia - Exif](https://en.wikipedia.org/wiki/Exif)
