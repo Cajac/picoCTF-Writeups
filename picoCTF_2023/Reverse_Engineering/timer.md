@@ -1,7 +1,7 @@
 # timer
 
-- [Challenge information](timer.md#challenge-information)
-- [Solution](timer.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
 
 ## Challenge information
 ```
