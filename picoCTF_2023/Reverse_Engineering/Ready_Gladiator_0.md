@@ -1,7 +1,8 @@
 # Ready Gladiator 0
 
-- [Challenge information](Ready_Gladiator_0.md#challenge-information)
-- [Solution](Ready_Gladiator_0.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -104,3 +105,10 @@ Ties: 0
 You did it!
 picoCTF{<REDACTED>}
 ```
+
+For additional information, please see the references below.
+
+## References
+
+- [CoreWars](https://corewars.org/)
+- [Beginner's guide to Redcode](https://corewars.org/docs/guide.html)
