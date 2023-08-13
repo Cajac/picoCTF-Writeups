@@ -9,7 +9,7 @@
 Points: 30
 Tags: picoCTF 2021, Reverse Engineering
 Author: SYREAL
-
+  
 Description:
 
 crackme.py
