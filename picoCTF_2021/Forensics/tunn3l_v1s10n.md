@@ -40,13 +40,13 @@ Hhm, not much help there. Lets check the first bytes with `xxd`
 
 After some research (a.k.a. Googling) I find that the magic bytes `0x42 0x4D` is for a BMP image file.
 
-Now, we need to figure out what fields in the BMP header is corrupt and need to be fixed.
+Now, we need to figure out what fields in the BMP header is corrupt and fix them.
 
 ### Fixing the BMP header
 
 Fixing the header is made considerably easier with this help:
 * A [specification of the file format](https://en.wikipedia.org/wiki/BMP_file_format)
-* At least on known good file of the same format
+* At least one known good file of the same format
 * A tool which can parse the headers for you such as the [010 Editor](https://www.sweetscape.com/010editor/) with its [binary templates](https://www.sweetscape.com/010editor/templates.html)
 
 Reading from the beginning of the header the following values seems corrupt/wrong:
@@ -54,7 +54,7 @@ Reading from the beginning of the header the following values seems corrupt/wron
 **The offset** on offset 0xA-0xD, should be `36 00 00 00` instead of `BA D0 00 00`.
 Without additional headers the offset should be 0x36 or decimal 54.
 
-**The header size** on offset 0xE - 0x11, should be `28 00 00 00` instead of `BA D0 00 00`.
+**The header size** on offset 0xE-0x11, should be `28 00 00 00` instead of `BA D0 00 00`.
 The is standard according to the specification.
 
 I didn't see it first but the fields actually says `BAD`...
@@ -75,7 +75,7 @@ And now it is recognized as a BMP image
 tunn3l_v1s10n.bmp: PC bitmap, Windows 3.x format, 1134 x 306 x 24, image size 2893400, resolution 5669 x 5669 px/m, cbSize 2893454, bits offset 54
 ```
 
-The image can now be view bu only contains a fake flag (`notaflag{sorry}`).
+The image can now be viewed but only contains a fake flag (`notaflag{sorry}`).
 
 ### Get the flag
 
