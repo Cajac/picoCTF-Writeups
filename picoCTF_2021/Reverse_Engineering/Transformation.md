@@ -1,7 +1,7 @@
 # Transformation
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [Solutions](#solutions)
 - [References](#references)
 
 ## Challenge information
