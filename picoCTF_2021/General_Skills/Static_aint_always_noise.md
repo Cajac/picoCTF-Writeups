@@ -53,7 +53,7 @@ else
 fi
 ```
 
-The script's comments give a good picture of what it does, essentially runs `objdump` and `strings` on the supplied file.
+The script's comments give a good picture of what it does, essentially runs `objdump` and `strings` on the first supplied file (`$1`).
 
 Lets check out the binary also
 ```bash
