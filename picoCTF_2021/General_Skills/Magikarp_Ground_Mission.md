@@ -139,4 +139,4 @@ drwxr-xr-x 1 ctf-player ctf-player 4096 Mar 16  2021 drop-in
 
 To get the last part of the flag just use `cat` as above.
 
-The complete flag in just a concatenation of all the parts.
+The complete flag is a concatenation of all the parts.
