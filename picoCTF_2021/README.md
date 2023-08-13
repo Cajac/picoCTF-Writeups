@@ -29,7 +29,8 @@ X Challenges:
 
 ## Reverse Engineering Challenges
 
-2 Challenges:
+3 Challenges:
+- [crackme-py](Reverse_Engineering/crackme-py.md)
 - [keygenme-py](Reverse_Engineering/keygenme-py.md)
 - [Transformation](Reverse_Engineering/Transformation.md)
 
