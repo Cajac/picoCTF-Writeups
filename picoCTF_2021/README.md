@@ -13,9 +13,10 @@ X Challenges:
 
 ## Forensics Challenges
 
-2 Challenges: 
+3 Challenges: 
 - [information](Forensics/information.md)
 - [Matryoshka doll](Forensics/Matryoshka_doll.md)
+- [tunn3l v1s10n](Forensics/tunn3l_v1s10n.md)
 
 ## General Skills Challenges
 
