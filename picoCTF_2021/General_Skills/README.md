@@ -1,6 +1,7 @@
 # General Skills Challenges
 
-6 Challenges:
+7 Challenges:
+- [Magikarp Ground Mission](Magikarp_Ground_Mission.md)
 - [Nice netcat...](Nice_netcat.md)
 - [Obedient Cat](Obedient_Cat.md)
 - [Python Wrangling](Python_Wrangling.md)
