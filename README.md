@@ -14,8 +14,8 @@ In total you will find more than 100 challenge solutions here.
 - [picoCTF 2022 Challenges](picoCTF_2022/README.md)
 - [Beginner picoMini 2022 Challenges](Beginner_picoMini_2022/README.md)
 - [picoMini by redpwn Challenges](picoMini_by_redpwn/README.md)
+- [picoCTF 2021 Challenges](picoCTF_2021/README.md)
 - [picoGym Exclusive Challenges](picoGym_Exclusive/README.md)
-- [picoCTF 2021 Challenges](picoCTF_2021/README.md)  
 
 ## No spoilers
 
@@ -30,4 +30,4 @@ I'm not a native English speaker so please forgive any spelling mistakes or gram
 
  Some of the solutions were inspired by writeups and walkthroughs from these guys:
  - [Dvd848](https://github.com/Dvd848)
- - [GynvaelEN](https://www.youtube.com/@GynvaelEN)
+ - [Gynvael](https://www.youtube.com/@GynvaelEN)
