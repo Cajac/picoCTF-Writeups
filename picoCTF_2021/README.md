@@ -7,7 +7,8 @@ X Challenges:
 
 ## Cryptography Challenges
 
-X Challenges:
+2 Challenges:
+- [Mind your Ps and Qs](Cryptography/Mind_your_Ps_and_Qs.md)
 - [Mod 26](Cryptography/Mod_26.md)
 
 ## Forensics Challenges
