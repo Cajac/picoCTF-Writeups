@@ -28,7 +28,8 @@ X Challenges:
 
 ## Reverse Engineering Challenges
 
-X Challenges:
+2 Challenges:
+- [keygenme-py](Reverse_Engineering/keygenme-py.md)
 - [Transformation](Reverse_Engineering/Transformation.md)
 
 ## Web Exploitation Challenges
