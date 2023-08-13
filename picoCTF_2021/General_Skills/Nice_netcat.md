@@ -22,6 +22,7 @@ Hints:
 ## Solution
 
 Below I offer two possible solutions: one manual with netcat and CyberChef and one fully automated with Python and pwntools.
+
 ### Solution #1 - netcat and CyberChef
 
 LetsStart with connecting to the server with `nc`
