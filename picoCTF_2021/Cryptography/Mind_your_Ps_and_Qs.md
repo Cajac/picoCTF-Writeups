@@ -20,7 +20,7 @@ Hints:
 
 ## Solution
 
-Lets start by looking what we was given in the `values` file
+Lets start by looking what we were given in the `values` file
 ```
 Decrypt my super sick RSA:
 c: 240986837130071017759137533082982207147971245672412893755780400885108149004760496
