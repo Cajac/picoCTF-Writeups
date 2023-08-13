@@ -48,7 +48,7 @@ key_full_template_trial = key_part_static1_trial + key_part_dynamic1_trial + key
 <---snip--->
 ```
 
-There we have what seems to be most parts of the flag, apart from a unknown dymanic part.
+There we have what seems to be most parts of the flag, apart from a unknown dynamic part.
 
 Further down we have a menu function called `menu_trial`
 ```python
