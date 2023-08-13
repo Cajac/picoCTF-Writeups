@@ -19,7 +19,7 @@ Hints:
 1. You may find some decoders online
 ```
 
-## Solution
+## Solutions
 
 ### Analyze the given information
 
@@ -70,7 +70,7 @@ Then, make sure the script is executable and run it to get the flag
 picoCTF{<REDACTED>}
 ```
 
-And we have that flag.
+And we have that flag again.
 
 ### Python encoding brute forcer
 
