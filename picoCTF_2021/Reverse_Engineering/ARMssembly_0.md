@@ -26,7 +26,7 @@ Hints:
 
 To some extent, the easiest way to solve this challenge is to compile the code and then emulate the program to find out what the result is. This doesn't require any knowledge of ARM assembly at all. So lets start with that.
 
-First we need to install a cross compiler to compile on a non-ARM machine such as Intel x64. We do that with `sudo apt install binutils-aarch64-linux-gnu` and `sudo apt install gcc-aarch64-linux-gnu`.
+First we need to install a cross compiler to compile on a non-ARM machine such as Intel x64. We do that with `sudo apt install binutils-aarch64-linux-gnu gcc-aarch64-linux-gnu`.
 
 Then we compile and link
 ```bash
@@ -56,12 +56,12 @@ The larger value was returned.
 
 Before analysing the actual assembler code we might need a little ARM refresher. 
 
-**Registers**
+**Registers**  
 In ARMv8 there are 31 [general purpose registers](https://developer.arm.com/documentation/102374/0101/Registers-in-AArch64---general-purpose-registers). These can be used as 64-bit X-registers (called X0 through X30) or as 32-bit W-registers (called W0 through W30). This is just two separate ways of looking at the same registers.
 
 The [SP-register](https://developer.arm.com/documentation/102374/0101/Registers-in-AArch64---other-registers) is the stack pointer. It is used as the base address for loads and stores.
 
-**Instructions**
+**Instructions**  
 If we simplify somewhat, the [instruction format](https://azeria-labs.com/arm-instruction-set-part-3/) looks like this: `MNEMONIC <Reg>, <Oper1>, <Oper2>`.  
 For example `ADD X0, 11, 22` will add 11 and 12 and store the result in the X0-register. The register is usually the "destination" where the result is stored. The result is stored "to the left" in the instruction.
 
@@ -129,7 +129,7 @@ func1:
 	ldr	w0, [sp, 8]                     # w0 = (sp+8) i.e. arg2
 .L3:
 	add	sp, sp, 16                      # Restore stack
-	ret                                 # Return to main
+	ret                                 	# Return to main
 ```
 
 Again, comments are added and the most important thing is the the `CMP` instruction and the following `BLS` (Branch if lower or same). In our case arg1 is lower or same than arg2 so we jump to `.L2` where arg2 is returned in `w0`.
