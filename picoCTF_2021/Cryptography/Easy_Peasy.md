@@ -84,7 +84,7 @@ After printing a welcome message the script prints the encrypted flag for us. Th
 The one-time pad/key is used until it gets to `KEY_LEN` (that is 50000) and then it wraps around.  
 This means that the same key will be reused.
 
-So we have the encrypted flag which is `Flag ^ Key` (^ is short for XOR). If we use the encrypted flag as input we will get the plain test flag since `(Flag ^ Key) ^ Key = Flag`.  
+So we have the encrypted flag which is `Flag ^ Key` (^ is short for XOR). If we use the encrypted flag as input we will get the plain text flag since `(Flag ^ Key) ^ Key = Flag`. 
 Or more generally, `(M ^ K) ^ K = M` since `K ^ K = 0`. If you XOR something with itself, the operations cancel each other out.
 
 ### Create an exploit script
