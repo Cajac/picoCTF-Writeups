@@ -84,10 +84,10 @@ After printing a welcome message the script prints the encrypted flag for us. Th
 The one-time pad/key is used until it gets to `KEY_LEN` (that is 50000) and then it wraps around.  
 This means that the same key will be reused.
 
-So we have the encrypted flag which is `Flag ^ Key` (^ is short for XOR). If we use the encrypted flag as input we will get the flag since `Flag ^ Key ^ Key = Flag`. Or more generally, `M ^ K ^ K = M` since `K ^ K = 0`.
+So we have the encrypted flag which is `Flag ^ Key` (^ is short for XOR). If we use the encrypted flag as input we will get the plain test flag since `(Flag ^ Key) ^ Key = Flag`.  
+Or more generally, `(M ^ K) ^ K = M` since `K ^ K = 0`. If you XOR something with itself, the operations cancel each other out.
 
 ### Create an exploit script
-
 
 Lets write a script with the help of [pwntools](https://docs.pwntools.com/en/stable/index.html)
 ```python
@@ -128,12 +128,12 @@ print(f"Plain text flag: picoCTF{{{flag}}}")
 io.close()
 ```
 
-First, I get the encrypted flag. Then I cause a wrap aroung by keeping sending data until `KEY_LEN` bytes are sent.  
+First, I get the encrypted flag. Then I cause a wrap aroung by keep sending data until `KEY_LEN` bytes are sent.  
 Finally I send the encrypted flag to receive the plain text one.
 
-With `log_level` I change the verbosity. When finished I set it to `warning` to minimize the output.
+With `log_level` I change the verbosity of the script. When finished I set it to `warning` to minimize the output.
 
-Running the script (from my pwntools virtual environment) finally looks like this
+Running the script from my pwntools virtual environment finally looks like this
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Cryptography/Easy_Peasy]
 └─$ ~/python_venvs/pwntools/bin/python get_flag.py
