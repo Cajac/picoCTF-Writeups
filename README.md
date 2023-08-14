@@ -29,5 +29,5 @@ I'm not a native English speaker so please forgive any spelling mistakes or gram
  ## Acknowledgements
 
  Some of the solutions were inspired by writeups and walkthroughs from these guys:
- - [Dvd848](https://github.com/Dvd848)
+ - [Dvd848](https://github.com/Dvd848/CTFs)
  - [Gynvael](https://www.youtube.com/@GynvaelEN)

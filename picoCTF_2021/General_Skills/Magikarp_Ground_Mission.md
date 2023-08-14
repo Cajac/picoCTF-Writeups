@@ -68,10 +68,9 @@ Ah, the first part of the flag.
 
 ### Getting the first part of the flag
 
-Lets view it
+Lets accumulate all the flag parts in a new file `/tmp/full_flag.txt` 
 ```bash
-ctf-player@pico-chall$ cat 1of3.flag.txt 
-picoCTF{xxsh_
+ctf-player@pico-chall$ cat 1of3.flag.txt > /tmp/full_flag.txt
 ```
 
 Then we follow the instructions for the middle part of the flag
@@ -111,10 +110,9 @@ drwxr-xr-x   1 root root 4096 Feb 22  2021 var
 
 ### Getting the middle part of the flag
 
-Lets view the middle part
+Lets append the middle part to our `full_flag.txt` file
 ```bash
-ctf-player@pico-chall$ cat 2of3.flag.txt 
-0ut_0f_\/\/4t3r_
+ctf-player@pico-chall$ cat 2of3.flag.txt >> /tmp/full_flag.txt
 ```
 
 Then we follow the instructions for the middle part of the flag
@@ -137,6 +135,19 @@ drwxr-xr-x 1 ctf-player ctf-player 4096 Mar 16  2021 drop-in
 
 ### Getting the last part of the flag
 
-To get the last part of the flag just use `cat` as above.
+Lets append the last part of the flag and then view the full flag
+```bash
+ctf-player@pico-chall$ cat 3of3.flag.txt >> /tmp/full_flag.txt
+ctf-player@pico-chall$ cat /tmp/full_flag.txt 
+picoCTF{xxsh_
+0ut_0f_<REDACTED>
+<REDACTED>}
+```
 
-The complete flag is a concatenation of all the parts.
+Ah, how annoying. There were newlines in the flag files.
+
+Lets remove them with `tr`
+```bash
+ctf-player@pico-chall$ cat /tmp/full_flag.txt | tr -d '\n'
+picoCTF{xxsh_0ut_<REDACTED>}ctf-player@pico-chall$ 
+```
