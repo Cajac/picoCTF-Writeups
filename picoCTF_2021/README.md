@@ -40,5 +40,6 @@ X Challenges:
 
 ## Web Exploitation Challenges
 
-X Challenges:
+2 Challenges:
+- [Cookies](Web_Exploitation/Cookies.md)
 - [GET aHEAD](Web_Exploitation/GET_aHEAD.md)
