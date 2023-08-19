@@ -42,7 +42,7 @@ The tool from `hxtools` installs as `/usr/bin/rot13` and is a script that invoke
 
 The tool from `bsdgames` installs as `/usr/games/rot13` and calls the `caesar` tool (which is also included in the package) but with a rotation of 13.
 
-After one of these tools have installed you can run
+After one of these tools have been installed you can run
 ```bash
 ┌──(kali㉿kali)-[~]
 └─$ echo "cvpbPGS{arkg_gvzr_V'yy_gel_2_ebhaqf_bs_ebg13_GYpXOHqX}" | rot13
