@@ -1,7 +1,7 @@
 # Enhance!
 
-- [Challenge information](Enhance.md#challenge-information)
-- [Solution](Enhance.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
 
 ## Challenge information
 ```
