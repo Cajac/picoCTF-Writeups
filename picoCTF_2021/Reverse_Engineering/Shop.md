@@ -51,7 +51,7 @@ Nope, not that easy!
 
 Next, we run the program and try to give it unexpected input as suggested in the hint.
 
-Invalid menu option
+We can try an invalid menu option
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/Shop]
 └─$ ./source
@@ -87,7 +87,7 @@ Choose an option:
 
 Nothing happens!
 
-Buying negative number of items
+And we can try buying a negative number of items
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/Shop]
 └─$ ./source
