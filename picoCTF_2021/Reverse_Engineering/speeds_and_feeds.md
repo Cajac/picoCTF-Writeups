@@ -70,7 +70,7 @@ Then click the `PLOT` button.
 
 The result should look something like this:
 
-<img src="The_flag_in_NC_Viewer.png" alt="Part of the flag in NC Viewer" style="width:500px;"/>
+<img src="The_flag_in_NC_Viewer.png" alt="Part of the flag in NC Viewer" style="width:700px;"/>
 
 Zoom out and re-position the grid and you have the whole flag.
 
