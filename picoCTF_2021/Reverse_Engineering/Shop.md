@@ -51,7 +51,7 @@ Nope, not that easy!
 
 Next, we run the program and try to give it unexpected input as suggested in the hint.
 
-We can try an invalid menu option
+We can try invalid menu options
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/Shop]
 └─$ ./source
@@ -138,6 +138,44 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> ''.join(map(chr,int_array))
 'picoCTF{b4d_<REDACTED>}\r\n'
 ```
+
+### Automate everything with pwntools
+
+We can use [pwntools](https://docs.pwntools.com/en/stable/index.html) to automate this with a Python script
+```python
+#!/usr/bin/python
+
+from pwn import *
+
+SERVER = 'mercury.picoctf.net'
+PORT = 42159
+
+# Set output level (critical, error, warning, info (default), debug)
+context.log_level = "warning"
+
+io = remote(SERVER, PORT)
+# Buy -10 Quiet Quiches
+io.sendlineafter(b"Choose an option: \n", b"0")
+io.sendlineafter(b"How many do you want to buy?\n", b"-10")
+# Buy the flag
+io.sendlineafter(b"Choose an option: \n", b"2")
+io.sendlineafter(b"How many do you want to buy?\n", b"1")
+# Retreive the encoded flag
+num_array = io.recvallS().split('[')[1][:-2].split()
+# Convert to plain text flag
+int_array = map(int, num_array)
+print(''.join(map(chr,int_array)))
+io.close()
+```
+
+And run the script to get the flag
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/Shop]
+└─$ ~/python_venvs/pwntools/bin/python get_flag.py
+picoCTF{b4d_<REDACTED>}
+```
+
+For additional information, please see the references below.
 
 ## References
 
