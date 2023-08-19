@@ -33,10 +33,11 @@ X Challenges:
 
 ## Reverse Engineering Challenges
 
-4 Challenges:
+5 Challenges:
 - [ARMssembly 0](Reverse_Engineering/ARMssembly_0.md)
 - [crackme-py](Reverse_Engineering/crackme-py.md)
 - [keygenme-py](Reverse_Engineering/keygenme-py.md)
+- [speeds and feeds](Reverse_Engineering/speeds_and_feeds.md)
 - [Transformation](Reverse_Engineering/Transformation.md)
 
 ## Web Exploitation Challenges
