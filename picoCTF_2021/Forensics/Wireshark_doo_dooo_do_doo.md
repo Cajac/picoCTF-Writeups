@@ -27,11 +27,11 @@ On easier challenges it can sometimes be worth searching for the flag in plainte
 Lets get an overview of the trafic by selecting `Protocol Hierarchy` from the `Statistics` menu.  
 The traffic consists almost exclusively of HTTP-traffic.
 
-Set a display filter of `HTTP`. Then right-click on the first displayed packet (packet #2) and select `Follow ->` and `TCP Stream`.
+Set a display filter of `http`. Then right-click on the first displayed packet (packet #2) and select `Follow ->` and `TCP Stream`.
 
 Here we see the stream content displayed in the same sequence as it appeared on the network. Non-printable characters are replaced by dots. Traffic from the client to the server is colored **red**, while traffic from the server to the client is colored **blue**.
 
-Down in the lower right corner of the windows you can step through the streams by increasing or decreasing the stream number.
+Down in the lower right corner of the window you can step through the streams by increasing or decreasing the stream number.
 
 At stream #5 we find this content
 ```
