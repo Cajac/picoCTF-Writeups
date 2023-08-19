@@ -14,10 +14,11 @@ X Challenges:
 
 ## Forensics Challenges
 
-3 Challenges: 
+4 Challenges: 
 - [information](Forensics/information.md)
 - [Matryoshka doll](Forensics/Matryoshka_doll.md)
 - [tunn3l v1s10n](Forensics/tunn3l_v1s10n.md)
+- [Wireshark doo dooo do doo...](Forensics/Wireshark_doo_dooo_do_doo.md)
 
 ## General Skills Challenges
 
