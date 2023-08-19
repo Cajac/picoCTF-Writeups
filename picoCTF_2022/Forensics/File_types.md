@@ -1,7 +1,7 @@
 # File types
 
-- [Challenge information](File_types.md#challenge-information)
-- [Solution](File_types.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
 
 ## Challenge information
 ```
