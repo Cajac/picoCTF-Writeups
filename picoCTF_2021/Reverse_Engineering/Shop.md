@@ -15,7 +15,7 @@ Best Stuff - Cheap Stuff, Buy Buy Buy...
 Store Instance: source. 
 
 The shop is open for business at nc mercury.picoctf.net 42159.
-
+ 
 Hints:
 1. Always check edge cases when programming
 ```
