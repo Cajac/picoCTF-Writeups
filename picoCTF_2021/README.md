@@ -43,6 +43,7 @@ X Challenges:
 
 ## Web Exploitation Challenges
 
-2 Challenges:
+3 Challenges:
 - [Cookies](Web_Exploitation/Cookies.md)
 - [GET aHEAD](Web_Exploitation/GET_aHEAD.md)
+- [Scavenger Hunt](Web_Exploitation/Scavenger_Hunt.md)
