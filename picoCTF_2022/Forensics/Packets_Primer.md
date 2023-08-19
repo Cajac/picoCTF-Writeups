@@ -21,7 +21,7 @@ Hints:
 
 Open up the PCAP-file in [Wireshark](https://www.wireshark.org/).
 
-On easier challenges it can sometimes be worth searching for the flag i plaintext by entering a display filter of `tcp.payload contains "picoCTF"`. And it works here too. Packet number 4 matches and contains the flag. 
+On easier challenges it can sometimes be worth searching for the flag in plaintext by entering a display filter of `tcp.payload contains "picoCTF"`. And it works here too. Packet number 4 matches and contains the flag. 
 
 To construct/copy the flag you can either
  * See the packet's ASCII-details and construct the flag manually
