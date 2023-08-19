@@ -1,8 +1,8 @@
 # Packets Primer
 
-- [Challenge information](Packets_Primer.md#challenge-information)
-- [Solution](Packets_Primer.md#solution)
-- [References](Packets_Primer.md#references)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
