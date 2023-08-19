@@ -1,7 +1,7 @@
 # Lookey here
 
-- [Challenge information](Lookey_here.md#challenge-information)
-- [Solution](Lookey_here.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
 
 ## Challenge information
 ```
