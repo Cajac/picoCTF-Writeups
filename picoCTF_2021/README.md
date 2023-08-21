@@ -7,10 +7,11 @@ X Challenges:
 
 ## Cryptography Challenges
 
-3 Challenges:
+4 Challenges:
 - [Easy Peasy](Cryptography/Easy_Peasy.md)
 - [Mind your Ps and Qs](Cryptography/Mind_your_Ps_and_Qs.md)
 - [Mod 26](Cryptography/Mod_26.md)
+- [New Caesar](Cryptography/New_Caesar.md)
 
 ## Forensics Challenges
 
