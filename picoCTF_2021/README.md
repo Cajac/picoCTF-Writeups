@@ -35,8 +35,9 @@ X Challenges:
 
 ## Reverse Engineering Challenges
 
-6 Challenges:
+7 Challenges:
 - [ARMssembly 0](Reverse_Engineering/ARMssembly_0.md)
+- [ARMssembly 1](Reverse_Engineering/ARMssembly_1.md)
 - [crackme-py](Reverse_Engineering/crackme-py.md)
 - [keygenme-py](Reverse_Engineering/keygenme-py.md)
 - [Shop](Reverse_Engineering/Shop.md)
