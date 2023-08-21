@@ -14,8 +14,9 @@ X Challenges:
 
 ## Forensics Challenges
 
-4 Challenges: 
+5 Challenges: 
 - [information](Forensics/information.md)
+- [MacroHard WeakEdge](Forensics/MacroHard_WeakEdge.md)
 - [Matryoshka doll](Forensics/Matryoshka_doll.md)
 - [tunn3l v1s10n](Forensics/tunn3l_v1s10n.md)
 - [Wireshark doo dooo do doo...](Forensics/Wireshark_doo_dooo_do_doo.md)
