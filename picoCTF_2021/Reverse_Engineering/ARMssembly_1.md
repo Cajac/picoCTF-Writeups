@@ -70,51 +70,62 @@ In case you need a little ARM refresher, see the [previous challenge](ARMssembly
 
 Lets start with the `main` function
 ```
+.LC0:
+	.string	"You win!"
+	.align	3
+.LC1:
+	.string	"You Lose :("
+	.text
+	.align	2
+	.global	main
+	.type	main, %function
 main:
 	stp	x29, x30, [sp, -48]!
 	add	x29, sp, 0
 	str	w0, [x29, 28]
 	str	x1, [x29, 16]
 	ldr	x0, [x29, 16]
-	add	x0, x0, 8						# Point to arg1 on stack
-	ldr	x0, [x0]						# x0 = arg1
-	bl	atoi							# Call atoi (convert arg1 to int)
-	str	w0, [x29, 44]					# Store the result on the stack
-	ldr	w0, [x29, 44]					# Load it back (prepare for function call)
-	bl	func							# Call func
-	cmp	w0, 0							# Check result of function call
-	bne	.L4								# Non-zero result?, branch to .L4
+	add	x0, x0, 8				# Point to arg1 on stack
+	ldr	x0, [x0]				# x0 = arg1
+	bl	atoi					# Call atoi (convert arg1 to int)
+	str	w0, [x29, 44]				# Store the result on the stack
+	ldr	w0, [x29, 44]				# Load it back (prepare for function call)
+	bl	func					# Call func
+	cmp	w0, 0					# Check result of function call
+	bne	.L4					# Non-zero result?, branch to .L4
 	adrp	x0, .LC0
 	add	x0, x0, :lo12:.LC0
-	bl	puts							# Print the winning result
+	bl	puts					# Print the winning result
 	b	.L6
 .L4:
 	adrp	x0, .LC1
 	add	x0, x0, :lo12:.LC1
-	bl	puts							# Print the losing result
+	bl	puts					# Print the losing result
 .L6:
 	nop
-	ldp	x29, x30, [sp], 48				# Restore stack pointer
-	ret									# Return/exit
+	ldp	x29, x30, [sp], 48			# Restore stack pointer
+	ret						# Return/exit
 	.size	main, .-main
 	.ident	"GCC: (Ubuntu/Linaro 7.5.0-3ubuntu1~18.04) 7.5.0"
 	.section	.note.GNU-stack,"",@progbits
 ```
 
+To get a winning result the return value of the `func` function needs to be zero.
+
 The logic all happens in the `func` function
 ```
 func:
-	sub	sp, sp, #32
+	sub	sp, sp, #32			# Allocate space on the stack
 	str	w0, [sp, 12]			# arg1
-	mov	w0, 79					# w0 = 79
+	mov	w0, 79				# w0 = 79
 	str	w0, [sp, 16]			# *(sp+16) = w0, that is 79
-	mov	w0, 7					# w0 = 7
+	mov	w0, 7				# w0 = 7
 	str	w0, [sp, 20]      		# *(sp+20) = w0, that is 7
-	mov	w0, 3					# w0 = 3
+	mov	w0, 3				# w0 = 3
 	str	w0, [sp, 24]      		# *(sp+24) = w0, that is 3
 	ldr	w0, [sp, 20]      		# w0 = *(sp+20), that is 7
 	ldr	w1, [sp, 16]			# w1 = *(sp+16), that is 79
-	lsl	w0, w1, w0				# w0 = w1 << 7, that is 79 * 2**7 = 10112
+	lsl	w0, w1, w0			# w0 = w1 << 7, that is 79 * 2**7 = 10112
 	str	w0, [sp, 28]			# *(sp+28) = w0, that is 10112
 	ldr	w1, [sp, 28]			# w1 = *(sp+28), that is 10112
 	ldr	w0, [sp, 24]			# w0 = *(sp+24), that is 3
@@ -122,17 +133,17 @@ func:
 	str	w0, [sp, 28]			# *(sp+28) = w0, that is 3370
 	ldr	w1, [sp, 28]			# w1 = *(sp+28), that is 3370
 	ldr	w0, [sp, 12]			# w0 = arg1
-	sub	w0, w1, w0				# w0 = 3370 - arg1
+	sub	w0, w1, w0			# w0 = 3370 - arg1
 	str	w0, [sp, 28]			# *(sp+28) = w0
 	ldr	w0, [sp, 28]			# w0 = *(sp+28)
-	add	sp, sp, 32				# Restore stack pointer
+	add	sp, sp, 32			# Restore stack pointer
 ```
 
 Compared to the previous challenge we have two new instructions:
 * LSL - [Logical Shift Left](https://developer.arm.com/documentation/100076/0200/a32-t32-instruction-set-reference/a32-and-t32-instructions/lsl)
 * SDIV - [Signed Divide](https://developer.arm.com/documentation/100076/0200/a32-t32-instruction-set-reference/a32-and-t32-instructions/sdiv)
 
-In order for `w0` to be `0`, `3370 - arg0` needs to be zero and `arg1` needs to be 3370.
+In order for `w0` to be `0`, `3370 - arg1` needs to be zero and `arg1` needs to be 3370.
 
 Remember to convert the flag to hex before submitting the flag.
 
