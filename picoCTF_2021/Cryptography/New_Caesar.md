@@ -60,13 +60,13 @@ print(enc)
 
 We have two functions:
  * `b16_encode` which encodes the text as base16, that is encodes each nibble as a character
- * `shift` which applies a (caesar) shift on each character
+ * `shift` which applies a caesar variant shift on each character
 
- We also see that the length of the key is only one byte, so we can brute force it for all possible keys.
+We also see that the length of the key is only one byte, so we can brute force it for all possible keys.
 
 ### Write a brute force decoder
 
-First we need a `b16_decode` function. We really don't need to reverse the shift function since we will try all possible keys.
+We need a `b16_decode` function but we really don't need to reverse the shift function since we will try all possible keys.
 
 The total script looks like this
 ```python
