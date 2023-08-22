@@ -15,7 +15,7 @@ What happens if you have a small exponent?
 
 There is a twist though, we padded the plaintext so that (M ** e) is just barely larger than N. 
 Let's decrypt this: ciphertext
-
+ 
 Hints:
 1. RSA tutorial - https://en.wikipedia.org/wiki/RSA_(cryptosystem)
 2. How could having too small of an e affect the security of this key?
