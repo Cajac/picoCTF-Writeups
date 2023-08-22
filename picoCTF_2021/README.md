@@ -7,7 +7,8 @@ X Challenges:
 
 ## Cryptography Challenges
 
-5 Challenges:
+6 Challenges:
+- [Dachshund Attacks](Cryptography/Dachshund_Attacks.md)
 - [Easy Peasy](Cryptography/Easy_Peasy.md)
 - [Mind your Ps and Qs](Cryptography/Mind_your_Ps_and_Qs.md)
 - [Mini RSA](Cryptography/Mini_RSA.md)
