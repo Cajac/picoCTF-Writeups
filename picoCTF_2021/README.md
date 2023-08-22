@@ -49,8 +49,9 @@ X Challenges:
 
 ## Web Exploitation Challenges
 
-4 Challenges:
+5 Challenges:
 - [Cookies](Web_Exploitation/Cookies.md)
 - [GET aHEAD](Web_Exploitation/GET_aHEAD.md)
+- [More Cookies](Web_Exploitation/More_Cookies.md)
 - [Scavenger Hunt](Web_Exploitation/Scavenger_Hunt.md)
 - [Some Assembly Required 1](Web_Exploitation/Some_Assembly_Required_1.md)
