@@ -17,10 +17,11 @@ X Challenges:
 
 ## Forensics Challenges
 
-5 Challenges: 
+6 Challenges: 
 - [information](Forensics/information.md)
 - [MacroHard WeakEdge](Forensics/MacroHard_WeakEdge.md)
 - [Matryoshka doll](Forensics/Matryoshka_doll.md)
+- [Trivial Flag Transfer Protocol](Forensics/Trivial_Flag_Transfer_Protocol.md)
 - [tunn3l v1s10n](Forensics/tunn3l_v1s10n.md)
 - [Wireshark doo dooo do doo...](Forensics/Wireshark_doo_dooo_do_doo.md)
 
