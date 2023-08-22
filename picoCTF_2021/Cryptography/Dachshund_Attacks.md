@@ -42,7 +42,7 @@ After a few seconds we get:
 
 ### Solve with RsaCtfTool
 
-I used [RsaCtfTool](https://github.com/RsaCtfTool/RsaCtfTool) to solve this, but since I haven't used it before I check the arguments
+I used [RsaCtfTool](https://github.com/RsaCtfTool/RsaCtfTool) to solve this, but since I hadn't used it before I checked the arguments
 ```bash
 ┌──(kali㉿kali)-[~/Tools/RsaCtfTool]
 └─$ source bin/activate
