@@ -17,7 +17,8 @@ X Challenges:
 
 ## General Skills Challenges
 
-2 Challenges: 
+3 Challenges: 
+- [2Warm](General_Skills/2Warm.md)
 - [Lets Warm Up](General_Skills/Lets_Warm_Up.md)
 - [Warmed Up](General_Skills/Warmed_Up.md)
 
