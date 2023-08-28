@@ -18,7 +18,7 @@ X Challenges:
 ## General Skills Challenges
 
 X Challenges: 
-- [Magikarp Ground Mission](General_Skills/Magikarp_Ground_Mission.md)
+- [Lets Warm Up](General_Skills/Lets_Warm_Up.md)
 
 ## Reverse Engineering Challenges
 
