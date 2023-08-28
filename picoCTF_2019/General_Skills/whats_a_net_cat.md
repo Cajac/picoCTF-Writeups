@@ -9,7 +9,7 @@
 Points: 100
 Tags: picoCTF 2019, General Skills
 Author: SANJAY C/DANNY TUNITIS
- 
+
 Description:
 Using netcat (nc) is going to be pretty important. 
 
