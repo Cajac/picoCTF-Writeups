@@ -25,13 +25,13 @@ Hints:
 
 ## Solution
 
-There are several ways to solve this challenge and here two of them.
+There are several ways to solve this challenge and here are two of them.
 
 ### Use an online decoder service
 
 You can use an online decoder service such as [Braingle](https://www.braingle.com/brainteasers/codes/onetimepad.php) or [Rumkin](https://rumkin.com/tools/cipher/one-time-pad/) to solve this challenge.
 
-In Braingle, use `UFJKXQZQUNB` as ciphertext and `SOLVECRYPTO` as one-time pad. Click `Decipher` to get the flag.
+In Braingle, use `UFJKXQZQUNB` as `PLAINTEXT / CIPHERTEXT` and `SOLVECRYPTO` as `ONE-TIME PAD`. Click `Decipher` to get the flag.
 
 In Rumkim, set `Operating mode` to `Decrypt`, set `SOLVECRYPTO` as `The pad` and `UFJKXQZQUNB` as `Text to encode or decode`.
 
