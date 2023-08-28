@@ -28,4 +28,4 @@ X Challenges:
 ## Web Exploitation Challenges
 
 X Challenges:
-- [Cookies](Web_Exploitation/Cookies.md)
+- [Insp3ct0r](Web_Exploitation/Insp3ct0r.md)
