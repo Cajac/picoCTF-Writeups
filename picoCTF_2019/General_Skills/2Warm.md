@@ -9,7 +9,7 @@
 Points: 50
 Tags: picoCTF 2019, General Skills
 Author: SANJAY C/DANNY TUNITIS
-
+ 
 Description:
 Can you convert the number 42 (base 10) to binary (base 2)?
 
