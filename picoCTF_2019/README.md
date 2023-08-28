@@ -7,7 +7,8 @@ X Challenges:
 
 ## Cryptography Challenges
 
-X Challenges:
+2 Challenges:
+- [Easy1](Cryptography/Easy1.md)
 - [The Numbers](Cryptography/The_Numbers.md)
 
 ## Forensics Challenges
