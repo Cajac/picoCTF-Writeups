@@ -13,7 +13,7 @@ X Challenges:
 ## Forensics Challenges
 
 X Challenges: 
-- [information](Forensics/information.md)
+- [Glory of the Garden](Forensics/Glory_of_the_Garden.md)
 
 ## General Skills Challenges
 
