@@ -8,7 +8,7 @@ X Challenges:
 ## Cryptography Challenges
 
 X Challenges:
-- [Dachshund Attacks](Cryptography/Dachshund_Attacks.md)
+- [The Numbers](Cryptography/The_Numbers.md)
 
 ## Forensics Challenges
 
