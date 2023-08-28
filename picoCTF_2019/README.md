@@ -17,8 +17,9 @@ X Challenges:
 
 ## General Skills Challenges
 
-X Challenges: 
+2 Challenges: 
 - [Lets Warm Up](General_Skills/Lets_Warm_Up.md)
+- [Warmed Up](General_Skills/Warmed_Up.md)
 
 ## Reverse Engineering Challenges
 
