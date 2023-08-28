@@ -55,7 +55,7 @@ The result takes a few seconds to calculate.
 
 ### Solution #2 - Manual analysis
 
-In case you need a little ARM refresher, see the [previous challenge](ARMssembly_0.md).
+In case you need a little ARM refresher, see the [first ARMssembly challenge](ARMssembly_0.md).
 
 Lets start with analysing the `main` function
 ```
@@ -75,13 +75,13 @@ main:
 	ldr	x0, [x0]				# x0 = arg1
 	bl	atoi					# Call atoi (convert arg1 to int)
 	bl	func1					# Call func1
-	str	w0, [x29, 44]			# Store the result on the stack
+	str	w0, [x29, 44]				# Store the result on the stack
 	adrp	x0, .LC0
 	add	x0, x0, :lo12:.LC0
-	ldr	w1, [x29, 44]			# Get the result from func1 from the stack
+	ldr	w1, [x29, 44]				# Get the result from func1 from the stack
 	bl	printf					# Print the result
 	nop
-	ldp	x29, x30, [sp], 48		# Restore stack pointer
+	ldp	x29, x30, [sp], 48			# Restore stack pointer
 	ret
 	.size	main, .-main
 	.ident	"GCC: (Ubuntu/Linaro 7.5.0-3ubuntu1~18.04) 7.5.0"
@@ -92,32 +92,32 @@ The logic all happens in the `func1` function
 ```
 func1:
 	sub	sp, sp, #32				# Allocate space on the stack
-	str	w0, [sp, 12]			# Store arg1 on stack at *(sp+12)
-	str	wzr, [sp, 24]			# Store 0 on stack at *(sp+24)
-	str	wzr, [sp, 28]			# Store 0 on stack at *(sp+28)
-	b	.L2						# Branch to .L2
+	str	w0, [sp, 12]				# Store arg1 on stack at *(sp+12)
+	str	wzr, [sp, 24]				# Store 0 on stack at *(sp+24)
+	str	wzr, [sp, 28]				# Store 0 on stack at *(sp+28)
+	b	.L2					# Branch to .L2
 .L3:
-	ldr	w0, [sp, 24]			# w0 = *(sp+24)
-	add	w0, w0, 3				# w0 += 3, that is increace w0 with 3
-	str	w0, [sp, 24]			# Store w0 on stack at *(sp+24)
-	ldr	w0, [sp, 28]			# w0 = *(sp+28)
-	add	w0, w0, 1				# w0 += 1, that is increace w0 with 1
-	str	w0, [sp, 28]			# Store w0 on stack at *(sp+28)
+	ldr	w0, [sp, 24]				# w0 = *(sp+24)
+	add	w0, w0, 3				# w0 += 3, that is increase w0 with 3
+	str	w0, [sp, 24]				# Store w0 on stack at *(sp+24)
+	ldr	w0, [sp, 28]				# w0 = *(sp+28)
+	add	w0, w0, 1				# w0 += 1, that is increase w0 with 1
+	str	w0, [sp, 28]				# Store w0 on stack at *(sp+28)
 .L2:
-	ldr	w1, [sp, 28]			# w1 = *(sp+28)
-	ldr	w0, [sp, 12]			# w0 = *(sp+21), that is arg1 
+	ldr	w1, [sp, 28]				# w1 = *(sp+28)
+	ldr	w0, [sp, 12]				# w0 = *(sp+21), that is arg1 
 	cmp	w1, w0					# Compare w1 and w0
-	bcc	.L3						# Branch to .L3 if w1 < w0
-	ldr	w0, [sp, 24]			# w0 = *(sp+24)
+	bcc	.L3					# Branch to .L3 if w1 < w0
+	ldr	w0, [sp, 24]				# w0 = *(sp+24)
 	add	sp, sp, 32				# Restore stack pointer
-	ret							# Return
+	ret						# Return
 	.size	func1, .-func1
 	.section	.rodata
 	.align	3
 ```
 
 Compared to the previous challenges we have:
- * [A new register `WZR`](https://developer.arm.com/documentation/102374/0101/Registers-in-AArch64---other-registers) that always read as 0
+* A new register [`WZR`](https://developer.arm.com/documentation/102374/0101/Registers-in-AArch64---other-registers) that always read as 0
 * A new instruction BCC [Branch on Carry Clear](https://community.arm.com/support-forums/f/architectures-and-processors-forum/5941/could-you-explain-bcc-command-to-me)
 
 The position sp+24 acts as an accumulator increasing the result by 3 for each round. The position sp+28 is a counter.  
