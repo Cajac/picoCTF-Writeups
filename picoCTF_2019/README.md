@@ -24,7 +24,8 @@ X Challenges:
 
 ## Reverse Engineering Challenges
 
-X Challenges:
+2 Challenges:
+- [vault-door-1](Reverse_Engineering/vault-door-1.md)
 - [vault-door-training](Reverse_Engineering/vault-door-training.md)
 
 ## Web Exploitation Challenges
