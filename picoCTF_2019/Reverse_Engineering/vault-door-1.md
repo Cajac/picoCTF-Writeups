@@ -82,8 +82,7 @@ class VaultDoor1 {
 }
 ```
 
-In the `checkPassword` method we see a lot of [charAt](https://www.javatpoint.com/java-string-charat) checks.  
-The `&&` is the [logical AND operator](https://www.freecodecamp.org/news/java-operator-and-or-logical-operators/).
+In the `checkPassword` method we see a lot of [charAt](https://www.javatpoint.com/java-string-charat) checks. The `&&` is the [logical AND operator](https://www.freecodecamp.org/news/java-operator-and-or-logical-operators/).
 
 We want to extract the characters and append them in a sorted order. We need to use a number of tools to achieve this. 
 
