@@ -31,7 +31,7 @@ Click the 'Magic Wand' icon at the `Output` pane.
 If you don't get an icon, you need to type 'magic' in the `Operations` search bar, then drag and drop it to the `Recipe` and press `BAKE`.
 
 Cyberchef recognizes the encoding as `A1Z26`.  
-Unfortunately, CyberChef can't handle the '{' and '}' characters so leave them out.
+Unfortunately, CyberChef can't handle the '{' and '}' characters so you need to leave them out.
 
 Then add the rest of the number in the `Input` pane (`20 8 5 14 21 13 2 5 18 19 13 1 19 15 14`).
 
