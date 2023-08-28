@@ -51,10 +51,7 @@ Now if we select `m2` to be just the message `2` and call `encrypt(m1)` by the n
 
 `c * encrypt(2) = encrypt(m1 * 2)`
 
-We already have `c` and can calculate `encrypt(2)`.
-
-If we ask for `c * encrypt(2)` to be decrypted we can divide the result by 2 to get `m1` that is the flag.
-
+We already have `c` and can calculate `encrypt(2)`. If we ask for `c * encrypt(2)` to be decrypted we can divide the result by 2 to get `m1` which is the flag.
 
 ### Solve with pwntools
 
