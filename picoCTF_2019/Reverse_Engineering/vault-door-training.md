@@ -9,7 +9,7 @@
 Points: 50
 Tags: picoCTF 2019, Reverse Engineering
 Author: MARK E. HAASE
-  
+
 Description:
 Your mission is to enter Dr. Evil's laboratory and retrieve the blueprints for his Doomsday Project. 
 The laboratory is protected by a series of locked vault doors. Each door is controlled by a computer 
