@@ -9,12 +9,12 @@
 Points: 100
 Tags: picoCTF 2019, General Skills
 Author: SANJAY C/DANNY TUNITIS
- 
+
 Description:
 Can you find the flag in file without running it?
 
 Hints:
-1. nc tutorial
+1. strings
 ```
 
 ## Solution
