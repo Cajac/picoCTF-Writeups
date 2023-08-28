@@ -29,5 +29,6 @@ X Challenges:
 
 ## Web Exploitation Challenges
 
-X Challenges:
+2 Challenges:
 - [Insp3ct0r](Web_Exploitation/Insp3ct0r.md)
+- [where are the robots](Web_Exploitation/where_are_the_robots.md)
