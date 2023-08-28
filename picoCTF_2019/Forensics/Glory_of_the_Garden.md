@@ -12,7 +12,7 @@ Author:  JEDAVIS/DANNY
 
 Description:
 This garden contains more than it seems.
- 
+
 Hints:
 1. What is a hex editor?
 ```
