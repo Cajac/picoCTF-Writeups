@@ -60,7 +60,7 @@ picoCTF{next_time_<REDACTED>}
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Wikipedia - Modulo](https://en.wikipedia.org/wiki/Modulo)
 - [Wikipedia - ROT13](https://en.wikipedia.org/wiki/ROT13)
