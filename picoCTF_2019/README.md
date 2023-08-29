@@ -15,11 +15,12 @@ X Challenges:
 
 ## Forensics Challenges
 
-4 Challenges: 
+5 Challenges: 
 - [extensions](Forensics/extensions.md)
 - [Glory of the Garden](Forensics/Glory_of_the_Garden.md)
 - [shark on wire 1](Forensics/shark_on_wire_1.md)
 - [So Meta](Forensics/So_Meta.md)
+- [What Lies Within](Forensics/What_Lies_Within.md)
 
 ## General Skills Challenges
 
