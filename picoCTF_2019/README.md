@@ -7,7 +7,8 @@ X Challenges:
 
 ## Cryptography Challenges
 
-2 Challenges:
+3 Challenges:
+- [13](Cryptography/13.md)
 - [Easy1](Cryptography/Easy1.md)
 - [The Numbers](Cryptography/The_Numbers.md)
 
