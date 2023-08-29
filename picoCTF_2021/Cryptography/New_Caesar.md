@@ -136,7 +136,7 @@ We get three possible keys but only one makes sense.
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Wikipedia - Modulo](https://en.wikipedia.org/wiki/Modulo)
 - [Wikipedia - Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
