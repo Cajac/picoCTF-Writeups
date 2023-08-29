@@ -35,7 +35,8 @@ X Challenges:
 
 ## Web Exploitation Challenges
 
-3 Challenges:
+4 Challenges:
+- [dont-use-client-side](Web_Exploitation/dont-use-client-side.md)
 - [Insp3ct0r](Web_Exploitation/Insp3ct0r.md)
 - [logon](Web_Exploitation/logon.md)
 - [where are the robots](Web_Exploitation/where_are_the_robots.md)
