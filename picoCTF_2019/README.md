@@ -33,6 +33,7 @@ X Challenges:
 
 ## Web Exploitation Challenges
 
-2 Challenges:
+3 Challenges:
 - [Insp3ct0r](Web_Exploitation/Insp3ct0r.md)
+- [logon](Web_Exploitation/logon.md)
 - [where are the robots](Web_Exploitation/where_are_the_robots.md)
