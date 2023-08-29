@@ -9,7 +9,7 @@
 Points: 150
 Tags: picoCTF 2019, Forensics
 Author:  KEVIN COOPER/DANNY
-
+ 
 Description:
 Find the flag in this picture.
 
