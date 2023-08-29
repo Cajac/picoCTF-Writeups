@@ -100,7 +100,7 @@ picoCTF{<REDACTED>}
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Wikipedia - RSA (cryptosystem)](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
 - [The RSA Cryptosystem - Concepts](https://cryptobook.nakov.com/asymmetric-key-ciphers/the-rsa-cryptosystem-concepts)
