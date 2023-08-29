@@ -70,11 +70,11 @@ We see that there are both IPv4 and IPv6 traffic and more UDP than TCP traffic f
 
 Lets follow the UDP streams and look for the flag.
 
-In the GUI, click on any UDP-packet then right-click and select `Follow -> UDP Stream`.  
+In the GUI, right-click on any UDP-packet and then select `Follow -> UDP Stream`.  
 
 In the new window we see the stream content displayed in the same sequence as it appeared on the network. Non-printable characters are replaced by dots. Traffic from the client to the server is colored **red**, while traffic from the server to the client is colored **blue**.
 
-Down in the lower right corner of the window you can step through the streams by increasing or decreasing the stream number.
+Down in the lower right corner of the window you can step through the streams by increasing or decreasing the stream number.  
 Stream #6 contains the flag.
 
 For additional information, please see the references below.
