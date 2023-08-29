@@ -9,7 +9,7 @@
 Points: 200
 Tags: picoCTF 2019, Cryptography
 Author: ALEX FULTON/DANIEL TUNITIS
-
+ 
 Description:
 I found this cipher in an old book. Can you figure out what it says? 
 
