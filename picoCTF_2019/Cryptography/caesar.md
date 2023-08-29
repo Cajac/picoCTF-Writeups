@@ -34,7 +34,7 @@ There are several ways to solve this challenge and here are two of them.
 
 We can use [CyberChef](https://gchq.github.io/CyberChef/) and the `ROT13` recipe to solve this.  
 Type 'rot13' in the `Operations` search bar, then drag and drop it to the `Recipe` pane.  
-Then copy and paste the text with the curly braces (that is `tifjjzexkyvilsztfehnahooda`) to the `Input` pane.  
+Then copy and paste the text within the curly braces (that is `tifjjzexkyvilsztfehnahooda`) to the `Input` pane.  
 Neither the standard amount of `13` for `ROT13` or `3` (which is the default `caesar` rotation) makes sense though.  
 Select the `Auto Bake` check box and start changing the amount until you can recognize some English words.  
 With an `Amount` of `9` you get the correct flag part.
