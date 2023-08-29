@@ -9,7 +9,7 @@
 Points: 150
 Tags: picoCTF 2019, Forensics
 Author: JULIO/DANNY
-
+ 
 Description:
 There's something in the building. Can you retrieve the flag?
 
