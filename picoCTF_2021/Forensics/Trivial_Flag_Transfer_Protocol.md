@@ -208,7 +208,7 @@ picoCTF{h1dd3n_<REDACTED>}
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Wikipedia - Trivial File Transfer Protocol](https://en.wikipedia.org/wiki/Trivial_File_Transfer_Protocol)
 - [Wikipedia - ROT13](https://en.wikipedia.org/wiki/ROT13)
