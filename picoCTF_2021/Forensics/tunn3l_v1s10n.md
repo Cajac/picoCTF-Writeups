@@ -86,6 +86,6 @@ Viewing the modified image displays a real flag at the top of the image.
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Wikipedia - BMP file format](https://en.wikipedia.org/wiki/BMP_file_format)
