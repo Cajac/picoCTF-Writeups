@@ -9,7 +9,7 @@
 Points: 150
 Tags: picoCTF 2019, Forensics
 Author:  SANJAY C/DANNY
- 
+
 Description:
 This is a really weird text file TXT? Can you find the flag?
 
