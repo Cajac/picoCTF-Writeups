@@ -96,7 +96,7 @@ The flag is picoCTF{<REDACTED>}
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Wireshark display filter syntax and reference](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
 - [Wireshark - Following Protocol Streams](https://www.wireshark.org/docs/wsug_html_chunked/ChAdvFollowStreamSection.html)
