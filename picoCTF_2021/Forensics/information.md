@@ -83,6 +83,6 @@ And there we have the flag.
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Wikipedia - Base64](https://en.wikipedia.org/wiki/Base64)
