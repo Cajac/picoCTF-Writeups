@@ -112,7 +112,7 @@ And there we have the flag.
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Wikipedia - String (computer science)](https://en.wikipedia.org/wiki/String_(computer_science))
 - [Wikipedia - grep](https://en.wikipedia.org/wiki/Grep)
