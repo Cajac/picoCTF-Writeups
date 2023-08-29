@@ -20,9 +20,10 @@ X Challenges:
 
 ## General Skills Challenges
 
-6 Challenges: 
+7 Challenges: 
 - [2Warm](General_Skills/2Warm.md)
 - [Bases](General_Skills/Bases.md)
+- [First Grep](General_Skills/First_Grep.md)
 - [Lets Warm Up](General_Skills/Lets_Warm_Up.md)
 - [strings it](General_Skills/strings_it.md)
 - [Warmed Up](General_Skills/Warmed_Up.md)
