@@ -191,7 +191,7 @@ Probably some missing padding but we have the flag.
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Wikipedia - Macro (computer science)](https://en.wikipedia.org/wiki/Macro_(computer_science))
 - [Wikipedia - Exif](https://en.wikipedia.org/wiki/Exif)
