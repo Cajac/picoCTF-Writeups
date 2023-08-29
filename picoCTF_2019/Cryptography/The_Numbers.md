@@ -80,6 +80,6 @@ PICOCTF{<REDACTED>}
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [A1Z26 Cipher (What it is and How to Teach Your Kids)](https://dadstuffsite.com/a1z26-cipher-what-it-is-and-how-to-teach-your-kids/)
