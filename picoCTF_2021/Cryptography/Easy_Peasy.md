@@ -142,7 +142,7 @@ Plain text flag: picoCTF{<REDACTED>}
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Wikipedia - Exclusive or](https://en.wikipedia.org/wiki/Exclusive_or)
 - [Wikipedia - Stream cipher attacks - Reused key attack](https://en.wikipedia.org/wiki/Stream_cipher_attacks#Reused_key_attack)
