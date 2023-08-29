@@ -26,10 +26,10 @@ This is [Base64 encoding](https://en.wikipedia.org/wiki/Base64) and there are se
 
 ### CyberChef solution
 
-We can use [CyberChef](https://gchq.github.io/CyberChef/) and the `Base64` recipe to decode it.
+We can use [CyberChef](https://gchq.github.io/CyberChef/) and the `Base64` recipe to decode it.  
 Type 'base64' in the `Operations` search bar, then drag and drop `From Base64` to the `Recipe` pane.  
 Then copy and paste `bDNhcm5fdGgzX3IwcDM1` to the `Input` pane.  
-Finally press `BAKE` if you don't have `Auto Bake` selected already.
+Finally, press `BAKE` if you don't have `Auto Bake` selected already.
 The result is shown in the `Output` pane.
 
 To get the full flag you need to add the 'picoCTF{' and '}' parts as instructed in the hint.
