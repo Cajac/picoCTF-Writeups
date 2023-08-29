@@ -65,7 +65,7 @@ picoCTF{<REDACTED>}
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Wikipedia - One-time pad](https://en.wikipedia.org/wiki/One-time_pad)
 - [Wikipedia - Modulo](https://en.wikipedia.org/wiki/Modulo)
