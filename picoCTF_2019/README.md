@@ -28,12 +28,13 @@ X Challenges:
 
 ## General Skills Challenges
 
-8 Challenges: 
+9 Challenges: 
 - [2Warm](General_Skills/2Warm.md)
 - [Based](General_Skills/Based.md)
 - [Bases](General_Skills/Bases.md)
 - [First Grep](General_Skills/First_Grep.md)
 - [Lets Warm Up](General_Skills/Lets_Warm_Up.md)
+- [plumbing](General_Skills/plumbing.md)
 - [strings it](General_Skills/strings_it.md)
 - [Warmed Up](General_Skills/Warmed_Up.md)
 - [what's a net cat?](General_Skills/whats_a_net_cat.md)
