@@ -6,7 +6,7 @@
 
 ## Challenge information
 ```
-Points: 100
+Points: 200
 Tags: picoCTF 2019, General Skills
 Author: ALEX FULTON/DANIEL TUNITIS
  
@@ -38,7 +38,8 @@ Input:
 Too slow!
 ```
 
-Solving this manually will be tedious so lets automate it with the help of [pwntools](https://docs.pwntools.com/en/stable/index.html)
+Solving this manually will be tedious so lets automate it with the help of [pwntools](https://docs.pwntools.com/en/stable/index.html).
+Also note the 5 letter word `light` printed before the question. This looks like a bug that print the correct answer!
 
 ### Write a Python script
 
@@ -47,7 +48,6 @@ The final script looks like this
 #!/usr/bin/python
 
 from pwn import *
-import re
 
 PORT = 29221
 SERVER = 'jupiter.challenges.picoctf.org'
@@ -90,7 +90,7 @@ io.close()
 
 ### Get the flag
 
-Then we run it to get the flag
+Then we run the script to get the flag
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Based]
 └─$ ~/python_venvs/pwntools/bin/python get_flag.py
@@ -101,6 +101,6 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipredia - Binary number](https://en.wikipedia.org/wiki/Binary_numbers)
-- [Wikipredia - Octal](https://en.wikipedia.org/wiki/Octal)
-- [Wikipredia - Hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal)
+- [Wikipedia - Binary number](https://en.wikipedia.org/wiki/Binary_numbers)
+- [Wikipedia - Octal](https://en.wikipedia.org/wiki/Octal)
+- [Wikipedia - Hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal)
