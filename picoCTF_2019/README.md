@@ -7,11 +7,12 @@ X Challenges:
 
 ## Cryptography Challenges
 
-5 Challenges:
+6 Challenges:
 - [13](Cryptography/13.md)
 - [caesar](Cryptography/caesar.md)
 - [Easy1](Cryptography/Easy1.md)
 - [la cifra de](Cryptography/la_cifra_de.md)
+- [Tapping](Cryptography/Tapping.md)
 - [The Numbers](Cryptography/The_Numbers.md)
 
 ## Forensics Challenges
