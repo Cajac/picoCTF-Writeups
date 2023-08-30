@@ -58,6 +58,8 @@ class VaultDoorTraining {
 
 We see that a [substring](https://www.javatpoint.com/java-string-substring) of the `userInput` is extracted and later compared with [equals](https://www.javatpoint.com/java-string-equals) in the `checkPassword` method where most of the flag is visible in plain text.
 
+For additional information, please see the references below.
+
 ## References
 
 - [Java String substring()](https://www.javatpoint.com/java-string-substring)
