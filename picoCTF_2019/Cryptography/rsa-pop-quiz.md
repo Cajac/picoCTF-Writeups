@@ -21,7 +21,7 @@ Hints:
 
 ## Solution
 
-I wrote a Python script that used [pwntools](https://docs.pwntools.com/en/stable/index.html) to automate this
+I wrote a Python script that uses [pwntools](https://docs.pwntools.com/en/stable/index.html) to automate this
 ```python
 #!/usr/bin/python
 
