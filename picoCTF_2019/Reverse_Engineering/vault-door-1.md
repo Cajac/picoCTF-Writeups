@@ -84,7 +84,7 @@ class VaultDoor1 {
 
 In the `checkPassword` method we see a lot of [charAt](https://www.javatpoint.com/java-string-charat) checks. The `&&` is the [logical AND operator](https://www.freecodecamp.org/news/java-operator-and-or-logical-operators/).
 
-We want to extract the characters and append them in a sorted order. We need to use a number of tools to achieve this. 
+We want to extract the characters and append them in a sorted order. We need to use a number of commandline tools to achieve this. 
 
 First we `grep` all the lines with charAt
 ```bash
@@ -246,6 +246,8 @@ d35cr4mbl3_<REDACTED>
 ```
 
 To get the flag we need to add 'picoCTF{' in the beginning and an '}' at the end.
+
+For additional information, please see the references below.
 
 ## References
 
