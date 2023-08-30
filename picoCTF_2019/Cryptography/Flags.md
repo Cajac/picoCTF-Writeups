@@ -19,7 +19,7 @@ Hints:
 
 ## Solution
 
-After some searching I found the [International Signal Flag and Pennant Alphabet](https://christinedemerchant.com/flag-alphabet.html) where each flag corresponds to a character.
+After some searching I found the [International Signal Flag and Pennant Alphabet](https://christinedemerchant.com/flag-alphabet.html) where each flag corresponds to a character in the alphabet.
 
 Then it's just a bit of a manual process to construct the flag.
 
