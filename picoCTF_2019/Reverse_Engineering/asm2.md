@@ -15,7 +15,7 @@ What does asm2(0x4,0x21) return?
 
 Submit the flag as a hexadecimal value (starting with '0x'). 
 
-NOTE: Your submission for this question will NOT be in the normal flag format. Source
+NOTE: Your submission for this question will NOT be in the normal flag format.
 
 Source
 
@@ -31,7 +31,7 @@ In case you need a little x86 assembly refresher, see the [previous challenge](a
 
 In this challenge we need to remember the general stack layout in 32-bit mode after a function is called:
 
-|Content|Offset|
+|Offset|Content|
 |----|----|
 |ebp-0xc|Local variable 3|
 |ebp-0x8|Local variable 2|
@@ -68,9 +68,7 @@ Lets create a small Python script that does the calculation for us
 ```python
 #!/usr/bin/python
 
-EAX = 0x15
 LV1 = 0x15
-EAX = 0xC
 LV2 = 0xC
 
 while (LV2 <= 0xA3D3):
