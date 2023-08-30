@@ -65,9 +65,9 @@ Now, lets look at the assembly source of the `asm1` function
 asm1:
 	<+0>:	push   ebp                          # Store base pointer on stack
 	<+1>:	mov    ebp,esp                      # Set stack pointer
-	<+3>:	cmp    DWORD PTR [ebp+0x8],0x37a    # Compare arg1 (that is0x345) with 0x37a
+	<+3>:	cmp    DWORD PTR [ebp+0x8],0x37a    # Compare arg1 (that is 0x345) with 0x37a
 	<+10>:	jg     0x512 <asm1+37>              # Jump if 0x345 > 0x37a, this is not the case so we don't jump
-	<+12>:	cmp    DWORD PTR [ebp+0x8],0x345    # Compare arg1 (that is0x345) with 0x345
+	<+12>:	cmp    DWORD PTR [ebp+0x8],0x345    # Compare arg1 (that is 0x345) with 0x345
 	<+19>:	jne    0x50a <asm1+29>              # Jump if 0x345 != 0x345, this is not the case so we don't jump
 	<+21>:	mov    eax,DWORD PTR [ebp+0x8]      # Set EAX to 0x345
 	<+24>:	add    eax,0x3                      # Add 3 to EAX, that is EAX is now 0x348
@@ -90,9 +90,10 @@ So after the function call, EAX will be `0x348`.
 
 ### Build, run and debug the code
 
-An alternative solution is to build, run and debug the code. This will mainly come in handy in the more advanced asm challenges.
+An alternative solution is to build, run and debug the code. This will mainly come in handy in the more advanced asm challenges later on.
 
-However, we cannot assemble the code above as is. It needs to be changed in a number of ways. We need to:
+However, we cannot assemble the code above as is. It needs to be changed in a number of ways.  
+We need to:
  * Add labels (`Case_xx:`) for each `<asm1+xx>`
  * Remove the hex offset and refer to the label instead
  * Add % before the registers, eax => %eax
@@ -104,7 +105,7 @@ However, we cannot assemble the code above as is. It needs to be changed in a nu
 .text 
     .code32
     .intel_syntax
-	.globl _start
+    .globl _start
     .type Asm1, @function
 
     Asm1:
@@ -185,7 +186,7 @@ Time to execute the program
 gef➤  run
 ```
 
-GEF will automatically show as the status of the registers where we will see the contents of EAX
+GEF will automatically show us the status of the registers after the breakpoint is hit:
 ```
 [ Legend: Modified register | Code | Heap | Stack | String ]
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── registers ────
@@ -213,7 +214,7 @@ $cs: 0x23 $ss: 0x2b $ds: 0x2b $es: 0x2b $fs: 0x00 $gs: 0x00
 <---snip--->
 ```
 
-We can see that EAX is `0x348`.
+Again we can see that EAX is `0x348`.
 
 For additional information, please see the references below.
 
