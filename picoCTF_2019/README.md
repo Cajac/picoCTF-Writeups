@@ -41,9 +41,10 @@ X Challenges:
 
 ## Reverse Engineering Challenges
 
-3 Challenges:
+4 Challenges:
 - [asm1](Reverse_Engineering/asm1.md)
 - [vault-door-1](Reverse_Engineering/vault-door-1.md)
+- [vault-door-3](Reverse_Engineering/vault-door-3.md)
 - [vault-door-training](Reverse_Engineering/vault-door-training.md)
 
 ## Web Exploitation Challenges
