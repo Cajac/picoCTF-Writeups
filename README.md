@@ -6,7 +6,7 @@ These pages are created to:
 * Support my junior work colleges CTF learning
 * Be a concrete project to improve my skills in markdown, git, github, etc.
 
-In total you will find more than 100 challenge solutions here.
+In total you will find more than 150 challenge solutions here.
 
 ## Challenges
 

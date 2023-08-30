@@ -36,7 +36,8 @@ X Challenges:
 
 ## Reverse Engineering Challenges
 
-2 Challenges:
+3 Challenges:
+- [asm1](Reverse_Engineering/asm1.md)
 - [vault-door-1](Reverse_Engineering/vault-door-1.md)
 - [vault-door-training](Reverse_Engineering/vault-door-training.md)
 
