@@ -9,7 +9,7 @@
 Points: 250
 Tags: picoCTF 2019, Forensics
 Author: JOHN HAMMOND
-
+ 
 Description:
 I stopped using YellowPages and moved onto WhitePages... but the page they gave me is all blank!
 
