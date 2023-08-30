@@ -9,7 +9,7 @@
 Points: 200
 Tags: picoCTF 2019, Cryptography
 Author: DANNY
- 
+
 Description:
 A musician left us a message. What's it mean?
 
