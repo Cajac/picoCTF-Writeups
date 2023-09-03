@@ -7,7 +7,7 @@ X Challenges:
 
 ## Cryptography Challenges
 
-9 Challenges:
+10 Challenges:
 - [13](Cryptography/13.md)
 - [caesar](Cryptography/caesar.md)
 - [Easy1](Cryptography/Easy1.md)
@@ -17,6 +17,7 @@ X Challenges:
 - [rsa-pop-quiz](Cryptography/rsa-pop-quiz.md)
 - [Tapping](Cryptography/Tapping.md)
 - [The Numbers](Cryptography/The_Numbers.md)
+- [waves over lambda](Cryptography/waves_over_lambda.md)
 
 ## Forensics Challenges
 
