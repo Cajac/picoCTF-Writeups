@@ -66,18 +66,17 @@ Megapixels                      : 0.914
 0001e880: 6436 715f 6662 3531 6338 3231 7d         d6q_fb51c821}
 ```
 
-So there are some flag data appended at the end of the PNG image. Be aware that `xxd` shows all non 7-bit ascii-data as `.` (dots)!  
+There are some flag data appended at the end of the PNG image. Be aware that `xxd` shows all non 7-bit ascii-data as `.` (dots).  
 So `0x80` in the flag data is shown as `.` rather than `€`.
 
-Lets check the binary
+Next, lets check the binary
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Investigating_Reversing_0]
 └─$ file mystery    
 mystery-newest: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=34b772a4f30594e2f30ac431c72667c3e10fa3e9, not stripped
 ```
 
-Then we decompile the file in [Ghidra](https://ghidra-sre.org/) and study the code.   
-Import the file in Ghidra and analyze it with the default settings.  
+Then we decompile the file in [Ghidra](https://ghidra-sre.org/) and study the code. Import the file in Ghidra and analyze it with the default settings.  
 Double-click on the `main` function to show the decompiled version of it.
 ```c
 void main(void)
@@ -133,7 +132,7 @@ void main(void)
 }
 ```
 
-We see that the program opens the flag file and puts an encoded version of it at the end of the image file.
+We see that the program opens the flag file and puts an encoded version of it at the end of the image file.  
 The encoding consists of these lines of code
 ```c
   for (local_54 = 6; local_54 < 0xf; local_54 = local_54 + 1) {
