@@ -9,7 +9,7 @@
 Points: 300
 Tags: picoCTF 2019, Cryptography
 Author: INVISIBILITY/DANNY
- 
+
 Description:
 We made a lot of substitutions to encrypt this. Can you decrypt it? 
 
@@ -59,7 +59,7 @@ And there we have the flag.
 
 An alternative is to use the [quipqiup](https://www.quipqiup.com/) online service to break the cipher.
 
-Copy and paste the ciphertext in the `Puzzle` text field and click the `Solve`-button.
+Copy and paste the ciphertext in the `Puzzle` text field and click the `Solve`-button.  
 The first suggested solution contains the flag.
 
 For additional information, please see the references below.
