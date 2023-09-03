@@ -20,9 +20,10 @@ X Challenges:
 
 ## Forensics Challenges
 
-6 Challenges: 
+7 Challenges: 
 - [extensions](Forensics/extensions.md)
 - [Glory of the Garden](Forensics/Glory_of_the_Garden.md)
+- [like1000](Forensics/like1000.md)
 - [shark on wire 1](Forensics/shark_on_wire_1.md)
 - [So Meta](Forensics/So_Meta.md)
 - [What Lies Within](Forensics/What_Lies_Within.md)
