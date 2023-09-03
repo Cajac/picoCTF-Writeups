@@ -9,7 +9,7 @@
 Points: 250
 Tags: picoCTF 2019, Forensics
 Author: JOON
- 
+
 Description:
 Decode this message from the moon.
 
