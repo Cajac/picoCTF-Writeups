@@ -21,9 +21,10 @@ X Challenges:
 
 ## Forensics Challenges
 
-9 Challenges: 
+10 Challenges: 
 - [extensions](Forensics/extensions.md)
 - [Glory of the Garden](Forensics/Glory_of_the_Garden.md)
+- [Investigative Reversing 0](Forensics/Investigative_Reversing_0.md)
 - [like1000](Forensics/like1000.md)
 - [m00nwalk](Forensics/m00nwalk.md)
 - [m00nwalk2](Forensics/m00nwalk2.md)
