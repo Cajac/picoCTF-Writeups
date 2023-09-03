@@ -80,7 +80,7 @@ shout it
 shout Pico
 ```
 
-After some googling I understood that this is the [programming language Rockstar](https://esolangs.org/wiki/Rockstar) with an [online emulator available](https://codewithrockstar.com/online).
+After some googling I understood that this is the programming language [Rockstar](https://esolangs.org/wiki/Rockstar) with an [online emulator](https://codewithrockstar.com/online) available.
 
 Copy and paste the source code above in the emulator and click the `Rock!`-button.  
 You get the following in the output pane:
