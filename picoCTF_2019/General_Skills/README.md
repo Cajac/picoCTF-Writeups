@@ -1,10 +1,11 @@
 # General Skills Challenges
 
-10 Challenges:
+11 Challenges:
 - [2Warm](2Warm.md)
 - [Based](Based.md)
 - [Bases](Bases.md)
 - [First Grep](First_Grep.md)
+- [flag_shop](flag_shop.md)
 - [Lets Warm Up](Lets_Warm_Up.md)
 - [mus1c](mus1c.md)
 - [plumbing](plumbing.md)
