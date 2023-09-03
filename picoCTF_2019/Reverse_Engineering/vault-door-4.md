@@ -22,7 +22,7 @@ Hints:
 
 ## Solutions
 
-The source code looks like this
+The java source code looks like this
 ```java
 import java.util.*;
 
