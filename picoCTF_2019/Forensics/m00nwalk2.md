@@ -22,7 +22,7 @@ Hints:
 
 The setup is the same as in the [previous moonwalk challenge](m00nwalk.md).
 
-### Get the clues
+### Decode the clues
 
 First we decode the clue wav-files
 ```bash
