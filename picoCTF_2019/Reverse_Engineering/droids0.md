@@ -51,6 +51,8 @@ I: Copying original files...
 </manifest>  
 ```
 
+We can see from the manifest file that the application uses SDK-version 29.
+
 Then open the `zero.apk` file in [Android Studio](https://developer.android.com/studio). I selected the `Profile or Debug APK` option. 
 
 Now, we run/emulate the application on a virtual device with SDK-version 29. My virtual device was a `Pixel_3_XL_API_29` device. Select `Run 'zero'` from the `Run`-menu in Android Studio.
