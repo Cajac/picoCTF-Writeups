@@ -33,10 +33,11 @@ A number of streams contains what could be partial flag data, for example these:
 
 But I never made any sense of these.
 
-Also, UDP Stream #32 contains the text `start`. And after that (e.g. stream #33 - #52) contains what seems to be a random number of `a`s. Finally, UDP Stream #60 contains the text `end`.  
-These connections are all between source `10.0.0.66` and destination `10.0.0.1`, except for the `end` transmission which has a source of `10.0.0.80`. All transmissions also have a destination port of `22`.
+Also, UDP Stream #32 contains the text `start`. And after that (e.g. stream #33 - #52) contains what seems to be a random number of `a`s. Finally, UDP Stream #60 contains the text `end`.
 
-Lets analyse these transmissions further
+These connections are all between source `10.0.0.66` and destination `10.0.0.1`, except for the `end` connection which has a source of `10.0.0.80`. All connections also have a destination port of `22`.
+
+Lets analyse these connections further
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Shark_on_wire_2]
 └─$ tshark -nr capture.pcap  -Y 'udp.dstport == 22'
