@@ -22,7 +22,7 @@ X Challenges:
 
 ## Forensics Challenges
 
-10 Challenges: 
+11 Challenges: 
 - [extensions](Forensics/extensions.md)
 - [Glory of the Garden](Forensics/Glory_of_the_Garden.md)
 - [Investigative Reversing 0](Forensics/Investigative_Reversing_0.md)
@@ -30,6 +30,7 @@ X Challenges:
 - [m00nwalk](Forensics/m00nwalk.md)
 - [m00nwalk2](Forensics/m00nwalk2.md)
 - [shark on wire 1](Forensics/shark_on_wire_1.md)
+- [shark on wire 2](Forensics/shark_on_wire_2.md)
 - [So Meta](Forensics/So_Meta.md)
 - [What Lies Within](Forensics/What_Lies_Within.md)
 - [WhitePages](Forensics/WhitePages.md)
