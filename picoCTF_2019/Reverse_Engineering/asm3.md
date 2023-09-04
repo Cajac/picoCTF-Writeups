@@ -29,7 +29,8 @@ In case you need a little x86 assembly refresher, see the [asm1 challenge](asm1.
 Also, the general stack layout after a function is called is described in the [asm2 challenge](asm2.md).  
 
 Finally, in this challenge we need to remember that there is also 16-bit and 8-versions of the general purpose-registers.  
-For example, EAX is a 32-bit register. The lower half of EAX is AX, a 16-bit register. AX is divided into two 8-bit registers, AH and AL (a-high and a-low).
+For example, EAX is a 32-bit register. The lower half of EAX is AX, a 16-bit register.  
+AX is divided into two 8-bit registers, AH and AL (a-high and a-low).
 
 The situation is mostly the same for the other general purpose-registers. In total there are:
  * Eight 32-bit registers: eax, ebx, ecx, edx, esi, edi, ebp, esp.
@@ -53,7 +54,7 @@ asm3:
 ```
 
 We certainly could analyse this code manually but that would be too tedious.  
-Lets build, run and debug the code as described in the [asm1 challenge](asm1.md).
+Lets build, run and debug the code as described in the [asm1 challenge](asm1.md) instead.
 
 Two things to note though:
 1. `xor eax, eax` will zero-out (clear) the EAX-register. Anything XORed with itself is zero.
