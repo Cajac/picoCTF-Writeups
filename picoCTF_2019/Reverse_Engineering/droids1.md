@@ -90,9 +90,10 @@ The password `opossum` from the file `one/res/values/strings.xml` looks promisin
 
 Then open the `one.apk` file in [Android Studio](https://developer.android.com/studio). I selected the `Profile or Debug APK` option. 
 
-Now, we run/emulate the application on a virtual device with SDK-version 29. My virtual device was a `Pixel_3_XL_API_29` device. Select `Run 'one'` from the `Run`-menu in Android Studio.
+Now, we run/emulate the application on a virtual device with SDK-version 29. My virtual device was a `Pixel_3_XL_API_29` device.  
+Select `Run 'one'` from the `Run`-menu in Android Studio.
 
-The application looks exactly like the [previous challenge](droids0.md) with an input test field and a big button.
+The application looks exactly like the [previous challenge](droids0.md) with an input text field and a big button.
 
 Enter the password `opossum` in the text field, click the button and the flag is revealed.
 
