@@ -9,7 +9,7 @@
 Points: 300
 Tags: picoCTF 2019, Reverse Engineering
 Author: DANNY TUNITIS
-
+ 
 Description:
 We have recovered a binary and a text file. Can you reverse the flag.
 
