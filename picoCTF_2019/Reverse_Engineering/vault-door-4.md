@@ -110,7 +110,7 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipredia - ASCII](https://en.wikipedia.org/wiki/ASCII)
+- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)
 - [ASCII Table](https://www.ascii-code.com/)
 - [Wikipedia - Hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal)
 - [Wikipedia - Octal](https://en.wikipedia.org/wiki/Octal)
