@@ -1,6 +1,6 @@
 # Reverse Engineering Challenges
 
-8 Challenges: 
+9 Challenges: 
 - [asm1](asm1.md)
 - [asm2](asm2.md)
 - [asm3](asm3.md)
@@ -8,4 +8,5 @@
 - [vault-door-1](vault-door-1.md)
 - [vault-door-3](vault-door-3.md)
 - [vault-door-4](vault-door-4.md)
+- [vault-door-5](vault-door-5.md)
 - [vault-door-training](vault-door-training.md)
