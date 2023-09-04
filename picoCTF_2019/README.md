@@ -7,12 +7,13 @@ X Challenges:
 
 ## Cryptography Challenges
 
-10 Challenges:
+11 Challenges:
 - [13](Cryptography/13.md)
 - [caesar](Cryptography/caesar.md)
 - [Easy1](Cryptography/Easy1.md)
 - [Flags](Cryptography/Flags.md)
 - [la cifra de](Cryptography/la_cifra_de.md)
+- [miniRSA](Cryptography/miniRSA.md)
 - [Mr-Worldwide](Cryptography/Mr-Worldwide.md)
 - [rsa-pop-quiz](Cryptography/rsa-pop-quiz.md)
 - [Tapping](Cryptography/Tapping.md)
