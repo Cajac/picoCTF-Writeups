@@ -19,6 +19,8 @@ Hints:
 
 ## Solution
 
+### Analyse the setup
+
 Lets start by checking the file
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/WhitePages]
@@ -35,19 +37,27 @@ whitepages.txt: Unicode text, UTF-8 text, with very long lines (1376), with no l
 00000050: 83 20 20 e2 80 83 20 e2 80 83 e2 80 83 20 e2 80  .  ... ...... ..
 00000060: 83 20 20 e2 80 83 e2 80 83 e2 80 83 20 20 e2 80  .  .........  ..
 00000070: 83 20 20 e2 80 83 20 20 20 20 e2 80 83 20 e2 80  .  ...    ... ..
-
 ```
 
 It is somewhat hard to see but the file consists of two types of Unicode [whitespace characters](https://en.wikipedia.org/wiki/Whitespace_character):
  * Normal SPACE (U+0020, hex `20`)
  * EM SPACE (U+2003, hex `e2 80 83`)
 
-I identified the hex values like this
+Converting hex values to Unicode code points can be done with
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/WhitePages]
+└─$ echo -ne '\xe2\x80\x83' | iconv -f 'utf-8' -t 'utf-16be' | xxd -p
+2003                                        ...
+```
+
+And converting code point to hex values can be done with
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/WhitePages]
 └─$ echo -n $'\u2003' | xxd -g 1
 00000000: e2 80 83                                         ...
 ```
+
+### Write a Python decoder
 
 Lets write a Python script that assumes these spaces form a binary string of ascii characters
 ```python
@@ -75,6 +85,8 @@ for item in split_result:
 print(flag)
 ```
 
+### Get the flag 
+
 Then we run the script to get the flag
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/WhitePages]
@@ -94,3 +106,4 @@ For additional information, please see the references below.
 ## References
 
 - [Wikipedia - Whitespace character](https://en.wikipedia.org/wiki/Whitespace_character)
+- [Unicode Character Search](https://www.fileformat.info/info/unicode/char/search.htm)
