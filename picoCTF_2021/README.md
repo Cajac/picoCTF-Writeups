@@ -2,7 +2,8 @@
 
 ## Binary Exploitation Challenges
 
-X Challenges:
+2 Challenges:
+- [Here's a LIBC](Binary_Exploitation/Heres_a_LIBC.md)
 - [Stonks](Binary_Exploitation/Stonks.md)
 
 ## Cryptography Challenges
