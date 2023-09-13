@@ -1,10 +1,11 @@
 # Forensics Challenges
 
-8 Challenges:
+9 Challenges:
 - [Disk, disk, sleuth!](Disk_disk_sleuth.md)
 - [information](information.md)
 - [MacroHard WeakEdge](MacroHard_WeakEdge.md)
 - [Matryoshka doll](Matryoshka_doll.md)
+- [Milkslap](Milkslap.md)
 - [Trivial Flag Transfer Protocol](Trivial_Flag_Transfer_Protocol.md)
 - [tunn3l v1s10n](tunn3l_v1s10n.md)
 - [Wireshark doo dooo do doo...](Wireshark_doo_dooo_do_doo.md)
