@@ -1,6 +1,7 @@
 # Forensics Challenges
 
-7 Challenges:
+8 Challenges:
+- [Disk, disk, sleuth!](Disk_disk_sleuth.md)
 - [information](information.md)
 - [MacroHard WeakEdge](MacroHard_WeakEdge.md)
 - [Matryoshka doll](Matryoshka_doll.md)
