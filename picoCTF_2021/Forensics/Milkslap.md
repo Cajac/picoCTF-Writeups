@@ -22,6 +22,7 @@ Hints:
 ### Analyse the web site
 
 The emoji is a link that redirects you to `http://mercury.picoctf.net:16940/`.
+
 On the site,  right-click and select 'View page source' (or press `CTRL + U`) to get
 ```html
 <!doctype html>
