@@ -53,7 +53,7 @@ eth                                      frames:4831 bytes:3355920
 
 ### Looking for suspicious traffic
 
-Looking for something suspicious as suggested in the hint I first checked the `gquic` traffic but didn't see anaything that stood out.
+Looking for something suspicious as suggested in the hint I first checked the `gquic` traffic but didn't see anything that stood out.
 
 Next, I checked the DNS traffic where I found something that looked like Base64-encoded data at the beginning of the DNS-queries
 ```bash
@@ -100,7 +100,7 @@ fQ==.reddshrimpandherring.com.us-west-1.ec2-utilities.amazonaws.com
 fQ==.reddshrimpandherring.com.windomain.local
 ```
 
-Lets extracted only the first part of the query
+Lets extracted only the first part of the queries
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Wireshark_twoo_twooo_two_twoo]
 └─$ tshark -r shark2.pcapng -Y "dns && ip.dst==18.217.1.57" -T fields -e dns.qry.name | cut -d '.' -f1 | uniq
