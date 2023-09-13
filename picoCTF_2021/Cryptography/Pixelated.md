@@ -22,11 +22,11 @@ Hints:
 
 ## Solution
 
-There are several ways to solve this challenge and here are some of them.
+There are several ways to solve this challenge and here are two of them.
 
 ### Stegsolve solution
 
-You can use [StegSolve](https://github.com/Giotino/stegsolve) to combine the pictures. However, I never got the current version 1.4 to work and used the former [1.3 version](http://www.caesum.com/handbook/stego.htm) instead. 
+You can use [StegSolve](https://github.com/Giotino/stegsolve) to combine the pictures. However, I never got the current 1.4 version to work and used the former [1.3 version](http://www.caesum.com/handbook/stego.htm) instead. 
 
 In StegSolve 1.3, open the `scrambled1.png` file. Then, in the `Analyse`-menu select `Image Combiner` and select the `scrambled2.png` file. A new window opens where you can step through various ways to combine the images: XOR, OR, AND, ADD, SUB, etc.
 
@@ -56,7 +56,7 @@ Image.fromarray(result).save('flag.png')
 print("Result saved as flag.png")
 ```
 
-The we run the script to combine the images
+Then we run the script to combine the images
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Cryptography/Pixelated]
 └─$ ~/python_venvs/Pillow/bin/python pixelaated.py
