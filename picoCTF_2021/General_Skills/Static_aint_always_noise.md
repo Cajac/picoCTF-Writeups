@@ -151,3 +151,5 @@ For additional information, please see the references below.
 - [Adding arguments and options to your Bash scripts](https://www.redhat.com/sysadmin/arguments-options-bash-scripts)
 - [Wikipedia - Disassembler](https://en.wikipedia.org/wiki/Disassembler)
 - [Wikipedia - strings (Unix)](https://en.wikipedia.org/wiki/Strings_(Unix))
+- [head(1) - Linux man page](https://linux.die.net/man/1/head)
+- [grep(1) - Linux man page](https://linux.die.net/man/1/grep)
