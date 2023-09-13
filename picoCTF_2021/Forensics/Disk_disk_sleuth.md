@@ -13,7 +13,7 @@ Author: SYREAL
 Description:
 Use `srch_strings` from the sleuthkit and some terminal-fu to find a flag in this disk image: 
 dds1-alpine.flag.img.gz
- 
+
 Hints:
 1. Have you ever used `file` to determine what a file was?
 2. Relevant terminal-fu in picoGym: https://play.picoctf.org/practice/challenge/85
