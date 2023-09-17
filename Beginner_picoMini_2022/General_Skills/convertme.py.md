@@ -2,6 +2,7 @@
 
 - [Challenge information](#challenge-information)
 - [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -73,3 +74,11 @@ If 25 is in decimal base, what is it in binary base?
 Answer: 11001
 That is correct! Here's your flag: picoCTF{<REDACTED>}
 ```
+
+For additional information, please see the references below.
+
+### References
+
+- [Wikipedia - Binary number](https://en.wikipedia.org/wiki/Binary_number)
+- [bc - Linux man page](https://linux.die.net/man/1/bc)
+ 
