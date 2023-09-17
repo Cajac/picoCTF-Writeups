@@ -63,4 +63,5 @@ For additional information, please see the references below.
 ### References
 
 - [Real Python - Executing Python Scripts With a Shebang](https://realpython.com/python-shebang/)
-
+- [chmod — Linux manual page](https://man7.org/linux/man-pages/man1/chmod.1.html)
+- [head — Linux manual page](https://man7.org/linux/man-pages/man1/head.1.html)
