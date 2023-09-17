@@ -98,10 +98,12 @@ Then I run my virtual Python environment with pwntools to get the flag
 picoCTF{<REDACTED>}
 ```
 
-
 For additional information, please see the references below.
 
 ### References
 
 - [Wikipedia - MD5](https://en.wikipedia.org/wiki/MD5)
 - [pwntools Documentation](https://docs.pwntools.com/en/stable/index.html)
+- [echo - Linux man page](https://linux.die.net/man/1/echo)
+- [md5sum - Linux man page](https://linux.die.net/man/1/md5sum)
+- [nc - Linux man page](https://linux.die.net/man/1/nc)
