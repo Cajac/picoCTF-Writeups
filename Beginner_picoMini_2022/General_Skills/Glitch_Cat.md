@@ -49,3 +49,4 @@ For additional information, please see the references below.
 ### References
 
 - [W3Schools - Python Operators](https://www.w3schools.com/python/python_operators.asp)
+- [nc - Linux man page](https://linux.die.net/man/1/nc)
