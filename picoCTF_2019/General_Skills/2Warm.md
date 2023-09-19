@@ -20,6 +20,8 @@ Hints:
 
 ## Solution
 
+### Convert in Python
+
 We can use an interactive Python session to do the work for us with the [bin function](https://docs.python.org/3/library/functions.html#bin)
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/2Warm]
@@ -30,6 +32,16 @@ Type "help", "copyright", "credits" or "license" for more information.
 picoCTF{101010}
 >>> exit()
 ```
+
+### Convert with bc
+
+Alternatively, we can use the tool `bc` to do the convertion. Install it with `sudo apt install bc` if it isn't installed already.
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/2Warm]
+└─$ echo "obase=2; 42" | bc                                              
+101010
+```
+In this case you need to construct the complete flag manually.
 
 For additional information, please see the references below.
 
