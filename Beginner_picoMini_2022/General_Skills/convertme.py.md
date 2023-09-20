@@ -39,7 +39,7 @@ Answer:
 You can solve the conversion in a number of ways aside from calculating the result manually:
  * Use an online service such as [RapidTables](https://www.rapidtables.com/convert/number/base-converter.html) to do the calculation
  * Use an interactive Python session in another window
- * Use the linux `bc` comamnd in another window
+ * Use the linux `bc` command in another window
 
 ### Convert using Python
 
