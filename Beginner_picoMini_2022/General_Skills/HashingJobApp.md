@@ -40,7 +40,7 @@ Open a separate windows and run
 7628ecff54896cb076074261828e6623  -
 ```
 
-Note that the `-n` parameter is important. This prevents a trailing newline (which is the default) to be added which will hash the hash.  
+Note that the `-n` parameter is important. This prevents a trailing newline (which is the default) to be added which will change the hash.  
 Copy the hash (the long hexadecimal number) and paste it in as the answer.
 
 You need to be rather fast or otherwise the server disconnects you
