@@ -60,7 +60,7 @@ Skip the initial '0b' when you enter your answer
 Alternatively, you can use the linux `bc` command. Install it with `sudo apt install bc` if it isn't installed already.
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Convertme.py]
-└─$ echo "obase=2;25" | bc                                                      
+└─$ echo "obase=2; 25" | bc                                                      
 11001
 ```
 
