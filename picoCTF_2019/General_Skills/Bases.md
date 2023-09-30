@@ -40,7 +40,7 @@ Alternatively, you can use the `base64` tool like this
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Bases]
 └─$ echo 'bDNhcm5fdGgzX3IwcDM1' | base64 -d     
-l3arn_th3_r0p35
+l3arn_<REDACTED>
 ```
 
 Again, you need to add the 'picoCTF{' and '}' parts to get the full flag.
