@@ -20,6 +20,8 @@ Hints:
 
 ## Solution
 
+### Convert in Python
+
 We can use an interactive Python session to do the work for us with the [str function](https://docs.python.org/3/library/functions.html#func-str) and the fact that Python understands [hexadecimal numbers](https://en.wikipedia.org/wiki/Hexadecimal)
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Warmed_Up]
@@ -30,6 +32,26 @@ Type "help", "copyright", "credits" or "license" for more information.
 picoCTF{61}
 >>> exit()
 ```
+
+### Convert with bc
+
+Alternatively, we can use the tool `bc` to do the convertion. Install it with `sudo apt install bc` if it isn't installed already.
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Warmed_Up]
+└─$ echo "ibase=16; 3D" | bc
+61
+```
+In this case you need to construct the complete flag manually.
+
+### Convert directly in bash
+
+Finally, we can convert directly in bash
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Warmed_Up]
+└─$ echo $((16#3d))
+61
+```
+As before in this case you need to construct the complete flag manually.
 
 For additional information, please see the references below.
 
