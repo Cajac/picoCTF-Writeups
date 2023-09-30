@@ -8,7 +8,8 @@
 
 ## Cryptography Challenges
 
-3 Challenges:
+4 Challenges:
+- [FindAndOpen](Cryptography/FindAndOpen.md)
 - [HideToSee](Cryptography/HideTooSee.md)
 - [ReadMyCert](Cryptography/ReadMyCert.md)
 - [rotation](Cryptography/rotation.md)
