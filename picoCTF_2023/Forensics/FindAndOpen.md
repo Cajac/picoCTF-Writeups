@@ -7,7 +7,7 @@
 ## Challenge information
 ```
 Points: 200
-Tags: picoCTF 2023, Forensics, pcap
+Tags: picoCTF 2023, Forensics
 Author: MUBARAK MIKAIL
 
 Description:
@@ -39,7 +39,8 @@ Two of the data portions, those with protocol `0x4c4b` and `0x7361`, like like t
 
 ### Decode the data
 
-Lets use tshark to extract only the data field from these two communications
+Lets use tshark to extract only the `data.data` field from these two communications.  
+Then we make it unique with `uniq`, convert the data to ascii with `xxd` and then base64 decode
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/FindAndOpen]
 └─$ tshark -r dump.pcap -Y 'eth.type == 0x4c4b' -T fields -e data.data | uniq | xxd -r -p | base64 -d             
@@ -54,7 +55,7 @@ OK, looks like we have a possible password/secret for the zip-file (`picoCTF{R34
 
 ### Get the flag
 
-Then we unpack the zip-file and get the flag
+Finally, we unpack the zip-file and get the flag
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/FindAndOpen]
 └─$ unzip flag.zip 
