@@ -8,15 +8,15 @@
 
 ## Cryptography Challenges
 
-4 Challenges:
-- [FindAndOpen](Cryptography/FindAndOpen.md)
+3 Challenges:
 - [HideToSee](Cryptography/HideTooSee.md)
 - [ReadMyCert](Cryptography/ReadMyCert.md)
 - [rotation](Cryptography/rotation.md)
 
 ## Forensics Challenges
 
-3 Challenges: 
+4 Challenges: 
+- [FindAndOpen](Forensics/FindAndOpen.md)
 - [hideme](Forensics/hideme.md)
 - [PcapPoisoning](Forensics/PcapPoisoning.md)
 - [who is it](Forensics/who_is_it.md)
