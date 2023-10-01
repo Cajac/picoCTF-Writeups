@@ -123,8 +123,7 @@ Usage: grep [OPTION]... PATTERNS [FILE]...
 Try 'grep --help' for more information.
 ```
 
-I also tried [command substitution](https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html).  
-This also worked some what on commands like `ls`
+I also tried [command substitution](https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html). This also worked some what on commands like `ls`
 ```
 Special$ $(ls)  
 $(ls) 
