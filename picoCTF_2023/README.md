@@ -33,9 +33,10 @@
 
 ## Reverse Engineering Challenges
 
-6 Challenges:
+7 Challenges:
 - [Ready Gladiator 0](Reverse_Engineering/Ready_Gladiator_0.md)
 - [Ready Gladiator 1](Reverse_Engineering/Ready_Gladiator_1.md)
+- [Ready Gladiator 2](Reverse_Engineering/Ready_Gladiator_2.md)
 - [Reverse](Reverse_Engineering/Reverse.md)
 - [Safe Opener 2](Reverse_Engineering/Safe_Opener_2.md)
 - [timer](Reverse_Engineering/timer.md)
