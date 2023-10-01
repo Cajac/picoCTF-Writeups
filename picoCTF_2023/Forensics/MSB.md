@@ -216,11 +216,12 @@ Open the image file and then select `Data Extract` in the `Analyse` menu.
 The MSB-bit is bit 7 so select for Red, Green and Blue. The rest of the settings can be left as default.  
 The press the `Preview`-button.
 
-Add image
+The result should look like this  
+![Data extraction in StegSolve](StegSolve_MSB_data_extraction.png)
 
 We can see readable text which is highly promising but browsing through the text we find no flag.  
 This is because the text shown is only a subset of all the data.  
-Press the `Save`-button to save all the extracted data as a file.
+Press the `Save Text`-button to save all the extracted data as a file.
 
 The saved file contains both hex and ascii values
 ```bash
@@ -230,8 +231,7 @@ The saved file contains both hex and ascii values
 6e62657267206542 6f6f6b206f662054  nberg eB ook of T
 686520486973746f 7279206f6620446f  he Histo ry of Do
 ```
-This makes grepping for the flag slightly more complicated.  
-You cannot simply do a standard grep and expect to get the entire flag
+This makes grepping for the flag slightly more complicated. We cannot simply do a standard grep and expect to get the entire flag
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/MSB]
 └─$ grep pico StegSolve_all_text.data 
