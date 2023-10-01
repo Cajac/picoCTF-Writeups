@@ -25,7 +25,7 @@ From the challenge title and description we can deduce that this is going to be 
 
 ### Basic analysis of the image file
 
-Lets start with some basic analysis
+Lets start with some basic analysis of the file
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/MSB]
 └─$ file Ninja-and-Prince-Genji-Ukiyoe-Utagawa-Kunisada.flag.png 
@@ -122,8 +122,10 @@ Nope, nothing of interest as expected, but it's good to always double-check.
 
 Lets bring out the stego-tools instead.
 
+### Failed attempt with zsteg
+
 The first tool tried was [zsteg](https://github.com/zed-0xff/zsteg) but that didn't yield anaything.  
-The output of doing all test was quite long so I grepped for the flag
+The output with all tests was quite long so I grepped for the flag
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/MSB]
 └─$ zsteg -a Ninja-and-Prince-Genji-Ukiyoe-Utagawa-Kunisada.flag.png | grep -i pico
@@ -131,7 +133,7 @@ The output of doing all test was quite long so I grepped for the flag
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/MSB]
 └─$ 
 ```
-But there was no success.
+but there was no success.
 
 ### StegoVeritas solution
 
@@ -196,7 +198,7 @@ Exif
 +---------------------+-----------------------------------------------------------------------------------------------------------+
 ```
 
-It found some interesting thing and all the results are stored in the `results` subdirectory. 
+It found some interesting things and all the results were stored in the `results` subdirectory. 
 
 If we recursively `grep` for the flag in that subdirectory, we find the flag
 ```bash
@@ -214,8 +216,10 @@ Open the image file and then select `Data Extract` in the `Analyse` menu.
 The MSB-bit is bit 7 so select for Red, Green and Blue. The rest of the settings can be left as default.  
 The press the `Preview`-button.
 
-We can wee readable text which is highly promising but browsing through the text we find no flag.  
-This is because the text shown is only a subset of all the data.
+Add image
+
+We can see readable text which is highly promising but browsing through the text we find no flag.  
+This is because the text shown is only a subset of all the data.  
 Press the `Save`-button to save all the extracted data as a file.
 
 The saved file contains both hex and ascii values
@@ -243,7 +247,7 @@ But with a combination of `grep`, `cut` and `tr` you can get the full flag in re
 
 ### SigBits solution
 
-Finally, you can use the [sigBits](https://github.com/Pulho/sigBits) script to extract the data.
+Finally, you can use the [sigBits script](https://github.com/Pulho/sigBits) to extract the data.
 
 Lets start by getting more information on the parameters we can and should use
 ```bash
@@ -269,7 +273,7 @@ Options:
                 Choose the bits you want to extract info ( Have higher priority than '--type or -t' )
 ```
 
-The we set the `type` to `MSB` and leave the rest as default
+Then we set the `type` to `MSB` and leave the rest as default
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/MSB]
 └─$ ~/python_venvs/Pillow/bin/sigBits.py -t=msb Ninja-and-Prince-Genji-Ukiyoe-Utagawa-Kunisada.flag.png 
@@ -284,7 +288,7 @@ Since all the extracted data is stored in the same line, we need to use some [Re
 1 outputSB.txt
 
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/MSB]
-└─$ grep -oE 'picoCTF{[^}]*?}' outputSB.txt
+└─$ grep -oE 'picoCTF{[^}]*}' outputSB.txt
 picoCTF{<REDACTED>}
 ```
 
