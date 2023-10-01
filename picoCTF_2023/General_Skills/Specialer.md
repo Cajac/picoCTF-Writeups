@@ -48,7 +48,7 @@ Specialer$
 
 ### Get a list of available commands
 
-We can use [command-line completion]((https://en.wikipedia.org/wiki/Command-line_completion)) to find out what commmands are available by pressing `TAB` twice
+We can use [command-line completion](https://en.wikipedia.org/wiki/Command-line_completion) to find out what commmands are available by pressing `TAB` twice
 ```
 Specialer$ 
 !          ]]         break      command    coproc     done       esac       false      function   if         local      pushd      return     source     times      ulimit     wait
@@ -58,9 +58,7 @@ Specialer$
 [[         bind       cd         continue   do         enable     export     for        history    let        printf     readonly   shopt      time       typeset    until   
 ```
 No `grep` so we can't use the trick we used in the [previous challange](Special.md).  
-And no `cat` or `ls`.
-
-But there is `bash`. 
+And no `cat` or `ls`. But there is `bash`. 
 
 ### Try to launch a real shell
 
