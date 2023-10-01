@@ -15,7 +15,7 @@ Can you make a CoreWars warrior that wins?
 Your opponent is the Imp. The source is available here. 
 
 If you wanted to pit the Imp against himself, you could download the Imp and connect to the CoreWars server like this:
-nc saturn.picoctf.net 65265 < imp.red
+nc saturn.picoctf.net 62741 < imp.red
 
 To get the flag, you must beat the Imp at least once out of the many rounds.
 
@@ -25,7 +25,7 @@ Hints:
 
 ## Solution
 
-This is a continuation of the [previous challenge](Ready_Gladiator_0.md) and I started off by re-reading the [beginner's docs](https://corewars.org/docs/guide.html) in hope of finding a CoreWars warrior as the hint suggested. I wasn't very keen of coding my own warrior.
+This is a continuation of the [previous challenge](Ready_Gladiator_0.md) and I started off by re-reading the [beginner's docs](https://corewars.org/docs/guide.html) in hope of finding a CoreWars warrior as the hint suggested. I wasn't very keen on coding my own warrior.
 
 ### Enter the dwarf warrior
 
