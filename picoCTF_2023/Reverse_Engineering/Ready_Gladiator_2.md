@@ -27,7 +27,7 @@ Hints:
 
 I started researching warriors that were good at defeating 'The Imp' and [learned](http://moscova.inria.fr/~doligez/corewar/by-types/idx.htm) that there are different types/classification of warriors and that `gates try to prevent imps from overrunning them by constantly decrementing a core location before themselves`.
 
-So I started to try some `gates` from [other people](http://moscova.inria.fr/~doligez/corewar/by-types/Xgate.htm)
+So I started to try some `gates` from [other people](http://moscova.inria.fr/~doligez/corewar/by-types/Xgate.htm).
 
 ### Try #1 - S/D Clear
 
@@ -88,7 +88,7 @@ gnat	mov -1, <-2
 	jmp gnat, <-3
 end
 ```
-It was slightly modified, the `end` and `assert` lines were added.
+It was slightly modified - the `end` and `assert` lines were added.
 
 And the Gnat won 100 times
 ```bash
