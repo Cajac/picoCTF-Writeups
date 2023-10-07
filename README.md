@@ -6,7 +6,7 @@ These pages are created to:
 * Support my junior work colleges CTF learning
 * Be a concrete project to improve my skills in markdown, git, github, etc.
 
-In total you will find more than 150 challenge solutions here.
+In total you will find around 200 challenge solutions here.
 
 ## Challenges
 
@@ -32,3 +32,5 @@ I'm not a native English speaker so please forgive any spelling mistakes or gram
  Some of the solutions were inspired by writeups and walkthroughs from these guys:
  - [Dvd848](https://github.com/Dvd848/CTFs)
  - [Gynvael](https://www.youtube.com/@GynvaelEN)
+ - [John Hammond](https://www.youtube.com/@_JohnHammond)
+ - [Martin Carlisle](https://www.youtube.com/@carlislemc)
