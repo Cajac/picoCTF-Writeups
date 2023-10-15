@@ -1,7 +1,8 @@
 # Disk, disk, sleuth! II
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [Sleuthkit Solution](#sleuthkit-solution)
+- [Boot in Qemu solution](#boot-in-qemu-solution)
 - [References](#references)
 
 ## Challenge information
@@ -20,7 +21,7 @@ Hints:
 3. This disk can also be booted with qemu!
 ```
 
-## Solution
+## Sleuthkit solution
 
 ### Unpack the image file
 
@@ -119,6 +120,23 @@ Lets use some command-line kung-fu to get the flag in a more easily readable for
 └─$ icat -o 2048 dds2-alpine.flag.img 18291 | grep '(' | tr -d '() \n'
 picoCTF{<REDACTED>}
 ```
+
+## Boot in Qemu solution
+
+Alternatively we can boot the disk in Qemu as suggested in one of the hints.  
+Install with `sudo apt install qemu-system-x86` if needed.
+
+Then we boot with
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Disk_disk_sleuth_II]
+└─$ qemu-system-x86_64 -drive format=raw,file=dds2-alpine.flag.img
+```
+
+A new window appears and the disk starts booting. After a few seconds you are prompted to login.  
+Login with username `root` and password `root`.
+
+The home directory is `/root` were the file is located. So you can just `cat` the file to get the flag.  
+When you are done use `poweroff` to shutdown the virtual machine.
 
 For additional information, please see the references below.
 
