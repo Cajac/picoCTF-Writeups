@@ -63,7 +63,9 @@ Ah, it looks like a encoded flag at the bottom.
 
 ### Decode the flag with CyberChef
 
-To decode the flag we could use an online site such as [CyberChef](https://gchq.github.io/CyberChef/) with the 'ROT13' recipe. Enter 'rot' in the `Operations` search bar, then drag and drop `ROT13` to the `Recipe`. Copy the encoded flag to the `Input` pane and press `BAKE`.
+To decode the flag we could use an online site such as [CyberChef](https://gchq.github.io/CyberChef/) with the 'ROT13' recipe.  
+Enter 'rot' in the `Operations` search bar, then drag and drop `ROT13` to the `Recipe`.  
+Copy the encoded flag to the `Input` pane and press `BAKE`.
 
 ### Decode the flag with a rot13 tool
 
