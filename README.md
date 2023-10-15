@@ -30,7 +30,9 @@ I'm not a native English speaker so please forgive any spelling mistakes or gram
  ## Acknowledgements
 
  Some of the solutions were inspired by writeups and walkthroughs from these guys:
+ - [Almond Force](https://www.youtube.com/@AlmondForce)
  - [Dvd848](https://github.com/Dvd848/CTFs)
  - [Gynvael](https://www.youtube.com/@GynvaelEN)
+ - [Hayden Housen](https://github.com/HHousen)
  - [John Hammond](https://www.youtube.com/@_JohnHammond)
  - [Martin Carlisle](https://www.youtube.com/@carlislemc)
