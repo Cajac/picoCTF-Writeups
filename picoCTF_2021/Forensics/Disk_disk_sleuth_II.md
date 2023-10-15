@@ -123,7 +123,7 @@ picoCTF{<REDACTED>}
 
 ## Boot in Qemu solution
 
-Alternatively we can boot the disk in Qemu as suggested in one of the hints.  
+Alternatively we can boot the disk in [QEMU](https://www.qemu.org/) as suggested in one of the hints.  
 Install with `sudo apt install qemu-system-x86` if needed.
 
 Then we boot with
@@ -147,4 +147,5 @@ For additional information, please see the references below.
 - [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
 - [tr - Linux manual page](https://man7.org/linux/man-pages/man1/tr.1.html)
 - [The Sleuthkit - Tool Overview](http://wiki.sleuthkit.org/index.php?title=TSK_Tool_Overview)
+- [QEMU - Home page](https://www.qemu.org/)
 - [Wikipedia - inode](https://en.wikipedia.org/wiki/Inode)
