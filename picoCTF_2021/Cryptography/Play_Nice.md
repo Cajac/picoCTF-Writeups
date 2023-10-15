@@ -6,7 +6,7 @@
 
 ## Challenge information
 ```
-Points: 100
+Points: 110
 Tags: picoCTF 2021, Cryptography
 Author: MADSTACKS
 
@@ -27,7 +27,7 @@ The name of the source code file reveils that this is the [Playfair cipher](http
 
 ### Analyze the source code
 
-Lets start by looking at the python source (with some empty line removed).
+Lets start by looking at the python source (with some empty lines removed).
 ```python
 #!/usr/bin/python3 -u
 import signal
@@ -91,6 +91,8 @@ We can see that:
  * This is a non-standard playfair cipher with a 6x6-matrix, rather than the 5x5 standard one.
  * The most interesting function is the `encrypt_pair` function which implements the three encoding cases "same row", "same column" and "rectangle case" as described in the Wikipedia article.
 
+The `-u` parameter in the [shebang](https://en.wikipedia.org/wiki/Shebang_(Unix)) forces stdin, stdout and stderr to be totally unbuffered.
+
 ### Connect to the site
 
 Next we connect to the site to get the alphabet and encrypted message
@@ -124,7 +126,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> exit()
 ```
 
- Then we can connect to the site again to get the flag. Both the alphabet and encrypted message seems to be static (doesn't change).
+ Then we can connect to the site again to get the flag. Both the alphabet and encrypted message seems to be static (don't change).
  ```bash
  ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Cryptography/Play_Nice]
 └─$ nc mercury.picoctf.net 6057
@@ -200,7 +202,7 @@ flag = io.recvlineS(keepends = False).split(':')[1].strip()
 print(f"Flag: {flag}")
 ```
 
-The functions `generate_square` and `get_index` are reused unchanged.  
+The functions `generate_square` and `get_index` are re-used unchanged.  
 The `decrypt_pair` is almost exactly as the `encrypt_pair` but with subtraction instead of addition.
 
 ### Get the flag
@@ -220,5 +222,7 @@ For additional information, please see the references below.
 
 ## References
 
+- [python - Linux manual page](https://linux.die.net/man/1/python)
 - [pwntools - Documentation](https://docs.pwntools.com/en/stable/index.html)
 - [Wikipedia - Playfair cipher](https://en.wikipedia.org/wiki/Playfair_cipher)
+- [Wikipedia - Shebang (Unix)](https://en.wikipedia.org/wiki/Shebang_(Unix))
