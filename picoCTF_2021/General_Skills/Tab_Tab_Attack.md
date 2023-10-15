@@ -20,7 +20,9 @@ Hints:
 
 ## Solution
 
-Well, this challenge is mainly an exercise in how to use [tab completion](https://en.wikipedia.org/wiki/Command-line_completion).
+### Likely intented solution
+
+Based on the challenge name this is the likely intended solution. The challenge is mainly an exercise in how to use [tab completion](https://en.wikipedia.org/wiki/Command-line_completion).
 
 First we need to unpack the file with `unzip`
 ```bash
@@ -65,8 +67,30 @@ Why not run it?
 
 And there is the flag!
 
+### The smarter solution
+
+A smarter solution is to unpack the zip-file without recreating the directory structure (-j parameter)
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Tab_Tab_Attack]
+└─$ unzip -j Addadshashanammu.zip 
+Archive:  Addadshashanammu.zip
+  inflating: fang-of-haynekhtnamet
+
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Tab_Tab_Attack]
+└─$ file fang-of-haynekhtnamet                                  
+fang-of-haynekhtnamet: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=fcea24fb5379795a123bb860267d815e889a6d23, not stripped
+```
+
+Then we run the program to get the flag
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Tab_Tab_Attack]
+└─$ ./fang-of-haynekhtnamet 
+*ZAP!* picoCTF{<REDACTED>}
+```
+
 For additional information, please see the references below.
 
 ## References
 
+- [unzip - Linux manual page](https://linux.die.net/man/1/unzip)
 - [Wikipredia - Command-line completion](https://en.wikipedia.org/wiki/Command-line_completion)
