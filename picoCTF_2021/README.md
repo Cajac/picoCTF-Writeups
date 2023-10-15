@@ -21,8 +21,9 @@
 
 ## Forensics Challenges
 
-9 Challenges: 
+10 Challenges: 
 - [Disk, disk, sleuth!](Forensics/Disk_disk_sleuth.md)
+- [Disk, disk, sleuth! II](Forensics/Disk_disk_sleuth_II.md)
 - [information](Forensics/information.md)
 - [MacroHard WeakEdge](Forensics/MacroHard_WeakEdge.md)
 - [Matryoshka doll](Forensics/Matryoshka_doll.md)
