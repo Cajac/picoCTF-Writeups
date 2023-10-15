@@ -8,7 +8,7 @@
 
 ## Cryptography Challenges
 
-8 Challenges:
+9 Challenges:
 - [Dachshund Attacks](Cryptography/Dachshund_Attacks.md)
 - [Easy Peasy](Cryptography/Easy_Peasy.md)
 - [Mind your Ps and Qs](Cryptography/Mind_your_Ps_and_Qs.md)
@@ -17,6 +17,7 @@
 - [New Caesar](Cryptography/New_Caesar.md)
 - [No Padding, No Problem](Cryptography/No_Padding_No_Problem.md)
 - [Pixelated](Cryptography/Pixelated.md)
+- [Play Nice](Cryptography/Play_Nice.md)
 
 ## Forensics Challenges
 
