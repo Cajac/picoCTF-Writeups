@@ -138,6 +138,8 @@ Login with username `root` and password `root`.
 The home directory is `/root` were the file is located. So you can just `cat` the file to get the flag.  
 When you are done use `poweroff` to shutdown the virtual machine.
 
+![Booting disk in Qemu](Booting_disk_in_Qemu.png)
+
 For additional information, please see the references below.
 
 ## References
