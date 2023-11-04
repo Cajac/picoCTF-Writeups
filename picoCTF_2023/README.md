@@ -2,8 +2,9 @@
 
 ## Binary Exploitation Challenges
 
-3 Challenges:
+4 Challenges:
 - [babygame01](Binary_Exploitation/babygame01.md)
+- [hijacking](Binary_Exploitation/hijacking.md)
 - [tic-tac](Binary_Exploitation/tic-tac.md)
 - [two-sum](Binary_Exploitation/two-sum.md)
 
