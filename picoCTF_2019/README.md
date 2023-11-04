@@ -2,8 +2,8 @@
 
 ## Binary Exploitation Challenges
 
-X Challenges:
-- [Stonks](Binary_Exploitation/Stonks.md)
+1 Challenge:
+- [seed-sPRiNG](Binary_Exploitation/seed-sPRiNG.md)
 
 ## Cryptography Challenges
 
