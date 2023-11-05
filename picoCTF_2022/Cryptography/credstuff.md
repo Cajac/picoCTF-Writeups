@@ -1,7 +1,8 @@
 # credstuff
 
-- [Challenge information](credstuff.md#challenge-information)
-- [Solution](credstuff.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -116,3 +117,9 @@ ROT-13: picoCTF{<REDACTED>}
 ```
 
 This time it was standard ROT-13.
+
+For additional information, please see the references below.
+
+## References
+
+- [Wikipedia - ROT13](https://en.wikipedia.org/wiki/ROT13)
