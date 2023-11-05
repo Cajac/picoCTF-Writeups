@@ -2,6 +2,7 @@
 
 - [Challenge information](#challenge-information)
 - [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -30,3 +31,9 @@ It "brute-forces" the number of rails up to a maximum number (with a default of 
 
 Enter the given encoded text in the `Encoded message` text box and press 'CALCULATE'.  
 And you will get the flag in the output with 4 rails in the `Decode table`.
+
+For additional information, please see the references below.
+
+## References
+
+- [Wikipedia - Rail fence cipher](https://en.wikipedia.org/wiki/Rail_fence_cipher)
