@@ -18,9 +18,10 @@
 
 ## Forensics Challenges
 
-5 Challenges: 
+6 Challenges: 
 - [FindAndOpen](Forensics/FindAndOpen.md)
 - [hideme](Forensics/hideme.md)
+- [Invisible WORDs](Forensics/Invisible_WORDs.md)
 - [MSB](Forensics/MSB.md)
 - [PcapPoisoning](Forensics/PcapPoisoning.md)
 - [who is it](Forensics/who_is_it.md)
