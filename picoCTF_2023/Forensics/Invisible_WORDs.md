@@ -248,7 +248,7 @@ For additional information, please see the references below.
 - [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
 - [xxd - Linux manual page](https://linux.die.net/man/1/xxd)
 - [Wikipedia - Base64](https://en.wikipedia.org/wiki/Base64)
-- [Wikipedia - Regular expression](https://en.wikipedia.org/wiki/Regular_expression)
 - [Wikipedia - BMP file format](https://en.wikipedia.org/wiki/BMP_file_format)
+- [Wikipedia - Regular expression](https://en.wikipedia.org/wiki/Regular_expression)
 - [Wikipedia - Steganography](https://en.wikipedia.org/wiki/Steganography)
 - [Wikipedia - ZIP (file format)](https://en.wikipedia.org/wiki/ZIP_(file_format))
