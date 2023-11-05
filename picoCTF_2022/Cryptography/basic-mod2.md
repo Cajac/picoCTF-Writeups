@@ -1,7 +1,8 @@
 # basic-mod2
 
-- [Challenge information](basic-mod2.md#challenge-information)
-- [Solution](basic-mod2.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -65,3 +66,9 @@ Then make the script executable and run it
 └─$ ./get_flag.py
 picoCTF{<REDACTED>}
 ```
+
+For additional information, please see the references below.
+
+## References
+
+- [Wikipedia - Modulo](https://en.wikipedia.org/wiki/Modulo)
