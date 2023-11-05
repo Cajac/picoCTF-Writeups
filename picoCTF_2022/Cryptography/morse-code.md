@@ -1,7 +1,7 @@
 # morse-code
 
-- [Challenge information](morse-code.md#challenge-information)
-- [Solution](morse-code.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
 
 ## Challenge information
 ```
