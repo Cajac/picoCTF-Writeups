@@ -1,7 +1,7 @@
 # basic-mod1
 
-- [Challenge information](basic-mod1.md#challenge-information)
-- [Solution](basic-mod1.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
 
 ## Challenge information
 ```
