@@ -133,7 +133,7 @@ We can see that the program checks the key character by character in reverse ord
 ### Get the flag
 
 We can rather easily create the flag manually but lets not do that.  
-Instead we will use builtin commandline tools like `grep` and `cut` to extract the flag for us.
+Instead we will use builtin commandline tools like `grep`, `sort` and `cut` to extract the flag for us.
 
 Start by copying the source to a file named `KeygenMe_main.java`.
 
@@ -297,7 +297,7 @@ e
 }
 ```
 
-Finally, we remove newlines with `tr`
+Finally, we remove newlines with `tr` to get the flag
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Reverse_Engineering/Fresh_Java]
 └─$ grep charAt KeygenMe_main.java | cut -d '(' -f3 | sort -n | cut -d"'" -f2 | tr -d '\n'
