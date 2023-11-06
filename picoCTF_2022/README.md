@@ -47,9 +47,10 @@
 
 ## Web Exploitation Challenges
 
-5 Challenges:
+6 Challenges:
 - [Forbidden Paths](Web_Exploitation/Forbidden_Paths.md)
 - [Includes](Web_Exploitation/Includes.md)
 - [Inspect HTML](Web_Exploitation/Inspect_HTML.md)
 - [Local Authority](Web_Exploitation/Local_Authority.md)
+- [Power Cookie](Web_Exploitation/Power_Cookie.md)
 - [Search source](Web_Exploitation/Search_source.md)
