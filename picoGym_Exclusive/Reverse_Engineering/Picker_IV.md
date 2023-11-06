@@ -1,7 +1,8 @@
 # Picker IV
 
-- [Challenge information](Picker_IV.md#challenge-information)
-- [Solution](Picker_IV.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -78,6 +79,7 @@ Now, all we need to do is to find the address of the `win` function.
 
 ### Finding out the address of win
 
+We need to find the virtual address of the win function.  
 This can be done with `objdump` like this
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Picker_IV]
@@ -102,8 +104,7 @@ Enter the address in hex to jump to, excluding '0x': You input 0x40129e
 You won!
 Cannot open file.
 ```
-
-Since there isn't any 'flag.txt' file in the current directory we get an error message, but otherwise it works.
+Since there isn't any 'flag.txt' file locally we get an error message, but otherwise it works.
 
 ### Connect to the server and get the flag
 
@@ -115,3 +116,10 @@ Enter the address in hex to jump to, excluding '0x': You input 0x40129e
 You won!
 picoCTF{<REDACTED>}
 ```
+
+For additional information, please see the references below.
+
+## References
+
+- [gdb - Linux manual page](https://man7.org/linux/man-pages/man1/gdb.1.html)
+- [objdump - Linux manual page](https://man7.org/linux/man-pages/man1/objdump.1.html)
