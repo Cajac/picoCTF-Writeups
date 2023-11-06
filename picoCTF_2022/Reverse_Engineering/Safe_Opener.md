@@ -2,6 +2,7 @@
 
 - [Challenge information](#challenge-information)
 - [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -71,8 +72,15 @@ public class SafeOpener {
 ```
 
 In the `main` function we see a Base64.Encoder initialized and in the `OpenSafe` function 
-we see an encodedkey that looks like a base64 encoded password: `cGwzYXMzX2wzdF9tM18xbnQwX3RoM19zYWYz`.
+we see an encodedkey that looks like a [base64](https://en.wikipedia.org/wiki/Base64) encoded password: `cGwzYXMzX2wzdF9tM18xbnQwX3RoM19zYWYz`.
 
 I used [CyberChef's 'From Base64' recipe](https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)) to decode the password.
 
-Finally, follow the instructions to create the flag.
+Finally, follow the instructions in the challenge description to create the flag.
+
+For additional information, please see the references below.
+
+## References
+
+- [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
+- [Wikipedia - Base64](https://en.wikipedia.org/wiki/Base64)
