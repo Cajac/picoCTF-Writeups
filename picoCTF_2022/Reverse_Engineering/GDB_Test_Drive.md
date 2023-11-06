@@ -1,8 +1,8 @@
 # GDB Test Drive
 
-- [Challenge information](GDB_Test_Drive.md#challenge-information)
-- [Solution](GDB_Test_Drive.md#solution)
-- [References](GDB_Test_Drive.md#references)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
