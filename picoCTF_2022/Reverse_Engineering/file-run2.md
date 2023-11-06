@@ -1,8 +1,8 @@
 # file-run2
 
-- [Challenge information](file-run2.md#challenge-information)
-- [Solution](file-run2.md#solution)
-- [References](file-run2.md#references)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -27,15 +27,15 @@ But lets play around with it anyway
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Reverse_Engineering/File_Run2]
 └─$ chmod +x run
-                                    
+
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Reverse_Engineering/File_Run2]
 └─$ ./run
-Run this file with only one argument.
-                                                        
+Run this file with only one argument
+
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Reverse_Engineering/File_Run2]
 └─$ ./run My_argument
 Won't you say 'Hello!' to me first?
-                                                 
+
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Reverse_Engineering/File_Run2]
 └─$ ./run Hello!     
 The flag is: picoCTF{<REDACTED>}      
