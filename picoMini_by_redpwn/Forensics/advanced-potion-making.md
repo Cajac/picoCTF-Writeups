@@ -20,6 +20,8 @@ Hints:
 
 ## Solution
 
+### Analyse the file
+
 Lets start by checking the given file with `file`
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Forensics/advanced-potion-making]
@@ -56,6 +58,8 @@ Hhm, lets check it in hex form and see if we can recognise anything interesting
 I recognise `IHDR` and `IEND` as chunk types of PNG picture files.  
 They normally begin with these 8 bytes `89 50 4E 47 0D 0A 1A 0A`.
 
+### Fix the image file
+
 Lets change the first bytes in the file with a hex editor such as [010 Editor](https://www.sweetscape.com/010editor/) and try to view it.  
 Nope, it is still corrupted.
 
@@ -83,10 +87,11 @@ The beginning of the file now looks like this
 
 And voila, the file is now viewable. But only a solid red "background" is shown.
 
+### Get the flag
+
 Time to bring out the stego tools. I used [StegSolve](https://github.com/Giotino/stegsolve/releases) which is also available as an [online service](https://stegonline.georgeom.net/upload).
 
 The flag can be found encoded in `Red plane 0`.
-
 
 For additional information, please see the references below.
 
