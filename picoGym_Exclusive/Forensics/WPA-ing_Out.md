@@ -2,6 +2,7 @@
 
 - [Challenge information](#challenge-information)
 - [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -92,3 +93,11 @@ Then password is found very fast and is redacted below.
 ### Create the flag
 
 The flag consists of the password in the standard flag format, i.e. `picoCTF{<The password>}`.
+
+For additional information, please see the references below.
+
+## References
+
+- [Aircrack-ng - Home page](https://aircrack-ng.org/)
+- [SecLists - Github](https://github.com/danielmiessler/SecLists/tree/master)
+- [Wireshark - Home page](https://www.wireshark.org/)
