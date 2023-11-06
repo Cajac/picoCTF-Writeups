@@ -153,8 +153,7 @@ read(0, 3532523
 read(0, ^C0x5568ba8156b0, 1024)           = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
 strace: Process 63993 detached
 ```
-
-But no new information from that unfortunately.
+No new information from that unfortunately.
 
 ### Decompile the file in Ghidra
 
