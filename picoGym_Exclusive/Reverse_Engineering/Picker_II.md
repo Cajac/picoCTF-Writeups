@@ -1,7 +1,8 @@
 # Picker II
 
-- [Challenge information](Picker_II.md#challenge-information)
-- [Solution](Picker_II.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -79,3 +80,9 @@ picoCTF{<REDACTED>}
 'NoneType' object is not callable
 ==> 
 ```
+
+For additional information, please see the references below.
+
+## References
+
+- [Reading and writing files - Python](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files)
