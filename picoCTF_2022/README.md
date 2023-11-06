@@ -36,10 +36,11 @@
 
 ## Reverse Engineering Challenges
 
-7 Challenges:
+8 Challenges:
 - [bloat.py](Reverse_Engineering/bloat.py.md)
 - [file-run1](Reverse_Engineering/file-run1.md)
 - [file-run2](Reverse_Engineering/file-run2.md)
+- [Fresh Java](Reverse_Engineering/Fresh_Java.md)
 - [GDB Test Drive](Reverse_Engineering/GDB_Test_Drive.md)
 - [patchme.py](Reverse_Engineering/patchme.py.md)
 - [Safe Opener](Reverse_Engineering/Safe_Opener.md)
