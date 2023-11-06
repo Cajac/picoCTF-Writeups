@@ -1,9 +1,9 @@
 # GDB baby step 1
 
-- [Challenge information](GDB_baby_step_1.md#challenge-information)
-- [GDB Solution](GDB_baby_step_1.md#gdb-solution)
-- [Objdump Solution](GDB_baby_step_1.md#objdump-solution)
-- [References](GDB_baby_step_1.md#references)
+- [Challenge information](#challenge-information)
+- [GDB Solution](#gdb-solution)
+- [Objdump Solution](#objdump-solution)
+- [References](#references)
 
 ## Challenge information
 ```
