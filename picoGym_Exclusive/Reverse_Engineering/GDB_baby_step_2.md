@@ -1,8 +1,8 @@
 # GDB baby step 2
 
-- [Challenge information](GDB_baby_step_2.md#challenge-information)
-- [Solution](GDB_baby_step_2.md#solution)
-- [References](GDB_baby_step_2.md#references)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
