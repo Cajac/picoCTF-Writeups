@@ -1,8 +1,8 @@
 # Bit-O-Asm-1
 
-- [Challenge information](Bit-O-Asm-1.md#challenge-information)
-- [Solution](Bit-O-Asm-1.md#solution)
-- [References](Bit-O-Asm-1.md#references)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
