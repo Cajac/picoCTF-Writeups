@@ -1,7 +1,8 @@
 # Big Zip
 
-- [Challenge information](Big_Zip.md#challenge-information)
-- [Solution](Big_Zip.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -44,14 +45,20 @@ Archive:  big-zip-files.zip
  < ---snip--- >
 ```
 
-The file listing is looong so we definetly needs to search for the flag with grep. Search  
+The file listing is looong so we definetly needs to search for the flag with `grep`. Search  
  * recusively (-r), 
  * with extended regular expressions (-E), 
  * output only the matching text (-o), and 
  * suppress output of file names (-h).
 ```
-
 ┌──(kali㉿kali)-[/picoCTF/picoGym/General_Skills/Big_Zip]
 └─$ grep -r -E -o -h 'picoCTF{.*}' big-zip-files
 picoCTF{<REDACTED>}
 ```
+
+For additional information, please see the references below.
+
+## References
+
+- [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
+- [unzip - Linux manual page](https://linux.die.net/man/1/unzip)
