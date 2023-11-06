@@ -1,7 +1,8 @@
 # First Find
 
-- [Challenge information](First_Find.md#challenge-information)
-- [Solution](First_Find.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -60,3 +61,11 @@ Finally, display the flag with `cat`
 └─$ cat files/adequate_books/more_books/.secret/deeper_secrets/deepest_secrets/uber-secret.txt
 picoCTF{<REDACTED>}
 ```
+
+For additional information, please see the references below.
+
+## References
+
+- [cat - Linux manual page](https://man7.org/linux/man-pages/man1/cat.1.html)
+- [find - Linux manual page](https://man7.org/linux/man-pages/man1/find.1.html)
+- [unzip - Linux manual page](https://linux.die.net/man/1/unzip)
