@@ -1,7 +1,8 @@
 # ASCII Numbers
 
-- [Challenge information](ASCII_Numbers.md#challenge-information)
-- [Solution](ASCII_Numbers.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -45,3 +46,14 @@ Then run the script to get the flag
 └─$ python solve.py
 picoCTF{<REDACTED>}
 ```
+
+For additional information, please see the references below.
+
+## References
+
+- [ASCII Table](https://www.asciitable.com/)
+- [chr function - Python](https://docs.python.org/3/library/functions.html#chr)
+- [CyberChef - Home page](https://gchq.github.io/CyberChef/)
+- [lambda expression - Python](https://docs.python.org/3/reference/expressions.html#lambda)
+- [map function - Python](https://docs.python.org/3/library/functions.html#map)
+- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)
