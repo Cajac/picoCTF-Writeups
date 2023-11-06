@@ -1,7 +1,8 @@
 # ASCII FTW
 
-- [Challenge information](ASCII_FTW.md#challenge-information)
-- [Solution](ASCII_FTW.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -73,3 +74,11 @@ The result then looks like this:
 ```
 
 Finally, manually create the flag by going down the listing line by line.
+
+For additional information, please see the references below.
+
+## References
+
+- [ASCII Table](https://www.asciitable.com/)
+- [Ghidra - Homepage](https://ghidra-sre.org/)
+- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)
