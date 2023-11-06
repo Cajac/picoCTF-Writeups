@@ -22,7 +22,7 @@ Hints:
 
 ## Solution
 
-### Unpacking and file identification
+### Basic file analysis
 
 Lets start by unpacking the disk image with `gzip -d`. Add `-k` if you want to keep the original input file.
 ```bash
@@ -54,8 +54,8 @@ Units are in 512-byte sectors
 004:  000:002   0000360448   0000614399   0000253952   Linux (0x83)
 ```
 There are two possible partitions where the flag could be:
- * The Linux partition which starts on sector 2048
- * The Linux partition which starts on sector 360448
+ * The Linux partition which starts on sector `2048`
+ * The Linux partition which starts on sector `360448`
 
 Lets check them in that order.
 
@@ -149,7 +149,7 @@ Lets `cat` the contents of the file to get the flag
 picoCTF{<REDACTED>}
 ```
 
-Finally, we umount the partition
+Finally, we unmount the partition
 ```bash
 ┌──(kali㉿kali)-[/mnt/pico_disk]
 └─$ popd   
@@ -161,15 +161,15 @@ Finally, we umount the partition
 
 ## FTK Imager solution
 
-Alternatively, we can mount the disk in - [FTK Imager](https://www.exterro.com/ftk-imager):
+Alternatively, we can mount the disk in [FTK Imager](https://www.exterro.com/ftk-imager):
  1. In the `File`-menu, select `Add Evidence Item...`
  2. Select the `Image File` option in the popup window
  3. Browse to the `disk.flag.img` file
 
 In the `Evidence Tree` to the left navigate to `Partition 3` and expand `NONAME` and `[root]`.  
-The expand the `root` directory and select the `my_folder` directory.
+Then expand the `root` directory and select the `my_folder` directory.
 
-Finally, click the `flag.uni.txt` file un the `File List` to view the contents of the flag file.
+Finally, click the `flag.uni.txt` file in the `File List` to view the contents of the flag file.
 
 It should look something like this:
 
