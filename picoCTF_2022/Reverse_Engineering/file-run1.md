@@ -1,8 +1,8 @@
 # file-run1
 
-- [Challenge information](file-run1.md#challenge-information)
-- [Solution](file-run1.md#solution)
-- [References](file-run1.md#references)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
