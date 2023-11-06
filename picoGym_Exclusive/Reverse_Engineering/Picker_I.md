@@ -1,7 +1,8 @@
 # Picker I
 
-- [Challenge information](Picker_I.md#challenge-information)
-- [Solution](Picker_I.md#solution)
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -41,7 +42,6 @@ def getRandomNumber():
             # Guaranteed to be random.
             # (See XKCD)
 ```
-
 The comment is referring to this [XKCD comic strip](https://xkcd.com/221/).
 
 More interesting is this `win` function which output the flag as hex values.
@@ -95,7 +95,7 @@ num_array = map(lambda x: int(x, 16), enc_flag_array)
 # Convert to chars
 char_array = map(chr, num_array)
 
-# Print the flag
+# Join and print the flag
 print(''.join(char_array))
 ```
 
@@ -103,8 +103,20 @@ Then set the script file as executable and run it to get the flag
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Picker_I]
 └─$ chmod a+x decode.py                                           
-                        
+
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Picker_I]
 └─$ ./decode.py   
 picoCTF{<REDACTED>}
 ```
+
+For additional information, please see the references below.
+
+## References
+
+- [ASCII Table](https://www.asciitable.com/)
+- [chr function - Python](https://docs.python.org/3/library/functions.html#chr)
+- [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
+- [join method - Python](https://docs.python.org/3/library/stdtypes.html#str.join)
+- [lambda expression - Python](https://docs.python.org/3/reference/expressions.html#lambda)
+- [map function - Python](https://docs.python.org/3/library/functions.html#map)
+- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)
