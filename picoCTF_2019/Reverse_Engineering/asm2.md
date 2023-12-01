@@ -11,7 +11,7 @@ Tags: picoCTF 2019, Reverse Engineering
 Author: SANJAY C
 
 Description:
-What does asm2(0x4,0x21) return? 
+What does asm2(0xc,0x15) return? 
 
 Submit the flag as a hexadecimal value (starting with '0x'). 
 
@@ -22,6 +22,7 @@ Source
 Hints:
 1. assembly conditions
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/16](https://play.picoctf.org/practice/challenge/16)
 
 ## Solutions
 
@@ -206,3 +207,6 @@ For additional information, please see the references below.
 - [Assembly - Conditions](https://www.tutorialspoint.com/assembly_programming/assembly_conditions.htm)
 - [AT&T Syntax versus Intel Syntax](https://www.cs.mcgill.ca/~cs573/winter2001/AttLinux_syntax.htm)
 - [Intel 64 and IA-32 Architectures Software Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
+- [as - Linux manual page](https://man7.org/linux/man-pages/man1/as.1.html)
+- [gdb - Linux manual page](https://man7.org/linux/man-pages/man1/gdb.1.html)
+- [ld - Linux manual page](https://man7.org/linux/man-pages/man1/ld.1.html)
