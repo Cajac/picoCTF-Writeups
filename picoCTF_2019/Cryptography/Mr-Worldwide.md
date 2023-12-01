@@ -16,10 +16,11 @@ A musician left us a message. What's it mean?
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/40](https://play.picoctf.org/practice/challenge/40)
 
 ## Solution
 
-Lets start by checking the contents of the message
+Let's start by checking the contents of the message
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/Mr_Worldwide]
 └─$ cat message.txt             
@@ -39,11 +40,11 @@ Lets use [Google Maps](https://www.google.com/maps/) to find out what place each
 |(3.140853, 101.693207)|Kuala Lumpur|
 |etc.|etc.|
 
-For each city take the first letter and you have the flag (which should be in CAPITALS).
+For each city, take the first letter and you have the flag (which should be in CAPITALS).
 
 For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Longitude](https://en.wikipedia.org/wiki/Longitude)
 - [Wikipedia - Latitude](https://en.wikipedia.org/wiki/Latitude)
+- [Wikipedia - Longitude](https://en.wikipedia.org/wiki/Longitude)
