@@ -22,6 +22,7 @@ Hints:
    you would submit 'picoCTF{HELLO}' as the flag.
 2. Please use all caps for the message.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/43](https://play.picoctf.org/practice/challenge/43)
 
 ## Solution
 
@@ -67,5 +68,5 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - One-time pad](https://en.wikipedia.org/wiki/One-time_pad)
 - [Wikipedia - Modulo](https://en.wikipedia.org/wiki/Modulo)
+- [Wikipedia - One-time pad](https://en.wikipedia.org/wiki/One-time_pad)
