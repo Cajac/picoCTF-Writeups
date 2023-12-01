@@ -17,6 +17,7 @@ Hints:
 1. How do operating systems know what kind of file it is? (It's not just the ending!
 2. Make sure to submit the flag as picoCTF{XXXXX}
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/52](https://play.picoctf.org/practice/challenge/52)
 
 ## Solution
 
@@ -35,4 +36,5 @@ For additional information, please see the references below.
 
 ## References
 
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
 - [Wikipedia - Filename extension](https://en.wikipedia.org/wiki/Filename_extension)
