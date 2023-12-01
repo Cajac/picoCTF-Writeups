@@ -17,6 +17,7 @@ Hints:
 1. Try using a tool like Wireshark
 2. What are streams?
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/30](https://play.picoctf.org/practice/challenge/30)
 
 ## Solution
 
