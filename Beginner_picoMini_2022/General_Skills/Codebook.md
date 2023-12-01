@@ -20,6 +20,7 @@ Hints:
 1. On the webshell, use ls to see if both files are in the directory you are in
 2. The str_xor function does not need to be reverse engineered for this challenge.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/238](https://play.picoctf.org/practice/challenge/238)
 
 ## Solution
 
@@ -37,7 +38,7 @@ Most of the time you just make sure the script is executable and then run it
 
 But in this case that doesn't work. The reason for this is that the script doesn't contain a so called 'shebang' - a special comment specifying what kind of program/interpreter that should execute the script. It normally looks something like this `#!/usr/bin/python3`.
 
-Lets display the first lines of the script with `head` to verify this.
+Let's display the first lines of the script with `head` to verify this.
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Codebook]
 └─$ head code.py 
@@ -51,7 +52,7 @@ def str_xor(secret, key):
     i = 0
 ```
 
-Yes the shebang is missing and we need to explicitly say that Python should run the script like this
+Yes. the shebang is missing and we need to explicitly say that Python should run the script like this
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Codebook]
 └─$ python code.py 
