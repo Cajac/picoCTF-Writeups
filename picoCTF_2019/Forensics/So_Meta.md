@@ -17,16 +17,17 @@ Hints:
 1. What does meta mean in the context of files?
 2. Ever heard of metadata?
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/19](https://play.picoctf.org/practice/challenge/19)
 
 ## Solution
 
 In steganography oriented forensics challenges there are a number of checks that are more or less "standard practice".  
 These include:
 1. Checking for metadata with [ExifTool](https://exiftool.org/)
-2. Checking for embedded strings
-3. Checking for embedded Zip-files with tools such as [Binwalk ](https://github.com/ReFirmLabs/binwalk)
+2. Checking for embedded [strings](https://en.wikipedia.org/wiki/String_(computer_science))
+3. Checking for embedded Zip-files with tools such as [Binwalk](https://github.com/ReFirmLabs/binwalk)
 
-Lets start checking them one by one until we find the flag.
+Let's start checking them one by one until we find the flag.
 
 ### Checking for metadata
 
@@ -71,6 +72,7 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Metadata](https://en.wikipedia.org/wiki/Metadata)
 - [Wikipedia - Exif](https://en.wikipedia.org/wiki/Exif)
 - [Wikipedia - ExifTool](https://en.wikipedia.org/wiki/ExifTool)
+- [Wikipedia - Metadata](https://en.wikipedia.org/wiki/Metadata)
+- [Wikipedia - String (computer science)](https://en.wikipedia.org/wiki/String_(computer_science))
