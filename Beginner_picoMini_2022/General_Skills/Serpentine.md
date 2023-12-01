@@ -20,10 +20,11 @@ Hints:
 3. To exit nano, press Ctrl and x and follow the on-screen prompts.
 4. The str_xor function does not need to be reverse engineered for this challenge.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/251](https://play.picoctf.org/practice/challenge/251)
 
 ## Solution
 
-Lets start with looking at the script. The script looks like this (with some empty lines removed)
+Let's start with looking at the script. The script looks like this (with some empty lines removed)
 ```python
 import random
 import sys
@@ -112,7 +113,7 @@ And the fact that it's never called
 <---snip--->
 ```
 
-Lets correct this Oops! message to print the flag instead
+Let's correct this Oops! message to print the flag instead
 ```python
 <---snip--->
     elif choice == 'b':
