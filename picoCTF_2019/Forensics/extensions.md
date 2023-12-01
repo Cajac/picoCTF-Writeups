@@ -21,7 +21,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/52](https://play.pi
 
 ## Solution
 
-Lets start by checking the file with `file`.
+Let's start by checking the file with `file`.
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Extensions]
 └─$ file flag.txt 
