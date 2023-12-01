@@ -17,6 +17,7 @@ Hints:
 1. Submit your answer in our flag format. For example, if your answer was 'hello', 
    you would submit 'picoCTF{hello}' as the flag.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/22](https://play.picoctf.org/practice/challenge/22)
 
 ## Solution
 
@@ -35,5 +36,5 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipredia - ASCII](https://en.wikipedia.org/wiki/ASCII)
+- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)
 - [ASCII Table](https://www.ascii-code.com/)
