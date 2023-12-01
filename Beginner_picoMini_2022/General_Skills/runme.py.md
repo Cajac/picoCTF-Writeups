@@ -24,10 +24,11 @@ Hints:
 4. Finally, to run the script, type everything after the dollar sign and then press enter: 
    $ python3 runme.py You should have the flag now!
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/250](https://play.picoctf.org/practice/challenge/250)
 
 ## Solution
 
-This challenge is very straight forward, but lets start with looking at the script
+This challenge is very straight forward, but let's start with looking at the script
 ```python
 #!/usr/bin/python3
 ################################################################################
