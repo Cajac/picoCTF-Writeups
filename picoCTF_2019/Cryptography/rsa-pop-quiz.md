@@ -18,6 +18,7 @@ nc jupiter.challenges.picoctf.org 58617
 Hints:
 1. RSA info
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/61](https://play.picoctf.org/practice/challenge/61)
 
 ## Solution
 
@@ -152,7 +153,7 @@ io.close()
 
 ### Get the flag
 
-The we run the script to get the flag
+Then we run the script to get the flag
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/Rsa-pop-quiz]
 └─$ ~/python_venvs/pwntools/bin/python get_flag.py
