@@ -18,12 +18,13 @@ Hints:
 2. How could having too small an e affect the security of this 2048 bit key?
 3. Make sure you don't lose precision, the numbers are pretty big (besides the e value)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/73](https://play.picoctf.org/practice/challenge/73)
 
 ## Solution
 
 ### Analyse the setup
 
-Lets start by analysing what we have
+Let's start by analysing what we have
 ```
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/miniRSA]
 └─$ cat ciphertext.txt                                                 
@@ -36,7 +37,7 @@ ciphertext (c): 2205316413931134031074603746928247799030155221252519872649613686
 
 So we have a modulus number `N`,  the public key exponent `e`, and the cipher text `c`.
 
-Remember that in RSA `M**3 mod n = c`. We can rewrite this as `M**3 = i*n + c`  for some value of `i`.  
+Remember that in RSA `M**3 mod n = c`. We can rewrite this as `M**3 = i*n + c` for some value of `i`.  
 This means that `M = iroot(i*n+c, 3)` for some `i`. We just need to find the correct `i` value.
 
 We will use the `iroot` function from [gmpy2 module](https://pypi.org/project/gmpy2/).  
