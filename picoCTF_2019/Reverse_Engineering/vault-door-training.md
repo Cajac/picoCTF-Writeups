@@ -23,6 +23,7 @@ The source code for the training vault is here: VaultDoorTraining.java
 Hints:
 1. The password is revealed in the program's source code.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/7](https://play.picoctf.org/practice/challenge/7)
 
 ## Solutions
 
