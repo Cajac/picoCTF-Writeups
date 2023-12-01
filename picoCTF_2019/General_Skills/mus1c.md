@@ -16,10 +16,11 @@ I wrote you a song. Put it in the picoCTF{} flag format.
 Hints:
 1. Do you think you can master rockstar?
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/15](https://play.picoctf.org/practice/challenge/15)
 
 ## Solution
 
-Lets start by checking the contents of the file
+Let's start by checking the contents of the file
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Mus1c]
 └─$ cat lyrics.txt              
@@ -102,7 +103,7 @@ You get the following in the output pane:
 Program completed in 168 ms
 ```
 
-This looks like ASCII-values and a short Python-script can compile the flag for us
+This looks like [ASCII-values](https://en.wikipedia.org/wiki/ASCII) and a short Python-script can compile the flag for us
 ```python
 #!/usr/bin/python
 
@@ -124,3 +125,4 @@ For additional information, please see the references below.
 
 - [Rockstar](https://esolangs.org/wiki/Rockstar)
 - [Rockstar Online Emulator](https://codewithrockstar.com/online)
+- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)
