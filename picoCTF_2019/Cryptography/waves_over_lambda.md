@@ -18,6 +18,7 @@ Connect with nc jupiter.challenges.picoctf.org 43522.
 Hints:
 1. Flag is not in the usual flag format
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/38](https://play.picoctf.org/practice/challenge/38)
 
 ## Solution
 
