@@ -18,6 +18,7 @@ The source code for this vault is here: VaultDoor1.java
 Hints:
 1. Look up the charAt() method online.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/12](https://play.picoctf.org/practice/challenge/12)
 
 ## Solutions
 
@@ -254,3 +255,7 @@ For additional information, please see the references below.
 - [Java String substring()](https://www.javatpoint.com/java-string-substring)
 - [Java String charAt()](https://www.javatpoint.com/java-string-charat)
 - [Java String length()](https://www.javatpoint.com/java-string-length)
+- [cut - Linux manual page](https://man7.org/linux/man-pages/man1/cut.1.html)
+- [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
+- [sort - Linux manual page](https://man7.org/linux/man-pages/man1/sort.1.html)
+- [tr - Linux manual page](https://man7.org/linux/man-pages/man1/tr.1.html)
