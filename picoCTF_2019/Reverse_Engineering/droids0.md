@@ -17,10 +17,11 @@ Hints:
 1. Try using an emulator or device
 2. https://developer.android.com/studio
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/11](https://play.picoctf.org/practice/challenge/11)
 
 ## Solutions
 
-First lets check the SDK-version from the `AndroidManifest.xml` file
+First let's check the SDK-version from the `AndroidManifest.xml` file
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Droids0]
 └─$ apktool decode -o zero zero.apk 
