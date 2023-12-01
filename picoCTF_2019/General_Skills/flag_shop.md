@@ -18,12 +18,13 @@ Connect with nc jupiter.challenges.picoctf.org 4906.
 Hints:
 1. Two's compliment can do some weird things when numbers get really big!
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/49](https://play.picoctf.org/practice/challenge/49)
 
 ## Solution
 
 ### Analyse the setup
 
-Lets start by checking the c source code
+Let's start by checking the C source code
 ```c
 #include <stdio.h>
 #include <stdlib.h>
