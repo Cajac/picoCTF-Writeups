@@ -16,12 +16,13 @@ I stopped using YellowPages and moved onto WhitePages... but the page they gave 
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/51](https://play.picoctf.org/practice/challenge/51)
 
 ## Solution
 
 ### Analyse the setup
 
-Lets start by checking the file
+Let's start by checking the file
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/WhitePages]
 └─$ file whitepages.txt           
