@@ -17,6 +17,7 @@ Hints:
 1. Submit your answer in our flag format. For example, if your answer was '22', 
    you would submit 'picoCTF{22}' as the flag.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/58](https://play.picoctf.org/practice/challenge/58)
 
 ## Solution
 
@@ -51,10 +52,10 @@ Finally, we can convert directly in bash
 └─$ echo $((16#3d))
 61
 ```
-As before in this case you need to construct the complete flag manually.
+As before, you need to construct the complete flag manually in this case.
 
 For additional information, please see the references below.
 
 ## References
 
-- [Wikipredia - Hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal)
+- [Wikipedia - Hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal)
