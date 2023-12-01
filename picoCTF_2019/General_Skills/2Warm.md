@@ -17,6 +17,7 @@ Hints:
 1. Submit your answer in our competition's flag format. For example, if your answer was '11111', 
    you would submit 'picoCTF{11111}' as the flag.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/86](https://play.picoctf.org/practice/challenge/86)
 
 ## Solution
 
@@ -47,5 +48,5 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipredia - Binary number](https://en.wikipedia.org/wiki/Binary_number)
+- [Wikipedia - Binary number](https://en.wikipedia.org/wiki/Binary_number)
 - [Python - Slicing Strings](https://www.w3schools.com/python/python_strings_slicing.asp)
