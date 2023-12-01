@@ -193,3 +193,4 @@ For additional information, please see the references below.
 ## References
 
 - [Ghidra](https://ghidra-sre.org/)
+- [Wikipedia - PNG](https://en.wikipedia.org/wiki/PNG)
