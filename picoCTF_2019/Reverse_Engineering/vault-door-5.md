@@ -20,6 +20,7 @@ Hints:
 1. You may find an encoder/decoder tool helpful, such as https://encoding.tools/
 2. Read the wikipedia articles on URL encoding and base 64 encoding to understand how they work and what the results look like.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/77](https://play.picoctf.org/practice/challenge/77)
 
 ## Solutions
 
@@ -80,7 +81,7 @@ In the `checkPassword` method we see that flag characters are both [URL-encoded]
 
 ### Write a Python decoder
 
-Lets write a small python script to re-create the flag
+Let's write a small python script to re-create the flag
 ```python
 #!/usr/bin/python
 
@@ -107,5 +108,5 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Percent-encoding](https://en.wikipedia.org/wiki/Percent-encoding)
 - [Wikipedia - Base64](https://en.wikipedia.org/wiki/Base64)
+- [Wikipedia - Percent-encoding](https://en.wikipedia.org/wiki/Percent-encoding)
