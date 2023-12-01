@@ -18,12 +18,13 @@ Hints:
 2. https://ibotpeaches.github.io/Apktool/
 3. https://developer.android.com/studio
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/14](https://play.picoctf.org/practice/challenge/14)
 
 ## Solutions
 
 ### Identify the SDK-version
 
-First lets check the SDK-version from the `AndroidManifest.xml` file
+First let's check the SDK-version from the `AndroidManifest.xml` file
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Droids1]
 └─$ apktool decode -o one one.apk  
