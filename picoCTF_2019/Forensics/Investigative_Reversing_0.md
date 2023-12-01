@@ -19,12 +19,13 @@ Hints:
 2. This problem requires both forensics and reversing skills
 3. A hex editor may be helpful
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/70](https://play.picoctf.org/practice/challenge/70)
 
 ## Solution
 
 ### Analysing the files
 
-Lets start by checking the image file `mystery.png`.
+Let's start by checking the image file `mystery.png`.
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Investigating_Reversing_0]
 └─$ file mystery.png 
@@ -69,7 +70,7 @@ Megapixels                      : 0.914
 There are some flag data appended at the end of the PNG image. Be aware that `xxd` shows all non 7-bit ascii-data as `.` (dots).  
 So `0x80` in the flag data is shown as `.` rather than `€`.
 
-Next, lets check the binary
+Next, let's check the binary
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Investigating_Reversing_0]
 └─$ file mystery    
@@ -147,7 +148,6 @@ The rest of the bytes are copied 'as is'.
 ### Write a Python decoder
 
 We can write a python script to reverse these operations
-
 ```python
 #!/usr/bin/python
 
