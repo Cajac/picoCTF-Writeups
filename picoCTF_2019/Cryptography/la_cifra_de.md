@@ -19,12 +19,13 @@ Hints:
 1. There are tools that make this easy.
 2. Perhaps looking at history will help
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/3](https://play.picoctf.org/practice/challenge/3)
 
 ## Solution
 
 ### Connect to the server to get the cipher text
 
-Lets start by connecting to the server and see what we get
+Let's start by connecting to the server and see what we get
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/La_cifra_de]
 └─$ nc jupiter.challenges.picoctf.org 32411
@@ -60,6 +61,6 @@ For additional information, please see the references below.
 
 ## References
 
+- [Wikipedia - Frequency analysis](https://en.wikipedia.org/wiki/Frequency_analysis)
 - [Wikipedia - Substitution cipher](https://en.wikipedia.org/wiki/Substitution_cipher)
 - [Wikipedia - Vigenère cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
-- [Wikipedia - Frequency analysis](https://en.wikipedia.org/wiki/Frequency_analysis)
