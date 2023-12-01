@@ -16,6 +16,7 @@ There's something in the building. Can you retrieve the flag?
 Hints:
 1. There is data encoded somewhere... there might be an online decoder.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/74](https://play.picoctf.org/practice/challenge/74)
 
 ## Solution
 
