@@ -16,6 +16,7 @@ Decrypt this message.
 Hints:
 1. caesar cipher tutorial
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/64](https://play.picoctf.org/practice/challenge/64)
 
 ## Solution
 
@@ -25,7 +26,6 @@ If we look at the ciphertext we can see that it is only partially encrypted
 └─$ cat ciphertext
 picoCTF{tifjjzexkyvilsztfehnahooda}
 ```
-Challenge link: [https://play.picoctf.org/practice/challenge/64](https://play.picoctf.org/practice/challenge/64)
 
 Only the parts within '{' and '}' are encrypted.
 
