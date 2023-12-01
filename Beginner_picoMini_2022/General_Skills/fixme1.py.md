@@ -21,10 +21,11 @@ Hints:
 3. To exit nano, press Ctrl and x and follow the on-screen prompts.
 4. The str_xor function does not need to be reverse engineered for this challenge.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/240](https://play.picoctf.org/practice/challenge/240)
 
 ## Solution
 
-Try running the script and see happens
+Try running the script and see what happens
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Fixme1.py]
 └─$ python fixme1.py
@@ -33,7 +34,7 @@ Try running the script and see happens
 IndentationError: unexpected indent
 ```
 
-Python uses indentation to indicate what lines of code are included in blocks of code.  
+Python uses [indentation](https://www.w3schools.com/python/gloss_python_indentation.asp) to indicate what lines of code are included in blocks of code.  
 The indentation consists of spaces or tabs. You can choose either but you cannot mix in the same script.
 
 Lets look at lines of code around line 20
@@ -45,9 +46,9 @@ flag = str_xor(flag_enc, 'enkidu')
   print('That is correct! Here\'s your flag: ' + flag)
 ```
 
-The `print` statement is indented but should be. Remove the spaces before `print` and save the script.
+The `print` statement is indented but shouldn't be. Remove the spaces before `print` and save the script.
 
-Then try to run it again
+Then try to run the script again
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Fixme1.py]
 └─$ python fixme1.py
