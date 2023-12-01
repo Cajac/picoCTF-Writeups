@@ -19,12 +19,13 @@ Hints:
 1. You can use a commandline tool or web app to hash text
 2. Press Ctrl and c on your keyboard to close your connection and return to the command prompt.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/243](https://play.picoctf.org/practice/challenge/243)
 
 ## Solution
 
 ### Manual solution
 
-Connect to the server
+Let's start by connecting to the server
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/HashingJobApp]
 └─$ nc saturn.picoctf.net 55823
@@ -54,13 +55,13 @@ Time's up. Press Ctrl-C to disconnect. Feel free to reconnect and try again.
 
 After you have been disconnected, new text will be randomly selected.
 
-After three correct hashes are provided you get the flag.
+After three correct hashes are provided, you get the flag.
 
 ### Automated solution with pwntools
 
 A timed challenge like this is nice to automate with [pwntools](https://docs.pwntools.com/en/stable/index.html).
 
-Lets write a small Python script called `pwn_solve.py` that solves this challenge for us
+Let's write a small Python script called `pwn_solve.py` that solves this challenge for us
 ```python
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
