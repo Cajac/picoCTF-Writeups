@@ -16,6 +16,7 @@ The numbers... what do they mean?
 Hints:
 1. The flag is in the format PICOCTF{}
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/68](https://play.picoctf.org/practice/challenge/68)
 
 ## Solution
 
