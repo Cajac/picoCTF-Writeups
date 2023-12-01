@@ -16,12 +16,13 @@ We have recovered a binary and a text file. Can you reverse the flag.
 Hints:
 1. objdump and Gihdra are some tools that could assist with this
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/79](https://play.picoctf.org/practice/challenge/79)
 
 ## Solution
 
 ### Analyse the setup
 
-Lets start by checking what we was given
+Let's start by checking what we were given
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Reverse_cipher]
 └─$ file rev 
@@ -38,7 +39,7 @@ picoCTF{w1{1wq817/gbf/g}
 
 Ah, we've got an 64-bit ELF binary and a text-file with a scrambled flag.
 
-Next, lets decompile the file in [Ghidra](https://ghidra-sre.org/) and study the code.
+Next, let's decompile the file in [Ghidra](https://ghidra-sre.org/) and study the code.
 Import the file in Ghidra and analyze it with the default settings.  
 Double-click on the `main` function to show the decompiled version of it.
 ```C
@@ -100,7 +101,7 @@ We can see that the code loops through the flag data and makes some minor modifi
 
 ### Write a Python decoder
 
-Lets write a small python script to re-create the flag
+Let's write a small python script to re-create the flag
 ```python
 #!/usr/bin/python
 
