@@ -21,10 +21,11 @@ Hints:
 1. I hear python can convert things.
 2. It might help to have multiple windows open.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/35](https://play.picoctf.org/practice/challenge/35)
 
 ## Solution
 
-Lets connect to the server and see what happens
+Let's connect to the server and see what happens
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Based]
 └─$ nc jupiter.challenges.picoctf.org 29221
@@ -39,7 +40,7 @@ Too slow!
 ```
 
 Solving this manually will be tedious so lets automate it with the help of [pwntools](https://docs.pwntools.com/en/stable/index.html).
-Also note the 5 letter word `light` printed before the question. This looks like a bug that print the correct answer!
+Also note the 5 letter word `light` is printed before the question. This looks like a bug that print the correct answer!
 
 ### Write a Python script
 
@@ -102,5 +103,5 @@ For additional information, please see the references below.
 ## References
 
 - [Wikipedia - Binary number](https://en.wikipedia.org/wiki/Binary_numbers)
-- [Wikipedia - Octal](https://en.wikipedia.org/wiki/Octal)
 - [Wikipedia - Hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal)
+- [Wikipedia - Octal](https://en.wikipedia.org/wiki/Octal)
