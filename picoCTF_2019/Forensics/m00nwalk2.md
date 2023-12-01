@@ -17,6 +17,7 @@ There are also some clues clue 1, clue 2, clue 3.
 Hints:
 1. Use the clues to extract the another flag from the .wav file
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/28](https://play.picoctf.org/practice/challenge/28)
 
 ## Solution
 
@@ -51,7 +52,7 @@ First we decode the clue wav-files
 [sstv] ...Done!
 ```
 
-The resulting pictures is a bit hard to read by they contain:
+The resulting pictures is a bit hard to read but they contain:
  * Clue1: Password hidden_stegosaurus
  * Clue2: The quieter you are the more you can HEAR
  * Clue3: Alan Eliasen the Future Boy
