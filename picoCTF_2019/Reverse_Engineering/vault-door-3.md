@@ -18,6 +18,7 @@ The source code for this vault is here: VaultDoor3.java
 Hints:
 1. Make a table that contains each value of the loop variables and the corresponding buffer index that it writes to.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/60](https://play.picoctf.org/practice/challenge/60)
 
 ## Solutions
 
@@ -71,7 +72,7 @@ class VaultDoor3 {
 
 In the `checkPassword` method we see that flag characters are scrambled out of order.
 
-Lets write a small python script to re-create the flag
+Let's write a small python script to re-create the flag
 ```python
 #!/usr/bin/python
 
