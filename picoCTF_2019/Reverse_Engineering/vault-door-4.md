@@ -19,6 +19,7 @@ Hints:
 1. Use a search engine to find an "ASCII table".
 2. You will also need to know the difference between octal, decimal, and hexadecimal numbers.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/71](https://play.picoctf.org/practice/challenge/71)
 
 ## Solutions
 
@@ -75,7 +76,7 @@ In the `checkPassword` method we see that flag characters are specified as a com
 
 ### Write a Python decoder
 
-Python understands hexadecimal numbers out-of-the-box if the are `0x`-prefixed.  
+Python understands hexadecimal numbers out-of-the-box if they are `0x`-prefixed.  
 However, octal numbers needs to be `0o`-prefixed. So the third row of the `myBytes` values need to be fixed.
 
 Lets write a small python script to re-create the flag
@@ -110,7 +111,7 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)
 - [ASCII Table](https://www.ascii-code.com/)
+- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)
 - [Wikipedia - Hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal)
 - [Wikipedia - Octal](https://en.wikipedia.org/wiki/Octal)
