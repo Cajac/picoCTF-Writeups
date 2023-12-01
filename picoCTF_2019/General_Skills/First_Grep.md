@@ -18,6 +18,7 @@ This would be really tedious to look through manually, something tells me there 
 Hints:
 1. grep tutorial
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/85](https://play.picoctf.org/practice/challenge/85)
 
 ## Solution
 
@@ -32,5 +33,5 @@ For additional information, please see the references below.
 
 ## References
 
-- [grep(1) - Linux man page](https://linux.die.net/man/1/grep)
+- [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
 - [Grep and Regular Expressions!](https://ryanstutorials.net/linuxtutorial/grep.php)
