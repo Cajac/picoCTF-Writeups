@@ -23,10 +23,11 @@ Hints:
    Look up the Python string function, strip
 3. The str_xor function does not need to be reverse engineered for this challenge.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/249](https://play.picoctf.org/practice/challenge/249)
 
 ## Solution
 
-Lets start with analysing the Python script. The script looks like this (with some empty lines removed)
+Let's start with analysing the Python script. The script looks like this (with some empty lines removed)
 ```python
 import hashlib
 
@@ -104,7 +105,7 @@ For additional information, please see the references below.
 
 ### References
 
-- [Wikipedia - Exclusive or](https://en.wikipedia.org/wiki/Exclusive_or)
 - [W3Schools - Python - List Comprehension](https://www.w3schools.com/python/python_lists_comprehension.asp)
 - [GeeksforGeeks - zip() in Python](https://www.geeksforgeeks.org/zip-in-python/)
+- [Wikipedia - Exclusive or](https://en.wikipedia.org/wiki/Exclusive_or)
 - [Wikipedia - MD5](https://en.wikipedia.org/wiki/MD5)
