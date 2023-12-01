@@ -21,10 +21,11 @@ Hints:
 1. A for loop can help you do many things very quickly.
 2. The str_xor function does not need to be reverse engineered for this challenge.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/248](https://play.picoctf.org/practice/challenge/248)
 
 ## Solution
 
-Lets start with analysing the Python script. The script looks like this (with some empty lines removed)
+Let's start with analysing the Python script. The script looks like this (with some empty lines removed)
 ```python
 import hashlib
 
@@ -69,7 +70,7 @@ pos_pw_list = ["8c86", "7692", "a519", "3e61", "7dd6", "8919", "aaea", "f34b", "
 
 Just like the previous challenge the description suggests that we should brute force the solution.
 
-So lets write a brute forcer by changing the `level_4_pw_check` function slightly 
+So let's write a brute forcer by changing the `level_4_pw_check` function slightly 
 ```python
 def level_4_pw_check(user_pw):
     user_pw_hash = hash_pw(user_pw)
@@ -103,7 +104,7 @@ For additional information, please see the references below.
 
 ### References
 
-- [Wikipedia - Exclusive or](https://en.wikipedia.org/wiki/Exclusive_or)
 - [W3Schools - Python - List Comprehension](https://www.w3schools.com/python/python_lists_comprehension.asp)
 - [GeeksforGeeks - zip() in Python](https://www.geeksforgeeks.org/zip-in-python/)
+- [Wikipedia - Exclusive or](https://en.wikipedia.org/wiki/Exclusive_or)
 - [Wikipedia - MD5](https://en.wikipedia.org/wiki/MD5)
