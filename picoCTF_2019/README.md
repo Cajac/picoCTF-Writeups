@@ -38,7 +38,8 @@
 
 ## General Skills Challenges
 
-11 Challenges: 
+12 Challenges: 
+- [1_wanna_b3_a_r0ck5tar](General_Skills/1_wanna_b3_a_r0ck5tar.md)
 - [2Warm](General_Skills/2Warm.md)
 - [Based](General_Skills/Based.md)
 - [Bases](General_Skills/Bases.md)
