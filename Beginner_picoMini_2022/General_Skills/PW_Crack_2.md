@@ -19,10 +19,11 @@ Hints:
 1. Does that encoding look familiar?
 2. The str_xor function does not need to be reverse engineered for this challenge.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/246](https://play.picoctf.org/practice/challenge/246)
 
 ## Solution
 
-Lets start with analysing the Python script. The script looks like this (with some empty lines removed)
+Let's start with analysing the Python script. The script looks like this (with some empty lines removed)
 ```python
 ### THIS FUNCTION WILL NOT HELP YOU FIND THE FLAG --LT ########################
 def str_xor(secret, key):
@@ -58,7 +59,7 @@ As in the previous challenge, the interesting part is the IF statement
 <---snip--->
 ```
 
-The password is encoded as ASCII-numbers. To get the password in plain text you can either
+The password is encoded as [ASCII-numbers](https://en.wikipedia.org/wiki/ASCII). To get the password in plain text you can either
 * Lookup the characters manually in [an ASCII-table](https://www.ascii-code.com/)
 * Use an interactive Python session to give you the answer (see below)
 
@@ -86,6 +87,7 @@ For additional information, please see the references below.
 
 ### References
 
-- [Wikipedia - Exclusive or](https://en.wikipedia.org/wiki/Exclusive_or)
 - [W3Schools - Python - List Comprehension](https://www.w3schools.com/python/python_lists_comprehension.asp)
 - [GeeksforGeeks - zip() in Python](https://www.geeksforgeeks.org/zip-in-python/)
+- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)
+- [Wikipedia - Exclusive or](https://en.wikipedia.org/wiki/Exclusive_or)
