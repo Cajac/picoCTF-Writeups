@@ -16,12 +16,13 @@ We found this packet capture. Recover the flag that was pilfered from the networ
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/84](https://play.picoctf.org/practice/challenge/84)
 
 ## Solution
 
 Open up the PCAP-file in [Wireshark](https://www.wireshark.org/).
 
-Lets start following the UDP streams and look for the flag as in the [previous challenge](shark_on_wire_1.md).
+Let's start following the UDP streams and look for the flag as in the [previous challenge](shark_on_wire_1.md).
 
 A number of streams contains what could be partial flag data, for example these:
 
