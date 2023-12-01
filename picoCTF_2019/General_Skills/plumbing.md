@@ -21,10 +21,11 @@ Hints:
 1. Remember the flag format is picoCTF{XXXX}
 2. What's a pipe? No not that kind of pipe... This kind
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/48](https://play.picoctf.org/practice/challenge/48)
 
 ## Solution
 
-Lets connect to the server with `nc` and see what we get
+Let's connect to the server with `nc` and see what we get
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Plumbing]
 └─$ nc jupiter.challenges.picoctf.org 7480 
