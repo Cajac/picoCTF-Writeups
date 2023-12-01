@@ -20,10 +20,11 @@ Hints:
 2. To exit nano, press Ctrl and x and follow the on-screen prompts.
 3. The str_xor function does not need to be reverse engineered for this challenge.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/245](https://play.picoctf.org/practice/challenge/245)
 
 ## Solution
 
-Lets start with analysing the Python script. The script looks like this (with some empty lines removed)
+Let's start with analysing the Python script. The script looks like this (with some empty lines removed)
 ```python
 ### THIS FUNCTION WILL NOT HELP YOU FIND THE FLAG --LT ########################
 def str_xor(secret, key):
