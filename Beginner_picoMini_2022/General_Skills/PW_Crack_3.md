@@ -21,10 +21,11 @@ Hints:
 1. To view the level3.hash.bin file in the webshell, do: $ bvi level3.hash.bin
 2. The str_xor function does not need to be reverse engineered for this challenge.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/247](https://play.picoctf.org/practice/challenge/247)
 
 ## Solution
 
-Lets start with analysing the Python script. The script looks like this (with some empty lines removed)
+Let's start with analysing the Python script. The script looks like this (with some empty lines removed)
 ```python
 import hashlib
 
@@ -76,7 +77,7 @@ So lets try that. Get the hash
 65d9c68e03807969851a83b28bbebed1
 ```
 
-But if you Google for it you are probably not going to find the answer. The challenge creator was too smart for that.
+But if you Google for it, you are probably not going to find the answer. The challenge creator was too smart for that.
 
 So lets write a brute forcer by changing the `level_3_pw_check` function slightly 
 ```python
@@ -125,7 +126,7 @@ For additional information, please see the references below.
 
 ### References
 
-- [Wikipedia - Exclusive or](https://en.wikipedia.org/wiki/Exclusive_or)
 - [W3Schools - Python - List Comprehension](https://www.w3schools.com/python/python_lists_comprehension.asp)
 - [GeeksforGeeks - zip() in Python](https://www.geeksforgeeks.org/zip-in-python/)
+- [Wikipedia - Exclusive or](https://en.wikipedia.org/wiki/Exclusive_or)
 - [Wikipedia - MD5](https://en.wikipedia.org/wiki/MD5)
