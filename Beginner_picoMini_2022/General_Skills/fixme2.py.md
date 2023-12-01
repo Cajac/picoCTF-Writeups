@@ -21,10 +21,11 @@ Hints:
 3. To exit nano, press Ctrl and x and follow the on-screen prompts.
 4. The str_xor function does not need to be reverse engineered for this challenge.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/241](https://play.picoctf.org/practice/challenge/241)
 
 ## Solution
 
-Try running the script and see happens
+Try running the script and see what happens
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Fixme2.py]
 └─$ python fixme2.py 
