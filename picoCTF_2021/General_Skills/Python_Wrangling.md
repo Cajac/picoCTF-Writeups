@@ -2,6 +2,7 @@
 
 - [Challenge information](#challenge-information)
 - [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -18,6 +19,7 @@ Hints:
    $ wget https://mercury.picoctf.net/static/1b247b1631eb377d9392bfa4871b2eb1/ende.py
 2. $ man python
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/166](https://play.picoctf.org/practice/challenge/166)
 
 ## Solution
 
@@ -27,7 +29,7 @@ Given in the challenge are:
 * A file with an encrypted flag
 
 Check out the Python script if you like but there is no need for that to solve the challenge.  
-This challenge is just an exercise in running Python scripts essentially.
+This challenge is just an exercise in running Python scripts.
 
 Run the Python script like this
 ```bash
@@ -54,3 +56,10 @@ picoCTF{<REDACTED>}
 ```
 
 And there we have the flag.
+
+For additional information, please see the references below.
+
+## References
+
+- [cat - Linux manual page](https://man7.org/linux/man-pages/man1/cat.1.html)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
