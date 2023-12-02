@@ -21,12 +21,13 @@ Hints:
 1. How does the cipher work if the alphabet isn't 26 letters?
 2. Even though the letters are split up, the same paradigms still apply
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/158](https://play.picoctf.org/practice/challenge/158)
 
 ## Solution
 
 ### Analyze the cipher
 
-Lets start by looking at the python source
+Let's start by looking at the python source
 ```python
 import string
 
@@ -138,5 +139,5 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Modulo](https://en.wikipedia.org/wiki/Modulo)
 - [Wikipedia - Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
+- [Wikipedia - Modulo](https://en.wikipedia.org/wiki/Modulo)
