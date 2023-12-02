@@ -18,16 +18,17 @@ Hints:
 1. Look at the details of the file
 2. Make sure to submit the flag as picoCTF{XXXXX}
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/186](https://play.picoctf.org/practice/challenge/186)
 
 ## Solution
 
 In steganography oriented forensics challenges there are a number of checks that are more or less "standard practice".  
 These include:
 1. Checking for metadata with [ExifTool](https://exiftool.org/)
-2. Checking for embedded strings
+2. Checking for embedded [strings](https://en.wikipedia.org/wiki/String_(computer_science))
 3. Checking for embedded Zip-files with tools such as [Binwalk ](https://github.com/ReFirmLabs/binwalk)
 
-Lets start checking them one by one until we find the flag.
+Let's start checking them one by one until we find the flag.
 
 First, check for metadata with `exiftool`
 ```bash
@@ -66,7 +67,7 @@ Megapixels                      : 4.1
 ```
 
 Hhm, the licence information (`cGljb0NURnt0aGVfbTN0YWRhdGFfMXNfbW9kaWZpZWR9`) looks suspicious.  
-It is long, contains only letters and numbers and could be `Base64` encoded data.
+It is long, contains only letters and numbers and could be [Base64 encoded data](https://en.wikipedia.org/wiki/Base64).
 
 ### Decode the flag
 
@@ -85,4 +86,6 @@ For additional information, please see the references below.
 
 ## References
 
+- [base64 - Linux manual page](https://man7.org/linux/man-pages/man1/base64.1.html)
 - [Wikipedia - Base64](https://en.wikipedia.org/wiki/Base64)
+- [Wikipedia - String (computer science)](https://en.wikipedia.org/wiki/String_(computer_science))
