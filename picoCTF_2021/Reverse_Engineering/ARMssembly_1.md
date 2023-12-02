@@ -20,12 +20,13 @@ Flag format: picoCTF{XXXXXXXX} -> (hex, lowercase, no 0x, and 32 bits. ex. 56142
 Hints:
 1. Shifts
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/111](https://play.picoctf.org/practice/challenge/111)
 
 ## Solutions
 
 ### Solution #1 - Compile, emulate the program and brute force
 
-To some extent, the easiest way to solve this challenge is to compile the code and then emulate the program to find out what the answer is by brute force. This doesn't require any knowledge of ARM assembly at all. So lets start with that.
+To some extent, the easiest way to solve this challenge is to compile the code and then emulate the program to find out what the answer is by brute force. This doesn't require any knowledge of ARM assembly at all. So let's start with that.
 
 First we need to install a cross compiler to compile on a non-ARM machine such as Intel x64. We do that with `sudo apt install binutils-aarch64-linux-gnu gcc-aarch64-linux-gnu`.
 
@@ -68,7 +69,7 @@ I first tried only the first 1000 numbers but that wasn't enought so I increased
 
 In case you need a little ARM refresher, see the [previous challenge](ARMssembly_0.md).
 
-Lets start with the `main` function
+Let's start with the `main` function
 ```
 .LC0:
 	.string	"You win!"
