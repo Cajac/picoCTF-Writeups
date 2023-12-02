@@ -17,12 +17,13 @@ We found this file. Recover the flag.
 Hints:
 1. Weird that it won't display right...
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/112](https://play.picoctf.org/practice/challenge/112)
 
 ## Solution
 
 ### Analyse the file
 
-Lets start with checking the file type with `file`
+Let's start with checking the file type with `file`
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/tunn3l_v1s10n]
 └─$ file tunn3l_v1s10n  
@@ -38,7 +39,7 @@ Hhm, not much help there. Lets check the first bytes with `xxd`
 00000020: 00 00 58 26 2c 00 25 16 00 00 25 16 00 00 00 00  ..X&,.%...%.....
 ```
 
-After some research (a.k.a. Googling) I find that the magic bytes `0x42 0x4D` is for a BMP image file.
+After some research (a.k.a. Googling) I find that the magic bytes `0x42 0x4D` is for a [BMP image file](https://en.wikipedia.org/wiki/BMP_file_format).
 
 Now, we need to figure out what fields in the BMP header is corrupt and fix them.
 
@@ -68,7 +69,7 @@ After the changes, the headers looks like this
 00000020: 00 00 58 26 2c 00 25 16 00 00 25 16 00 00 00 00  ..X&,.%...%.....
 ```
 
-And now it is recognized as a BMP image
+And now it is recognized as a BMP image by `file`
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/tunn3l_v1s10n]
 └─$ file tunn3l_v1s10n.bmp 
@@ -79,7 +80,7 @@ The image can now be viewed but only contains a fake flag (`notaflag{sorry}`).
 
 ### Get the flag
 
-Lets try to increase the height of the image by changing offset 0x16 - 0x19 to `52 03 00 00` instead of `32 01 00 00`.
+Let's try to increase the height of the image by changing offset 0x16 - 0x19 to `52 03 00 00` instead of `32 01 00 00`.
 This increases the height to decimal 850 from decimal 306.
 
 Viewing the modified image displays a real flag at the top of the image.
@@ -88,4 +89,6 @@ For additional information, please see the references below.
 
 ## References
 
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
+- [xxd - Linux manual page](https://linux.die.net/man/1/xxd)
 - [Wikipedia - BMP file format](https://en.wikipedia.org/wiki/BMP_file_format)
