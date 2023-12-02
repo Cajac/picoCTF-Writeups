@@ -19,12 +19,13 @@ Connect with nc mercury.picoctf.net 30048.
 Hints:
 1. What can you do with a different pair of ciphertext and plaintext? What if it is not so different after all...
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/154](https://play.picoctf.org/practice/challenge/154)
 
 ## Solution
 
 ### Analyse the setup
 
-Lets connect to the site and see what happens
+Let's connect to the site and see what happens
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Cryptography/No_Padding_No_Problem]
 └─$ nc mercury.picoctf.net 30048
@@ -55,7 +56,7 @@ We already have `c` and can calculate `encrypt(2)`. If we ask for `c * encrypt(2
 
 ### Solve with pwntools
 
-Lets write a script with the help of [pwntools](https://docs.pwntools.com/en/stable/index.html)
+Let's write a script with the help of [pwntools](https://docs.pwntools.com/en/stable/index.html)
 ```python
 #!/usr/bin/python
 
@@ -104,6 +105,6 @@ For additional information, please see the references below.
 
 ## References
 
+- [Wikipedia - Homomorphic encryption](https://en.wikipedia.org/wiki/Homomorphic_encryption)
 - [Wikipedia - RSA (cryptosystem)](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
 - [The RSA Cryptosystem - Concepts](https://cryptobook.nakov.com/asymmetric-key-ciphers/the-rsa-cryptosystem-concepts)
-- [Wikipedia - Homomorphic encryption](https://en.wikipedia.org/wiki/Homomorphic_encryption)
