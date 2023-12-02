@@ -19,12 +19,13 @@ The shop is open for business at nc mercury.picoctf.net 42159.
 Hints:
 1. Always check edge cases when programming
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/134](https://play.picoctf.org/practice/challenge/134)
 
 ## Solutions
 
 ### Analyze the given information
 
-Lets start by looking at what we have.
+Let's start by looking at what we have.
 
 We have file called `source` that despite its name is a binary
 ```bash
@@ -44,7 +45,6 @@ We also check if the flag is available as a plain text string
 └─$ strings -a -n 8 -e S source | grep -i picoCTF
 
 ```
-
 Nope, not that easy!
 
 ### Do a test run of the binary
@@ -118,7 +118,7 @@ How many do you want to buy?
 Flag is:  [112 105 99 111 67 84 70 123 98 52 100 95 98 114 111 103 114 97 109 109 101 114 95 55 57 55 98 50 57 50 99 125 13 10]
 ```
 
-Ah, that worked! The flag seems to be encoded as decimal ascii numbers.
+Ah, that worked! The flag seems to be encoded as decimal [ASCII](https://en.wikipedia.org/wiki/ASCII).
 
 ### Decode the flag
 
@@ -179,4 +179,7 @@ For additional information, please see the references below.
 
 ## References
 
+- [CyberChef](https://gchq.github.io/CyberChef/)
+- [pwntools](https://docs.pwntools.com/en/stable/index.html)
+- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)
 - [Wikipedia - Edge case](https://en.wikipedia.org/wiki/Edge_case)
