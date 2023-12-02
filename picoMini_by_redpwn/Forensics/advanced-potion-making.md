@@ -17,19 +17,20 @@ Help him recover it!
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/205](https://play.picoctf.org/practice/challenge/205)
 
 ## Solution
 
 ### Analyse the file
 
-Lets start by checking the given file with `file`
+Let's start by checking the given file with `file`
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Forensics/advanced-potion-making]
 └─$ file advanced-potion-making 
 advanced-potion-making: data
 ```
 
-Hhm, lets check it in hex form and see if we can recognise anything interesting
+Hhm, let's check it in hex form and see if we can recognise anything interesting
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Forensics/advanced-potion-making]
 └─$ xxd -l 100 advanced-potion-making 
@@ -60,7 +61,7 @@ They normally begin with these 8 bytes `89 50 4E 47 0D 0A 1A 0A`.
 
 ### Fix the image file
 
-Lets change the first bytes in the file with a hex editor such as [010 Editor](https://www.sweetscape.com/010editor/) and try to view it.  
+Let's change the first bytes in the file with a hex editor such as [010 Editor](https://www.sweetscape.com/010editor/) and try to view it.  
 Nope, it is still corrupted.
 
 To get some help with analysing the file I used `pngcheck` (which I had to install on my Kali Linux)
