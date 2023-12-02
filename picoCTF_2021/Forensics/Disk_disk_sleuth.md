@@ -21,10 +21,11 @@ Hints:
    https://play.picoctf.org/practice/challenge/48
 4. Using your own computer, you could use qemu to boot from this disk!
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/113](https://play.picoctf.org/practice/challenge/113)
 
 ## Solution
 
-Lets start with unpacking the given file
+Let's start with unpacking the given file
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Disk_disk_sleuth]
 └─$ gunzip dds1-alpine.flag.img.gz 
@@ -37,7 +38,7 @@ dds1-alpine.flag.img: DOS/MBR boot sector; partition 1 : ID=0x83, active, start-
 
 So we have a disk image with a MBR boot sector and one partition.
 
-Lets search for strings in the image with either `srch_strings` or `strings`
+Let's search for strings in the image with either `srch_strings` or `strings`
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Disk_disk_sleuth]
 └─$ strings -n 8 dds1-alpine.flag.img | grep -oE 'picoCTF{.*}'
@@ -50,11 +51,10 @@ picoCTF{<REDACTED>}
 
 Both seem to work equally well and find the flag.
 
-
 For additional information, please see the references below.
 
 ## References
 
+- [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
+- [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)
 - [Wikipedia - String (computer science)](https://en.wikipedia.org/wiki/String_(computer_science))
-- [strings(1) - Linux man page](https://linux.die.net/man/1/strings)
-- [grep(1) - Linux man page](https://linux.die.net/man/1/grep)
