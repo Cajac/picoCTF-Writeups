@@ -17,12 +17,13 @@ This BASH script might help!
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/163](https://play.picoctf.org/practice/challenge/163)
 
 ## Solution
 
 ### Analyse the files
 
-Lets start by looking at what we have got.
+Let's start by looking at what we have got.
 
 A bash script called `ltdis.sh` that looks like this (with some empty lines removed)
 ```bash
@@ -55,7 +56,7 @@ fi
 
 The script's comments give a good picture of what it does, essentially runs `objdump` and `strings` on the first supplied file (`$1`).
 
-Lets check out the binary also
+Let's check out the binary also
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Static_ain't_always_noise]
 └─$ file static                                   
@@ -71,7 +72,7 @@ Oh hai! Wait what? A flag? Yes, it's around here somewhere!
 
 ### Run the script and analyse the results
 
-Lets follow the instructions and run the script on the binary
+Let's follow the instructions and run the script on the binary
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Static_ain't_always_noise]
 └─$ ./ltdis.sh static 
@@ -81,7 +82,7 @@ Ripping strings from binary with file offsets...
 Any strings found in static have been written to static.ltdis.strings.txt with file offset
 ```
 
-Lets briefly look at the dissasembly
+Let's briefly look at the dissasembly
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Static_ain't_always_noise]
 └─$ head -n20 static.ltdis.x86_64.txt
@@ -107,9 +108,9 @@ Disassembly of section .text:
  55b:   0f 1f 44 00 00          nopl   0x0(%rax,%rax,1)
 ```
 
-Well, assembly code. Lets wait with diving into the details there...
+Well, assembly code. Let's wait with diving into the details there...
 
-Lets check the strings instead
+Let's check the strings instead
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Static_ain't_always_noise]
 └─$ head -n20 static.ltdis.strings.txt 
@@ -149,7 +150,9 @@ For additional information, please see the references below.
 ## References
 
 - [Adding arguments and options to your Bash scripts](https://www.redhat.com/sysadmin/arguments-options-bash-scripts)
+- [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
+- [head - Linux manual page](https://man7.org/linux/man-pages/man1/head.1.html)
+- [objdump - Linux manual page](https://man7.org/linux/man-pages/man1/objdump.1.html)
+- [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)
 - [Wikipedia - Disassembler](https://en.wikipedia.org/wiki/Disassembler)
 - [Wikipedia - strings (Unix)](https://en.wikipedia.org/wiki/Strings_(Unix))
-- [head(1) - Linux man page](https://linux.die.net/man/1/head)
-- [grep(1) - Linux man page](https://linux.die.net/man/1/grep)
