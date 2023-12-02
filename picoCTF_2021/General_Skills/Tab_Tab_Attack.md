@@ -17,6 +17,7 @@ long rambling directory structures and filenames: Addadshashanammu.zip
 Hints:
 1. After `unzip`ing, this problem can be solved with 11 button-presses...(mostly Tab)...
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/176](https://play.picoctf.org/practice/challenge/176)
 
 ## Solution
 
@@ -49,7 +50,7 @@ Then we need to change directory with `cd` to the find the file
 fang-of-haynekhtnamet
 ```
 
-Lets check what kind of file it is with `file`
+Let's check what kind of file it is with `file`
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/Assurnabitashpi/Maelkashishi/Onnissiralis/Ularradallaku]
 └─$ file fang-of-haynekhtnamet 
@@ -92,5 +93,8 @@ For additional information, please see the references below.
 
 ## References
 
+- [cd - Linux manual page](https://man7.org/linux/man-pages/man1/cd.1p.html)
+- [ls - Linux manual page](https://man7.org/linux/man-pages/man1/ls.1.html)
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
 - [unzip - Linux manual page](https://linux.die.net/man/1/unzip)
-- [Wikipredia - Command-line completion](https://en.wikipedia.org/wiki/Command-line_completion)
+- [Wikipedia - Command-line completion](https://en.wikipedia.org/wiki/Command-line_completion)
