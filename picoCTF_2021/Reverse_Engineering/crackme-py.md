@@ -17,12 +17,13 @@ crackme.py
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/175](https://play.picoctf.org/practice/challenge/175)
 
 ## Solutions
 
 ### Analyze the Python script
 
-Lets start by looking at the `decode_secret` function of the script
+Let's start by looking at the `decode_secret` function of the script
 ```python
 def decode_secret(secret):
     """ROT47 decode
@@ -49,7 +50,7 @@ This is actually the entire code to decode the flag. We can just reuse most of t
 
 ### Write a decoder script
 
-Lets copy the original script, remove the `choose_greatest` function, remove some comments, add a shebang and add a call to the `decode_secret` function
+Let's copy the original script, remove the `choose_greatest` function, remove some comments, add a shebang and add a call to the `decode_secret` function
 ```python
 #!/usr/bin/python
 
