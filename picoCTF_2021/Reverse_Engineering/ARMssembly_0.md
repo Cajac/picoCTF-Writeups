@@ -19,12 +19,13 @@ Flag format: picoCTF{XXXXXXXX} -> (hex, lowercase, no 0x, and 32 bits. ex. 56142
 Hints:
 1. Simple compare
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/160](https://play.picoctf.org/practice/challenge/160)
 
 ## Solutions
 
 ### Solution #1 - Compile and emulate the program
 
-To some extent, the easiest way to solve this challenge is to compile the code and then emulate the program to find out what the result is. This doesn't require any knowledge of ARM assembly at all. So lets start with that.
+To some extent, the easiest way to solve this challenge is to compile the code and then emulate the program to find out what the result is. This doesn't require any knowledge of ARM assembly at all. So let's start with that.
 
 First we need to install a cross compiler to compile on a non-ARM machine such as Intel x64. We do that with `sudo apt install binutils-aarch64-linux-gnu gcc-aarch64-linux-gnu`.
 
@@ -65,7 +66,7 @@ The [SP-register](https://developer.arm.com/documentation/102374/0101/Registers-
 If we simplify somewhat, the [instruction format](https://azeria-labs.com/arm-instruction-set-part-3/) looks like this: `MNEMONIC <Reg>, <Oper1>, <Oper2>`.  
 For example `ADD X0, 11, 22` will add 11 and 12 and store the result in the X0-register. The register is usually the "destination" where the result is stored. The result is stored "to the left" in the instruction.
 
-However, this is not the case in the store instruction `STR` where `STR W0, [X29, 16]` will store the value in the W0-register in the memory address pointed to by the X29-register+16 bytes. The result is stored "to the right" in the instruction.
+However, this is not the case in the store instruction `STR` where `STR W0, [X29, 16]` will store the value in the W0-register in the memory address pointed to by the X29-register + 16 bytes. The result is stored "to the right" in the instruction.
 
 Some brief descriptions of [common instructions](https://developer.arm.com/documentation/dui0068/b/ARM-Instruction-Reference) used in the program:
 * ADD - Add
@@ -75,7 +76,7 @@ Some brief descriptions of [common instructions](https://developer.arm.com/docum
 * MOV - Move
 * STR - Store register
 
-Now, lets dive into the assembler listing starting with `main`
+Now, let's dive into the assembler listing starting with `main`
 ```
 <---snip--->
 main:
@@ -110,6 +111,7 @@ main:
 ```
 
 To get a high-level overview it is usually good to start with focusing only on what functions are called, i.e. the `bl` instructions. We have two calls to `atoi` (converts strings to integers), one call to `func1` and one call to `printf`.
+
 Very broadly, we read the strings (the arguments supplied to the program), convert them to integers, then calls the `func1` (the compare function most likely) and finally prints the result. The return values of the functions are passed in the X0/W0-register. The instructions in the beginning (function prologue) and end (function epilogue) essentially sets up and restore the stack.
 
 There are some additional comments with focus on the program arguments. arg1 is the first number passed (`182476535` in this case) and arg2 is the second number passed (`3742084308` in this case).
