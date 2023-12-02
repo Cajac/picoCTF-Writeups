@@ -16,12 +16,13 @@ there's crypto in here but the challenge is not crypto... 🤔
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/222](https://play.picoctf.org/practice/challenge/222)
 
 ## Solution
 
 ### Basic file analysis
 
-Lets start by checking the given file with `file`
+Let's start by checking the given file with `file`
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Reverse_Engineering/not_crypto]
 └─$ file not-crypto 
@@ -30,7 +31,7 @@ not-crypto: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically
 
 So it is a 64-bit ELF binary, it is a PIE (position-independent executable) and it's stripped. 
 
-Now lets run the file and see what happens
+Now let's run the file and see what happens
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Reverse_Engineering/not_crypto]
 └─$ ./not-crypto
@@ -98,7 +99,7 @@ GCC: (GNU) 10.2.0
 .comment
 ```
 
-The string `Yep, that's it!` looks very promising. Lets keep an eye out for that!
+The string `Yep, that's it!` looks very promising. Let's keep an eye out for that!
 
 I also tried to run `strace`
 ```bash
@@ -157,7 +158,7 @@ No new information from that unfortunately.
 
 ### Decompile the file in Ghidra
 
-Then lets decompile the file in [Ghidra](https://ghidra-sre.org/) and study the code. Import the file in Ghidra and analyze it with the default settings. Double-click on each function to show the decompiled version of it.
+Then let's decompile the file in [Ghidra](https://ghidra-sre.org/) and study the code. Import the file in Ghidra and analyze it with the default settings. Double-click on each function to show the decompiled version of it.
 
 The most promising function is this one `FUN_00101070`
 ```C
@@ -583,7 +584,7 @@ The call to `memcmp` ought to be a comparison with the flag involved.
 
 ### Find out where to set the breakpoint
 
-Lets try to set a breakpoint and read what is compared in memory with `memcmp`.
+Let's try to set a breakpoint and read what is compared in memory with `memcmp`.
 
 First I tried to set a breakpoint at the beginning of the `memcmp` function with `break memcmp` but that didn't reveal any flags. 
 
