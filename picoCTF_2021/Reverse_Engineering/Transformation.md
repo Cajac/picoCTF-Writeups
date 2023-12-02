@@ -18,12 +18,13 @@ I wonder what this really is... enc
 Hints:
 1. You may find some decoders online
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/104](https://play.picoctf.org/practice/challenge/104)
 
 ## Solutions
 
 ### Analyze the given information
 
-Lets start by looking at what we have.
+Let's start by looking at what we have.
 
 We have an encoded file
 ```bash
