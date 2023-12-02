@@ -16,6 +16,7 @@ Description:
 Hints:
 1. Look at the problem category
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/139](https://play.picoctf.org/practice/challenge/139)
 
 ## Solution
 
@@ -50,7 +51,7 @@ On the site,  right-click and select 'View page source' (or press `CTRL + U`) to
 </html>
 ```
 
-Check the `style.css` file
+Next, check the `style.css` file
 ```css
 /* source: milkslap-milkslap.scss */
 body {
@@ -87,7 +88,7 @@ We can see that the background is a file called `concat_v.png`.
 
 ### Analyse the picture file
 
-Lets retreive the picture file
+Let's retreive the picture file
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Milkslap]
 └─$ wget http://mercury.picoctf.net:16940/concat_v.png
@@ -103,7 +104,7 @@ concat_v.png                                            100%[===================
 2023-09-13 11:31:38 (5.14 MB/s) - ‘concat_v.png’ saved [18095920/18095920]
 ```
 
-Next, lets do some basic checks on it
+Next, let's do some basic checks on it
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Milkslap]
 └─$ file concat_v.png    
@@ -175,4 +176,4 @@ For additional information, please see the references below.
 
 ## References
 
-- [zteg](https://github.com/zed-0xff/zsteg)
+- [zsteg - Github](https://github.com/zed-0xff/zsteg)
