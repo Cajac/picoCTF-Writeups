@@ -16,12 +16,13 @@ To get the flag, you must break RSA not once, but three times!
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/209](https://play.picoctf.org/practice/challenge/209)
 
 ## Solution
 
 ### Analyze the given files
 
-Lets start by looking at the given files. First the python script
+Let's start by looking at the given files. First the python script
 ```python
 #!/usr/bin/env python3
 
@@ -75,7 +76,7 @@ These modulus are in fact known at factordb:
 * [n2](http://factordb.com/index.php?id=1100000002577637188)
 * [n3](http://factordb.com/index.php?id=1100000002577383707)
 
-However, lets calculate their GCDs with the help of the [gmpy2](https://pypi.org/project/gmpy2/) Python module instead since it's pretty straight forward
+However, let's calculate their GCDs with the help of the [gmpy2](https://pypi.org/project/gmpy2/) Python module instead since it's pretty straight forward
 ```python
 #!/usr/bin/python
 
@@ -92,7 +93,7 @@ r = gcd(n2, n3)
 print(f"p = {p}\nq = {q}\nr = {r}")
 ```
 
-Then lets run this script called `factorize.py`
+Then let's run this script called `factorize.py`
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/triple-secure]
 └─$ ~/python_venvs/gmpy2/bin/python ./factorize.py 
