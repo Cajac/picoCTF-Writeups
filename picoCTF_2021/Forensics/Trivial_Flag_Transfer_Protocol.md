@@ -16,6 +16,7 @@ Figure out how they moved the flag.
 Hints:
 1. What are some other ways to hide data?
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/103](https://play.picoctf.org/practice/challenge/103)
 
 ## Solution
 
@@ -40,7 +41,7 @@ plan:             ASCII text
 program.deb:      Debian binary package (format 2.0), with control.tar.gz, data compression xz
 ```
 
-Lets start with the text files
+Let's start with the text files
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Trivial_Flag_Transfer_Protocol]
 └─$ cat instructions.txt                       
@@ -203,12 +204,13 @@ wrote extracted data to "flag.txt".
    
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Trivial_Flag_Transfer_Protocol]
 └─$ cat flag.txt 
-picoCTF{h1dd3n_<REDACTED>}
+picoCTF{<REDACTED>}
 ```
 
 For additional information, please see the references below.
 
 ## References
 
+- [Wireshark](https://www.wireshark.org/)
 - [Wikipedia - Trivial File Transfer Protocol](https://en.wikipedia.org/wiki/Trivial_File_Transfer_Protocol)
 - [Wikipedia - ROT13](https://en.wikipedia.org/wiki/ROT13)
