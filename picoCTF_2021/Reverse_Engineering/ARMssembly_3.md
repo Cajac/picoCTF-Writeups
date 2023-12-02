@@ -28,7 +28,7 @@ As in the previous challenges, we compile the assembly code and then emulate the
 
 First we need to install a cross compiler to compile on a non-ARM machine such as Intel x64. We do that with `sudo apt install binutils-aarch64-linux-gnu gcc-aarch64-linux-gnu`.
 
-Then we compile and link
+Then we assemble and link
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/ARMssembly_3]
 └─$ aarch64-linux-gnu-as -o chall_3.o chall_3.S 
