@@ -17,10 +17,11 @@ Can you decrypt this? values
 Hints:
 1. Bits are expensive, I used only a little bit over 100 to save money
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/162](https://play.picoctf.org/practice/challenge/162)
 
 ## Solution
 
-Lets start by looking at what we were given in the `values` file
+Let's start by looking at what we were given in the `values` file
 ```
 Decrypt my super sick RSA:
 c: 240986837130071017759137533082982207147971245672412893755780400885108149004760496
@@ -52,7 +53,7 @@ p, q = f.get_factor_list()
 print(f"p = {p} and q = {q}")
 ```
 
-Lets make sure its working before continuing
+Let's make sure its working before continuing
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Cryptography/Mind_your_Ps_and_Qs]
 └─$ ~/python_venvs/gmpy2/bin/python factorize.py 
