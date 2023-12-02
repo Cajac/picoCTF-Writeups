@@ -2,6 +2,7 @@
 
 - [Challenge information](#challenge-information)
 - [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -19,14 +20,15 @@ Login via `ssh` as `ctf-player` with the password, `abcba9f7`
 Hints:
 1. Finding a cheatsheet for bash would be really helpful!
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/189](https://play.picoctf.org/practice/challenge/189)
 
 ## Solution
 
-This challenge is a gentle exercise in navigating in around the file system on bash.
+This challenge is a gentle exercise in navigating around the file system on bash.
 
 ### Connect to the server
 
-Lets connect to the server with SSH
+Let's connect to the server with SSH
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Magikarp_Ground_Mission]
 └─$ ssh ctf-player@venus.picoctf.net -p 52792
@@ -68,7 +70,7 @@ Ah, the first part of the flag.
 
 ### Getting the first part of the flag
 
-Lets accumulate all the flag parts in a new file `/tmp/full_flag.txt` 
+Let's accumulate all the flag parts in a new file `/tmp/full_flag.txt` 
 ```bash
 ctf-player@pico-chall$ cat 1of3.flag.txt > /tmp/full_flag.txt
 ```
@@ -135,12 +137,12 @@ drwxr-xr-x 1 ctf-player ctf-player 4096 Mar 16  2021 drop-in
 
 ### Getting the last part of the flag
 
-Lets append the last part of the flag and then view the full flag
+Let's append the last part of the flag and then view the full flag
 ```bash
 ctf-player@pico-chall$ cat 3of3.flag.txt >> /tmp/full_flag.txt
 ctf-player@pico-chall$ cat /tmp/full_flag.txt 
 picoCTF{xxsh_
-0ut_0f_<REDACTED>
+0ut_<REDACTED>
 <REDACTED>}
 ```
 
@@ -151,3 +153,13 @@ Lets remove them with `tr`
 ctf-player@pico-chall$ cat /tmp/full_flag.txt | tr -d '\n'
 picoCTF{xxsh_0ut_<REDACTED>}ctf-player@pico-chall$ 
 ```
+
+For additional information, please see the references below.
+
+## References
+
+- [cat - Linux manual page](https://man7.org/linux/man-pages/man1/cat.1.html)
+- [cd - Linux manual page](https://man7.org/linux/man-pages/man1/cd.1p.html)
+- [ls - Linux manual page](https://man7.org/linux/man-pages/man1/ls.1.html)
+- [ssh - Linux manual page](https://man7.org/linux/man-pages/man1/ssh.1.html)
+- [tr - Linux manual page](https://man7.org/linux/man-pages/man1/tr.1.html)
