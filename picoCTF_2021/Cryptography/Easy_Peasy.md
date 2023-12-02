@@ -19,12 +19,13 @@ nc mercury.picoctf.net 20266 otp.py
 Hints:
 1. Maybe there's a way to make this a 2x pad.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/125](https://play.picoctf.org/practice/challenge/125)
 
 ## Solution
 
 ### Analysing the Python script
 
-Lets start with analysing the Python script
+Let's start with analysing the Python script
 ```python
 #!/usr/bin/python3 -u
 import os.path
@@ -81,15 +82,15 @@ while c >= 0:
 
 After printing a welcome message the script prints the encrypted flag for us. Then it asks for data, encrypts it and prints it for us.
 
-The one-time pad/key is used until it gets to `KEY_LEN` (that is 50000) and then it wraps around.  
-This means that the same key will be reused.
+The one-time pad/key is used until it gets to `KEY_LEN` (that is 50 000) and then it wraps around.  
+This means that the same key will be re-used.
 
 So we have the encrypted flag which is `Flag ^ Key` (^ is short for XOR). If we use the encrypted flag as input we will get the plain text flag since `(Flag ^ Key) ^ Key = Flag`. 
 Or more generally, `(M ^ K) ^ K = M` since `K ^ K = 0`. If you XOR something with itself, the operations cancel each other out.
 
 ### Create an exploit script
 
-Lets write a script with the help of [pwntools](https://docs.pwntools.com/en/stable/index.html)
+Let's write a script with the help of [pwntools](https://docs.pwntools.com/en/stable/index.html)
 ```python
 #!/usr/bin/python
 
