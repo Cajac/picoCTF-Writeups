@@ -20,12 +20,14 @@ Flag format: picoCTF{XXXXXXXX} -> (hex, lowercase, no 0x, and 32 bits. ex. 56142
 Hints:
 1. Loops
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/150](https://play.picoctf.org/practice/challenge/150)
 
 ## Solutions
 
 ### Solution #1 - Compile, emulate the program and brute force
 
-One way to solve this challenge is to compile the assembly code and then emulate the program to find out what the answer is.   This doesn't require any knowledge of ARM assembly at all. So lets start with that.
+One way to solve this challenge is to compile the assembly code and then emulate the program to find out what the answer is.   
+This doesn't require any knowledge of ARM assembly at all. So let's start with that.
 
 First we need to install a cross compiler to compile on a non-ARM machine such as Intel x64. We do that with `sudo apt install binutils-aarch64-linux-gnu gcc-aarch64-linux-gnu`.
 
@@ -57,7 +59,7 @@ The result takes a few seconds to calculate.
 
 In case you need a little ARM refresher, see the [first ARMssembly challenge](ARMssembly_0.md).
 
-Lets start with analysing the `main` function
+Let's start with analysing the `main` function
 ```
 .LC0:
 	.string	"Result: %ld\n"
@@ -105,7 +107,7 @@ func1:
 	str	w0, [sp, 28]				# Store w0 on stack at *(sp+28)
 .L2:
 	ldr	w1, [sp, 28]				# w1 = *(sp+28)
-	ldr	w0, [sp, 12]				# w0 = *(sp+21), that is arg1 
+	ldr	w0, [sp, 12]				# w0 = *(sp+12), that is arg1 
 	cmp	w1, w0					# Compare w1 and w0
 	bcc	.L3					# Branch to .L3 if w1 < w0
 	ldr	w0, [sp, 24]				# w0 = *(sp+24)
@@ -117,7 +119,7 @@ func1:
 ```
 
 Compared to the previous challenges we have:
-* A new register [`WZR`](https://developer.arm.com/documentation/102374/0101/Registers-in-AArch64---other-registers) that always read as 0
+* A new register [`WZR`](https://developer.arm.com/documentation/102374/0101/Registers-in-AArch64---other-registers) that always reads as 0
 * A new instruction BCC [Branch on Carry Clear](https://community.arm.com/support-forums/f/architectures-and-processors-forum/5941/could-you-explain-bcc-command-to-me)
 
 The position sp+24 acts as an accumulator increasing the result by 3 for each round. The position sp+28 is a counter.  
