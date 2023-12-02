@@ -20,12 +20,13 @@ Hints:
 2. Sleuthkit docs here are so helpful: TSK Tool Overview
 3. This disk can also be booted with qemu!
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/137](https://play.picoctf.org/practice/challenge/137)
 
 ## Sleuthkit solution
 
 ### Unpack the image file
 
-Lets start with unpacking and analysing the given file
+Let's start with unpacking and analysing the given file
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Disk_disk_sleuth_II]
 └─$ gunzip dds2-alpine.flag.img.gz   
@@ -83,7 +84,7 @@ Read Only Compat Features: Sparse Super, Large File,
 
 ### Search for the file
 
-Lets search for the file named `down-at-the-bottom.txt` with `fls` and `grep`
+Let's search for the file named `down-at-the-bottom.txt` with `fls` and `grep`
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Disk_disk_sleuth_II]
 └─$ fls -F -r -o 2048 dds2-alpine.flag.img | grep down-at-the-bottom.txt
@@ -114,7 +115,7 @@ Now we can get the content of the file with `icat`
 
 Note that I have redacted some letters with the letter `X` here.
 
-Lets use some command-line kung-fu to get the flag in a more easily readable form with `grep` and `tr`
+Let's use some command-line kung-fu to get the flag in a more easily readable form with `grep` and `tr`
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Disk_disk_sleuth_II]
 └─$ icat -o 2048 dds2-alpine.flag.img 18291 | grep '(' | tr -d '() \n'
