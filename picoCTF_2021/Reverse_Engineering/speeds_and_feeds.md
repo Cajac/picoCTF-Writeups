@@ -17,12 +17,13 @@ Can you?
 Hints:
 1. What language does a CNC machine use?
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/116](https://play.picoctf.org/practice/challenge/116)
 
 ## Solutions
 
 ### Analyze the output
 
-Lets start by connecting to the service and watch the output
+Let's start by connecting to the service and watch the output
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/speeds_and_feeds]
 └─$ nc mercury.picoctf.net 59953
@@ -52,7 +53,7 @@ G1X2.7586Y0.0000
 <---snip--->
 ```
 
-A LOT of output in some unknown format. Lets save it in a local file
+A LOT of output in some unknown format. Let's save the output in a local file
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/speeds_and_feeds]
 └─$ nc mercury.picoctf.net 59953 > speeds_and_feeds_output.txt
