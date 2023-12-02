@@ -17,12 +17,13 @@ keygenme-trial.py
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/121](https://play.picoctf.org/practice/challenge/121)
 
 ## Solutions
 
 ### Analyze the Python script
 
-Lets start by looking at the beginning of the script
+Let's start by looking at the beginning of the script
 ```python
 #============================================================================#
 #============================ARCANE CALCULATOR===============================#
@@ -81,7 +82,7 @@ Menu:\n\
 lowercase letter choice (a/b/c/d).")
 ```
 
-Lets check the `enter_license` function next
+Let's check the `enter_license` function next
 ```python
 def enter_license():
     user_key = input("\nEnter your license key: ")
@@ -95,7 +96,7 @@ def enter_license():
         print("\nKey is NOT VALID. Check your data entry.\n\n")
 ```
 
-It calls the `check_key` function so lets investigate that
+It calls the `check_key` function so let's investigate that
 ```python
 def check_key(key, username_trial):
 
@@ -158,7 +159,7 @@ Ah, here we have the dynamic part. It checks a number of hash digits, in some st
 
 ### Get the flag
 
-Lets make a small script to compile the complete flag
+Let's make a small script to compile the complete flag
 ```python
 #!/usr/bin/python
 
