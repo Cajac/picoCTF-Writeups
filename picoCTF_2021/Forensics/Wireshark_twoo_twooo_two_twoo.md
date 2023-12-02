@@ -18,12 +18,13 @@ Hints:
 1. Did you really find _the_ flag?
 2. Look for traffic that seems suspicious.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/110](https://play.picoctf.org/practice/challenge/110)
 
 ## Solution
 
 ### Get an overview of the traffic
 
-Lets get an overview of the traffic with `Protocol Hierarchy Statistics` with the commandline version of Wireshark - [tshark](https://www.wireshark.org/docs/man-pages/tshark.html)
+Let's get an overview of the traffic with `Protocol Hierarchy Statistics` with the commandline version of Wireshark - [tshark](https://www.wireshark.org/docs/man-pages/tshark.html)
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Wireshark_twoo_twooo_two_twoo]
 └─$ tshark -q -z io,phs -r shark2.pcapng 
@@ -100,7 +101,7 @@ fQ==.reddshrimpandherring.com.us-west-1.ec2-utilities.amazonaws.com
 fQ==.reddshrimpandherring.com.windomain.local
 ```
 
-Lets extracted only the first part of the queries
+Let's extracted only the first part of the queries
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Wireshark_twoo_twooo_two_twoo]
 └─$ tshark -r shark2.pcapng -Y "dns && ip.dst==18.217.1.57" -T fields -e dns.qry.name | cut -d '.' -f1 | uniq
@@ -114,7 +115,7 @@ fQ==
 
 ### Get the flag
 
-Next, lets combine the parts and base64-decode the result
+Next, let's combine the parts and base64-decode the result
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Wireshark_twoo_twooo_two_twoo]
 └─$ tshark -r shark2.pcapng -Y "dns && ip.dst==18.217.1.57" -T fields -e dns.qry.name | cut -d '.' -f1 | uniq | tr -d '\n' | base64 -d
@@ -128,3 +129,4 @@ For additional information, please see the references below.
 ## References
 
 - [tshark](https://www.wireshark.org/docs/man-pages/tshark.html)
+- [Wikipedia - Base64](https://en.wikipedia.org/wiki/Base64)
