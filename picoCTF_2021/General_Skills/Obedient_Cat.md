@@ -2,6 +2,7 @@
 
 - [Challenge information](#challenge-information)
 - [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -20,6 +21,7 @@ Hints:
    $ wget https://mercury.picoctf.net/static/fb851c1858cc762bd4eed569013d7f00/flag
 3. $ man cat
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/147](https://play.picoctf.org/practice/challenge/147)
 
 ## Solution
 
@@ -29,3 +31,11 @@ As suggested in the hints use either `wget` or your browser (Right-click and sel
 the flag file.
 
 Then use `cat` (on Linux), `type` (on Windows) or any text editor to view the flag.
+
+For additional information, please see the references below.
+
+## References
+
+- [cat - Linux manual page](https://man7.org/linux/man-pages/man1/cat.1.html)
+- [wget - Linux manual page](https://man7.org/linux/man-pages/man1/wget.1.html)
+- [type - Windows Command](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732507(v=ws.11))
