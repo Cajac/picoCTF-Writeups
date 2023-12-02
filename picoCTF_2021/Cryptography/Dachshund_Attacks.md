@@ -18,14 +18,15 @@ Connect with nc mercury.picoctf.net 31133.
 Hints:
 1. What do you think about my pet? dachshund.jpg
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/159](https://play.picoctf.org/practice/challenge/159)
 
 ## Solution
 
 ### Analyse the setup
 
-If you google for `rsa attack small d` you will get [Wiener's attack](https://en.wikipedia.org/wiki/Wiener%27s_attack) as one of the top results. So lets aim for that.
+If you google for `rsa attack small d` you will get [Wiener's attack](https://en.wikipedia.org/wiki/Wiener%27s_attack) as one of the top results. So let's aim for that.
 
-Lets connect to the site
+Let's connect to the site
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Cryptography/Dachshund_Attacks]
 └─$ nc mercury.picoctf.net 31133
