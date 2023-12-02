@@ -24,11 +24,12 @@ Challenge link: [https://play.picoctf.org/practice/challenge/117](https://play.p
 
 ### Analyze in Sonic Visualiser
 
-I first tried to view the wav-file in [Sonic Visualiser](https://www.sonicvisualiser.org/) and saw that the wave-form was always in a rather narrow range of values. What were these values?
+I first tried to view the wav-file in [Sonic Visualiser](https://www.sonicvisualiser.org/) and saw that the wave-form was always in a rather narrow range of values.  
+What were these values?
 
 ### Analyze in SciPy - Part 1
 
-Next, I used [SciPy](https://scipy.org/) which can [read Wav-files](https://docs.scipy.org/doc/scipy/tutorial/io.html#wav-sound-files-scipy-io-wavfile) to analyze the values. If needed install SciPy with either `sudo apt-get install python3-scipy` or `python -m pip install scipy`.
+Next, I used [SciPy](https://scipy.org/) which can [read wav-files](https://docs.scipy.org/doc/scipy/tutorial/io.html#wav-sound-files-scipy-io-wavfile) to analyze the values. If needed install SciPy with either `sudo apt-get install python3-scipy` or `python -m pip install scipy`.
 
 My first try was just to read the file and print the 100 first values and all unique values
 ```python
@@ -72,7 +73,7 @@ Unique values:
  8507 8508 8509]
 ```
 
-Hm, the first two digits seems to be multiples of five, from 10, 15, 20, etc. to 80 and 85. This is 16 different values!
+Hm, the first two digits seems to be multiples of five, from 10, 15, 20, etc. to 80 and 85. This is 16 different values!  
 And the last two digits seems to be only in the range 00 to 09.
 
 What if the first two digits represent hexadecimal values encoding the flag?
