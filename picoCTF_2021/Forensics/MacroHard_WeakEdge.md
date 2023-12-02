@@ -17,10 +17,11 @@ Forensics is fun.pptm
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/130](https://play.picoctf.org/practice/challenge/130)
 
 ## Solution
 
-The pptm (rather than just ppt) file extension and the name of the challenge hints that there are macros involved so lets check that first.
+The pptm (rather than just ppt) file extension and the name of the challenge hints that there are macros involved so let's check that first.
 
 ### Checking for macros
 
@@ -99,7 +100,7 @@ App Version                     : 16.0000
 
 Here there are two noteworthy finds: an embedded preview image and one hidden slide.
 
-Lets extract the preview image and view it with `eog`
+Let's extract the preview image and view it with `eog`
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/MacroHard_WeakEdge]
 └─$ exiftool -b -PreviewImage Forensics_is_fun.pptm > preview.jpg 
@@ -180,7 +181,7 @@ Z m x h Z z o g c G l j b 0 N U R n t E M W R f d V 9 r b j B 3 X 3 B w d H N f 
 
 Hhm, apart from the spaces it almost looks like [Base64](https://en.wikipedia.org/wiki/Base64).
 
-Lets try that
+Let's try that
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/MacroHard_WeakEdge]
 └─$ cat ppt/slideMasters/hidden | tr -d " " | base64 -d
@@ -193,7 +194,7 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Macro (computer science)](https://en.wikipedia.org/wiki/Macro_(computer_science))
-- [Wikipedia - Exif](https://en.wikipedia.org/wiki/Exif)
-- [Wikipedia - Office Open XML](https://en.wikipedia.org/wiki/Office_Open_XML)
 - [Wikipedia - Base64](https://en.wikipedia.org/wiki/Base64)
+- [Wikipedia - Exif](https://en.wikipedia.org/wiki/Exif)
+- [Wikipedia - Macro (computer science)](https://en.wikipedia.org/wiki/Macro_(computer_science))
+- [Wikipedia - Office Open XML](https://en.wikipedia.org/wiki/Office_Open_XML)
