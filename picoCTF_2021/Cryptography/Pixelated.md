@@ -19,6 +19,7 @@ Hints:
 1. https://en.wikipedia.org/wiki/Visual_cryptography
 2. Think of different ways you can "stack" images
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/100](https://play.picoctf.org/practice/challenge/100)
 
 ## Solution
 
