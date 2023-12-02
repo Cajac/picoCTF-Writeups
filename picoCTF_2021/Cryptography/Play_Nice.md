@@ -20,14 +20,15 @@ playfair.py
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/114](https://play.picoctf.org/practice/challenge/114)
 
 ## Solution
 
-The name of the source code file reveils that this is the [Playfair cipher](https://en.wikipedia.org/wiki/Playfair_cipher).  
+The name of the source code file reveals that this is the [Playfair cipher](https://en.wikipedia.org/wiki/Playfair_cipher).  
 
 ### Analyze the source code
 
-Lets start by looking at the python source (with some empty lines removed).
+Let's start by looking at the python source (with some empty lines removed).
 ```python
 #!/usr/bin/python3 -u
 import signal
@@ -115,9 +116,9 @@ We can solve this online at [dCode.fr](https://www.dcode.fr/playfair-cipher).
  3. Set `meiktp6yh4wxruavj9no13fb8d027c5glzsq` as alphabet under the matrix
  4. Click `DECRYPT PLAYFAIR`
 
- The result is uppercase letters and the site expects lowercase letters so we need to convert them is an interactive python session or something similar
- ```bash
- ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Cryptography/Play_Nice]
+The result is uppercase letters and the site expects lowercase letters so we need to convert them is an interactive python session or something similar
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Cryptography/Play_Nice]
 └─$ python                   
 Python 3.11.4 (main, Jun  7 2023, 10:13:09) [GCC 12.2.0] on linux
 Type "help", "copyright", "credits" or "license" for more information.
@@ -126,9 +127,9 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> exit()
 ```
 
- Then we can connect to the site again to get the flag. Both the alphabet and encrypted message seems to be static (don't change).
- ```bash
- ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Cryptography/Play_Nice]
+Then we can connect to the site again to get the flag. Both the alphabet and encrypted message seems to be static (don't change).
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Cryptography/Play_Nice]
 └─$ nc mercury.picoctf.net 6057
 Here is the alphabet: meiktp6yh4wxruavj9no13fb8d027c5glzsq
 Here is the encrypted message: y7bcvefqecwfste224508y1ufb21ld
