@@ -17,12 +17,13 @@ I added so many for loops that I don't even know what it does. It's extraordinar
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/208](https://play.picoctf.org/practice/challenge/208)
 
 ## Solution
 
 ### Analyze the given files
 
-Lets start by looking at the given files. First the python script
+Let's start by looking at the given files. First the python script
 ```python
 #!/usr/bin/env python3
 
@@ -71,7 +72,7 @@ with open('output.txt', 'w') as f:
 
 The script XORs the flag with an unknown key and the result are then XORed again with fixed messages a random number of times.  
 
-And then lets check the encrypted hexencoded `output.txt` file
+And then let's check the encrypted hex-encoded `output.txt` file
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/XtraORdinary]
 └─$ cat output.txt 
@@ -86,7 +87,7 @@ If some data is XORed an even number of times with a message then the XORing can
 Also, if we have the flag (F) XORed with the key (K) we can XOR the result again with the key to get the flag back since `(F ^ K) ^ K = F`.  
 Lastly, we don't need to consider the same fixed messages more than once because of the first fact above.
 
-Lets write a brute forcer script to find the right combination of extra XORing by trying all combinations of the fixed messages, that is if they are included or not in the XORing.
+Let's write a brute forcer script to find the right combination of extra XORing by trying all combinations of the fixed messages, that is if they are included or not in the XORing.
 ```python
 #!/usr/bin/env python3
 
@@ -170,7 +171,7 @@ This is the `secret-key.txt`.
  
 ### Get the flag
 
-Now, with this information lets write another script that gives us the flag. The code is mostly the same as above.
+Now, with this information let's write another script that gives us the flag. The code is mostly the same as above.
 ```python
 #!/usr/bin/env python3
 
