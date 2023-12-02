@@ -17,6 +17,7 @@ shark1.pcapng.
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/115](https://play.picoctf.org/practice/challenge/115)
 
 ## Solution
 
@@ -24,7 +25,7 @@ Open up the PCAP-file in [Wireshark](https://www.wireshark.org/).
 
 On easier challenges it can sometimes be worth searching for the flag in plaintext by entering a display filter of `tcp.payload contains "picoCTF"`. However, in this case it doesn't work. No packets matches.
 
-Lets get an overview of the traffic by selecting `Protocol Hierarchy` from the `Statistics` menu.  
+Let's get an overview of the traffic by selecting `Protocol Hierarchy` from the `Statistics` menu.  
 The traffic consists almost exclusively of HTTP-traffic.
 
 Set a display filter of `http`. Then right-click on the first displayed packet (packet #2) and select `Follow ->` and `TCP Stream`.
