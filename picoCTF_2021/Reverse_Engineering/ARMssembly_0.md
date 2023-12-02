@@ -29,7 +29,7 @@ To some extent, the easiest way to solve this challenge is to compile the code a
 
 First we need to install a cross compiler to compile on a non-ARM machine such as Intel x64. We do that with `sudo apt install binutils-aarch64-linux-gnu gcc-aarch64-linux-gnu`.
 
-Then we compile and link
+Then we assemble and link
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/ARMssembly_0]
 └─$ aarch64-linux-gnu-as -o chall.o chall.S
