@@ -22,10 +22,11 @@ The second user corresponds to the second password, and so on.
 Hints:
 1. Maybe other passwords will have hints about the leak?
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/261](https://play.picoctf.org/practice/challenge/261)
 
 ## Solution
 
-Lets start by unpacking the tar-file and looking at the containing files
+Let's start by unpacking the tar-file and looking at the containing files
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Cryptography/Credstuff]
 └─$ tar xvf leak.tar 
@@ -79,7 +80,7 @@ Then we use `cat -n` in a similar fashion the get the corresponding password
 
 Hhm, the password looks like it's [ROT-13](https://en.wikipedia.org/wiki/ROT13) encoded (or any other number of rotations).
 
-Lets not bother about the exact number of rotations and brute force it in Python which a script called `bf.py`
+Let's not bother about the exact number of rotations and brute force it in Python which a script called `bf.py`
 ```python
 #!/usr/bin/python
 
