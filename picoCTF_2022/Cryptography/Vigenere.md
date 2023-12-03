@@ -18,6 +18,7 @@ Decrypt this message using this key "CYLAB".
 Hints:
 1. https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/316](https://play.picoctf.org/practice/challenge/316)
 
 ## Solution
 
@@ -30,14 +31,14 @@ There probably are more ways to solve this challenge, but here are two solutions
 
 ### Use an online solver
 
-You cabn use an online solver such as [Rumkin](https://rumkin.com/tools/cipher/vigenere/) to solve this challenge.
+You can use an online solver such as [Rumkin](https://rumkin.com/tools/cipher/vigenere/) to solve this challenge.
 
 Set the 'Operating Mode' to `Decrypt` and set the 'Cipher key' to `CYLAB`.  
 Then enter the cipher text in the large text field and you get the flag at the bottom of the window.
 
 ### Use a Python script
 
-In addition, lets write a small Python script called `solve.py` to decode this
+In addition, let's write a small Python script called `solve.py` to decode this
 ```python
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
