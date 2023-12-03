@@ -19,6 +19,7 @@ Download the message here.
 Hints:
 1. Try a frequency attack. An online tool might help.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/307](https://play.picoctf.org/practice/challenge/307)
 
 ## Solution
 
@@ -60,7 +61,7 @@ After a short while, you have the flag at the top of the possible solutions.
 Alternatively, we can write a small Python script to solve this.  
 There is no need to use frequency analysis or brute force since we have the key.
 
-Lets create a script called `solve.py`
+Let's create a script called `solve.py`
 ```python
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
@@ -116,6 +117,6 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Substitution cipher](https://en.wikipedia.org/wiki/Substitution_cipher)
 - [Wikipedia - Frequency analysis](https://en.wikipedia.org/wiki/Frequency_analysis)
 - [Wikipedia - Letter frequency](https://en.wikipedia.org/wiki/Letter_frequency)
+- [Wikipedia - Substitution cipher](https://en.wikipedia.org/wiki/Substitution_cipher)
