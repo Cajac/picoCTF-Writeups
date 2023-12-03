@@ -20,6 +20,7 @@ Hints:
 1. Try a frequency attack
 2. Do the punctuation and the individual words help you make any substitutions?
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/308](https://play.picoctf.org/practice/challenge/308)
 
 ## Solution
 
@@ -36,7 +37,7 @@ Hra yzkg marqvso, yzs hvij kg: mkwrWYH{HA3FB3LWU_4774WC5_4A3_W001_7II384QW}
 
 Compared to the [previous challenge](substitution0.md) there is no key this time.
 
-Lets use [quipqiup](https://quipqiup.com/) to solve this as before.
+Let's use [quipqiup](https://quipqiup.com/) to solve this as before.
 
 Input the entire message in the `Puzzle` text field and press `Solve` (with the default setting).
 
@@ -46,6 +47,6 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Substitution cipher](https://en.wikipedia.org/wiki/Substitution_cipher)
 - [Wikipedia - Frequency analysis](https://en.wikipedia.org/wiki/Frequency_analysis)
 - [Wikipedia - Letter frequency](https://en.wikipedia.org/wiki/Letter_frequency)
+- [Wikipedia - Substitution cipher](https://en.wikipedia.org/wiki/Substitution_cipher)
