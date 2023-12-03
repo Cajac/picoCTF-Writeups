@@ -22,6 +22,7 @@ Put the decoded message in the picoCTF flag format, picoCTF{decoded_message}.
 Hints:
 1. Once you've understood how the cipher works, it's best to draw it out yourself on paper
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/289](https://play.picoctf.org/practice/challenge/289)
 
 ## Solution
 
