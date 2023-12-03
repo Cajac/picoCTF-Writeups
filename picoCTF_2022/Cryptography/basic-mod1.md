@@ -23,10 +23,11 @@ Hints:
 1. Do you know what mod 37 means?
 2. mod 37 means modulo 37. It gives the remainder of a number after being divided by 37.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/253](https://play.picoctf.org/practice/challenge/253)
 
 ## Solution
 
-Lets use the instructions above to create a small Python script called `get_flag.py` to solve this challenge
+Let's use the instructions above to create a small Python script called `get_flag.py` to solve this challenge
 
 ```python
 #!/usr/bin/python
