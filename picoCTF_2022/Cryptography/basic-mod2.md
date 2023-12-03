@@ -25,6 +25,7 @@ Hints:
 2. The inverse modulo z of x is the number, y that when multiplied by x is 1 modulo z
 3. It's recommended to use a tool to find the modular inverses
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/254](https://play.picoctf.org/practice/challenge/254)
 
 ## Solution
 
