@@ -20,6 +20,7 @@ Download the message here.
 Hints:
 1. Try refining your frequency attack, maybe analyzing groups of letters would improve your results?
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/309](https://play.picoctf.org/practice/challenge/309)
 
 ## Solution
 
@@ -30,7 +31,7 @@ xidcddhsgxgdqdcjvwxidczdvvdgxjyvsgidrisoigtiwwvtwufbxdcgdtbcsxltwufdxsxswpgsptvb
 
 ### Initial analysis with quipquip
 
-Lets start by using [quipqiup](https://quipqiup.com/) as in the previous challenges.
+Let's start by using [quipqiup](https://quipqiup.com/) as in the previous challenges.
 
 Input the entire message in the `Puzzle` text field and press `Solve` (with the default setting).
 
@@ -154,7 +155,7 @@ So the key is `JYTRDAOIS@MVUPWFNCGXBQZHL@` where the '@' characters are unknown 
 
 ### Python script to get the flag
 
-I then reused the `solve.py` script from the [substitution0](substitution0.md) challenge.
+I then re-used the `solve.py` script from the [substitution0](substitution0.md) challenge.
 
 As cipher text I only used the last part of it containing the flag, like this
 ```python
@@ -186,6 +187,6 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Substitution cipher](https://en.wikipedia.org/wiki/Substitution_cipher)
 - [Wikipedia - Frequency analysis](https://en.wikipedia.org/wiki/Frequency_analysis)
 - [Wikipedia - Letter frequency](https://en.wikipedia.org/wiki/Letter_frequency)
+- [Wikipedia - Substitution cipher](https://en.wikipedia.org/wiki/Substitution_cipher)
