@@ -19,11 +19,13 @@ Download the program here.
 Hints:
 1. Try running it and add the phrase "Hello!" with a space in front (i.e. "./run Hello!")
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/267](https://play.picoctf.org/practice/challenge/267)
 
 ## Solution
 
 Like the [previous challenge](file-run1.md) this challenge is really simple and the hint give it all away.
-But lets play around with it anyway
+
+But let's play around with it anyway
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Reverse_Engineering/File_Run2]
 └─$ chmod +x run
