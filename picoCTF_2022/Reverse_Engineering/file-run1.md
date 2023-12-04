@@ -19,6 +19,7 @@ Hints:
 1. To run the program at all, you must make it executable (i.e. $ chmod +x run)
 2. Try running it by adding a '.' in front of the path to the file (i.e. $ ./run)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/266](https://play.picoctf.org/practice/challenge/266)
 
 ## Solution
 
@@ -37,4 +38,4 @@ If you need more information, please see the references below.
 ## References
 
 - [Linux path environment variable](https://linuxconfig.org/linux-path-environment-variable)
-- [Linux file permissions explained ](https://www.redhat.com/sysadmin/linux-file-permissions-explained)
+- [Linux file permissions explained](https://www.redhat.com/sysadmin/linux-file-permissions-explained)
