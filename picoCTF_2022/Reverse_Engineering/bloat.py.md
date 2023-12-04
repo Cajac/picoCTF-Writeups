@@ -18,10 +18,11 @@ Run this Python program in the same directory as this encrypted flag.
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/256](https://play.picoctf.org/practice/challenge/256)
 
 ## Solution
 
-Lets start by looking at the Python source code given
+Let's start by looking at the Python source code given
 ```python
 import sys
 a = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ"+ \
@@ -69,7 +70,7 @@ Oh, well. Obfuscation was the word.
 
 ### First iteration of deobfuscation
 
-Lets try starting to make some sense of this by looking up all string concatenations.
+Let's try starting to make some sense of this by looking up all string concatenations.
 This can be done in an interactive Python session like this
 ```python
 >>> a = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ"+ \
@@ -133,7 +134,7 @@ picoCTF{<REDACTED>}
 
 ### Second iteration of deobfuscation
 
-But lets keep going for practice and give the functions and global variables better names. 
+But let's keep going for practice and give the functions and global variables better names. 
  * `arg133` can be `verify_pw`
  * `arg232` can be `read_pw`
  * `arg132` can be `read_enc_flag`
@@ -188,7 +189,7 @@ sys.exit(0)
 
 If we look closely we can see that the decryption of the flag is independent from the `happychance` password.  
 So the functions for promping and verifying that password can be removed. As well as the greeting.  
-Lets also remove the sys module and the unnecessary last call to `sys.exit`.
+Let's also remove the sys module and the unnecessary last call to `sys.exit`.
 
 Then we have this
 ```python
@@ -215,7 +216,7 @@ print(arg423)
 
 Ah, I've made a minor mistake. The variable `flag` should rather be called `enc_flag` since the plaintext flag is `arg423`.
 
-Lets give the function `arg122` a new name, say `decode_flag`. Lets also change the name of the functions arguments.
+Let's give the function `arg122` a new name, say `decode_flag`. Let's also change the name of the functions arguments.
 
 We then get
 ```python
@@ -233,7 +234,7 @@ flag = decode_flag(enc_flag.decode(), 'rapscallion')
 print(flag)
 ```
 
-The result isn't perfect but lets end the deobfuscation exercise there.
+The result isn't perfect but let's end the deobfuscation exercise there.
 
 For additional information, please see the references below.
 
