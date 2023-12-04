@@ -2,6 +2,7 @@
 
 - [Challenge information](#challenge-information)
 - [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -18,19 +19,20 @@ You can download the file from here.
 Hints:
 1. Remember that some file types can contain and nest other files
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/268](https://play.picoctf.org/practice/challenge/268)
 
 ## Solution
 
 ### The so called PDF-file
 
-Lets see what the `file` command have to say about what file it is
+Let's see what the `file` command have to say about what file it is
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ file Flag.pdf 
 Flag.pdf: shell archive text
 ```
 
-Hhm, shell archive text. Lets see the first lines of it
+Hhm, shell archive text. Let's see the first lines of it
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ head Flag.pdf     
@@ -93,7 +95,7 @@ Processing triggers for man-db (2.11.1-1) ...
 Processing triggers for kali-menu (2022.4.1) ...
 ```
 
-Now lets try running the script again
+Now let's try running the script again
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ ./Flag.pdf                    
@@ -165,7 +167,7 @@ We then extract the contents with `ar x`
 └─$ ar x flag
 ```
 
-What kind of flag might 'flag' be?
+What kind of file might 'flag' be?
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ file flag
@@ -222,7 +224,7 @@ cpio: flag not created: newer or same age version exists
 ```
 
 Better, but we get a new error instead. `cpio` doesn't like that there is a file called flag already present.
-Lets rename our file and try again
+Let's rename our file and try again
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ mv flag flag.cpio    
@@ -514,7 +516,7 @@ newflag: LZMA compressed data, non-streamed, size 254
 
 ### The LZMA file
 
-This is really starting to get tedious now, but like before lets check for a `lzma` command
+This is really starting to get tedious now, but like before let's check for a `lzma` command
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ lzma -h                
@@ -675,8 +677,8 @@ newflag: ASCII text
 
 ### The encoded flag
 
-Ah finally we have something that is close to the flag.
-Lets see it
+And finally we have something that is close to the flag.
+Let's see it
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ cat newflag
@@ -694,3 +696,18 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> bytes.fromhex(enc_flag).decode()
 'picoCTF{<REDACTED>}\n'
 ```
+
+For additional information, please see the references below.
+
+## References
+
+- [ar - Linux manual page](https://man7.org/linux/man-pages/man1/ar.1.html)
+- [bzip2 - Linux manual page](https://linux.die.net/man/1/bzip2)
+- [cpio - Linux manual page](https://linux.die.net/man/1/cpio)
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
+- [gzip - Linux manual page](https://linux.die.net/man/1/gzip)
+- [head - Linux manual page](https://man7.org/linux/man-pages/man1/head.1.html)
+- [lzip - Linux manual page](https://linux.die.net/man/1/lzip)
+- [lzma - Linux manual page](https://linux.die.net/man/1/lzma)
+- [lzop - Linux manual page](https://linux.die.net/man/1/lzop)
+- [xz - Linux manual page](https://linux.die.net/man/1/xz)
