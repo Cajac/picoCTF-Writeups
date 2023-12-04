@@ -22,10 +22,11 @@ picoCTF{password}
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/294](https://play.picoctf.org/practice/challenge/294)
 
 ## Solution
 
-Lets start by looking at the Java source code
+Let's start by looking at the Java source code
 ```java
 import java.io.*;
 import java.util.*;  
