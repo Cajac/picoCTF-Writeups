@@ -2,6 +2,7 @@
 
 - [Challenge information](#challenge-information)
 - [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -15,10 +16,11 @@ Download this image file and find the flag.
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/265](https://play.picoctf.org/practice/challenge/265)
 
 ## Solution
 
-Lets try the quick-and-dirty trick to just `grep` for the flag.
+Let's try the quick-and-dirty trick to just `grep` for the flag.
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/Enhance]
 └─$ grep picoCTF drawing.flag.svg 
@@ -76,7 +78,7 @@ Studying the contents of the file more closely in a text editor we find that the
          id="tspan3752">c 3 d _ 2 4 3 7 4 6 7 5 }</tspan></text>
 ```
 
-We could reconstruct the flag manually but lets not do that.
+We could reconstruct the flag manually but let's not do that.
 
 All lines with flag contents contain the `</tspan>` tag so lets `grep` for that to start with
 ```bash
@@ -92,7 +94,7 @@ All lines with flag contents contain the `</tspan>` tag so lets `grep` for that 
          id="tspan3752">c 3 d _ 2 4 3 7 4 6 7 5 }</tspan></text>
 ```
 
-Then lets divide the lines with the `>` character as the delimiter with `cut` and only keep the second field (that is, everything to the right of it)
+Then let's divide the lines with the `>` character as the delimiter with `cut` and only keep the second field (that is, everything to the right of it)
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/Enhance]
 └─$ grep '</tspan>' drawing.flag.svg | cut -d ">" -f2
@@ -127,9 +129,18 @@ Now we are close. Then we delete any line breaks with `tr`
 p i c o C T F { 3 n h 4 n c 3 d _ 2 4 3 7 4 6 7 5 } 
 ```
 
-Finally, we delete any the spaces
+Finally, we delete all the spaces
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/Enhance]
 └─$ grep '</tspan>' drawing.flag.svg | cut -d ">" -f2 | cut -d "<" -f1 | tr -d '\r\n' | tr -d " "
 picoCTF{<REDACTED>}   
 ```
+
+For additional information, please see the references below.
+
+## References
+
+- [cut - Linux manual page](https://man7.org/linux/man-pages/man1/cut.1.html)
+- [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
+- [tr - Linux manual page](https://man7.org/linux/man-pages/man1/tr.1.html)
+- [Wikipedia - SVG](https://en.wikipedia.org/wiki/SVG)
