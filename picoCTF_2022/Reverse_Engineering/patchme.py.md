@@ -18,10 +18,11 @@ Run this Python program in the same directory as this encrypted flag.
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/287](https://play.picoctf.org/practice/challenge/287)
 
 ## Solution
 
-Lets start by looking at the Python source code (with some empty lines removed)
+Let's start by looking at the Python source code (with some empty lines removed)
 ```python
 ### THIS FUNCTION WILL NOT HELP YOU FIND THE FLAG --LT ########################
 def str_xor(secret, key):
