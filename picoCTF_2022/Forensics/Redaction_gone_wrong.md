@@ -18,6 +18,7 @@ Can you find an important key that was not redacted properly?
 Hints:
 1. How can you be sure of the redaction?
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/290](https://play.picoctf.org/practice/challenge/290)
 
 ## Solution
 
