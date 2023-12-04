@@ -18,10 +18,11 @@ Reverse engineer this Python program.
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/314](https://play.picoctf.org/practice/challenge/314)
 
 ## Solution
 
-Lets start by looking at the Python source code given (with some empty lines removed)
+Let's start by looking at the Python source code given (with some empty lines removed)
 ```python
 import base64
 from cryptography.fernet import Fernet
@@ -37,7 +38,7 @@ exec(plain.decode())
 
 OK, so we have an encrypted payload that gets decrypted and then executed with the `exec` function.
 
-Lets run the script and see what happens
+Let's run the script and see what happens
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Reverse_Engineering/Unpackme.py]
 └─$ python unpackme.flag.py 
