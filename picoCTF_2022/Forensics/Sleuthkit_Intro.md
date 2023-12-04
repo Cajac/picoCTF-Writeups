@@ -23,12 +23,13 @@ Access checker program: nc saturn.picoctf.net 52472
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/301](https://play.picoctf.org/practice/challenge/301)
 
 ## Solution
 
 ### Unpacking and file identification
 
-Lets start by unpacking the disk image with `gzip -d`. Add `-k` if you want to keep the original input file.
+Let's start by unpacking the disk image with `gzip -d`. Add `-k` if you want to keep the original input file.
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Intro]
 └─$ gzip -d -k disk.img.gz
@@ -78,7 +79,7 @@ Supported image format types:
         vhd (Virtual Hard Drive (Microsoft))
 ```
 
-I'm not sure if you need to specify the image type or not but lets try without it
+I'm not sure if you need to specify the image type or not but let's try without it
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Intro]
 └─$ mmls disk.img
@@ -111,4 +112,6 @@ For additional information, please see the references below.
 
 ## References
 
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
+- [gzip - Linux manual page](https://linux.die.net/man/1/gzip)
 - [The Sleuth Kit commands](https://wiki.sleuthkit.org/index.php?title=The_Sleuth_Kit_commands)
