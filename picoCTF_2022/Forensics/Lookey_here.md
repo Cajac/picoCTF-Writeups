@@ -2,6 +2,7 @@
 
 - [Challenge information](#challenge-information)
 - [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -17,6 +18,7 @@ Download the data here.
 Hints:
 1. Download the file and search for the flag based on the known prefix.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/279](https://play.picoctf.org/practice/challenge/279)
 
 ## Solution
 
@@ -27,3 +29,9 @@ and `-E` to say that your pattern is an extended regular expression
 └─$ grep -oE 'picoCTF{.*}' anthem.flag.txt
 picoCTF{<REDACTED>}
 ```
+
+For additional information, please see the references below.
+
+## References
+
+- [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
