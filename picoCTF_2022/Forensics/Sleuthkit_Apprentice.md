@@ -19,12 +19,13 @@ Download compressed disk image
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/300](https://play.picoctf.org/practice/challenge/300)
 
 ## Solution
 
 ### Basic file analysis
 
-Lets start by unpacking the disk image with `gzip -d`. Add `-k` if you want to keep the original input file.
+Let's start by unpacking the disk image with `gzip -d`. Add `-k` if you want to keep the original input file.
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
 └─$ gzip -d -k disk.flag.img.gz
@@ -57,11 +58,11 @@ There are two possible partitions where the flag could be:
  * The Linux partition which starts on sector `2048`
  * The Linux partition which starts on sector `360448`
 
-Lets check them in that order.
+Let's check them in that order.
 
 ### Mount the partitions
 
-Lets create a directory to mount the partions on
+Let's create a directory to mount the partions on
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
 └─$ sudo mkdir /mnt/pico_disk
@@ -76,7 +77,7 @@ Next, we mount the first partition
 
 ### Search for the flag - part 1
 
-Lets check the contents of the partition
+Let's check the contents of the partition
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
 └─$ pushd .
@@ -116,7 +117,7 @@ Nope, this is the wrong partition.
 
 ### Search for the flag - part 2
 
-Lets check the next partition
+Let's check the next partition
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
 └─$ sudo umount /mnt/pico_disk                                              
@@ -142,7 +143,7 @@ Success!
 
 ### Get the flag
 
-Lets `cat` the contents of the file to get the flag
+Let's `cat` the contents of the file to get the flag
 ```bash
 ┌──(kali㉿kali)-[/mnt/pico_disk]
 └─$ sudo cat ./root/my_folder/flag.uni.txt
@@ -180,6 +181,7 @@ For additional information, please see the references below.
 ## References
 
 - [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
+- [find - Linux manual page](https://man7.org/linux/man-pages/man1/find.1.html)
 - [mount - Linux manual page](https://man7.org/linux/man-pages/man8/mount.8.html)
 - [sudo - Linux manual page](https://man7.org/linux/man-pages/man8/sudo.8.html)
 - [umount - Linux manual page](https://man7.org/linux/man-pages/man8/umount.8.html)
