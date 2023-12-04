@@ -16,6 +16,7 @@ Download the packet capture file and use packet analysis software to find the fl
 Hints:
 1. Wireshark, if you can install and use it, is probably the most beginner friendly packet analysis software product.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/286](https://play.picoctf.org/practice/challenge/286)
 
 ## Solution
 
