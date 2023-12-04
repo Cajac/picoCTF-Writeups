@@ -17,6 +17,7 @@ Reverse engineer this Java program.
 Hints:
 1. Use a decompiler for Java!
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/271](https://play.picoctf.org/practice/challenge/271)
 
 ## Solution
 
@@ -132,7 +133,7 @@ We can see that the program checks the key character by character in reverse ord
 
 ### Get the flag
 
-We can rather easily create the flag manually but lets not do that.  
+We can rather easily create the flag manually but let's not do that.  
 Instead we will use builtin commandline tools like `grep`, `sort` and `cut` to extract the flag for us.
 
 Start by copying the source to a file named `KeygenMe_main.java`.
