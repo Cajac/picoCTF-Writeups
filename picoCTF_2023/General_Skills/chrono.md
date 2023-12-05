@@ -22,6 +22,7 @@ Password: KkPyI5bkmn
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/347](https://play.picoctf.org/practice/challenge/347)
 
 ## Solution
 
@@ -58,15 +59,15 @@ picoplayer@challenge:~$
 ```
 
 I know since previously that scheduled jobs in linux is specified in the `crontab`.  
-Otherwise this might require some Googling to find out...
+Otherwise this might require some googling to find out...
 
-You can list your cronjobs with `crontab -l` so lets try that
+You can list your cronjobs with `crontab -l` so let's try that
 ```
 picoplayer@challenge:~$ crontab -l
 no crontab for picoplayer
 ```
 
-Hm, no joy there. The configuration files for cron are, like most other configuration, stored in the `/etc` directory so lets go there
+Hm, no joy there. The configuration files for cron are, like most other configurations, stored in the `/etc` directory so let's go there
 ```
 picoplayer@challenge:~$ cd /etc
 picoplayer@challenge:/etc$ ls -la cron*
@@ -106,7 +107,7 @@ drwxr-xr-x 1 root root  66 Jul 25 17:20 ..
 -rw-r--r-- 1 root root 102 Feb 13  2020 .placeholder
 ```
 
-Lets start by checking the `/etc/crontab`  file which also contains the flag.
+Let's start by checking the `/etc/crontab` file which also contains the flag.
 ```
 picoplayer@challenge:/etc$ cat crontab 
 # picoCTF{<REDACTED>}
