@@ -24,6 +24,7 @@ Password: password
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/384](https://play.picoctf.org/practice/challenge/384)
 
 ## Solution
 
@@ -53,7 +54,7 @@ applicable law.
 picoplayer@challenge:~$ 
 ```
 
-The script should be located in our home directory so lets look for it
+The script should be located in our home directory so let's look for it
 ```
 picoplayer@challenge:~$ ls -la
 total 16
@@ -103,7 +104,7 @@ else
 fi
 ```
 
-Hhm, no flag there. But there is an instruction to read the manual and the challenge is also tagged with `man` so lets try that
+Hhm, no flag there. But there is an instruction to read the manual and the challenge is also tagged with `man` so let's try that
 ```
 picoplayer@challenge:~$ man useless
 
