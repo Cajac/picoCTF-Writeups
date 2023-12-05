@@ -19,17 +19,18 @@ They decided to investigate and found out that there was more than what meets th
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/350](https://play.picoctf.org/practice/challenge/350)
 
 ## Solution
 
 In steganography challenges there are a number of checks that are more or less "standard practice". These include:
 1. Checking for metadata with [ExifTool](https://exiftool.org/)
-2. Checking for embedded strings
+2. Checking for embedded [strings](https://en.wikipedia.org/wiki/Strings_(Unix))
 3. Checking for embedded Zip-files with tools such as [Binwalk](https://github.com/ReFirmLabs/binwalk)
 
 ### Checking for metadata
 
-Lets start by checking for metadata
+Let's start by checking for metadata
 ```
 Z:\CTFs\picoCTF\picoCTF_2023\Forensics\hideme>exiftool flag.png
 ExifTool Version Number         : 12.44
@@ -55,7 +56,7 @@ Image Size                      : 512x504
 Megapixels                      : 0.258
 ```
 
-Nope, nothing of interest.
+Hhm, we see that there is data embedded after the PNG-file, i.e. after the IEND chunk.
 
 ### Checking for embedded strings
 
@@ -102,8 +103,8 @@ Yes, there is an embedded zip-file and the file names matches what we saw earlie
 
 Extract the zip-file with `binwalk -e flag.png`.
 
-The extracted files will be written to a directory named '_target-file-name.extracted'.  
-Lets check it
+The extracted files will be written to a directory with the format of '_target-file-name.extracted'.  
+Let's check it
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Forensics/hideme]
 └─$ ls -la _flag.png.extracted 
@@ -121,7 +122,6 @@ total 3
 drwxrwxrwx 1 root root    0 Mar 15 22:01 .
 drwxrwxrwx 1 root root    0 Jul 26 01:46 ..
 -rwxrwxrwx 1 root root 3029 Mar 15 22:01 flag.png
-
 ```
 
 Ah, in the secrets subdirectory there is indeed a flag.png file. 
