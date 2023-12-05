@@ -26,6 +26,7 @@ The password is 3f39b042
 Hints:
 1. Experiment with different shell syntax
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/377](https://play.picoctf.org/practice/challenge/377)
 
 ## Solution
 
@@ -64,7 +65,7 @@ Special$
 
 ### Try different commands
 
-Lets start with some sample commands
+Let's try some sample commands
 ```
 Special$ ls
 Is 
