@@ -22,12 +22,13 @@ Hints:
 1. Something doesn't quite add up with this image...
 2. How's the image quality?
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/354](https://play.picoctf.org/practice/challenge/354)
 
 ## Solution
 
 ### Basic analysis of the image
 
-Lets start with some basic analysis of the image
+Let's start with some basic analysis of the image
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/Invisible_WORDs]
 └─$ file output.bmp 
@@ -68,7 +69,7 @@ Megapixels                      : 0.518
 ```
 Nothing that stands out.
 
-Lets try a hex view with `xxd`
+Let's try a hex view with `xxd`
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/Invisible_WORDs]
 └─$ xxd -l 0x200 output.bmp       
@@ -117,7 +118,7 @@ But there are additional bytes in the middle of the `504b0304` or `PK\3\4` ZIP-h
 
 ### Write a python extraction script - part 1
 
-Lets write a small python script called `extract_zip.py` to try to extract the ZIP
+Let's write a small python script called `extract_zip.py` to try to extract the ZIP
 ```python
 #!/usr/bin/python
 
@@ -142,7 +143,7 @@ Then we make the script executable and run it
 extracted.zip: Zip archive data, at least v2.0 to extract, compression method=deflate
 ```
 
-This looks promising. Lets try to unzip it
+This looks promising. Let's try to unzip it
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/Invisible_WORDs]
 └─$ unzip extracted.zip          
@@ -156,7 +157,7 @@ unzip:  cannot find zipfile directory in one of extracted.zip or
         extracted.zip.zip, and cannot find extracted.zip.ZIP, period.
 ```
 
-Hhm, something is wrong. Lets investigate the resulting file.
+Hhm, something is wrong. Let's investigate the resulting file.
 
 ### Write a python extraction script - part 2
 
@@ -182,7 +183,7 @@ Looking at the result, we can see that additional data is included after the EOC
 000296b0: ff00 ff00 ff00 ff00 ff00 ff00 ff00 ff00  ................
 ```
 
-Lets modify the script to quit extracting when the '\xff\x00' data begins
+Let's modify the script to quit extracting when the '\xff\x00' data begins
 ```python
 #!/usr/bin/python
 
@@ -197,7 +198,7 @@ with open("output.bmp", 'rb') as bmp:
 zip.close()
 ```
 
-Lets try again
+Let's try again
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/Invisible_WORDs]
 └─$ ./extract_zip2.py
@@ -209,7 +210,7 @@ Archive:  extracted2.zip
 ```
 Success!
 
-Lets check the extracted file which name looks [base64](https://en.wikipedia.org/wiki/Base64) encoded
+Let's check the extracted file which name looks [base64](https://en.wikipedia.org/wiki/Base64) encoded
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/Invisible_WORDs]
 └─$ file ZnJhbmtlbnN0ZWluLXRlc3QudHh0 
@@ -234,7 +235,7 @@ using this eBook.
 
 ### Get the flag
 
-Finally, lets grep for the flag with a [RegEx](https://en.wikipedia.org/wiki/Regular_expression) for the flag format
+Finally, let's grep for the flag with a [RegEx](https://en.wikipedia.org/wiki/Regular_expression) for the flag format
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/Invisible_WORDs]
 └─$ grep -oE 'picoCTF{.*}' ZnJhbmtlbnN0ZWluLXRlc3QudHh0 
