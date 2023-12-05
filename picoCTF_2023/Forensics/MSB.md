@@ -18,6 +18,7 @@ Download the image here
 Hints:
 1. What's causing the 'corruption' of the image?
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/359](https://play.picoctf.org/practice/challenge/359)
 
 ## Solution
 
@@ -25,7 +26,7 @@ From the challenge title and description we can deduce that this is going to be 
 
 ### Basic analysis of the image file
 
-Lets start with some basic analysis of the file
+Let's start with some basic analysis of the file
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/MSB]
 └─$ file Ninja-and-Prince-Genji-Ukiyoe-Utagawa-Kunisada.flag.png 
@@ -120,7 +121,7 @@ Megapixels                      : 1.6
 
 Nope, nothing of interest as expected, but it's good to always double-check.
 
-Lets bring out the stego-tools instead.
+Let's bring out the stego-tools instead.
 
 ### Failed attempt with zsteg
 
@@ -249,7 +250,7 @@ But with a combination of `grep`, `cut` and `tr` you can get the full flag in re
 
 Finally, you can use the [sigBits script](https://github.com/Pulho/sigBits) to extract the data.
 
-Lets start by getting more information on the parameters we can and should use
+Let's start by getting more information on the parameters we can and should use
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/MSB]
 └─$ ~/python_venvs/Pillow/bin/sigBits.py -h
