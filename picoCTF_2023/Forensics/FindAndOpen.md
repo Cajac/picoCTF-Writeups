@@ -18,6 +18,7 @@ Hints:
 1. Download the pcap and look for the password or flag.
 2. Don't try to use a password cracking tool, there are easier ways here.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/348](https://play.picoctf.org/practice/challenge/348)
 
 ## Solution
 
@@ -39,7 +40,7 @@ Two of the data portions, those with protocol `0x4c4b` and `0x7361`, like like t
 
 ### Decode the data
 
-Lets use tshark to extract only the `data.data` field from these two communications.  
+Let's use tshark to extract only the `data.data` field from these two communications.  
 Then we make it unique with `uniq`, convert the data to ascii with `xxd` and then base64 decode
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/FindAndOpen]
