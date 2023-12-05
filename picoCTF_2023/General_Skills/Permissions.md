@@ -22,6 +22,7 @@ Can you login and read the root file?
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/363](https://play.picoctf.org/practice/challenge/363)
 
 ## Solution
 
@@ -60,7 +61,7 @@ applicable law.
 picoplayer@challenge:~$ 
 ```
 
-Lets change directory and look for the /root directory.
+Let's change directory and look for the /root directory.
 ```
 picoplayer@challenge:~$ cd /
 picoplayer@challenge:/$ ls -la
@@ -94,7 +95,7 @@ drwxr-xr-x    1 root   root     17 Mar  8 02:09 var
 
 We can see that it is a directory rather than a file and that the only user that have permissions to read the directory is root.
 
-So what can we do to escalate our privileges? Lets check what commands we can run as root via `sudo`.
+So what can we do to escalate our privileges? Let's check what commands we can run as root via `sudo`.
 This is done with `sudo -l`.
 ```
 picoplayer@challenge:/$ sudo -l
@@ -166,7 +167,7 @@ drwxr-xr-x    1 root   root     18 Mar  8 02:06 usr
 drwxr-xr-x    1 root   root     17 Mar  8 02:09 var
 ```
 
-It's readable for all users so lets check that out
+It's readable for all users so let's check that out
 ```
 picoplayer@challenge:/$ cd challenge/
 picoplayer@challenge:/challenge$ ls -la
@@ -176,7 +177,7 @@ drwxr-xr-x 1 root root 51 Jul 19 06:06 ..
 -rw-r--r-- 1 root root 98 Mar 16 02:29 metadata.json
 ```
 
-Lets `cat` the file to view its contents.
+Let's `cat` the file to view its contents.
 ```
 picoplayer@challenge:/challenge$ cat metadata.json
 {"flag": "picoCTF{<REDACTED>}", "username": "picoplayer", "password": "pEN9KN1qYm"}
