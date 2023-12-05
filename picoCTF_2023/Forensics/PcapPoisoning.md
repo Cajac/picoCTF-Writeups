@@ -17,10 +17,11 @@ Download this file and find the flag.
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/362](https://play.picoctf.org/practice/challenge/362)
 
 ## Solution
 
-Open the PCAP-file in [Wireshark](https://www.wireshark.org/) and lets take the description more or less literally by just assuming the flag are available in plain in the packet capture.
+Open the PCAP-file in [Wireshark](https://www.wireshark.org/) and let's take the description more or less literally by just assuming the flag are available in plain in the packet capture.
 
 Set a display filter of `tcp.payload contains "picoCTF"` and press Enter.
 
