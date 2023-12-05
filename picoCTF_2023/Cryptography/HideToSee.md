@@ -18,19 +18,20 @@ Look at this image here.
 Hints:
 1. Download the image and try to extract it.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/351](https://play.picoctf.org/practice/challenge/351)
 
 ## Solution
 
-The challange name (Hide something) suggests there are steganography involved.  
+The challange name (Hide something) suggests that there is steganography involved.  
 Also the name of the given file (atbash.jpg) suggests that the [Atbash substitution cipher](https://en.wikipedia.org/wiki/Atbash) is used to encode the flag.
 
 In steganography challenges there are a number of checks that are more or less "standard practice". These include:
 1. Checking for metadata with [ExifTool](https://exiftool.org/)
-2. Checking for embedded strings
-3. Checking for "forensically" embedded Zip-files with tools such as [Binwalk ](https://github.com/ReFirmLabs/binwalk)
-4. Checking for "staganography" hidden files with tools such as [steghide](https://steghide.sourceforge.net/)
+2. Checking for embedded [strings](https://en.wikipedia.org/wiki/Strings_(Unix))
+3. Checking for "forensically" embedded Zip-files with tools such as [Binwalk](https://github.com/ReFirmLabs/binwalk)
+4. Checking for "steganography" hidden files with tools such as [steghide](https://steghide.sourceforge.net/)
 
-Lets start by running through these standard checks one-by-one until we find the flag.
+Let's start by running through these standard checks one-by-one until we find the flag.
 
 ### Checking for metadata
 
@@ -95,7 +96,7 @@ Nope, nothing of interest here either.
 
 ### Checking for embedded Zip-files
 
-Now lets check for embedded Zip-files or other interesting files with `binwalk`
+Now let's check for embedded Zip-files or other interesting files with `binwalk`
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Cryptography/HideToSee]
 └─$ binwalk atbash.jpg 
@@ -109,9 +110,9 @@ Nope, fail again.
 
 ### Checking for hidden files
 
-The previous check looked for "foresically" embedded/hidden files. This check looks for "staganography" hidden/embedded files with tools such as `steghide`.
+The previous check looked for "foresically" embedded/hidden files. This check looks for "steganography" hidden/embedded files with tools such as `steghide`.
 
-Lets use the 'extract' command in `steghide` and specifying the stegofile with -sf.
+Let's use the 'extract' command in `steghide` and specifying the stegofile with -sf.
 ```
 Z:\CTFs\picoCTF\picoCTF_2023\Cryptography\HideToSee>steghide extract -sf atbash.jpg
 Enter passphrase:
@@ -121,7 +122,7 @@ wrote extracted data to "encrypted.txt".
 Since we don't have any password just press enter when prompted.
 Yes, there is indeed a hidden file call `encrypted.txt`.
 
-Lets view it
+Let's view it
 ```
 Z:\CTFs\picoCTF\picoCTF_2023\Cryptography\HideToSee>type encrypted.txt
 krxlXGU{zgyzhs_xizxp_92533667}
@@ -141,4 +142,5 @@ For additional information, please see the references below.
 
 - [Wikipedia - Atbash](https://en.wikipedia.org/wiki/Atbash)
 - [Wikipedia - Exif](https://en.wikipedia.org/wiki/Exif)
+- [Wikipedia - Steganography](https://en.wikipedia.org/wiki/Steganography)
 - [Wikipedia - strings (Unix)](https://en.wikipedia.org/wiki/Strings_(Unix))
