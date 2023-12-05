@@ -18,12 +18,13 @@ Take a look at this CSR file here.
 Hints:
 1. Download the certificate signing request and try to read it.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/367](https://play.picoctf.org/practice/challenge/367)
 
 ## Solution
 
 There are several ways to solve this challenge. Below are three of them.
 
-But first lets see how the file looks in a common text editor.
+But first let's see how the file looks in a common text editor.
 ```
 -----BEGIN CERTIFICATE REQUEST-----
 MIICpzCCAY8CAQAwPDEmMCQGA1UEAwwdcGljb0NURntyZWFkX215Y2VydF81YWVi
