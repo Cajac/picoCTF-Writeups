@@ -18,6 +18,7 @@ Download the encrypted flag here.
 Hints:
 1. Sometimes rotation is right
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/373](https://play.picoctf.org/practice/challenge/373)
 
 ## Solution
 
