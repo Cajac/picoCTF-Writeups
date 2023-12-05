@@ -26,6 +26,7 @@ ssh -p 62169 ctf-player@saturn.picoctf.net. The password is d137d16e
 Hints:
 1. What programs do you have access to?
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/378](https://play.picoctf.org/practice/challenge/378)
 
 ## Solution
 
@@ -62,7 +63,7 @@ And no `cat` or `ls`. But there is `bash`.
 
 ### Try to launch a real shell
 
-Lets try to launch `bash`
+Let's try to launch `bash`
 ```
 Specialer$ bash
 Specialer$ 
