@@ -21,10 +21,11 @@ Hints:
 1. Some crypto-currencies abuse databases exist; check them out!
 2. Maybe Google might help.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/357](https://play.picoctf.org/practice/challenge/357)
 
 ## Solution
 
-Lets start easy and just Google for the Bitcoin address `1Mz7153HMuxXTuR2R1t78mGSdzaAtNbBWX`.
+Let's start easy and just Google for the Bitcoin address `1Mz7153HMuxXTuR2R1t78mGSdzaAtNbBWX`.
 
 Looking through the top search results you can see headlines such as
  * [Petya Ransomware Fast Spreading Attack](https://otx.alienvault.com/pulse/59525e7a95270e240c055ead/)
