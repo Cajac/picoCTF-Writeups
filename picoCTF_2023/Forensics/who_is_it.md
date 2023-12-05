@@ -2,6 +2,7 @@
 
 - [Challenge information](#challenge-information)
 - [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -20,10 +21,11 @@ Flag: picoCTF{FirstnameLastname}
 Hints:
 1. whois can be helpful on IP addresses also, not only domain names.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/388](https://play.picoctf.org/practice/challenge/388)
 
 ## Solution
 
-Lets start by opening the `email-export.eml` file in a text editor such as [Notepad++](https://notepad-plus-plus.org/).
+Let's start by opening the `email-export.eml` file in a text editor such as [Notepad++](https://notepad-plus-plus.org/).
 
 If you are new to e-mail headers they can be a little bit confusing at first. Consider using one of the free online services as support.
 
@@ -40,8 +42,7 @@ Examples of online services that can help you analyze e-mail headers are:
 
 Go through the e-mail header line by line until you start to find IPv4 addresses.
 
-You will find the sender IP-address in several headers such as
-the `Received` header
+You will find the sender's IP-address in several headers such as the `Received` header
 ```
 Received: from mail.onionmail.org (mail.onionmail.org. [173.249.33.206])
         by mx.google.com with ESMTPS id f16-20020a05600c4e9000b003a1947873d6si1882702wmq.224.2022.07.07.23.19.47
@@ -71,7 +72,7 @@ Next, we need to lookup the registered owner of the IP-address with whois.
 
 This can be done with a linux tool such as `whois` or an online site such [DomainTools](https://whois.domaintools.com/173.249.33.206).
 
-Lets use `whois` in this case
+Let's use `whois` in this case
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Forensics/who_is_it]
 └─$ whois 173.249.33.206
@@ -131,3 +132,9 @@ source:         RIPE
 ```
 
 You will find what/who you are looking for in the person record towards the end of the output.
+
+For additional information, please see the references below.
+
+## References
+
+- [whois - Linux manual page](https://linux.die.net/man/1/whois)
