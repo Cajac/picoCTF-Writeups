@@ -22,6 +22,7 @@ To get the flag, you must beat the Imp at least once out of the many rounds.
 Hints:
  1. You may be able to find a viable warrior in beginner docs
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/369](https://play.picoctf.org/practice/challenge/369)
 
 ## Solution
 
