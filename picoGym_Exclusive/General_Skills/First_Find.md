@@ -16,6 +16,7 @@ Unzip this archive and find the file named 'uber-secret.txt'
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/320](https://play.picoctf.org/practice/challenge/320)
 
 ## Solution
 
@@ -48,7 +49,7 @@ Archive:  files.zip
   inflating: files/14789.txt.utf-8   
 ```
 
-The path to the file is visible in the middle of the file listing (prefixed with extracting) but lets search for it anyway
+The path to the file is visible in the middle of the file listing (prefixed with extracting) but let's search for it anyway
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoGym/General_Skills/Fist_Find]
 └─$ find files -name uber-secret.txt
