@@ -2,6 +2,7 @@
 
 - [Challenge information](#challenge-information)
 - [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -17,6 +18,7 @@ I forgot the password to this file. Please find it for me?
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/372](https://play.picoctf.org/practice/challenge/372)
 
 ## Solution
 
@@ -182,3 +184,11 @@ Enter the password to unlock this file: picoCTF{<PARTIAL FLAG>
 You entered: picoCTF{<PARTIAL FLAG>
 Password correct, please see flag: picoCTF{<FULL FLAG>}
 ```
+
+For additional information, please see the references below.
+
+### References
+
+- [Ghidra - Homepage](https://ghidra-sre.org/)
+- [gdb - Linux manual page](https://man7.org/linux/man-pages/man1/gdb.1.html)
+- [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)
