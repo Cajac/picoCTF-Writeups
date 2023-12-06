@@ -2,6 +2,7 @@
 
 - [Challenge information](#challenge-information)
 - [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -18,6 +19,7 @@ Hints:
 1. Decompile
 2. mobsf or jadx
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/381](https://play.picoctf.org/practice/challenge/381)
 
 ## Solution
 
@@ -26,7 +28,7 @@ There are several ways to solve this challenge. Here are two solutions presented
 ### Solution #1 - Grepping for the flag
 
 APK-files are simply a Zip-file and can be unpacked with a tool such as [7-Zip](https://www.7-zip.org/).  
-Unpack the APK-file and then just use `grep` recursively on all the unpacked files
+Unpack the [APK-file](https://en.wikipedia.org/wiki/Apk_(file_format)) and then just use `grep` recursively on all the unpacked files
 ```
 Z:\CTFs\picoCTF\picoCTF_2023\Reverse_Engineering\timer\timer>grep -iR picoCTF *
 apktool.yml:  versionName: picoCTF{<REDACTED>}
@@ -55,3 +57,11 @@ public final class BuildConfig {
     public static final String VERSION_NAME = "picoCTF{<REDACTED>}";
 }
 ```
+
+For additional information, please see the references below.
+
+### References
+
+- [7-Zip - Homepage](https://www.7-zip.org/)
+- [Jadx-GUI - GitHub](https://github.com/skylot/jadx)
+- [Wikipedia - apk (file format)](https://en.wikipedia.org/wiki/Apk_(file_format))
