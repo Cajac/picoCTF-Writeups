@@ -2,6 +2,7 @@
 
 - [Challenge information](#challenge-information)
 - [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -18,6 +19,7 @@ Can you help me unlock my safe?
 Hints:
 1. Download and try to decompile the file.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/375](https://play.picoctf.org/practice/challenge/375)
 
 ## Solution
 
@@ -50,3 +52,11 @@ You find the flag in the openSafe function (but it's redacted here).
     return false;
   }
 ```
+
+For additional information, please see the references below.
+
+### References
+
+- [JD-GUI - GitHub](https://github.com/java-decompiler/jd-gui)
+- [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
+- [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)
