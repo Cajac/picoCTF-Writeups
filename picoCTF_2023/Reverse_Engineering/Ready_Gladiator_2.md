@@ -22,6 +22,7 @@ To get the flag, you must beat the Imp all 100 rounds.
 Hints:
  1. If your warrior is close, try again, it may work on subsequent tries... why is that?
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/370](https://play.picoctf.org/practice/challenge/370)
 
 ## Solution
 
