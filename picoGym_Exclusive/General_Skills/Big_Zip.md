@@ -16,6 +16,7 @@ Unzip this archive and find the flag.
 Hints:
 1. Can grep be instructed to look at every file in a directory and its subdirectories?
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/322](https://play.picoctf.org/practice/challenge/322)
 
 ## Solution
 
