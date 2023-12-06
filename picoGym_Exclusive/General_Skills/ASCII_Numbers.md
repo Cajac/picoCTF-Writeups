@@ -18,6 +18,7 @@ Hints:
 1. CyberChef is a great tool for any encoding but especially ASCII.
 2. Try CyberChef's 'From Hex' function
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/390](https://play.picoctf.org/practice/challenge/390)
 
 ## Solution
 
