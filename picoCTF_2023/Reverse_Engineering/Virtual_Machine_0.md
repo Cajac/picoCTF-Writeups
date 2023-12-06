@@ -2,6 +2,7 @@
 
 - [Challenge information](#challenge-information)
 - [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
 ```
@@ -21,11 +22,12 @@ Hints:
 1. Rotating the axle that number of times is obviously not feasible. 
    Can you model the mathematical relationship between red and blue?
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/385](https://play.picoctf.org/practice/challenge/385)
 
 ## Solution
 
 Unzipping the given Zip-file gives you a .dae file. A format I had previously never heard about.
-So I Googled for a program to open it with and found [Blender](https://www.blender.org/) which is free and open source.  
+So I googled for a program to open it with and found [Blender](https://www.blender.org/) which is free and open source.  
 
 ### Physically dismantle the machine
 
@@ -56,3 +58,9 @@ Then calculate an assumed hex-encoded flag in Python
 'picoCTF{<REDACTED>}'
 >>> 
 ```
+
+For additional information, please see the references below.
+
+### References
+
+- [Blender - Homepage](https://www.blender.org/)
