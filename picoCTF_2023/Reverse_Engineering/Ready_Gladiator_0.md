@@ -22,6 +22,7 @@ Hints:
  1. CoreWars is a well-established game with a lot of docs and strategy
  2. Experiment with input to the CoreWars handler or create a self-defeating bot
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/368](https://play.picoctf.org/practice/challenge/368)
 
 ## Solution
 
@@ -69,7 +70,7 @@ Try again. Your warrior (warrior 1) must lose all rounds, no ties.
 
 Then I started to write to my own warrior, a self-destructive one the kills itself with the `dat` instruction.
 
-After some trial and error with the minimal syntax this became the result which I named `looser.red`
+After some trial and error with the syntax this became the result which I named `looser.red`
 ```
 ;redcode
 ;name Looser
