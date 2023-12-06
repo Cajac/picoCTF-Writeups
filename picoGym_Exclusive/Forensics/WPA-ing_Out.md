@@ -21,12 +21,13 @@ Hints:
    the JAWS of the network.
 2. Aircrack-ng can make a pcap file catch big air...and crack a password.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/237](https://play.picoctf.org/practice/challenge/237)
 
 ## Solution
 
 ### Find out the name of the network, the SSID
 
-You probably could get away with cracking all the SSIDs in the PCAP file but lets make the cracking more 
+You probably could get away with cracking all the SSIDs in the PCAP file but let's make the cracking more 
 targeted by finding out the SSIDs in the PCAP. We do this for learning in two steps:
 1. Finding out the name of the SSID field in Wireshark
 2. Listing all the SSID names in `tshark` (the commandline version of Wireshark)
@@ -38,7 +39,7 @@ First open the PCAP-file in [Wireshark](https://www.wireshark.org/) and expand t
 In the status bar at the bottom of the window you can see that the field name for the SSID is `wlan.ssid`.
 Now we have the name of the SSID field.
 
-Then lets find out if there are any packets from other networks contained in the PCAP. For this we use `tshark`.
+Then let's find out if there are any packets from other networks contained in the PCAP. For this we use `tshark`.
 We only want to output the `wlan.ssid` field so we change the output to specific fields (-T fields) and
 specify our wanted field with -e. 
 
