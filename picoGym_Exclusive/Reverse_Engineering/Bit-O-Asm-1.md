@@ -20,6 +20,7 @@ Hints:
 1. As with most assembly, there is a lot of noise in the instruction dump.  
    Find the one line that pertains to this question and don't second guess yourself!
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/391](https://play.picoctf.org/practice/challenge/391)
 
 ## Solution
 
