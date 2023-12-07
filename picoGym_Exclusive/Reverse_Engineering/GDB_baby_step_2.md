@@ -19,6 +19,7 @@ If the answer was 0x11 your flag would be picoCTF{17}.
 Hints:
 1. You could calculate eax yourself, or you could set a breakpoint for after the calculcation and inspect eax to let the program do the heavy-lifting for you.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/396](https://play.picoctf.org/practice/challenge/396)
 
 ## Solution
 
@@ -29,9 +30,9 @@ Start by checking the file type with `file`.
 debugger0_b: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=95b0203be2982e75dbc01d1cc25b1309f7aec5f7, for GNU/Linux 3.2.0, not stripped
 ```
 
-The file isn't stripped of debug information which makes it easier.
+The file isn't stripped of debug information which makes it easier to debug.
 
-Start GDB in quite mode and then set the disassembly format to intel, which I prefer.
+Start GDB in quiet mode and then set the disassembly format to intel, which I prefer.
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/GDB_baby_step_2]
 └─$ gdb -q debugger0_b 
@@ -84,6 +85,8 @@ $1 = 307019
 ```
 
 ## References
+
+- [gdb - Linux manual page](https://man7.org/linux/man-pages/man1/gdb.1.html)
 
 Intel 64 and IA-32 Architectures Developer's Manuals in PDF-format  
 - [Volume 2A: Instruction Set Reference, A-M](https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-2a-manual.pdf)
