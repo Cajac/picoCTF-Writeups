@@ -19,6 +19,7 @@ If the constant you find is 0x1000, the flag will be picoCTF{4096}.
 Hints:
  1. A function can be referenced by either its name or its starting address in gdb.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/398](https://play.picoctf.org/practice/challenge/398)
 
 ## Solution
 
@@ -29,9 +30,9 @@ Start by checking the file type with `file`.
 debugger0_d: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=96ad8d8a802a567a7a1a27cf9b7231e2f7fa15f7, for GNU/Linux 3.2.0, not stripped
 ```
 
-The file isn't stripped of debug information which makes it easier.
+The file isn't stripped of debug information which makes it easier to debug.
 
-Start GDB in quite mode and then set the disassembly format to intel, which I prefer.
+Start GDB in quiet mode and then set the disassembly format to intel, which I prefer.
 ```
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoGym/Reverse_Engineering/GDB_baby_step_4]
 └─$ gdb -q debugger0_d
@@ -80,7 +81,6 @@ Dump of assembler code for function main:
    0x000000000040114d <+49>:    leave  
    0x000000000040114e <+50>:    ret    
 End of assembler dump.
-
 ```
 
 Then disassemble the `func1` function
@@ -98,7 +98,7 @@ Dump of assembler code for function func1:
 End of assembler dump.
 ```
 
-We see that the contant is `0x3269`.
+We see that the constant is `0x3269`.
 
 The flag should be in decimal format so convert it in Python:
 ```
@@ -113,6 +113,8 @@ Type "help", "copyright", "credits" or "license" for more information.
 Finally, create the flag like this `picoCTF{<Your_number>}`.
 
 ## References
+
+- [gdb - Linux manual page](https://man7.org/linux/man-pages/man1/gdb.1.html)
 
 Intel 64 and IA-32 Architectures Developer's Manuals in PDF-format  
 - [Volume 2A: Instruction Set Reference, A-M](https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-2a-manual.pdf)
