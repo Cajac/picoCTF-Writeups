@@ -19,6 +19,7 @@ If the answer was 0x11 your flag would be picoCTF{17}.
 Hints:
 1. Not everything in this disassembly listing is optimal.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/393](https://play.picoctf.org/practice/challenge/393)
 
 ## Solution
 
