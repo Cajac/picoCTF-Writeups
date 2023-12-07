@@ -24,6 +24,7 @@ Hints:
    efficient machine language, in this case: x86_64.
 2. How can you find the address that win is at?
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/403](https://play.picoctf.org/practice/challenge/403)
 
 ## Solution
 
@@ -108,7 +109,7 @@ Since there isn't any 'flag.txt' file locally we get an error message, but other
 
 ### Connect to the server and get the flag
 
-Finally, lets send our tiny exploit to the server
+Finally, let's send our tiny exploit to the server
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Picker_IV]
 └─$ echo "40129e" | nc saturn.picoctf.net 64448
@@ -122,4 +123,5 @@ For additional information, please see the references below.
 ## References
 
 - [gdb - Linux manual page](https://man7.org/linux/man-pages/man1/gdb.1.html)
+- [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
 - [objdump - Linux manual page](https://man7.org/linux/man-pages/man1/objdump.1.html)
