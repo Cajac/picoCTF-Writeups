@@ -21,6 +21,7 @@ Hints:
 1. gdb is a very good debugger to use for this problem and many others!
 2. main is actually a recognized symbol that can be used with gdb commands.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/395](https://play.picoctf.org/practice/challenge/395)
 
 ## GDB Solution
 
@@ -31,9 +32,9 @@ Start by checking the file type with `file`.
 debugger0_a: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=15a10290db2cd2ec0c123cf80b88ed7d7f5cf9ff, for GNU/Linux 3.2.0, not stripped
 ```
 
-The file isn't stripped of debug information which makes it easier.
+The file isn't stripped of debug information which makes it easier to debug.
 
-Start GDB in quite mode and then set the disassembly format to intel, which I prefer.
+Start GDB in quiet mode and then set the disassembly format to intel, which I prefer.
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/GDB_baby_step_1]
 └─$ gdb -q debugger0_a 
@@ -104,6 +105,9 @@ Disassembly of section .fini:
 ```
 
 ## References
+
+- [gdb - Linux manual page](https://man7.org/linux/man-pages/man1/gdb.1.html)
+- [objdump - Linux manual page](https://man7.org/linux/man-pages/man1/objdump.1.html)
 
 Intel 64 and IA-32 Architectures Developer's Manuals in PDF-format  
 - [Volume 2A: Instruction Set Reference, A-M](https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-2a-manual.pdf)
