@@ -19,12 +19,13 @@ Connect to the program with netcat:
 Hints:
  1. Can you point the program to a function that does something useful for you?
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/400](https://play.picoctf.org/practice/challenge/400)
 
 ## Solution
 
 ### Study the source code
 
-Lets start by studying the "main" part of the python program.
+Let's start by studying the "main" part of the python program.
 ```python
 while(True):
   try:
@@ -60,7 +61,7 @@ def win():
 
 ### Do a test run
 
-Next lets explore the program behavior by running it
+Next let's explore the program behavior by running it
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Picker_I]
 └─$ nc saturn.picoctf.net 58059
@@ -71,7 +72,7 @@ Try entering "getRandomNumber" without the double quotes...
 
 ### Get the encoded flag
 
-Now lets call the `win` function instead to get the flag
+Now let's call the `win` function instead to get the flag
 ```
 Try entering "getRandomNumber" without the double quotes...
 ==> win
@@ -82,7 +83,7 @@ Try entering "getRandomNumber" without the double quotes...
 
 Finally, we need to decode the flag. This can be done with [CyberChef's 'From Hex' recipe](https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')) or with a python script.
 
-Lets write a python script called `decode.py`
+Let's write a python script called `decode.py`
 ```python
 #!/usr/bin/python
 
