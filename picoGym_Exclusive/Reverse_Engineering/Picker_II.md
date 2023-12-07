@@ -19,12 +19,13 @@ Connect to the program with netcat:
 Hints:
  1. Can you do what win does with your input to the program?
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/401](https://play.picoctf.org/practice/challenge/401)
 
 ## Solution
 
 ### Study the source code
 
-Lets start by studying the "main" part of the python program.
+Let's start by studying the "main" part of the python program.
 ```python
 while(True):
   try:
@@ -61,7 +62,7 @@ def win():
 
 ### Do a test run
 
-Lets try to call the `win` function directly
+Let's try to call the `win` function directly
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Picker_II]
 └─$ nc saturn.picoctf.net 59461
@@ -73,7 +74,7 @@ name 'Win' is not defined
 
 ### Get the flag
 
-Finally, lets read the flag directly as suggested in the hint
+Finally, let's read the flag directly as suggested in the hint
 ```
 ==> print(open('flag.txt', 'r').read())
 picoCTF{<REDACTED>}
