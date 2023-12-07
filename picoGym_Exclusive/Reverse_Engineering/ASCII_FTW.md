@@ -17,6 +17,7 @@ Hints:
 1. The combined range of hex-ascii for English alphabets and numerical digits is from 30 to 7A.
 2. Online hex-ascii converters can be helpful.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/389](https://play.picoctf.org/practice/challenge/389)
 
 ## Solution
 
