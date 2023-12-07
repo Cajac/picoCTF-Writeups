@@ -19,12 +19,13 @@ Connect to the program with netcat:
 Hints:
 (None)
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/402](https://play.picoctf.org/practice/challenge/402)
 
 ## Solution
 
 ### Study the source code
 
-This time the python script is a bit larger. Lets start by looking at the "main" part
+This time the python script is a bit larger. Let's start by looking at the "main" part
 ```python
 import re
 
@@ -90,7 +91,7 @@ getRandomNumber                 \
 
 ### Do a test run
 
-Next lets explore the program behavior by running it as intended
+Next let's explore the program behavior by running it as intended
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Picker_III]
 └─$ nc saturn.picoctf.net 60097
@@ -109,7 +110,7 @@ print_table                     read_variable                   write_variable  
 
 ### Rewrite the function table to get the encoded flag
 
-Now, lets try to overwrite the function table
+Now, let's try to overwrite the function table
 ```
 ==> 3
 Please enter variable name to write: func_table
@@ -121,7 +122,7 @@ Table corrupted. Try entering 'reset' to fix it
 
 Hhm, that didn't work. We need to study the format of the `func_table` in more detail.
 
-Remember in global variables in the beginning of the script?
+Remember the global variables in the beginning of the script?
 ```python
 FUNC_TABLE_SIZE = 4
 FUNC_TABLE_ENTRY_SIZE = 32
