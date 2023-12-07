@@ -19,6 +19,7 @@ If the answer was 0x11 your flag would be picoCTF{17}.
 Hints:
 1. PTR's or 'pointers', reference a location in memory where values can be stored.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/392](https://play.picoctf.org/practice/challenge/392)
 
 ## Solution
 
