@@ -20,6 +20,7 @@ Hints:
 1. Don't tell anyone I told you this, but you can solve this problem without understanding the compare/jump relationship.
 2. Of course, if you're really good, you'll only need one attempt to solve this problem.
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/394](https://play.picoctf.org/practice/challenge/394)
 
 ## Solution
 
