@@ -24,6 +24,7 @@ Hints:
  4. Don't use square brackets for addr
  5. What is endianness?
 ```
+Challenge link: [https://play.picoctf.org/practice/challenge/397](https://play.picoctf.org/practice/challenge/397)
 
 ## Solution
 
@@ -34,9 +35,9 @@ Start by checking the file type with `file`.
 debugger0_c: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=a10a8fa896351748020d158a4e18bb4be15cd3aa, for GNU/Linux 3.2.0, not stripped
 ```
 
-The file isn't stripped of debug information which makes it easier.
+The file isn't stripped of debug information which makes it easier to debug.
 
-Start GDB in quite mode and then set the disassembly format to intel, which I prefer.
+Start GDB in quiet mode and then set the disassembly format to intel, which I prefer.
 ```
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/GDB_baby_step_3]
 └─$ gdb -q debugger0_c 
@@ -82,6 +83,8 @@ Then examine the 4 bytes of memory starting at position RBP-0x4.
 Finally, create the flag with the hex values in the order above.
 
 ## References
+
+- [gdb - Linux manual page](https://man7.org/linux/man-pages/man1/gdb.1.html)
 
 Intel 64 and IA-32 Architectures Developer's Manuals in PDF-format  
 - [Volume 2A: Instruction Set Reference, A-M](https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-2a-manual.pdf)
