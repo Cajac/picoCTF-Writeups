@@ -23,7 +23,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/116](https://play.p
 
 ### Analyze the output
 
-Let's start by connecting to the service and watch the output
+We start by connecting to the service and watch the output
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/speeds_and_feeds]
 └─$ nc mercury.picoctf.net 59953
