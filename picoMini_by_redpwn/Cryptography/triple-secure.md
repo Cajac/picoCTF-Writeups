@@ -22,7 +22,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/209](https://play.p
 
 ### Analyze the given files
 
-Let's start by looking at the given files. First the python script
+We start by looking at the given files. First the python script
 ```python
 #!/usr/bin/env python3
 
@@ -93,7 +93,7 @@ r = gcd(n2, n3)
 print(f"p = {p}\nq = {q}\nr = {r}")
 ```
 
-Then let's run this script called `factorize.py`
+Then we run this script called `factorize.py`
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/triple-secure]
 └─$ ~/python_venvs/gmpy2/bin/python ./factorize.py 
