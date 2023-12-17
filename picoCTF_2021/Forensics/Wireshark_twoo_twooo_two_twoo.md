@@ -24,7 +24,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/110](https://play.p
 
 ### Get an overview of the traffic
 
-Let's get an overview of the traffic with `Protocol Hierarchy Statistics` with the commandline version of Wireshark - [tshark](https://www.wireshark.org/docs/man-pages/tshark.html)
+We start by getting an overview of the traffic with `Protocol Hierarchy Statistics` using the commandline version of Wireshark - [tshark](https://www.wireshark.org/docs/man-pages/tshark.html)
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Wireshark_twoo_twooo_two_twoo]
 └─$ tshark -q -z io,phs -r shark2.pcapng 
@@ -115,14 +115,12 @@ fQ==
 
 ### Get the flag
 
-Next, let's combine the parts and base64-decode the result
+Finally, we combine the parts and base64-decode the result to get the flag
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Wireshark_twoo_twooo_two_twoo]
 └─$ tshark -r shark2.pcapng -Y "dns && ip.dst==18.217.1.57" -T fields -e dns.qry.name | cut -d '.' -f1 | uniq | tr -d '\n' | base64 -d
 picoCTF{REDACTED}
 ```
-
-And there we have the flag.
 
 For additional information, please see the references below.
 
