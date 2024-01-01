@@ -200,9 +200,9 @@ It should look something like this:
 
 ## Sleuth Kit solution
 
-Finally, we can use The Sleuth Kit's command to find the flag.
+Finally, we can use The Sleuth Kit's commands to find the flag.
 
-We search for a file named `flag*` or `Flag*` in both partitions with `fls`
+We recursively list all filenames in both partitions with `fls` and then `grep` for the flag file
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
 └─$ fls -F -r -o 2048 disk.flag.img | grep [Ff]lag
