@@ -1,7 +1,8 @@
 # Permissions
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [The likely intended solution](#the-likely-intended-solution)
+- [An alternative solution](#an-alternative-solution)
 - [References](#references)
 
 ## Challenge information
@@ -24,14 +25,12 @@ Hints:
 ```
 Challenge link: [https://play.picoctf.org/practice/challenge/363](https://play.picoctf.org/practice/challenge/363)
 
-## Solution
+## The likely intended solution
 
 When the description says read the 'root file' I think they rather meant the /root directory!
 
-### The likely intended solution
-
-Start by connecting to the server with SSH
-```
+We start by connecting to the server with SSH
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/General_Skills/Permissions]
 └─$ ssh -p 59219 picoplayer@saturn.picoctf.net
 The authenticity of host '[saturn.picoctf.net]:59219 ([13.59.203.175]:59219)' can't be established.
@@ -62,7 +61,7 @@ picoplayer@challenge:~$
 ```
 
 Let's change directory and look for the /root directory.
-```
+```bash
 picoplayer@challenge:~$ cd /
 picoplayer@challenge:/$ ls -la
 total 0
@@ -97,7 +96,7 @@ We can see that it is a directory rather than a file and that the only user that
 
 So what can we do to escalate our privileges? Let's check what commands we can run as root via `sudo`.
 This is done with `sudo -l`.
-```
+```bash
 picoplayer@challenge:/$ sudo -l
 [sudo] password for picoplayer: 
 Matching Defaults entries for picoplayer on challenge:
@@ -134,10 +133,10 @@ We can see that there is a file named `.flag.txt` in the `/root` directory.
 
 Reading that file in the same manner with `sudo vi /root/.flag.txt` gets you the flag.
 
-### An alternative solution
+## An alternative solution
 
 When I looked through the file and directory listing in `/` I also noticed that there is a directory called `challenge`.
-```
+```bash
 picoplayer@challenge:/$ ls -la
 total 0
 drwxr-xr-x    1 root   root     51 Jul 26 12:00 .
@@ -168,7 +167,7 @@ drwxr-xr-x    1 root   root     17 Mar  8 02:09 var
 ```
 
 It's readable for all users so let's check that out
-```
+```bash
 picoplayer@challenge:/$ cd challenge/
 picoplayer@challenge:/challenge$ ls -la
 total 4
@@ -178,7 +177,7 @@ drwxr-xr-x 1 root root 51 Jul 19 06:06 ..
 ```
 
 Let's `cat` the file to view its contents.
-```
+```bash
 picoplayer@challenge:/challenge$ cat metadata.json
 {"flag": "picoCTF{<REDACTED>}", "username": "picoplayer", "password": "pEN9KN1qYm"}
 ```
