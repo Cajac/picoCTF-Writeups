@@ -1,7 +1,8 @@
 # Vigenere
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [Online solver solution](#online-solver-solution)
+- [Python solution](#python-solution)
 - [References](#references)
 
 ## Challenge information
@@ -20,8 +21,6 @@ Hints:
 ```
 Challenge link: [https://play.picoctf.org/practice/challenge/316](https://play.picoctf.org/practice/challenge/316)
 
-## Solution
-
 The message given looks like this
 ```
 rgnoDVD{O0NU_WQ3_G1G3O3T3_A1AH3S_f85729e7}
@@ -29,14 +28,14 @@ rgnoDVD{O0NU_WQ3_G1G3O3T3_A1AH3S_f85729e7}
 
 There probably are more ways to solve this challenge, but here are two solutions.
 
-### Use an online solver
+## Online solver solution
 
 You can use an online solver such as [Rumkin](https://rumkin.com/tools/cipher/vigenere/) to solve this challenge.
 
 Set the 'Operating Mode' to `Decrypt` and set the 'Cipher key' to `CYLAB`.  
 Then enter the cipher text in the large text field and you get the flag at the bottom of the window.
 
-### Use a Python script
+## Python solution
 
 In addition, let's write a small Python script called `solve.py` to decode this
 ```python
