@@ -1,7 +1,8 @@
 # substitution0
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [Quipqiup solution](#quipqiup-solution)
+- [Python solution](#python-solution)
 - [References](#references)
 
 ## Challenge information
@@ -20,8 +21,6 @@ Hints:
 1. Try a frequency attack. An online tool might help.
 ```
 Challenge link: [https://play.picoctf.org/practice/challenge/307](https://play.picoctf.org/practice/challenge/307)
-
-## Solution
 
 The message we were given looks like this
 ```
@@ -48,7 +47,7 @@ And at the last line we have what looks like our encrypted flag.
 
 There probably are more ways to solve this challenge, but here are two solutions.
 
-### The easy quipqiup solution
+## Quipqiup solution
 
 As suggested in the hint we can use an online tool such as [quipqiup](https://quipqiup.com/) to solve this.
 
@@ -56,7 +55,7 @@ Input the entire message in the `Puzzle` text field and press `Solve` (with the 
 
 After a short while, you have the flag at the top of the possible solutions.
 
-### The Python solution
+## Python solution
 
 Alternatively, we can write a small Python script to solve this.  
 There is no need to use frequency analysis or brute force since we have the key.
