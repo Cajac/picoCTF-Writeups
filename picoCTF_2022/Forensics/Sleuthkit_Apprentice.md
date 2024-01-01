@@ -155,7 +155,7 @@ Let's check the next partition instead
 └─$ cd /mnt/pico_disk 
 ```
 
-Assume the name of the flag file starts with either `Flag` or `flag` and search for it with `find`.
+Assume the name of the flag file name starts with either `Flag` or `flag` and search for it with `find`.
 ```bash
 ┌──(kali㉿kali)-[/mnt/pico_disk]
 └─$ sudo find . -name [Ff]lag*                                 
@@ -165,7 +165,7 @@ Success!
 
 ### Get the flag
 
-Let's `cat` the contents of the file to get the flag
+And then we `cat` the contents of the file to get the flag
 ```bash
 ┌──(kali㉿kali)-[/mnt/pico_disk]
 └─$ sudo cat ./root/my_folder/flag.uni.txt
