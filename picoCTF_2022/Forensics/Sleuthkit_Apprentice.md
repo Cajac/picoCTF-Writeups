@@ -1,7 +1,11 @@
 # Sleuthkit Apprentice
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [Unpacking and Basic file analysis](#unpacking-and-basic-file-analysis)
+- [Strings and grep solution](#strings-and-grep-solution)
+- [Mount solution](#mount-solution)
+- [FTK Imager solution](#ftk-imager-solution)
+- [Sleuth Kit solution](#sleuth-kit-solution)
 - [References](#references)
 
 ## Challenge information
@@ -21,9 +25,7 @@ Hints:
 ```
 Challenge link: [https://play.picoctf.org/practice/challenge/300](https://play.picoctf.org/practice/challenge/300)
 
-## Solution
-
-### Basic file analysis
+## Unpacking and basic file analysis
 
 Let's start by unpacking the disk image with `gzip -d`. Add `-k` if you want to keep the original input file.
 ```bash
@@ -39,7 +41,7 @@ Then we can use `file` to identify the type of image
 disk.flag.img: DOS/MBR boot sector; partition 1 : ID=0x83, active, start-CHS (0x0,32,33), end-CHS (0xc,223,19), startsector 2048, 204800 sectors; partition 2 : ID=0x82, start-CHS (0xc,223,20), end-CHS (0x16,111,25), startsector 206848, 153600 sectors; partition 3 : ID=0x83, start-CHS (0x16,111,26), end-CHS (0x26,62,24), startsector 360448, 253952 sectors
 ```
 
-Next we check the partition table
+Next we check the partition table with the `mmls` tool from [The Sleuth Kit](https://wiki.sleuthkit.org/index.php?title=TSK_Tool_Overview)
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
 └─$ mmls disk.flag.img       
@@ -58,11 +60,31 @@ There are two possible partitions where the flag could be:
  * The Linux partition which starts on sector `2048`
  * The Linux partition which starts on sector `360448`
 
-Let's check them in that order.
+## Strings and grep solution
+
+The fastest and easiest solution is to run strings on the unpacked disk image and `grep` for the flag.  
+However, we need to take text encoding into account and do several tries to find the right encoding,  
+16-bit big endian in this case.
+
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
+└─$ strings -n 8 -es disk.flag.img | grep -oE 'picoCTF{.*}'
+
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
+└─$ strings -n 8 -eS disk.flag.img | grep -oE 'picoCTF{.*}'
+
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
+└─$ strings -n 8 -eb disk.flag.img | grep -oE 'picoCTF{.*}'
+picoCTF{<REDACTED>}
+```
+
+## Mount solution
+
+Another solution is to mount the partitions and search for the flag with `find`.
 
 ### Mount the partitions
 
-Let's create a directory to mount the partions on
+First, let's create a directory to mount the partitions on
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
 └─$ sudo mkdir /mnt/pico_disk
@@ -77,7 +99,7 @@ Next, we mount the first partition
 
 ### Search for the flag - part 1
 
-Let's check the contents of the partition
+Now we check the contents of the partition
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
 └─$ pushd .
@@ -117,7 +139,7 @@ Nope, this is the wrong partition.
 
 ### Search for the flag - part 2
 
-Let's check the next partition
+Let's check the next partition instead
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
 └─$ sudo umount /mnt/pico_disk                                              
@@ -176,14 +198,41 @@ It should look something like this:
 
 ![Disk_mounted_in_FTK_Imager](Disk_mounted_in_FTK_Imager.png)
 
+## Sleuth Kit solution
+
+Finally, we can use The Sleuth Kit's command to find the flag.
+
+We search for a file named `flag*` or `Flag*` in both partitions with `fls`
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
+└─$ fls -F -r -o 2048 disk.flag.img | grep [Ff]lag
+
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
+└─$ fls -F -r -o 360448 disk.flag.img | grep [Ff]lag 
+r/r * 2082(realloc):    root/my_folder/flag.txt
+r/r 2371:       root/my_folder/flag.uni.txt
+```
+Ah, there is a likely flag file `/root/my_folder/flag.uni.txt` in the second partition.
+
+Then we get the contents of the file with `icat`
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
+└─$ icat -o 360448 disk.flag.img 2371             
+picoCTF{<REDACTED>}
+```
+
 For additional information, please see the references below.
 
 ## References
 
 - [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
 - [find - Linux manual page](https://man7.org/linux/man-pages/man1/find.1.html)
+- [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
 - [mount - Linux manual page](https://man7.org/linux/man-pages/man8/mount.8.html)
+- [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)
 - [sudo - Linux manual page](https://man7.org/linux/man-pages/man8/sudo.8.html)
 - [umount - Linux manual page](https://man7.org/linux/man-pages/man8/umount.8.html)
 - [FTK Imager - Homepage](https://www.exterro.com/ftk-imager)
-- [The Sleuth Kit commands](https://wiki.sleuthkit.org/index.php?title=The_Sleuth_Kit_commands)
+- [The Sleuth Kit - Tool Overview](https://wiki.sleuthkit.org/index.php?title=TSK_Tool_Overview)
+- [Wikipedia - Endianness](https://en.wikipedia.org/wiki/Endianness)
+- [Wikipedia - String (computer science)](https://en.wikipedia.org/wiki/String_(computer_science))
