@@ -22,7 +22,7 @@ Hints:
 
 ### Analyze the given files
 
-Lets start by looking at the given files. First the python script
+Let's start by looking at the given files. First the python script
 ```python
 import random
 import os
@@ -51,7 +51,7 @@ for filename in files:
 The script encrypts all .txt files in the current directory and all its subdirectories.  
 The files are encrypted with a simple substitution cipher.
 
-Then lets check the first lines of the `study-guide.txt` file and how many words it contains
+Then we check the first lines of the `study-guide.txt` file and how many words it contains
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/spelling-quiz]
 └─$ head study-guide.txt                                                        
@@ -71,7 +71,7 @@ wsmvajuv
 272543 study-guide.txt
 ```
 
-And last but not least lets check the encrypted flag
+And last but not least we check the encrypted flag
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/spelling-quiz]
 └─$ cat flag.txt                                                                              
@@ -84,7 +84,7 @@ It looks like the first `picoCTF{` part and the trailing `}` is omitted and we n
 
 To break the substitution cipher I installed and used [Subbreaker](https://gitlab.com/guballa/SubstitutionBreaker).
 
-It's was new tool for me so I needed to check its help
+It was new tool for me so I needed to check its help
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/spelling-quiz]
 └─$ ~/python_venvs/subbreaker/bin/subbreaker -h        
@@ -122,7 +122,8 @@ options:
 ```
 
 I first tried the entire `study-guide.txt` file as input but it seemed to take quite a while so I aborted the run.  
-Then I tried only the first 50 lines of the file but the key became corrupt with at least one faulty substitution.  
+Then I tried only the first 50 lines of the file but the key became corrupt with at least one faulty substitution.
+
 However, the first 100 lines worked just fine
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/spelling-quiz]
@@ -177,7 +178,7 @@ perhaps_the_dog_<REDACTED>
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [os.path — Common pathname manipulations](https://docs.python.org/3/library/os.path.html)
 - [os.walk function](https://docs.python.org/3/library/os.html#os.walk)
