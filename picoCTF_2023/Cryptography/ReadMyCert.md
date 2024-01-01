@@ -1,7 +1,9 @@
 # ReadMyCert
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [CyberChef solution](#cyberchef-solution)
+- [Use an online CSR site solution](#use-an-online-csr-site-solution)
+- [Openssl solution](#openssl-solution)
 - [References](#references)
 
 ## Challenge information
@@ -19,8 +21,6 @@ Hints:
 1. Download the certificate signing request and try to read it.
 ```
 Challenge link: [https://play.picoctf.org/practice/challenge/367](https://play.picoctf.org/practice/challenge/367)
-
-## Solution
 
 There are several ways to solve this challenge. Below are three of them.
 
@@ -47,7 +47,7 @@ FxdQuLOH8GMvl7U=
 
 As hinted by the '=' and the end of the long and cryptic string this is base64 encoded data.
 
-### Getting the flag with CyberChef
+## CyberChef solution
 
 The "quick and dirty" way to get the flag is to use the ['From Base64' recipe in CyberChef](https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)).
 
@@ -55,7 +55,7 @@ Copy the long base64 string but leave out the lines with `BEGIN CERTIFICATE REQU
 
 Most of the output is garbage but you will see the flag in the first line.
 
-### Use an online CSR site
+## Use an online CSR site solution
 
 A neater way to read the flag is to use a CSR online site such as [digicert's certcentral](https://www.digicert.com/ssltools/view-csr/).
 
@@ -63,7 +63,7 @@ Please note that this time you should copy ALL of the lines into the text field.
 
 The flag is visible in the `Common name` field of the certificate.
 
-### Reading the file with openssl
+## Openssl solution
 
 The "advanced" way is the read the file with `openssl` like this
 ```
