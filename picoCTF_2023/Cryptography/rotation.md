@@ -1,7 +1,8 @@
 # rotation
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [CyberChef solution](#cyberchef-solution)
+- [Python solution](#python-solution)
 - [References](#references)
 
 ## Challenge information
@@ -20,14 +21,12 @@ Hints:
 ```
 Challenge link: [https://play.picoctf.org/practice/challenge/373](https://play.picoctf.org/practice/challenge/373)
 
-## Solution
-
-### CyberChef solution
+## CyberChef solution
 
 Open the file in [CyberChef](https://gchq.github.io/CyberChef/) and use the 'ROT13' recipe.  
 The default rotation is 13 steps. Change the amount until you find the flag. The correct amount is 18.
 
-### Python solution
+## Python solution
 
 Even though it takes a bit longer time it's more fun to write a small python script called `solve.py` to bruteforce the challenge.
 
