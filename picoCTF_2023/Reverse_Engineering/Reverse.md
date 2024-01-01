@@ -1,7 +1,9 @@
 # Reverse
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [Searching for strings solution](#searching-for-strings-solution)
+- [Decompiling with Ghidra solution](#decompiling-with-ghidra-solution)
+- [Debugging in GDB solution](#debugging-in-gdb-solution)
 - [References](#references)
 
 ## Challenge information
@@ -20,11 +22,9 @@ Hints:
 ```
 Challenge link: [https://play.picoctf.org/practice/challenge/372](https://play.picoctf.org/practice/challenge/372)
 
-## Solution
-
 There are several ways to solve this challenge. Here are three solutions presented in increasing difficulty.
 
-### Solution #1 - Searching for strings
+## Searching for strings solution
 
 On easy challenges it's always recommended to search for the flag in plain text with `strings`.
 ```
@@ -47,7 +47,7 @@ deregister_tm_clones
 
 And indeed, the flag is visable among the strings.
 
-### Solution #2 - Decompiling with Ghidra
+## Decompiling with Ghidra solution
 
 A more sofisticated solution is to decompile the file in [Ghidra](https://ghidra-sre.org/) and study the code.
 
@@ -93,12 +93,12 @@ undefined8 main(void)
 
 And there the flag is again.
 
-### Solution #3 - Debugging in GDB
+## Debugging in GDB solution
 
 A more advanced solution is to debug the file in GDB and examine the strings that are compared.
 
 Start GDB in quite mode and then set the disassembly format to intel, which I prefer.
-```
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Reverse_Engineering/Reverse]
 └─$ gdb -q ret                                                    
 Reading symbols from ret...
@@ -177,7 +177,7 @@ Breakpoint 1, 0x0000555555555279 in main ()
 
 Note however, that you don't get the full flag here as only a portion of the flag is compared.
 To get the full flag you need to run the program again and input your partial flag. Then the full flag in printed.
-```
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Reverse_Engineering/Reverse]
 └─$ ./ret                                                     
 Enter the password to unlock this file: picoCTF{<PARTIAL FLAG>
