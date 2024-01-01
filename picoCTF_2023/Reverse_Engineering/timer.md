@@ -1,7 +1,8 @@
 # timer
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [Grepping for the flag solution](#grepping-for-the-flag-solution)
+- [Decompiling with JADX-GUI solution](#decompiling-with-jadx-gui-solution)
 - [References](#references)
 
 ## Challenge information
@@ -21,15 +22,13 @@ Hints:
 ```
 Challenge link: [https://play.picoctf.org/practice/challenge/381](https://play.picoctf.org/practice/challenge/381)
 
-## Solution
-
 There are several ways to solve this challenge. Here are two solutions presented in increasing difficulty.
 
-### Solution #1 - Grepping for the flag
+## Grepping for the flag solution
 
 APK-files are simply a Zip-file and can be unpacked with a tool such as [7-Zip](https://www.7-zip.org/).  
 Unpack the [APK-file](https://en.wikipedia.org/wiki/Apk_(file_format)) and then just use `grep` recursively on all the unpacked files
-```
+```bash
 Z:\CTFs\picoCTF\picoCTF_2023\Reverse_Engineering\timer\timer>grep -iR picoCTF *
 apktool.yml:  versionName: picoCTF{<REDACTED>}
 smali_classes3/com/example/timer/BuildConfig.smali:.field public static final VERSION_NAME:Ljava/lang/String; = "picoCTF{<REDACTED>}"
@@ -37,7 +36,7 @@ smali_classes3/com/example/timer/BuildConfig.smali:.field public static final VE
 
 As you can see the flag was present in two different files.
 
-### Solution #2 - Decompiling with JADX-GUI
+## Decompiling with JADX-GUI solution
 
 A more sofisticated solution is to decompile the APK-file with [Jadx-GUI](https://github.com/skylot/jadx) and study the decompiled code.
 
@@ -60,7 +59,7 @@ public final class BuildConfig {
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [7-Zip - Homepage](https://www.7-zip.org/)
 - [Jadx-GUI - GitHub](https://github.com/skylot/jadx)
