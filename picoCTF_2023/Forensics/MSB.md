@@ -1,7 +1,10 @@
 # MSB
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [Basic file analysis](#basic-file-analysis)
+- [StegoVeritas solution](#stegoVeritas-solution)
+- [StegSolve solution](#stegSolve-solution)
+- [SigBits solution](#sigBits-solution)
 - [References](#references)
 
 ## Challenge information
@@ -20,7 +23,7 @@ Hints:
 ```
 Challenge link: [https://play.picoctf.org/practice/challenge/359](https://play.picoctf.org/practice/challenge/359)
 
-## Solution
+## Basic file analysis
 
 From the challenge title and description we can deduce that this is going to be a [steganography](https://en.wikipedia.org/wiki/Steganography) challenge and that the encoding is probably going to be [most significant bit (MSB)](https://en.wikipedia.org/wiki/Bit_numbering).
 
@@ -119,7 +122,7 @@ Image Size                      : 1074x1500
 Megapixels                      : 1.6
 ```
 
-Nope, nothing of interest as expected, but it's good to always double-check.
+Nope, nothing of interest as expected, but it's always good to double-check.
 
 Let's bring out the stego-tools instead.
 
@@ -136,7 +139,7 @@ The output with all tests was quite long so I grepped for the flag
 ```
 but there was no success.
 
-### StegoVeritas solution
+## StegoVeritas solution
 
 Next, I tried [stegoVeritas](https://github.com/bannsec/stegoVeritas).
 ```bash
@@ -208,7 +211,7 @@ If we recursively `grep` for the flag in that subdirectory, we find the flag
 results/keepers/1696145860.1228228-58e497dde1fa38111f52be8cd01cdd8c:picoCTF{<REDACTED>}
 ```
 
-### StegSolve solution
+## StegSolve solution
 
 Alternatively, we can use the [stegsolve](https://github.com/Giotino/stegsolve) tool.
 
@@ -246,7 +249,7 @@ But with a combination of `grep`, `cut` and `tr` you can get the full flag in re
 ".picoCTF{<REDACTED>}.."Thouhast   
 ```
 
-### SigBits solution
+## SigBits solution
 
 Finally, you can use the [sigBits script](https://github.com/Pulho/sigBits) to extract the data.
 
