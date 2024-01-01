@@ -62,7 +62,7 @@ There are two possible partitions where the flag could be:
 
 ## Strings and grep solution
 
-The fastest and easiest solution is to run strings on the unpacked disk image and `grep` for the flag.  
+The fastest and easiest solution is to run `strings` on the unpacked disk image and `grep` for the flag.  
 However, we need to take text encoding into account and do several tries to find the right encoding,  
 16-bit big endian in this case.
 
