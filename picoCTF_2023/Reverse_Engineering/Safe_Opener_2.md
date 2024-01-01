@@ -1,7 +1,8 @@
 # Safe Opener 2
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [Grepping for the flag solution](#grepping-for-the-flag-solution)
+- [Decompiling with JD-GUI solution](#decompiling-with-jd-gui-solution)
 - [References](#references)
 
 ## Challenge information
@@ -21,20 +22,18 @@ Hints:
 ```
 Challenge link: [https://play.picoctf.org/practice/challenge/375](https://play.picoctf.org/practice/challenge/375)
 
-## Solution
-
 There are several ways to solve this challenge. Here are two solutions presented in increasing difficulty.
 
-### Solution #1 - Grepping for the flag
+## Grepping for the flag solution
 
 On easy challenges it's always recommended to search for the flag in plain text with `strings` and `grep`.
-```
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Reverse_Engineering/Safe_Opener_2]
 └─$ strings -a -n 8 SafeOpener.class | grep picoCTF
 ,picoCTF{<REDACTED>}
 ```
 
-### Solution #2 - Decompiling with JD-GUI
+## Decompiling with JD-GUI solution
 
 A more sofisticated solution is to decompile the file in [JD-GUI](https://github.com/java-decompiler/jd-gui) and study the code.
 
@@ -55,7 +54,7 @@ You find the flag in the openSafe function (but it's redacted here).
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [JD-GUI - GitHub](https://github.com/java-decompiler/jd-gui)
 - [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
