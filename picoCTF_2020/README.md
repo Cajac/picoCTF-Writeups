@@ -12,4 +12,5 @@
 
 ## Web Exploitation Challenges
 
-
+1 Challenge: 
+- [Web Gauntlet](Web_Exploitation/Web_Gauntlet.md)
