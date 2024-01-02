@@ -15,6 +15,7 @@ In total you will find around 200 challenge solutions here.
 - [Beginner picoMini 2022 Challenges](Beginner_picoMini_2022/README.md)
 - [picoMini by redpwn Challenges](picoMini_by_redpwn/README.md)
 - [picoCTF 2021 Challenges](picoCTF_2021/README.md)
+- [picoCTF 2020 Mini-Competition Challenges](picoCTF_2020/README.md)
 - [picoCTF 2019 Challenges](picoCTF_2019/README.md)
 - [picoGym Exclusive Challenges](picoGym_Exclusive/README.md)
 
