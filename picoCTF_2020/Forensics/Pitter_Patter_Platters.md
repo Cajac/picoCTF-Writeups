@@ -179,6 +179,7 @@ For additional information, please see the references below.
 ## References
 
 - [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
+- [FTK Imager - Homepage](https://www.exterro.com/ftk-imager)
 - [rev - Linux manual page](https://man7.org/linux/man-pages/man1/rev.1.html)
 - [The Sleuth Kit - Tool Overview](https://wiki.sleuthkit.org/index.php?title=TSK_Tool_Overview)
 - [Wikipedia - Ext3](https://en.wikipedia.org/wiki/Ext3)
