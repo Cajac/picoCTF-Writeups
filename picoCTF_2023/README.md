@@ -12,7 +12,7 @@
 ## Cryptography Challenges
 
 3 Challenges:
-- [HideToSee](Cryptography/HideTooSee.md)
+- [HideToSee](Cryptography/HideToSee.md)
 - [ReadMyCert](Cryptography/ReadMyCert.md)
 - [rotation](Cryptography/rotation.md)
 
