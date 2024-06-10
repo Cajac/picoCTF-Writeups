@@ -99,12 +99,14 @@ Correct answer!
 The flag is: picoCTF{<REDACTED>}
 ```
 If you aren't familiar with the operations they are:
-- << (Logical left shift)
-- >> (Logical right shift)
-- | (OR)
-- & (AND)
-- * (Multiplication)
-- + (Addition)
+```
+<< (Logical left shift)
+>> (Logical right shift)
+| (OR)
+& (AND)
+* (Multiplication)
++ (Addition)
+```
 
 ### Python solution 
 
