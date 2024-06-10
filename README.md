@@ -1,15 +1,16 @@
 # Writeups for picoCTF challenges
 
-Welcome to my writeups for [picoCTF](https://play.picoctf.org/login) challenges.  
+Welcome to [my](https://play.picoctf.org/users/Cajac) writeups for [picoCTF](https://play.picoctf.org/login) challenges.  
 These pages are created to:
 * Act as a documentation for myself
 * Support my junior work colleges CTF learning
 * Be a concrete project to improve my skills in markdown, git, github, etc.
 
-In total you will find around 200 challenge solutions here.
+In total you will find more than 230 challenge solutions here.
 
 ## Challenges
 
+- [picoCTF 2024 Challenges](picoCTF_2024/README.md)
 - [picoCTF 2023 Challenges](picoCTF_2023/README.md)
 - [picoCTF 2022 Challenges](picoCTF_2022/README.md)
 - [Beginner picoMini 2022 Challenges](Beginner_picoMini_2022/README.md)
@@ -23,6 +24,10 @@ In total you will find around 200 challenge solutions here.
 
 The solutions contains step-by-step walkthroughs but doesn't display the flags in plain text.  
 Instead the flags are displayd as `picoCTF{<REDACTED>}` or with just some portion of the flag visible.
+
+## Support my work
+
+If you appreciate this repository and learn from it, please consider [giving it a star](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars#starring-a-repository) to support it and spread the word.
 
 ## Language disclaimer
 

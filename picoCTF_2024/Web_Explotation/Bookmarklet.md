@@ -1,0 +1,67 @@
+# Bookmarklet
+
+- [Challenge information](#challenge-information)
+- [Solution](#solution)
+- [References](#references)
+
+## Challenge information
+```
+Points: 50
+Tags: picoCTF 2024, Web Exploitation, obfuscation, browser_webshell_solvable, browser
+Author: JEFFERY JOHN
+
+Description:
+Why search for the flag when I can make a bookmarklet to print it for me?
+
+Browse here, and find the flag!
+
+Hints:
+1. A bookmarklet is a bookmark that runs JavaScript instead of loading a webpage.
+2. What happens when you click a bookmarklet?
+3. Web browsers have other ways to run JavaScript too.
+```
+Challenge link: [https://play.picoctf.org/practice/challenge/406](https://play.picoctf.org/practice/challenge/406)
+
+## Solution
+
+Browse to the web site and you will see a web page like this:
+
+![Bookmerklet web site](Images/Bookmarklet_Web_Site.png)
+
+The text box contains the following JavaScript:
+```
+        javascript:(function() {
+            var encryptedFlag = "àÒÆÞ¦È¬ëÙ£ÖÓÚåÛÑ¢ÕÓÓÇ¡¥Ìí";
+            var key = "picoctf";
+            var decryptedFlag = "";
+            for (var i = 0; i < encryptedFlag.length; i++) {
+                decryptedFlag += String.fromCharCode((encryptedFlag.charCodeAt(i) - key.charCodeAt(i % key.length) + 256) % 256);
+            }
+            alert(decryptedFlag);
+        })();
+```
+
+You can decode this by running the code in the browser's DevTools. Press `F12` or `Ctrl + Shift + I` to activate the developer tools.  
+Select the `Console` tab and type `allow pasting` followed by the main part of the code.  
+I generally prefer to enter the code line-by-line for better understanding:
+```
+allow pasting
+> var encryptedFlag = "àÒÆÞ¦È¬ëÙ£Ö�ÓÚåÛÑ¢ÕÓ�Ó�Ç¡�¥Ìí";
+undefined
+> var key = "picoctf";
+undefined
+> var decryptedFlag = "";
+undefined
+> for (var i = 0; i < encryptedFlag.length; i++) {
+                decryptedFlag += String.fromCharCode((encryptedFlag.charCodeAt(i) - key.charCodeAt(i % key.length) + 256) % 256);
+            }
+'picoCTF{<REDACTED>}'
+```
+And there we have the flag.
+
+For additional information, please see the references below.
+
+## References
+
+- [Wikipedia - Bookmarklet](https://en.wikipedia.org/wiki/Bookmarklet)
+- [Wikipedia - JavaScript](https://en.wikipedia.org/wiki/JavaScript)
