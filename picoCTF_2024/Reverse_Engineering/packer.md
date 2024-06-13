@@ -107,11 +107,18 @@ We have a possible password (`xeon_phi`) and what is likely a hex-encoded flag. 
 
 ### Get the flag
 
-The password turned out to be incorrect but we can get the flag with this one-liner in python
+The password turned out to be incorrect but we can get the flag with one-liners in `python` or `xxd`.  
+The python way
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Reverse_Engineering/packer]
 └─$ python -c "print(bytes.fromhex('7069636f4354467b5539585f556e5034636b314e365f42316e34526933535f65313930633366337d'))"
 b'picoCTF{<REDACTED>}'
+```
+and the xxd way
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Reverse_Engineering/packer]
+└─$ echo '7069636f4354467b5539585f556e5034636b314e365f42316e34526933535f65313930633366337d' | xxd -r -p
+picoCTF{<REDACTED>}   
 ```
 
 For additional information, please see the references below.
@@ -120,6 +127,7 @@ For additional information, please see the references below.
 
 - [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
 - [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)
+- [xxd - Linux manual page](https://linux.die.net/man/1/xxd)
 - [UPX - Github](https://github.com/upx/upx)
 - [UPX - Homepage](https://upx.github.io/)
 - [Wikipedia - Executable compression](https://en.wikipedia.org/wiki/Executable_compression)

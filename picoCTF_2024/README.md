@@ -2,8 +2,9 @@
 
 ## Binary Exploitation Challenges
 
-2 Challenges:
+3 Challenges:
 - [format string 0](Binary_Exploitation/format_string_0.md)
+- [format string 1](Binary_Exploitation/format_string_1.md)
 - [heap 0](Binary_Exploitation/heap_0.md)
 
 ## Cryptography Challenges
@@ -14,9 +15,10 @@
 
 ## Forensics Challenges
 
-3 Challenges: 
+4 Challenges: 
 - [CanYouSee](Forensics/CanYouSee.md)
 - [Scan Surprise](Forensics/Scan_Surprise.md)
+- [Secret of the Polyglot](Forensics/Secret_of_the_Polyglot.md)
 - [Verify](Forensics/Verify.md)
 
 ## General Skills Challenges
@@ -36,7 +38,8 @@
 
 ## Web Exploitation Challenges
 
-3 Challenges:
-- [Bookmarklet](Web_Exploitation/Bookmarklet.md) 
-- [IntroToBurp](Web_Exploitation/IntroToBurp.md) 
-- [WebDecode](Web_Exploitation/WebDecode.md) 
+4 Challenges:
+- [Bookmarklet](Web_Exploitation/Bookmarklet.md)
+- [IntroToBurp](Web_Exploitation/IntroToBurp.md)
+- [Unminify](Web_Exploitation/Unminify.md)
+- [WebDecode](Web_Exploitation/WebDecode.md)
