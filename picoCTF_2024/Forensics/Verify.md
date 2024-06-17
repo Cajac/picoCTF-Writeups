@@ -74,7 +74,7 @@ Salted__ï¿½ï¿½ï¿½05ï¿½.Qï¿½+ï¿½Pï¿½ï¿½&pEï¿½?Bï¿½{M:ï¿½ï¿½eï¿½Wmï¿½a4Wuaï¿½ï¿½lï
 ```
 The file is encrypted.
 
-### Run the decryptio script
+### Run the decryption script
 
 Next, we try to decrypt the file
 ```bash
