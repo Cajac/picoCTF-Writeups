@@ -1,6 +1,7 @@
 # General Skills Challenges
 
-6 Challenges:
+7 Challenges:
+- [Binary Search](Binary_Search.md)
 - [binhexa](binhexa.md)
 - [Blame Game](Blame_Game.md)
 - [Collaborative Development](Collaborative_Development.md)

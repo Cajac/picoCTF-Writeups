@@ -113,7 +113,7 @@ To decrypt, we need to perform the reverse operations in the reverse order:
 - XOR with the same key in a `dynamic_xor_decrypt` function (the reverse of XOR is XOR)
 - Reversing the order of the characters
 
-### Create a pthon decoding script
+### Create a python decoding script
 
 The final decryption script looks like this
 ```python
@@ -167,7 +167,6 @@ if __name__ == "__main__":
     plain = decrypt(cipher, shared_key)
     flag = dynamic_xor_decrypt(plain, text_key)
     print(flag[::-1])
-
 ```
 
 ## Get the flag
