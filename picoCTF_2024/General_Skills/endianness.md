@@ -120,7 +120,7 @@ We can see that in summaty `main` does the following:
 
 Further more, we see from the verification functions and the `generate_random_word` function that the hexadecimal [ASCII](https://en.wikipedia.org/wiki/ASCII) versions of the characters are expected since:
 - The use of `%02X` as the format specifier in the `snprintf`-functions
-- The integer values in the `word` array were `'a'` is added
+- The integer values in the `word` array where `'a'` is added
 ```c
 char *find_little_endian(const char *word)
 {
