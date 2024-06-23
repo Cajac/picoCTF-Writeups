@@ -17,26 +17,29 @@
 
 ## Forensics Challenges
 
-4 Challenges: 
+5 Challenges: 
 - [CanYouSee](Forensics/CanYouSee.md)
+- [Mob psycho](Forensics/Mob_psycho.md)
 - [Scan Surprise](Forensics/Scan_Surprise.md)
 - [Secret of the Polyglot](Forensics/Secret_of_the_Polyglot.md)
 - [Verify](Forensics/Verify.md)
 
 ## General Skills Challenges
 
-7 Challenges:
+8 Challenges:
 - [Binary Search](General_Skills/Binary_Search.md)
 - [binhexa](General_Skills/binhexa.md)
 - [Blame Game](General_Skills/Blame_Game.md)
 - [Collaborative Development](General_Skills/Collaborative_Development.md)
 - [Commitment Issues](General_Skills/Commitment_Issues.md)
+- [endianness](General_Skills/endianness.md)
 - [Super SSH](General_Skills/Super_SSH.md)
 - [Time Machine](General_Skills/Time_Machine.md)
 
 ## Reverse Engineering Challenges
 
-1 Challenge:
+2 Challenges:
+- [FactCheck](Reverse_Engineering/FactCheck.md)
 - [packer](Reverse_Engineering/packer.md)
 
 ## Web Exploitation Challenges
