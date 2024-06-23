@@ -170,7 +170,7 @@ char *generate_random_word()
 }
 ```
 
-### Manual solution
+### Connect with netcat
 
 We connect to the site with netcat
 ```bash
