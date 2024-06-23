@@ -8,6 +8,8 @@ These pages are created to:
 
 In total you will find more than 230 challenge solutions here.
 
+![picoCTF Logo](picoctf_logo.png)
+
 ## Challenges
 
 - [picoCTF 2024 Challenges](picoCTF_2024/README.md)
