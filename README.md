@@ -1,5 +1,7 @@
 # Writeups for picoCTF challenges
 
+![picoCTF Logo](picoctf_logo.png)
+
 Welcome to [my](https://play.picoctf.org/users/Cajac) writeups for [picoCTF](https://play.picoctf.org/login) challenges.  
 These pages are created to:
 * Act as a documentation for myself
@@ -7,8 +9,6 @@ These pages are created to:
 * Be a concrete project to improve my skills in markdown, git, github, etc.
 
 In total you will find more than 230 challenge solutions here.
-
-![picoCTF Logo](picoctf_logo.png)
 
 ## Challenges
 
