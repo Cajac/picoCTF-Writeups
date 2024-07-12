@@ -6,7 +6,7 @@
 
 ## Challenge information
 ```
-Points: 200
+Level: Medium
 Tags: picoCTF 2024, Reverse Engineering, browser_webshell_solvable
 Author: JUNIAS BONOU
  

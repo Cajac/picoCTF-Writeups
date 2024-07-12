@@ -6,7 +6,7 @@
 
 ## Challenge information
 ```
-Points: 200
+Level: Medium
 Tags: picoCTF 2024, Forensics, browser_webshell_solvable, apk
 Author: NGIRIMANA SCHADRACK
 

@@ -6,7 +6,7 @@
 
 ## Challenge information
 ```
-Points: 50
+Level: Easy
 Tags: picoCTF 2024, Forensics, shell, browser_webshell_solvable, qr_code
 Author: JEFFERY JOHN
 

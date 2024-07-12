@@ -6,7 +6,7 @@
 
 ## Challenge information
 ```
-Points: 100
+Level: Easy
 Tags: picoCTF 2024, General Skills, shell, browser_webshell_solvable, ls
 Author: JEFFERY JOHN
 

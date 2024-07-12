@@ -6,7 +6,7 @@
 
 ## Challenge information
 ```
-Points: 75
+Level: Easy
 Tags: picoCTF 2024, General Skills, browser_webshell_solvable, git
 Author: JEFFERY JOHN
 

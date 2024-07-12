@@ -6,7 +6,7 @@
 
 ## Challenge information
 ```
-Points: 25
+Level: Easy
 Tags: picoCTF 2024, General Skills, shell, ssh, browser_webshell_solvable
 Author: JEFFERY JOHN
 

@@ -6,7 +6,7 @@
 
 ## Challenge information
 ```
-Points: 50
+Level: Easy
 Tags: picoCTF 2024, Forensics, grep, browser_webshell_solvable, checksum
 Author: JEFFERY JOHN
 

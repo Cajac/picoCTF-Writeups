@@ -6,7 +6,7 @@
 
 ## Challenge information
 ```
-Points: 100
+Level: Easy
 Tags: picoCTF 2024, Forensics, file_format, polyglot
 Author: SYREAL
 

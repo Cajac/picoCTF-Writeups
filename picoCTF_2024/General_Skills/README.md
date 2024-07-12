@@ -1,6 +1,6 @@
 # General Skills Challenges
 
-8 Challenges:
+## Easy General Skills Challenges
 - [Binary Search](Binary_Search.md)
 - [binhexa](binhexa.md)
 - [Blame Game](Blame_Game.md)

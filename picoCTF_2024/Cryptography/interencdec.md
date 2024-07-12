@@ -6,7 +6,7 @@
 
 ## Challenge information
 ```
-Points: 50
+Level: Easy
 Tags: picoCTF 2024, Cryptography, base64, browser_webshell_solvable, caesar
 Author: NGIRIMANA SCHADRACK
  

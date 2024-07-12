@@ -6,7 +6,7 @@
 
 ## Challenge information
 ```
-Points: 200
+Level: Easy
 Tags: picoCTF 2024, General Skills, browser_webshell_solvable
 Author: NANA AMA ATOMBO-SACKEY
 

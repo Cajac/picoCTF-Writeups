@@ -6,7 +6,7 @@
 
 ## Challenge information
 ```
-Points: 100
+Level: Easy
 Tags: picoCTF 2024, Cryptography, browser_webshell_solvable, ASCII_encoding, XOR
 Author: NGIRIMANA SCHADRACK
  

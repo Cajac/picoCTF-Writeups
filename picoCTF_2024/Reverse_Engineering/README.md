@@ -1,5 +1,7 @@
 # Reverse Engineering Challenges
 
-2 Challenges: 
-- [FactCheck](FactCheck.md)
+## Easy Reverse Engineering Challenges
 - [packer](packer.md)
+
+## Medium Reverse Engineering Challenges
+- [FactCheck](FactCheck.md)
