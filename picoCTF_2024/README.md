@@ -46,8 +46,9 @@
 
 ## Web Exploitation Challenges
 
-4 Challenges:
+5 Challenges:
 - [Bookmarklet](Web_Exploitation/Bookmarklet.md)
 - [IntroToBurp](Web_Exploitation/IntroToBurp.md)
+- [Trickster](Web_Exploitation/Trickster.md)
 - [Unminify](Web_Exploitation/Unminify.md)
 - [WebDecode](Web_Exploitation/WebDecode.md)
