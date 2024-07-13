@@ -27,12 +27,13 @@
 
 ## General Skills Challenges
 
-8 Challenges:
+9 Challenges:
 - [Binary Search](General_Skills/Binary_Search.md)
 - [binhexa](General_Skills/binhexa.md)
 - [Blame Game](General_Skills/Blame_Game.md)
 - [Collaborative Development](General_Skills/Collaborative_Development.md)
 - [Commitment Issues](General_Skills/Commitment_Issues.md)
+- [dont-you-love-banners](General_Skills/dont-you-love-banners.md)
 - [endianness](General_Skills/endianness.md)
 - [Super SSH](General_Skills/Super_SSH.md)
 - [Time Machine](General_Skills/Time_Machine.md)

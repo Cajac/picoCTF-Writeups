@@ -9,3 +9,6 @@
 - [endianness](endianness.md)
 - [Super SSH](Super_SSH.md)
 - [Time Machine](Time_Machine.md)
+
+## Medium General Skills Challenges
+- [dont-you-love-banners](dont-you-love-banners.md)
