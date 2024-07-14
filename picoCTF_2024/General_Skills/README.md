@@ -12,3 +12,4 @@
 
 ## Medium General Skills Challenges
 - [dont-you-love-banners](dont-you-love-banners.md)
+- [SansAlpha](SansAlpha.md)
