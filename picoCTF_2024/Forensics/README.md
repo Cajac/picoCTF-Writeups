@@ -7,4 +7,5 @@
 - [Verify](Verify.md)
 
 ## Medium Forensics Challenges
+- [Blast from the past](Blast_from_the_past.md)
 - [Mob psycho](Mob_psycho.md)

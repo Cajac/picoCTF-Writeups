@@ -19,7 +19,8 @@
 
 ## Forensics Challenges
 
-5 Challenges: 
+6 Challenges: 
+- [Blast from the past](Forensics/Blast_from_the_past.md)
 - [CanYouSee](Forensics/CanYouSee.md)
 - [Mob psycho](Forensics/Mob_psycho.md)
 - [Scan Surprise](Forensics/Scan_Surprise.md)
