@@ -159,7 +159,7 @@ defghijklm
 ```
 It works more or less like slicing of strings in Python.
 
-If we combine a lot of tricks, i.e. quoting, command substitution, parameter expansion and redirection of stderr to stdout, we can extract whatever characters we have from our shell variables.
+If we combine a lot of tricks, i.e. quoting, command substitution, parameter expansion and redirection of stderr to stdout, we can extract whatever characters we have from our shell variables, including any error messages.
 
 For example, we can execute `id` from the `$-` variable
 ```bash
