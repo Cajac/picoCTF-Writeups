@@ -125,7 +125,7 @@ Focal Length                    : 4.6 mm (35 mm equivalent: 25.0 mm)
 Hyperfocal Distance             : 2.13 m
 Light Value                     : 4.0
 ```
-We ought to have 7 timestamps to change. The first 3 timestamps ought file system timestamps.
+We ought to have 7 timestamps to change. The first 3 timestamps ought file system timestamps only.
 
 First we make a copy of the file to work with
 ```bash
@@ -268,7 +268,7 @@ Oops! That tag isn't right. Please try again.
 No, the milliseconds field isn't correct.  
 Thankfully, the checking scripts tells us the field name.
 
-Alternatively, we can list tags in `exiftool` and grep for the relevant ones
+Alternatively, we can list tags in `exiftool` and `grep` for the relevant ones
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Blast_from_the_past]
 └─$ exiftool -list -EXIF:All original.jpg | grep -i -e time -e date
@@ -306,7 +306,7 @@ Modify Date                     : 2023:11:20 15:46:23.703
 
 ### Adjust timestamps in exiftool
 
-After some trial-and-error, we have further adjusted 3 timestamps and now we are close
+After some trial-and-error, we have further adjusted 3 timestamps and now we resubmit and check again
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Blast_from_the_past]
 └─$ exiftool -AllDates="1970:01:01 00:00:00.001" -SubSecCreateDate="1970:01:01 00:00:00.001" -SubSecDateTimeOriginal="1970:01:01 00:00:00.001" -SubSecModifyDate="1970:01:01 00:00:00.001" original_nulled.jpg
@@ -364,7 +364,7 @@ Found: 2023:11:20 20:46:21.420+00:00
 Oops! That tag isn't right. Please try again.
 ```
 
-Trying to set this timestamps in the same manner gives us a warning
+Trying to set this timestamp in the same manner gives us a warning
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Blast_from_the_past]
 └─$ exiftool -AllDates="1970:01:01 00:00:00.001" -SubSecCreateDate="1970:01:01 00:00:00.001" -SubSecDateTimeOriginal="1970:01:01 00:00:00.001" -SubSecModifyDate="1970:01:01 00:00:00.001" -TimeStamp="1970:01:01 00:00:00.001" original_nulled.jpg
