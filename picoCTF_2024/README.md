@@ -2,12 +2,13 @@
 
 ## Binary Exploitation Challenges
 
-5 Challenges:
+6 Challenges:
 - [format string 0](Binary_Exploitation/format_string_0.md)
 - [format string 1](Binary_Exploitation/format_string_1.md)
 - [format string 2](Binary_Exploitation/format_string_2.md)
 - [heap 0](Binary_Exploitation/heap_0.md)
 - [heap 1](Binary_Exploitation/heap_1.md)
+- [heap 2](Binary_Exploitation/heap_2.md)
 
 ## Cryptography Challenges
 
