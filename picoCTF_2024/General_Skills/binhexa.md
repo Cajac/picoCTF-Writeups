@@ -5,7 +5,8 @@
 - [References](#references)
 
 ## Challenge information
-```
+
+```text
 Level: Easy
 Tags: picoCTF 2024, General Skills, browser_webshell_solvable
 Author: NANA AMA ATOMBO-SACKEY
@@ -18,6 +19,7 @@ Start searching for the flag here nc titan.picoctf.net 62850
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/404](https://play.picoctf.org/practice/challenge/404)
 
 ## Solution
@@ -25,6 +27,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/404](https://play.p
 ### Connect to the site
 
 We connect to the site with netcat
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/General_Skills/binhexa]
 └─$ nc titan.picoctf.net 62850
@@ -41,11 +44,13 @@ Operation 1: '<<'
 Perform a left shift of Binary Number 1 by 1 bits.
 Enter the binary result: 
 ```
+
 We are expected to solve six logical computations of [binary numbers](https://en.wikipedia.org/wiki/Binary_number).  
 
 ### Manual solution
 
 This could be done manually (which is good for your understanding but tedious)
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/General_Skills/binhexa]
 └─$ nc titan.picoctf.net 62850
@@ -98,8 +103,10 @@ Enter the results of the last operation in hexadecimal: 194
 Correct answer!
 The flag is: picoCTF{<REDACTED>}
 ```
+
 If you aren't familiar with the operations they are:
-```
+
+```text
 << (Logical left shift)
 >> (Logical right shift)
 | (OR)
@@ -108,9 +115,10 @@ If you aren't familiar with the operations they are:
 + (Addition)
 ```
 
-### Python solution 
+### Python solution
 
 Alternatively, we could use [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) to solve one or more problems for us like this
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/General_Skills/binhexa]
 └─$ python -c "a=0b10110101; b=0b11011111; print(bin(a << 1)[2:])"
@@ -140,14 +148,15 @@ Alternatively, we could use [Python](https://en.wikipedia.org/wiki/Python_(progr
 └─$ python -c "a=0b10110101; b=0b11011111; print(hex(a + b)[2:])"
 194
 ```
- 
+
 For additional information, please see the references below.
 
 ## References
 
+- [Binary number - Wikipedia](https://en.wikipedia.org/wiki/Binary_number)
+- [Bitwise operation - Wikipedia](https://en.wikipedia.org/wiki/Bitwise_operation)
+- [Hexadecimal - Wikipedia](https://en.wikipedia.org/wiki/Hexadecimal)
+- [Logical shift - Wikipedia](https://en.wikipedia.org/wiki/Logical_shift)
 - [nc - Linux manual page](https://linux.die.net/man/1/nc)
-- [Wikipedia - Binary number](https://en.wikipedia.org/wiki/Binary_number)
-- [Wikipedia - Bitwise operation](https://en.wikipedia.org/wiki/Bitwise_operation)
-- [Wikipedia - Hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal)
-- [Wikipedia - Logical shift](https://en.wikipedia.org/wiki/Logical_shift)
-- [Wikipedia - Python (programming language)](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [python - Linux manual page](https://linux.die.net/man/1/python)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))

@@ -5,7 +5,8 @@
 - [References](#references)
 
 ## Challenge information
-```
+
+```text
 Level: Easy
 Tags: picoCTF 2024, General Skills, browser_webshell_solvable, git
 Author: JEFFERY JOHN
@@ -23,6 +24,7 @@ Hints:
 3. You can use python3 <file>.py to try running the code, though you won't need 
    to for this challenge.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/405](https://play.picoctf.org/practice/challenge/405)
 
 ## Solution
@@ -30,6 +32,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/405](https://play.p
 ### Analyse the git repo
 
 We start by unpacking the zip-file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/General_Skills/Blame_Game]
 └─$ unzip challenge.zip
@@ -59,6 +62,7 @@ Archive:  challenge.zip
 ### Get the flag
 
 Next, we check for included files and the changes made on them with `git log`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/General_Skills/Blame_Game]
 └─$ cd drop-in   
@@ -88,8 +92,9 @@ Date:   Tue Mar 12 00:07:15 2024 +0000
 ┌──(kali㉿kali)-[/mnt/…/picoCTF_2024/General_Skills/Blame_Game/drop-in]
 └─$ 
 ```
+
 And there we have the flag in the second commit.
- 
+
 For additional information, please see the references below.
 
 ## References

@@ -5,7 +5,8 @@
 - [References](#references)
 
 ## Challenge information
-```
+
+```text
 Level: Medium
 Tags: Forensics, picoCTF 2024, browser_webshell_solvable, metadata
 Author: SYREAL
@@ -34,6 +35,7 @@ nc mimas.picoctf.net 62826
 Hints:
 1. Exiftool is really good at reading metadata, but you might want to use something else to modify it.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/432](https://play.picoctf.org/practice/challenge/432)
 
 ## Solution
@@ -41,6 +43,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/432](https://play.p
 ### Basic analysis of the picture
 
 We start by checking the metadata of the picture with `exiftool`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Blast_from_the_past]
 └─$ exiftool original.jpg   
@@ -125,9 +128,11 @@ Focal Length                    : 4.6 mm (35 mm equivalent: 25.0 mm)
 Hyperfocal Distance             : 2.13 m
 Light Value                     : 4.0
 ```
-We ought to have 7 timestamps to change. The first 3 timestamps ought file system timestamps only.
+
+We ought to have 7 timestamps to change. The first 3 timestamps are file system timestamps only.
 
 First we make a copy of the file to work with
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Blast_from_the_past]
 └─$ cp original.jpg original_nulled.jpg
@@ -141,6 +146,7 @@ original.jpg  original_nulled.jpg
 
 There is a `-AllDates` parameter in `exiftool` that sets most (all?) timestamps.  
 Let's start with that
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Blast_from_the_past]
 └─$ exiftool -AllDates="1970:01:01 00:00:00.001+00:00" original_nulled.jpg 
@@ -229,9 +235,11 @@ Focal Length                    : 4.6 mm (35 mm equivalent: 25.0 mm)
 Hyperfocal Distance             : 2.13 m
 Light Value                     : 4.0
 ```
+
 Only one timestamp called `Time stamp` seems to remain (apart from the file system timestamps).
 
 Next we submit and check how close we are
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Blast_from_the_past]
 └─$ nc -w 2 mimas.picoctf.net 57531 < original_nulled.jpg
@@ -265,10 +273,12 @@ Looking for '1970:01:01 00:00:00.001'
 Found: 1970:01:01 00:00:00.703
 Oops! That tag isn't right. Please try again.
 ```
+
 No, the milliseconds field isn't correct.  
 Thankfully, the checking scripts tells us the field name.
 
 Alternatively, we can list tags in `exiftool` and `grep` for the relevant ones
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Blast_from_the_past]
 └─$ exiftool -list -EXIF:All original.jpg | grep -i -e time -e date
@@ -307,6 +317,7 @@ Modify Date                     : 2023:11:20 15:46:23.703
 ### Adjust timestamps in exiftool
 
 After some trial-and-error, we have further adjusted 3 timestamps and now we resubmit and check again
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Blast_from_the_past]
 └─$ exiftool -AllDates="1970:01:01 00:00:00.001" -SubSecCreateDate="1970:01:01 00:00:00.001" -SubSecDateTimeOriginal="1970:01:01 00:00:00.001" -SubSecModifyDate="1970:01:01 00:00:00.001" original_nulled.jpg
@@ -365,20 +376,24 @@ Oops! That tag isn't right. Please try again.
 ```
 
 Trying to set this timestamp in the same manner gives us a warning
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Blast_from_the_past]
 └─$ exiftool -AllDates="1970:01:01 00:00:00.001" -SubSecCreateDate="1970:01:01 00:00:00.001" -SubSecDateTimeOriginal="1970:01:01 00:00:00.001" -SubSecModifyDate="1970:01:01 00:00:00.001" -TimeStamp="1970:01:01 00:00:00.001" original_nulled.jpg
 Warning: Not an integer for XMP-apple-fi:TimeStamp
     1 image files updated
 ```
+
 and the modification fails!
 
 Using an integer value here for an [epoch timestamp](https://en.wikipedia.org/wiki/Epoch_(computing)) doesn't return any warning message, but still fails to update the timestamp.
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Blast_from_the_past]
 └─$ exiftool -AllDates="1970:01:01 00:00:00.001" -SubSecCreateDate="1970:01:01 00:00:00.001" -SubSecDateTimeOriginal="1970:01:01 00:00:00.001" -SubSecModifyDate="1970:01:01 00:00:00.001" -TimeStamp="1" original_nulled.jpg
     1 image files updated
 ```
+
 We need to change this value manually.
 
 ### Manually modifying the the Samsung timestamp
@@ -386,6 +401,7 @@ We need to change this value manually.
 The Samsung time stamp can [be modified manually](https://stackoverflow.com/questions/78185037/how-to-edit-the-samsung-trailer-tag-timestamp) with any hexeditor.
 
 We find the timestamp at the end of the picture
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Blast_from_the_past]
 └─$ xxd original_nulled.jpg | tail -20 
@@ -413,6 +429,7 @@ We find the timestamp at the end of the picture
 
 After manual modification the timestamp is set to `0000000000001`.  
 The file now looks like this
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Blast_from_the_past]
 └─$ xxd original_nulled.jpg | tail -20 
@@ -441,6 +458,7 @@ The file now looks like this
 ### Get the flag
 
 Finally, we submit and check the file again to get our flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Blast_from_the_past]
 └─$ nc -w 2 mimas.picoctf.net 57531 < original_nulled.jpg
@@ -501,11 +519,11 @@ For additional information, please see the references below.
 
 ## References
 
+- [Epoch (computing) - Wikipedia](https://en.wikipedia.org/wiki/Epoch_(computing))
 - [ExifTool - Homepage](https://exiftool.org/)
 - [exiftool - Linux manual page](https://linux.die.net/man/1/exiftool)
+- [ExifTool - Wikipedia](https://en.wikipedia.org/wiki/ExifTool)
 - [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
+- [JPEG - Wikipedia](https://en.wikipedia.org/wiki/JPEG)
 - [tail - Linux manual page](https://man7.org/linux/man-pages/man1/tail.1.html)
 - [xxd - Linux manual page](https://linux.die.net/man/1/xxd)
-- [Wikipedia - Epoch (computing)](https://en.wikipedia.org/wiki/Epoch_(computing))
-- [Wikipedia - ExifTool](https://en.wikipedia.org/wiki/ExifTool)
-- [Wikipedia - JPEG](https://en.wikipedia.org/wiki/JPEG)

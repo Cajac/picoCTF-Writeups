@@ -5,7 +5,8 @@
 - [References](#references)
 
 ## Challenge information
-```
+
+```text
 Level: Easy
 Tags: picoCTF 2024, General Skills, browser_webshell_solvable, git
 Author: JEFFERY JOHN
@@ -21,6 +22,7 @@ Hints:
 2. Read the chapter on Git from the picoPrimer here
 3. You can 'checkout' commits to see the files inside them
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/411](https://play.picoctf.org/practice/challenge/411)
 
 ## Solution
@@ -28,6 +30,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/411](https://play.p
 ### Analyse the git repo
 
 We start by unpacking the zip-file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/General_Skills/Commitment_Issues]
 └─$ unzip challenge.zip 
@@ -47,6 +50,7 @@ Archive:  challenge.zip
 ```
 
 Next, we check for changes with `git log` in the repository
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/General_Skills/Commitment_Issues]
 └─$ cd drop-in  
@@ -78,11 +82,13 @@ Date:   Sat Mar 9 21:10:06 2024 +0000
 ┌──(kali㉿kali)-[/mnt/…/picoCTF_2024/General_Skills/Commitment_Issues/drop-in]
 └─$ 
 ```
+
 The sensitve data, a.k.a the flag, is in the commit `e720dc26a1a55405fbdf4d338d465335c439fb3e`.
 
 ### Get the flag
 
 Finally, to get the flag we display the commit with `git show`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF_2024/General_Skills/Commitment_Issues/drop-in]
 └─$ git show e720dc26a1a55405fbdf4d338d465335c439fb3e
@@ -103,8 +109,9 @@ index 0000000..d263841
 ┌──(kali㉿kali)-[/mnt/…/picoCTF_2024/General_Skills/Commitment_Issues/drop-in]
 └─$ 
 ```
+
 And there we have the flag.
- 
+
 For additional information, please see the references below.
 
 ## References

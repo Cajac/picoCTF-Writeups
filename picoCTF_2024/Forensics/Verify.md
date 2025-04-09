@@ -5,7 +5,8 @@
 - [References](#references)
 
 ## Challenge information
-```
+
+```text
 Level: Easy
 Tags: picoCTF 2024, Forensics, grep, browser_webshell_solvable, checksum
 Author: JEFFERY JOHN
@@ -34,6 +35,7 @@ Hints:
 3. Remember you can pipe the output of one command to another with |. 
    Try practicing with the 'First Grep' challenge if you're stuck!
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/450](https://play.picoctf.org/practice/challenge/450)
 
 ## Solution
@@ -41,6 +43,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/450](https://play.p
 ### Unpacking and basic analysis
 
 We start by unpacking the zip-file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Verify]
 └─$ unzip challenge.zip 
@@ -62,6 +65,7 @@ Archive:  challenge.zip
 ```
 
 We have a lot of files. Let's search for the given [hash](https://en.wikipedia.org/wiki/Cryptographic_hash_function).
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Verify]
 └─$ sha256sum home/ctf-player/drop-in/files/* | grep 467a10447deb3d4e17634cacc2a68ba6c2bb62a6637dad9145ea673bf0be5e02
@@ -72,11 +76,13 @@ We have a lot of files. Let's search for the given [hash](https://en.wikipedia.o
 Salted__���05�.Q�+�P��&pE�?B�{M:��e�Wm�a4Wua��l�5�yU!����NA�
 
 ```
+
 The file is encrypted.
 
 ### Run the decryption script
 
 Next, we try to decrypt the file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Verify]
 └─$ cd home/ctf-player/drop-in/              
@@ -117,25 +123,28 @@ Error: 'files/c6c8b911' is not a valid file. Look inside the 'files' folder with
 ┌──(kali㉿kali)-[/mnt/…/Verify/home/ctf-player/drop-in]
 └─$ 
 ```
+
 Hhm, the script is looking for the file in the absolute path of `/home/ctf-player/drop-in/`.  
 That won't work in my case. Let's do the decryption without the script.
 
 ### Get the flag
 
 Decrypt the flag with `openssl` like this
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/Verify/home/ctf-player/drop-in]
 └─$ openssl enc -d -aes-256-cbc -pbkdf2 -iter 100000 -salt -in files/c6c8b911 -k picoCTF
 picoCTF{<REDACTED>}
 ```
+
 And there we have the flag.
 
 For additional information, please see the references below.
 
 ## References
 
+- [Cryptographic hash function - Wikipedia](https://en.wikipedia.org/wiki/Cryptographic_hash_function)
 - [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
 - [openssl - Linux manual page](https://linux.die.net/man/1/openssl)
+- [SHA-2 - Wikipedia](https://en.wikipedia.org/wiki/SHA-2)
 - [sha256sum - Linux manual page](https://man7.org/linux/man-pages/man1/sha256sum.1.html)
-- [Wikipedia - Cryptographic hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function)
-- [Wikipedia - SHA-2](https://en.wikipedia.org/wiki/SHA-2)

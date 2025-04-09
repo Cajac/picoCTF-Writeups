@@ -5,7 +5,8 @@
 - [References](#references)
 
 ## Challenge information
-```
+
+```text
 Level: Easy
 Tags: picoCTF 2024, General Skills, browser_webshell_solvable, git
 Author: JEFFERY JOHN
@@ -21,6 +22,7 @@ Hints:
 2. Read the chapter on Git from the picoPrimer here
 3. When committing a file with git, a message can (and should) be included.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/425](https://play.picoctf.org/practice/challenge/425)
 
 ## Solution
@@ -28,6 +30,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/425](https://play.p
 ### Analyse the git repo
 
 We start by unpacking the zip-file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/General_Skills/Time_Machine]
 └─$ unzip challenge.zip
@@ -51,6 +54,7 @@ Archive:  challenge.zip
 ### Get the flag
 
 Next, we check for changes with `git log` in the repository
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/General_Skills/Time_Machine]
 └─$ cd drop-in   
@@ -76,8 +80,9 @@ Date:   Tue Mar 12 00:07:26 2024 +0000
 ┌──(kali㉿kali)-[/mnt/…/picoCTF_2024/General_Skills/Time_Machine/drop-in]
 └─$ 
 ```
+
 And there we have the flag as a note to the commit.
- 
+
 For additional information, please see the references below.
 
 ## References

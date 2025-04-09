@@ -5,7 +5,8 @@
 - [References](#references)
 
 ## Challenge information
-```
+
+```text
 Level: Easy
 Tags: picoCTF 2024, Forensics, shell, browser_webshell_solvable, qr_code
 Author: JEFFERY JOHN
@@ -27,6 +28,7 @@ Hints:
 2. Mobile phones have included native QR code scanners in their cameras since version 8 (Oreo) and iOS 11
 3. If you don't have access to a phone, you can also use zbar-tools to convert an image to text
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/444](https://play.picoctf.org/practice/challenge/444)
 
 ## Solution
@@ -34,6 +36,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/444](https://play.p
 ### Unpacking and basic analysis
 
 We start by unpacking the zip-file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Scan_Surprise]
 └─$ unzip challenge.zip 
@@ -48,6 +51,7 @@ Archive:  challenge.zip
 └─$ file flag.png            
 flag.png: PNG image data, 99 x 99, 1-bit colormap, non-interlaced
 ```
+
 We have a [PNG-file](https://en.wikipedia.org/wiki/PNG) which is a [QR-code](https://en.wikipedia.org/wiki/QR_code).  
 Use a tool such as `eog` of `feh` to view it on Linux.
 
@@ -55,6 +59,7 @@ Use a tool such as `eog` of `feh` to view it on Linux.
 
 To get the flag we can use the `zbar-tools` package as described in one of the hints.  
 Use `sudo apt install zbar-tools` to install it if needed.
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/Scan_Surprise/home/ctf-player/drop-in]
 └─$ zbarimg flag.png 
@@ -66,5 +71,5 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - PNG](https://en.wikipedia.org/wiki/PNG)
-- [Wikipedia - QR code](https://en.wikipedia.org/wiki/QR_code)
+- [PNG - Wikipedia](https://en.wikipedia.org/wiki/PNG)
+- [QR code - Wikipedia](https://en.wikipedia.org/wiki/QR_code)

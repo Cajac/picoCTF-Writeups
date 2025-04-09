@@ -5,7 +5,8 @@
 - [References](#references)
 
 ## Challenge information
-```
+
+```text
 Level: Easy
 Tags: picoCTF 2024, General Skills, shell, browser_webshell_solvable, ls
 Author: JEFFERY JOHN
@@ -34,6 +35,7 @@ Hints:
    but you should start your binary search over from the beginning - try around 500. 
    Can you think of why?
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/442](https://play.picoctf.org/practice/challenge/442)
 
 ## Solution
@@ -43,6 +45,7 @@ The challenge name and description reveals that you should solve this challenge 
 ### Manual solution
 
 We connect with SSH and start with an initial guess of `500`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/General_Skills/Binary_Search]
 └─$ ssh -p 55705 ctf-player@atlas.picoctf.net
@@ -58,6 +61,7 @@ Enter your guess: 500
 ```
 
 Then we take half of the previous guess and add it to the lower or upper start value depending on if the random number is `Lower` or `Higher`
+
 ```bash
 Enter your guess: 500
 Lower! Try again.
@@ -84,11 +88,11 @@ Connection to atlas.picoctf.net closed.
 ```
 
 And there we have the flag.
- 
+
 For additional information, please see the references below.
 
 ## References
 
+- [Binary search - Wikipedia](https://en.wikipedia.org/wiki/Binary_search)
+- [Secure Shell - Wikipedia](https://en.wikipedia.org/wiki/Secure_Shell)
 - [ssh - Linux manual page](https://man7.org/linux/man-pages/man1/ssh.1.html)
-- [Wikipedia - Binary search](https://en.wikipedia.org/wiki/Binary_search)
-- [Wikipedia - Secure Shell](https://en.wikipedia.org/wiki/Secure_Shell)

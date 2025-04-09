@@ -5,7 +5,8 @@
 - [References](#references)
 
 ## Challenge information
-```
+
+```text
 Level: Easy
 Tags: picoCTF 2024, General Skills, browser_webshell_solvable
 Author: NANA AMA ATOMBO-SACKEY
@@ -23,6 +24,7 @@ Hints:
 2. Read more about how endianness here:
    https://levelup.gitconnected.com/little-endian-and-big-endian-74ab6441b2a7
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/414](https://play.picoctf.org/practice/challenge/414)
 
 ## Solution
@@ -30,6 +32,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/414](https://play.p
 ### Analyse the C source code
 
 We start by chacking the source code. First the `main` function
+
 ```c
 int main()
 {
@@ -112,15 +115,19 @@ int main()
     return 0;
 }  
 ```
+
 We can see that in summaty `main` does the following:
+
 - Generates a random word and prints it to the screen
 - Asks for both the little and big [endian](https://en.wikipedia.org/wiki/Endianness) version of the word
 - Keeps asking until the correct answers are given
 - Prints the flag if both versions are correctly answered
 
 Further more, we see from the verification functions and the `generate_random_word` function that the hexadecimal [ASCII](https://en.wikipedia.org/wiki/ASCII) versions of the characters are expected since:
+
 - The use of `%02X` as the format specifier in the `snprintf`-functions
 - The integer values in the `word` array where `'a'` is added
+
 ```c
 char *find_little_endian(const char *word)
 {
@@ -173,6 +180,7 @@ char *generate_random_word()
 ### Connect with netcat
 
 We connect to the site with netcat
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/General_Skills/endianness]
 └─$ nc titan.picoctf.net 55547
@@ -184,12 +192,15 @@ Enter the Little Endian representation:
 ```
 
 Let's print the ascii representation of the word as help with standard python
+
 ```bash
 ┌──(kali㉿kali)-[~]
 └─$ python -c "for c in 'jyput': print(hex(ord(c))[2:], end=' ')"
 6a 79 70 75 74 
 ```
+
 or with `hex` from [pwntools](https://docs.pwntools.com/en/stable/index.html)
+
 ```bash
 ┌──(kali㉿kali)-[~]
 └─$ ~/python_venvs/pwntools/bin/pwn hex -s ' ' jyput
@@ -199,6 +210,7 @@ or with `hex` from [pwntools](https://docs.pwntools.com/en/stable/index.html)
 ### Get the flag
 
 Now we can convert to 16-bit little and big endian values
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/General_Skills/endianness]
 └─$ nc titan.picoctf.net 55547
@@ -213,18 +225,20 @@ Correct Big Endian representation!
 Congratulations! You found both endian representations correctly!
 Your Flag is: picoCTF{<REDACTED>}
 ```
+
 As a final note:
+
 - `word` here means 16-bit values.
 - No zero byte should be added even though the string is of odd length.
 - No delimiters of any kind between the hex values should be added
- 
+
 For additional information, please see the references below.
 
 ## References
 
-- [nc - Linux manual page](https://linux.die.net/man/1/nc)
+- [ASCII - Wikipedia](https://en.wikipedia.org/wiki/ASCII)
+- [Endianness - Wikipedia](https://en.wikipedia.org/wiki/Endianness)
+- [Hexadecimal - Wikipedia](https://en.wikipedia.org/wiki/Hexadecimal)
 - [Little Endian and Big Endian](https://levelup.gitconnected.com/little-endian-and-big-endian-74ab6441b2a7)
+- [nc - Linux manual page](https://linux.die.net/man/1/nc)
 - [pwntools - Documentation](https://docs.pwntools.com/en/stable/index.html)
-- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)
-- [Wikipedia - Hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal)
-- [Wikipedia - Endianness](https://en.wikipedia.org/wiki/Endianness)

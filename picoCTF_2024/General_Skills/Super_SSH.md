@@ -5,7 +5,8 @@
 - [References](#references)
 
 ## Challenge information
-```
+
+```text
 Level: Easy
 Tags: picoCTF 2024, General Skills, shell, ssh, browser_webshell_solvable
 Author: JEFFERY JOHN
@@ -25,11 +26,13 @@ Hints:
 3. How could you specify the port?
 4. Remember, passwords are hidden when typed into the shell
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/424](https://play.picoctf.org/practice/challenge/424)
 
 ## Solution
 
 We connect with SSH like this:
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/General_Skills/Super_SSH]
 └─$ ssh -p 50400 ctf-player@titan.picoctf.net
@@ -44,11 +47,12 @@ ctf-player@titan.picoctf.net's password:
 Welcome ctf-player, here's your flag: picoCTF{<REDACTED>}
 Connection to titan.picoctf.net closed.
 ```
+
 And there we have the flag.
- 
+
 For additional information, please see the references below.
 
 ## References
 
+- [Secure Shell - Wikipedia](https://en.wikipedia.org/wiki/Secure_Shell)
 - [ssh - Linux manual page](https://man7.org/linux/man-pages/man1/ssh.1.html)
-- [Wikipedia - Secure Shell](https://en.wikipedia.org/wiki/Secure_Shell)

@@ -5,7 +5,8 @@
 - [References](#references)
 
 ## Challenge information
-```
+
+```text
 Level: Easy
 Tags: picoCTF 2024, Forensics, file_format, polyglot
 Author: SYREAL
@@ -21,6 +22,7 @@ Download the suspicious file here.
 Hints:
 1. This problem can be solved by just opening the file in different ways
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/423](https://play.picoctf.org/practice/challenge/423)
 
 ## Solution
@@ -28,14 +30,17 @@ Challenge link: [https://play.picoctf.org/practice/challenge/423](https://play.p
 ### Basic file analysis
 
 We start with some basic analysis of the file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Secret_of_the_Polyglot]
 └─$ file flag2of2-final.pdf 
 flag2of2-final.pdf: PNG image data, 50 x 50, 8-bit/color RGBA, non-interlaced
 ```
+
 Even though the file extension is pdf, `file` identifies the file as a [PNG-file](https://en.wikipedia.org/wiki/PNG).
 
 Looking at the beginning of the file with `xxd` we can see that the file is indeed a PNG-file.
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Secret_of_the_Polyglot]
 └─$ xxd flag2of2-final.pdf| head -n 25 
@@ -65,7 +70,9 @@ Looking at the beginning of the file with `xxd` we can see that the file is inde
 00000170: 7bc0 e50e d0ff 64c8 a6ec 4a7e 9a42 360b  {.....d...J~.B6.
 00000180: bc9f d137 a581 be5b a073 cdeb adbe 8fd3  ...7...[.s......
 ```
+
 If we open the file with `feh` we can see the first part of the flag.
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Secret_of_the_Polyglot]
 └─$ feh flag2of2-final.pdf &
@@ -73,6 +80,7 @@ If we open the file with `feh` we can see the first part of the flag.
 ```
 
 However, looking at the end of the file we can see that it is also a [PDF-file](https://en.wikipedia.org/wiki/PDF).
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Secret_of_the_Polyglot]
 └─$ xxd flag2of2-final.pdf| tail -n 50
@@ -127,9 +135,11 @@ However, looking at the end of the file we can see that it is also a [PDF-file](
 00000d10: 7274 7872 6566 0a32 3039 350a 2525 454f  rtxref.2095.%%EO
 00000d20: 460a  
 ```
+
 Files that contains valid forms of multiple formats at the same time are called [polyglots](https://en.wikipedia.org/wiki/Polyglot_(computing)). Hence, the challenge name.
 
 Opening the file in a web browser such as `firefox` gives us the second part of the flag.
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Secret_of_the_Polyglot]
 └─$ firefox flag2of2-final.pdf &
@@ -143,7 +153,7 @@ For additional information, please see the references below.
 ## References
 
 - [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
+- [PDF - Wikipedia](https://en.wikipedia.org/wiki/PDF)
+- [PNG - Wikipedia](https://en.wikipedia.org/wiki/PNG)
+- [Polyglot (computing) - Wikipedia](https://en.wikipedia.org/wiki/Polyglot_(computing))
 - [xxd - Linux manual page](https://linux.die.net/man/1/xxd)
-- [Wikipedia - PDF](https://en.wikipedia.org/wiki/PDF)
-- [Wikipedia - PNG](https://en.wikipedia.org/wiki/PNG)
-- [Wikipedia - Polyglot (computing)](https://en.wikipedia.org/wiki/Polyglot_(computing))
