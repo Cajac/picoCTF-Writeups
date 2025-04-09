@@ -5,7 +5,8 @@
 - [References](#references)
 
 ## Challenge information
-```
+
+```text
 Level: Easy
 Tags: picoCTF 2024, Reverse Engineering, browser_webshell_solvable
 Author: MUBARAK MIKAIL
@@ -17,6 +18,7 @@ binary
 Hints:
 1. What can we do to reduce the size of a binary after compiling it.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/421](https://play.picoctf.org/practice/challenge/421)
 
 ## Solution
@@ -26,6 +28,7 @@ The challenge name and the hint about file sizes tells us that a [packer](https:
 ### Basic file analysis
 
 We start with some basic analysis of the file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Reverse_Engineering/packer]
 └─$ file out            
@@ -50,11 +53,13 @@ l(0BhKCo
 p$mkqui#
 Z/-id%ABI-
 ```
+
 Ah, UPX (Ultimate Packer for eXecutables) have been used and we are looking for a password.
 
 ### Unpack the file
 
 UPX-packed files can be unpacked/decompressed with `upx -d`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Reverse_Engineering/packer]
 └─$ upx -d -o unpacked out   
@@ -84,6 +89,7 @@ total 1181
 ```
 
 Now we can check for strings again
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Reverse_Engineering/packer]
 └─$ strings -n 8 unpacked | more     
@@ -103,18 +109,22 @@ xeon_phi          <--- possible password
 FATAL: kernel too old
 <---snip--->
 ```
+
 We have a possible password (`xeon_phi`) and what is likely a hex-encoded flag. It starts with `7069636f` which is ASCII for `pico`.
 
 ### Get the flag
 
 The password turned out to be incorrect but we can get the flag with one-liners in `python` or `xxd`.  
 The python way
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Reverse_Engineering/packer]
 └─$ python -c "print(bytes.fromhex('7069636f4354467b5539585f556e5034636b314e365f42316e34526933535f65313930633366337d'))"
 b'picoCTF{<REDACTED>}'
 ```
+
 and the xxd way
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Reverse_Engineering/packer]
 └─$ echo '7069636f4354467b5539585f556e5034636b314e365f42316e34526933535f65313930633366337d' | xxd -r -p
@@ -125,10 +135,10 @@ For additional information, please see the references below.
 
 ## References
 
+- [Executable compression - Wikipedia](https://en.wikipedia.org/wiki/Executable_compression)
 - [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
 - [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)
-- [xxd - Linux manual page](https://linux.die.net/man/1/xxd)
+- [String (computer science) - Wikipedia](https://en.wikipedia.org/wiki/String_(computer_science))
 - [UPX - Github](https://github.com/upx/upx)
 - [UPX - Homepage](https://upx.github.io/)
-- [Wikipedia - Executable compression](https://en.wikipedia.org/wiki/Executable_compression)
-- [Wikipedia - String (computer science)](https://en.wikipedia.org/wiki/String_(computer_science))
+- [xxd - Linux manual page](https://linux.die.net/man/1/xxd)

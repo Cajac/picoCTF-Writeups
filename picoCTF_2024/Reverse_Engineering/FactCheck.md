@@ -5,7 +5,8 @@
 - [References](#references)
 
 ## Challenge information
-```
+
+```text
 Level: Medium
 Tags: picoCTF 2024, Reverse Engineering, browser_webshell_solvable
 Author: JUNIAS BONOU
@@ -19,6 +20,7 @@ Examine this file. Do you understand its inner workings?
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/416](https://play.picoctf.org/practice/challenge/416)
 
 ## Solution
@@ -26,14 +28,17 @@ Challenge link: [https://play.picoctf.org/practice/challenge/416](https://play.p
 ### Basic file analysis
 
 We start with some basic analysis of the file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Reverse_Engineering/FactCheck]
 └─$ file bin                    
 bin: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=d134239fc06b6e50d2b04696cac10504a052fcfd, for GNU/Linux 3.2.0, not stripped
 ```
+
 The file is a 64-bit [ELF-binary](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format).
 
 Next, we check for interesting strings
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Reverse_Engineering/FactCheck]
 └─$ strings -n 6 bin
@@ -47,6 +52,7 @@ GCC: (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
 crtstuff.c
 <---snip--->
 ```
+
 Ah, we have a likely beginning of the flag.
 
 ### Static analysis in Ghidra
@@ -54,6 +60,7 @@ Ah, we have a likely beginning of the flag.
 We continue with decompiling the file in [Ghidra](https://ghidra-sre.org/) and study the code.  
 Import the file in Ghidra and analyze it with the default settings.  
 Double-click on the `main` function to show the decompiled version of it
+
 ```c
 undefined8 main(void)
 
@@ -250,15 +257,19 @@ undefined8 main(void)
   __stack_chk_fail();
 }
 ```
+
 At the beginning of the code, we again see the first part of the flag.
 
 It's rather hard to see but each line of the form
-```
+
+```text
 std::__cxx11::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string
             ((char *)local_228,(allocator *)&DAT_0010201d);
 ```
+
 corresponds to a character. You can double-click on the memory reference (`DAT_0010201d`) to find out what character it corresponds to. Then rename it (`Rename Global`) to something like `char_X`. The result will look like this
-```
+
+```text
                     /* try { // try from 0010130a to 0010130e has its CatchHandler @ 00101996 */
   std::__cxx11::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string
             ((char *)local_228,(allocator *)&char_3);
@@ -274,8 +285,10 @@ corresponds to a character. You can double-click on the memory reference (`DAT_0
             ((char *)local_1e8,(allocator *)&char_9);
   std::allocator<char>::~allocator(&local_249);
 ```
+
 Then we rename the corresponding local_variable to the same name. E.g. `local_208` shold be renamed (`Rename Variable`) to `char_3`. If you get `duplicate name` errors, shorten one of the names to `chr_X` instead. We now have
-```
+
+```text
                     /* try { // try from 0010130a to 0010130e has its CatchHandler @ 00101996 */
   std::__cxx11::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string
             ((char *)char_3,(allocator *)&::char_3);
@@ -297,10 +310,12 @@ Then we rename the corresponding local_variable to the same name. E.g. `local_20
   std::allocator<char>::~allocator(&local_249);
   std::allocator<char>::allocator();
 ```
+
 It's still a bit hard to read though.
 
 Further down we see that the flag is created by characters appended (`operator+`). Sometimes if some condition is meet.
-```
+
+```text
   std::__cxx11::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator+=
             (local_248,char_b);
   pcVar2 = (char *)std::__cxx11::basic_string<char,std::char_traits<char>,std::allocator<char>>::
@@ -320,6 +335,7 @@ Further down we see that the flag is created by characters appended (`operator+`
   std::__cxx11::basic_string<char,std::char_traits<char>,std::allocator<char>>::operator+=
             (local_248,'}');
 ```
+
 We see that the last character appended is the `}` character.
 
 This is getting too tedious. Let's switch to a dynamic approach instead and debug the binary in `gdb`
@@ -327,6 +343,7 @@ This is getting too tedious. Let's switch to a dynamic approach instead and debu
 ### Dynamic analysis in GDB
 
 We start gdb with the [GEF extension](https://hugsy.github.io/gef/)
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Reverse_Engineering/FactCheck]
 └─$ gdb-gef -q bin         
@@ -337,10 +354,12 @@ GEF for linux ready, type `gef' to start, `gef config' to configure
 88 commands loaded and 5 functions added for GDB 13.2 in 0.01ms using Python engine 3.11
 gef➤  
 ```
+
 We want to break on the first assembly instruction after the appending of the `}` character, which is a relative address ending with `0x01860`.
 
 First we figure out the relative offset from start of `main`
-```
+
+```text
 gef➤  disass main
 Dump of assembler code for function main:
    0x0000000000001289 <+0>:     endbr64
@@ -358,8 +377,10 @@ Dump of assembler code for function main:
    0x0000000000001869 <+1504>:  mov    rdi,rax
 <---snip--->
 ```
+
 Ah, the offset is `main+1495`. We set a break point there and run the program
-```
+
+```text
 gef➤  break *main+1495
 Breakpoint 1 at 0x1860
 gef➤  run
@@ -368,7 +389,8 @@ gef➤  run
 ### Get the flag
 
 When the program stops we have the complete flag pointed to by both the `RAX` and `RDI` registers, as well as on the stack.
-```
+
+```text
 Breakpoint 1, 0x0000555555555860 in main ()
 [ Legend: Modified register | Code | Heap | Stack | String ]
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── registers ────
@@ -422,11 +444,11 @@ For additional information, please see the references below.
 
 ## References
 
+- [Executable and Linkable Format - Wikipedia](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format)
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
+- [gdb - Linux manual page](https://man7.org/linux/man-pages/man1/gdb.1.html)
 - [GEF (GDB Enhanced Features) - Github](https://github.com/hugsy/gef)
 - [GEF (GDB Enhanced Features) - Homepage](https://hugsy.github.io/gef/)
 - [Ghidra - Homepage](https://ghidra-sre.org/)
-- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
-- [gdb - Linux manual page](https://man7.org/linux/man-pages/man1/gdb.1.html)
 - [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)
-- [Wikipedia - Executable and Linkable Format](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format)
-- [Wikipedia - String (computer science)](https://en.wikipedia.org/wiki/String_(computer_science))
+- [String (computer science) - Wikipedia](https://en.wikipedia.org/wiki/String_(computer_science))
