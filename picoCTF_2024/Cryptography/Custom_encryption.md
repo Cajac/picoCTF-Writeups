@@ -5,7 +5,8 @@
 - [References](#references)
 
 ## Challenge information
-```
+
+```text
 Level: Easy
 Tags: picoCTF 2024, Cryptography, browser_webshell_solvable, ASCII_encoding, XOR
 Author: NGIRIMANA SCHADRACK
@@ -20,6 +21,7 @@ and get the flag.
 Hints:
 1. Understanding encryption algorithm to come up with decryption algorithm.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/412](https://play.picoctf.org/practice/challenge/412)
 
 ## Solution
@@ -27,6 +29,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/412](https://play.p
 ### Analysis of the custom encryption
 
 The given `enc_flag` file contains the following:
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Cryptography/Custom_encryption]
 └─$ cat enc_flag                        
@@ -36,6 +39,7 @@ cipher is: [260307, 491691, 491691, 2487378, 2516301, 0, 1966764, 1879995, 19956
 ```
 
 And the python source code looks like this
+
 ```python
 from random import randint
 import sys
@@ -104,11 +108,13 @@ if __name__ == "__main__":
 ```
 
 From the code we can see that the encryption is a combination of:
+
 - Reversing the order of the characters in the  `dynamic_xor_encrypt` function (`enumerate(plaintext[::-1]`),
 - [XOR](https://en.wikipedia.org/wiki/Exclusive_or) performed in the `dynamic_xor_encrypt` function (`ord(char) ^ ord(key_char)`) and
 - Multiplication of the characters [ASCII-values](https://en.wikipedia.org/wiki/ASCII) performed in the `encrypt` function (`ord(char) * key * 311)`)
 
 To decrypt, we need to perform the reverse operations in the reverse order:
+
 - Division with the same values in a `decrypt` function
 - XOR with the same key in a `dynamic_xor_decrypt` function (the reverse of XOR is XOR)
 - Reversing the order of the characters
@@ -116,6 +122,7 @@ To decrypt, we need to perform the reverse operations in the reverse order:
 ### Create a python decoding script
 
 The final decryption script looks like this
+
 ```python
 #!/usr/bin/python
 
@@ -172,6 +179,7 @@ if __name__ == "__main__":
 ## Get the flag
 
 Finally we run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Cryptography/Custom_encryption]
 └─$ python custom_decryption.py 
@@ -182,5 +190,6 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)
-- [Wikipedia - Exclusive or](https://en.wikipedia.org/wiki/Exclusive_or)
+- [ASCII - Wikipedia](https://en.wikipedia.org/wiki/ASCII)
+- [Exclusive or - Wikipedia](https://en.wikipedia.org/wiki/Exclusive_or)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
