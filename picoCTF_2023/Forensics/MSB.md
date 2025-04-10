@@ -2,14 +2,15 @@
 
 - [Challenge information](#challenge-information)
 - [Basic file analysis](#basic-file-analysis)
-- [StegoVeritas solution](#stegoVeritas-solution)
-- [StegSolve solution](#stegSolve-solution)
-- [SigBits solution](#sigBits-solution)
+- [StegoVeritas solution](#stegoveritas-solution)
+- [StegSolve solution](#stegsolve-solution)
+- [SigBits solution](#sigbits-solution)
 - [References](#references)
 
 ## Challenge information
-```
-Points: 200
+
+```text
+Level: Medium
 Tags: picoCTF 2023, Forensics, steganography
 Author: LT 'SYREAL' JONES
 
@@ -21,6 +22,7 @@ Download the image here
 Hints:
 1. What's causing the 'corruption' of the image?
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/359](https://play.picoctf.org/practice/challenge/359)
 
 ## Basic file analysis
@@ -30,6 +32,7 @@ From the challenge title and description we can deduce that this is going to be 
 ### Basic analysis of the image file
 
 Let's start with some basic analysis of the file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/MSB]
 └─$ file Ninja-and-Prince-Genji-Ukiyoe-Utagawa-Kunisada.flag.png 
@@ -124,12 +127,13 @@ Megapixels                      : 1.6
 
 Nope, nothing of interest as expected, but it's always good to double-check.
 
-Let's bring out the stego-tools instead.
+Let's bring out the stego tools instead.
 
 ### Failed attempt with zsteg
 
 The first tool tried was [zsteg](https://github.com/zed-0xff/zsteg) but that didn't yield anaything.  
 The output with all tests was quite long so I grepped for the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/MSB]
 └─$ zsteg -a Ninja-and-Prince-Genji-Ukiyoe-Utagawa-Kunisada.flag.png | grep -i pico
@@ -137,11 +141,13 @@ The output with all tests was quite long so I grepped for the flag
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/MSB]
 └─$ 
 ```
+
 but there was no success.
 
 ## StegoVeritas solution
 
 Next, I tried [stegoVeritas](https://github.com/bannsec/stegoVeritas).
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/MSB]
 └─$ ~/python_venvs/stegoveritas/bin/stegoveritas Ninja-and-Prince-Genji-Ukiyoe-Utagawa-Kunisada.flag.png 
@@ -202,9 +208,10 @@ Exif
 +---------------------+-----------------------------------------------------------------------------------------------------------+
 ```
 
-It found some interesting things and all the results were stored in the `results` subdirectory. 
+It found some interesting things and all the results were stored in the `results` subdirectory.
 
 If we recursively `grep` for the flag in that subdirectory, we find the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/MSB]
 └─$ grep -iR 'picoCTF{' results
@@ -228,6 +235,7 @@ This is because the text shown is only a subset of all the data.
 Press the `Save Text`-button to save all the extracted data as a file.
 
 The saved file contains both hex and ascii values
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/MSB]
 └─$ head -3 StegSolve_all_text.data
@@ -235,7 +243,9 @@ The saved file contains both hex and ascii values
 6e62657267206542 6f6f6b206f662054  nberg eB ook of T
 686520486973746f 7279206f6620446f  he Histo ry of Do
 ```
+
 This makes grepping for the flag slightly more complicated. We cannot simply do a standard grep and expect to get the entire flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/MSB]
 └─$ grep pico StegSolve_all_text.data 
@@ -243,6 +253,7 @@ This makes grepping for the flag slightly more complicated. We cannot simply do 
 ```
 
 But with a combination of `grep`, `cut` and `tr` you can get the full flag in readable form
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/MSB]
 └─$ grep -A3 pico StegSolve_all_text.data | cut -d ' ' -f3- | tr -d ' \n\r' 
@@ -254,6 +265,7 @@ But with a combination of `grep`, `cut` and `tr` you can get the full flag in re
 Finally, you can use the [sigBits script](https://github.com/Pulho/sigBits) to extract the data.
 
 Let's start by getting more information on the parameters we can and should use
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/MSB]
 └─$ ~/python_venvs/Pillow/bin/sigBits.py -h
@@ -278,14 +290,17 @@ Options:
 ```
 
 Then we set the `type` to `MSB` and leave the rest as default
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/MSB]
 └─$ ~/python_venvs/Pillow/bin/sigBits.py -t=msb Ninja-and-Prince-Genji-Ukiyoe-Utagawa-Kunisada.flag.png 
 Done, check the output file!
 ```
+
 The output file is a file called `outputSB.txt`.
 
 Since all the extracted data is stored in the same line, we need to use some [RegEx](https://en.wikipedia.org/wiki/Regular_expression) magic to extract only the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/MSB]
 └─$ wc -l outputSB.txt 
@@ -300,14 +315,14 @@ For additional information, please see the references below.
 
 ## References
 
-- [sigBits - Github](https://github.com/Pulho/sigBits)
-- [stegoVeritas - Github](https://github.com/bannsec/stegoVeritas)
-- [stegsolve - Github](https://github.com/Giotino/stegsolve)
-- [zsteg - Github](https://github.com/zed-0xff/zsteg)
+- [Bit numbering - Wikipedia](https://en.wikipedia.org/wiki/Bit_numbering)
 - [cut - Linux manual page](https://man7.org/linux/man-pages/man1/cut.1.html)
 - [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
+- [Regular expression - Wikipedia](https://en.wikipedia.org/wiki/Regular_expression)
+- [sigBits - Github](https://github.com/Pulho/sigBits)
+- [Steganography - Wikipedia](https://en.wikipedia.org/wiki/Steganography)
+- [stegoVeritas - Github](https://github.com/bannsec/stegoVeritas)
+- [stegsolve - Github](https://github.com/Giotino/stegsolve)
 - [tr - Linux manual page](https://man7.org/linux/man-pages/man1/tr.1.html)
+- [zsteg - Github](https://github.com/zed-0xff/zsteg)
 - [wc - Linux manual page](https://man7.org/linux/man-pages/man1/wc.1.html)
-- [Wikipedia - Bit numbering](https://en.wikipedia.org/wiki/Bit_numbering)
-- [Wikipedia - Regular expression](https://en.wikipedia.org/wiki/Regular_expression)
-- [Wikipedia - Steganography](https://en.wikipedia.org/wiki/Steganography)

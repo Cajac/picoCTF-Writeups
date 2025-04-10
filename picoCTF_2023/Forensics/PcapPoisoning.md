@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2023, Forensics, pcap
 Author: MUBARAK MIKAIL
 
@@ -17,6 +18,7 @@ Download this file and find the flag.
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/362](https://play.picoctf.org/practice/challenge/362)
 
 ## Solution
@@ -30,3 +32,4 @@ Ah, only one packet matches and the flag is indeed visible in the ASCII details 
 ## References
 
 - [Wireshark - Display Filters](https://wiki.wireshark.org/DisplayFilters)
+- [Wireshark - Homepage](https://www.wireshark.org/)

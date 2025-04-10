@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2023, Forensics, steganography
 Author: GEOFFREY NJOGU
 
@@ -19,11 +20,13 @@ They decided to investigate and found out that there was more than what meets th
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/350](https://play.picoctf.org/practice/challenge/350)
 
 ## Solution
 
 In steganography challenges there are a number of checks that are more or less "standard practice". These include:
+
 1. Checking for metadata with [ExifTool](https://exiftool.org/)
 2. Checking for embedded [strings](https://en.wikipedia.org/wiki/Strings_(Unix))
 3. Checking for embedded Zip-files with tools such as [Binwalk](https://github.com/ReFirmLabs/binwalk)
@@ -31,7 +34,8 @@ In steganography challenges there are a number of checks that are more or less "
 ### Checking for metadata
 
 Let's start by checking for metadata
-```
+
+```text
 Z:\CTFs\picoCTF\picoCTF_2023\Forensics\hideme>exiftool flag.png
 ExifTool Version Number         : 12.44
 File Name                       : flag.png
@@ -61,7 +65,8 @@ Hhm, we see that there is data embedded after the PNG-file, i.e. after the IEND 
 ### Checking for embedded strings
 
 Continue with checking for strings. In this case I'm using a [Windows version of strings from Sysinternals](https://learn.microsoft.com/en-us/sysinternals/downloads/strings).
-```
+
+```text
 Z:\CTFs\picoCTF\picoCTF_2023\Forensics\hideme>strings -n 8 flag.png
 
 Strings v2.53 - Search for ANSI and Unicode strings in binary images.
@@ -85,7 +90,8 @@ No flag here either but something that looks like file paths.
 ### Checking for embedded Zip-files
 
 Now lets check for embedded Zip-files or other interesting files with `binwalk`
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Forensics/hideme]
 └─$ binwalk flag.png              
 
@@ -105,7 +111,8 @@ Extract the zip-file with `binwalk -e flag.png`.
 
 The extracted files will be written to a directory with the format of '_target-file-name.extracted'.  
 Let's check it
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Forensics/hideme]
 └─$ ls -la _flag.png.extracted 
 total 46
@@ -124,18 +131,23 @@ drwxrwxrwx 1 root root    0 Jul 26 01:46 ..
 -rwxrwxrwx 1 root root 3029 Mar 15 22:01 flag.png
 ```
 
-Ah, in the secrets subdirectory there is indeed a flag.png file. 
+Ah, in the secrets subdirectory there is indeed a flag.png file.
 
 ### Get the flag
 
 To view the flag.png file in Kali linux you need a program such as `feh` or `eog`.
 These were not installed in the version I was using and needed to be installed (with 'sudo apt install xxx').
 
-Viewing the flag.png file reveiles the flag.
+Viewing the flag.png file reveals the flag.
 
 For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Exif](https://en.wikipedia.org/wiki/Exif)
-- [Wikipedia - strings (Unix)](https://en.wikipedia.org/wiki/Strings_(Unix))
+- [Binwalk - GitHub](https://github.com/ReFirmLabs/binwalk)
+- [Binwalk - Kali Tools](https://www.kali.org/tools/binwalk/)
+- [binwalk - Linux manual page](https://manpages.debian.org/testing/binwalk/binwalk.1.en.html)
+- [Exif - Wikipedia](https://en.wikipedia.org/wiki/Exif)
+- [ExifTool - Wikipedia](https://en.wikipedia.org/wiki/ExifTool)
+- [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)
+- [strings (Unix) - Wikipedia](https://en.wikipedia.org/wiki/Strings_(Unix))

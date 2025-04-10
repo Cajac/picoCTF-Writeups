@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 300
+
+```text
+Level: Hard
 Tags: picoCTF 2023, Forensics, steganography
 Author: LT 'SYREAL' JONES
 
@@ -22,6 +23,7 @@ Hints:
 1. Something doesn't quite add up with this image...
 2. How's the image quality?
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/354](https://play.picoctf.org/practice/challenge/354)
 
 ## Solution
@@ -29,6 +31,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/354](https://play.p
 ### Basic analysis of the image
 
 Let's start with some basic analysis of the image
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/Invisible_WORDs]
 └─$ file output.bmp 
@@ -67,9 +70,11 @@ Rendering Intent                : Proof (LCS_GM_GRAPHICS)
 Image Size                      : 960x540
 Megapixels                      : 0.518
 ```
+
 Nothing that stands out.
 
 Let's try a hex view with `xxd`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/Invisible_WORDs]
 └─$ xxd -l 0x200 output.bmp       
@@ -107,18 +112,21 @@ Let's try a hex view with `xxd`
 000001f0: f5fb 0d25 919f e828 2347 cd35 8efc 5256  ...%...(#G.5..RV
 ```
 
-After the [BMP file header](https://en.wikipedia.org/wiki/BMP_file_format) and the Windows bitmap header there is a `PK` 
+After the [BMP file header](https://en.wikipedia.org/wiki/BMP_file_format) and the Windows bitmap header there is a `PK`
 that suggests a [ZIP file](https://en.wikipedia.org/wiki/ZIP_(file_format)) header.
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/Invisible_WORDs]
 └─$ xxd -s 0x8c -l 0x10 output.bmp
 0000008c: 504b 9552 0304 c618 1400 ce3d 0000 104a  PK.R.......=...J
 ```
+
 But there are additional bytes in the middle of the `504b0304` or `PK\3\4` ZIP-header.
 
 ### Write a python extraction script - part 1
 
 Let's write a small python script called `extract_zip.py` to try to extract the ZIP
+
 ```python
 #!/usr/bin/python
 
@@ -131,6 +139,7 @@ zip.close()
 ```
 
 Then we make the script executable and run it
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/Invisible_WORDs]
 └─$ chmod +x extract_zip.py 
@@ -144,6 +153,7 @@ extracted.zip: Zip archive data, at least v2.0 to extract, compression method=de
 ```
 
 This looks promising. Let's try to unzip it
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/Invisible_WORDs]
 └─$ unzip extracted.zip          
@@ -162,6 +172,7 @@ Hhm, something is wrong. Let's investigate the resulting file.
 ### Write a python extraction script - part 2
 
 Looking at the result, we can see that additional data is included after the EOCD (End of central directory) at the end of the zip-file.
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/Invisible_WORDs]
 └─$ xxd -l 0x100 -s 0x295c0 extracted.zip
@@ -184,6 +195,7 @@ Looking at the result, we can see that additional data is included after the EOC
 ```
 
 Let's modify the script to quit extracting when the '\xff\x00' data begins
+
 ```python
 #!/usr/bin/python
 
@@ -199,6 +211,7 @@ zip.close()
 ```
 
 Let's try again
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/Invisible_WORDs]
 └─$ ./extract_zip2.py
@@ -208,9 +221,11 @@ Let's try again
 Archive:  extracted2.zip
   inflating: ZnJhbmtlbnN0ZWluLXRlc3QudHh0  
 ```
+
 Success!
 
 Let's check the extracted file which name looks [base64](https://en.wikipedia.org/wiki/Base64) encoded
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/Invisible_WORDs]
 └─$ file ZnJhbmtlbnN0ZWluLXRlc3QudHh0 
@@ -236,6 +251,7 @@ using this eBook.
 ### Get the flag
 
 Finally, let's grep for the flag with a [RegEx](https://en.wikipedia.org/wiki/Regular_expression) for the flag format
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Forensics/Invisible_WORDs]
 └─$ grep -oE 'picoCTF{.*}' ZnJhbmtlbnN0ZWluLXRlc3QudHh0 
@@ -246,10 +262,14 @@ For additional information, please see the references below.
 
 ## References
 
+- [base64 - Linux manual page](https://man7.org/linux/man-pages/man1/base64.1.html)
+- [Base64 - Wikipedia](https://en.wikipedia.org/wiki/Base64)
+- [BMP file format - Wikipedia](https://en.wikipedia.org/wiki/BMP_file_format)
 - [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Regular expression - Wikipedia](https://en.wikipedia.org/wiki/Regular_expression)
+- [Steganography - Wikipedia](https://en.wikipedia.org/wiki/Steganography)
+- [unzip - Linux manual page](https://linux.die.net/man/1/unzip)
 - [xxd - Linux manual page](https://linux.die.net/man/1/xxd)
-- [Wikipedia - Base64](https://en.wikipedia.org/wiki/Base64)
-- [Wikipedia - BMP file format](https://en.wikipedia.org/wiki/BMP_file_format)
-- [Wikipedia - Regular expression](https://en.wikipedia.org/wiki/Regular_expression)
-- [Wikipedia - Steganography](https://en.wikipedia.org/wiki/Steganography)
-- [Wikipedia - ZIP (file format)](https://en.wikipedia.org/wiki/ZIP_(file_format))
+- [ZIP (file format) - Wikipedia](https://en.wikipedia.org/wiki/ZIP_(file_format))

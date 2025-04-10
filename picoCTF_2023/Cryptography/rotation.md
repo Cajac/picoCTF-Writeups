@@ -6,8 +6,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2023, Cryptography
 Author: LOIC SHEMA
  
@@ -19,6 +20,7 @@ Download the encrypted flag here.
 Hints:
 1. Sometimes rotation is right
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/373](https://play.picoctf.org/practice/challenge/373)
 
 ## CyberChef solution
@@ -60,7 +62,8 @@ for i in range(1, alpha_len+1):
 ```
 
 Then make the script executable and run it
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Cryptography/rotation]
 └─$ chmod +x solve.py
 
@@ -73,4 +76,7 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - ROT13](https://en.wikipedia.org/wiki/ROT13)
+- [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [ROT13 - Wikipedia](https://en.wikipedia.org/wiki/ROT13)

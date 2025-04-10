@@ -7,8 +7,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2023, Cryptography
 Author: SUNDAY JACOB NWANYIM
 
@@ -20,12 +21,14 @@ Take a look at this CSR file here.
 Hints:
 1. Download the certificate signing request and try to read it.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/367](https://play.picoctf.org/practice/challenge/367)
 
 There are several ways to solve this challenge. Below are three of them.
 
 But first let's see how the file looks in a common text editor.
-```
+
+```text
 -----BEGIN CERTIFICATE REQUEST-----
 MIICpzCCAY8CAQAwPDEmMCQGA1UEAwwdcGljb0NURntyZWFkX215Y2VydF81YWVi
 MGQ0Zn0xEjAQBgNVBCkMCWN0ZlBsYXllcjCCASIwDQYJKoZIhvcNAQEBBQADggEP
@@ -45,7 +48,7 @@ FxdQuLOH8GMvl7U=
 -----END CERTIFICATE REQUEST-----
 ```
 
-As hinted by the '=' and the end of the long and cryptic string this is base64 encoded data.
+As hinted by the '=' at the end of the long and cryptic string this is base64 encoded data.
 
 ## CyberChef solution
 
@@ -66,7 +69,8 @@ The flag is visible in the `Common name` field of the certificate.
 ## Openssl solution
 
 The "advanced" way is the read the file with `openssl` like this
-```
+
+```text
 Z:\CTFs\picoCTF\picoCTF_2023\Cryptography\ReadMyCert>openssl req -in readmycert.csr -noout -text
 Certificate Request:
     Data:
@@ -92,4 +96,5 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Certificate signing request](https://en.wikipedia.org/wiki/Certificate_signing_request)
+- [Certificate signing request - Wikipedia](https://en.wikipedia.org/wiki/Certificate_signing_request)
+- [openssl - Linux manual page](https://linux.die.net/man/1/openssl)

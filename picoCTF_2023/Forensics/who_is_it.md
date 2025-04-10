@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2023, Forensics, email
 Author: JUNIAS BONOU
 
@@ -21,7 +22,8 @@ Flag: picoCTF{FirstnameLastname}
 Hints:
 1. whois can be helpful on IP addresses also, not only domain names.
 ```
-Challenge link: [https://play.picoctf.org/practice/challenge/388](https://play.picoctf.org/practice/challenge/388)
+
+Challenge link: `<This challenge is no longer available!>`
 
 ## Solution
 
@@ -34,16 +36,18 @@ Other wise, continue to the manual review below.
 ### Use an online service
 
 Examples of online services that can help you analyze e-mail headers are:
- - [DNS Checker - Email Header Analyzer](https://dnschecker.org/email-header-analyzer.php)
- - [Google Admin - Toolbox Messageheader](https://toolbox.googleapps.com/apps/messageheader/)
- - [MXToolBox - Email Header Analyzer](https://mxtoolbox.com/EmailHeaders.aspx)
+
+- [DNS Checker - Email Header Analyzer](https://dnschecker.org/email-header-analyzer.php)
+- [Google Admin - Toolbox Messageheader](https://toolbox.googleapps.com/apps/messageheader/)
+- [MXToolBox - Email Header Analyzer](https://mxtoolbox.com/EmailHeaders.aspx)
 
 ### Manual review
 
 Go through the e-mail header line by line until you start to find IPv4 addresses.
 
 You will find the sender's IP-address in several headers such as the `Received` header
-```
+
+```text
 Received: from mail.onionmail.org (mail.onionmail.org. [173.249.33.206])
         by mx.google.com with ESMTPS id f16-20020a05600c4e9000b003a1947873d6si1882702wmq.224.2022.07.07.23.19.47
         for <francismanzi@gmail.com>
@@ -52,7 +56,8 @@ Received: from mail.onionmail.org (mail.onionmail.org. [173.249.33.206])
 ```
 
 and the `ARC-Authentication-Results` header
-```
+
+```text
 ARC-Authentication-Results: i=1; mx.google.com;
        dkim=pass header.i=@onionmail.org header.s=jan2022 header.b=4sU2nk5Z;
        spf=pass (google.com: domain of lpage@onionmail.org designates 173.249.33.206 as permitted sender) smtp.mailfrom=lpage@onionmail.org;
@@ -60,7 +65,8 @@ ARC-Authentication-Results: i=1; mx.google.com;
 ```
 
 and the `Received-SPF` header
-```
+
+```text
 Received-SPF: pass (google.com: domain of lpage@onionmail.org designates 173.249.33.206 as permitted sender) client-ip=173.249.33.206;
 ```
 
@@ -68,12 +74,13 @@ So the sending IP-address is `173.249.33.206`.
 
 ### Whois lookup
 
-Next, we need to lookup the registered owner of the IP-address with whois. 
+Next, we need to lookup the registered owner of the IP-address with whois.
 
 This can be done with a linux tool such as `whois` or an online site such [DomainTools](https://whois.domaintools.com/173.249.33.206).
 
 Let's use `whois` in this case
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Forensics/who_is_it]
 └─$ whois 173.249.33.206
 
