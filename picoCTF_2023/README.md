@@ -39,12 +39,12 @@
 
 ### Easy General Skills Challenges
 
+- [money-ware](General_Skills/money-ware.md)
 - [repetitions](General_Skills/repetitions.md)
 
 ### Medium General Skills Challenges
 
 - [chrono](General_Skills/chrono.md)
-- [money-ware](General_Skills/money-ware.md)
 - [Permissions](General_Skills/Permissions.md)
 - [Special](General_Skills/Special.md)
 - [Specialer](General_Skills/Specialer.md)
@@ -66,7 +66,7 @@
 
 ### Medium Web Exploitation Challenges
 
-- [findme](Web_Exploitation/findme.md) 
+- [findme](Web_Exploitation/findme.md)
 - [MatchTheRegex](Web_Exploitation/MatchTheRegex.md)
 - [More SQLi](Web_Exploitation/More_SQLi.md)
 - [SOAP](Web_Exploitation/SOAP.md)

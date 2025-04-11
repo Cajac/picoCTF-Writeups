@@ -6,8 +6,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2023, General Skills, vim
 Author: GEOFFREY NJOGU
 
@@ -23,13 +24,15 @@ Can you login and read the root file?
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/363](https://play.picoctf.org/practice/challenge/363)
 
 ## The likely intended solution
 
-When the description says read the 'root file' I think they rather meant the /root directory!
+When the description says read the 'root file' I think they rather meant the `/root` directory!
 
 We start by connecting to the server with SSH
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/General_Skills/Permissions]
 └─$ ssh -p 59219 picoplayer@saturn.picoctf.net
@@ -61,6 +64,7 @@ picoplayer@challenge:~$
 ```
 
 Let's change directory and look for the /root directory.
+
 ```bash
 picoplayer@challenge:~$ cd /
 picoplayer@challenge:/$ ls -la
@@ -92,10 +96,11 @@ drwxr-xr-x    1 root   root     18 Mar  8 02:06 usr
 drwxr-xr-x    1 root   root     17 Mar  8 02:09 var
 ```
 
-We can see that it is a directory rather than a file and that the only user that have permissions to read the directory is root.
+We can see that it is a directory rather than a file and that the only user that have permissions to read the directory is the root user.
 
-So what can we do to escalate our privileges? Let's check what commands we can run as root via `sudo`.
+So what can we do to escalate our privileges? Let's check what commands we can run as root via `sudo`.  
 This is done with `sudo -l`.
+
 ```bash
 picoplayer@challenge:/$ sudo -l
 [sudo] password for picoplayer: 
@@ -109,7 +114,8 @@ User picoplayer may run the following commands on challenge:
 
 Ah, all users can run the `vi` text editor as root. This means we can read the /root directory as a file with it.
 Run `sudo vi /root` and you get
-```
+
+```text
 " ============================================================================
 " Netrw Directory Listing                                        (netrw v165)
 "   /root
@@ -136,6 +142,7 @@ Reading that file in the same manner with `sudo vi /root/.flag.txt` gets you the
 ## An alternative solution
 
 When I looked through the file and directory listing in `/` I also noticed that there is a directory called `challenge`.
+
 ```bash
 picoplayer@challenge:/$ ls -la
 total 0
@@ -167,6 +174,7 @@ drwxr-xr-x    1 root   root     17 Mar  8 02:09 var
 ```
 
 It's readable for all users so let's check that out
+
 ```bash
 picoplayer@challenge:/$ cd challenge/
 picoplayer@challenge:/challenge$ ls -la
@@ -177,6 +185,7 @@ drwxr-xr-x 1 root root 51 Jul 19 06:06 ..
 ```
 
 Let's `cat` the file to view its contents.
+
 ```bash
 picoplayer@challenge:/challenge$ cat metadata.json
 {"flag": "picoCTF{<REDACTED>}", "username": "picoplayer", "password": "pEN9KN1qYm"}
@@ -188,5 +197,6 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - File-system permissions](https://en.wikipedia.org/wiki/File-system_permissions)
-- [Wikipedia - sudo](https://en.wikipedia.org/wiki/Sudo)
+- [File-system permissions - Wikipedia](https://en.wikipedia.org/wiki/File-system_permissions)
+- [Root directory - Wikipedia](https://en.wikipedia.org/wiki/Root_directory)
+- [sudo - Wikipedia](https://en.wikipedia.org/wiki/Sudo)

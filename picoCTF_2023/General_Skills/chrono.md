@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2023, General Skills, linux
 Author: MUBARAK MIKAIL
 
@@ -22,12 +23,14 @@ Password: KkPyI5bkmn
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/347](https://play.picoctf.org/practice/challenge/347)
 
 ## Solution
 
 Start by connecting to the server with SSH
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/General_Skills/chrono]
 └─$ ssh -p 57689 picoplayer@saturn.picoctf.net
 The authenticity of host '[saturn.picoctf.net]:57689 ([13.59.203.175]:57689)' can't be established.
@@ -62,13 +65,15 @@ I know since previously that scheduled jobs in linux is specified in the `cronta
 Otherwise this might require some googling to find out...
 
 You can list your cronjobs with `crontab -l` so let's try that
-```
+
+```bash
 picoplayer@challenge:~$ crontab -l
 no crontab for picoplayer
 ```
 
 Hm, no joy there. The configuration files for cron are, like most other configurations, stored in the `/etc` directory so let's go there
-```
+
+```bash
 picoplayer@challenge:~$ cd /etc
 picoplayer@challenge:/etc$ ls -la cron*
 -rw-r--r-- 1 root root 43 Mar 16 02:00 crontab
@@ -108,7 +113,8 @@ drwxr-xr-x 1 root root  66 Jul 25 17:20 ..
 ```
 
 Let's start by checking the `/etc/crontab` file which also contains the flag.
-```
+
+```bash
 picoplayer@challenge:/etc$ cat crontab 
 # picoCTF{<REDACTED>}
 ```
@@ -117,4 +123,6 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - cron](https://en.wikipedia.org/wiki/Cron)
+- [cron - Wikipedia](https://en.wikipedia.org/wiki/Cron)
+- [Secure Shell - Wikipedia](https://en.wikipedia.org/wiki/Secure_Shell)
+- [ssh - Linux manual page](https://man7.org/linux/man-pages/man1/ssh.1.html)

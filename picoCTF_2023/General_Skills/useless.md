@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2023, General Skills, man
 Author: LOIC SHEMA
 
@@ -24,12 +25,14 @@ Password: password
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/384](https://play.picoctf.org/practice/challenge/384)
 
 ## Solution
 
 Start by connecting to the server with SSH
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/General_Skills/useless]
 └─$ ssh -p 55661 picoplayer@saturn.picoctf.net
 The authenticity of host '[saturn.picoctf.net]:55661 ([13.59.203.175]:55661)' can't be established.
@@ -55,7 +58,8 @@ picoplayer@challenge:~$
 ```
 
 The script should be located in our home directory so let's look for it
-```
+
+```bash
 picoplayer@challenge:~$ ls -la
 total 16
 drwxr-xr-x 1 picoplayer picoplayer   20 Jul 28 14:39 .
@@ -105,7 +109,8 @@ fi
 ```
 
 Hhm, no flag there. But there is an instruction to read the manual and the challenge is also tagged with `man` so let's try that
-```
+
+```bash
 picoplayer@challenge:~$ man useless
 
 useless
@@ -143,4 +148,7 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - man page](https://en.wikipedia.org/wiki/Man_page)
+- [man page - Wikipedia](https://en.wikipedia.org/wiki/Man_page)
+- [Secure Shell - Wikipedia](https://en.wikipedia.org/wiki/Secure_Shell)
+- [Shell script - Wikipedia](https://en.wikipedia.org/wiki/Shell_script)
+- [ssh - Linux manual page](https://man7.org/linux/man-pages/man1/ssh.1.html)

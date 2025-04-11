@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 300
+
+```text
+Level: Medium
 Tags: picoCTF 2023, General Skills, bash, ssh
 Author: LT 'SYREAL' JONES
 
@@ -26,6 +27,7 @@ The password is 3f39b042
 Hints:
 1. Experiment with different shell syntax
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/377](https://play.picoctf.org/practice/challenge/377)
 
 ## Solution
@@ -33,7 +35,8 @@ Challenge link: [https://play.picoctf.org/practice/challenge/377](https://play.p
 ### Connect to the server
 
 Start by connecting to the server with SSH
-```
+
+```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/General_Skills/Special]
 └─$ ssh -p 63243 ctf-player@saturn.picoctf.net
 The authenticity of host '[saturn.picoctf.net]:63243 ([13.59.203.175]:63243)' can't be established.
@@ -66,7 +69,8 @@ Special$
 ### Try different commands
 
 Let's try some sample commands
-```
+
+```bash
 Special$ ls
 Is 
 sh: 1: Is: not found
@@ -77,12 +81,14 @@ Special$ id
 Id 
 sh: 1: Id: not found
 ```
+
 As said in the challenge description, the commands are spell-checked and Capitalized.
 
 ### Try to launch a real shell
 
 Then I tried to launch a new real shell
-```
+
+```bash
 Special$ bash
 Why go back to an inferior shell?
 Special$ sh
@@ -103,7 +109,8 @@ Nope, not allowed or didn't work.
 Next, I followed the hint to `experiment with different shell syntax`.
 
 I tried to `quote` commands with `'` and `"`
-```
+
+```bash
 Special$ 'ls'
 Also 
 sh: 1: Also: not found
@@ -113,7 +120,8 @@ sh: 1: Also: not found
 ```
 
 This worked for some commands like `pwd` and `grep`
-```
+
+```bash
 Special$ "pwd"
 "pwd" 
 /home/ctf-player
@@ -125,17 +133,20 @@ Try 'grep --help' for more information.
 ```
 
 I also tried [command substitution](https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html). This also worked some what on commands like `ls`
-```
+
+```bash
 Special$ $(ls)  
 $(ls) 
 sh: 1: blargh: not found
 ```
+
 So there is a file or directory called `blargh` in the current directory (which is `/home/ctf-player`).
 
 ### Get the flag
 
 Now we ought to be able to get the flag by grepping for anything (`.`) recursively
-```
+
+```bash
 Special$ "grep" -r . *
 "grep" or . * 
 grep: .: Is a directory
@@ -152,5 +163,8 @@ For additional information, please see the references below.
 
 ## References
 
-- [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
 - [Command substitution - Bash Manual](https://www.gnu.org/software/bash/manual/html_node/Command-Substitution.html)
+- [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
+- [Secure Shell - Wikipedia](https://en.wikipedia.org/wiki/Secure_Shell)
+- [Shell (computing) - Wikipedia](https://en.wikipedia.org/wiki/Shell_(computing))
+- [ssh - Linux manual page](https://man7.org/linux/man-pages/man1/ssh.1.html)
