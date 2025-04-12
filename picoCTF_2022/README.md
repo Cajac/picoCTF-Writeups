@@ -2,7 +2,8 @@
 
 ## Binary Exploitation Challenges
 
-6 Challenges:
+### Medium Binary Exploitation Challenges
+
 - [basic-file-exploit](Binary_Exploitation/basic-file-exploit.md)
 - [buffer overflow 0](Binary_Exploitation/buffer_overflow_0.md)
 - [buffer overflow 1](Binary_Exploitation/buffer_overflow_1.md)
@@ -12,7 +13,8 @@
 
 ## Cryptography Challenges
 
-10 Challenges:
+### Medium Cryptography Challenges
+
 - [basic-mod1](Cryptography/basic-mod1.md)
 - [basic-mod2](Cryptography/basic-mod2.md)
 - [credstuff](Cryptography/credstuff.md)
@@ -26,7 +28,8 @@
 
 ## Forensics Challenges
 
-7 Challenges: 
+### Medium Forensics Challenges
+
 - [Enhance!](Forensics/Enhance.md)
 - [File types](Forensics/File_types.md)
 - [Lookey here](Forensics/Lookey_here.md)
@@ -37,7 +40,8 @@
 
 ## Reverse Engineering Challenges
 
-8 Challenges:
+### Medium Reverse Engineering Challenges
+
 - [bloat.py](Reverse_Engineering/bloat.py.md)
 - [file-run1](Reverse_Engineering/file-run1.md)
 - [file-run2](Reverse_Engineering/file-run2.md)
@@ -49,11 +53,15 @@
 
 ## Web Exploitation Challenges
 
-8 Challenges:
-- [Forbidden Paths](Web_Exploitation/Forbidden_Paths.md)
+### Easy Web Exploitation Challenges
+
 - [Includes](Web_Exploitation/Includes.md)
 - [Inspect HTML](Web_Exploitation/Inspect_HTML.md)
 - [Local Authority](Web_Exploitation/Local_Authority.md)
+
+### Medium Web Exploitation Challenges
+
+- [Forbidden Paths](Web_Exploitation/Forbidden_Paths.md)
 - [Power Cookie](Web_Exploitation/Power_Cookie.md)
 - [Roboto Sans](Web_Exploitation/Roboto_Sans.md)
 - [Search source](Web_Exploitation/Search_source.md)

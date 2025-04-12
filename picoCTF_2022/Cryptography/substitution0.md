@@ -6,8 +6,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Cryptography, Substitution
 Author: WILL HONG
 
@@ -20,10 +21,12 @@ Download the message here.
 Hints:
 1. Try a frequency attack. An online tool might help.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/307](https://play.picoctf.org/practice/challenge/307)
 
 The message we were given looks like this
-```
+
+```text
 QWITJSYHXCNDFERMUKGOPVALBZ 
 
 Hjkjpmre Djykqet qkrgj, axoh q ykqvj qet goqojdb qxk, qet wkrpyho fj ohj wjjodj
@@ -61,6 +64,7 @@ Alternatively, we can write a small Python script to solve this.
 There is no need to use frequency analysis or brute force since we have the key.
 
 Let's create a script called `solve.py`
+
 ```python
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
@@ -94,6 +98,7 @@ print(decrypted_msg)
 ```
 
 Then make the script executable and run it
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Cryptography/Substitution0]
 └─$ chmod +x solve.py
@@ -116,6 +121,9 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Frequency analysis](https://en.wikipedia.org/wiki/Frequency_analysis)
-- [Wikipedia - Letter frequency](https://en.wikipedia.org/wiki/Letter_frequency)
-- [Wikipedia - Substitution cipher](https://en.wikipedia.org/wiki/Substitution_cipher)
+- [Frequency analysis - Wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)
+- [Letter frequency - Wikipedia](https://en.wikipedia.org/wiki/Letter_frequency)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Quipqiup - A fast and automated cryptogram solver](https://quipqiup.com/)
+- [Substitution cipher - Wikipedia](https://en.wikipedia.org/wiki/Substitution_cipher)

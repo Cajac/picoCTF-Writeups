@@ -6,8 +6,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Cryptography
 Author: MUBARAK MIKAIL
 
@@ -19,10 +20,12 @@ Decrypt this message using this key "CYLAB".
 Hints:
 1. https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/316](https://play.picoctf.org/practice/challenge/316)
 
 The message given looks like this
-```
+
+```text
 rgnoDVD{O0NU_WQ3_G1G3O3T3_A1AH3S_f85729e7}
 ```
 
@@ -38,6 +41,7 @@ Then enter the cipher text in the large text field and you get the flag at the b
 ## Python solution
 
 In addition, let's write a small Python script called `solve.py` to decode this
+
 ```python
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
@@ -72,6 +76,7 @@ print(flag)
 ```
 
 Then make the script executable and run it
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Cryptography/Vigenere]
 └─$ chmod +x solve.py       
@@ -85,4 +90,6 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Vigenère cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Vigenère cipher - Wikipedia](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)

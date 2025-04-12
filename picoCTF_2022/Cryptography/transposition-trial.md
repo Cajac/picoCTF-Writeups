@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Cryptography, cryptography
 Author: WILL HONG
 
@@ -20,18 +21,21 @@ Download the corrupted message here.
 Hints:
 1. Split the message up into blocks of 3 and see how the first block is scrambled
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/312](https://play.picoctf.org/practice/challenge/312)
 
 ## Solution
 
 The message given looks like this
-```
+
+```text
 heTfl g as iicpCTo{7F4NRP051N5_16_35P3X51N3_V091B0AE}2
 ```
 
 It looks like in each block of three characters the first is shifted to the end of the block.
 
 Let's write a small Python script called `solve.py` to decode this
+
 ```python
 #!/usr/bin/python
 # -*- coding: latin-1 -*-
@@ -51,6 +55,7 @@ print(flag)
 ```
 
 Then make the script executable and run it
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Cryptography/Transposition_trial]
 └─$ chmod +x solve.py     
@@ -64,4 +69,6 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Transposition cipher](https://en.wikipedia.org/wiki/Transposition_cipher)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Transposition cipher - Wikipedia](https://en.wikipedia.org/wiki/Transposition_cipher)

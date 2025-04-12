@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Cryptography
 Author: WILL HONG
 
@@ -23,6 +24,7 @@ Hints:
 1. Do you know what mod 37 means?
 2. mod 37 means modulo 37. It gives the remainder of a number after being divided by 37.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/253](https://play.picoctf.org/practice/challenge/253)
 
 ## Solution
@@ -55,7 +57,8 @@ print('picoCTF{%s}' % "".join(flag))
 ```
 
 Then make the script executable and run it
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Cryptography/Basic_Mod1]
 └─$ chmod +x get_flag.py  
 
@@ -68,4 +71,6 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Modulo](https://en.wikipedia.org/wiki/Modulo)
+- [Modulo - Wikipedia](https://en.wikipedia.org/wiki/Modulo)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))

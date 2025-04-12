@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Cryptography, morse_code
 Author: WILL HONG
  
@@ -20,6 +21,7 @@ Wrap your answer with picoCTF{}, put underscores in place of pauses, and use all
 Hints:
 1. Audacity is a really good program to analyze morse code audio.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/280](https://play.picoctf.org/practice/challenge/280)
 
 ## Solution
@@ -32,5 +34,5 @@ For additional information, please see the references below.
 
 ## References
 
+- [Morse code - Wikipedia](https://en.wikipedia.org/wiki/Morse_code)
 - [Morse Code Sound & Vibration Listener](https://databorder.com/transfer/morse-sound-receiver/)
-- [Wikipedia - Morse code](https://en.wikipedia.org/wiki/Morse_code)

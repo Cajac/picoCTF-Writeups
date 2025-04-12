@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Cryptography
 Author: WILL HONG
  
@@ -22,6 +23,7 @@ Put the decoded message in the picoCTF flag format, picoCTF{decoded_message}.
 Hints:
 1. Once you've understood how the cipher works, it's best to draw it out yourself on paper
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/289](https://play.picoctf.org/practice/challenge/289)
 
 ## Solution
@@ -37,4 +39,5 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Rail fence cipher](https://en.wikipedia.org/wiki/Rail_fence_cipher)
+- [Rail fence cipher - Wikipedia](https://en.wikipedia.org/wiki/Rail_fence_cipher)
+- [Transposition cipher - Wikipedia](https://en.wikipedia.org/wiki/Transposition_cipher)

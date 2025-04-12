@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Cryptography, Substitution_cipher
 Author: WILL HONG
  
@@ -20,12 +21,14 @@ Hints:
 1. Try a frequency attack
 2. Do the punctuation and the individual words help you make any substitutions?
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/308](https://play.picoctf.org/practice/challenge/308)
 
 ## Solution
 
 The message we were given looks like this (with line breaks added)
-```
+
+```text
 WYHg (gzray hra wimybas yzs hvij) ias i yums rh wrombysa gswbakyu wromsykykrl. Wrlysgyilyg ias 
 masgslysn dkyz i gsy rh wzivvsljsg dzkwz ysgy yzska wasiykxkyu, yswzlkwiv (iln jrrjvklj) gckvvg, 
 iln marqvso-grvxklj iqkvkyu. Wzivvsljsg bgbivvu wrxsa i lboqsa rh wiysjraksg, iln dzsl grvxsn, 
@@ -47,6 +50,7 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Frequency analysis](https://en.wikipedia.org/wiki/Frequency_analysis)
-- [Wikipedia - Letter frequency](https://en.wikipedia.org/wiki/Letter_frequency)
-- [Wikipedia - Substitution cipher](https://en.wikipedia.org/wiki/Substitution_cipher)
+- [Frequency analysis - Wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)
+- [Letter frequency - Wikipedia](https://en.wikipedia.org/wiki/Letter_frequency)
+- [Quipqiup - A fast and automated cryptogram solver](https://quipqiup.com/)
+- [Substitution cipher - Wikipedia](https://en.wikipedia.org/wiki/Substitution_cipher)

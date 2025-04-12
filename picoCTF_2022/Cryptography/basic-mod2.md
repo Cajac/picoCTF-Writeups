@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Cryptography
 Author: WILL HONG
 
@@ -25,6 +26,7 @@ Hints:
 2. The inverse modulo z of x is the number, y that when multiplied by x is 1 modulo z
 3. It's recommended to use a tool to find the modular inverses
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/254](https://play.picoctf.org/practice/challenge/254)
 
 ## Solution
@@ -59,7 +61,8 @@ print('picoCTF{%s}' % "".join(flag))
 ```
 
 Then make the script executable and run it
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Cryptography/Basic_Mod2]
 └─$ chmod +x get_flag.py  
 
@@ -72,4 +75,6 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Modulo](https://en.wikipedia.org/wiki/Modulo)
+- [Modulo - Wikipedia](https://en.wikipedia.org/wiki/Modulo)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
