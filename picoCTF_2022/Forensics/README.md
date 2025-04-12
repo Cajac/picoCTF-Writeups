@@ -1,6 +1,7 @@
 # Forensics Challenges
 
-7 Challenges:
+## Medium Forensics Challenges
+
 - [Enhance!](Enhance.md)
 - [File types](File_types.md)
 - [Lookey here](Lookey_here.md)

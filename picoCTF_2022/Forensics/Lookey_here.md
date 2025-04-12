@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Forensics, grep
 Author: LT 'SYREAL' JONES / MUBARAK MIKAIL
 
@@ -18,12 +19,14 @@ Download the data here.
 Hints:
 1. Download the file and search for the flag based on the known prefix.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/279](https://play.picoctf.org/practice/challenge/279)
 
 ## Solution
 
 The most efficient way to get the flag is to use `grep` with `-o` to only output the matched text  
 and `-E` to say that your pattern is an extended regular expression
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/Lookey_here]
 └─$ grep -oE 'picoCTF{.*}' anthem.flag.txt

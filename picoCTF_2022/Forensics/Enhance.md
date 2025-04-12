@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Forensics, svg
 Author: LT 'SYREAL' JONES
  
@@ -16,11 +17,13 @@ Download this image file and find the flag.
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/265](https://play.picoctf.org/practice/challenge/265)
 
 ## Solution
 
 Let's try the quick-and-dirty trick to just `grep` for the flag.
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/Enhance]
 └─$ grep picoCTF drawing.flag.svg 
@@ -29,6 +32,7 @@ Let's try the quick-and-dirty trick to just `grep` for the flag.
 Nope, not that easy...
 
 Studying the contents of the file more closely in a text editor we find that the flag is divided up in several `<tspan>` tags.
+
 ```xml
     <text
        xml:space="preserve"
@@ -81,6 +85,7 @@ Studying the contents of the file more closely in a text editor we find that the
 We could reconstruct the flag manually but let's not do that.
 
 All lines with flag contents contain the `</tspan>` tag so lets `grep` for that to start with
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/Enhance]
 └─$ grep '</tspan>' drawing.flag.svg
@@ -95,6 +100,7 @@ All lines with flag contents contain the `</tspan>` tag so lets `grep` for that 
 ```
 
 Then let's divide the lines with the `>` character as the delimiter with `cut` and only keep the second field (that is, everything to the right of it)
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/Enhance]
 └─$ grep '</tspan>' drawing.flag.svg | cut -d ">" -f2
@@ -109,6 +115,7 @@ c 3 d _ 2 4 3 7 4 6 7 5 }</tspan
 ```
 
 Do that again with the `<` character and only keep the first field (everything to the left of it)
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/Enhance]
 └─$ grep '</tspan>' drawing.flag.svg | cut -d ">" -f2 | cut -d "<" -f1 
@@ -123,6 +130,7 @@ c 3 d _ 2 4 3 7 4 6 7 5 }
 ```
 
 Now we are close. Then we delete any line breaks with `tr`
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/Enhance]
 └─$ grep '</tspan>' drawing.flag.svg | cut -d ">" -f2 | cut -d "<" -f1 | tr -d '\r\n' 
@@ -130,6 +138,7 @@ p i c o C T F { 3 n h 4 n c 3 d _ 2 4 3 7 4 6 7 5 }
 ```
 
 Finally, we delete all the spaces
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/Enhance]
 └─$ grep '</tspan>' drawing.flag.svg | cut -d ">" -f2 | cut -d "<" -f1 | tr -d '\r\n' | tr -d " "
@@ -142,5 +151,5 @@ For additional information, please see the references below.
 
 - [cut - Linux manual page](https://man7.org/linux/man-pages/man1/cut.1.html)
 - [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
+- [SVG - Wikipedia](https://en.wikipedia.org/wiki/SVG)
 - [tr - Linux manual page](https://man7.org/linux/man-pages/man1/tr.1.html)
-- [Wikipedia - SVG](https://en.wikipedia.org/wiki/SVG)

@@ -9,8 +9,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 200
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Forensics, sleuthkit
 Author: LT 'SYREAL' JONES
 
@@ -23,11 +24,13 @@ Download compressed disk image
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/300](https://play.picoctf.org/practice/challenge/300)
 
 ## Unpacking and basic file analysis
 
 Let's start by unpacking the disk image with `gzip -d`. Add `-k` if you want to keep the original input file.
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
 └─$ gzip -d -k disk.flag.img.gz
@@ -35,6 +38,7 @@ gzip: disk.flag.img: Value too large for defined data type
 ```
 
 Then we can use `file` to identify the type of image
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
 └─$ file disk.flag.img 
@@ -42,6 +46,7 @@ disk.flag.img: DOS/MBR boot sector; partition 1 : ID=0x83, active, start-CHS (0x
 ```
 
 Next we check the partition table with the `mmls` tool from [The Sleuth Kit](https://wiki.sleuthkit.org/index.php?title=TSK_Tool_Overview)
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
 └─$ mmls disk.flag.img       
@@ -56,9 +61,11 @@ Units are in 512-byte sectors
 003:  000:001   0000206848   0000360447   0000153600   Linux Swap / Solaris x86 (0x82)
 004:  000:002   0000360448   0000614399   0000253952   Linux (0x83)
 ```
+
 There are two possible partitions where the flag could be:
- * The Linux partition which starts on sector `2048`
- * The Linux partition which starts on sector `360448`
+
+- The Linux partition which starts on sector `2048`
+- The Linux partition which starts on sector `360448`
 
 ## Strings and grep solution
 
@@ -85,6 +92,7 @@ Another solution is to mount the partitions and search for the flag with `find`.
 ### Mount the partitions
 
 First, let's create a directory to mount the partitions on
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
 └─$ sudo mkdir /mnt/pico_disk
@@ -92,6 +100,7 @@ First, let's create a directory to mount the partitions on
 ```
 
 Next, we mount the first partition
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
 └─$ sudo mount -r -o loop,offset=$((2048*512)) disk.flag.img /mnt/pico_disk 
@@ -100,6 +109,7 @@ Next, we mount the first partition
 ### Search for the flag - part 1
 
 Now we check the contents of the partition
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
 └─$ pushd .
@@ -135,11 +145,13 @@ drwx------ 2 root root   12288 Sep 29  2021 lost+found
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
 └─$ 
 ```
+
 Nope, this is the wrong partition.
 
 ### Search for the flag - part 2
 
 Let's check the next partition instead
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
 └─$ sudo umount /mnt/pico_disk                                              
@@ -156,16 +168,19 @@ Let's check the next partition instead
 ```
 
 Assume the name of the flag file name starts with either `Flag` or `flag` and search for it with `find`.
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/pico_disk]
 └─$ sudo find . -name [Ff]lag*                                 
 ./root/my_folder/flag.uni.txt
 ```
+
 Success!
 
 ### Get the flag
 
 And then we `cat` the contents of the file to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/pico_disk]
 └─$ sudo cat ./root/my_folder/flag.uni.txt
@@ -173,6 +188,7 @@ picoCTF{<REDACTED>}
 ```
 
 Finally, we unmount the partition
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/pico_disk]
 └─$ popd   
@@ -185,9 +201,10 @@ Finally, we unmount the partition
 ## FTK Imager solution
 
 Alternatively, we can mount the disk in [FTK Imager](https://www.exterro.com/ftk-imager):
- 1. In the `File`-menu, select `Add Evidence Item...`
- 2. Select the `Image File` option in the popup window
- 3. Browse to the `disk.flag.img` file
+
+1. In the `File`-menu, select `Add Evidence Item...`
+2. Select the `Image File` option in the popup window
+3. Browse to the `disk.flag.img` file
 
 In the `Evidence Tree` to the left navigate to `Partition 3` and expand `NONAME` and `[root]`.  
 Then expand the `root` directory and select the `my_folder` directory.
@@ -203,6 +220,7 @@ It should look something like this:
 Finally, we can use The Sleuth Kit's commands to find the flag.
 
 We recursively list all filenames in both partitions with `fls` and then `grep` for the flag file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
 └─$ fls -F -r -o 2048 disk.flag.img | grep [Ff]lag
@@ -212,9 +230,11 @@ We recursively list all filenames in both partitions with `fls` and then `grep` 
 r/r * 2082(realloc):    root/my_folder/flag.txt
 r/r 2371:       root/my_folder/flag.uni.txt
 ```
+
 Ah, there is a likely flag file `/root/my_folder/flag.uni.txt` in the second partition.
 
 Then we get the contents of the file with `icat`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Apprentice]
 └─$ icat -o 360448 disk.flag.img 2371             
@@ -225,14 +245,14 @@ For additional information, please see the references below.
 
 ## References
 
+- [Endianness - Wikipedia](https://en.wikipedia.org/wiki/Endianness)
 - [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
 - [find - Linux manual page](https://man7.org/linux/man-pages/man1/find.1.html)
+- [FTK Imager - Homepage](https://www.exterro.com/ftk-imager)
 - [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
 - [mount - Linux manual page](https://man7.org/linux/man-pages/man8/mount.8.html)
+- [String (computer science) - Wikipedia](https://en.wikipedia.org/wiki/String_(computer_science))
 - [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)
 - [sudo - Linux manual page](https://man7.org/linux/man-pages/man8/sudo.8.html)
-- [umount - Linux manual page](https://man7.org/linux/man-pages/man8/umount.8.html)
-- [FTK Imager - Homepage](https://www.exterro.com/ftk-imager)
 - [The Sleuth Kit - Tool Overview](https://wiki.sleuthkit.org/index.php?title=TSK_Tool_Overview)
-- [Wikipedia - Endianness](https://en.wikipedia.org/wiki/Endianness)
-- [Wikipedia - String (computer science)](https://en.wikipedia.org/wiki/String_(computer_science))
+- [umount - Linux manual page](https://man7.org/linux/man-pages/man8/umount.8.html)

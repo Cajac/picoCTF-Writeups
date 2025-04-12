@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Forensics, sleuthkit
 Author: LT 'SYREAL' JONES
 
@@ -23,6 +24,7 @@ Access checker program: nc saturn.picoctf.net 52472
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/301](https://play.picoctf.org/practice/challenge/301)
 
 ## Solution
@@ -30,6 +32,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/301](https://play.p
 ### Unpacking and file identification
 
 Let's start by unpacking the disk image with `gzip -d`. Add `-k` if you want to keep the original input file.
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Intro]
 └─$ gzip -d -k disk.img.gz
@@ -37,6 +40,7 @@ gzip: disk.img: Value too large for defined data type
 ```
 
 Then we can use `file` to identify the type of image
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Intro]
 └─$ file disk.img   
@@ -46,6 +50,7 @@ disk.img: DOS/MBR boot sector; partition 1 : ID=0x83, active, start-CHS (0x0,32,
 ### Using mmls to find the partition siza
 
 I don't know the specifics of `mmls` by heart so I need to consult the help
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Intro]
 └─$ mmls -h
@@ -80,6 +85,7 @@ Supported image format types:
 ```
 
 I'm not sure if you need to specify the image type or not but let's try without it
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Intro]
 └─$ mmls disk.img
@@ -98,6 +104,7 @@ Seemed to work fine and the size of the Linux partition is `202752` sectors.
 ### Connecting to the server
 
 Now we can connect to the server and get our flag
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Intro]
 └─$ nc saturn.picoctf.net 52472

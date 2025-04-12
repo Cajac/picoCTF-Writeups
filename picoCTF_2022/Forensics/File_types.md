@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Forensics
 Author: GEOFFREY NJOGU
  
@@ -19,6 +20,7 @@ You can download the file from here.
 Hints:
 1. Remember that some file types can contain and nest other files
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/268](https://play.picoctf.org/practice/challenge/268)
 
 ## Solution
@@ -26,6 +28,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/268](https://play.p
 ### The so called PDF-file
 
 Let's see what the `file` command have to say about what file it is
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ file Flag.pdf 
@@ -33,6 +36,7 @@ Flag.pdf: shell archive text
 ```
 
 Hhm, shell archive text. Let's see the first lines of it
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ head Flag.pdf     
@@ -49,7 +53,8 @@ lock_dir=_sh00046
 ```
 
 Why not make it executable and then run it?
-```bash                                                            
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ chmod +x Flag.pdf      
                           
@@ -64,6 +69,7 @@ x - removed lock directory _sh00046.
 ```
 
 Oh, `uuencode` not found. We need to install sharutils.
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ sudo apt-get install sharutils
@@ -96,6 +102,7 @@ Processing triggers for kali-menu (2022.4.1) ...
 ```
 
 Now let's try running the script again
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ ./Flag.pdf                    
@@ -115,6 +122,7 @@ flag: current ar archive
 ### The ar archive file
 
 I wonder if there is an `ar` command to unpack it?
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ ar -h
@@ -162,12 +170,14 @@ Report bugs to <https://sourceware.org/bugzilla/>
 ```
 
 We then extract the contents with `ar x`
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ ar x flag
 ```
 
 What kind of file might 'flag' be?
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ file flag
@@ -177,6 +187,7 @@ flag: cpio archive
 ### The cpio archive file
 
 Like before, I wonder if there is an `cpio` command to unpack it?
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ cpio -h          
@@ -206,6 +217,7 @@ Examples:
 ```
 
 So we can extract files with `cpio -i`. Lets try that.
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ cpio -i flag
@@ -216,6 +228,7 @@ So we can extract files with `cpio -i`. Lets try that.
 Hhm, the command "hanged" almost like it expected something more and I had to CTRL-C out of it.
 
 We could try redirecting the file instead
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ cpio -i < flag
@@ -225,6 +238,7 @@ cpio: flag not created: newer or same age version exists
 
 Better, but we get a new error instead. `cpio` doesn't like that there is a file called flag already present.
 Let's rename our file and try again
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ mv flag flag.cpio    
@@ -235,6 +249,7 @@ Let's rename our file and try again
 ```
 
 Excellent. Now we check what type of file we have got this time
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ file flag 
@@ -244,6 +259,7 @@ flag: bzip2 compressed data, block size = 900k
 ### The bzip2 file
 
 Again check if there is a `bzip2` command and what parameters we need to unpack
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ bzip2 -h
@@ -277,6 +293,7 @@ bzip2, a block-sorting file compressor.  Version 1.0.8, 13-Jul-2019.
 ```
 
 Unpack with `bzip2 -d`
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ bzip2 -d flag
@@ -284,6 +301,7 @@ bzip2: Can't guess original name for flag -- using flag.out
 ```
 
 What kind of file is 'flag.out' then?
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ file flag.out
@@ -293,6 +311,7 @@ flag.out: gzip compressed data, was "flag", last modified: Tue Mar 15 06:50:39 2
 ### The gzip file
 
 Check for a `gzip` command and what parameters we need to unpack
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ gzip -h                                                                                      
@@ -327,14 +346,16 @@ Report bugs to <bug-gzip@gnu.org>.
 ```
 
 Unpack with `gzip -d`
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ gzip -d flag.out 
 gzip: flag.out: unknown suffix -- ignored  
 ```
 
-Ah, that's right. Gzip is one of those programs that expect a certain file extension.
+Ah, that's right. Gzip is one of those programs that expect a certain file extension.  
 Rename the file and try again
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ mv flag.out flag.gz
@@ -345,6 +366,7 @@ gzip: flag: Value too large for defined data type
 ```
 
 We got some kind of warning but there is a new flag file
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ file flag    
@@ -354,6 +376,7 @@ flag: lzip compressed data, version: 1
 ### The lzip file
 
 You know the drill, check for a `lzip` command and what parameters we need to unpack
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ lzip -h
@@ -372,7 +395,8 @@ Try: sudo apt install <deb name>
 ```
 
 Nope, no `lzip` command present. We need to install it.
-```bash                                                                
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ sudo apt-get install lzip
 [sudo] password for kali: 
@@ -405,6 +429,7 @@ Processing triggers for kali-menu (2022.4.1) ...
 ```
 
 Try asking for help again
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ lzip -h
@@ -436,12 +461,14 @@ Options:
 ```
 
 Unpack with `lzip -d`
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ lzip -d flag    
 ```
 
 Now there was some slight confusion about what output file it created but it was 'flag.out'
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ file flag.out
@@ -451,6 +478,7 @@ flag.out: LZ4 compressed data (v1.4+)
 ### The LZ4 file
 
 Check for a `lz4` command
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ lz4 -h      
@@ -484,6 +512,7 @@ Processing triggers for kali-menu (2022.4.1) ...
 ```
 
 Check unpack parameters
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ lz4 -h
@@ -504,6 +533,7 @@ Arguments :
 ```
 
 Unpack with a new specifed output file called 'newflag'
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ lz4 -d flag.out newflag
@@ -517,6 +547,7 @@ newflag: LZMA compressed data, non-streamed, size 254
 ### The LZMA file
 
 This is really starting to get tedious now, but like before let's check for a `lzma` command
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ lzma -h                
@@ -549,6 +580,7 @@ XZ Utils home page: <https://tukaani.org/xz/>
 ```
 
 Unpack with `lzma -d` etc.
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ lzma -d newflag 
@@ -569,6 +601,7 @@ newflag: lzop compressed data - version 1.040, LZO1X-1, os: Unix
 ### The lzop file
 
 More of the same so I'm limiting my comments now.
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ lzop -h             
@@ -678,7 +711,9 @@ newflag: ASCII text
 ### The encoded flag
 
 And finally we have something that is close to the flag.
+
 Let's see it
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ cat newflag
@@ -687,7 +722,8 @@ Let's see it
 ```
 
 It looks like hex-encoded data. We can use Python to decode it.
-```python
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/File_Types]
 └─$ python                                                 
 Python 3.10.9 (main, Dec  7 2022, 13:47:07) [GCC 12.2.0] on linux
@@ -710,4 +746,6 @@ For additional information, please see the references below.
 - [lzip - Linux manual page](https://linux.die.net/man/1/lzip)
 - [lzma - Linux manual page](https://linux.die.net/man/1/lzma)
 - [lzop - Linux manual page](https://linux.die.net/man/1/lzop)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [xz - Linux manual page](https://linux.die.net/man/1/xz)

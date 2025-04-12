@@ -4,8 +4,9 @@
 - [Solution](#solution)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Forensics
 Author: MUBARAK MIKAIL
 
@@ -18,6 +19,7 @@ Can you find an important key that was not redacted properly?
 Hints:
 1. How can you be sure of the redaction?
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/290](https://play.picoctf.org/practice/challenge/290)
 
 ## Solution
@@ -25,7 +27,8 @@ Challenge link: [https://play.picoctf.org/practice/challenge/290](https://play.p
 Open up the PDF-document in any PDF-reader that enables you to select and copy all text in the document.
 
 Then paste it into a text editor and you will get (apart from the flag redacted here)
-```
+
+```text
 Financial Report for ABC Labs, Kigali, Rwanda for the year 2021.
 Breakdown - Just painted over in MS word.
 Cost Benefit Analysis
