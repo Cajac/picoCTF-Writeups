@@ -6,8 +6,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2023, Reverse Engineering, android
 Author: MUBARAK MIKAIL
  
@@ -20,6 +21,7 @@ Hints:
 1. Decompile
 2. mobsf or jadx
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/381](https://play.picoctf.org/practice/challenge/381)
 
 There are several ways to solve this challenge. Here are two solutions presented in increasing difficulty.
@@ -28,6 +30,7 @@ There are several ways to solve this challenge. Here are two solutions presented
 
 APK-files are simply a Zip-file and can be unpacked with a tool such as [7-Zip](https://www.7-zip.org/).  
 Unpack the [APK-file](https://en.wikipedia.org/wiki/Apk_(file_format)) and then just use `grep` recursively on all the unpacked files
+
 ```bash
 Z:\CTFs\picoCTF\picoCTF_2023\Reverse_Engineering\timer\timer>grep -iR picoCTF *
 apktool.yml:  versionName: picoCTF{<REDACTED>}
@@ -44,6 +47,7 @@ Since the APK-file contains a lot of files, the fastest way to find the flag is 
 It is available both in the Navigation-menu and as a button on the tool bar.
 
 In this case, searching for `picoCTF` just gives you one hit, in `com.example.timer.BuildConfig`
+
 ```C
 package com.example.timer;
 
@@ -62,5 +66,5 @@ For additional information, please see the references below.
 ## References
 
 - [7-Zip - Homepage](https://www.7-zip.org/)
+- [apk (file format) - Wikipedia](https://en.wikipedia.org/wiki/Apk_(file_format))
 - [Jadx-GUI - GitHub](https://github.com/skylot/jadx)
-- [Wikipedia - apk (file format)](https://en.wikipedia.org/wiki/Apk_(file_format))

@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2023, Reverse Engineering, Analog
 Author: LT 'SYREAL' JONES
  
@@ -22,6 +23,7 @@ Hints:
 1. Rotating the axle that number of times is obviously not feasible. 
    Can you model the mathematical relationship between red and blue?
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/385](https://play.picoctf.org/practice/challenge/385)
 
 ## Solution
@@ -50,6 +52,7 @@ The blue gear has 8 cogs and the red gear has 40 cogs.
 The difference in the number of cogs is 5 (40 / 8 = 5).
 
 Then calculate an assumed hex-encoded flag in Python
+
 ```python
 >>> input = 39722847074734820757600524178581224432297292490103996089444214757432940313
 >>> difference = 5
@@ -64,3 +67,5 @@ For additional information, please see the references below.
 ### References
 
 - [Blender - Homepage](https://www.blender.org/)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))

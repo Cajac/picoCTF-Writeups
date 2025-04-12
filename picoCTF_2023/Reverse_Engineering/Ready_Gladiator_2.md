@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 200
+
+```text
+Level: Medium
 Tags: picoCTF 2023, Reverse Engineering, CoreWars
 Author: LT 'SYREAL' JONES
  
@@ -22,6 +23,7 @@ To get the flag, you must beat the Imp all 100 rounds.
 Hints:
  1. If your warrior is close, try again, it may work on subsequent tries... why is that?
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/370](https://play.picoctf.org/practice/challenge/370)
 
 ## Solution
@@ -33,7 +35,8 @@ So I started to try some `gates` from [other people](http://moscova.inria.fr/~do
 ### Try #1 - S/D Clear
 
 I first tried the [S/D Clear](http://moscova.inria.fr/~doligez/corewar/rc/SDClear.txt) warrior
-```
+
+```text
 ;redcode-94
 ;name S/D Clear
 ;author David Moore
@@ -49,12 +52,14 @@ start mov    *s, >gate
 
 end
 ```
+
 But there were only `ties` with 'The Imp'
 
 ### Try #2 - stargate
 
 Next, I tried [stargate](http://moscova.inria.fr/~doligez/corewar/rc/stargate.txt)
-```
+
+```text
 ;name stargate
 ;assert 1
 
@@ -62,12 +67,12 @@ org stun
 
 gate    dat     stun,kill+10
 for 10
-	dat     0,0
+        dat     0,0
 rof
 
 stun    spl     #kill-gate,kill-gate+10
-	mov     *gate,>gate
-	djn.f   -1,{gate-kill-15
+        mov     *gate,>gate
+        djn.f   -1,{gate-kill-15
 kill    dat     kill-gate,kill-gate+10
 end
 ```
@@ -78,20 +83,23 @@ But unfortunately, I never got it to win 100 times.
 ### Try #3 - Gnat
 
 Finally, I found [Gnat](http://moscova.inria.fr/~doligez/corewar/rc/Gnat.txt)
-```
+
+```text
 ;redcode verbose
 ;author J.Cisek
 ;name Gnat
 ;date 4/16/92
 ;assert 1
 
-gnat	mov -1, <-2
-	jmp gnat, <-3
+gnat    mov -1, <-2
+        jmp gnat, <-3
 end
 ```
+
 It was slightly modified - the `end` and `assert` lines were added.
 
 And the Gnat won 100 times
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Reverse_Engineering/Ready_Gladiator_2]
 └─$ nc saturn.picoctf.net 54966 < gnat.red

@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2023, Reverse Engineering, CoreWars
 Author: LT 'SYREAL' JONES
  
@@ -22,6 +23,7 @@ Hints:
  1. CoreWars is a well-established game with a lot of docs and strategy
  2. Experiment with input to the CoreWars handler or create a self-defeating bot
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/368](https://play.picoctf.org/practice/challenge/368)
 
 ## Solution
@@ -33,7 +35,8 @@ Since I hadn't played around with [CoreWars](https://corewars.org/) much I start
 ### Checkout the Imp
 
 I then proceded with looking at the source code for the Imp
-```
+
+```text
 ;redcode
 ;name Imp Ex
 ;assert 1
@@ -42,7 +45,8 @@ end
 ```
 
 And then I did a testrun with the Imp playing against itself as suggested in the description
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Reverse_Engineering/Ready_Gladiator_0]
 └─$ nc saturn.picoctf.net 54485 < imp.red
 ;redcode
@@ -71,7 +75,8 @@ Try again. Your warrior (warrior 1) must lose all rounds, no ties.
 Then I started to write to my own warrior, a self-destructive one the kills itself with the `dat` instruction.
 
 After some trial and error with the syntax this became the result which I named `looser.red`
-```
+
+```text
 ;redcode
 ;name Looser
 ;assert 1
@@ -82,7 +87,8 @@ end
 ### Get the flag
 
 Finally, I sent my warrior into battle
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Reverse_Engineering/Ready_Gladiator_0]
 └─$ nc saturn.picoctf.net 54485 < looser.red
 ;redcode

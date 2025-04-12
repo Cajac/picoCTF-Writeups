@@ -6,8 +6,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2023, Reverse Engineering
 Author: MUBARAK MIKAIL
  
@@ -20,6 +21,7 @@ Can you help me unlock my safe?
 Hints:
 1. Download and try to decompile the file.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/375](https://play.picoctf.org/practice/challenge/375)
 
 There are several ways to solve this challenge. Here are two solutions presented in increasing difficulty.
@@ -27,6 +29,7 @@ There are several ways to solve this challenge. Here are two solutions presented
 ## Grepping for the flag solution
 
 On easy challenges it's always recommended to search for the flag in plain text with `strings` and `grep`.
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Reverse_Engineering/Safe_Opener_2]
 └─$ strings -a -n 8 SafeOpener.class | grep picoCTF
@@ -38,6 +41,7 @@ On easy challenges it's always recommended to search for the flag in plain text 
 A more sofisticated solution is to decompile the file in [JD-GUI](https://github.com/java-decompiler/jd-gui) and study the code.
 
 You find the flag in the openSafe function (but it's redacted here).
+
 ```C
   public static boolean openSafe(String password)
   {
@@ -56,6 +60,7 @@ For additional information, please see the references below.
 
 ## References
 
-- [JD-GUI - GitHub](https://github.com/java-decompiler/jd-gui)
 - [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
+- [JD-GUI - GitHub](https://github.com/java-decompiler/jd-gui)
+- [String (computer science) - Wikipedia](https://en.wikipedia.org/wiki/String_(computer_science))
 - [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)

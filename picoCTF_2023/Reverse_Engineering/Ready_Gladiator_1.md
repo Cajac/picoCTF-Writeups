@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 200
+
+```text
+Level: Medium
 Tags: picoCTF 2023, Reverse Engineering, CoreWars
 Author: LT 'SYREAL' JONES
  
@@ -22,6 +23,7 @@ To get the flag, you must beat the Imp at least once out of the many rounds.
 Hints:
  1. You may be able to find a viable warrior in beginner docs
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/369](https://play.picoctf.org/practice/challenge/369)
 
 ## Solution
@@ -31,7 +33,8 @@ This is a continuation of the [previous challenge](Ready_Gladiator_0.md) and I s
 ### Enter the dwarf warrior
 
 I found a warrior called 'The dwarf' and decided to try it out as an opponent to 'The Imp'
-```
+
+```text
 ;redcode
 ;name The Dwarf
 ;assert 1
@@ -45,7 +48,8 @@ end
 ### Get the flag
 
 Then I sent the dwarf into battle
-```
+
+```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/Reverse_Engineering/Ready_Gladiator_1]
 └─$ nc saturn.picoctf.net 62741 < the_dwarf.red 
 ;redcode

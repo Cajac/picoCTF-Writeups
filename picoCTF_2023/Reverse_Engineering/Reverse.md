@@ -7,8 +7,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2023, Reverse Engineering
 Author: MUBARAK MIKAIL
 
@@ -20,6 +21,7 @@ I forgot the password to this file. Please find it for me?
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/372](https://play.picoctf.org/practice/challenge/372)
 
 There are several ways to solve this challenge. Here are three solutions presented in increasing difficulty.
@@ -27,7 +29,8 @@ There are several ways to solve this challenge. Here are three solutions present
 ## Searching for strings solution
 
 On easy challenges it's always recommended to search for the flag in plain text with `strings`.
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Reverse_Engineering/Reverse]
 └─$ strings -a -n 8 ret    
 /lib64/ld-linux-x86-64.so.2
@@ -52,6 +55,7 @@ And indeed, the flag is visable among the strings.
 A more sofisticated solution is to decompile the file in [Ghidra](https://ghidra-sre.org/) and study the code.
 
 Import the file in Ghidra and analyze it with the default settings. Double-click on the `main` function to show the decompiled version of it.
+
 ```C
 undefined8 main(void)
 
@@ -98,6 +102,7 @@ And there the flag is again.
 A more advanced solution is to debug the file in GDB and examine the strings that are compared.
 
 Start GDB in quite mode and then set the disassembly format to intel, which I prefer.
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Reverse_Engineering/Reverse]
 └─$ gdb -q ret                                                    
@@ -106,8 +111,9 @@ Reading symbols from ret...
 (gdb) set disassembly-flavor intel
 ```
 
-Disassemble the `main` function and look for the place where the string comparison is done 
-```
+Disassemble the `main` function and look for the place where the string comparison is done
+
+```text
 (gdb) disass main
 Dump of assembler code for function main:
    0x00000000000011c9 <+0>:     endbr64 
@@ -153,7 +159,8 @@ Dump of assembler code for function main:
 Note that the comparision in done at `main+176` and that the registers RSI and RDI is setup just before the call to `strcmp`.
 
 Set a breakpoint there and run the program. When prompted enter your password guess, 'test' in this case.
-```
+
+```text
 (gdb) break *main+176
 Breakpoint 1 at 0x1279
 (gdb) r
@@ -167,7 +174,8 @@ Breakpoint 1, 0x0000555555555279 in main ()
 ```
 
 Examine the RSI and RDI registers and you have the main part of the flag again
-```
+
+```text
 Breakpoint 1, 0x0000555555555279 in main ()
 (gdb) x/s $rsi
 0x7fffffffdd30: "picoCTF{<PARTIAL FLAG>"
@@ -177,6 +185,7 @@ Breakpoint 1, 0x0000555555555279 in main ()
 
 Note however, that you don't get the full flag here as only a portion of the flag is compared.
 To get the full flag you need to run the program again and input your partial flag. Then the full flag in printed.
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/Reverse_Engineering/Reverse]
 └─$ ./ret                                                     
@@ -189,6 +198,8 @@ For additional information, please see the references below.
 
 ### References
 
-- [Ghidra - Homepage](https://ghidra-sre.org/)
 - [gdb - Linux manual page](https://man7.org/linux/man-pages/man1/gdb.1.html)
+- [Ghidra - Homepage](https://ghidra-sre.org/)
+- [Intel Assembly Syntax - Wikipedia](https://en.wikipedia.org/wiki/X86_assembly_language#Syntax)
+- [String (computer science) - Wikipedia](https://en.wikipedia.org/wiki/String_(computer_science))
 - [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)

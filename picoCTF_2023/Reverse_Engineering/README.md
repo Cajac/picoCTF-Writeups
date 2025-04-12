@@ -1,6 +1,7 @@
 # Reverse Engineering Challenges
 
-7 Challenges: 
+## Medium Reverse Engineering Challenges
+
 - [Ready Gladiator 0](Ready_Gladiator_0.md)
 - [Ready Gladiator 1](Ready_Gladiator_1.md)
 - [Ready Gladiator 2](Ready_Gladiator_2.md)
