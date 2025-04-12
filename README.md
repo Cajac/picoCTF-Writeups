@@ -10,6 +10,7 @@ In total you will find more than 240 challenge solutions here.
 
 ## Challenges
 
+- [picoCTF 2025 Challenges](picoCTF_2025/README.md)
 - [picoCTF 2024 Challenges](picoCTF_2024/README.md)
 - [picoCTF 2023 Challenges](picoCTF_2023/README.md)
 - [picoCTF 2022 Challenges](picoCTF_2022/README.md)
@@ -32,13 +33,14 @@ If you appreciate this repository and learn from it, please consider [giving it 
 ## Language disclaimer
 
 I'm not a native English speaker so please forgive any spelling mistakes or grammatical errors.
- 
- ## Acknowledgements
 
- Some of the solutions were inspired by writeups and walkthroughs from these guys:
- - [Almond Force](https://www.youtube.com/@AlmondForce)
- - [David](https://github.com/Dvd848/CTFs)
- - [Gynvael](https://www.youtube.com/@GynvaelEN)
- - [Hayden Housen](https://github.com/HHousen)
- - [John Hammond](https://www.youtube.com/@_JohnHammond)
- - [Martin Carlisle](https://www.youtube.com/@carlislemc)
+## Acknowledgements
+
+Some of the solutions were inspired by writeups and walkthroughs from these guys:
+
+- [Almond Force](https://www.youtube.com/@AlmondForce)
+- [David](https://github.com/Dvd848/CTFs)
+- [Gynvael](https://www.youtube.com/@GynvaelEN)
+- [Hayden Housen](https://github.com/HHousen)
+- [John Hammond](https://www.youtube.com/@_JohnHammond)
+- [Martin Carlisle](https://www.youtube.com/@carlislemc)
