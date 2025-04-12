@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Reverse Engineering
 Author: MUBARAK MIKAIL
 
@@ -22,11 +23,13 @@ picoCTF{password}
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/294](https://play.picoctf.org/practice/challenge/294)
 
 ## Solution
 
 Let's start by looking at the Java source code
+
 ```java
 import java.io.*;
 import java.util.*;  
@@ -72,8 +75,8 @@ public class SafeOpener {
 }
 ```
 
-In the `main` function we see a Base64.Encoder initialized and in the `OpenSafe` function 
-we see an encodedkey that looks like a [base64](https://en.wikipedia.org/wiki/Base64) encoded password: `cGwzYXMzX2wzdF9tM18xbnQwX3RoM19zYWYz`.
+In the `main` function we see a Base64.Encoder initialized and in the `OpenSafe` function we see  
+an encodedkey that looks like a [base64](https://en.wikipedia.org/wiki/Base64) encoded password: `cGwzYXMzX2wzdF9tM18xbnQwX3RoM19zYWYz`.
 
 I used [CyberChef's 'From Base64' recipe](https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)) to decode the password.
 
@@ -83,5 +86,6 @@ For additional information, please see the references below.
 
 ## References
 
+- [Base64 - Wikipedia](https://en.wikipedia.org/wiki/Base64)
 - [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
-- [Wikipedia - Base64](https://en.wikipedia.org/wiki/Base64)
+- [Java (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Java_(programming_language))

@@ -1,6 +1,7 @@
 # Reverse Engineering Challenges
 
-8 Challenges: 
+## Medium Reverse Engineering Challenges
+
 - [bloat.py](bloat.py.md)
 - [file-run1](file-run1.md)
 - [file-run2](file-run2.md)

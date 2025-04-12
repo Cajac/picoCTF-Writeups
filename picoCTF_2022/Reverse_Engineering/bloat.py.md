@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 200
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Reverse Engineering, obfuscation
 Author: LT 'SYREAL' JONES
 
@@ -18,11 +19,13 @@ Run this Python program in the same directory as this encrypted flag.
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/256](https://play.picoctf.org/practice/challenge/256)
 
 ## Solution
 
 Let's start by looking at the Python source code given
+
 ```python
 import sys
 a = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ"+ \
@@ -70,8 +73,9 @@ Oh, well. Obfuscation was the word.
 
 ### First iteration of deobfuscation
 
-Let's try starting to make some sense of this by looking up all string concatenations.
+Let's try starting to make some sense of this by looking up all string concatenations.  
 This can be done in an interactive Python session like this
+
 ```python
 >>> a = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ"+ \
             "[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~ "
@@ -80,6 +84,7 @@ This can be done in an interactive Python session like this
 ```
 
 If we also insert some empty lines before and after each function declaration we get this
+
 ```python
 import sys
 
@@ -124,6 +129,7 @@ sys.exit(0)
 ```
 
 This is actually all we need. We now have the correct password and can get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Reverse_Engineering/Bloat.py]
 └─$ python bloat.flag.py
@@ -134,17 +140,19 @@ picoCTF{<REDACTED>}
 
 ### Second iteration of deobfuscation
 
-But let's keep going for practice and give the functions and global variables better names. 
- * `arg133` can be `verify_pw`
- * `arg232` can be `read_pw`
- * `arg132` can be `read_enc_flag`
- * `arg112` can be `greeting`
- * `arg444` can be `flag`
- * `arg432` can be `password`
+But let's keep going for practice and give the functions and global variables better names.
 
-The string `a` is now unused and can be removed. 
+- `arg133` can be `verify_pw`
+- `arg232` can be `read_pw`
+- `arg132` can be `read_enc_flag`
+- `arg112` can be `greeting`
+- `arg444` can be `flag`
+- `arg432` can be `password`
+
+The string `a` is now unused and can be removed.
 
 The code now looks like this
+
 ```python
 import sys
             
@@ -192,6 +200,7 @@ So the functions for promping and verifying that password can be removed. As wel
 Let's also remove the sys module and the unnecessary last call to `sys.exit`.
 
 Then we have this
+
 ```python
 def arg111(flag):
   return arg122(flag.decode(), 'rapscallion')
@@ -217,8 +226,8 @@ print(arg423)
 Ah, I've made a minor mistake. The variable `flag` should rather be called `enc_flag` since the plaintext flag is `arg423`.
 
 Let's give the function `arg122` a new name, say `decode_flag`. Let's also change the name of the functions arguments.
-
 We then get
+
 ```python
 enc_flag = open('flag.txt.enc', 'rb').read()
   
@@ -240,4 +249,6 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Obfuscation (software)](https://en.wikipedia.org/wiki/Obfuscation_(software))
+- [Obfuscation (software) - Wikipedia](https://en.wikipedia.org/wiki/Obfuscation_(software))
+- [python - Linux manual page](https://linux.die.net/man/1/python)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))

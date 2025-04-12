@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Reverse Engineering, packing
 Author: LT 'SYREAL' JONES
 
@@ -18,11 +19,13 @@ Reverse engineer this Python program.
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/314](https://play.picoctf.org/practice/challenge/314)
 
 ## Solution
 
 Let's start by looking at the Python source code given (with some empty lines removed)
+
 ```python
 import base64
 from cryptography.fernet import Fernet
@@ -39,6 +42,7 @@ exec(plain.decode())
 OK, so we have an encrypted payload that gets decrypted and then executed with the `exec` function.
 
 Let's run the script and see what happens
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Reverse_Engineering/Unpackme.py]
 └─$ python unpackme.flag.py 
@@ -48,6 +52,7 @@ That password is incorrect.
 
 Why not simply change the last `exec(plain.decode())` to `print(plain.decode())` and run the script again?  
 Note, the flag is redacted below.
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Reverse_Engineering/Unpackme.py]
 └─$ python unpackme.flag.py 
@@ -67,4 +72,6 @@ For additional information, please see the references below.
 
 ## References
 
-- [programiz - Python exec()](https://www.programiz.com/python-programming/methods/built-in/exec)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [python exec() - programiz](https://www.programiz.com/python-programming/methods/built-in/exec)

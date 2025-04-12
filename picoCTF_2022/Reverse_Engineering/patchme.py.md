@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Reverse Engineering
 Author: LT 'SYREAL' JONES
 
@@ -18,11 +19,13 @@ Run this Python program in the same directory as this encrypted flag.
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/287](https://play.picoctf.org/practice/challenge/287)
 
 ## Solution
 
 Let's start by looking at the Python source code (with some empty lines removed)
+
 ```python
 ### THIS FUNCTION WILL NOT HELP YOU FIND THE FLAG --LT ########################
 def str_xor(secret, key):
@@ -56,6 +59,7 @@ In the `level_1_pw_check` function we see a password comparision for some string
 The plus operator just adds the strings together resulting in the string `ak98-=90adfjhgj321sleuth9000`.
 
 Use this as the password when running the script and you get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Reverse_Engineering/Patchme.py]
 └─$ python patchme.flag.py
@@ -68,5 +72,7 @@ For additional information, please see the references below.
 
 ## References
 
+- [python - Linux manual page](https://linux.die.net/man/1/python)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [Python Tutorial - 7 Ways to Concatenate Strings in Python](https://www.pythontutorial.net/python-string-methods/python-string-concatenation/)
 - [Python - Common string operations](https://docs.python.org/3/library/string.html)

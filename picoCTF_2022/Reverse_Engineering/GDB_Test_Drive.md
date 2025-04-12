@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Reverse Engineering, binary, gdb
 Author: LT 'SYREAL' JONES
 
@@ -26,6 +27,7 @@ $ gdb gdbme
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/273](https://play.picoctf.org/practice/challenge/273)
 
 ## Solution
@@ -33,6 +35,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/273](https://play.p
 We just need to follow the given instructions.
 
 First, make the file executable and start `gdb`
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Reverse_Engineering/GDB_Test_Drive]
 └─$ chmod +x gdbme 
@@ -59,21 +62,24 @@ Reading symbols from gdbme...
 ```
 
 When we issue `layout asm` we get a text based GUI-like window
-```
+
+```text
 (gdb) layout asm
 ```
 
 ![GDB Layout Asm View](GDB_Layout_Asm.png)
 
 Then we set a breakpoint on sleep and run the program
-```
+
+```text
 (gdb) break *(main+99)
 (gdb) run
 ```
 
-The program is now sleeping but we can force it out of the sleep by setting the instruction pointer 
+The program is now sleeping but we can force it out of the sleep by setting the instruction pointer  
 to the next instruction after the sleep. This will continue the program and print the flag (not shown here).
-```
+
+```text
 (gdb) jump *(main+104)
 ```
 
@@ -81,5 +87,8 @@ For more information on GDB, please see the references below.
 
 ## References
 
+- [chmod - Linux manual page](https://man7.org/linux/man-pages/man1/chmod.1.html)
+- [Debugger - Wikipedia](https://en.wikipedia.org/wiki/Debugger)
+- [gdb - Linux manual page](https://man7.org/linux/man-pages/man1/gdb.1.html)
+- [GNU Debugger Tutorial - Tutorials Point](https://www.tutorialspoint.com/gnu_debugger/index.htm)
 - [The GDB developer's GNU Debugger tutorial, Part 1: Getting started with the debugger](https://developers.redhat.com/blog/2021/04/30/the-gdb-developers-gnu-debugger-tutorial-part-1-getting-started-with-the-debugger)
-- [Tutorials Point - GNU Debugger Tutorial](https://www.tutorialspoint.com/gnu_debugger/index.htm)

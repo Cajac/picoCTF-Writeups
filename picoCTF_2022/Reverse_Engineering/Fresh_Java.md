@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 200
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Reverse Engineering, Java
 Author: LT 'SYREAL' JONES
 
@@ -17,6 +18,7 @@ Reverse engineer this Java program.
 Hints:
 1. Use a decompiler for Java!
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/271](https://play.picoctf.org/practice/challenge/271)
 
 ## Solution
@@ -24,6 +26,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/271](https://play.p
 ### Analyse the given file
 
 The given file is a compiled [Java](https://en.wikipedia.org/wiki/Java_(programming_language)) file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Reverse_Engineering/Fresh_Java]
 └─$ file KeygenMe.class
@@ -41,6 +44,7 @@ Then navigate to `main` in the hierarchy to the left. It should look something l
 ![Jadx-gui decompilation](jadx-gui_decompilation.png)
 
 The full source code looks like this
+
 ```java
 package defpackage;
 
@@ -129,6 +133,7 @@ public class KeygenMe {
     }
 }  
 ```
+
 We can see that the program checks the key character by character in reverse order (from the end to the beginning).
 
 ### Get the flag
@@ -139,6 +144,7 @@ Instead we will use builtin commandline tools like `grep`, `sort` and `cut` to e
 Start by copying the source to a file named `KeygenMe_main.java`.
 
 Then we extract the involved lines with `grep`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Reverse_Engineering/Fresh_Java]
 └─$ grep charAt KeygenMe_main.java                     
@@ -179,6 +185,7 @@ Then we extract the involved lines with `grep`
 ```
 
 Next we remove all characters until the numbers with `cut`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Reverse_Engineering/Fresh_Java]
 └─$ grep charAt KeygenMe_main.java | cut -d '(' -f3
@@ -219,6 +226,7 @@ Next we remove all characters until the numbers with `cut`
 ```
 
 Then we `sort` numerically (-n)
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Reverse_Engineering/Fresh_Java]
 └─$ grep charAt KeygenMe_main.java | cut -d '(' -f3 | sort -n 
@@ -259,6 +267,7 @@ Then we `sort` numerically (-n)
 ```
 
 Next we extract the flag characters with `cut`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Reverse_Engineering/Fresh_Java]
 └─$ grep charAt KeygenMe_main.java | cut -d '(' -f3 | sort -n | cut -d"'" -f2
@@ -299,6 +308,7 @@ e
 ```
 
 Finally, we remove newlines with `tr` to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Reverse_Engineering/Fresh_Java]
 └─$ grep charAt KeygenMe_main.java | cut -d '(' -f3 | sort -n | cut -d"'" -f2 | tr -d '\n'
@@ -310,8 +320,9 @@ If you need more information, please see the references below.
 ## References
 
 - [cut - Linux manual page](https://man7.org/linux/man-pages/man1/cut.1.html)
+- [Decompiler - Wikipedia](https://en.wikipedia.org/wiki/Decompiler)
 - [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
+- [Jadx-GUI - GitHub](https://github.com/skylot/jadx)
+- [Java (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Java_(programming_language))
 - [sort - Linux manual page](https://man7.org/linux/man-pages/man1/sort.1.html)
 - [tr - Linux manual page](https://man7.org/linux/man-pages/man1/tr.1.html)
-- [Wikipedia - Decompiler](https://en.wikipedia.org/wiki/Decompiler)
-- [Wikipedia - Java (programming language)](https://en.wikipedia.org/wiki/Java_(programming_language))

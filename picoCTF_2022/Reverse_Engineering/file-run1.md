@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2022, Reverse Engineering
 Author: WILL HONG
 
@@ -19,11 +20,13 @@ Hints:
 1. To run the program at all, you must make it executable (i.e. $ chmod +x run)
 2. Try running it by adding a '.' in front of the path to the file (i.e. $ ./run)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/266](https://play.picoctf.org/practice/challenge/266)
 
 ## Solution
 
 This challenge is really simple and the hints give it all away
+
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Reverse_Engineering/File_Run1]
 └─$ chmod +x run                    
