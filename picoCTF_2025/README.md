@@ -17,6 +17,7 @@
 
 ### Easy Forensics Challenges
 
+- [Ph4nt0m 1ntrud3r](Forensics/Ph4nt0m_1ntrud3r.md)
 - [RED](Forensics/RED.md)
 
 ## General Skills Challenges
@@ -38,6 +39,8 @@
 
 ### Easy Web Exploitation Challenges
 
+- [Cookie Monster Secret Recipe](Web_Exploitation/Cookie_Monster_Secret_Recipe.md)
 - [head-dump](Web_Exploitation/head-dump.md)
 - [n0s4n1ty 1](Web_Exploitation/n0s4n1ty_1.md)
+- [Pachinko](Web_Exploitation/Pachinko.md)
 - [SSTI1](Web_Exploitation/SSTI1.md)
