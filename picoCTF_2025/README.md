@@ -24,6 +24,9 @@
 ### Easy General Skills Challenges
 
 - [FANTASY CTF](General_Skills/FANTASY_CTF.md)
+- [Rust fixme 1](General_Skills/Rust_fixme_1.md)
+- [Rust fixme 2](General_Skills/Rust_fixme_2.md)
+- [Rust fixme 3](General_Skills/Rust_fixme_3.md)
 
 ## Reverse Engineering Challenges
 

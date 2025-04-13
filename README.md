@@ -6,7 +6,7 @@
 Welcome to [my](https://play.picoctf.org/users/Cajac) writeups for [picoCTF](https://play.picoctf.org/login) challenges.  
 These writeups are mainly a documentation for myself but I hope others will benefit from them as well.
 
-In total you will find more than 240 challenge solutions here.
+In total you will find more than 250 challenge solutions here.
 
 ## Challenges
 

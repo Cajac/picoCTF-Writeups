@@ -32,6 +32,8 @@ From the `Red plane 0` view we can see that there is information encoded in the 
 
 ![Information encoded in RED](Images/Info_encoded_in_RED.png)
 
+Similar patterns are found in `Green plane 0`, `Blue plane 0`, and `Alpha plane 0`.
+
 ### Check for exif data
 
 Next, we check for exif data with `exiftool`
@@ -153,5 +155,6 @@ For additional information, please see the references below.
 - [python - Linux manual page](https://linux.die.net/man/1/python)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [Python Imaging Library - Pillow](https://pypi.org/project/Pillow/)
+- [Steganography - Wikipedia](https://en.wikipedia.org/wiki/Steganography)
 - [stegsolve 1.4 - GitHub](https://github.com/Giotino/stegsolve)
 - [tr - Linux manual page](https://man7.org/linux/man-pages/man1/tr.1.html)
