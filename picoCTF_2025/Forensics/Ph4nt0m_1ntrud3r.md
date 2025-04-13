@@ -81,8 +81,9 @@ Mar  6, 2025 04:32:03.857944000 CET     4d7a45345a4749794d673d3d
 Mar  6, 2025 04:32:03.858161000 CET     66513d3d
 ```
 
-So far, so good. I'm not sure why the error messages are there, let's remove them going forward.  
-We continue by extracting only the hex data (which is the Base64-data displayed in hex) with `cut`.
+So far, so good. I'm not sure why the error messages are there, let's remove them going forward.
+
+We continue by extracting only the hex data (which is the Base64-data displayed in hex) with `cut`.  
 The fields are TAB-separated as default from `tshark`.
 
 ```bash
