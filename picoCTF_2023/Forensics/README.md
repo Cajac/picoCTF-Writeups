@@ -6,7 +6,6 @@
 - [hideme](hideme.md)
 - [MSB](MSB.md)
 - [PcapPoisoning](PcapPoisoning.md)
-- [who is it](who_is_it.md)
 
 ### Hard Forensics Challenges
 

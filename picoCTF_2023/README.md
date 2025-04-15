@@ -29,7 +29,6 @@
 - [hideme](Forensics/hideme.md)
 - [MSB](Forensics/MSB.md)
 - [PcapPoisoning](Forensics/PcapPoisoning.md)
-- [who is it](Forensics/who_is_it.md)
 
 ### Hard Forensics Challenges
 
@@ -39,7 +38,6 @@
 
 ### Easy General Skills Challenges
 
-- [money-ware](General_Skills/money-ware.md)
 - [repetitions](General_Skills/repetitions.md)
 
 ### Medium General Skills Challenges
