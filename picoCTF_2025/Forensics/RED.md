@@ -1,7 +1,8 @@
 # RED
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [Python Solution](#python-solution)
+- [Zsteg Solution](#zsteg-solution)
 - [References](#references)
 
 ## Challenge information
@@ -23,7 +24,7 @@ Hints:
 
 Challenge link: [https://play.picoctf.org/practice/challenge/460](https://play.picoctf.org/practice/challenge/460)
 
-## Solution
+## Python Solution
 
 ### Check the file in StegSolve
 
@@ -142,14 +143,63 @@ Finally, we run the script to get the flag
 picoCTF{<REDACTED>}
 ```
 
+## Zsteg Solution
+
+### Search with all methods
+
+Alternatively, we can use `zsteg` to search with all methods. Install it with `sudo gem install zsteg` if needed.
+
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2025/Forensics/RED]
+└─$ zsteg -a red.png 
+
+<---snip--->
+meta Poem           .. text: "Crimson heart, vibrant and bold,\nHearts flutter at your sight.\nEvenings glow softly red,\nCherries burst with sweet life.\nKisses linger with your warmth.\nLove deep as merlot.\nScarlet leaves falling softly,\nBold in every stroke."                                                                                                              
+b1,rgba,lsb,xy      .. text: "cGljb0NURntyM2RfMXNfdGgzX3VsdDFtNHQzX2N1cjNfZjByXzU0ZG4zNTVffQ==cGljb0NURntyM2RfMXNfdGgzX3VsdDFtNHQzX2N1cjNfZjByXzU0ZG4zNTVffQ==cGljb0NURntyM2RfMXNfdGgzX3VsdDFtNHQzX2N1cjNfZjByXzU0ZG4zNTVffQ==cGljb0NURntyM2RfMXNfdGgzX3VsdDFtNHQzX2N1cjNfZjByXzU0ZG4zNTVffQ=="                                                                                       
+b1,rgba,msb,xy      .. file: OpenPGP Public Key
+b2,g,lsb,xy         .. text: "ET@UETPETUUT@TUUTD@PDUDDDPE"
+b2,rgb,lsb,xy       .. file: OpenPGP Secret Key
+b2,bgr,msb,xy       .. file: OpenPGP Public Key
+b2,rgba,lsb,xy      .. file: OpenPGP Secret Key
+b2,rgba,msb,xy      .. text: "CIkiiiII"
+<---snip--->
+```
+
+We note the long and repeating string that looks base64-encoded in the beginning of the rather long output.
+
+Next, we try to extract only the first part
+
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2025/Forensics/RED]
+└─$ zsteg -E '1b,rgba,lsb' red.png | cut -c1-68
+cGljb0NURntyM2RfMXNfdGgzX3VsdDFtNHQzX2N1cjNfZjByXzU0ZG4zNTVffQ==cGlj
+
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2025/Forensics/RED]
+└─$ zsteg -E '1b,rgba,lsb' red.png | cut -c1-64
+cGljb0NURntyM2RfMXNfdGgzX3VsdDFtNHQzX2N1cjNfZjByXzU0ZG4zNTVffQ==
+```
+
+### Get the flag again
+
+Finally, we base64-decode the string and get the flag
+
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2025/Forensics/RED]
+└─$ zsteg -E '1b,rgba,lsb' red.png | cut -c1-64 | base64 -d
+picoCTF{<REDACTED>}   
+```
+
 For additional information, please see the references below.
 
 ## References
 
 - [ASCII - Wikipedia](https://en.wikipedia.org/wiki/ASCII)
+- [base64 - Linux manual page](https://man7.org/linux/man-pages/man1/base64.1.html)
 - [Base64 - Wikipedia](https://en.wikipedia.org/wiki/Base64)
 - [Bit numbering - Wikipedia](https://en.wikipedia.org/wiki/Bit_numbering)
+- [cut - Linux manual page](https://man7.org/linux/man-pages/man1/cut.1.html)
 - [Exif - Wikipedia](https://en.wikipedia.org/wiki/Exif)
+- [exiftool - Linux manual page](https://linux.die.net/man/1/exiftool)
 - [ExifTool - Wikipedia](https://en.wikipedia.org/wiki/ExifTool)
 - [PNG - Wikipedia](https://en.wikipedia.org/wiki/PNG)
 - [python - Linux manual page](https://linux.die.net/man/1/python)
@@ -158,3 +208,4 @@ For additional information, please see the references below.
 - [Steganography - Wikipedia](https://en.wikipedia.org/wiki/Steganography)
 - [stegsolve 1.4 - GitHub](https://github.com/Giotino/stegsolve)
 - [tr - Linux manual page](https://man7.org/linux/man-pages/man1/tr.1.html)
+- [zsteg - GitHub](https://github.com/zed-0xff/zsteg)
