@@ -1,5 +1,5 @@
 
-![picoCTF Logo](picoctf_logo.png)
+![picoCTF Logo](011.png)
 
 # Writeups for picoCTF challenges
 
