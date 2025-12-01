@@ -183,6 +183,7 @@ For additional information, please see the references below.
 - [eog - Manual page](https://manpages.debian.org/bullseye/eog/eog.1.en.html)
 - [Exif - Wikipedia](https://en.wikipedia.org/wiki/Exif)
 - [ExifTool - Homepage](https://exiftool.org/)
+- [exiftool - Linux manual page](https://linux.die.net/man/1/exiftool)
 - [ExifTool - Wikipedia](https://en.wikipedia.org/wiki/ExifTool)
 - [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
 - [Macro (computer science) - Wikipedia](https://en.wikipedia.org/wiki/Macro_(computer_science))

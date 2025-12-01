@@ -97,5 +97,7 @@ For additional information, please see the references below.
 - [CyberChef - GitHub](https://github.com/gchq/CyberChef)
 - [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
 - [ExifTool - Homepage](https://exiftool.org/)
+- [exiftool - Linux manual page](https://linux.die.net/man/1/exiftool)
+- [ExifTool - Wikipedia](https://en.wikipedia.org/wiki/ExifTool)
 - [String (computer science) - Wikipedia](https://en.wikipedia.org/wiki/String_(computer_science))
 - [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)

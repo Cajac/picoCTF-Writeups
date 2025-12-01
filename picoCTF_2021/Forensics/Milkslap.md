@@ -188,6 +188,7 @@ For additional information, please see the references below.
 - [binwalk - Linux manual page](https://manpages.debian.org/testing/binwalk/binwalk.1.en.html)
 - [CSS - Wikipedia](https://en.wikipedia.org/wiki/CSS)
 - [ExifTool - Homepage](https://exiftool.org/)
+- [exiftool - Linux manual page](https://linux.die.net/man/1/exiftool)
 - [ExifTool - Wikipedia](https://en.wikipedia.org/wiki/ExifTool)
 - [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
 - [HTML - Wikipedia](https://en.wikipedia.org/wiki/HTML)

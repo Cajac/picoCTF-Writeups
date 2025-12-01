@@ -525,5 +525,7 @@ For additional information, please see the references below.
 - [ExifTool - Wikipedia](https://en.wikipedia.org/wiki/ExifTool)
 - [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
 - [JPEG - Wikipedia](https://en.wikipedia.org/wiki/JPEG)
+- [nc - Linux manual page](https://linux.die.net/man/1/nc)
+- [netcat - Wikipedia](https://en.wikipedia.org/wiki/Netcat)
 - [tail - Linux manual page](https://man7.org/linux/man-pages/man1/tail.1.html)
 - [xxd - Linux manual page](https://linux.die.net/man/1/xxd)

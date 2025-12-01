@@ -96,5 +96,7 @@ For additional information, please see the references below.
 - [echo - Linux manual page](https://man7.org/linux/man-pages/man1/echo.1.html)
 - [Exif - Wikipedia](https://en.wikipedia.org/wiki/Exif)
 - [ExifTool - Homepage](https://exiftool.org/)
+- [exiftool - Linux manual page](https://linux.die.net/man/1/exiftool)
+- [ExifTool - Wikipedia](https://en.wikipedia.org/wiki/ExifTool)
 - [JPEG - Wikipedia](https://en.wikipedia.org/wiki/JPEG)
 - [Metadata - Wikipedia](https://en.wikipedia.org/wiki/Metadata)

@@ -35,7 +35,7 @@ In steganography challenges there are a number of checks that are more or less "
 
 Let's start by checking for metadata
 
-```text
+```bash
 Z:\CTFs\picoCTF\picoCTF_2023\Forensics\hideme>exiftool flag.png
 ExifTool Version Number         : 12.44
 File Name                       : flag.png
@@ -66,7 +66,7 @@ Hhm, we see that there is data embedded after the PNG-file, i.e. after the IEND 
 
 Continue with checking for strings. In this case I'm using a [Windows version of strings from Sysinternals](https://learn.microsoft.com/en-us/sysinternals/downloads/strings).
 
-```text
+```bash
 Z:\CTFs\picoCTF\picoCTF_2023\Forensics\hideme>strings -n 8 flag.png
 
 Strings v2.53 - Search for ANSI and Unicode strings in binary images.
@@ -148,6 +148,8 @@ For additional information, please see the references below.
 - [Binwalk - Kali Tools](https://www.kali.org/tools/binwalk/)
 - [binwalk - Linux manual page](https://manpages.debian.org/testing/binwalk/binwalk.1.en.html)
 - [Exif - Wikipedia](https://en.wikipedia.org/wiki/Exif)
+- [ExifTool - Homepage](https://exiftool.org/)
+- [exiftool - Linux manual page](https://linux.die.net/man/1/exiftool)
 - [ExifTool - Wikipedia](https://en.wikipedia.org/wiki/ExifTool)
 - [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)
 - [strings (Unix) - Wikipedia](https://en.wikipedia.org/wiki/Strings_(Unix))
