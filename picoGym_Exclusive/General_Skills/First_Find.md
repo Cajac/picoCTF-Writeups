@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Easy
 Tags: picoGym Exclusive, General Skills
 Author: LT 'SYREAL' JONES
 
@@ -16,12 +17,14 @@ Unzip this archive and find the file named 'uber-secret.txt'
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/320](https://play.picoctf.org/practice/challenge/320)
 
 ## Solution
 
 Unzip the file
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoGym/General_Skills/Fist_Find]
 └─$ unzip files.zip 
 Archive:  files.zip
@@ -50,14 +53,16 @@ Archive:  files.zip
 ```
 
 The path to the file is visible in the middle of the file listing (prefixed with extracting) but let's search for it anyway
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoGym/General_Skills/Fist_Find]
 └─$ find files -name uber-secret.txt
 files/adequate_books/more_books/.secret/deeper_secrets/deepest_secrets/uber-secret.txt
 ```
 
 Finally, display the flag with `cat`
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoGym/General_Skills/Fist_Find]
 └─$ cat files/adequate_books/more_books/.secret/deeper_secrets/deepest_secrets/uber-secret.txt
 picoCTF{<REDACTED>}

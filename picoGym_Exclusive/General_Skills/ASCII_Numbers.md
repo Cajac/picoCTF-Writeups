@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoGym Exclusive, General Skills
 Author: LT 'SYREAL' JONES
 
@@ -18,6 +19,7 @@ Hints:
 1. CyberChef is a great tool for any encoding but especially ASCII.
 2. Try CyberChef's 'From Hex' function
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/390](https://play.picoctf.org/practice/challenge/390)
 
 ## Solution
@@ -25,6 +27,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/390](https://play.p
 This challenge can easily be solved with [CyberChef's 'From Hex' recipe](https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')) but that's no fun.
 
 Let's write a python script called `solve.py` instead. The script uses both [lambda](https://docs.python.org/3/reference/expressions.html#lambda) and [map](https://docs.python.org/3/library/functions.html#map) functions.
+
 ```python
 #!/usr/bin/python
 
@@ -42,7 +45,8 @@ print(''.join(char_array))
 ```
 
 Then run the script to get the flag
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoGym/General_Skills/ASCII_Numbers]
 └─$ python solve.py
 picoCTF{<REDACTED>}
@@ -53,8 +57,9 @@ For additional information, please see the references below.
 ## References
 
 - [ASCII Table](https://www.asciitable.com/)
+- [ASCII - Wikipedia](https://en.wikipedia.org/wiki/ASCII)
 - [chr function - Python](https://docs.python.org/3/library/functions.html#chr)
-- [CyberChef - Home page](https://gchq.github.io/CyberChef/)
+- [CyberChef - GitHub](https://github.com/gchq/CyberChef)
+- [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
 - [lambda expression - Python](https://docs.python.org/3/reference/expressions.html#lambda)
 - [map function - Python](https://docs.python.org/3/library/functions.html#map)
-- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)

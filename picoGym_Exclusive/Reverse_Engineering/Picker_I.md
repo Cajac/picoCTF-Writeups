@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoGym Exclusive, Reverse Engineering, Python
 Author: LT 'SYREAL' JONES
 
@@ -19,6 +20,7 @@ Connect to the program with netcat:
 Hints:
  1. Can you point the program to a function that does something useful for you?
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/400](https://play.picoctf.org/practice/challenge/400)
 
 ## Solution
@@ -26,6 +28,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/400](https://play.p
 ### Study the source code
 
 Let's start by studying the "main" part of the python program.
+
 ```python
 while(True):
   try:
@@ -37,15 +40,18 @@ while(True):
 ```
 
 Then check the `getRandomNumber` function
+
 ```python
 def getRandomNumber():
   print(4)  # Chosen by fair die roll.
             # Guaranteed to be random.
             # (See XKCD)
 ```
+
 The comment is referring to this [XKCD comic strip](https://xkcd.com/221/).
 
 More interesting is this `win` function which output the flag as hex values.
+
 ```python
 def win():
   # This line will not work locally unless you create your own 'flag.txt' in
@@ -62,7 +68,8 @@ def win():
 ### Do a test run
 
 Next let's explore the program behavior by running it
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Picker_I]
 └─$ nc saturn.picoctf.net 58059
 Try entering "getRandomNumber" without the double quotes...
@@ -73,17 +80,21 @@ Try entering "getRandomNumber" without the double quotes...
 ### Get the encoded flag
 
 Now let's call the `win` function instead to get the flag
-```
+
+```bash
 Try entering "getRandomNumber" without the double quotes...
 ==> win
 0x70 0x69 0x63 0x6f 0x43 0x54 0x46 0x7b 0x34 0x5f 0x64 0x31 0x34 0x6d 0x30 0x6e 0x64 0x5f 0x31 0x6e 0x5f 0x37 0x68 0x33 0x5f 0x72 0x30 0x75 0x67 0x68 0x5f 0x36 0x65 0x30 0x34 0x34 0x34 0x30 0x64 0x7d 
 ```
+
+We have the flag hexadecimal encoded.
 
 ### Get the plaintext flag
 
 Finally, we need to decode the flag. This can be done with [CyberChef's 'From Hex' recipe](https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')) or with a python script.
 
 Let's write a python script called `decode.py`
+
 ```python
 #!/usr/bin/python
 
@@ -101,7 +112,8 @@ print(''.join(char_array))
 ```
 
 Then set the script file as executable and run it to get the flag
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Picker_I]
 └─$ chmod a+x decode.py                                           
 
@@ -115,9 +127,15 @@ For additional information, please see the references below.
 ## References
 
 - [ASCII Table](https://www.asciitable.com/)
+- [ASCII - Wikipedia](https://en.wikipedia.org/wiki/ASCII)
+- [chmod - Linux manual page](https://man7.org/linux/man-pages/man1/chmod.1.html)
 - [chr function - Python](https://docs.python.org/3/library/functions.html#chr)
+- [CyberChef - GitHub](https://github.com/gchq/CyberChef)
 - [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
+- [Hexadecimal - Wikipedia](https://en.wikipedia.org/wiki/Hexadecimal)
 - [join method - Python](https://docs.python.org/3/library/stdtypes.html#str.join)
 - [lambda expression - Python](https://docs.python.org/3/reference/expressions.html#lambda)
 - [map function - Python](https://docs.python.org/3/library/functions.html#map)
-- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)
+- [nc - Linux manual page](https://linux.die.net/man/1/nc)
+- [netcat - Wikipedia](https://en.wikipedia.org/wiki/Netcat)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))

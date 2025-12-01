@@ -1,4 +1,5 @@
 # Forensics Challenges
 
-1 Challenge: 
+## Medium Forensics Challenges
+
 - [WPA-ing Out](WPA-ing_Out.md)

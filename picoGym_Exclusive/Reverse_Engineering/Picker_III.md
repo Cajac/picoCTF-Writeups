@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoGym Exclusive, Reverse Engineering, Python
 Author: LT 'SYREAL' JONES
 
@@ -19,6 +20,7 @@ Connect to the program with netcat:
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/402](https://play.picoctf.org/practice/challenge/402)
 
 ## Solution
@@ -26,6 +28,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/402](https://play.p
 ### Study the source code
 
 This time the python script is a bit larger. Let's start by looking at the "main" part
+
 ```python
 import re
 
@@ -61,6 +64,7 @@ while(USER_ALIVE):
 ```
 
 One of the functions is the `win` function
+
 ```python
 def win():
   # This line will not work locally unless you create your own 'flag.txt' in
@@ -75,6 +79,7 @@ def win():
 ```
 
 However, the `win` function is not available in the function table
+
 ```python
 def reset_table():
   global func_table
@@ -92,7 +97,8 @@ getRandomNumber                 \
 ### Do a test run
 
 Next let's explore the program behavior by running it as intended
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Picker_III]
 └─$ nc saturn.picoctf.net 60097
 ==> 1
@@ -111,7 +117,8 @@ print_table                     read_variable                   write_variable  
 ### Rewrite the function table to get the encoded flag
 
 Now, let's try to overwrite the function table
-```
+
+```bash
 ==> 3
 Please enter variable name to write: func_table
 Please enter new value of variable: "win   read_variable   write_variable   getRandomNumber"
@@ -123,6 +130,7 @@ Table corrupted. Try entering 'reset' to fix it
 Hhm, that didn't work. We need to study the format of the `func_table` in more detail.
 
 Remember the global variables in the beginning of the script?
+
 ```python
 FUNC_TABLE_SIZE = 4
 FUNC_TABLE_ENTRY_SIZE = 32
@@ -130,6 +138,7 @@ CORRUPT_MESSAGE = 'Table corrupted. Try entering \'reset\' to fix it'
 ```
 
 Also, see the `check_table` function
+
 ```python
 def check_table():
   global func_table
@@ -143,7 +152,8 @@ def check_table():
 So the total length of the function table needs to be 32*4 = 128 bytes.
 
 Create a 128-byte string with the letters 'win' left-aligned
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Picker_III]
 └─$ python -c "print('\"{0:<128}\"'.format('win'))" 
 "win                                                                                                                             "
@@ -151,7 +161,8 @@ Create a 128-byte string with the letters 'win' left-aligned
 
 Then copy-and-paste this as input to the `func_table` variable.  
 Then "call" the first function in the function table to get the encoded flag.
-```
+
+```bash
 ==> 3
 Please enter variable name to write: func_table
 Please enter new value of variable: "win                                                                                                                             "
@@ -164,7 +175,8 @@ Please enter new value of variable: "win                                        
 Finally, to get the plaintext flag you can use either [CyberChef](https://cyberchef.org/) or the `decode.py` script as in the [Picker I challenge](Picker_I.md) challenge.
 
 Another way to get the flag is to use `sed` and `xxd` as below. With `sed` you substitute (with the s-command) '0x' and spaces with "nothing", effectively removing them. And then `xxd` will reverse (-r) the hexdump and output it in plain format (-p).
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Picker_III]
 └─$ echo "0x70 0x69 0x63 0x6f 0x43 0x54 0x46 0x7b 0x37 0x68 0x31 0x35 0x5f 0x31 0x35 0x5f 0x77 0x68 0x34 0x37 0x5f 0x77 0x33 0x5f 0x67 0x33 0x37 0x5f 0x77 0x31 0x37 0x68 0x5f 0x75 0x35 0x33 0x72 0x35 0x5f 0x31 0x6e 0x5f 0x63 0x68 0x34 0x72 0x67 0x33 0x5f 0x61 0x31 0x38 0x36 0x66 0x39 0x61 0x63 0x7d" | sed 's/0x//g'
 
@@ -184,6 +196,11 @@ For additional information, please see the references below.
 
 ## References
 
+- [CyberChef - GitHub](https://github.com/gchq/CyberChef)
 - [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
+- [echo - Linux manual page](https://man7.org/linux/man-pages/man1/echo.1.html)
+- [Hexadecimal - Wikipedia](https://en.wikipedia.org/wiki/Hexadecimal)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [sed - Linux manual page](https://man7.org/linux/man-pages/man1/sed.1.html)
 - [xxd - Linux manual page](https://linux.die.net/man/1/xxd)

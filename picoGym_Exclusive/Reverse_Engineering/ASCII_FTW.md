@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoGym Exclusive, Reverse Engineering
 Author: LT 'SYREAL' JONES
 
@@ -17,12 +18,14 @@ Hints:
 1. The combined range of hex-ascii for English alphabets and numerical digits is from 30 to 7A.
 2. Online hex-ascii converters can be helpful.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/389](https://play.picoctf.org/practice/challenge/389)
 
 ## Solution
 
 Import the file in [Ghidra](https://ghidra-sre.org/) and analyze it with the default settings.  
 Double-click on the `main` function to show the decompiled version of it.
+
 ```C
 void main(void)
 
@@ -41,7 +44,8 @@ void main(void)
 ```
 
 The flag data is stored at memory position `in_FS_OFFSET`. Double-click to navigate to it in the Listing window.
-```
+
+```text
         0010117e 48 89 45 f8     MOV        qword ptr [RBP + local_10],RAX
         00101182 31 c0           XOR        EAX,EAX
         00101184 c6 45 d0 70     MOV        byte ptr [RBP + local_38],0x70
@@ -57,7 +61,8 @@ The flag data is stored at memory position `in_FS_OFFSET`. Double-click to navig
 The flag is stored as ASCII-values byte by byte. I.e. the values 0x70, 0x69, etc. 0x70 corresponds to 'p', 0x69 to 'i', etc.  The lookup can be done manually with an online [ASCII table](https://www.ascii-code.com/) or within Ghidra by right-clicking on each value and selecting `Convert -> Char` in the menu.
 
 The result then looks like this:
-```
+
+```text
         0010117e 48 89 45 f8     MOV        qword ptr [RBP + local_10],RAX
         00101182 31 c0           XOR        EAX,EAX
         00101184 c6 45 d0 70     MOV        byte ptr [RBP + local_38],'p'
@@ -81,5 +86,5 @@ For additional information, please see the references below.
 ## References
 
 - [ASCII Table](https://www.asciitable.com/)
+- [ASCII - Wikipedia](https://en.wikipedia.org/wiki/ASCII)
 - [Ghidra - Homepage](https://ghidra-sre.org/)
-- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)

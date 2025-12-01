@@ -6,8 +6,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoGym Exclusive, Reverse Engineering, X86_64
 Author: LT 'SYREAL' JONES
 
@@ -21,12 +22,14 @@ Hints:
 1. gdb is a very good debugger to use for this problem and many others!
 2. main is actually a recognized symbol that can be used with gdb commands.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/395](https://play.picoctf.org/practice/challenge/395)
 
 ## GDB Solution
 
 Start by checking the file type with `file`.
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/GDB_baby_step_1]
 └─$ file debugger0_a 
 debugger0_a: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=15a10290db2cd2ec0c123cf80b88ed7d7f5cf9ff, for GNU/Linux 3.2.0, not stripped
@@ -34,8 +37,9 @@ debugger0_a: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamicall
 
 The file isn't stripped of debug information which makes it easier to debug.
 
-Start GDB in quiet mode and then set the disassembly format to intel, which I prefer.
-```
+Start GDB in quiet mode and then set the disassembly format to Intel, which I prefer.
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/GDB_baby_step_1]
 └─$ gdb -q debugger0_a 
 Reading symbols from debugger0_a...
@@ -44,7 +48,8 @@ Reading symbols from debugger0_a...
 ```
 
 Then disassemble the `main` function
-```
+
+```bash
 (gdb) disass main
 Dump of assembler code for function main:
    0x0000000000001129 <+0>:     endbr64 
@@ -61,7 +66,8 @@ End of assembler dump.
 EAX is set to `0x86342`.
 
 The flag should be in decimal so convert it in Python:
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/Bit-O-Asm-4]
 └─$ python                                                             
 Python 3.10.9 (main, Dec  7 2022, 13:47:07) [GCC 12.2.0] on linux
@@ -75,7 +81,8 @@ Finally, create the flag like this `picoCTF{<Your_number>}`.
 ## Objdump Solution
 
 An alternative solution is to disassemble with `objdump` instead.
-```
+
+```bash
 ┌──(kali㉿kali)-[/picoCTF/picoGym/Reverse_Engineering/GDB_baby_step_1]
 └─$ objdump -d debugger0_a --disassemble=main -M intel
 
@@ -106,10 +113,18 @@ Disassembly of section .fini:
 
 ## References
 
+- [Debugger - Wikipedia](https://en.wikipedia.org/wiki/Debugger)
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
 - [gdb - Linux manual page](https://man7.org/linux/man-pages/man1/gdb.1.html)
+- [GDB (The GNU Project Debugger) - Documentation](https://sourceware.org/gdb/documentation/)
+- [GDB (The GNU Project Debugger) - Homepage](https://sourceware.org/gdb/)
+- [Hexadecimal - Wikipedia](https://en.wikipedia.org/wiki/Hexadecimal)
 - [objdump - Linux manual page](https://man7.org/linux/man-pages/man1/objdump.1.html)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [x86 assembly language - Wikipedia](https://en.wikipedia.org/wiki/X86_assembly_language)
 
-Intel 64 and IA-32 Architectures Developer's Manuals in PDF-format  
+Intel 64 and IA-32 Architectures Developer's Manuals in PDF-format
+
 - [Volume 2A: Instruction Set Reference, A-M](https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-2a-manual.pdf)
 - [Volume 2B: Instruction Set Reference, M-U](https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-2b-manual.pdf)
 - [Volume 2C: Instruction Set Reference, V-Z](https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-2c-manual.pdf)
