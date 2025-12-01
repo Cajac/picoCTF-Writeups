@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 20
+
+```text
+Level: Easy
 Tags: picoCTF 2021, Reverse Engineering
 Author: MADSTACKS
 
@@ -18,6 +19,7 @@ I wonder what this really is... enc
 Hints:
 1. You may find some decoders online
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/104](https://play.picoctf.org/practice/challenge/104)
 
 ## Solutions
@@ -27,18 +29,21 @@ Challenge link: [https://play.picoctf.org/practice/challenge/104](https://play.p
 Let's start by looking at what we have.
 
 We have an encoded file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/Transformation]
 └─$ cat enc                              
 灩捯䍔䙻ㄶ形楴獟楮獴㌴摟潦弸弲㘶㠴挲ぽ  
 ```
+
 that looks like Chinese when viewed with UTF-8 encoding.
 
-We also have the Python code snippet that encoded the data. It uses list comprehension, the `<<` (left bitwise shift) operator and the `ord` and `chr` functions to encode the flag as a 16-bit string.
+We also have the Python code snippet that encoded the data. It uses list comprehension, the `<<` (left bitwise shift) operator and the `ord` and `chr` functions to encode the flag as a 16-bit string.  
+`''.join([chr((ord(flag[i]) << 8) + ord(flag[i + 1])) for i in range(0, len(flag), 2)])`
 
 ### CyberChef solution
 
-As the hint suggested you can use an online site such as [CyberChef](https://gchq.github.io/CyberChef/) and the 'Encode text' recipe to get the flag. 
+As the hint suggested you can use an online site such as [CyberChef](https://gchq.github.io/CyberChef/) and the 'Encode text' recipe to get the flag.
 
 Enter 'text' in the `Operations` search bar, then drag and drop `Encode text` to the `Recipe`.  
 Change the Encoding to `UTF-16BE (1201)`, copy the scrambled flag to the `Input` pane and press `BAKE`.
@@ -48,6 +53,7 @@ The flag will be shown in the `Output` pane.
 ### Python reverse decoder
 
 Alternatively, we can put together a Python script that reverses what was done. Something like this
+
 ```python
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
@@ -62,6 +68,7 @@ print(flag)
 ```
 
 Then, make sure the script is executable and run it to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/Transformation]
 └─$ chmod +x solve.py 
@@ -76,6 +83,7 @@ And we have that flag again.
 ### Python encoding brute forcer
 
 Finally, we can assume that a standing encoding scheme was used and just brute force all combinations
+
 ```python
 #!/usr/bin/python
 
@@ -109,6 +117,7 @@ for enc in encodings:
 ```
 
 Then we run the script and hope for the best
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/Transformation]
 └─$ ./bf_encoding.py
@@ -119,6 +128,13 @@ And there we have the flag in yet another way.
 
 ## References
 
-- [Programiz - Python List Comprehension](https://www.programiz.com/python-programming/list-comprehension)
-- [Python - Bitwise Operators](https://wiki.python.org/moin/BitwiseOperators)
-- [Digital Ocean - Python ord(), chr() functions](https://www.digitalocean.com/community/tutorials/python-ord-chr)
+- [Bitwise Operators - Python](https://wiki.python.org/moin/BitwiseOperators)
+- [Character encoding - Wikipedia](https://en.wikipedia.org/wiki/Character_encoding)
+- [chmod - Linux manual page](https://man7.org/linux/man-pages/man1/chmod.1.html)
+- [CyberChef - GitHub](https://github.com/gchq/CyberChef)
+- [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Python List Comprehension - Programiz](https://www.programiz.com/python-programming/list-comprehension)
+- [Python ord(), chr() functions - Digital Ocean](https://www.digitalocean.com/community/tutorials/python-ord-chr)
+- [UTF-8 - Wikipedia](https://en.wikipedia.org/wiki/UTF-8)
+- [UTF-16 - Wikipedia](https://en.wikipedia.org/wiki/UTF-16)

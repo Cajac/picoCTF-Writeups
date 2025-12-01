@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 90
+
+```text
+Level: Medium
 Tags: picoCTF 2021, Forensics
 Author: DANNY
 
@@ -16,6 +17,7 @@ Figure out how they moved the flag.
 Hints:
 1. What are some other ways to hide data?
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/103](https://play.picoctf.org/practice/challenge/103)
 
 ## Solution
@@ -30,6 +32,7 @@ Then click `Save All`.
 ### Analyse the transfered files
 
 We now have six files
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Trivial_Flag_Transfer_Protocol]
 └─$ file *          
@@ -42,6 +45,7 @@ program.deb:      Debian binary package (format 2.0), with control.tar.gz, data 
 ```
 
 Let's start with the text files
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Trivial_Flag_Transfer_Protocol]
 └─$ cat instructions.txt                       
@@ -69,7 +73,8 @@ TFTPDOESNTENCRYPTOURTRAFFICSOWEMUSTDISGUISEOURFLAGTRANSFER.FIGUREOUTAWAYTOHIDETH
 ```
 
 It's a bit hard to read without spaces but the files contain:
-```
+
+```text
 plan: I USED THE PROGRAM AND HID IT WITH - DUE DILIGENCE. CHECK OUT THE PHOTOS
 
 instructions.txt: TFTP DOESNT ENCRYPT OUR TRAFFIC SO WE MUST DISGUISE OUR FLAG TRANSFER.
@@ -79,6 +84,7 @@ instructions.txt: TFTP DOESNT ENCRYPT OUR TRAFFIC SO WE MUST DISGUISE OUR FLAG T
 ### Unpack the program.deb file
 
 Analysing the `program.deb` file I saw that it contains a `control.tar.gz` file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Trivial_Flag_Transfer_Protocol]
 └─$ head -n 4 program.deb
@@ -89,6 +95,7 @@ control.tar.gz  1413331375  0     0     100644  1250      `
 ```
 
 We can unpack it with `ar` and then `gunzip` and untar it
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Trivial_Flag_Transfer_Protocol]
 └─$ ar x program.deb 
@@ -105,6 +112,7 @@ gzip: control.tar: Value too large for defined data type
 ```
 
 Check out the `md5sums` file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Trivial_Flag_Transfer_Protocol]
 └─$ cat md5sums 
@@ -128,6 +136,7 @@ dbc3a8e974ccf7e91da81aca4a5c1605  usr/share/locale/ro/LC_MESSAGES/steghide.mo
 ```
 
 And the `control` file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Trivial_Flag_Transfer_Protocol]
 └─$ file control
@@ -160,7 +169,8 @@ Ok, so `steghide` have been used to hide the flag in one of the pictures.
 ### Get the flag
 
 First I tried to extract without a password (that is an empty password)
-```
+
+```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Trivial_Flag_Transfer_Protocol]
 └─$ steghide extract -sf picture1.bmp
 Enter passphrase: 
@@ -181,11 +191,13 @@ But that didn't work.
 
 So I went back to the text files looking for clues about the password.  
 From the `plan` file
-```
+
+```text
 IUSEDTHEPROGRAMANDHIDITWITH-DUEDILIGENCE.CHECKOUTTHEPHOTOS
 ```
 
 So I tried the password `DUEDILIGENCE` and that worked
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Trivial_Flag_Transfer_Protocol]
 └─$ steghide extract -sf picture1.bmp
@@ -211,6 +223,15 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wireshark](https://www.wireshark.org/)
-- [Wikipedia - Trivial File Transfer Protocol](https://en.wikipedia.org/wiki/Trivial_File_Transfer_Protocol)
-- [Wikipedia - ROT13](https://en.wikipedia.org/wiki/ROT13)
+- [ar - Linux manual page](https://man7.org/linux/man-pages/man1/ar.1.html)
+- [cat - Linux manual page](https://man7.org/linux/man-pages/man1/cat.1.html)
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
+- [gunzip - Linux manual page](https://linux.die.net/man/1/gunzip)
+- [head - Linux manual page](https://man7.org/linux/man-pages/man1/head.1.html)
+- [MD5 - Wikipedia](https://en.wikipedia.org/wiki/MD5)
+- [ROT13 - Wikipedia](https://en.wikipedia.org/wiki/ROT13)
+- [steghide - Homepage](https://steghide.sourceforge.net/)
+- [steghide - Kali Tools](https://www.kali.org/tools/steghide/)
+- [tar - Linux manual page](https://man7.org/linux/man-pages/man1/tar.1.html)
+- [Trivial File Transfer Protocol - Wikipedia](https://en.wikipedia.org/wiki/Trivial_File_Transfer_Protocol)
+- [Wireshark - Homepage](https://www.wireshark.org/)

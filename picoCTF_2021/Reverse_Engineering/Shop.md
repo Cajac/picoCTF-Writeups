@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 50
+
+```text
+Level: Medium
 Tags: picoCTF 2021, Reverse Engineering
 Author: THELSHELL
 
@@ -19,6 +20,7 @@ The shop is open for business at nc mercury.picoctf.net 42159.
 Hints:
 1. Always check edge cases when programming
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/134](https://play.picoctf.org/practice/challenge/134)
 
 ## Solutions
@@ -28,6 +30,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/134](https://play.p
 Let's start by looking at what we have.
 
 We have file called `source` that despite its name is a binary
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/Shop]
 └─$ file source                                                                                                     
@@ -37,6 +40,7 @@ source: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically lin
 A 32-bit ELF-binary.
 
 We also check if the flag is available as a plain text string
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/Shop]
 └─$ strings -a -n 8 -e s source | grep -i picoCTF
@@ -45,6 +49,7 @@ We also check if the flag is available as a plain text string
 └─$ strings -a -n 8 -e S source | grep -i picoCTF
 
 ```
+
 Nope, not that easy!
 
 ### Do a test run of the binary
@@ -52,6 +57,7 @@ Nope, not that easy!
 Next, we run the program and try to give it unexpected input as suggested in the hint.
 
 We can try invalid menu options
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/Shop]
 └─$ ./source
@@ -88,6 +94,7 @@ Choose an option:
 Nothing happens!
 
 And we can try buying a negative number of items
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/Shop]
 └─$ ./source
@@ -122,12 +129,13 @@ Ah, that worked! The flag seems to be encoded as decimal [ASCII](https://en.wiki
 
 ### Decode the flag
 
-To decode the flag we can use an online site such as [CyberChef](https://gchq.github.io/CyberChef/) and the 'From Decimal' recipe.   
+To decode the flag we can use an online site such as [CyberChef](https://gchq.github.io/CyberChef/) and the 'From Decimal' recipe.  
 Enter 'decimal' in the `Operations` search bar, then drag and drop `From Decimal` to the `Recipe`.  
 Copy the numbers to the `Input` pane and press `BAKE`.  
 The flag will be shown in the `Output` pane.
 
 Alternativly, we can use an interactive Python session
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/Shop]
 └─$ python                  
@@ -142,6 +150,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ### Automate everything with pwntools
 
 We can use [pwntools](https://docs.pwntools.com/en/stable/index.html) to automate this with a Python script
+
 ```python
 #!/usr/bin/python
 
@@ -169,6 +178,7 @@ io.close()
 ```
 
 And run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/Shop]
 └─$ ~/python_venvs/pwntools/bin/python get_flag.py
@@ -179,7 +189,14 @@ For additional information, please see the references below.
 
 ## References
 
-- [CyberChef](https://gchq.github.io/CyberChef/)
-- [pwntools](https://docs.pwntools.com/en/stable/index.html)
-- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)
-- [Wikipedia - Edge case](https://en.wikipedia.org/wiki/Edge_case)
+- [ASCII - Wikipedia](https://en.wikipedia.org/wiki/ASCII)
+- [CyberChef - GitHub](https://github.com/gchq/CyberChef)
+- [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
+- [Edge case - Wikipedia](https://en.wikipedia.org/wiki/Edge_case)
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
+- [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
+- [pwntools - Documentation](https://docs.pwntools.com/en/stable/index.html)
+- [pwntools - GitHub](https://github.com/Gallopsled/pwntools)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [String (computer science) - Wikipedia](https://en.wikipedia.org/wiki/String_(computer_science))
+- [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)

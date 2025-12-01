@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 250
+
+```text
+Level: Hard
 Tags: picoCTF 2021, Forensics
 Author: WILLIAM BATISTA
 
@@ -18,6 +19,7 @@ Hints:
 1. Music is cool, but what other kinds of waves are there?
 2. Look deep below the surface
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/117](https://play.picoctf.org/practice/challenge/117)
 
 ## Solution
@@ -32,6 +34,7 @@ What were these values?
 Next, I used [SciPy](https://scipy.org/) which can [read wav-files](https://docs.scipy.org/doc/scipy/tutorial/io.html#wav-sound-files-scipy-io-wavfile) to analyze the values. If needed install SciPy with either `sudo apt-get install python3-scipy` or `python -m pip install scipy`.
 
 My first try was just to read the file and print the 100 first values and all unique values
+
 ```python
 #!/usr/bin/python
 
@@ -46,6 +49,7 @@ print(unique(array))
 ```
 
 Running the script gave me this output
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Surfing_the_Waves]
 └─$ ./analyze.py
@@ -81,6 +85,7 @@ What if the first two digits represent hexadecimal values encoding the flag?
 ### Analyze in SciPy - Part 2
 
 Next, I converted the data to hexadecimal numbers
+
 ```python
 #!/usr/bin/python
 
@@ -94,6 +99,7 @@ for val in array:
 ```
 
 Running this script gave me the following output
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Surfing_the_Waves]
 └─$ ./analyze_2.py
@@ -119,6 +125,7 @@ f
 ### Decode the flag
 
 Finally, I collected all the hex-digits in a string and converted it to ASCII with this script
+
 ```python
 #!/usr/bin/python
 
@@ -136,6 +143,7 @@ print(bytearray.fromhex(hex_str).decode())
 ```
 
 Running the script gave me a Python-script with the flag at the end
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Surfing_the_Waves]
 └─$ ./decode.py
@@ -194,5 +202,13 @@ For additional information, please see the references below.
 
 ## References
 
-- [NumPy](https://numpy.org/)
-- [SciPy](https://scipy.org/)
+- [ASCII - Wikipedia](https://en.wikipedia.org/wiki/ASCII)
+- [Hexadecimal - Wikipedia](https://en.wikipedia.org/wiki/Hexadecimal)
+- [numpy - Homepage](https://numpy.org/)
+- [numpy - PyPI](https://pypi.org/project/numpy)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [SciPy - Documentation](https://docs.scipy.org/doc/scipy/)
+- [SciPy - Homepage](https://scipy.org/)
+- [SciPy - PyPI](https://pypi.org/project/scipy/)
+- [Sonic Visualiser - Homepage](https://www.sonicvisualiser.org/)
+- [WAV - Wikipedia](https://en.wikipedia.org/wiki/WAV)

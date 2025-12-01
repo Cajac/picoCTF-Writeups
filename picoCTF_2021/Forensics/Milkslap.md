@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 120
+
+```text
+Level: Medium
 Tags: picoCTF 2021, Forensics
 Author: JAMES LYNCH
 
@@ -16,6 +17,7 @@ Description:
 Hints:
 1. Look at the problem category
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/139](https://play.picoctf.org/practice/challenge/139)
 
 ## Solution
@@ -24,7 +26,8 @@ Challenge link: [https://play.picoctf.org/practice/challenge/139](https://play.p
 
 The emoji is a link that redirects you to `http://mercury.picoctf.net:16940/`.
 
-On the site,  right-click and select 'View page source' (or press `CTRL + U`) to get
+On the site, right-click and select 'View page source' (or press `CTRL + U`) to get
+
 ```html
 <!doctype html>
 
@@ -52,6 +55,7 @@ On the site,  right-click and select 'View page source' (or press `CTRL + U`) to
 ```
 
 Next, check the `style.css` file
+
 ```css
 /* source: milkslap-milkslap.scss */
 body {
@@ -84,11 +88,12 @@ a {
     text-align: center; }
 ```
 
-We can see that the background is a file called `concat_v.png`. 
+We can see that the background is a file called `concat_v.png`.
 
 ### Analyse the picture file
 
 Let's retreive the picture file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Milkslap]
 └─$ wget http://mercury.picoctf.net:16940/concat_v.png
@@ -105,6 +110,7 @@ concat_v.png                                            100%[===================
 ```
 
 Next, let's do some basic checks on it
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Milkslap]
 └─$ file concat_v.png    
@@ -147,7 +153,8 @@ Nothing that stands out.
 ### Get the flag with zsteg
 
 Then, I checked the file with `zsteg`. For unknown reasons my Linux installation of zsteg couldn't handle the file so I used my Windows version instead
-```
+
+```bash
 Z:\CTFs\picoCTF\picoCTF_2021\Forensics\Milkslap>zsteg -a concat_v.png
 imagedata           .. text: "\n\n\n\n\n\n\t\t"
 b1,b,lsb,xy         .. text: "picoCTF{<REDACTED>}\n"
@@ -176,4 +183,13 @@ For additional information, please see the references below.
 
 ## References
 
+- [Binwalk - GitHub](https://github.com/ReFirmLabs/binwalk)
+- [Binwalk - Kali Tools](https://www.kali.org/tools/binwalk/)
+- [binwalk - Linux manual page](https://manpages.debian.org/testing/binwalk/binwalk.1.en.html)
+- [CSS - Wikipedia](https://en.wikipedia.org/wiki/CSS)
+- [ExifTool - Homepage](https://exiftool.org/)
+- [ExifTool - Wikipedia](https://en.wikipedia.org/wiki/ExifTool)
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
+- [HTML - Wikipedia](https://en.wikipedia.org/wiki/HTML)
+- [wget - Linux manual page](https://man7.org/linux/man-pages/man1/wget.1.html)
 - [zsteg - Github](https://github.com/zed-0xff/zsteg)

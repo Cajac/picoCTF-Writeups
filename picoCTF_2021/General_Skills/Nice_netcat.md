@@ -132,4 +132,5 @@ For additional information, please see the references below.
 - [nc - Linux manual page](https://linux.die.net/man/1/nc)
 - [netcat - Wikipedia](https://en.wikipedia.org/wiki/Netcat)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
-- [pwntools](https://docs.pwntools.com/en/stable/index.html)
+- [pwntools - Documentation](https://docs.pwntools.com/en/stable/index.html)
+- [pwntools - GitHub](https://github.com/Gallopsled/pwntools)

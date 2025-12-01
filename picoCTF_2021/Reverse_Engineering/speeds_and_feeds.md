@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 50
+
+```text
+Level: Medium
 Tags: picoCTF 2021, Reverse Engineering
 Author: RYAN RAMSEYER
 
@@ -17,6 +18,7 @@ Can you?
 Hints:
 1. What language does a CNC machine use?
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/116](https://play.picoctf.org/practice/challenge/116)
 
 ## Solutions
@@ -24,6 +26,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/116](https://play.p
 ### Analyze the output
 
 We start by connecting to the service and watch the output
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/speeds_and_feeds]
 └─$ nc mercury.picoctf.net 59953
@@ -54,6 +57,7 @@ G1X2.7586Y0.0000
 ```
 
 A LOT of output in some unknown format. Let's save the output in a local file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/speeds_and_feeds]
 └─$ nc mercury.picoctf.net 59953 > speeds_and_feeds_output.txt
@@ -79,4 +83,7 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - G-code](https://en.wikipedia.org/wiki/G-code)
+- [G-code - Wikipedia](https://en.wikipedia.org/wiki/G-code)
+- [nc - Linux manual page](https://linux.die.net/man/1/nc)
+- [NC Viewer - Online GCode Viewer](https://ncviewer.com/)
+- [netcat - Wikipedia](https://en.wikipedia.org/wiki/Netcat)

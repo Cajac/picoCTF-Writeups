@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 30
+
+```text
+Level: Medium
 Tags: picoCTF 2021, Reverse Engineering
 Author: SYREAL
 
@@ -17,6 +18,7 @@ keygenme-trial.py
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/121](https://play.picoctf.org/practice/challenge/121)
 
 ## Solutions
@@ -24,6 +26,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/121](https://play.p
 ### Analyze the Python script
 
 Let's start by looking at the beginning of the script
+
 ```python
 #============================================================================#
 #============================ARCANE CALCULATOR===============================#
@@ -52,6 +55,7 @@ key_full_template_trial = key_part_static1_trial + key_part_dynamic1_trial + key
 There we have what seems to be most parts of the flag, apart from a unknown dynamic part.
 
 Further down we have a menu function called `menu_trial`
+
 ```python
 def menu_trial():
     print("___Arcane Calculator___\n\n\
@@ -83,6 +87,7 @@ lowercase letter choice (a/b/c/d).")
 ```
 
 Let's check the `enter_license` function next
+
 ```python
 def enter_license():
     user_key = input("\nEnter your license key: ")
@@ -97,6 +102,7 @@ def enter_license():
 ```
 
 It calls the `check_key` function so let's investigate that
+
 ```python
 def check_key(key, username_trial):
 
@@ -160,6 +166,7 @@ Ah, here we have the dynamic part. It checks a number of hash digits, in some st
 ### Get the flag
 
 Let's make a small script to compile the complete flag
+
 ```python
 #!/usr/bin/python
 
@@ -179,6 +186,7 @@ print(flag)
 ```
 
 Then, make sure the script is executable and run it to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/keygenme-py]
 └─$ chmod +x solve.py 
@@ -190,4 +198,8 @@ picoCTF{<REDACTED>}
 
 ## References
 
-- [hashlib — Secure hashes and message digests](https://docs.python.org/3/library/hashlib.html)
+- [chmod - Linux manual page](https://man7.org/linux/man-pages/man1/chmod.1.html)
+- [Cryptographic hash function - Wikipedia](https://en.wikipedia.org/wiki/Cryptographic_hash_function)
+- [hashlib module - Python](https://docs.python.org/3/library/hashlib.html)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [SHA-2 - Wikipedia](https://en.wikipedia.org/wiki/SHA-2)

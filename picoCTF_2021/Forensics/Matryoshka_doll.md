@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 30
+
+```text
+Level: Medium
 Tags: picoCTF 2021, Forensics
 Author: SUSIE/PANDU
 
@@ -20,6 +21,7 @@ Hints:
 1. Wait, you can hide files inside files? But how do you find them?
 2. Make sure to submit the flag as picoCTF{XXXXX}
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/129](https://play.picoctf.org/practice/challenge/129)
 
 ## Solution
@@ -27,6 +29,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/129](https://play.p
 Hhm, hiding file within files, sounds like tools such as [Binwalk](https://github.com/ReFirmLabs/binwalk) will be useful...
 
 But first let's check what type of file it is with `file`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Matryoshka_doll]
 └─$ file dolls.jpg            
@@ -34,6 +37,7 @@ dolls.jpg: PNG image data, 594 x 1104, 8-bit/color RGBA, non-interlaced
 ```
 
 Let's see if any files are embedded with `binwalk`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Matryoshka_doll]
 └─$ binwalk -e dolls.jpg 
@@ -49,6 +53,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 Aha, an embedded Zip-file.
 
 The files are unpacked in a separate directory
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Matryoshka_doll]
 └─$ cd _dolls.jpg.extracted     
@@ -73,6 +78,7 @@ drwxrwxrwx 1 root root      0 Aug 13 09:24 ..
 ```
 
 Another zip-file... Ok, let's try the same thing again but with an added `-M` to recursively scan extracted files
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/Forensics/Matryoshka_doll/_dolls.jpg.extracted/base_images]
 └─$ binwalk -e -M 2_c.jpg    
@@ -130,6 +136,7 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 And there at the end is a `flag.txt` file. Hopefully that is the flag.
 
 Let's verify
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/Forensics/Matryoshka_doll/_dolls.jpg.extracted/base_images]
 └─$ cat _2_c.jpg.extracted/base_images/_3_c.jpg.extracted/base_images/_4_c.jpg.extracted/flag.txt
@@ -142,5 +149,7 @@ For additional information, please see the references below.
 
 ## References
 
-- [Binwalk](https://github.com/ReFirmLabs/binwalk)
+- [Binwalk - GitHub](https://github.com/ReFirmLabs/binwalk)
+- [Binwalk - Kali Tools](https://www.kali.org/tools/binwalk/)
+- [binwalk - Linux manual page](https://manpages.debian.org/testing/binwalk/binwalk.1.en.html)
 - [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)

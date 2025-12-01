@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 40
+
+```text
+Level: Medium
 Tags: picoCTF 2021, Forensics
 Author: DANNY
 
@@ -17,6 +18,7 @@ We found this file. Recover the flag.
 Hints:
 1. Weird that it won't display right...
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/112](https://play.picoctf.org/practice/challenge/112)
 
 ## Solution
@@ -24,6 +26,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/112](https://play.p
 ### Analyse the file
 
 Let's start with checking the file type with `file`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/tunn3l_v1s10n]
 └─$ file tunn3l_v1s10n  
@@ -31,6 +34,7 @@ tunn3l_v1s10n: data
 ```
 
 Hhm, not much help there. Lets check the first bytes with `xxd`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/tunn3l_v1s10n]
 └─$ xxd -g 1 -l 48 tunn3l_v1s10n        
@@ -46,9 +50,10 @@ Now, we need to figure out what fields in the BMP header is corrupt and fix them
 ### Fixing the BMP header
 
 Fixing the header is made considerably easier with this help:
-* A [specification of the file format](https://en.wikipedia.org/wiki/BMP_file_format)
-* At least one known good file of the same format
-* A tool which can parse the headers for you such as the [010 Editor](https://www.sweetscape.com/010editor/) with its [binary templates](https://www.sweetscape.com/010editor/templates.html)
+
+- A [specification of the file format](https://en.wikipedia.org/wiki/BMP_file_format)
+- At least one known good file of the same format
+- A tool which can parse the headers for you such as the [010 Editor](https://www.sweetscape.com/010editor/) with its [binary templates](https://www.sweetscape.com/010editor/templates.html)
 
 Reading from the beginning of the header the following values seems corrupt/wrong:
 
@@ -61,6 +66,7 @@ The is standard according to the specification.
 I didn't see it first but the fields actually says `BAD`...
 
 After the changes, the headers looks like this
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/tunn3l_v1s10n]
 └─$ xxd -g 1 -l 48 tunn3l_v1s10n.bmp 
@@ -70,6 +76,7 @@ After the changes, the headers looks like this
 ```
 
 And now it is recognized as a BMP image by `file`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/tunn3l_v1s10n]
 └─$ file tunn3l_v1s10n.bmp 
@@ -89,6 +96,7 @@ For additional information, please see the references below.
 
 ## References
 
+- [010 Editor - Homepage](https://www.sweetscape.com/010editor/)
+- [BMP file format - Wikipedia](https://en.wikipedia.org/wiki/BMP_file_format)
 - [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
 - [xxd - Linux manual page](https://linux.die.net/man/1/xxd)
-- [Wikipedia - BMP file format](https://en.wikipedia.org/wiki/BMP_file_format)

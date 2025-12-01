@@ -6,8 +6,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 130
+
+```text
+Level: Medium
 Tags: picoCTF 2021, Forensics
 Author: SYREAL
  
@@ -20,6 +21,7 @@ Hints:
 2. Sleuthkit docs here are so helpful: TSK Tool Overview
 3. This disk can also be booted with qemu!
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/137](https://play.picoctf.org/practice/challenge/137)
 
 ## Sleuthkit solution
@@ -27,6 +29,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/137](https://play.p
 ### Unpack the image file
 
 Let's start with unpacking and analysing the given file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Disk_disk_sleuth_II]
 └─$ gunzip dds2-alpine.flag.img.gz   
@@ -42,6 +45,7 @@ So we have a disk image with a MBR boot sector and one partition.
 ### Get an overview of the disk and the file system
 
 Next we display the layout of the disk with `mmls`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Disk_disk_sleuth_II]
 └─$ mmls dds2-alpine.flag.img                
@@ -55,9 +59,10 @@ Units are in 512-byte sectors
 002:  000:000   0000002048   0000262143   0000260096   Linux (0x83)
 ```
 
-The offset to the Linux file system is 2048.
+The offset to the Linux file system is `2048`.
 
 We can get file system details with `fsstat`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Disk_disk_sleuth_II]
 └─$ fsstat -o 2048 dds2-alpine.flag.img 
@@ -85,6 +90,7 @@ Read Only Compat Features: Sparse Super, Large File,
 ### Search for the file
 
 Let's search for the file named `down-at-the-bottom.txt` with `fls` and `grep`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Disk_disk_sleuth_II]
 └─$ fls -F -r -o 2048 dds2-alpine.flag.img | grep down-at-the-bottom.txt
@@ -96,6 +102,7 @@ The file is stored in [inode](https://en.wikipedia.org/wiki/Inode) `18291`.
 ### Get the flag
 
 Now we can get the content of the file with `icat`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Disk_disk_sleuth_II]
 └─$ icat -o 2048 dds2-alpine.flag.img 18291                        
@@ -116,6 +123,7 @@ Now we can get the content of the file with `icat`
 Note that I have redacted some letters with the letter `X` here.
 
 Let's use some command-line kung-fu to get the flag in a more easily readable form with `grep` and `tr`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Disk_disk_sleuth_II]
 └─$ icat -o 2048 dds2-alpine.flag.img 18291 | grep '(' | tr -d '() \n'
@@ -128,6 +136,7 @@ Alternatively we can boot the disk in [QEMU](https://www.qemu.org/) as suggested
 Install with `sudo apt install qemu-system-x86` if needed.
 
 Then we boot with
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Disk_disk_sleuth_II]
 └─$ qemu-system-x86_64 -drive format=raw,file=dds2-alpine.flag.img
@@ -145,8 +154,13 @@ For additional information, please see the references below.
 
 ## References
 
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
 - [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
+- [gunzip - Linux manual page](https://linux.die.net/man/1/gunzip)
+- [inode - Wikipedia](https://en.wikipedia.org/wiki/Inode)
+- [Sleuthkit - Homepage](https://www.sleuthkit.org/sleuthkit/)
+- [Sleuthkit - Kali Tools](https://www.kali.org/tools/sleuthkit/)
+- [Sleuthkit - Tool Overview](https://wiki.sleuthkit.org/index.php?title=TSK_Tool_Overview)
 - [tr - Linux manual page](https://man7.org/linux/man-pages/man1/tr.1.html)
-- [The Sleuthkit - Tool Overview](http://wiki.sleuthkit.org/index.php?title=TSK_Tool_Overview)
 - [QEMU - Home page](https://www.qemu.org/)
-- [Wikipedia - inode](https://en.wikipedia.org/wiki/Inode)
+- [QEMU - Wikipedia](https://en.wikipedia.org/wiki/QEMU)

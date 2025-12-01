@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 50
+
+```text
+Level: Medium
 Tags: picoCTF 2021, Forensics
 Author: DYLAN
 
@@ -17,6 +18,7 @@ shark1.pcapng.
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/115](https://play.picoctf.org/practice/challenge/115)
 
 ## Solution
@@ -35,7 +37,8 @@ Here we see the stream content displayed in the same sequence as it appeared on 
 Down in the lower right corner of the window you can step through the streams by increasing or decreasing the stream number.
 
 At stream #5 we find this content
-```
+
+```text
 GET / HTTP/1.1
 Host: 18.222.37.134
 Connection: keep-alive
@@ -72,8 +75,9 @@ Copy the encoded flag to the `Input` pane and press `BAKE`.
 
 Alternatively, we can use a prepackaged `rot13` tool.  
 There are at least two sets of packages that contains prepacked `rot13` tools:
-* [hxtools](https://manpages.debian.org/testing/hxtools/hxtools.7.en.html)
-* [bsdgames](https://wiki.linuxquestions.org/wiki/BSD_games)
+
+- [hxtools](https://manpages.debian.org/testing/hxtools/hxtools.7.en.html)
+- [bsdgames](https://wiki.linuxquestions.org/wiki/BSD_games)
 
 Install them with either `sudo apt install hxtools` or `sudo apt install bsdgames`.
 
@@ -82,6 +86,7 @@ The tool from `hxtools` installs as `/usr/bin/rot13` and is a script that invoke
 The tool from `bsdgames` installs as `/usr/games/rot13` and calls the `caesar` tool (which is also included in the package) but with a rotation of 13.
 
 After one of these tools have been installed you can run
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Wireshark_doo_dooo_do_doo]
 └─$ echo "Gur synt vf cvpbPGS{c33xno00_1_f33_h_qrnqorrs}" | rot13  
@@ -91,6 +96,7 @@ The flag is picoCTF{<REDACTED>}
 ### Decode the flag with the tr command
 
 Finally, we can use the `tr` tool to do the decoding
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Wireshark_doo_dooo_do_doo]
 └─$ echo "Gur synt vf cvpbPGS{c33xno00_1_f33_h_qrnqorrs}" | tr 'A-Za-z' 'N-ZA-Mn-za-m'
@@ -101,5 +107,13 @@ For additional information, please see the references below.
 
 ## References
 
+- [CyberChef - GitHub](https://github.com/gchq/CyberChef)
+- [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
+- [echo - Linux manual page](https://man7.org/linux/man-pages/man1/echo.1.html)
+- [rot13 - Linux manual page](https://manpages.debian.org/bookworm/bsdgames/rot13.6.en.html)
+- [ROT13 - Wikipedia](https://en.wikipedia.org/wiki/ROT13)
+- [tr - Linux manual page](https://man7.org/linux/man-pages/man1/tr.1.html)
 - [Wireshark display filter syntax and reference](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
 - [Wireshark - Following Protocol Streams](https://www.wireshark.org/docs/wsug_html_chunked/ChAdvFollowStreamSection.html)
+- [Wireshark - Homepage](https://www.wireshark.org/)
+- [Wireshark - Wikipedia](https://en.wikipedia.org/wiki/Wireshark)

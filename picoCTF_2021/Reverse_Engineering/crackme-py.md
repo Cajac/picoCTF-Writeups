@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 30
+
+```text
+Level: Medium
 Tags: picoCTF 2021, Reverse Engineering
 Author: SYREAL
   
@@ -17,6 +18,7 @@ crackme.py
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/175](https://play.picoctf.org/practice/challenge/175)
 
 ## Solutions
@@ -24,6 +26,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/175](https://play.p
 ### Analyze the Python script
 
 Let's start by looking at the `decode_secret` function of the script
+
 ```python
 def decode_secret(secret):
     """ROT47 decode
@@ -51,6 +54,7 @@ This is actually the entire code to decode the flag. We can just reuse most of t
 ### Write a decoder script
 
 Let's copy the original script, remove the `choose_greatest` function, remove some comments, add a shebang and add a call to the `decode_secret` function
+
 ```python
 #!/usr/bin/python
 
@@ -76,6 +80,7 @@ decode_secret(bezos_cc_secret)
 ### Get the flag
 
 Then, make sure the script is executable and run it to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/crackme-py]
 └─$ chmod +x get_flag.py 
@@ -87,4 +92,7 @@ picoCTF{<REDACTED>}
 
 ## References
 
-- [Wikipedia — ROT13](https://en.wikipedia.org/wiki/ROT13)
+- [chmod - Linux manual page](https://man7.org/linux/man-pages/man1/chmod.1.html)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [ROT13 - Wikipedia](https://en.wikipedia.org/wiki/ROT13)
+- [Shebang (Unix) - Wikipedia](https://en.wikipedia.org/wiki/Shebang_(Unix))

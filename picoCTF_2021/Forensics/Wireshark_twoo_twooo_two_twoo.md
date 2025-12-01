@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2021, Forensics
 Author: DYLAN
 
@@ -18,6 +19,7 @@ Hints:
 1. Did you really find _the_ flag?
 2. Look for traffic that seems suspicious.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/110](https://play.picoctf.org/practice/challenge/110)
 
 ## Solution
@@ -25,6 +27,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/110](https://play.p
 ### Get an overview of the traffic
 
 We start by getting an overview of the traffic with `Protocol Hierarchy Statistics` using the commandline version of Wireshark - [tshark](https://www.wireshark.org/docs/man-pages/tshark.html)
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Wireshark_twoo_twooo_two_twoo]
 └─$ tshark -q -z io,phs -r shark2.pcapng 
@@ -57,6 +60,7 @@ eth                                      frames:4831 bytes:3355920
 Looking for something suspicious as suggested in the hint I first checked the `gquic` traffic but didn't see anything that stood out.
 
 Next, I checked the DNS traffic where I found something that looked like Base64-encoded data at the beginning of the DNS-queries
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Wireshark_twoo_twooo_two_twoo]
 └─$ tshark -r shark2.pcapng -Y dns | head
@@ -75,6 +79,7 @@ Next, I checked the DNS traffic where I found something that looked like Base64-
 ### Extracting the data
 
 Extracting only the query name field for the traffic to `18.217.1.57` I got
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Wireshark_twoo_twooo_two_twoo]
 └─$ tshark -r shark2.pcapng -Y "dns && ip.dst==18.217.1.57" -T fields -e dns.qry.name                        
@@ -102,6 +107,7 @@ fQ==.reddshrimpandherring.com.windomain.local
 ```
 
 Let's extracted only the first part of the queries
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Wireshark_twoo_twooo_two_twoo]
 └─$ tshark -r shark2.pcapng -Y "dns && ip.dst==18.217.1.57" -T fields -e dns.qry.name | cut -d '.' -f1 | uniq
@@ -116,6 +122,7 @@ fQ==
 ### Get the flag
 
 Finally, we combine the parts and base64-decode the result to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Wireshark_twoo_twooo_two_twoo]
 └─$ tshark -r shark2.pcapng -Y "dns && ip.dst==18.217.1.57" -T fields -e dns.qry.name | cut -d '.' -f1 | uniq | tr -d '\n' | base64 -d
@@ -126,5 +133,12 @@ For additional information, please see the references below.
 
 ## References
 
-- [tshark](https://www.wireshark.org/docs/man-pages/tshark.html)
-- [Wikipedia - Base64](https://en.wikipedia.org/wiki/Base64)
+- [Base64 - Wikipedia](https://en.wikipedia.org/wiki/Base64)
+- [base64 - Linux manual page](https://man7.org/linux/man-pages/man1/base64.1.html)
+- [cut - Linux manual page](https://man7.org/linux/man-pages/man1/cut.1.html)
+- [Domain Name System - Wikipedia](https://en.wikipedia.org/wiki/Domain_Name_System)
+- [tr - Linux manual page](https://man7.org/linux/man-pages/man1/tr.1.html)
+- [uniq - Linux manual page](https://man7.org/linux/man-pages/man1/uniq.1.html)
+- [Wireshark - Homepage](https://www.wireshark.org/)
+- [Wireshark - tshark](https://www.wireshark.org/docs/man-pages/tshark.html)
+- [Wireshark - Wikipedia](https://en.wikipedia.org/wiki/Wireshark)
