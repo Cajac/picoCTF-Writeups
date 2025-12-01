@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 20
+
+```text
+Level: Easy
 Tags: picoCTF 2021, General Skills
 Author: SYREAL
 
@@ -17,6 +18,7 @@ long rambling directory structures and filenames: Addadshashanammu.zip
 Hints:
 1. After `unzip`ing, this problem can be solved with 11 button-presses...(mostly Tab)...
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/176](https://play.picoctf.org/practice/challenge/176)
 
 ## Solution
@@ -26,6 +28,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/176](https://play.p
 Based on the challenge name this is the likely intended solution. The challenge is mainly an exercise in how to use [tab completion](https://en.wikipedia.org/wiki/Command-line_completion).
 
 First we need to unpack the file with `unzip`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Tab_Tab_Attack]
 └─$ unzip Addadshashanammu.zip 
@@ -41,6 +44,7 @@ Archive:  Addadshashanammu.zip
 ```
 
 Then we need to change directory with `cd` to the find the file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Tab_Tab_Attack]
 └─$ cd Addadshashanammu/Almurbalarammi/Ashalmimilkala/Assurnabitashpi/Maelkashishi/Onnissiralis/Ularradallaku 
@@ -51,6 +55,7 @@ fang-of-haynekhtnamet
 ```
 
 Let's check what kind of file it is with `file`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/Assurnabitashpi/Maelkashishi/Onnissiralis/Ularradallaku]
 └─$ file fang-of-haynekhtnamet 
@@ -60,6 +65,7 @@ fang-of-haynekhtnamet: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), 
 Ah, a 64-bit ELF binary.
 
 Why not run it?
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/Assurnabitashpi/Maelkashishi/Onnissiralis/Ularradallaku]
 └─$ ./fang-of-haynekhtnamet                                                                                  
@@ -70,7 +76,8 @@ And there is the flag!
 
 ### The smarter solution
 
-A smarter solution is to unpack the zip-file without recreating the directory structure (-j parameter)
+A smarter solution is to unpack the zip-file without recreating the directory structure (`-j` parameter)
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Tab_Tab_Attack]
 └─$ unzip -j Addadshashanammu.zip 
@@ -83,6 +90,7 @@ fang-of-haynekhtnamet: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), 
 ```
 
 Then we run the program to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Tab_Tab_Attack]
 └─$ ./fang-of-haynekhtnamet 
@@ -94,7 +102,7 @@ For additional information, please see the references below.
 ## References
 
 - [cd - Linux manual page](https://man7.org/linux/man-pages/man1/cd.1p.html)
+- [Command-line completion - Wikipedia](https://en.wikipedia.org/wiki/Command-line_completion)
 - [ls - Linux manual page](https://man7.org/linux/man-pages/man1/ls.1.html)
 - [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
 - [unzip - Linux manual page](https://linux.die.net/man/1/unzip)
-- [Wikipedia - Command-line completion](https://en.wikipedia.org/wiki/Command-line_completion)

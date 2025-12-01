@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 20
+
+```text
+Level: Medium
 Tags: picoCTF 2021, Cryptography
 Author: SARA
 
@@ -17,12 +18,14 @@ Can you decrypt this? values
 Hints:
 1. Bits are expensive, I used only a little bit over 100 to save money
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/162](https://play.picoctf.org/practice/challenge/162)
 
 ## Solution
 
 Let's start by looking at what we were given in the `values` file
-```
+
+```text
 Decrypt my super sick RSA:
 c: 240986837130071017759137533082982207147971245672412893755780400885108149004760496
 n: 831416828080417866340504968188990032810316193533653516022175784399720141076262857
@@ -39,6 +42,7 @@ Luckily smarter people than me have done that for us in [FactorDB](http://factor
 And yes, the `n` value can be [found there](http://factordb.com/index.php?id=1100000002524292560).
 
 If we want to script this we can use the [factordb-python CLI](https://pypi.org/project/factordb-pycli/)
+
 ```python
 #!/usr/bin/python
 
@@ -54,6 +58,7 @@ print(f"p = {p} and q = {q}")
 ```
 
 Let's make sure its working before continuing
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Cryptography/Mind_your_Ps_and_Qs]
 └─$ ~/python_venvs/gmpy2/bin/python factorize.py 
@@ -65,6 +70,7 @@ We are good to go!
 ### Decrypt the flag
 
 Next, we decrypt the message with some help of [gmpy2](https://pypi.org/project/gmpy2/)
+
 ```python
 #!/usr/bin/python
 
@@ -93,6 +99,7 @@ print(bytes.fromhex(format(flag, 'x')).decode())
 ```
 
 Finally, we run this script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Cryptography/Mind_your_Ps_and_Qs]
 └─$ ~/python_venvs/gmpy2/bin/python decrypt.py  
@@ -103,5 +110,11 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - RSA (cryptosystem)](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
+- [FactorDB - Homepage](https://factordb.com/)
+- [factordb-python - GitHub](https://github.com/ryosan-470/factordb-python)
+- [factordb-pycli - PyPI](https://pypi.org/project/factordb-pycli/)
+- [gmpy2 - GitHub](https://github.com/gmpy2/gmpy2)
+- [gmpy2 - PyPI](https://pypi.org/project/gmpy2/)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [RSA (cryptosystem) - Wikipedia](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
 - [The RSA Cryptosystem - Concepts](https://cryptobook.nakov.com/asymmetric-key-ciphers/the-rsa-cryptosystem-concepts)

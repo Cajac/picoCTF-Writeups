@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 30
+
+```text
+Level: Easy
 Tags: picoCTF 2021, General Skills
 Author: SYREAL
 
@@ -20,6 +21,7 @@ Login via `ssh` as `ctf-player` with the password, `abcba9f7`
 Hints:
 1. Finding a cheatsheet for bash would be really helpful!
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/189](https://play.picoctf.org/practice/challenge/189)
 
 ## Solution
@@ -29,6 +31,7 @@ This challenge is a gentle exercise in navigating around the file system on bash
 ### Connect to the server
 
 Let's connect to the server with SSH
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Magikarp_Ground_Mission]
 └─$ ssh ctf-player@venus.picoctf.net -p 52792
@@ -57,6 +60,7 @@ applicable law.
 ```
 
 And check for files
+
 ```bash
 ctf-player@pico-chall$ ls -la
 total 16
@@ -70,12 +74,14 @@ Ah, the first part of the flag.
 
 ### Getting the first part of the flag
 
-Let's accumulate all the flag parts in a new file `/tmp/full_flag.txt` 
+Let's accumulate all the flag parts in a new file `/tmp/full_flag.txt`
+
 ```bash
 ctf-player@pico-chall$ cat 1of3.flag.txt > /tmp/full_flag.txt
 ```
 
 Then we follow the instructions for the middle part of the flag
+
 ```bash
 ctf-player@pico-chall$ cat instructions-to-2of3.txt 
 Next, go to the root of all things, more succinctly `/`
@@ -113,11 +119,13 @@ drwxr-xr-x   1 root root 4096 Feb 22  2021 var
 ### Getting the middle part of the flag
 
 Lets append the middle part to our `full_flag.txt` file
+
 ```bash
 ctf-player@pico-chall$ cat 2of3.flag.txt >> /tmp/full_flag.txt
 ```
 
 Then we follow the instructions for the middle part of the flag
+
 ```bash
 ctf-player@pico-chall$ cat instructions-to-3of3.txt 
 Lastly, ctf-player, go home... more succinctly `~`
@@ -138,6 +146,7 @@ drwxr-xr-x 1 ctf-player ctf-player 4096 Mar 16  2021 drop-in
 ### Getting the last part of the flag
 
 Let's append the last part of the flag and then view the full flag
+
 ```bash
 ctf-player@pico-chall$ cat 3of3.flag.txt >> /tmp/full_flag.txt
 ctf-player@pico-chall$ cat /tmp/full_flag.txt 
@@ -149,6 +158,7 @@ picoCTF{xxsh_
 Ah, how annoying. There were newlines in the flag files.
 
 Lets remove them with `tr`
+
 ```bash
 ctf-player@pico-chall$ cat /tmp/full_flag.txt | tr -d '\n'
 picoCTF{xxsh_0ut_<REDACTED>}ctf-player@pico-chall$ 
@@ -161,5 +171,6 @@ For additional information, please see the references below.
 - [cat - Linux manual page](https://man7.org/linux/man-pages/man1/cat.1.html)
 - [cd - Linux manual page](https://man7.org/linux/man-pages/man1/cd.1p.html)
 - [ls - Linux manual page](https://man7.org/linux/man-pages/man1/ls.1.html)
+- [Secure Shell - Wikipedia](https://en.wikipedia.org/wiki/Secure_Shell)
 - [ssh - Linux manual page](https://man7.org/linux/man-pages/man1/ssh.1.html)
 - [tr - Linux manual page](https://man7.org/linux/man-pages/man1/tr.1.html)

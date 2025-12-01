@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 90
+
+```text
+Level: Medium
 Tags: picoCTF 2021, Cryptography
 Author: SARA
 
@@ -19,13 +20,15 @@ Connect with nc mercury.picoctf.net 30048.
 Hints:
 1. What can you do with a different pair of ciphertext and plaintext? What if it is not so different after all...
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/154](https://play.picoctf.org/practice/challenge/154)
 
 ## Solution
 
 ### Analyse the setup
 
-Let's connect to the site and see what happens
+Let's connect to the site with netcat and see what happens
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Cryptography/No_Padding_No_Problem]
 └─$ nc mercury.picoctf.net 30048
@@ -40,9 +43,10 @@ Give me ciphertext to decrypt: ^C
 ```
 
 We get:
- * the modulus number `n`
- * the public key exponent `e` and 
- * the cipher text `ciphertext`.
+
+- the modulus number `n`
+- the public key exponent `e` and
+- the cipher text `ciphertext`.
 
 Remember that unpadded RSA is [Homomorphic](https://en.wikipedia.org/wiki/Homomorphic_encryption). This means that for two messages `m1` and `m2`:  
 
@@ -57,6 +61,7 @@ We already have `c` and can calculate `encrypt(2)`. If we ask for `c * encrypt(2
 ### Solve with pwntools
 
 Let's write a script with the help of [pwntools](https://docs.pwntools.com/en/stable/index.html)
+
 ```python
 #!/usr/bin/python
 
@@ -95,6 +100,7 @@ io.close()
 ```
 
 Then we run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Cryptography/No_Padding_No_Problem]
 └─$ ~/python_venvs/pwntools/bin/python get_flag.py
@@ -105,6 +111,11 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Homomorphic encryption](https://en.wikipedia.org/wiki/Homomorphic_encryption)
-- [Wikipedia - RSA (cryptosystem)](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
+- [Homomorphic encryption - Wikipedia](https://en.wikipedia.org/wiki/Homomorphic_encryption)
+- [nc - Linux manual page](https://linux.die.net/man/1/nc)
+- [netcat - Wikipedia](https://en.wikipedia.org/wiki/Netcat)
+- [pwntools - Documentation](https://docs.pwntools.com/en/stable/index.html)
+- [pwntools - GitHub](https://github.com/Gallopsled/pwntools)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [RSA (cryptosystem) - Wikipedia](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
 - [The RSA Cryptosystem - Concepts](https://cryptobook.nakov.com/asymmetric-key-ciphers/the-rsa-cryptosystem-concepts)

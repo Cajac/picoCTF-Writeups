@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 70
+
+```text
+Level: Medium
 Tags: picoCTF 2021, Cryptography
 Author: SARA
 
@@ -23,6 +24,7 @@ Hints:
 4. You shouldn't have to make too many guesses
 5. pico is in the flag, but not at the beginning
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/188](https://play.picoctf.org/practice/challenge/188)
 
 ## Solution
@@ -30,7 +32,8 @@ Challenge link: [https://play.picoctf.org/practice/challenge/188](https://play.p
 ### Analyse the setup
 
 Let's start by analysing what we have
-```
+
+```text
 N: 1615765684321463054078226051959887884233678317734892901740763321135213636796075462401950274602405095138589898087428337758445013281488966866073355710771864671726991918706558071231266976427184673800225254531695928541272546385146495736420261815693810544589811104967829354461491178200126099661909654163542661541699404839644035177445092988952614918424317082380174383819025585076206641993479326576180793544321194357018916215113009742654408597083724508169216182008449693917227497813165444372201517541788989925461711067825681947947471001390843774746442699739386923285801022685451221261010798837646928092277556198145662924691803032880040492762442561497760689933601781401617086600593482127465655390841361154025890679757514060456103104199255917164678161972735858939464790960448345988941481499050248673128656508055285037090026439683847266536283160142071643015434813473463469733112182328678706702116054036618277506997666534567846763938692335069955755244438415377933440029498378955355877502743215305768814857864433151287
 e: 3
 
@@ -44,7 +47,8 @@ This means that `M = iroot(i*n+c, 3)` for some `i`. We just need to find the cor
 
 We will use the `iroot` function from [gmpy2 module](https://pypi.org/project/gmpy2/).  
 From the [manpage](https://manpages.ubuntu.com/manpages/trusty/man3/gmpy2.3.html)
-```
+
+```text
        iroot(...)
               iroot(x,n) returns a 2-element tuple (y, b) such that y is the integer n-th root of
               x and b is True if the root is exact. x must be >= 0 and n must be > 0.
@@ -53,6 +57,7 @@ From the [manpage](https://manpages.ubuntu.com/manpages/trusty/man3/gmpy2.3.html
 ### Write a solve script
 
 This Python script will search for the correct value of `i`
+
 ```python
 #!/usr/bin/python
 
@@ -75,6 +80,7 @@ for i in range(5000):
 ### Get the flag
 
 The we run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Cryptography/Mini_RSA]
 └─$ ~/python_venvs/gmpy2/bin/python solve.py
@@ -88,5 +94,8 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - RSA (cryptosystem)](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
+- [gmpy2 - GitHub](https://github.com/gmpy2/gmpy2)
+- [gmpy2 - PyPI](https://pypi.org/project/gmpy2/)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [RSA (cryptosystem) - Wikipedia](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
 - [The RSA Cryptosystem - Concepts](https://cryptobook.nakov.com/asymmetric-key-ciphers/the-rsa-cryptosystem-concepts)

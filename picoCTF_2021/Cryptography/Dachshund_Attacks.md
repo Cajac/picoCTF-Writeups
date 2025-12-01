@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 80
+
+```text
+Level: Medium
 Tags: picoCTF 2021, Cryptography
 Author: SARA
 
@@ -18,6 +19,7 @@ Connect with nc mercury.picoctf.net 31133.
 Hints:
 1. What do you think about my pet? dachshund.jpg
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/159](https://play.picoctf.org/practice/challenge/159)
 
 ## Solution
@@ -26,7 +28,8 @@ Challenge link: [https://play.picoctf.org/practice/challenge/159](https://play.p
 
 If you google for `rsa attack small d` you will get [Wiener's attack](https://en.wikipedia.org/wiki/Wiener%27s_attack) as one of the top results. So let's aim for that.
 
-Let's connect to the site
+Let's connect to the site with netcat
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Cryptography/Dachshund_Attacks]
 └─$ nc mercury.picoctf.net 31133
@@ -37,13 +40,15 @@ c: 49549647784920592050303228298573648607199952049322535252620035695093329607635
 ```
 
 After a few seconds we get:
- * the public key exponent `e`
- * the modulus number `n` and 
- * the cipher text `c`.
+
+- the public key exponent `e`
+- the modulus number `n` and
+- the cipher text `c`.
 
 ### Solve with RsaCtfTool
 
 I used [RsaCtfTool](https://github.com/RsaCtfTool/RsaCtfTool) to solve this, but since I hadn't used it before I checked the arguments
+
 ```bash
 ┌──(kali㉿kali)-[~/Tools/RsaCtfTool]
 └─$ source bin/activate
@@ -101,6 +106,7 @@ options:
 ```
 
 Then we run the wiener attack with the specified data we have from above
+
 ```bash
 ┌──(RsaCtfTool)─(kali㉿kali)-[~/Tools/RsaCtfTool]
 └─$ ./RsaCtfTool.py --attack wiener -e 65862150127320005037038509012840129209960004410045193759750417377985394915130368181368296052667342899940009485124918084970700806881035884433562195922295472534531712858333290106078343277760803756755670572802680742457324607562251776322670688513709708316127255727360794138423450486733791623208864139985319062709 -n 111635073775282992560436932279422927892718368430046642111054384451437430092958074900936053148330367695269807776075371257916124798239989868928144454138677744106085230203964004299426988568195532162795415192136353551001934000267406108446664822033910616982418163274796786325762783581040178897937780881123797331079 --uncipher 49549647784920592050303228298573648607199952049322535252620035695093329607635490577905002304862913428592143243603580186617698394894233841091360060436848920174536652319109898564887300408227123623221892942454805819870355745462215546218568019618578258052103881221284377372054554879956764482279714539463062518411
@@ -123,13 +129,17 @@ utf-16 : 瀀捩䍯䙔灻潲楶杮睟敩敮彲ㄱ㘴㠰紴
 STR : b'\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00picoCTF{proving_<REDACTED>}'
 ```
 
-And there we have the flag.
+And there we have the flag in UTF-8 format.
 
 For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - RSA (cryptosystem)](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
-- [The RSA Cryptosystem - Concepts](https://cryptobook.nakov.com/asymmetric-key-ciphers/the-rsa-cryptosystem-concepts)
-- [Wikipedia - Wiener's attack](https://en.wikipedia.org/wiki/Wiener%27s_attack)
 - [Cryptanalysis of Short RSA Secret Exponents (PDF)](https://monge.univ-mlv.fr/~jyt/Crypto/4/10.1.1.92.5261.pdf)
+- [nc - Linux manual page](https://linux.die.net/man/1/nc)
+- [netcat - Wikipedia](https://en.wikipedia.org/wiki/Netcat)
+- [RSA (cryptosystem) - Wikipedia](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
+- [RsaCtfTool - GitHub](https://github.com/RsaCtfTool/RsaCtfTool)
+- [The RSA Cryptosystem - Concepts](https://cryptobook.nakov.com/asymmetric-key-ciphers/the-rsa-cryptosystem-concepts)
+- [UTF-8 - Wikipedia](https://en.wikipedia.org/wiki/UTF-8)
+- [Wiener's attack - Wikipedia](https://en.wikipedia.org/wiki/Wiener%27s_attack)

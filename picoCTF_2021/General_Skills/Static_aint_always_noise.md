@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 20
+
+```text
+Level: Easy
 Tags: picoCTF 2021, General Skills
 Author: SYREAL
   
@@ -17,6 +18,7 @@ This BASH script might help!
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/163](https://play.picoctf.org/practice/challenge/163)
 
 ## Solution
@@ -26,6 +28,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/163](https://play.p
 Let's start by looking at what we have got.
 
 A bash script called `ltdis.sh` that looks like this (with some empty lines removed)
+
 ```bash
 #!/bin/bash
 
@@ -42,21 +45,22 @@ objdump -Dj .text $1 > $1.ltdis.x86_64.txt
 
 if [ -s "$1.ltdis.x86_64.txt" ]
 then
-	echo "Disassembly successful! Available at: $1.ltdis.x86_64.txt"
+   echo "Disassembly successful! Available at: $1.ltdis.x86_64.txt"
 
-	echo "Ripping strings from binary with file offsets..."
-	strings -a -t x $1 > $1.ltdis.strings.txt
-	echo "Any strings found in $1 have been written to $1.ltdis.strings.txt with file offset"
+   echo "Ripping strings from binary with file offsets..."
+   strings -a -t x $1 > $1.ltdis.strings.txt
+   echo "Any strings found in $1 have been written to $1.ltdis.strings.txt with file offset"
 else
-	echo "Disassembly failed!"
-	echo "Usage: ltdis.sh <program-file>"
-	echo "Bye!"
+   echo "Disassembly failed!"
+   echo "Usage: ltdis.sh <program-file>"
+   echo "Bye!"
 fi
 ```
 
 The script's comments give a good picture of what it does, essentially runs `objdump` and `strings` on the first supplied file (`$1`).
 
 Let's check out the binary also
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Static_ain't_always_noise]
 └─$ file static                                   
@@ -64,6 +68,7 @@ static: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically lin
 ```
 
 OK, a 64-bit ELF binary. Why not run it and see what happens?
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Static_ain't_always_noise]
 └─$ ./static                                    
@@ -73,6 +78,7 @@ Oh hai! Wait what? A flag? Yes, it's around here somewhere!
 ### Run the script and analyse the results
 
 Let's follow the instructions and run the script on the binary
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Static_ain't_always_noise]
 └─$ ./ltdis.sh static 
@@ -83,6 +89,7 @@ Any strings found in static have been written to static.ltdis.strings.txt with f
 ```
 
 Let's briefly look at the dissasembly
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Static_ain't_always_noise]
 └─$ head -n20 static.ltdis.x86_64.txt
@@ -111,6 +118,7 @@ Disassembly of section .text:
 Well, assembly code. Let's wait with diving into the details there...
 
 Let's check the strings instead
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Static_ain't_always_noise]
 └─$ head -n20 static.ltdis.strings.txt 
@@ -139,6 +147,7 @@ Let's check the strings instead
 And there, at offset 1020, we have the flag.
 
 If we didn't want to manually go through the file we could `grep` for the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Static_ain't_always_noise]
 └─$ grep picoCTF static.ltdis.strings.txt 
@@ -150,9 +159,11 @@ For additional information, please see the references below.
 ## References
 
 - [Adding arguments and options to your Bash scripts](https://www.redhat.com/sysadmin/arguments-options-bash-scripts)
+- [Disassembler - Wikipedia](https://en.wikipedia.org/wiki/Disassembler)
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
 - [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
 - [head - Linux manual page](https://man7.org/linux/man-pages/man1/head.1.html)
 - [objdump - Linux manual page](https://man7.org/linux/man-pages/man1/objdump.1.html)
+- [Shell script - Wikipedia](https://en.wikipedia.org/wiki/Shell_script)
 - [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)
-- [Wikipedia - Disassembler](https://en.wikipedia.org/wiki/Disassembler)
-- [Wikipedia - strings (Unix)](https://en.wikipedia.org/wiki/Strings_(Unix))
+- [strings (Unix) - Wikipedia](https://en.wikipedia.org/wiki/Strings_(Unix))

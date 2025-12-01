@@ -2,26 +2,38 @@
 
 ## Binary Exploitation Challenges
 
-2 Challenges:
-- [Here's a LIBC](Binary_Exploitation/Heres_a_LIBC.md)
+### Medium Binary Exploitation Challenges
+
 - [Stonks](Binary_Exploitation/Stonks.md)
+
+### Hard Binary Exploitation Challenges
+
+- [Here's a LIBC](Binary_Exploitation/Heres_a_LIBC.md)
 
 ## Cryptography Challenges
 
-9 Challenges:
+### Easy Cryptography Challenges
+
+- [Mod 26](Cryptography/Mod_26.md)
+
+### Medium Cryptography Challenges
+
 - [Dachshund Attacks](Cryptography/Dachshund_Attacks.md)
 - [Easy Peasy](Cryptography/Easy_Peasy.md)
 - [Mind your Ps and Qs](Cryptography/Mind_your_Ps_and_Qs.md)
 - [Mini RSA](Cryptography/Mini_RSA.md)
-- [Mod 26](Cryptography/Mod_26.md)
 - [New Caesar](Cryptography/New_Caesar.md)
 - [No Padding, No Problem](Cryptography/No_Padding_No_Problem.md)
 - [Pixelated](Cryptography/Pixelated.md)
+
+### Hard Cryptography Challenges
+
 - [Play Nice](Cryptography/Play_Nice.md)
 
 ## Forensics Challenges
 
-11 Challenges: 
+11 Challenges:
+
 - [Disk, disk, sleuth!](Forensics/Disk_disk_sleuth.md)
 - [Disk, disk, sleuth! II](Forensics/Disk_disk_sleuth_II.md)
 - [information](Forensics/information.md)
@@ -36,7 +48,8 @@
 
 ## General Skills Challenges
 
-7 Challenges: 
+### Easy General Skills Challenges
+
 - [Magikarp Ground Mission](General_Skills/Magikarp_Ground_Mission.md)
 - [Nice netcat...](General_Skills/Nice_netcat.md)
 - [Obedient Cat](General_Skills/Obedient_Cat.md)
@@ -48,6 +61,7 @@
 ## Reverse Engineering Challenges
 
 10 Challenges:
+
 - [ARMssembly 0](Reverse_Engineering/ARMssembly_0.md)
 - [ARMssembly 1](Reverse_Engineering/ARMssembly_1.md)
 - [ARMssembly 2](Reverse_Engineering/ARMssembly_2.md)
@@ -62,6 +76,7 @@
 ## Web Exploitation Challenges
 
 9 Challenges:
+
 - [Cookies](Web_Exploitation/Cookies.md)
 - [GET aHEAD](Web_Exploitation/GET_aHEAD.md)
 - [It is my Birthday](Web_Exploitation/It_is_my_Birthday.md)

@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 10
+
+```text
+Level: Easy
 Tags: picoCTF 2021, General Skills
 Author: SYREAL
 
@@ -24,11 +25,13 @@ Hints:
 4. -h and --help are the most common arguments to give to programs to get more information from them!
 5. Not every program implements help features like -h and --help.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/170](https://play.picoctf.org/practice/challenge/170)
 
 ## Solution
 
 Let's make sure the program is executable and run it
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Wave_a_flag]
 └─$ chmod +x warm       
@@ -41,6 +44,7 @@ Hello user! Pass me a -h to learn what I can do!
 Ah, as both the description and the hints suggests we should ask for help with the `-h` parameter.
 
 Ask for help
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Wave_a_flag]
 └─$ ./warm -h

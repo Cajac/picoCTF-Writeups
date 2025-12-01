@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 5
+
+```text
+Level: Easy
 Tags: picoCTF 2021, General Skills
 Author: SYREAL
   
@@ -21,6 +22,7 @@ Hints:
    $ wget https://mercury.picoctf.net/static/fb851c1858cc762bd4eed569013d7f00/flag
 3. $ man cat
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/147](https://play.picoctf.org/practice/challenge/147)
 
 ## Solution

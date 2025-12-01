@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 60
+
+```text
+Level: Medium
 Tags: picoCTF 2021, Cryptography
 Author: MADSTACKS
 
@@ -21,6 +22,7 @@ Hints:
 1. How does the cipher work if the alphabet isn't 26 letters?
 2. Even though the letters are split up, the same paradigms still apply
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/158](https://play.picoctf.org/practice/challenge/158)
 
 ## Solution
@@ -28,6 +30,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/158](https://play.p
 ### Analyze the cipher
 
 Let's start by looking at the python source
+
 ```python
 import string
 
@@ -35,17 +38,17 @@ LOWERCASE_OFFSET = ord("a")
 ALPHABET = string.ascii_lowercase[:16]
 
 def b16_encode(plain):
-	enc = ""
-	for c in plain:
-		binary = "{0:08b}".format(ord(c))
-		enc += ALPHABET[int(binary[:4], 2)]
-		enc += ALPHABET[int(binary[4:], 2)]
-	return enc
+    enc = ""
+    for c in plain:
+        binary = "{0:08b}".format(ord(c))
+        enc += ALPHABET[int(binary[:4], 2)]
+        enc += ALPHABET[int(binary[4:], 2)]
+    return enc
 
 def shift(c, k):
-	t1 = ord(c) - LOWERCASE_OFFSET
-	t2 = ord(k) - LOWERCASE_OFFSET
-	return ALPHABET[(t1 + t2) % len(ALPHABET)]
+    t1 = ord(c) - LOWERCASE_OFFSET
+    t2 = ord(k) - LOWERCASE_OFFSET
+    return ALPHABET[(t1 + t2) % len(ALPHABET)]
 
 flag = "redacted"
 key = "redacted"
@@ -55,13 +58,14 @@ assert len(key) == 1
 b16 = b16_encode(flag)
 enc = ""
 for i, c in enumerate(b16):
-	enc += shift(c, key[i % len(key)])
+    enc += shift(c, key[i % len(key)])
 print(enc)
 ```
 
 We have two functions:
- * `b16_encode` which encodes the text as base16, that is encodes each nibble as a character
- * `shift` which applies a caesar variant shift on each character
+
+- `b16_encode` which encodes the text as base16, that is encodes each nibble as a character
+- `shift` which applies a caesar variant shift on each character
 
 We also see that the length of the key is only one byte, so we can brute force it for all possible keys.
 
@@ -70,6 +74,7 @@ We also see that the length of the key is only one byte, so we can brute force i
 We need a `b16_decode` function but we really don't need to reverse the shift function since we will try all possible keys.
 
 The total script looks like this
+
 ```python
 #!/usr/bin/python
 
@@ -87,9 +92,9 @@ def b16_decode(enc):
     return plain
 
 def shift(c, k):
-	t1 = ord(c) - LOWERCASE_OFFSET
-	t2 = ord(k) - LOWERCASE_OFFSET
-	return ALPHABET[(t1 + t2) % len(ALPHABET)]
+    t1 = ord(c) - LOWERCASE_OFFSET
+    t2 = ord(k) - LOWERCASE_OFFSET
+    return ALPHABET[(t1 + t2) % len(ALPHABET)]
 
 enc_flag = "kjlijdliljhdjdhfkfkhhjkkhhkihlhnhghekfhmhjhkhfhekfkkkjkghghjhlhghmhhhfkikfkfhm"
 
@@ -106,6 +111,7 @@ for key in ALPHABET:
 ### Get the flag
 
 Then we make sure the script is executable and run it
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Cryptography/New_Caesar]
 └─$ chmod +x bf_cipher.py     
@@ -133,11 +139,13 @@ Trying key: o
 Trying key: p
 ```
 
-We get three possible keys but only one makes sense.
+We get three possible keys but only one makes sense, the one with key `m`.
 
 For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
-- [Wikipedia - Modulo](https://en.wikipedia.org/wiki/Modulo)
+- [Caesar cipher - Wikipedia](https://en.wikipedia.org/wiki/Caesar_cipher)
+- [chmod - Linux manual page](https://man7.org/linux/man-pages/man1/chmod.1.html)
+- [Modulo - Wikipedia](https://en.wikipedia.org/wiki/Modulo)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
