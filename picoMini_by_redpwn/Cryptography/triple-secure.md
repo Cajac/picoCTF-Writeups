@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 150
+
+```text
+Level: Hard
 Tags: picoMini by redpwn, Cryptography
 Author: BOOLEAN
 
@@ -16,6 +17,7 @@ To get the flag, you must break RSA not once, but three times!
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/209](https://play.picoctf.org/practice/challenge/209)
 
 ## Solution
@@ -23,6 +25,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/209](https://play.p
 ### Analyze the given files
 
 We start by looking at the given files. First the python script
+
 ```python
 #!/usr/bin/env python3
 
@@ -61,7 +64,8 @@ This means we could derive `p`, `q` and `r` by calculating the [GCD](https://en.
 Alternatively, we could search for known factorizations of the modulus in databases such as [factordb](http://factordb.com/).
 
 The `public-key.txt` file looks like this
-```
+
+```text
 n1: 15192492059814175574941055248891268822162533520576381643453916855435310880285336743521199057138647926712835561752909538944229702432795423884081992987060760867003375755338557996965825324749221386675061886921763747311599846248565297387814717840084998677273427776535730840343260681623323972936404815862969684384733188827100528542007213405382537935243645704237369770300643318878176739181891072725262069278646319502747718264711249767568106460533935904219027313131270918072460753061248221785076571054217566164086518459844527639082962818865640864990672033657423448004651989761933295878220596871163544315057550871764431562609
 n2: 15896482259608901559307142941940447232781986632502572991096358742354276347180855512281737388865155342941898447990281534875563129451327818848218781669275420292448483501384399236235069545630630803245125324540747189305877026874280373084005881976783826855683894679886076284892158862128016644725623200756074647449586448311069649515124968073653962156220351541159266665209363921681260367806445996085898841723209546021525012849575330252109081102034217511126192041193752164593519033112893785698509908066978411804133407757110693612926897693360335062446358344787945536573595254027237186626524339635916646549827668224103778645691
 n3: 16866741024290909515057727275216398505732182398866918550484373905882517578053919415558082579015872872951000794941027637288054371559194213756955947899010737036612882434425333227722062177363502202508368233645194979635011153509966453453939567651558628538264913958577698775210185802686516291658717434986786180150155217870273053289491069438118831268852205061142773994943387097417127660301519478434586738321776681183207796708047183864564628638795241493797850819727510884955449295504241048877759144706319821139891894102191791380663609673212846473456961724455481378829090944739778647230176360232323776623751623188480059886131
@@ -72,11 +76,13 @@ c: 55275571305494866268683556383431645566366406459750705638787916848720845686609
 ### Factorize n1 through n3
 
 These modulus are in fact known at factordb:
-* [n1](http://factordb.com/index.php?id=1100000002577450020)
-* [n2](http://factordb.com/index.php?id=1100000002577637188)
-* [n3](http://factordb.com/index.php?id=1100000002577383707)
+
+- [n1](http://factordb.com/index.php?id=1100000002577450020)
+- [n2](http://factordb.com/index.php?id=1100000002577637188)
+- [n3](http://factordb.com/index.php?id=1100000002577383707)
 
 However, let's calculate their GCDs with the help of the [gmpy2](https://pypi.org/project/gmpy2/) Python module instead since it's pretty straight forward
+
 ```python
 #!/usr/bin/python
 
@@ -94,6 +100,7 @@ print(f"p = {p}\nq = {q}\nr = {r}")
 ```
 
 Then we run this script called `factorize.py`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/triple-secure]
 └─$ ~/python_venvs/gmpy2/bin/python ./factorize.py 
@@ -107,6 +114,7 @@ Now we can proceed to decrypt the flag.
 ### Decrypt and get the flag
 
 We can now write a `decrypt.py` script to decrypt and print the flag
+
 ```python
 #!/usr/bin/python
 
@@ -136,6 +144,7 @@ print(bytes.fromhex(format(third, 'x')).decode())
 ```
 
 Finally, time to run the script and get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/triple-secure]
 └─$ ~/python_venvs/gmpy2/bin/python ./decrypt.py  
@@ -144,9 +153,10 @@ picoCTF{<REDACTED>}
 
 For additional information, please see the references below.
 
-### Addendum 
+### Addendum
 
 We really don't need to do the factorization and decryption in two separate steps. Here is a `total.py` script that does everything in one go
+
 ```python
 #!/usr/bin/python
 
@@ -180,7 +190,11 @@ print(bytes.fromhex(format(third, 'x')).decode())
 
 ### References
 
-- [Wikipedia — RSA (cryptosystem)](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
-- [Wikipedia — Greatest common divisor](https://en.wikipedia.org/wiki/Greatest_common_divisor)
-- [gmpy2 module](https://pypi.org/project/gmpy2/)
 - [f-Strings: A New and Improved Way to Format Strings in Python](https://realpython.com/python-f-strings/)
+- [FactorDB - Homepage](https://factordb.com/)
+- [Factorization - Wikipedia](https://en.wikipedia.org/wiki/Factorization)
+- [gmpy2 - GitHub](https://github.com/gmpy2/gmpy2)
+- [gmpy2 - PyPI](https://pypi.org/project/gmpy2/)
+- [Greatest common divisor - Wikipedia](https://en.wikipedia.org/wiki/Greatest_common_divisor)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [RSA (cryptosystem) - Wikipedia](https://en.wikipedia.org/wiki/RSA_(cryptosystem))

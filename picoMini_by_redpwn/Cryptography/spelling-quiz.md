@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoMini by redpwn, Cryptography
 Author: BROWNIEINMOTION
 
@@ -18,11 +19,14 @@ Hints:
 (None)
 ```
 
+Challenge link: [https://play.picoctf.org/practice/challenge/210](https://play.picoctf.org/practice/challenge/210)
+
 ## Solution
 
 ### Analyze the given files
 
 Let's start by looking at the given files. First the python script
+
 ```python
 import random
 import os
@@ -52,6 +56,7 @@ The script encrypts all .txt files in the current directory and all its subdirec
 The files are encrypted with a simple substitution cipher.
 
 Then we check the first lines of the `study-guide.txt` file and how many words it contains
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/spelling-quiz]
 └─$ head study-guide.txt                                                        
@@ -72,6 +77,7 @@ wsmvajuv
 ```
 
 And last but not least we check the encrypted flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/spelling-quiz]
 └─$ cat flag.txt                                                                              
@@ -85,6 +91,7 @@ It looks like the first `picoCTF{` part and the trailing `}` is omitted and we n
 To break the substitution cipher I installed and used [Subbreaker](https://gitlab.com/guballa/SubstitutionBreaker).
 
 It was new tool for me so I needed to check its help
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/spelling-quiz]
 └─$ ~/python_venvs/subbreaker/bin/subbreaker -h        
@@ -125,6 +132,7 @@ I first tried the entire `study-guide.txt` file as input but it seemed to take q
 Then I tried only the first 50 lines of the file but the key became corrupt with at least one faulty substitution.
 
 However, the first 100 lines worked just fine
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/spelling-quiz]
 └─$ head -n 100 study-guide.txt | ~/python_venvs/subbreaker/bin/subbreaker break
@@ -151,6 +159,7 @@ So the substitution key is `pcubfwhvjknairmetszdxygolq`.
 ### Get the flag
 
 I used subbreaker to decode the flag but needed help with the parameters once again
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/spelling-quiz]
 └─$ ~/python_venvs/subbreaker/bin/subbreaker decode -h      
@@ -170,6 +179,7 @@ options:
 ```
 
 Finally, time to get the plain text (with its ending redacted)
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/spelling-quiz]
 └─$ ~/python_venvs/subbreaker/bin/subbreaker decode --key pcubfwhvjknairmetszdxygolq --ciphertext flag.txt
@@ -180,8 +190,12 @@ For additional information, please see the references below.
 
 ## References
 
+- [head - Linux manual page](https://man7.org/linux/man-pages/man1/head.1.html)
 - [os.path — Common pathname manipulations](https://docs.python.org/3/library/os.path.html)
 - [os.walk function](https://docs.python.org/3/library/os.html#os.walk)
-- [random — Generate pseudo-random numbers](https://docs.python.org/3/library/random.html)
-- [Stack Overflow - What does colon equal (:=) in Python mean?](https://stackoverflow.com/questions/26000198/what-does-colon-equal-in-python-mean)
-- [Wikipedia — Substitution cipher](https://en.wikipedia.org/wiki/Substitution_cipher)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [random module — Python](https://docs.python.org/3/library/random.html)
+- [SubstitutionBreaker](https://gitlab.com/guballa/SubstitutionBreaker)
+- [Substitution cipher - Wikipedia](https://en.wikipedia.org/wiki/Substitution_cipher)
+- [What does colon equal (:=) in Python mean? - Stack Overflow](https://stackoverflow.com/questions/26000198/what-does-colon-equal-in-python-mean)
+- [wc - Linux manual page](https://man7.org/linux/man-pages/man1/wc.1.html)

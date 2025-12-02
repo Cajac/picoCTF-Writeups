@@ -1,4 +1,5 @@
 # Forensics Challenges
 
-1 Challenge: 
+## Medium Forensics Challenges
+
 - [advanced-potion-making](advanced-potion-making.md)

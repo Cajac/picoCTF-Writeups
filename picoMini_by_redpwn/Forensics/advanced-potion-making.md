@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoMini by redpwn, Forensics
 Author: BIGC
 
@@ -17,6 +18,7 @@ Help him recover it!
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/205](https://play.picoctf.org/practice/challenge/205)
 
 ## Solution
@@ -24,6 +26,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/205](https://play.p
 ### Analyse the file
 
 Let's start by checking the given file with `file`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Forensics/advanced-potion-making]
 └─$ file advanced-potion-making 
@@ -31,6 +34,7 @@ advanced-potion-making: data
 ```
 
 Hhm, let's check it in hex form and see if we can recognise anything interesting
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Forensics/advanced-potion-making]
 └─$ xxd -l 100 advanced-potion-making 
@@ -65,6 +69,7 @@ Let's change the first bytes in the file with a hex editor such as [010 Editor](
 Nope, it is still corrupted.
 
 To get some help with analysing the file I used `pngcheck` (which I had to install on my Kali Linux)
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Forensics/advanced-potion-making]
 └─$ pngcheck -v advanced-potion-making.png
@@ -79,6 +84,7 @@ The `IHDR` seems to have an invalid (too large) length. According to the [PNG-sp
 
 Comparing with a known good PNG-file I saw that these 4 bytes were `00 00 00 0D`. So I changed these bytes as well.  
 The beginning of the file now looks like this
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Forensics/advanced-potion-making]
 └─$ xxd -l 32 advanced-potion-making.png 
@@ -90,7 +96,7 @@ And voila, the file is now viewable. But only a solid red "background" is shown.
 
 ### Get the flag
 
-Time to bring out the stego tools. I used [StegSolve](https://github.com/Giotino/stegsolve/releases) which is also available as an [online service](https://stegonline.georgeom.net/upload).
+Time to bring out the stego tools. I used [StegSolve](https://github.com/Giotino/stegsolve/releases) which is also available as an [online service](https://georgeom.net/StegOnline/upload).
 
 The flag can be found encoded in `Red plane 0`.
 
@@ -98,4 +104,13 @@ For additional information, please see the references below.
 
 ### References
 
+- [010 Editor - Homepage](https://www.sweetscape.com/010editor/)
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
+- [PNG - Wikipedia](https://en.wikipedia.org/wiki/PNG)
 - [PNG (Portable Network Graphics) Specification, Version 1.2](http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html)
+- [pngcheck - GitHub](https://github.com/pnggroup/pngcheck)
+- [pngcheck - Homepage](https://www.libpng.org/pub/png/apps/pngcheck.html)
+- [pngcheck - Linux manual page](https://manpages.ubuntu.com/manpages/focal/man1/pngcheck.1.html)
+- [stegsolve 1.4 - GitHub](https://github.com/Giotino/stegsolve)
+- [tail - Linux manual page](https://man7.org/linux/man-pages/man1/tail.1.html)
+- [xxd - Linux manual page](https://linux.die.net/man/1/xxd)

@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 150
+
+```text
+Level: Hard
 Tags: picoMini by redpwn, Reverse Engineering
 Author: ASPHYXIA
 
@@ -16,6 +17,7 @@ there's crypto in here but the challenge is not crypto... 🤔
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/222](https://play.picoctf.org/practice/challenge/222)
 
 ## Solution
@@ -23,15 +25,17 @@ Challenge link: [https://play.picoctf.org/practice/challenge/222](https://play.p
 ### Basic file analysis
 
 Let's start by checking the given file with `file`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Reverse_Engineering/not_crypto]
 └─$ file not-crypto 
 not-crypto: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=1f838db474ea41305b3181bc0acdc8231273189d, for GNU/Linux 4.4.0, stripped
 ```
 
-So it is a 64-bit ELF binary, it is a PIE (position-independent executable) and it's stripped. 
+So it is a 64-bit ELF binary, it is a PIE (position-independent executable) and it's stripped.
 
 Now let's run the file and see what happens
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Reverse_Engineering/not_crypto]
 └─$ ./not-crypto
@@ -44,6 +48,7 @@ ddd
 ```
 
 Not much action there at all. I tried different inputs and sometimes I got the message `Nope, come back later`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Reverse_Engineering/not_crypto]
 └─$ ./not-crypto       
@@ -56,6 +61,7 @@ Nope, come back later
 ```
 
 And why not check for other strings?
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Reverse_Engineering/not_crypto]
 └─$ strings -n 8 ./not-crypto
@@ -102,6 +108,7 @@ GCC: (GNU) 10.2.0
 The string `Yep, that's it!` looks very promising. Let's keep an eye out for that!
 
 I also tried to run `strace`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Reverse_Engineering/not_crypto]
 └─$ strace ./not-crypto
@@ -154,6 +161,7 @@ read(0, 3532523
 read(0, ^C0x5568ba8156b0, 1024)           = ? ERESTARTSYS (To be restarted if SA_RESTART is set)
 strace: Process 63993 detached
 ```
+
 No new information from that unfortunately.
 
 ### Decompile the file in Ghidra
@@ -161,6 +169,7 @@ No new information from that unfortunately.
 Then let's decompile the file in [Ghidra](https://ghidra-sre.org/) and study the code. Import the file in Ghidra and analyze it with the default settings. Double-click on each function to show the decompiled version of it.
 
 The most promising function is this one `FUN_00101070`
+
 ```C
 int FUN_00101070(void)
 
@@ -560,6 +569,7 @@ LAB_00101385:
 ```
 
 A bit from the beginning there is a call to `fread`
+
 ```c
 <---snip--->
   _local_a8 = _DAT_001021b0;
@@ -571,6 +581,7 @@ A bit from the beginning there is a call to `fread`
 It reads 0x40 or decimal 64 bytes of input. That's probably why the program didn't always give me an output message.
 
 And at the end of the function we see the string `Yep, that's it!` after a call to `memcmp`.
+
 ```c
 <---snip--->
       iVar24 = memcmp(local_88,local_198,0x40);
@@ -580,17 +591,18 @@ And at the end of the function we see the string `Yep, that's it!` after a call 
 <---snip--->
 ```
 
-The call to `memcmp` ought to be a comparison with the flag involved. 
+The call to `memcmp` ought to be a comparison with the flag involved.
 
 ### Find out where to set the breakpoint
 
 Let's try to set a breakpoint and read what is compared in memory with `memcmp`.
 
-First I tried to set a breakpoint at the beginning of the `memcmp` function with `break memcmp` but that didn't reveal any flags. 
+First I tried to set a breakpoint at the beginning of the `memcmp` function with `break memcmp` but that didn't reveal any flags.
 
 Can we set a breakpoint at the call to `memcmp` instead?  
 But there is a slight problem. Since the program is a PIE we only have relative offsets in Ghidra
-```
+
+```text
         001013b4 48 8b 7c        MOV        RDI,qword ptr [RSP + local_1c0]
                  24 48
         001013b9 e8 a2 fc        CALL       <EXTERNAL>::memcmp                               int memcmp(void * __s1, void * _
@@ -602,7 +614,8 @@ We need to find out where the program is loaded in memory.
 
 Run `gdb -q not-crypto` then execute `starti` to start the program and break at the first instruction.  
 Then run `vmmap` to get the memory map
-```
+
+```text
 gef➤  vmmap
 [ Legend:  Code | Heap | Stack ]
 Start              End                Offset             Perm Path
@@ -625,7 +638,8 @@ We can see from the output that the program's image base is at `0x00005555555540
 To rebase the program in Ghidra we select `Memory Map` in the `Window menu` and then press the `Set Image Base` icon that looks like a house. Set the image base to `0x0000555555554000`.
 
 Now we can see the real memory addresses
-```
+
+```text
     5555555553b4 48 8b 7c        MOV        RDI,qword ptr [RSP + local_1c0]
                  24 48
     5555555553b9 e8 a2 fc        CALL       <EXTERNAL>::memcmp                               int memcmp(void * __s1, void * _
@@ -638,7 +652,8 @@ Now we can see the real memory addresses
 Now we know that we should break at `0x5555555553b9`.
 
 Restart GDB and set this as a breakpoint
-```
+
+```text
 gef➤  break *0x5555555553b9
 Breakpoint 1 at 0x5555555553b9
 ```
@@ -646,7 +661,8 @@ Breakpoint 1 at 0x5555555553b9
 Then `run` again and input some random data.
 
 When we hit the breakpoint we see a partial flag pointed to by the RDI register
-```
+
+```text
 memcmp@plt (
    $rdi = 0x00007fffffffdcb0 → "picoCTF{c0mp1l3r_0pt1m1z4t10n_15_pur3_w1z4rdry_but[...]",
    $rsi = 0x00007fffffffdba0 → "dfgfdgdf\ndfgdfgdfgdfggfgdfgdfgd\ndfgertgwrsdfvdfg[...]",
@@ -655,7 +671,8 @@ memcmp@plt (
 ```
 
 Get the full flag with
-```
+
+```text
 gef➤  x/s $rdi
 0x7fffffffdcb0: "picoCTF{c0mp1l3r_0pt1m1z4t10n_15_pur3_<REDACTED>}\n"
 ```
@@ -664,4 +681,12 @@ For additional information, please see the references below.
 
 ### References
 
-- [Wikipedia - Position-independent code](https://en.wikipedia.org/wiki/Position-independent_code)
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
+- [GDB (The GNU Project Debugger) - Documentation](https://sourceware.org/gdb/documentation/)
+- [GDB (The GNU Project Debugger) - Homepage](https://sourceware.org/gdb/)
+- [GEF (GDB Enhanced Features) - Documentation](https://hugsy.github.io/gef/)
+- [GEF (GDB Enhanced Features) - GitHub](https://github.com/hugsy/gef)
+- [Ghidra - Homepage](https://ghidra-sre.org/)
+- [Position-independent code - Wikipedia](https://en.wikipedia.org/wiki/Position-independent_code)
+- [strace - Linux manual page](https://man7.org/linux/man-pages/man1/strace.1.html)
+- [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)

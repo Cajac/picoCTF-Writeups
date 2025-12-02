@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Hard
 Tags: picoMini by redpwn, Cryptography
 Author: BOOLEAN
 
@@ -17,6 +18,7 @@ I added so many for loops that I don't even know what it does. It's extraordinar
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/208](https://play.picoctf.org/practice/challenge/208)
 
 ## Solution
@@ -24,6 +26,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/208](https://play.p
 ### Analyze the given files
 
 Let's start by looking at the given files. First the python script
+
 ```python
 #!/usr/bin/env python3
 
@@ -73,6 +76,7 @@ with open('output.txt', 'w') as f:
 The script XORs the flag with an unknown key and the result are then XORed again with fixed messages a random number of times.  
 
 And then let's check the encrypted hex-encoded `output.txt` file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/XtraORdinary]
 └─$ cat output.txt 
@@ -88,6 +92,7 @@ Also, if we have the flag (F) XORed with the key (K) we can XOR the result again
 Lastly, we don't need to consider the same fixed messages more than once because of the first fact above.
 
 Let's write a brute forcer script to find the right combination of extra XORing by trying all combinations of the fixed messages, that is if they are included or not in the XORing.
+
 ```python
 #!/usr/bin/env python3
 
@@ -129,6 +134,7 @@ for case in included_or_not_table:
 ```
 
 Then we run the brute force script
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/XtraORdinary]
 └─$ ./brute_force.py
@@ -168,10 +174,11 @@ Then we run the brute force script
 
 Most of the output is gibberish but on one of the lines we can see the word `Africa!`.  
 This is the `secret-key.txt`.
- 
+
 ### Get the flag
 
 Now, with this information let's write another script that gives us the flag. The code is mostly the same as above.
+
 ```python
 #!/usr/bin/env python3
 
@@ -210,6 +217,7 @@ print(flag.decode())
 ```
 
 Finally, time to get the plain text flag by running the `get_flag.py` script
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/XtraORdinary]
 └─$ ./get_flag.py
@@ -220,6 +228,8 @@ For additional information, please see the references below.
 
 ### References
 
-- [Wikipedia — XOR cipher](https://en.wikipedia.org/wiki/XOR_cipher)
-- [itertools.product](https://docs.python.org/3/library/itertools.html#itertools.product)
-- [itertools — Functions creating iterators for efficient looping](https://docs.python.org/3/library/itertools.html)
+- [Exclusive or - Wikipedia](https://en.wikipedia.org/wiki/Exclusive_or)
+- [itertools module - Python](https://docs.python.org/3/library/itertools.html)
+- [itertools.product - Python](https://docs.python.org/3/library/itertools.html#itertools.product)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [XOR cipher - Wikipedia](https://en.wikipedia.org/wiki/XOR_cipher)

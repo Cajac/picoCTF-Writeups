@@ -2,28 +2,36 @@
 
 ## Binary Exploitation Challenges
 
-1 Challenge:
+### Medium Binary Exploitation Challenges
+
 - [clutter-overflow](Binary_Exploitation/clutter-overflow.md)
 
 ## Cryptography Challenges
 
-3 Challenges:
+### Medium Cryptography Challenges
+
 - [spelling-quiz](Cryptography/spelling-quiz.md)
+
+### Hard Cryptography Challenges
+
 - [triple-secure](Cryptography/triple-secure.md)
 - [XtraORdinary](Cryptography/XtraORdinary.md)
 
 ## Forensics Challenges
 
-1 Challenge: 
+### Medium Forensics Challenges
+
 - [advanced-potion-making](Forensics/advanced-potion-making.md)
 
 ## Reverse Engineering Challenges
 
-1 Challenge:
+### Hard Reverse Engineering Challenges
+
 - [not crypto](Reverse_Engineering/not_crypto.md)
 
 ## Web Exploitation Challenges
 
-2 Challenges: 
+### Medium Web Exploitation Challenges
+
 - [caas](Web_Exploitation/caas.md)
 - [login](Web_Exploitation/login.md)
