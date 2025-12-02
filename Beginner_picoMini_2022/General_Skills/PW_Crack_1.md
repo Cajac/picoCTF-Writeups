@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Easy
 Tags: Beginner picoMini 2022, General Skills, password_cracking
 Author: LT 'SYREAL' JONES
   
@@ -20,11 +21,13 @@ Hints:
 2. To exit nano, press Ctrl and x and follow the on-screen prompts.
 3. The str_xor function does not need to be reverse engineered for this challenge.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/245](https://play.picoctf.org/practice/challenge/245)
 
 ## Solution
 
 Let's start with analysing the Python script. The script looks like this (with some empty lines removed)
+
 ```python
 ### THIS FUNCTION WILL NOT HELP YOU FIND THE FLAG --LT ########################
 def str_xor(secret, key):
@@ -49,9 +52,10 @@ def level_1_pw_check():
     print("That password is incorrect")
 
 level_1_pw_check()
-``` 
+```
 
-The most interesting part is ofcourse the IF statement where we see the password in plain text
+The most interesting part is of course the IF statement where we see the password in plain text
+
 ```python
 <---snip--->
     user_pw = input("Please enter correct password for flag: ")
@@ -64,6 +68,7 @@ The most interesting part is ofcourse the IF statement where we see the password
 ```
 
 With knowledge of the password (`691d`) we can run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/PW_Crack_1]
 └─$ python level1.py
@@ -76,6 +81,8 @@ For additional information, please see the references below.
 
 ### References
 
-- [Wikipedia - Exclusive or](https://en.wikipedia.org/wiki/Exclusive_or)
-- [W3Schools - Python - List Comprehension](https://www.w3schools.com/python/python_lists_comprehension.asp)
-- [GeeksforGeeks - zip() in Python](https://www.geeksforgeeks.org/zip-in-python/)
+- [Exclusive or - Wikipedia](https://en.wikipedia.org/wiki/Exclusive_or)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Python - List Comprehension - W3Schools](https://www.w3schools.com/python/python_lists_comprehension.asp)
+- [XOR cipher - Wikipedia](https://en.wikipedia.org/wiki/XOR_cipher)
+- [zip() in Python - GeeksforGeeks](https://www.geeksforgeeks.org/zip-in-python/)

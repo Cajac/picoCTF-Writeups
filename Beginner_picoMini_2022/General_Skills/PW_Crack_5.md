@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: Beginner picoMini 2022, General Skills, password_cracking, hashing
 Author: LT 'SYREAL' JONES
  
@@ -23,11 +24,13 @@ Hints:
    Look up the Python string function, strip
 3. The str_xor function does not need to be reverse engineered for this challenge.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/249](https://play.picoctf.org/practice/challenge/249)
 
 ## Solution
 
 Let's start with analysing the Python script. The script looks like this (with some empty lines removed)
+
 ```python
 import hashlib
 
@@ -64,11 +67,12 @@ def level_5_pw_check():
     print("That password is incorrect")
 
 level_5_pw_check()
-``` 
+```
 
 Just like the previous challenges we brute force the solution.
 
-First we change the `level_5_pw_check` function slightly 
+First we change the `level_5_pw_check` function slightly
+
 ```python
 def level_5_pw_check(user_pw):
     user_pw_hash = hash_pw(user_pw)
@@ -82,6 +86,7 @@ def level_5_pw_check(user_pw):
 ```
 
 Then we also add code to iterate through the dictionary
+
 ```python
 pos_pw_list = open("dictionary.txt", "r").readlines()
 
@@ -92,6 +97,7 @@ for pw in pos_pw_list:
 We can leave the rest of the code unchanged.
 
 Finally, we run the brute forcer to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/PW_Crack_5]
 └─$ python pw_crack_5_get_flag.py
@@ -105,7 +111,11 @@ For additional information, please see the references below.
 
 ### References
 
-- [W3Schools - Python - List Comprehension](https://www.w3schools.com/python/python_lists_comprehension.asp)
-- [GeeksforGeeks - zip() in Python](https://www.geeksforgeeks.org/zip-in-python/)
-- [Wikipedia - Exclusive or](https://en.wikipedia.org/wiki/Exclusive_or)
-- [Wikipedia - MD5](https://en.wikipedia.org/wiki/MD5)
+- [Brute-force attack - Wikipedia](https://en.wikipedia.org/wiki/Brute-force_attack)
+- [Exclusive or - Wikipedia](https://en.wikipedia.org/wiki/Exclusive_or)
+- [hashlib module - Python](https://docs.python.org/3/library/hashlib.html)
+- [MD5 - Wikipedia](https://en.wikipedia.org/wiki/MD5)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Python - List Comprehension - W3Schools](https://www.w3schools.com/python/python_lists_comprehension.asp)
+- [zip() in Python - GeeksforGeeks](https://www.geeksforgeeks.org/zip-in-python/)

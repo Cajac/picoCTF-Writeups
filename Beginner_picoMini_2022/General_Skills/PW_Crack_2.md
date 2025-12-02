@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Easy
 Tags: Beginner picoMini 2022, General Skills, password_cracking
 Author: LT 'SYREAL' JONES
   
@@ -19,11 +20,13 @@ Hints:
 1. Does that encoding look familiar?
 2. The str_xor function does not need to be reverse engineered for this challenge.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/246](https://play.picoctf.org/practice/challenge/246)
 
 ## Solution
 
 Let's start with analysing the Python script. The script looks like this (with some empty lines removed)
+
 ```python
 ### THIS FUNCTION WILL NOT HELP YOU FIND THE FLAG --LT ########################
 def str_xor(secret, key):
@@ -48,9 +51,10 @@ def level_2_pw_check():
     print("That password is incorrect")
 
 level_2_pw_check()
-``` 
+```
 
 As in the previous challenge, the interesting part is the IF statement
+
 ```python
 <---snip--->
     user_pw = input("Please enter correct password for flag: ")
@@ -60,10 +64,12 @@ As in the previous challenge, the interesting part is the IF statement
 ```
 
 The password is encoded as [ASCII-numbers](https://en.wikipedia.org/wiki/ASCII). To get the password in plain text you can either
-* Lookup the characters manually in [an ASCII-table](https://www.ascii-code.com/)
-* Use an interactive Python session to give you the answer (see below)
+
+- Lookup the characters manually in [an ASCII-table](https://www.ascii-code.com/)
+- Use an interactive Python session to give you the answer (see below)
 
 Using Python to get the password
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/PW_Crack_2]
 └─$ python          
@@ -75,6 +81,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 
 So the password is `4ec9`. Finally, we run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/PW_Crack_2]
 └─$ python level2.py
@@ -87,7 +94,10 @@ For additional information, please see the references below.
 
 ### References
 
-- [W3Schools - Python - List Comprehension](https://www.w3schools.com/python/python_lists_comprehension.asp)
-- [GeeksforGeeks - zip() in Python](https://www.geeksforgeeks.org/zip-in-python/)
-- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)
-- [Wikipedia - Exclusive or](https://en.wikipedia.org/wiki/Exclusive_or)
+- [ASCII - Wikipedia](https://en.wikipedia.org/wiki/ASCII)
+- [chr()-function - Python](https://docs.python.org/3/library/functions.html#chr)
+- [Exclusive or - Wikipedia](https://en.wikipedia.org/wiki/Exclusive_or)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Python - List Comprehension - W3Schools](https://www.w3schools.com/python/python_lists_comprehension.asp)
+- [XOR cipher - Wikipedia](https://en.wikipedia.org/wiki/XOR_cipher)
+- [zip() in Python - GeeksforGeeks](https://www.geeksforgeeks.org/zip-in-python/)

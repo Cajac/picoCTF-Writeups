@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Easy
 Tags: Beginner picoMini 2022, General Skills, Python
 Author: LT 'SYREAL' JONES
 
@@ -21,11 +22,13 @@ Hints:
 3. To exit nano, press Ctrl and x and follow the on-screen prompts.
 4. The str_xor function does not need to be reverse engineered for this challenge.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/241](https://play.picoctf.org/practice/challenge/241)
 
 ## Solution
 
 Try running the script and see what happens
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Fixme2.py]
 └─$ python fixme2.py 
@@ -39,6 +42,7 @@ Python is kind enough to suggest possible solutions. Change the '=' to a '==' an
 '=' is the assigment operator and '==' is the equal comparison operator.
 
 Then try to run the script again
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Fixme2.py]
 └─$ python fixme2.py
@@ -49,4 +53,6 @@ For additional information, please see the references below.
 
 ### References
 
-- [W3Schools - Python Operators](https://www.w3schools.com/python/python_operators.asp)
+- [Operator - Python](https://docs.python.org/3/library/operator.html)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Python Operators - W3Schools](https://www.w3schools.com/python/python_operators.asp)

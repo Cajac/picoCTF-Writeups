@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: Beginner picoMini 2022, General Skills, password_cracking, hashing
 Author: LT 'SYREAL' JONES
   
@@ -21,11 +22,13 @@ Hints:
 1. To view the level3.hash.bin file in the webshell, do: $ bvi level3.hash.bin
 2. The str_xor function does not need to be reverse engineered for this challenge.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/247](https://play.picoctf.org/practice/challenge/247)
 
 ## Solution
 
 Let's start with analysing the Python script. The script looks like this (with some empty lines removed)
+
 ```python
 import hashlib
 
@@ -66,11 +69,12 @@ level_3_pw_check()
 # The strings below are 7 possibilities for the correct password. 
 #   (Only 1 is correct)
 pos_pw_list = ["f09e", "4dcf", "87ab", "dba8", "752e", "3961", "f159"]
-``` 
+```
 
 The description suggests that we should brute force the solution but lets check if there is a faster way.  
 In many easier challenges you can sometimes just Google for the hash to find the corresponding plain text for it.  
 So lets try that. Get the hash
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/PW_Crack_3]
 └─$ xxd -p level3.hash.bin
@@ -79,7 +83,8 @@ So lets try that. Get the hash
 
 But if you Google for it, you are probably not going to find the answer. The challenge creator was too smart for that.
 
-So lets write a brute forcer by changing the `level_3_pw_check` function slightly 
+So lets write a brute forcer by changing the `level_3_pw_check` function slightly
+
 ```python
 def level_3_pw_check(user_pw):
     user_pw_hash = hash_pw(user_pw)
@@ -93,6 +98,7 @@ def level_3_pw_check(user_pw):
 ```
 
 We also need to add code to iterate through the array of possible passwords
+
 ```python
 for pw in pos_pw_list:
     print("Testing password: %s" % pw)
@@ -102,6 +108,7 @@ for pw in pos_pw_list:
 We can leave the rest of the code unchanged.
 
 Finally, we run the brute forcer to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/PW_Crack_3]
 └─$ python pw_crack_3_get_flag.py  
@@ -126,7 +133,12 @@ For additional information, please see the references below.
 
 ### References
 
-- [W3Schools - Python - List Comprehension](https://www.w3schools.com/python/python_lists_comprehension.asp)
-- [GeeksforGeeks - zip() in Python](https://www.geeksforgeeks.org/zip-in-python/)
-- [Wikipedia - Exclusive or](https://en.wikipedia.org/wiki/Exclusive_or)
-- [Wikipedia - MD5](https://en.wikipedia.org/wiki/MD5)
+- [Brute-force attack - Wikipedia](https://en.wikipedia.org/wiki/Brute-force_attack)
+- [Exclusive or - Wikipedia](https://en.wikipedia.org/wiki/Exclusive_or)
+- [hashlib module - Python](https://docs.python.org/3/library/hashlib.html)
+- [MD5 - Wikipedia](https://en.wikipedia.org/wiki/MD5)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Python - List Comprehension - W3Schools](https://www.w3schools.com/python/python_lists_comprehension.asp)
+- [xxd - Linux manual page](https://linux.die.net/man/1/xxd)
+- [zip() in Python - GeeksforGeeks](https://www.geeksforgeeks.org/zip-in-python/)

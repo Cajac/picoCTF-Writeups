@@ -2,10 +2,12 @@
 
 - [Challenge information](#challenge-information)
 - [Solution](#solution)
+- [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: Beginner picoMini 2022, General Skills, Python
 Author: LT 'SYREAL' JONES
 
@@ -20,11 +22,13 @@ Hints:
 3. To exit nano, press Ctrl and x and follow the on-screen prompts.
 4. The str_xor function does not need to be reverse engineered for this challenge.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/251](https://play.picoctf.org/practice/challenge/251)
 
 ## Solution
 
 Let's start with looking at the script. The script looks like this (with some empty lines removed)
+
 ```python
 import random
 import sys
@@ -99,6 +103,7 @@ if __name__ == "__main__":
 ```
 
 A somewhat long script. The most interesting parts are the `print_flag` function
+
 ```python
 def print_flag():
   flag = str_xor(flag_enc, 'enkidu')
@@ -106,6 +111,7 @@ def print_flag():
 ```
 
 And the fact that it's never called
+
 ```python
 <---snip--->
     elif choice == 'b':
@@ -114,6 +120,7 @@ And the fact that it's never called
 ```
 
 Let's correct this Oops! message to print the flag instead
+
 ```python
 <---snip--->
     elif choice == 'b':
@@ -122,6 +129,7 @@ Let's correct this Oops! message to print the flag instead
 ```
 
 The we run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Serpentine]
 └─$ python serpentine_fixed.py 
@@ -157,5 +165,9 @@ b) Print flag
 c) Quit
 
 What would you like to do? (a/b/c) c
-
 ```
+
+### References
+
+- [python - Linux manual page](https://linux.die.net/man/1/python)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))

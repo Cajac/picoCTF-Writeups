@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Easy
 Tags: Beginner picoMini 2022, General Skills, base, Python
 Author: LT 'SYREAL' JONES
 
@@ -25,11 +26,13 @@ Hints:
    This will download the script for you in the webshell so you can run it!
 6. Finally, to run the script, type everything after the dollar sign and then press enter: $ python3 convertme.py
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/239](https://play.picoctf.org/practice/challenge/239)
 
 ## Solution
 
 Start by running the script and see what random number is selected
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Convertme.py]
 └─$ python convertme.py 
@@ -38,13 +41,15 @@ Answer:
 ```
 
 You can solve the conversion in a number of ways aside from calculating the result manually:
- * Use an online service such as [RapidTables](https://www.rapidtables.com/convert/number/base-converter.html) to do the calculation
- * Use an interactive Python session in another window
- * Use the linux `bc` command in another window
+
+- Use an online service such as [RapidTables](https://www.rapidtables.com/convert/number/base-converter.html) to do the calculation
+- Use an interactive Python session in another window
+- Use the linux `bc` command in another window
 
 ### Convert using Python
 
 Converting the number to binary with the `bin` function
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Convertme.py]
 └─$ python             
@@ -54,11 +59,13 @@ Type "help", "copyright", "credits" or "license" for more information.
 '0b11001'
 >>> quit()
 ```
+
 Skip the initial '0b' when you enter your answer
 
 ### Convert using bc
 
 Alternatively, you can use the linux `bc` command. Install it with `sudo apt install bc` if it isn't installed already.
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Convertme.py]
 └─$ echo "obase=2; 25" | bc                                                      
@@ -68,6 +75,7 @@ Alternatively, you can use the linux `bc` command. Install it with `sudo apt ins
 ### Get the flag
 
 Then we fill in the answer and get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Convertme.py]
 └─$ python convertme.py 
@@ -81,4 +89,6 @@ For additional information, please see the references below.
 ### References
 
 - [bc - Linux manual page](https://man7.org/linux/man-pages/man1/bc.1p.html)
-- [Wikipedia - Binary number](https://en.wikipedia.org/wiki/Binary_number)
+- [Binary number - Wikipedia](https://en.wikipedia.org/wiki/Binary_number)
+- [echo - Linux manual page](https://man7.org/linux/man-pages/man1/echo.1.html)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
