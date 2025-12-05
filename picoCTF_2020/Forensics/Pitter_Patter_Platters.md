@@ -6,8 +6,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 200
+
+```text
+Level: Medium
 Tags: picoCTF 2020 Mini-Competition, Forensics
 Author: SYREAL
 
@@ -22,6 +23,7 @@ Hints:
    that now come with Ubuntu that I'd recommend for examining that 
    disk space phenomenon...
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/87](https://play.picoctf.org/practice/challenge/87)
 
 ## Sleuth Kit Solution
@@ -29,6 +31,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/87](https://play.pi
 ### Basic analysis of the file (system)
 
 We start with some basic analysis of the file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2020_Mini-Comp/Forensics/Pitter,_Patter,_Platters]
 └─$ file suspicious.dd.sda1                         
@@ -36,6 +39,7 @@ suspicious.dd.sda1: Linux rev 1.0 ext3 filesystem data, UUID=fc168af0-183b-4e53-
 ```
 
 We can use the `fsstat` tool from [The Sleuth Kit (TSK)](https://wiki.sleuthkit.org/index.php?title=TSK_Tool_Overview) to get more information on the file system
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2020_Mini-Comp/Forensics/Pitter,_Patter,_Platters]
 └─$ fsstat suspicious.dd.sda1                     
@@ -83,11 +87,13 @@ Group: 3:
   Free Blocks: 5123 (68%)
   Total Directories: 0
 ```
+
 But that doesn't give us much useful information, other than the type of file system (`Ext3`).
 
 ### List the files on the file system
 
 Next, we use the `fls` tool from TSK to recursively list the files on the file system
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2020_Mini-Comp/Forensics/Pitter,_Patter,_Platters]
 └─$ fls -F -r suspicious.dd.sda1               
@@ -105,19 +111,23 @@ r/r 4056:       tce/optional/glib2.tcz
 r/r 4021:       tce/onboot.lst
 r/r 12: suspicious-file.txt
 ```
+
 Ah, the final file called `suspicious-file.txt` looks suspicious... ;-)
 
 Let's get the contents of the file with `icat`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2020_Mini-Comp/Forensics/Pitter,_Patter,_Platters]
 └─$ icat suspicious.dd.sda1 12       
 Nothing to see here! But you may want to look here -->
 ```
+
 Hm, no flag there. But one of the hints mentioned slask space so we need to check that as well.
 
 ### Check the slack space
 
 With the tool `istat` we can get more information on the [inode](https://en.wikipedia.org/wiki/Inode) in question
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2020_Mini-Comp/Forensics/Pitter,_Patter,_Platters]
 └─$ istat suspicious.dd.sda1 12
@@ -140,17 +150,20 @@ Direct Blocks:
 ```
 
 The inode number 12 points to block number 2049. We need to check that next.
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2020_Mini-Comp/Forensics/Pitter,_Patter,_Platters]
 └─$ blkcat suspicious.dd.sda1 2049
 Nothing to see here! But you may want to look here -->
 }<REDACTED>{FTCocip
 ```
+
 Ah, there we have the flag - but in reverse.
 
 ### Get the flag
 
 Finally, we use `rev` to get the flag in a more readable format
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2020_Mini-Comp/Forensics/Pitter,_Patter,_Platters]
 └─$ blkcat suspicious.dd.sda1 2049 | rev               
@@ -161,9 +174,10 @@ picoCTF{<REDACTED>}
 ## FTK Imager solution
 
 Alternatively, we can open the file in [FTK Imager](https://www.exterro.com/ftk-imager):
- 1. In the `File`-menu, select `Add Evidence Item...`
- 2. Select the `Image File` option in the popup window
- 3. Browse to the `suspicious.dd.sda1` file
+
+1. In the `File`-menu, select `Add Evidence Item...`
+2. Select the `Image File` option in the popup window
+3. Browse to the `suspicious.dd.sda1` file
 
 In the `Evidence Tree` to the left expand `suspicious.dd.sda1`, `NONAME [Ext3]` and `[root]`.  
 Then select the `[root]` node.
@@ -178,10 +192,13 @@ For additional information, please see the references below.
 
 ## References
 
+- [CyberChef - GitHub](https://github.com/gchq/CyberChef)
 - [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
+- [Ext3 - Wikipedia](https://en.wikipedia.org/wiki/Ext3)
+- [File system fragmentation - Wikipedia](https://en.wikipedia.org/wiki/File_system_fragmentation)
 - [FTK Imager - Homepage](https://www.exterro.com/ftk-imager)
+- [inode - Wikipedia](https://en.wikipedia.org/wiki/Inode)
 - [rev - Linux manual page](https://man7.org/linux/man-pages/man1/rev.1.html)
-- [The Sleuth Kit - Tool Overview](https://wiki.sleuthkit.org/index.php?title=TSK_Tool_Overview)
-- [Wikipedia - Ext3](https://en.wikipedia.org/wiki/Ext3)
-- [Wikipedia - File system fragmentation](https://en.wikipedia.org/wiki/File_system_fragmentation)
-- [Wikipedia - inode](https://en.wikipedia.org/wiki/Inode)
+- [Sleuthkit - Homepage](https://www.sleuthkit.org/sleuthkit/)
+- [Sleuthkit - Kali Tools](https://www.kali.org/tools/sleuthkit/)
+- [Sleuthkit - Tool Overview](https://wiki.sleuthkit.org/index.php?title=TSK_Tool_Overview)
