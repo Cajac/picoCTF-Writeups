@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 200
+
+```text
+Level: Medium
 Tags: picoCTF 2019, Cryptography
 Author: WPARKS/NMONTIERTH
 
@@ -18,11 +19,13 @@ nc jupiter.challenges.picoctf.org 58617
 Hints:
 1. RSA info
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/61](https://play.picoctf.org/practice/challenge/61)
 
 ## Solution
 
 I wrote a Python script that uses [pwntools](https://docs.pwntools.com/en/stable/index.html) to automate this
+
 ```python
 #!/usr/bin/python
 
@@ -154,6 +157,7 @@ io.close()
 ### Get the flag
 
 Then we run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/Rsa-pop-quiz]
 └─$ ~/python_venvs/pwntools/bin/python get_flag.py
@@ -164,5 +168,8 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - RSA (cryptosystem)](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
+- [pwntools - Documentation](https://docs.pwntools.com/en/stable/index.html)
+- [pwntools - GitHub](https://github.com/Gallopsled/pwntools)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [RSA (cryptosystem) - Wikipedia](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
 - [The RSA Cryptosystem - Concepts](https://cryptobook.nakov.com/asymmetric-key-ciphers/the-rsa-cryptosystem-concepts)

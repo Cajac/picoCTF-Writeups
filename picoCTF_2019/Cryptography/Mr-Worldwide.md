@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 200
+
+```text
+Level: Medium
 Tags: picoCTF 2019, Cryptography
 Author: DANNY
 
@@ -16,11 +17,13 @@ A musician left us a message. What's it mean?
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/40](https://play.picoctf.org/practice/challenge/40)
 
 ## Solution
 
 Let's start by checking the contents of the message
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/Mr_Worldwide]
 └─$ cat message.txt             
@@ -30,6 +33,7 @@ picoCTF{(35.028309, 135.753082)(46.469391, 30.740883)(39.758949, -84.191605)(41.
 Ah, this could be [longitude](https://en.wikipedia.org/wiki/Longitude) and [latitude](https://en.wikipedia.org/wiki/Latitude) coordinates for places around the world.
 
 Lets use [Google Maps](https://www.google.com/maps/) to find out what place each coordinate corresponds to.
+
 |Coordinate|City|
 |----|----|
 |(35.028309, 135.753082)|Kyoto|
@@ -46,5 +50,7 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Latitude](https://en.wikipedia.org/wiki/Latitude)
-- [Wikipedia - Longitude](https://en.wikipedia.org/wiki/Longitude)
+- [cat - Linux manual page](https://man7.org/linux/man-pages/man1/cat.1.html)
+- [Google Maps - Homepage](https://www.google.com/maps/)
+- [Latitude - Wikipedia](https://en.wikipedia.org/wiki/Latitude)
+- [Longitude - Wikipedia](https://en.wikipedia.org/wiki/Longitude)

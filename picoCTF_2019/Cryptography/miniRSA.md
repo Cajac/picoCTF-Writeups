@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 300
+
+```text
+Level: Medium
 Tags: picoCTF 2019, Cryptography
 Author: SPEEEDAY/DANNY
 
@@ -18,6 +19,7 @@ Hints:
 2. How could having too small an e affect the security of this 2048 bit key?
 3. Make sure you don't lose precision, the numbers are pretty big (besides the e value)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/73](https://play.picoctf.org/practice/challenge/73)
 
 ## Solution
@@ -25,7 +27,8 @@ Challenge link: [https://play.picoctf.org/practice/challenge/73](https://play.pi
 ### Analyse the setup
 
 Let's start by analysing what we have
-```
+
+```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/miniRSA]
 └─$ cat ciphertext.txt                                                 
 
@@ -42,7 +45,8 @@ This means that `M = iroot(i*n+c, 3)` for some `i`. We just need to find the cor
 
 We will use the `iroot` function from [gmpy2 module](https://pypi.org/project/gmpy2/).  
 From the [manpage](https://manpages.ubuntu.com/manpages/trusty/man3/gmpy2.3.html)
-```
+
+```text
        iroot(...)
               iroot(x,n) returns a 2-element tuple (y, b) such that y is the integer n-th root of
               x and b is True if the root is exact. x must be >= 0 and n must be > 0.
@@ -51,6 +55,7 @@ From the [manpage](https://manpages.ubuntu.com/manpages/trusty/man3/gmpy2.3.html
 ### Write a solve script
 
 This Python script will search for the correct value of `i`
+
 ```python
 #!/usr/bin/python
 
@@ -73,6 +78,7 @@ for i in range(5000):
 ### Get the flag
 
 The we run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/miniRSA]
 └─$ ~/python_venvs/gmpy2/bin/python get_flag.py 
@@ -84,5 +90,9 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - RSA (cryptosystem)](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
+- [cat - Linux manual page](https://man7.org/linux/man-pages/man1/cat.1.html)
+- [gmpy2 - GitHub](https://github.com/gmpy2/gmpy2)
+- [gmpy2 - PyPI](https://pypi.org/project/gmpy2/)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [RSA (cryptosystem) - Wikipedia](https://en.wikipedia.org/wiki/RSA_(cryptosystem))
 - [The RSA Cryptosystem - Concepts](https://cryptobook.nakov.com/asymmetric-key-ciphers/the-rsa-cryptosystem-concepts)

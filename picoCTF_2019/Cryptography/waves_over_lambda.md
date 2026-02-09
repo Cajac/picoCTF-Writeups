@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 300
+
+```text
+Level: Medium
 Tags: picoCTF 2019, Cryptography
 Author: INVISIBILITY/DANNY
 
@@ -18,11 +19,13 @@ Connect with nc jupiter.challenges.picoctf.org 43522.
 Hints:
 1. Flag is not in the usual flag format
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/38](https://play.picoctf.org/practice/challenge/38)
 
 ## Solution
 
 First we connect to the server to get the ciphertext
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/Waves_over_lambda]
 └─$ nc jupiter.challenges.picoctf.org 43522
@@ -38,6 +41,7 @@ yfkdci yfn lqhe jdhe fj hb ndlxqlft syec dc tqcnqc, d yfn kdldjen jye gmdjdly ha
 ### Subbreaker solution
 
 To break the substitution cipher I used [Subbreaker](https://gitlab.com/guballa/SubstitutionBreaker).
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/Waves_over_lambda]
 └─$ cat ciphertext.txt | ~/python_venvs/subbreaker/bin/subbreaker break
@@ -67,6 +71,8 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Substitution cipher](https://en.wikipedia.org/wiki/Substitution_cipher)
-- [Subbreaker](https://gitlab.com/guballa/SubstitutionBreaker)
-- [quipqiup](https://www.quipqiup.com/)
+- [nc - Linux manual page](https://linux.die.net/man/1/nc)
+- [netcat - Wikipedia](https://en.wikipedia.org/wiki/Netcat)
+- [Substitution cipher - Wikipedia](https://en.wikipedia.org/wiki/Substitution_cipher)
+- [SubstitutionBreaker - GitLab](https://gitlab.com/guballa/SubstitutionBreaker)
+- [quipqiup - Homepage](https://www.quipqiup.com/)

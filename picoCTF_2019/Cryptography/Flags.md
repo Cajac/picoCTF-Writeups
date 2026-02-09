@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 200
+
+```text
+Level: Medium
 Tags: picoCTF 2019, Cryptography
 Author: DANNY
  
@@ -16,6 +17,7 @@ What do the flags mean?
 Hints:
 1. The flag is in the format PICOCTF{}
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/31](https://play.picoctf.org/practice/challenge/31)
 
 ## Solution
@@ -28,4 +30,4 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - International maritime signal flags](https://en.wikipedia.org/wiki/International_maritime_signal_flags)
+- [International maritime signal flags - Wikipedia](https://en.wikipedia.org/wiki/International_maritime_signal_flags)

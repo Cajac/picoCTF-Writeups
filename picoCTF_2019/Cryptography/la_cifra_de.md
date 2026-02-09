@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 200
+
+```text
+Level: Medium
 Tags: picoCTF 2019, Cryptography
 Author: ALEX FULTON/DANIEL TUNITIS
  
@@ -19,13 +20,15 @@ Hints:
 1. There are tools that make this easy.
 2. Perhaps looking at history will help
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/3](https://play.picoctf.org/practice/challenge/3)
 
 ## Solution
 
 ### Connect to the server to get the cipher text
 
-Let's start by connecting to the server and see what we get
+Let's start by connecting to the server with netcat and see what we get
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/La_cifra_de]
 └─$ nc jupiter.challenges.picoctf.org 32411
@@ -49,7 +52,7 @@ Gplrfdo’y xpcuso butvlky lpvjlrki tn 1555 gx l cuseitzltoty ol yse lncsz. Yse 
 
 Ah, it looks like a [substitution cipher](https://en.wikipedia.org/wiki/Substitution_cipher) and based on the amount of text displayed it is probably a [Vigenère cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher). At fairly long text is usually needed to do [frequency analysis](https://en.wikipedia.org/wiki/Frequency_analysis) of the characters.
 
-### Use an online service 
+### Use an online service
 
 We can use an online service such as [Guballa](https://www.guballa.de/vigenere-solver) to solve this.  
 Copy the text to the `Cipher Text` text box and leave the settings as default.  
@@ -61,6 +64,9 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Frequency analysis](https://en.wikipedia.org/wiki/Frequency_analysis)
-- [Wikipedia - Substitution cipher](https://en.wikipedia.org/wiki/Substitution_cipher)
-- [Wikipedia - Vigenère cipher](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
+- [Frequency analysis - Wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)
+- [nc - Linux manual page](https://linux.die.net/man/1/nc)
+- [netcat - Wikipedia](https://en.wikipedia.org/wiki/Netcat)
+- [Substitution cipher - Wikipedia](https://en.wikipedia.org/wiki/Substitution_cipher)
+- [Vigenère cipher - Wikipedia](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
+- [Vigenère Solver - Guballa](https://www.guballa.de/vigenere-solver)

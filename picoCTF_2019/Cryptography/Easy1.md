@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2019, Cryptography
 Author: ALEX FULTON/DANNY
 
@@ -22,6 +23,7 @@ Hints:
    you would submit 'picoCTF{HELLO}' as the flag.
 2. Please use all caps for the message.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/43](https://play.picoctf.org/practice/challenge/43)
 
 ## Solution
@@ -39,6 +41,7 @@ In Rumkim, set `Operating mode` to `Decrypt`, set `SOLVECRYPTO` as `The pad` and
 ### Write a Python decoder
 
 Alternatively, you can write a Python script to do the decoding
+
 ```python
 #!/usr/bin/python
 
@@ -55,6 +58,7 @@ print(f"picoCTF{{{result}}}")
 ```
 
 Then we make sure the script is executable and run it to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/Easy1]
 └─$ chmod +x decode.py   
@@ -68,5 +72,9 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Modulo](https://en.wikipedia.org/wiki/Modulo)
-- [Wikipedia - One-time pad](https://en.wikipedia.org/wiki/One-time_pad)
+- [chmod - Linux manual page](https://man7.org/linux/man-pages/man1/chmod.1.html)
+- [Modulo - Wikipedia](https://en.wikipedia.org/wiki/Modulo)
+- [One-time pad - Wikipedia](https://en.wikipedia.org/wiki/One-time_pad)
+- [One Time Pad Decoder - Rumkin](https://rumkin.com/tools/cipher/one-time-pad/)
+- [One-time Pad Cipher Decoder - Braingle](https://www.braingle.com/brainteasers/codes/onetimepad.php)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))

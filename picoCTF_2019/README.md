@@ -2,13 +2,19 @@
 
 ## Binary Exploitation Challenges
 
-1 Challenge:
+### Hard Binary Exploitation Challenges
+
 - [seed-sPRiNG](Binary_Exploitation/seed-sPRiNG.md)
 
 ## Cryptography Challenges
 
-11 Challenges:
+### Easy Cryptography Challenges
+
 - [13](Cryptography/13.md)
+- [The Numbers](Cryptography/The_Numbers.md)
+
+### Medium Cryptography Challenges
+
 - [caesar](Cryptography/caesar.md)
 - [Easy1](Cryptography/Easy1.md)
 - [Flags](Cryptography/Flags.md)
@@ -17,7 +23,6 @@
 - [Mr-Worldwide](Cryptography/Mr-Worldwide.md)
 - [rsa-pop-quiz](Cryptography/rsa-pop-quiz.md)
 - [Tapping](Cryptography/Tapping.md)
-- [The Numbers](Cryptography/The_Numbers.md)
 - [waves over lambda](Cryptography/waves_over_lambda.md)
 
 ## Forensics Challenges
