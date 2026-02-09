@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 50
+
+```text
+Level: Easy
 Tags: picoCTF 2019, Forensics
 Author:  JEDAVIS/DANNY
 
@@ -16,12 +17,14 @@ This garden contains more than it seems.
 Hints:
 1. What is a hex editor?
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/44](https://play.picoctf.org/practice/challenge/44)
 
 ## Solution
 
 In steganography oriented forensics challenges there are a number of checks that are more or less "standard practice".  
 These include:
+
 1. Checking for metadata with [ExifTool](https://exiftool.org/)
 2. Checking for embedded [strings](https://en.wikipedia.org/wiki/String_(computer_science))
 3. Checking for embedded Zip-files with tools such as [Binwalk](https://github.com/ReFirmLabs/binwalk)
@@ -31,6 +34,7 @@ Lets start checking them one by one until we find the flag.
 ### Checking for metadata
 
 First, check for metadata with `exiftool`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Glory_of_the_Garden]
 └─$ exiftool garden.jpg 
@@ -103,6 +107,7 @@ Lots of information but nothing that looks like a flag.
 ### Checking for embedded strings
 
 Next, lets check for strings and `grep` for the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Glory_of_the_Garden]
 └─$ strings -n 8 garden.jpg | grep picoCTF
@@ -115,6 +120,11 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - grep](https://en.wikipedia.org/wiki/Grep)
-- [Wikipedia - String (computer science)](https://en.wikipedia.org/wiki/String_(computer_science))
-
+- [Binwalk - GitHub](https://github.com/ReFirmLabs/binwalk)
+- [Binwalk - Kali Tools](https://www.kali.org/tools/binwalk/)
+- [ExifTool - Homepage](https://exiftool.org/)
+- [exiftool - Linux manual page](https://linux.die.net/man/1/exiftool)
+- [ExifTool - Wikipedia](https://en.wikipedia.org/wiki/ExifTool)
+- [grep - Wikipedia](https://en.wikipedia.org/wiki/Grep)
+- [String (computer science) - Wikipedia](https://en.wikipedia.org/wiki/String_(computer_science))
+- [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)

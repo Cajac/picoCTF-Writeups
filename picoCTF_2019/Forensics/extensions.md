@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 150
+
+```text
+Level: Medium
 Tags: picoCTF 2019, Forensics
 Author:  SANJAY C/DANNY
 
@@ -17,11 +18,13 @@ Hints:
 1. How do operating systems know what kind of file it is? (It's not just the ending!
 2. Make sure to submit the flag as picoCTF{XXXXX}
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/52](https://play.picoctf.org/practice/challenge/52)
 
 ## Solution
 
 Let's start by checking the file with `file`.
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Extensions]
 └─$ file flag.txt 
@@ -36,5 +39,6 @@ For additional information, please see the references below.
 
 ## References
 
+- [feh - Linux manual page](https://linux.die.net/man/1/feh)
 - [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
-- [Wikipedia - Filename extension](https://en.wikipedia.org/wiki/Filename_extension)
+- [Filename extension - Wikipedia](https://en.wikipedia.org/wiki/Filename_extension)

@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 150
+
+```text
+Level: Medium
 Tags: picoCTF 2019, Forensics
 Author: JULIO/DANNY
  
@@ -16,6 +17,7 @@ There's something in the building. Can you retrieve the flag?
 Hints:
 1. There is data encoded somewhere... there might be an online decoder.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/74](https://play.picoctf.org/practice/challenge/74)
 
 ## Solution
@@ -31,6 +33,7 @@ Click `Choose File` and select the file. Then press the `Decode` button to get t
 ### Using zsteg
 
 We can also use [zsteg](https://github.com/zed-0xff/zsteg) to solve this
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/What_Lies_Within]
 └─$ zsteg buildings.png 
@@ -54,5 +57,6 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Steganography](https://en.wikipedia.org/wiki/Steganography)
-- [zsteg](https://github.com/zed-0xff/zsteg)
+- [Steganography - Wikipedia](https://en.wikipedia.org/wiki/Steganography)
+- [Steganography Online - stylesuxx](http://stylesuxx.github.io/steganography/#decode)
+- [zsteg - GitHub](https://github.com/zed-0xff/zsteg)

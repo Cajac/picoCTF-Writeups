@@ -27,23 +27,31 @@
 
 ## Forensics Challenges
 
-12 Challenges: 
-- [extensions](Forensics/extensions.md)
+### Easy Forensics Challenges
+
 - [Glory of the Garden](Forensics/Glory_of_the_Garden.md)
-- [Investigative Reversing 0](Forensics/Investigative_Reversing_0.md)
-- [Investigative Reversing 1](Forensics/Investigative_Reversing_1.md)
+
+### Medium Forensics Challenges
+
+- [extensions](Forensics/extensions.md)
 - [like1000](Forensics/like1000.md)
 - [m00nwalk](Forensics/m00nwalk.md)
-- [m00nwalk2](Forensics/m00nwalk2.md)
 - [shark on wire 1](Forensics/shark_on_wire_1.md)
 - [shark on wire 2](Forensics/shark_on_wire_2.md)
 - [So Meta](Forensics/So_Meta.md)
 - [What Lies Within](Forensics/What_Lies_Within.md)
 - [WhitePages](Forensics/WhitePages.md)
 
+### Hard Forensics Challenges
+
+- [Investigative Reversing 0](Forensics/Investigative_Reversing_0.md)
+- [Investigative Reversing 1](Forensics/Investigative_Reversing_1.md)
+- [m00nwalk2](Forensics/m00nwalk2.md)
+
 ## General Skills Challenges
 
-12 Challenges: 
+12 Challenges:
+
 - [1_wanna_b3_a_r0ck5tar](General_Skills/1_wanna_b3_a_r0ck5tar.md)
 - [2Warm](General_Skills/2Warm.md)
 - [Based](General_Skills/Based.md)
@@ -60,6 +68,7 @@
 ## Reverse Engineering Challenges
 
 12 Challenges:
+
 - [asm1](Reverse_Engineering/asm1.md)
 - [asm2](Reverse_Engineering/asm2.md)
 - [asm3](Reverse_Engineering/asm3.md)
@@ -76,6 +85,7 @@
 ## Web Exploitation Challenges
 
 8 Challenges:
+
 - [Client-side-again](Web_Exploitation/Client-side-again.md)
 - [dont-use-client-side](Web_Exploitation/dont-use-client-side.md)
 - [Insp3ct0r](Web_Exploitation/Insp3ct0r.md)

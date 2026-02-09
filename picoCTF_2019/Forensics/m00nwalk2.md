@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 300
+
+```text
+Level: Hard
 Tags: picoCTF 2019, Forensics
 Author: JOON
 
@@ -17,6 +18,7 @@ There are also some clues clue 1, clue 2, clue 3.
 Hints:
 1. Use the clues to extract the another flag from the .wav file
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/28](https://play.picoctf.org/practice/challenge/28)
 
 ## Solution
@@ -26,6 +28,7 @@ The setup is the same as in the [previous moonwalk challenge](m00nwalk.md).
 ### Decode the clues
 
 First we decode the clue wav-files
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/M00nwalk2]
 └─$ sstv -d clue1.wav -o clue1_result.png
@@ -53,15 +56,17 @@ First we decode the clue wav-files
 ```
 
 The resulting pictures is a bit hard to read but they contain:
- * Clue1: Password hidden_stegosaurus
- * Clue2: The quieter you are the more you can HEAR
- * Clue3: Alan Eliasen the Future Boy
+
+- Clue1: Password hidden_stegosaurus
+- Clue2: The quieter you are the more you can HEAR
+- Clue3: Alan Eliasen the Future Boy
 
 Googling the last clue points to this [Steganographic Decoder](https://futureboy.us/stegano/decinput.html) which uses the [Steghide](https://steghide.sourceforge.net/) tool.
 
 ### Get the flag
 
 Lets run `steghide` with the password from clue #1
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/M00nwalk2]
 └─$ steghide extract -sf message.wav -p hidden_stegosaurus
@@ -79,5 +84,9 @@ For additional information, please see the references below.
 
 ## References
 
-- [Steganographic Decoder](https://futureboy.us/stegano/decinput.html)
-- [Wikipedia - Steganography](https://en.wikipedia.org/wiki/Steganography)
+- [Slow-scan television - Wikipedia](https://en.wikipedia.org/wiki/Slow-scan_television)
+- [SSTV Decoder - GitHub](https://github.com/colaclanth/sstv)
+- [Steganographic Decoder - futureboy.us](https://futureboy.us/stegano/decinput.html)
+- [Steganography - Wikipedia](https://en.wikipedia.org/wiki/Steganography)
+- [steghide - Homepage](https://steghide.sourceforge.net/)
+- [steghide - Kali Tools](https://www.kali.org/tools/steghide/)

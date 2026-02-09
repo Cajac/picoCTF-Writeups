@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 150
+
+```text
+Level: Medium
 Tags: picoCTF 2019, Forensics
 Author: DANNY
  
@@ -17,19 +18,21 @@ Hints:
 1. Try using a tool like Wireshark
 2. What are streams?
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/30](https://play.picoctf.org/practice/challenge/30)
 
 ## Solution
 
 Open up the PCAP-file in [Wireshark](https://www.wireshark.org/).
 
-The second hint suggests we should look for streams but before that lets get an overview of the contents with `Protocol Hierarchy Statistics`. 
+The second hint suggests we should look for streams but before that let's get an overview of the contents with `Protocol Hierarchy Statistics`.
 
 ### Get Protocol Hierarchy Statistics
 
 In the GUI-version this can be found in the `Statistics` menu and then `Protocol Hierarchy`.
 
 Alternatively, you can use the commandline [tshark](https://www.wireshark.org/docs/man-pages/tshark.html) version like this
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Shark_on_wire_1]
 └─$ tshark -q -z io,phs -r capture.pcap 
@@ -62,7 +65,6 @@ eth                                      frames:2317 bytes:202359
   arp                                    frames:738 bytes:44226
   lldp                                   frames:2 bytes:120
 ===================================================================
-
 ```
 
 We see that there are both IPv4 and IPv6 traffic and more UDP than TCP traffic for IPv4.
@@ -82,5 +84,8 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wireshark Home page](https://www.wireshark.org/)
-- [tshark(1) Manual Page](https://www.wireshark.org/docs/man-pages/tshark.html)
+- [pcap - Wikipedia](https://en.wikipedia.org/wiki/Pcap)
+- [Wireshark - Documentation](https://gitlab.com/wireshark/wireshark/-/wikis/home)
+- [Wireshark - Homepage](https://www.wireshark.org/)
+- [Wireshark - tshark](https://www.wireshark.org/docs/man-pages/tshark.html)
+- [Wireshark - Wikipedia](https://en.wikipedia.org/wiki/Wireshark)

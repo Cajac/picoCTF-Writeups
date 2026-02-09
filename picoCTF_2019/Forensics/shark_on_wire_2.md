@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 300
+
+```text
+Level: Medium
 Tags: picoCTF 2019, Forensics
 Author: DANNY
  
@@ -16,6 +17,7 @@ We found this packet capture. Recover the flag that was pilfered from the networ
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/84](https://play.picoctf.org/practice/challenge/84)
 
 ## Solution
@@ -39,6 +41,7 @@ Also, UDP Stream #32 contains the text `start`. And after that a number of strea
 These connections are all between source `10.0.0.66` and destination `10.0.0.1`, except for the `end` connection which has a source of `10.0.0.80`. All connections also have a destination port of `22`.
 
 Lets analyse these connections further
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Shark_on_wire_2]
 └─$ tshark -nr capture.pcap  -Y 'udp.dstport == 22'
@@ -95,6 +98,7 @@ The source port seems to be changing and if we subtract `5000` we get
 This looks really good!
 
 Lets write a small Python decoder script with the help of [Scapy](https://pypi.org/project/scapy/)
+
 ```python
 #!/usr/bin/python
 
@@ -111,6 +115,7 @@ print(flag)
 ```
 
 Then we run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Shark_on_wire_2]
 └─$ ./decode.py
@@ -121,6 +126,12 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wireshark Home page](https://www.wireshark.org/)
-- [tshark(1) Manual Page](https://www.wireshark.org/docs/man-pages/tshark.html)
-- [Scapy](https://pypi.org/project/scapy/)
+- [pcap - Wikipedia](https://en.wikipedia.org/wiki/Pcap)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Scapy - Docs](https://scapy.readthedocs.io/en/latest/)
+- [Scapy - Homepage](https://scapy.net/)
+- [Scapy - PyPI](https://pypi.org/project/scapy/)
+- [Wireshark - Documentation](https://gitlab.com/wireshark/wireshark/-/wikis/home)
+- [Wireshark - Homepage](https://www.wireshark.org/)
+- [Wireshark - tshark](https://www.wireshark.org/docs/man-pages/tshark.html)
+- [Wireshark - Wikipedia](https://en.wikipedia.org/wiki/Wireshark)

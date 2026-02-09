@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 250
+
+```text
+Level: Medium
 Tags: picoCTF 2019, Forensics
 Author: JOHN HAMMOND
  
@@ -16,6 +17,7 @@ I stopped using YellowPages and moved onto WhitePages... but the page they gave 
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/51](https://play.picoctf.org/practice/challenge/51)
 
 ## Solution
@@ -23,6 +25,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/51](https://play.pi
 ### Analyse the setup
 
 Let's start by checking the file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/WhitePages]
 └─$ file whitepages.txt           
@@ -41,10 +44,12 @@ whitepages.txt: Unicode text, UTF-8 text, with very long lines (1376), with no l
 ```
 
 It is somewhat hard to see but the file consists of two types of Unicode [whitespace characters](https://en.wikipedia.org/wiki/Whitespace_character):
- * Normal SPACE (U+0020, hex `20`)
- * EM SPACE (U+2003, hex `e2 80 83`)
+
+- Normal SPACE (U+0020, hex `20`)
+- EM SPACE (U+2003, hex `e2 80 83`)
 
 Converting hex values to Unicode code points can be done with
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/WhitePages]
 └─$ echo -ne '\xe2\x80\x83' | iconv -f 'utf-8' -t 'utf-16be' | xxd -p
@@ -52,6 +57,7 @@ Converting hex values to Unicode code points can be done with
 ```
 
 And converting code point to hex values can be done with
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/WhitePages]
 └─$ echo -n $'\u2003' | xxd -g 1
@@ -61,6 +67,7 @@ And converting code point to hex values can be done with
 ### Write a Python decoder
 
 Lets write a Python script that assumes these spaces form a binary string of ascii characters
+
 ```python
 #!/usr/bin/python
 
@@ -86,9 +93,10 @@ for item in split_result:
 print(flag)
 ```
 
-### Get the flag 
+### Get the flag
 
 Then we run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/WhitePages]
 └─$ ./decode.py
@@ -106,5 +114,11 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Whitespace character](https://en.wikipedia.org/wiki/Whitespace_character)
+- [echo - Linux manual page](https://man7.org/linux/man-pages/man1/echo.1.html)
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
+- [iconv - Linux manual page](https://man7.org/linux/man-pages/man1/iconv.1.html)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Unicode - Wikipedia](https://en.wikipedia.org/wiki/Unicode)
 - [Unicode Character Search](https://www.fileformat.info/info/unicode/char/search.htm)
+- [Whitespace character - Wikipedia](https://en.wikipedia.org/wiki/Whitespace_character)
+- [xxd - Linux manual page](https://linux.die.net/man/1/xxd)

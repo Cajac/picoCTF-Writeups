@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 350
+
+```text
+Level: Hard
 Tags: picoCTF 2019, Forensics
 Author: DANNY TUNITIS
 
@@ -19,6 +20,7 @@ Hints:
 2. This problem requires both forensics and reversing skills
 3. A hex editor may be helpful
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/27](https://play.picoctf.org/practice/challenge/27)
 
 ## Solution
@@ -26,6 +28,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/27](https://play.pi
 ### Analysing the files
 
 Let's start by checking the image files
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Investigating_Reversing_1]
 └─$ exiftool mystery*  
@@ -112,7 +115,8 @@ Image Size                      : 1411x648
 Megapixels                      : 0.914
     3 image files read
 ```
-As in the [previous challenge](Investigative_Reversing_0.md), there are flag data appended at the end of the PNG images. 
+
+As in the [previous challenge](Investigative_Reversing_0.md), there are flag data appended at the end of the PNG images.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Investigating_Reversing_1]
@@ -135,6 +139,7 @@ As in the [previous challenge](Investigative_Reversing_0.md), there are flag dat
 ```
 
 Next, let's check the binary
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Investigating_Reversing_1]
 └─$ file mystery                                                                                                                      
@@ -143,6 +148,7 @@ mystery: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically li
 
 Then we decompile the file in [Ghidra](https://ghidra-sre.org/) and study the code. Import the file in Ghidra and analyze it with the default settings.  
 Double-click on the `main` function to show the decompiled version of it.
+
 ```c
 void main(void)
 
@@ -199,11 +205,13 @@ void main(void)
   return;
 }
 ```
+
 We can see that the program opens the flag file and appends an encoded version of it at the end of the image files.  
 
 ### Write a Python decoder
 
 We can write a python script to reverse these operations
+
 ```python
 #!/usr/bin/python
 
@@ -274,6 +282,7 @@ print(flag.decode())
 ### Get the flag
 
 Then we run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Investigating_Reversing_1]
 └─$ ./decode.py
@@ -284,5 +293,12 @@ For additional information, please see the references below.
 
 ## References
 
-- [Ghidra](https://ghidra-sre.org/)
-- [Wikipedia - PNG](https://en.wikipedia.org/wiki/PNG)
+- [ExifTool - Homepage](https://exiftool.org/)
+- [exiftool - Linux manual page](https://linux.die.net/man/1/exiftool)
+- [ExifTool - Wikipedia](https://en.wikipedia.org/wiki/ExifTool)
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
+- [Ghidra - Homepage](https://ghidra-sre.org/)
+- [PNG - Wikipedia](https://en.wikipedia.org/wiki/PNG)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [tail - Linux manual page](https://man7.org/linux/man-pages/man1/tail.1.html)
+- [xxd - Linux manual page](https://linux.die.net/man/1/xxd)
