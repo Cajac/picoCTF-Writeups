@@ -93,13 +93,16 @@
 
 ## Web Exploitation Challenges
 
-8 Challenges:
+### Easy Web Exploitation Challenges
 
-- [Client-side-again](Web_Exploitation/Client-side-again.md)
 - [dont-use-client-side](Web_Exploitation/dont-use-client-side.md)
 - [Insp3ct0r](Web_Exploitation/Insp3ct0r.md)
+- [logon](Web_Exploitation/logon.md)
+- [where are the robots](Web_Exploitation/where_are_the_robots.md)
+
+### Medium Web Exploitation Challenges
+
+- [Client-side-again](Web_Exploitation/Client-side-again.md)
 - [Irish-Name-Repo 1](Web_Exploitation/Irish-Name-Repo_1.md)
 - [Irish-Name-Repo 2](Web_Exploitation/Irish-Name-Repo_2.md)
-- [logon](Web_Exploitation/logon.md)
 - [picobrowser](Web_Exploitation/picobrowser.md)
-- [where are the robots](Web_Exploitation/where_are_the_robots.md)
