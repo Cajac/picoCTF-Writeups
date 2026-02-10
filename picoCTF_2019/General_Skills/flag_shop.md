@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 300
+
+```text
+Level: Medium
 Tags: picoCTF 2019, General Skills
 Author: DANNY
 
@@ -18,6 +19,7 @@ Connect with nc jupiter.challenges.picoctf.org 4906.
 Hints:
 1. Two's compliment can do some weird things when numbers get really big!
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/49](https://play.picoctf.org/practice/challenge/49)
 
 ## Solution
@@ -25,6 +27,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/49](https://play.pi
 ### Analyse the setup
 
 Let's start by checking the C source code
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -121,6 +124,7 @@ So if we buy `(2**31 - 1 - 1100 + 100000) // 900` flags we ought to wrap around.
 ### Write a python script
 
 We can use [pwntools](https://docs.pwntools.com/en/stable/index.html) to automate this with a Python script
+
 ```python
 #!/usr/bin/python
 
@@ -155,6 +159,7 @@ io.close()
 ### Get the flag
 
 Then we run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Flag_shop]
 └─$ ~/python_venvs/pwntools/bin/python get_flag.py
@@ -169,5 +174,8 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Two's complement](https://en.wikipedia.org/wiki/Two%27s_complement)
-- [pwntools](https://docs.pwntools.com/en/stable/index.html)
+- [C (programming language) - Wikipedia](https://en.wikipedia.org/wiki/C_(programming_language))
+- [pwntools - Documentation](https://docs.pwntools.com/en/stable/index.html)
+- [pwntools - GitHub](https://github.com/Gallopsled/pwntools)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Two's complement - Wikipedia](https://en.wikipedia.org/wiki/Two%27s_complement)

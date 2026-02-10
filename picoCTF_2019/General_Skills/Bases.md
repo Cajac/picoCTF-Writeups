@@ -5,11 +5,12 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Easy
 Tags: picoCTF 2019, General Skills
 Author: SANJAY C/DANNY T
- 
+
 Description:
 What does this bDNhcm5fdGgzX3IwcDM1 mean? 
 
@@ -19,6 +20,7 @@ Hints:
 1. Submit your answer in our flag format. For example, if your answer was 'hello', 
    you would submit 'picoCTF{hello}' as the flag.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/67](https://play.picoctf.org/practice/challenge/67)
 
 ## Solution
@@ -38,6 +40,7 @@ To get the full flag you need to add the 'picoCTF{' and '}' parts as instructed 
 ### Use the base64 commandline tool
 
 Alternatively, you can use the `base64` tool like this
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Bases]
 └─$ echo 'bDNhcm5fdGgzX3IwcDM1' | base64 -d     
@@ -49,6 +52,7 @@ Again, you need to add the 'picoCTF{' and '}' parts to get the full flag.
 ### Write a Python script
 
 Of course, you can always write a Python script to decode it
+
 ```python
 #!/usr/bin/python
 
@@ -61,6 +65,7 @@ print(f"picoCTF{{{decoded}}}")
 ```
 
 Then we make sure the script is executable and run it to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Bases]
 └─$ chmod +x decode.py     
@@ -74,4 +79,10 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Base64](https://en.wikipedia.org/wiki/Base64)
+- [base64 - Linux manual page](https://man7.org/linux/man-pages/man1/base64.1.html)
+- [Base64 - Wikipedia](https://en.wikipedia.org/wiki/Base64)
+- [chmod - Linux manual page](https://man7.org/linux/man-pages/man1/chmod.1.html)
+- [CyberChef - GitHub](https://github.com/gchq/CyberChef)
+- [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
+- [echo - Linux manual page](https://man7.org/linux/man-pages/man1/echo.1.html)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))

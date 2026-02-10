@@ -50,20 +50,23 @@
 
 ## General Skills Challenges
 
-12 Challenges:
+### Easy General Skills Challenges
 
-- [1_wanna_b3_a_r0ck5tar](General_Skills/1_wanna_b3_a_r0ck5tar.md)
 - [2Warm](General_Skills/2Warm.md)
-- [Based](General_Skills/Based.md)
 - [Bases](General_Skills/Bases.md)
 - [First Grep](General_Skills/First_Grep.md)
-- [flag_shop](General_Skills/flag_shop.md)
 - [Lets Warm Up](General_Skills/Lets_Warm_Up.md)
-- [mus1c](General_Skills/mus1c.md)
-- [plumbing](General_Skills/plumbing.md)
 - [strings it](General_Skills/strings_it.md)
 - [Warmed Up](General_Skills/Warmed_Up.md)
 - [what's a net cat?](General_Skills/whats_a_net_cat.md)
+
+### Medium General Skills Challenges
+
+- [1_wanna_b3_a_r0ck5tar](General_Skills/1_wanna_b3_a_r0ck5tar.md)
+- [Based](General_Skills/Based.md)
+- [flag_shop](General_Skills/flag_shop.md)
+- [mus1c](General_Skills/mus1c.md)
+- [plumbing](General_Skills/plumbing.md)
 
 ## Reverse Engineering Challenges
 

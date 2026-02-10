@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Easy
 Tags: picoCTF 2019, General Skills
 Author: SANJAY C/DANNY TUNITIS
 
@@ -18,11 +19,13 @@ Can you connect to jupiter.challenges.picoctf.org at port 64287 to get the flag?
 Hints:
 1. nc tutorial
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/34](https://play.picoctf.org/practice/challenge/34)
 
 ## Solution
 
-This is basically a tutorial in the basic usage of `nc` 
+This is basically a tutorial in the basic usage of `nc`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/What's_a_net_cat]
 └─$ nc jupiter.challenges.picoctf.org 64287 
@@ -34,4 +37,5 @@ For additional information, please see the references below.
 
 ## References
 
-- [nc(1) - Linux man page](https://linux.die.net/man/1/nc)
+- [nc - Linux man page](https://linux.die.net/man/1/nc)
+- [netcat - Wikipedia](https://en.wikipedia.org/wiki/Netcat)

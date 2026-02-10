@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 200
+
+```text
+Level: Medium
 Tags: picoCTF 2019, General Skills
 Author: ALEX FULTON/DANIEL TUNITIS
  
@@ -21,11 +22,13 @@ Hints:
 1. I hear python can convert things.
 2. It might help to have multiple windows open.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/35](https://play.picoctf.org/practice/challenge/35)
 
 ## Solution
 
 Let's connect to the server and see what happens
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Based]
 └─$ nc jupiter.challenges.picoctf.org 29221
@@ -45,6 +48,7 @@ Also note the 5 letter word `light` is printed before the question. This looks l
 ### Write a Python script
 
 The final script looks like this
+
 ```python
 #!/usr/bin/python
 
@@ -92,6 +96,7 @@ io.close()
 ### Get the flag
 
 Then we run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Based]
 └─$ ~/python_venvs/pwntools/bin/python get_flag.py
@@ -102,6 +107,11 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Binary number](https://en.wikipedia.org/wiki/Binary_numbers)
-- [Wikipedia - Hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal)
-- [Wikipedia - Octal](https://en.wikipedia.org/wiki/Octal)
+- [Binary number - Wikipedia](https://en.wikipedia.org/wiki/Binary_numbers)
+- [Hexadecimal - Wikipedia](https://en.wikipedia.org/wiki/Hexadecimal)
+- [nc - Linux manual page](https://linux.die.net/man/1/nc)
+- [netcat - Wikipedia](https://en.wikipedia.org/wiki/Netcat)
+- [pwntools - Documentation](https://docs.pwntools.com/en/stable/index.html)
+- [pwntools - GitHub](https://github.com/Gallopsled/pwntools)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Octal - Wikipedia](https://en.wikipedia.org/wiki/Octal)

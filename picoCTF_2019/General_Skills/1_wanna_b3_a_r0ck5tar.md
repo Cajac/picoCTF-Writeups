@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 350
+
+```text
+Level: Medium
 Tags: picoCTF 2019, General Skills
 Author: ALEX BUSHKIN
 
@@ -17,6 +18,7 @@ Use this Wayback Machine URL to use an older version of Rockstar, here.
 Hints:
 (None)
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/82](https://play.picoctf.org/practice/challenge/82)
 
 ## Solution
@@ -24,6 +26,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/82](https://play.pi
 This challenge is a continuation of the [mus1c challenge](mus1c.md).
 
 Let's start by checking the contents of the `lyrics.txt` file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/1_wanna_b3_a_r0ck5tar]
 └─$ cat lyrics.txt 
@@ -57,12 +60,13 @@ Else Whisper "That ain't it, Chief"
 Break it down   
 ```
 
-If we try to run the program in the [online emulator](https://web.archive.org/web/20190522020843/https://codewithrockstar.com/online) we get a popup window expecting input. Entering something like `test` doesn't produce any output at all.
+If we try to run the program in the [online emulator](https://codewithrockstar.com/online) we get a popup window expecting input. Entering something like `test` doesn't produce any output at all.
 
 Time to study the [language documentation](https://codewithrockstar.com/docs).
 
 Going through the script line by line gave me the following understanding of what happens
-```
+
+```text
 Rocknroll is right                                      # Unnecessary,  variable not used later on    
 Silence is wrong                                        # Unnecessary,  variable not used later on  
 A guitar is a six-string                                # A guitar = 19 (unnecessary, never outputed)
@@ -94,7 +98,8 @@ Break it down
 ```
 
 Then I removed unused code and cleaned up the script to a minimal version that looks likte this
-```
+
+```text
 Tommy is rockin guitar
 Shout Tommy
 Music is amazing sensation
@@ -112,7 +117,8 @@ Say Tommy
 ```
 
 Running this code in the emulator produces this output
-```
+
+```text
 66
 79
 78
@@ -121,9 +127,11 @@ Running this code in the emulator produces this output
 86
 73
 ```
+
 Ah, ASCII-numbers as in the previous challenge.
 
 Let's write a small python script to decode it.
+
 ```python
 #!/usr/bin/python
 
@@ -133,6 +141,7 @@ print(f"picoCTF{{{''.join(map(chr, ascii))}}}")
 ```
 
 Finally we run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/1_wanna_b3_a_r0ck5tar]
 └─$ ./decode.py 
@@ -143,6 +152,7 @@ For additional information, please see the references below.
 
 ## References
 
-- [Rockstar](https://esolangs.org/wiki/Rockstar)
-- [Rockstar Online Emulator](https://web.archive.org/web/20190522020843/https://codewithrockstar.com/online)
-- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)
+- [ASCII - Wikipedia](https://en.wikipedia.org/wiki/ASCII)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Rockstar - Esolang](https://esolangs.org/wiki/Rockstar)
+- [Rockstar Online Emulator](https://codewithrockstar.com/online)

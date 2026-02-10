@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Easy
 Tags: picoCTF 2019, General Skills
 Author: ALEX FULTON/DANNY TUNITIS
 
@@ -18,11 +19,13 @@ This would be really tedious to look through manually, something tells me there 
 Hints:
 1. grep tutorial
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/85](https://play.picoctf.org/practice/challenge/85)
 
 ## Solution
 
 This is basically a very easy tutorial for `grep`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/First_Grep]
 └─$ grep picoCTF file

@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 300
+
+```text
+Level: Medium
 Tags: picoCTF 2019, General Skills
 Author: DANNY
 
@@ -16,11 +17,13 @@ I wrote you a song. Put it in the picoCTF{} flag format.
 Hints:
 1. Do you think you can master rockstar?
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/15](https://play.picoctf.org/practice/challenge/15)
 
 ## Solution
 
 Let's start by checking the contents of the file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Mus1c]
 └─$ cat lyrics.txt              
@@ -85,7 +88,8 @@ After some googling I understood that this is the programming language [Rockstar
 
 Copy and paste the source code above in the emulator and click the `Rock!`-button.  
 You get the following in the output pane:
-```
+
+```text
 114
 114
 114
@@ -104,6 +108,7 @@ Program completed in 168 ms
 ```
 
 This looks like [ASCII-values](https://en.wikipedia.org/wiki/ASCII) and a short Python-script can compile the flag for us
+
 ```python
 #!/usr/bin/python
 
@@ -113,6 +118,7 @@ print(f"picoCTF{{{''.join(map(chr, ascii))}}}")
 ```
 
 Finally we run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Mus1c]
 └─$ ./decode.py 
@@ -123,6 +129,7 @@ For additional information, please see the references below.
 
 ## References
 
-- [Rockstar](https://esolangs.org/wiki/Rockstar)
+- [ASCII - Wikipedia](https://en.wikipedia.org/wiki/ASCII)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [Rockstar - Esolang](https://esolangs.org/wiki/Rockstar)
 - [Rockstar Online Emulator](https://codewithrockstar.com/online)
-- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)
