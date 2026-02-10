@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 300
+
+```text
+Level: Hard
 Tags: picoCTF 2019, Reverse Engineering
 Author: SANJAY C
 
@@ -22,6 +23,7 @@ Source
 Hints:
 1. more(?) registers
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/72](https://play.picoctf.org/practice/challenge/72)
 
 ## Solutions
@@ -34,40 +36,44 @@ For example, EAX is a 32-bit register. The lower half of EAX is AX, a 16-bit reg
 AX is divided into two 8-bit registers, AH and AL (a-high and a-low).
 
 The situation is mostly the same for the other general purpose-registers. In total there are:
- * Eight 32-bit registers: eax, ebx, ecx, edx, esi, edi, ebp, esp.
- * Eight 16-bit registers: ax, bx, cx, dx, si, di, bp, sp.
- * Eight 8-bit registers: ah, al, bh, bl, ch, cl, dh, dl.
+
+- Eight 32-bit registers: eax, ebx, ecx, edx, esi, edi, ebp, esp.
+- Eight 16-bit registers: ax, bx, cx, dx, si, di, bp, sp.
+- Eight 8-bit registers: ah, al, bh, bl, ch, cl, dh, dl.
 
 Now, lets look at the assembly source of the `asm3` function
-```
+
+```text
 asm3:
-	<+0>:	push   ebp
-	<+1>:	mov    ebp,esp
-	<+3>:	xor    eax,eax                      
-	<+5>:	mov    ah,BYTE PTR [ebp+0x9]
-	<+8>:	shl    ax,0x10
-	<+12>:	sub    al,BYTE PTR [ebp+0xd]
-	<+15>:	add    ah,BYTE PTR [ebp+0xf]
-	<+18>:	xor    ax,WORD PTR [ebp+0x10]
-	<+22>:	nop
-	<+23>:	pop    ebp
-	<+24>:	ret    
+    <+0>:    push   ebp
+    <+1>:    mov    ebp,esp
+    <+3>:    xor    eax,eax                      
+    <+5>:    mov    ah,BYTE PTR [ebp+0x9]
+    <+8>:    shl    ax,0x10
+    <+12>:   sub    al,BYTE PTR [ebp+0xd]
+    <+15>:   add    ah,BYTE PTR [ebp+0xf]
+    <+18>:   xor    ax,WORD PTR [ebp+0x10]
+    <+22>:   nop
+    <+23>:   pop    ebp
+    <+24>:   ret    
 ```
 
 We certainly could analyse this code manually but that would be too tedious.  
 Lets build, run and debug the code as described in the [asm1 challenge](asm1.md) instead.
 
 Two things to note though:
+
 1. `xor eax, eax` will zero-out (clear) the EAX-register. Anything XORed with itself is zero.
 2. `SHL` is a new instruction - Shift Left - which is essentially a multiplication by 2 the specified number of times.
 
 The re-worked assembly code looks like this
- ```
+
+```text
 .text 
 
     .code32
     .intel_syntax
-	.globl _start
+    .globl _start
     .type Asm3, @function
 
     Asm3:
@@ -83,15 +89,16 @@ The re-worked assembly code looks like this
         pop    %ebp
         ret    
 
-	_start:
+    _start:
         push   0xad761175
         push   0xb5a06caa
         push   0xc264bd5c
         call   Asm3
         nop
- ```
+```
 
 Next, we assemble the file with `as`, link it with `ld` and verify the result with `file`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Asm3]
 └─$ as -g --gstabs --32 -o asm3.o asm3.s       
@@ -105,6 +112,7 @@ asm3: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linke
 ```
 
 Now we start debugging with `gdb` and set a breakpoint at the `nop` instruction
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Asm3]
 └─$ gdb -q ./asm3                                   
@@ -126,12 +134,14 @@ Breakpoint 1 at 0x804902d: file asm3.s, line 26.
 In case you are wondering about the prompt, I have [GEF (GDB Enhanced Features)](https://github.com/hugsy/gef) installed.
 
 Time to execute the program
+
 ```bash
 gef➤  run
 ```
 
 GEF will automatically show us the status of the registers after the breakpoint is hit:
-```
+
+```text
 [ Legend: Modified register | Code | Heap | Stack | String ]
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── registers ────
 $eax   : 0xa4e1    
@@ -164,11 +174,19 @@ For additional information, please see the references below.
 
 ## References
 
-- [x86 Assembly Guide](https://www.cs.virginia.edu/~evans/cs216/guides/x86.html)
+- [as - Linux manual page](https://man7.org/linux/man-pages/man1/as.1.html)
 - [Assembly - Conditions](https://www.tutorialspoint.com/assembly_programming/assembly_conditions.htm)
 - [AT&T Syntax versus Intel Syntax](https://www.cs.mcgill.ca/~cs573/winter2001/AttLinux_syntax.htm)
-- [SkullSecurity - Registers](https://wiki.skullsecurity.org/index.php?title=Registers)
-- [Intel 64 and IA-32 Architectures Software Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
-- [as - Linux manual page](https://man7.org/linux/man-pages/man1/as.1.html)
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
 - [gdb - Linux manual page](https://man7.org/linux/man-pages/man1/gdb.1.html)
+- [GDB (The GNU Project Debugger) - Documentation](https://sourceware.org/gdb/documentation/)
+- [GDB (The GNU Project Debugger) - Homepage](https://sourceware.org/gdb/)
+- [GEF (GDB Enhanced Features) - Documentation](https://hugsy.github.io/gef/)
+- [GEF (GDB Enhanced Features) - GitHub](https://github.com/hugsy/gef)
+- [Intel 64 and IA-32 Architectures Software Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
 - [ld - Linux manual page](https://man7.org/linux/man-pages/man1/ld.1.html)
+- [Registers - SkullSecurity](https://wiki.skullsecurity.org/index.php?title=Registers)
+- [x86 - Wikipedia](https://en.wikipedia.org/wiki/X86)
+- [x86 Assembly Guide](https://www.cs.virginia.edu/~evans/cs216/guides/x86.html)
+- [x86 assembly language - Wikipedia](https://en.wikipedia.org/wiki/X86_assembly_language)
+- [x86 instruction listings - Wikipedia](https://en.wikipedia.org/wiki/X86_instruction_listings)

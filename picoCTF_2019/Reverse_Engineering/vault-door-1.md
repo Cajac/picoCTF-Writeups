@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 100
+
+```text
+Level: Medium
 Tags: picoCTF 2019, Reverse Engineering
 Author: MARK E. HAASE
 
@@ -18,11 +19,13 @@ The source code for this vault is here: VaultDoor1.java
 Hints:
 1. Look up the charAt() method online.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/12](https://play.picoctf.org/practice/challenge/12)
 
 ## Solutions
 
 The source code looks like this
+
 ```java
 import java.util.*;
 
@@ -31,13 +34,13 @@ class VaultDoor1 {
         VaultDoor1 vaultDoor = new VaultDoor1();
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter vault password: ");
-	String userInput = scanner.next();
-	String input = userInput.substring("picoCTF{".length(),userInput.length()-1);
-	if (vaultDoor.checkPassword(input)) {
-	    System.out.println("Access granted.");
-	} else {
-	    System.out.println("Access denied!");
-	}
+    String userInput = scanner.next();
+    String input = userInput.substring("picoCTF{".length(),userInput.length()-1);
+    if (vaultDoor.checkPassword(input)) {
+        System.out.println("Access granted.");
+    } else {
+        System.out.println("Access denied!");
+    }
     }
 
     // I came up with a more secure way to check the password without putting
@@ -85,9 +88,10 @@ class VaultDoor1 {
 
 In the `checkPassword` method we see a lot of [charAt](https://www.javatpoint.com/java-string-charat) checks. The `&&` is the [logical AND operator](https://www.freecodecamp.org/news/java-operator-and-or-logical-operators/).
 
-We want to extract the characters and append them in a sorted order. We need to use a number of commandline tools to achieve this. 
+We want to extract the characters and append them in a sorted order. We need to use a number of commandline tools to achieve this.
 
 First we `grep` all the lines with charAt
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Vault-door-1]
 └─$ grep charAt VaultDoor1.java 
@@ -126,6 +130,7 @@ First we `grep` all the lines with charAt
 ```
 
 Next we use `cut` with a delimmiter of '('
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Vault-door-1]
 └─$ grep charAt VaultDoor1.java | cut -d '(' -f2
@@ -164,6 +169,7 @@ Next we use `cut` with a delimmiter of '('
 ```
 
 Then we `sort` numerically
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Vault-door-1]
 └─$ grep charAt VaultDoor1.java | cut -d '(' -f2 | sort -n
@@ -202,6 +208,7 @@ Then we `sort` numerically
 ```
 
 Next we `cut` again but with a delimiter of "'"
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Vault-door-1]
 └─$ grep charAt VaultDoor1.java | cut -d '(' -f2 | sort -n | cut -d \' -f2
@@ -240,6 +247,7 @@ b
 ```
 
 Finally, we remove newlines with `tr`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Vault-door-1]
 └─$ grep charAt VaultDoor1.java | cut -d '(' -f2 | sort -n | cut -d \' -f2 | tr -d '\n'
@@ -252,6 +260,7 @@ For additional information, please see the references below.
 
 ## References
 
+- [Java (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Java_(programming_language))
 - [Java String substring()](https://www.javatpoint.com/java-string-substring)
 - [Java String charAt()](https://www.javatpoint.com/java-string-charat)
 - [Java String length()](https://www.javatpoint.com/java-string-length)

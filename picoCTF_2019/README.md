@@ -70,20 +70,26 @@
 
 ## Reverse Engineering Challenges
 
-12 Challenges:
+### Easy Reverse Engineering Challenges
+
+- [vault-door-training](Reverse_Engineering/vault-door-training.md)
+
+### Medium Reverse Engineering Challenges
 
 - [asm1](Reverse_Engineering/asm1.md)
-- [asm2](Reverse_Engineering/asm2.md)
-- [asm3](Reverse_Engineering/asm3.md)
-- [droids0](Reverse_Engineering/droids0.md)
-- [droids1](Reverse_Engineering/droids1.md)
-- [reverse_cipher](Reverse_Engineering/reverse_cipher.md)
 - [vault-door-1](Reverse_Engineering/vault-door-1.md)
 - [vault-door-3](Reverse_Engineering/vault-door-3.md)
 - [vault-door-4](Reverse_Engineering/vault-door-4.md)
 - [vault-door-5](Reverse_Engineering/vault-door-5.md)
 - [vault-door-5](Reverse_Engineering/vault-door-6.md)
-- [vault-door-training](Reverse_Engineering/vault-door-training.md)
+
+### Hard Reverse Engineering Challenges
+
+- [asm2](Reverse_Engineering/asm2.md)
+- [asm3](Reverse_Engineering/asm3.md)
+- [droids0](Reverse_Engineering/droids0.md)
+- [droids1](Reverse_Engineering/droids1.md)
+- [reverse_cipher](Reverse_Engineering/reverse_cipher.md)
 
 ## Web Exploitation Challenges
 

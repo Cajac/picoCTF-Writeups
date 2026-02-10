@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 300
+
+```text
+Level: Medium
 Tags: picoCTF 2019, Reverse Engineering
 Author: MARK E. HAASE
 
@@ -20,11 +21,13 @@ Hints:
 1. You may find an encoder/decoder tool helpful, such as https://encoding.tools/
 2. Read the wikipedia articles on URL encoding and base 64 encoding to understand how they work and what the results look like.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/77](https://play.picoctf.org/practice/challenge/77)
 
 ## Solutions
 
 The java source code looks like this
+
 ```java
 import java.net.URLDecoder;
 import java.util.*;
@@ -35,11 +38,11 @@ class VaultDoor5 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter vault password: ");
         String userInput = scanner.next();
-	String input = userInput.substring("picoCTF{".length(),userInput.length()-1);
-	if (vaultDoor.checkPassword(input)) {
-	    System.out.println("Access granted.");
-	} else {
-	    System.out.println("Access denied!");
+    String input = userInput.substring("picoCTF{".length(),userInput.length()-1);
+    if (vaultDoor.checkPassword(input)) {
+        System.out.println("Access granted.");
+    } else {
+        System.out.println("Access denied!");
         }
     }
 
@@ -82,6 +85,7 @@ In the `checkPassword` method we see that flag characters are both [URL-encoded]
 ### Write a Python decoder
 
 Let's write a small python script to re-create the flag
+
 ```python
 #!/usr/bin/python
 
@@ -98,6 +102,7 @@ print(f"Flag: picoCTF{{{result}}}")
 ### Get the flag
 
 Then we run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Vault-door-5]
 └─$ ./decode.py
@@ -108,5 +113,7 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Base64](https://en.wikipedia.org/wiki/Base64)
-- [Wikipedia - Percent-encoding](https://en.wikipedia.org/wiki/Percent-encoding)
+- [Base64 - Wikipedia](https://en.wikipedia.org/wiki/Base64)
+- [Java (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Java_(programming_language))
+- [Percent-encoding - Wikipedia](https://en.wikipedia.org/wiki/Percent-encoding)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))

@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 300
+
+```text
+Level: Hard
 Tags: picoCTF 2019, Reverse Engineering
 Author: DANNY TUNITIS
  
@@ -16,6 +17,7 @@ We have recovered a binary and a text file. Can you reverse the flag.
 Hints:
 1. objdump and Gihdra are some tools that could assist with this
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/79](https://play.picoctf.org/practice/challenge/79)
 
 ## Solution
@@ -23,6 +25,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/79](https://play.pi
 ### Analyse the setup
 
 Let's start by checking what we were given
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Reverse_cipher]
 └─$ file rev 
@@ -42,6 +45,7 @@ Ah, we've got an 64-bit ELF binary and a text-file with a scrambled flag.
 Next, let's decompile the file in [Ghidra](https://ghidra-sre.org/) and study the code.
 Import the file in Ghidra and analyze it with the default settings.  
 Double-click on the `main` function to show the decompiled version of it.
+
 ```C
 void main(void)
 
@@ -92,6 +96,7 @@ void main(void)
 ```
 
 We can see that the code loops through the flag data and makes some minor modifications:
+
 |Offset|Modification|
 |----|----|
 |0 - 7|None|
@@ -102,6 +107,7 @@ We can see that the code loops through the flag data and makes some minor modifi
 ### Write a Python decoder
 
 Let's write a small python script to re-create the flag
+
 ```python
 #!/usr/bin/python
 
@@ -140,6 +146,7 @@ print(flag)
 ### Get the flag
 
 Then we run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Reverse_cipher]
 └─$ ./decode.py 
@@ -150,4 +157,6 @@ For additional information, please see the references below.
 
 ## References
 
-- [Ghidra](https://ghidra-sre.org/)
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
+- [Ghidra - Homepage](https://ghidra-sre.org/)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))

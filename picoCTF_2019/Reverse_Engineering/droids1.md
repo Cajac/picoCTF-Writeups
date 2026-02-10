@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 350
+
+```text
+Level: Hard
 Tags: picoCTF 2019, Reverse Engineering
 Author: JASON
 
@@ -18,6 +19,7 @@ Hints:
 2. https://ibotpeaches.github.io/Apktool/
 3. https://developer.android.com/studio
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/14](https://play.picoctf.org/practice/challenge/14)
 
 ## Solutions
@@ -25,6 +27,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/14](https://play.pi
 ### Identify the SDK-version
 
 First let's check the SDK-version from the `AndroidManifest.xml` file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Droids1]
 └─$ apktool decode -o one one.apk  
@@ -60,6 +63,7 @@ We can see from the manifest file that the application uses SDK-version 29.
 ### Find the password
 
 Now we need to find the password
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Droids1]
 └─$ grep -iR password one
@@ -89,7 +93,7 @@ The password `opossum` from the file `one/res/values/strings.xml` looks promisin
 
 ### Emulate the application and get the flag
 
-Then open the `one.apk` file in [Android Studio](https://developer.android.com/studio). I selected the `Profile or Debug APK` option. 
+Then open the `one.apk` file in [Android Studio](https://developer.android.com/studio). I selected the `Profile or Debug APK` option.
 
 Now, we run/emulate the application on a virtual device with SDK-version 29. My virtual device was a `Pixel_3_XL_API_29` device.  
 Select `Run 'one'` from the `Run`-menu in Android Studio.
@@ -102,5 +106,8 @@ For additional information, please see the references below.
 
 ## References
 
-- [Android Studio](https://developer.android.com/studio)
-- [Wikipedia - apk (file format)](https://en.wikipedia.org/wiki/Apk_(file_format))
+- [Android Studio - Homepage](https://developer.android.com/studio)
+- [apk (file format) - Wikipedia](https://en.wikipedia.org/wiki/Apk_(file_format))
+- [Apktool - Homepage](https://apktool.org/)
+- [Apktool - Kali Tools](https://www.kali.org/tools/apktool/)
+- [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)

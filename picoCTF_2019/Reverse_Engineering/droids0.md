@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 300
+
+```text
+Level: Hard
 Tags: picoCTF 2019, Reverse Engineering
 Author: JASON
 
@@ -17,11 +18,13 @@ Hints:
 1. Try using an emulator or device
 2. https://developer.android.com/studio
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/11](https://play.picoctf.org/practice/challenge/11)
 
 ## Solutions
 
 First let's check the SDK-version from the `AndroidManifest.xml` file
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Droids0]
 └─$ apktool decode -o zero zero.apk 
@@ -54,12 +57,13 @@ I: Copying original files...
 
 We can see from the manifest file that the application uses SDK-version 29.
 
-Then open the `zero.apk` file in [Android Studio](https://developer.android.com/studio). I selected the `Profile or Debug APK` option. 
+Then open the `zero.apk` file in [Android Studio](https://developer.android.com/studio). I selected the `Profile or Debug APK` option.
 
 Now, we run/emulate the application on a virtual device with SDK-version 29. My virtual device was a `Pixel_3_XL_API_29` device. Select `Run 'zero'` from the `Run`-menu in Android Studio.
 
-I had a lot of trouble getting Android Studio to understand I wanted to use SDK-version 29. I got a `Error: Please select Android SDK` and also a notifaction saying 
-```
+I had a lot of trouble getting Android Studio to understand I wanted to use SDK-version 29. I got a `Error: Please select Android SDK` and also a notifaction saying
+
+```text
 SDK not found
 Failed to find Android target '29'
 Install missing platform and fix project
@@ -77,5 +81,7 @@ For additional information, please see the references below.
 
 ## References
 
-- [Android Studio](https://developer.android.com/studio)
-- [Wikipedia - apk (file format)](https://en.wikipedia.org/wiki/Apk_(file_format))
+- [Android Studio - Homepage](https://developer.android.com/studio)
+- [apk (file format) - Wikipedia](https://en.wikipedia.org/wiki/Apk_(file_format))
+- [Apktool - Homepage](https://apktool.org/)
+- [Apktool - Kali Tools](https://www.kali.org/tools/apktool/)

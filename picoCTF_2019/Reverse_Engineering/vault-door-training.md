@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 50
+
+```text
+Level: Easy
 Tags: picoCTF 2019, Reverse Engineering
 Author: MARK E. HAASE
 
@@ -23,11 +24,13 @@ The source code for the training vault is here: VaultDoorTraining.java
 Hints:
 1. The password is revealed in the program's source code.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/7](https://play.picoctf.org/practice/challenge/7)
 
 ## Solutions
 
 The source code looks like this
+
 ```java
 import java.util.*;
 
@@ -37,12 +40,12 @@ class VaultDoorTraining {
         Scanner scanner = new Scanner(System.in); 
         System.out.print("Enter vault password: ");
         String userInput = scanner.next();
-	String input = userInput.substring("picoCTF{".length(),userInput.length()-1);
-	if (vaultDoor.checkPassword(input)) {
-	    System.out.println("Access granted.");
-	} else {
-	    System.out.println("Access denied!");
-	}
+    String input = userInput.substring("picoCTF{".length(),userInput.length()-1);
+    if (vaultDoor.checkPassword(input)) {
+        System.out.println("Access granted.");
+    } else {
+        System.out.println("Access denied!");
+    }
    }
 
     // The password is below. Is it safe to put the password in the source code?
@@ -63,5 +66,6 @@ For additional information, please see the references below.
 
 ## References
 
+- [Java (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Java_(programming_language))
 - [Java String substring()](https://www.javatpoint.com/java-string-substring)
 - [Java String equals()](https://www.javatpoint.com/java-string-equals)

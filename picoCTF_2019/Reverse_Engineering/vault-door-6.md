@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 350
+
+```text
+Level: Medium
 Tags: picoCTF 2019, Reverse Engineering
 Author: MARK E. HAASE
 
@@ -16,11 +17,13 @@ This vault uses an XOR encryption scheme. The source code for this vault is here
 Hints:
 1. If X ^ Y = Z, then Z ^ Y = X. Write a program that decrypts the flag based on this fact.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/45](https://play.picoctf.org/practice/challenge/45)
 
 ## Solutions
 
 The java source code looks like this
+
 ```java
 import java.util.*;
 
@@ -30,11 +33,11 @@ class VaultDoor6 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter vault password: ");
         String userInput = scanner.next();
-	String input = userInput.substring("picoCTF{".length(),userInput.length()-1);
-	if (vaultDoor.checkPassword(input)) {
-	    System.out.println("Access granted.");
-	} else {
-	    System.out.println("Access denied!");
+    String input = userInput.substring("picoCTF{".length(),userInput.length()-1);
+    if (vaultDoor.checkPassword(input)) {
+        System.out.println("Access granted.");
+    } else {
+        System.out.println("Access denied!");
         }
     }
 
@@ -71,6 +74,7 @@ In the `checkPassword` method we see that flag characters are [XORed](https://en
 ### Write a Python decoder
 
 Let's write a small python script to re-create the flag
+
 ```python
 #!/usr/bin/python
 
@@ -93,6 +97,7 @@ print(f"picoCTF{{{result}}}")
 ### Get the flag
 
 Then we run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Vault-door-6]
 └─$ ./solve.py
@@ -103,5 +108,7 @@ For additional information, please see the references below.
 
 ## References
 
-- [Wikipedia - Exclusive or](https://en.wikipedia.org/wiki/Exclusive_or)
-- [Wikipedia - XOR cipher](https://en.wikipedia.org/wiki/XOR_cipher)
+- [Exclusive or - Wikipedia](https://en.wikipedia.org/wiki/Exclusive_or)
+- [Java (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Java_(programming_language))
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [XOR cipher - Wikipedia](https://en.wikipedia.org/wiki/XOR_cipher)

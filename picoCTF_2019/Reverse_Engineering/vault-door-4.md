@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 250
+
+```text
+Level: Medium
 Tags: picoCTF 2019, Reverse Engineering
 Author: MARK E. HAASE
 
@@ -19,11 +20,13 @@ Hints:
 1. Use a search engine to find an "ASCII table".
 2. You will also need to know the difference between octal, decimal, and hexadecimal numbers.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/71](https://play.picoctf.org/practice/challenge/71)
 
 ## Solutions
 
 The java source code looks like this
+
 ```java
 import java.util.*;
 
@@ -33,11 +36,11 @@ class VaultDoor4 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter vault password: ");
         String userInput = scanner.next();
-	String input = userInput.substring("picoCTF{".length(),userInput.length()-1);
-	if (vaultDoor.checkPassword(input)) {
-	    System.out.println("Access granted.");
-	} else {
-	    System.out.println("Access denied!");
+    String input = userInput.substring("picoCTF{".length(),userInput.length()-1);
+    if (vaultDoor.checkPassword(input)) {
+        System.out.println("Access granted.");
+    } else {
+        System.out.println("Access denied!");
         }
     }
 
@@ -80,6 +83,7 @@ Python understands hexadecimal numbers out-of-the-box if they are `0x`-prefixed.
 However, octal numbers needs to be `0o`-prefixed. So the third row of the `myBytes` values need to be fixed.
 
 Lets write a small python script to re-create the flag
+
 ```python
 #!/usr/bin/python
 
@@ -101,6 +105,7 @@ print(f"Flag: picoCTF{{{result}}}")
 ### Get the flag
 
 Then we run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Vault-door-4]
 └─$ ./decode.py
@@ -112,6 +117,8 @@ For additional information, please see the references below.
 ## References
 
 - [ASCII Table](https://www.ascii-code.com/)
-- [Wikipedia - ASCII](https://en.wikipedia.org/wiki/ASCII)
-- [Wikipedia - Hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal)
-- [Wikipedia - Octal](https://en.wikipedia.org/wiki/Octal)
+- [ASCII - Wikipedia](https://en.wikipedia.org/wiki/ASCII)
+- [Hexadecimal - Wikipedia](https://en.wikipedia.org/wiki/Hexadecimal)
+- [Java (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Java_(programming_language))
+- [Octal - Wikipedia](https://en.wikipedia.org/wiki/Octal)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))

@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 200
+
+```text
+Level: Medium
 Tags: picoCTF 2019, Reverse Engineering
 Author: MARK E. HAASE
 
@@ -18,11 +19,13 @@ The source code for this vault is here: VaultDoor3.java
 Hints:
 1. Make a table that contains each value of the loop variables and the corresponding buffer index that it writes to.
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/60](https://play.picoctf.org/practice/challenge/60)
 
 ## Solutions
 
 The source code looks like this
+
 ```java
 import java.util.*;
 
@@ -32,11 +35,11 @@ class VaultDoor3 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter vault password: ");
         String userInput = scanner.next();
-	String input = userInput.substring("picoCTF{".length(),userInput.length()-1);
-	if (vaultDoor.checkPassword(input)) {
-	    System.out.println("Access granted.");
-	} else {
-	    System.out.println("Access denied!");
+    String input = userInput.substring("picoCTF{".length(),userInput.length()-1);
+    if (vaultDoor.checkPassword(input)) {
+        System.out.println("Access granted.");
+    } else {
+        System.out.println("Access denied!");
         }
     }
 
@@ -73,6 +76,7 @@ class VaultDoor3 {
 In the `checkPassword` method we see that flag characters are scrambled out of order.
 
 Let's write a small python script to re-create the flag
+
 ```python
 #!/usr/bin/python
 
@@ -96,6 +100,7 @@ print(f"Flag: picoCTF{{{flag}}}")
 ```
 
 Then we run the script to get the flag
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Vault-door-3]
 └─$ ./decode.py
@@ -106,7 +111,9 @@ For additional information, please see the references below.
 
 ## References
 
+- [Java (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Java_(programming_language))
 - [Java String substring()](https://www.javatpoint.com/java-string-substring)
 - [Java String charAt()](https://www.javatpoint.com/java-string-charat)
 - [Java String length()](https://www.javatpoint.com/java-string-length)
 - [Java For Loop](https://www.javatpoint.com/java-for-loop)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))

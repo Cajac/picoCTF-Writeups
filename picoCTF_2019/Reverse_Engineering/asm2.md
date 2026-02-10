@@ -5,8 +5,9 @@
 - [References](#references)
 
 ## Challenge information
-```
-Points: 250
+
+```text
+Level: Hard
 Tags: picoCTF 2019, Reverse Engineering
 Author: SANJAY C
 
@@ -22,6 +23,7 @@ Source
 Hints:
 1. assembly conditions
 ```
+
 Challenge link: [https://play.picoctf.org/practice/challenge/16](https://play.picoctf.org/practice/challenge/16)
 
 ## Solutions
@@ -44,28 +46,30 @@ In this challenge we need to remember the general stack layout in 32-bit mode af
 |ebp+0x10|Parameter 3|
 
 Now, lets look at the assembly source of the `asm2` function
-```
+
+```text
 asm2:
-	<+0>:	push   ebp
-	<+1>:	mov    ebp,esp
-	<+3>:	sub    esp,0x10                     # Allocate space on stack
-	<+6>:	mov    eax,DWORD PTR [ebp+0xc]      # EAX = Param 2, that is 0x15
-	<+9>:	mov    DWORD PTR [ebp-0x4],eax      # Local Var 1 = EAX, that is 0x15
-	<+12>:	mov    eax,DWORD PTR [ebp+0x8]      # EAX = Param 1, that is 0xC
-	<+15>:	mov    DWORD PTR [ebp-0x8],eax      # Local Var 2 = EAX, that is 0xC
-	<+18>:	jmp    0x50c <asm2+31>              # Jump to <asm2+31>
-	<+20>:	add    DWORD PTR [ebp-0x4],0x1      # Local Var 1 += 1
-	<+24>:	add    DWORD PTR [ebp-0x8],0xaf     # Local Var 2 += 0xAF
-	<+31>:	cmp    DWORD PTR [ebp-0x8],0xa3d3   # Compare Local Var 2 and 0xa3d3
-	<+38>:	jle    0x501 <asm2+20>              # If Local Var 2 <= 0xa3d3 then jump to <asm2+20>
-	<+40>:	mov    eax,DWORD PTR [ebp-0x4]      # EAX = Local Var 1
-	<+43>:	leave  
-	<+44>:	ret   
+    <+0>:    push   ebp
+    <+1>:    mov    ebp,esp
+    <+3>:    sub    esp,0x10                     # Allocate space on stack
+    <+6>:    mov    eax,DWORD PTR [ebp+0xc]      # EAX = Param 2, that is 0x15
+    <+9>:    mov    DWORD PTR [ebp-0x4],eax      # Local Var 1 = EAX, that is 0x15
+    <+12>:   mov    eax,DWORD PTR [ebp+0x8]      # EAX = Param 1, that is 0xC
+    <+15>:   mov    DWORD PTR [ebp-0x8],eax      # Local Var 2 = EAX, that is 0xC
+    <+18>:   jmp    0x50c <asm2+31>              # Jump to <asm2+31>
+    <+20>:   add    DWORD PTR [ebp-0x4],0x1      # Local Var 1 += 1
+    <+24>:   add    DWORD PTR [ebp-0x8],0xaf     # Local Var 2 += 0xAF
+    <+31>:   cmp    DWORD PTR [ebp-0x8],0xa3d3   # Compare Local Var 2 and 0xa3d3
+    <+38>:   jle    0x501 <asm2+20>              # If Local Var 2 <= 0xa3d3 then jump to <asm2+20>
+    <+40>:   mov    eax,DWORD PTR [ebp-0x4]      # EAX = Local Var 1
+    <+43>:   leave  
+    <+44>:   ret   
 ```
 
 It it not obvious what the value of `EAX` it when the function returns.
 
 Lets create a small Python script that does the calculation for us
+
 ```python
 #!/usr/bin/python
 
@@ -75,11 +79,12 @@ LV2 = 0xC
 while (LV2 <= 0xA3D3):
     LV1 += 1
     LV2 += 0xAF
-	
+    
 print(hex(LV1))
 ```
 
 When we run it
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Asm2]
 └─$ ./asm2.py  
@@ -93,7 +98,8 @@ we see that the value is `0x105`.
 An alternative solution is to build, run and debug the code as in the [previous challenge](asm1.md).
 
 The re-worked assembly code looks like this
- ```
+
+```text
 .text 
     .code32
     .intel_syntax
@@ -121,14 +127,15 @@ The re-worked assembly code looks like this
         leave  
         ret    
 
-	_start:
+    _start:
         push   0x15
         push   0xC
         call   Asm2
         nop
- ```
+```
 
 Next, we assemble the file with `as`, link it with `ld` and verify the result with `file`
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Asm2]
 └─$ as -g --gstabs --32 -o asm2.o test_wrapper.s
@@ -142,6 +149,7 @@ asm2: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linke
 ```
 
 Now we start debugging with `gdb` and set a breakpoint at the `nop` instruction
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Asm2]
 └─$ gdb -q ./asm2
@@ -157,18 +165,19 @@ Dump of assembler code for function _start:
 End of assembler dump.
 gef➤  break *0x08049036
 Breakpoint 1 at 0x8049036: file test_wrapper.s, line 32.
-
 ```
 
 In case you are wondering about the prompt, I have [GEF (GDB Enhanced Features)](https://github.com/hugsy/gef) installed.
 
 Time to execute the program
+
 ```bash
 gef➤  run
 ```
 
 GEF will automatically show us the status of the registers after the breakpoint is hit:
-```
+
+```text
 [ Legend: Modified register | Code | Heap | Stack | String ]
 ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── registers ────
 $eax   : 0x105     
@@ -203,10 +212,18 @@ For additional information, please see the references below.
 
 ## References
 
-- [x86 Assembly Guide](https://www.cs.virginia.edu/~evans/cs216/guides/x86.html)
+- [as - Linux manual page](https://man7.org/linux/man-pages/man1/as.1.html)
 - [Assembly - Conditions](https://www.tutorialspoint.com/assembly_programming/assembly_conditions.htm)
 - [AT&T Syntax versus Intel Syntax](https://www.cs.mcgill.ca/~cs573/winter2001/AttLinux_syntax.htm)
-- [Intel 64 and IA-32 Architectures Software Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
-- [as - Linux manual page](https://man7.org/linux/man-pages/man1/as.1.html)
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
 - [gdb - Linux manual page](https://man7.org/linux/man-pages/man1/gdb.1.html)
+- [GDB (The GNU Project Debugger) - Documentation](https://sourceware.org/gdb/documentation/)
+- [GDB (The GNU Project Debugger) - Homepage](https://sourceware.org/gdb/)
+- [GEF (GDB Enhanced Features) - Documentation](https://hugsy.github.io/gef/)
+- [GEF (GDB Enhanced Features) - GitHub](https://github.com/hugsy/gef)
+- [Intel 64 and IA-32 Architectures Software Developer Manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
 - [ld - Linux manual page](https://man7.org/linux/man-pages/man1/ld.1.html)
+- [x86 - Wikipedia](https://en.wikipedia.org/wiki/X86)
+- [x86 Assembly Guide](https://www.cs.virginia.edu/~evans/cs216/guides/x86.html)
+- [x86 assembly language - Wikipedia](https://en.wikipedia.org/wiki/X86_assembly_language)
+- [x86 instruction listings - Wikipedia](https://en.wikipedia.org/wiki/X86_instruction_listings)
