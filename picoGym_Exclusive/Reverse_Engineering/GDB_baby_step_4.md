@@ -9,6 +9,7 @@
 ```text
 Level: Medium
 Tags: picoGym Exclusive, Reverse Engineering, X86_64
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
 
 Description:

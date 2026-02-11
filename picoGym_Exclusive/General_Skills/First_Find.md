@@ -9,6 +9,7 @@
 ```text
 Level: Easy
 Tags: picoGym Exclusive, General Skills
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
 
 Description:

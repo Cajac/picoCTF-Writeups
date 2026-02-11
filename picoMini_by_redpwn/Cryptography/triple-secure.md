@@ -9,6 +9,7 @@
 ```text
 Level: Hard
 Tags: picoMini by redpwn, Cryptography
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: BOOLEAN
 
 Description:

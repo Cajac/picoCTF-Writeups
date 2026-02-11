@@ -9,6 +9,7 @@
 ```text
 Level: Medium
 Tags: picoMini by redpwn, Forensics
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: BIGC
 
 Description:

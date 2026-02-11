@@ -9,6 +9,7 @@
 ```text
 Level: Medium
 Tags: picoGym Exclusive, Forensics
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MISTRESSVAMPY
 
 Description:

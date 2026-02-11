@@ -9,6 +9,7 @@
 ```text
 Level: Hard
 Tags: picoMini by redpwn, Reverse Engineering
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: ASPHYXIA
 
 Description:
@@ -674,7 +675,7 @@ Get the full flag with
 
 ```text
 gef➤  x/s $rdi
-0x7fffffffdcb0: "picoCTF{c0mp1l3r_0pt1m1z4t10n_15_pur3_<REDACTED>}\n"
+0x7fffffffdcb0: "picoCTF{c0mp1l3r_0pt1m1z4t10n_<REDACTED>}\n"
 ```
 
 For additional information, please see the references below.
