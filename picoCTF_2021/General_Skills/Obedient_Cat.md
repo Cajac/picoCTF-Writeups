@@ -9,6 +9,7 @@
 ```text
 Level: Easy
 Tags: picoCTF 2021, General Skills
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
   
 Description:

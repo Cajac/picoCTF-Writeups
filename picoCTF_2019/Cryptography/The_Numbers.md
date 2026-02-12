@@ -9,6 +9,7 @@
 ```text
 Level: Easy
 Tags: picoCTF 2019, Cryptography
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: PANDU
 
 Description:

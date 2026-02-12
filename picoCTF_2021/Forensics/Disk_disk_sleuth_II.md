@@ -10,6 +10,7 @@
 ```text
 Level: Medium
 Tags: picoCTF 2021, Forensics
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
  
 Description:

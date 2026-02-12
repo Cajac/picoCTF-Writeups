@@ -9,6 +9,7 @@
 ```text
 Level: Easy
 Tags: picoCTF 2019, Forensics
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author:  JEDAVIS/DANNY
 
 Description:

@@ -9,6 +9,7 @@
 ```text
 Level: Easy
 Tags: picoCTF 2019, Reverse Engineering
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MARK E. HAASE
 
 Description:

@@ -9,6 +9,7 @@
 ```text
 Level: Hard
 Tags: picoCTF 2021, Cryptography
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MADSTACKS
 
 Description:

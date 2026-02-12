@@ -9,6 +9,7 @@
 ```text
 Level: Medium
 Tags: picoCTF 2019, Cryptography
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: INVISIBILITY/DANNY
 
 Description:

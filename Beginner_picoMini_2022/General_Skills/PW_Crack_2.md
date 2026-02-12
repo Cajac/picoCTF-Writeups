@@ -9,6 +9,7 @@
 ```text
 Level: Easy
 Tags: Beginner picoMini 2022, General Skills, password_cracking
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
   
 Description:

@@ -9,6 +9,7 @@
 ```text
 Level: Hard
 Tags: picoCTF 2021, Reverse Engineering
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: DYLAN MCGUIRE
 
 Description:

@@ -9,6 +9,7 @@
 ```text
 Level: Easy
 Tags: Beginner picoMini 2022, General Skills, base, Python
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
 
 Description:

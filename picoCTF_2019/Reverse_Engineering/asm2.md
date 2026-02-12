@@ -9,6 +9,7 @@
 ```text
 Level: Hard
 Tags: picoCTF 2019, Reverse Engineering
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SANJAY C
 
 Description:

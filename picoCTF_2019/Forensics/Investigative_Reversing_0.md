@@ -9,6 +9,7 @@
 ```text
 Level: Hard
 Tags: picoCTF 2019, Forensics
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: DANNY TUNITIS
 
 Description:

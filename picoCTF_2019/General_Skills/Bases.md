@@ -9,6 +9,7 @@
 ```text
 Level: Easy
 Tags: picoCTF 2019, General Skills
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SANJAY C/DANNY T
 
 Description:
