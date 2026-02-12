@@ -9,6 +9,7 @@
 ```text
 Level: Medium
 Tags: picoCTF 2023, General Skills, bash, ssh
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES, ET AL.
 
 Description:

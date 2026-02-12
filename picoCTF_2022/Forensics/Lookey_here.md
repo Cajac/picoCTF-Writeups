@@ -9,6 +9,7 @@
 ```text
 Level: Medium
 Tags: picoCTF 2022, Forensics, grep
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES / MUBARAK MIKAIL
 
 Description:

@@ -9,6 +9,7 @@
 ```text
 Level: Easy
 Tags: picoCTF 2023, General Skills, base64
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: THEONESTE BYAGUTANGAZA
 
 Description:

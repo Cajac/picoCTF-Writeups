@@ -9,6 +9,7 @@
 ```text
 Level: Medium
 Tags: picoCTF 2022, Reverse Engineering, obfuscation
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
 
 Description:

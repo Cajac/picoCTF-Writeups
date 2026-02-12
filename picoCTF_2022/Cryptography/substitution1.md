@@ -9,6 +9,7 @@
 ```text
 Level: Medium
 Tags: picoCTF 2022, Cryptography, Substitution_cipher
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: WILL HONG
  
 Description:

@@ -10,6 +10,7 @@
 ```text
 Level: Medium
 Tags: picoCTF 2023, Cryptography
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LOIC SHEMA
  
 Description:

@@ -12,6 +12,7 @@
 ```text
 Level: Medium
 Tags: picoCTF 2023, Forensics, steganography
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
 
 Description:

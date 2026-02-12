@@ -9,6 +9,7 @@
 ```text
 Level: Medium
 Tags: picoCTF 2022, Forensics
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: GEOFFREY NJOGU
  
 Description:
