@@ -9,6 +9,7 @@
 ```text
 Level: Easy
 Tags: Reverse Engineering, picoCTF 2025, browser_webshell_solvable
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
  
 Description:

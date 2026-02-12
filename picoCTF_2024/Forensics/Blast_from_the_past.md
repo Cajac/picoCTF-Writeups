@@ -9,6 +9,7 @@
 ```text
 Level: Medium
 Tags: Forensics, picoCTF 2024, browser_webshell_solvable, metadata
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
 
 Description:

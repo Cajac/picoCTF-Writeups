@@ -9,6 +9,7 @@
 ```text
 Level: Easy
 Tags: picoCTF 2024, Forensics, grep, browser_webshell_solvable, checksum
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: JEFFERY JOHN
 
 Description:

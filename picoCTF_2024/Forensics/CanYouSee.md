@@ -9,6 +9,7 @@
 ```text
 Level: Easy
 Tags: picoCTF 2024, Forensics, browser_webshell_solvable
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MUBARAK MIKAIL
 
 Description:

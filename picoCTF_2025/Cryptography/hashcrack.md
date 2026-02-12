@@ -9,6 +9,7 @@
 ```text
 Level: Easy
 Tags: Cryptography, picoCTF 2025, browser_webshell_solvable
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: Nana Ama Atombo-Sackey
  
 Description:

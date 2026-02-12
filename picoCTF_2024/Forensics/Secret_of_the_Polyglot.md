@@ -9,6 +9,7 @@
 ```text
 Level: Easy
 Tags: picoCTF 2024, Forensics, file_format, polyglot
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
 
 Description:

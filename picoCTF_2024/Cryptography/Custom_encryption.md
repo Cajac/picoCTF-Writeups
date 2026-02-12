@@ -9,6 +9,7 @@
 ```text
 Level: Easy
 Tags: picoCTF 2024, Cryptography, browser_webshell_solvable, ASCII_encoding, XOR
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: NGIRIMANA SCHADRACK
  
 Description:

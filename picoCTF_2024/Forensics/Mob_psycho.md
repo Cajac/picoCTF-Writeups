@@ -9,6 +9,7 @@
 ```text
 Level: Medium
 Tags: picoCTF 2024, Forensics, browser_webshell_solvable, apk
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: NGIRIMANA SCHADRACK
 
 Description:

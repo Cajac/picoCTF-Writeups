@@ -9,6 +9,7 @@
 ```text
 Level: Easy
 Tags: General Skills, picoCTF 2025
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: Taylor McCampbell
 
 Description:

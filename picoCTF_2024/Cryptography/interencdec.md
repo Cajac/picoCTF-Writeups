@@ -9,6 +9,7 @@
 ```text
 Level: Easy
 Tags: picoCTF 2024, Cryptography, base64, browser_webshell_solvable, caesar
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: NGIRIMANA SCHADRACK
  
 Description:

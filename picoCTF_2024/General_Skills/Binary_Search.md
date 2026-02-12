@@ -9,6 +9,7 @@
 ```text
 Level: Easy
 Tags: picoCTF 2024, General Skills, shell, browser_webshell_solvable, ls
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: JEFFERY JOHN
 
 Description:

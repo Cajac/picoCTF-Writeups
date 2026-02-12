@@ -9,6 +9,7 @@
 ```text
 Level: Medium
 Tags: General Skills, picoCTF 2024, shell, browser_webshell_solvable
+Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LOIC SHEMA / SYREAL
 
 Description:
