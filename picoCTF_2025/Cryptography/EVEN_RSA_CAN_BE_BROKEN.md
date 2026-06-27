@@ -157,6 +157,8 @@ Alternatively, we can solve the challenge with [dcode.fr's RSA Cipher decoder](h
 
 Just enter the information we get from the program (N, e and the cyphertext), leave the rest of the settings as-is and press `Calculate/Decrypt` to get the flag.
 
+![Dcode Solution](Images/Dcode_Solution.png)
+
 For additional information, please see the references below.
 
 ## References
