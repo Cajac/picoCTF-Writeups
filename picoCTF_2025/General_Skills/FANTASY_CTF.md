@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 10
 Tags: General Skills, picoCTF 2025, browser_webshell_solvable
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
@@ -24,7 +25,7 @@ Hints:
    c and then press Enter.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/471](https://play.picoctf.org/practice/challenge/471)
+Challenge link: [https://learn.cylabacademy.org/library/471](https://learn.cylabacademy.org/library/471)
 
 ## Solution
 

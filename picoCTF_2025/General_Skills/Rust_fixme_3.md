@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 100
 Tags: General Skills, picoCTF 2025
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: Taylor McCampbell
@@ -20,7 +21,7 @@ Hints:
 1. Read the comments...darn it!
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/463](https://play.picoctf.org/practice/challenge/463)
+Challenge link: [https://learn.cylabacademy.org/library/463](https://learn.cylabacademy.org/library/463)
 
 ## Solution
 

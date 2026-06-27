@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 50
 Tags: Forensics, picoCTF 2025, browser_webshell_solvable
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: Prince Niyonshuti N.
@@ -29,7 +30,7 @@ Hints:
 3. Time is essential
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/459](https://play.picoctf.org/practice/challenge/459)
+Challenge link: [https://learn.cylabacademy.org/library/459](https://learn.cylabacademy.org/library/459)
 
 ## Solution
 

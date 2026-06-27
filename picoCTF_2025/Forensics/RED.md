@@ -9,6 +9,7 @@
 
 ```text
 Level: Easy
+Points: 100
 Tags: Forensics, picoCTF 2025, browser_webshell_solvable
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: Shuailin Pan (LeConjuror)
@@ -23,7 +24,7 @@ Hints:
 3. Check whatever Facebook is called now.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/460](https://play.picoctf.org/practice/challenge/460)
+Challenge link: [https://learn.cylabacademy.org/library/460](https://learn.cylabacademy.org/library/460)
 
 ## Python Solution
 

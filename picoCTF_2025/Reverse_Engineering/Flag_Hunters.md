@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 75
 Tags: Reverse Engineering, picoCTF 2025, browser_webshell_solvable
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
@@ -27,7 +28,7 @@ Hints:
 3. Is there any syntax that is ripe for subversion?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/472](https://play.picoctf.org/practice/challenge/472)
+Challenge link: [https://learn.cylabacademy.org/library/472](https://learn.cylabacademy.org/library/472)
 
 ## Solution
 

@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 100
 Tags: General Skills, picoCTF 2025
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: Taylor McCampbell
@@ -20,7 +21,7 @@ Hints:
 1. https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/462](https://play.picoctf.org/practice/challenge/462)
+Challenge link: [https://learn.cylabacademy.org/library/462](https://learn.cylabacademy.org/library/462)
 
 ## Solution
 

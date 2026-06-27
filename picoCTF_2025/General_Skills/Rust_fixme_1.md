@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 100
 Tags: General Skills, picoCTF 2025
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: Taylor McCampbell
@@ -23,7 +24,7 @@ Hints:
 3. Rust has some pretty great compiler error messages. Read them maybe?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/461](https://play.picoctf.org/practice/challenge/461)
+Challenge link: [https://learn.cylabacademy.org/library/461](https://learn.cylabacademy.org/library/461)
 
 ## Solution
 

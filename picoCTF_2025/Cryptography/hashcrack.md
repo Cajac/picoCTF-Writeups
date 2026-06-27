@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 100
 Tags: Cryptography, picoCTF 2025, browser_webshell_solvable
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: Nana Ama Atombo-Sackey
@@ -23,7 +24,7 @@ Hints:
 3. Tried using any hash cracking tools?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/475](https://play.picoctf.org/practice/challenge/475)
+Challenge link: [https://learn.cylabacademy.org/library/475](https://learn.cylabacademy.org/library/475)
 
 ## Solution
 
