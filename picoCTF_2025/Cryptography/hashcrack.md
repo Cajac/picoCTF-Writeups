@@ -44,6 +44,8 @@ Enter the password for identified hash:
 Before starting to crack the hash let's see if it is already known by [CrackStation](https://crackstation.net/).  
 And it is - the corresponding password for the MD5 hash is `password123`.
 
+![Crackstation](Images/Crackstation.png)
+
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2025/Cryptography/hashcrack]
 └─$ nc verbal-sleep.picoctf.net 51759
