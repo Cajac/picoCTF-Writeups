@@ -2,7 +2,11 @@
 
 ![picoCTF Logo](picoctf_logo.png)
 
-Welcome to [my](https://play.picoctf.org/users/Cajac) writeups for [picoCTF](https://play.picoctf.org/login) challenges.
+Welcome to [my](https://learn.cylabacademy.org/users/Cajac) writeups for [picoCTF](https://learn.cylabacademy.org/login) challenges.
+
+In May 2026 the web site rebranded and is now called **CyLab Security Academy**.
+
+![CyLab Security Academy](CyLab_Sec_Academy.png)
 
 These writeups are mainly a documentation for myself but I hope others will benefit from them as well.
 
