@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 100
 Tags: picoCTF 2024, Forensics, file_format, polyglot
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
@@ -24,7 +25,7 @@ Hints:
 1. This problem can be solved by just opening the file in different ways
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/423](https://play.picoctf.org/practice/challenge/423)
+Challenge link: [https://learn.cylabacademy.org/library/423](https://learn.cylabacademy.org/library/423)
 
 ## Solution
 

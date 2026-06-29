@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 100
 Tags: picoCTF 2024, Reverse Engineering, browser_webshell_solvable
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MUBARAK MIKAIL
@@ -20,7 +21,7 @@ Hints:
 1. What can we do to reduce the size of a binary after compiling it.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/421](https://play.picoctf.org/practice/challenge/421)
+Challenge link: [https://learn.cylabacademy.org/library/421](https://learn.cylabacademy.org/library/421)
 
 ## Solution
 
@@ -124,7 +125,7 @@ The python way
 b'picoCTF{<REDACTED>}'
 ```
 
-and the xxd way
+or the xxd way
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Reverse_Engineering/packer]

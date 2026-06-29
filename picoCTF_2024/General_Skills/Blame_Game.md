@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 75
 Tags: picoCTF 2024, General Skills, browser_webshell_solvable, git
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: JEFFERY JOHN
@@ -26,7 +27,7 @@ Hints:
    to for this challenge.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/405](https://play.picoctf.org/practice/challenge/405)
+Challenge link: [https://learn.cylabacademy.org/library/405](https://learn.cylabacademy.org/library/405)
 
 ## Solution
 

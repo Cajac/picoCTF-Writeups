@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 100
 Tags: picoCTF 2024, Cryptography, browser_webshell_solvable, ASCII_encoding, XOR
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: NGIRIMANA SCHADRACK
@@ -23,7 +24,7 @@ Hints:
 1. Understanding encryption algorithm to come up with decryption algorithm.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/412](https://play.picoctf.org/practice/challenge/412)
+Challenge link: [https://learn.cylabacademy.org/library/412](https://learn.cylabacademy.org/library/412)
 
 ## Solution
 
@@ -194,3 +195,4 @@ For additional information, please see the references below.
 - [ASCII - Wikipedia](https://en.wikipedia.org/wiki/ASCII)
 - [Exclusive or - Wikipedia](https://en.wikipedia.org/wiki/Exclusive_or)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [XOR cipher - Wikipedia](https://en.wikipedia.org/wiki/XOR_cipher)

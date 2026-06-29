@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 100
 Tags: picoCTF 2024, General Skills, browser_webshell_solvable
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: NANA AMA ATOMBO-SACKEY
@@ -21,7 +22,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/404](https://play.picoctf.org/practice/challenge/404)
+Challenge link: [https://learn.cylabacademy.org/library/404](https://learn.cylabacademy.org/library/404)
 
 ## Solution
 

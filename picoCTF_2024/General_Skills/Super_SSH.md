@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 25
 Tags: picoCTF 2024, General Skills, shell, ssh, browser_webshell_solvable
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: JEFFERY JOHN
@@ -28,7 +29,7 @@ Hints:
 4. Remember, passwords are hidden when typed into the shell
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/424](https://play.picoctf.org/practice/challenge/424)
+Challenge link: [https://learn.cylabacademy.org/library/424](https://learn.cylabacademy.org/library/424)
 
 ## Solution
 

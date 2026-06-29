@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 50
 Tags: picoCTF 2024, Forensics, grep, browser_webshell_solvable, checksum
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: JEFFERY JOHN
@@ -37,7 +38,7 @@ Hints:
    Try practicing with the 'First Grep' challenge if you're stuck!
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/450](https://play.picoctf.org/practice/challenge/450)
+Challenge link: [https://learn.cylabacademy.org/library/450](https://learn.cylabacademy.org/library/450)
 
 ## Solution
 
@@ -75,7 +76,6 @@ We have a lot of files. Let's search for the given [hash](https://en.wikipedia.o
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Verify]
 └─$ cat home/ctf-player/drop-in/files/c6c8b911
 Salted__���05�.Q�+�P��&pE�?B�{M:��e�Wm�a4Wua��l�5�yU!����NA�
-
 ```
 
 The file is encrypted.

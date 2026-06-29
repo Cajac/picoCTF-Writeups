@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 100
 Tags: picoCTF 2024, Forensics, browser_webshell_solvable
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MUBARAK MIKAIL
@@ -22,7 +23,7 @@ Hints:
 2. If something isn't in the expected form, maybe it deserves attention?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/408](https://play.picoctf.org/practice/challenge/408)
+Challenge link: [https://learn.cylabacademy.org/library/408](https://learn.cylabacademy.org/library/408)
 
 ## Solution
 
@@ -39,7 +40,6 @@ Archive:  unknown.zip
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/CanYouSee]
 └─$ file ukn_reality.jpg 
 ukn_reality.jpg: JPEG image data, JFIF standard 1.01, resolution (DPI), density 72x72, segment length 16, baseline, precision 8, 4308x2875, components 3
-
 ```
 
 We have a JPEG-file. Use a tool such as `eog` of `feh` to view it on Linux.

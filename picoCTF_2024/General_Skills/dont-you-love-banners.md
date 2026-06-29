@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 300
 Tags: General Skills, picoCTF 2024, shell, browser_webshell_solvable
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LOIC SHEMA / SYREAL
@@ -26,7 +27,7 @@ Hints:
 2. Maybe some small password cracking or guessing
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/437](https://play.picoctf.org/practice/challenge/437)
+Challenge link: [https://learn.cylabacademy.org/library/437](https://learn.cylabacademy.org/library/437)
 
 ## Solution
 
@@ -39,7 +40,6 @@ We begin by connecting to the leaky service
 └─$ nc tethys.picoctf.net 61669
 SSH-2.0-OpenSSH_7.6p1 My_Passw@rd_@1234
 ^C
-
 ```
 
 We get a possible password (`My_Passw@rd_@1234`) in the OpenSSH banner.

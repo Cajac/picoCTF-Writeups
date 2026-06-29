@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 50
 Tags: picoCTF 2024, General Skills, browser_webshell_solvable, git
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: JEFFERY JOHN
@@ -24,7 +25,7 @@ Hints:
 3. You can 'checkout' commits to see the files inside them
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/411](https://play.picoctf.org/practice/challenge/411)
+Challenge link: [https://learn.cylabacademy.org/library/411](https://learn.cylabacademy.org/library/411)
 
 ## Solution
 

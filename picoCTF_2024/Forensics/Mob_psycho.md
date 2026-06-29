@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 200
 Tags: picoCTF 2024, Forensics, browser_webshell_solvable, apk
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: NGIRIMANA SCHADRACK
@@ -22,7 +23,7 @@ Hints:
 2. Now you have the whole host of shell tools for searching these files.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/420](https://play.picoctf.org/practice/challenge/420)
+Challenge link: [https://learn.cylabacademy.org/library/420](https://learn.cylabacademy.org/library/420)
 
 ## Solution
 

@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 200
 Tags: picoCTF 2024, Reverse Engineering, browser_webshell_solvable
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: JUNIAS BONOU
@@ -22,7 +23,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/416](https://play.picoctf.org/practice/challenge/416)
+Challenge link: [https://learn.cylabacademy.org/library/416](https://learn.cylabacademy.org/library/416)
 
 ## Solution
 
@@ -287,7 +288,7 @@ corresponds to a character. You can double-click on the memory reference (`DAT_0
   std::allocator<char>::~allocator(&local_249);
 ```
 
-Then we rename the corresponding local_variable to the same name. E.g. `local_208` shold be renamed (`Rename Variable`) to `char_3`. If you get `duplicate name` errors, shorten one of the names to `chr_X` instead. We now have
+Then we rename the corresponding local_variable to the same name. E.g. `local_208` should be renamed (`Rename Variable`) to `char_3`. If you get `duplicate name` errors, shorten one of the names to `chr_X` instead. We now have
 
 ```text
                     /* try { // try from 0010130a to 0010130e has its CatchHandler @ 00101996 */

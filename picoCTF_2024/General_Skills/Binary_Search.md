@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 100
 Tags: picoCTF 2024, General Skills, shell, browser_webshell_solvable, ls
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: JEFFERY JOHN
@@ -37,7 +38,7 @@ Hints:
    Can you think of why?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/442](https://play.picoctf.org/practice/challenge/442)
+Challenge link: [https://learn.cylabacademy.org/library/442](https://learn.cylabacademy.org/library/442)
 
 ## Solution
 

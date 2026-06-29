@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 50
 Tags: picoCTF 2024, Forensics, shell, browser_webshell_solvable, qr_code
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: JEFFERY JOHN
@@ -30,7 +31,7 @@ Hints:
 3. If you don't have access to a phone, you can also use zbar-tools to convert an image to text
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/444](https://play.picoctf.org/practice/challenge/444)
+Challenge link: [https://learn.cylabacademy.org/library/444](https://learn.cylabacademy.org/library/444)
 
 ## Solution
 
@@ -74,3 +75,4 @@ For additional information, please see the references below.
 
 - [PNG - Wikipedia](https://en.wikipedia.org/wiki/PNG)
 - [QR code - Wikipedia](https://en.wikipedia.org/wiki/QR_code)
+- [zbarimg - Linux manual page](https://linux.die.net/man/1/zbarimg)

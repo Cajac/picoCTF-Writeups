@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 50
 Tags: picoCTF 2024, General Skills, browser_webshell_solvable, git
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: JEFFERY JOHN
@@ -24,7 +25,7 @@ Hints:
 3. When committing a file with git, a message can (and should) be included.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/425](https://play.picoctf.org/practice/challenge/425)
+Challenge link: [https://learn.cylabacademy.org/library/425](https://learn.cylabacademy.org/library/425)
 
 ## Solution
 

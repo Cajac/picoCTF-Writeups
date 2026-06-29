@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 75
 Tags: picoCTF 2024, General Skills, browser_webshell_solvable, git
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: JEFFERY JOHN
@@ -25,7 +26,7 @@ Hints:
 3. Merge conflicts can be tricky! Try a text editor like nano, emacs, or vim.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/410](https://play.picoctf.org/practice/challenge/410)
+Challenge link: [https://learn.cylabacademy.org/library/410](https://learn.cylabacademy.org/library/410)
 
 ## Solution
 

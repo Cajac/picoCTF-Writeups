@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 400
 Tags: General Skills, picoCTF 2024, bash, ssh, browser_webshell_solvable, shell_escape
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LOIC SHEMA / SYREAL
@@ -23,7 +24,7 @@ Hints:
 1. Where can you get some letters?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/436](https://play.picoctf.org/practice/challenge/436)
+Challenge link: [https://learn.cylabacademy.org/library/436](https://learn.cylabacademy.org/library/436)
 
 ## Solution
 

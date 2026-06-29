@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 50
 Tags: picoCTF 2024, Cryptography, base64, browser_webshell_solvable, caesar
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: NGIRIMANA SCHADRACK
@@ -21,7 +22,7 @@ Hints:
 1. Engaging in various decoding processes is of utmost importance
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/418](https://play.picoctf.org/practice/challenge/418)
+Challenge link: [https://learn.cylabacademy.org/library/418](https://learn.cylabacademy.org/library/418)
 
 ## Solution
 

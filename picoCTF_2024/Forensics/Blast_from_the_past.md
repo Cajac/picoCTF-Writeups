@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 300
 Tags: Forensics, picoCTF 2024, browser_webshell_solvable, metadata
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
@@ -37,7 +38,7 @@ Hints:
 1. Exiftool is really good at reading metadata, but you might want to use something else to modify it.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/432](https://play.picoctf.org/practice/challenge/432)
+Challenge link: [https://learn.cylabacademy.org/library/432](https://learn.cylabacademy.org/library/432)
 
 ## Solution
 

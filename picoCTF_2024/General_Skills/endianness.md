@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 200
 Tags: picoCTF 2024, General Skills, browser_webshell_solvable
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: NANA AMA ATOMBO-SACKEY
@@ -26,7 +27,7 @@ Hints:
    https://levelup.gitconnected.com/little-endian-and-big-endian-74ab6441b2a7
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/414](https://play.picoctf.org/practice/challenge/414)
+Challenge link: [https://learn.cylabacademy.org/library/414](https://learn.cylabacademy.org/library/414)
 
 ## Solution
 
@@ -117,7 +118,7 @@ int main()
 }  
 ```
 
-We can see that in summaty `main` does the following:
+We can see that in summary `main` does the following:
 
 - Generates a random word and prints it to the screen
 - Asks for both the little and big [endian](https://en.wikipedia.org/wiki/Endianness) version of the word
