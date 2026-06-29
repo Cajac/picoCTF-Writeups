@@ -30,6 +30,18 @@ In total you will find more than 250 challenge solutions here.
 The solutions contains step-by-step walkthroughs but doesn't display the flags in plain text.  
 Instead the flags are displayd as `picoCTF{<REDACTED>}` or with just some portion of the flag visible.
 
+## When to use
+
+These solutions can be used in two different scenarios:
+
+**Scenario #1**:  
+When you are stuck, have already tried different solutions on your own, and don't know how to continue.  
+Don't look at them to soon though. It's always good to develop your ["Try harder"-mindset](https://www.offsec.com/blog/what-it-means-to-try-harder/)!
+
+**Scenario #2**:  
+When you have already solved the challenge on your own but what to see if you can learn different methods, tools or approaches.  
+Are there different and perhaps smarter ways to solve the challenge?
+
 ## Support my work
 
 If you appreciate this repository and learn from it, please consider [giving it a star](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars#starring-a-repository) to support it and spread the word.
