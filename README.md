@@ -23,7 +23,7 @@ In total you will find more than 250 challenge solutions here.
 - [picoCTF 2021 Challenges](picoCTF_2021/README.md)
 - [picoCTF 2020 Mini-Competition Challenges](picoCTF_2020/README.md)
 - [picoCTF 2019 Challenges](picoCTF_2019/README.md)
-- [picoGym Exclusive Challenges](picoGym_Exclusive/README.md)
+- [Challenge Library Exclusive](Challenge_Library_Exclusive/README.md)
 
 ## No spoilers
 

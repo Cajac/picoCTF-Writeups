@@ -8,7 +8,8 @@
 
 ```text
 Level: Medium
-Tags: picoGym Exclusive, Reverse Engineering, X86_64
+Points: 100
+Tags: Challenge Library Exclusive, Reverse Engineering, X86_64
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
 
@@ -27,7 +28,7 @@ Hints:
  5. What is endianness?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/397](https://play.picoctf.org/practice/challenge/397)
+Challenge link: [https://learn.cylabacademy.org/library/397](https://learn.cylabacademy.org/library/397)
 
 ## Solution
 

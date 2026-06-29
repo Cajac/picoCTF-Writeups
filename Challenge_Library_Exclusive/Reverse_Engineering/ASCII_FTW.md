@@ -8,7 +8,8 @@
 
 ```text
 Level: Medium
-Tags: picoGym Exclusive, Reverse Engineering
+Points: 100
+Tags: Challenge Library Exclusive, Reverse Engineering
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
 
@@ -20,7 +21,7 @@ Hints:
 2. Online hex-ascii converters can be helpful.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/389](https://play.picoctf.org/practice/challenge/389)
+Challenge link: [https://learn.cylabacademy.org/library/389](https://learn.cylabacademy.org/library/389)
 
 ## Solution
 

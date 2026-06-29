@@ -9,7 +9,8 @@
 
 ```text
 Level: Medium
-Tags: picoGym Exclusive, Reverse Engineering, X86_64
+Points: 100
+Tags: Challenge Library Exclusive, Reverse Engineering, X86_64
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
 
@@ -24,7 +25,7 @@ Hints:
 2. main is actually a recognized symbol that can be used with gdb commands.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/395](https://play.picoctf.org/practice/challenge/395)
+Challenge link: [https://learn.cylabacademy.org/library/395](https://learn.cylabacademy.org/library/395)
 
 ## GDB Solution
 
@@ -109,7 +110,6 @@ Disassembly of section .text:
     113e:       c3                      ret
 
 Disassembly of section .fini:
-
 ```
 
 ## References

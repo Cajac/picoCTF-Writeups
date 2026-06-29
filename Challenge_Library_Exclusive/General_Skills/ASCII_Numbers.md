@@ -1,14 +1,16 @@
 # ASCII Numbers
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [CyberChef Solution](#cyberchef-solution)
+- [Python Solution](#python-solution)
 - [References](#references)
 
 ## Challenge information
 
 ```text
 Level: Medium
-Tags: picoGym Exclusive, General Skills
+Points: 100
+Tags: Challenge Library Exclusive, General Skills
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
 
@@ -21,13 +23,19 @@ Hints:
 2. Try CyberChef's 'From Hex' function
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/390](https://play.picoctf.org/practice/challenge/390)
+Challenge link: [https://learn.cylabacademy.org/library/390](https://learn.cylabacademy.org/library/390)
 
-## Solution
+## CyberChef Solution
 
-This challenge can easily be solved with [CyberChef's 'From Hex' recipe](https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')) but that's no fun.
+This challenge can easily be solved with [CyberChef's 'From Hex' recipe](https://gchq.github.io/CyberChef/#recipe=From_Hex('Auto')):
 
-Let's write a python script called `solve.py` instead. The script uses both [lambda](https://docs.python.org/3/reference/expressions.html#lambda) and [map](https://docs.python.org/3/library/functions.html#map) functions.
+![CyberChef Solution](Images/CyberChef_Solution.png)
+
+## Python Solution
+
+We can also write a small python script to solve it.
+
+The script uses both [lambda](https://docs.python.org/3/reference/expressions.html#lambda) and [map](https://docs.python.org/3/library/functions.html#map) functions.
 
 ```python
 #!/usr/bin/python
@@ -62,5 +70,8 @@ For additional information, please see the references below.
 - [chr function - Python](https://docs.python.org/3/library/functions.html#chr)
 - [CyberChef - GitHub](https://github.com/gchq/CyberChef)
 - [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
+- [join - string method - Python Docs](https://docs.python.org/3/library/stdtypes.html#str.join)
 - [lambda expression - Python](https://docs.python.org/3/reference/expressions.html#lambda)
 - [map function - Python](https://docs.python.org/3/library/functions.html#map)
+- [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [split - string method - Python Docs](https://docs.python.org/3/library/stdtypes.html#str.split)

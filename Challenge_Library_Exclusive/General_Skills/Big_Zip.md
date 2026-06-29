@@ -8,7 +8,8 @@
 
 ```text
 Level: Easy
-Tags: picoGym Exclusive, General Skills
+Points: 100
+Tags: Challenge Library Exclusive, General Skills
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
 
@@ -19,11 +20,11 @@ Hints:
 1. Can grep be instructed to look at every file in a directory and its subdirectories?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/322](https://play.picoctf.org/practice/challenge/322)
+Challenge link: [https://learn.cylabacademy.org/library/322](https://learn.cylabacademy.org/library/322)
 
 ## Solution
 
-Unzip the file
+We start by unzipping the file
 
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoGym/General_Skills/Big_Zip]

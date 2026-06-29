@@ -1,4 +1,4 @@
-# picoGym Exclusive Challenges
+# Challenge Library Exclusive
 
 ## Binary Exploitation Challenges
 

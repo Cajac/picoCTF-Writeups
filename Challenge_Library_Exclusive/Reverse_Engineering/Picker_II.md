@@ -8,7 +8,8 @@
 
 ```text
 Level: Medium
-Tags: picoGym Exclusive, Reverse Engineering, Python
+Points: 100
+Tags: Challenge Library Exclusive, Reverse Engineering, Python
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
 
@@ -22,7 +23,7 @@ Hints:
  1. Can you do what win does with your input to the program?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/401](https://play.picoctf.org/practice/challenge/401)
+Challenge link: [https://learn.cylabacademy.org/library/401](https://learn.cylabacademy.org/library/401)
 
 ## Solution
 

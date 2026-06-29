@@ -8,7 +8,8 @@
 
 ```text
 Level: Medium
-Tags: picoGym Exclusive, Reverse Engineering, X86_64
+Points: 100
+Tags: Challenge Library Exclusive, Reverse Engineering, X86_64
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
 
@@ -22,7 +23,7 @@ Hints:
 1. Not everything in this disassembly listing is optimal.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/393](https://play.picoctf.org/practice/challenge/393)
+Challenge link: [https://learn.cylabacademy.org/library/393](https://learn.cylabacademy.org/library/393)
 
 ## Solution
 

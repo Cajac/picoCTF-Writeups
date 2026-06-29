@@ -8,7 +8,8 @@
 
 ```text
 Level: Medium
-Tags: picoGym Exclusive, Forensics
+Points: 200
+Tags: Challenge Library Exclusive, Forensics
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MISTRESSVAMPY
 
@@ -24,7 +25,7 @@ Hints:
 2. Aircrack-ng can make a pcap file catch big air...and crack a password.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/237](https://play.picoctf.org/practice/challenge/237)
+Challenge link: [https://learn.cylabacademy.org/library/237](https://learn.cylabacademy.org/library/237)
 
 ## Solution
 
@@ -38,7 +39,7 @@ targeted by finding out the SSIDs in the PCAP. We do this for learning in two st
 
 First open the PCAP-file in [Wireshark](https://www.wireshark.org/) and expand the properties of the first packet.
 
-![Name of the SSID field in Wireshark](Name_of_SSID_Field_in_Wireshark.png)
+![Name of the SSID field in Wireshark](Images/Name_of_SSID_Field_in_Wireshark.png)
 
 In the status bar at the bottom of the window you can see that the field name for the SSID is `wlan.ssid`.
 Now we have the name of the SSID field.
@@ -108,6 +109,7 @@ For additional information, please see the references below.
 ## References
 
 - [Aircrack-ng - Home page](https://aircrack-ng.org/)
+- [Aircrack-ng - Kali Tools](https://www.kali.org/tools/aircrack-ng/)
 - [pcap - Wikipedia](https://en.wikipedia.org/wiki/Pcap)
 - [SecLists - Github](https://github.com/danielmiessler/SecLists/tree/master)
 - [sort - Linux manual page](https://man7.org/linux/man-pages/man1/sort.1.html)

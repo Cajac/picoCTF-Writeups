@@ -8,7 +8,8 @@
 
 ```text
 Level: Medium
-Tags: picoGym Exclusive, Reverse Engineering, X86_64
+Points: 100
+Tags: Challenge Library Exclusive, Reverse Engineering, X86_64
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
 
@@ -22,7 +23,7 @@ Hints:
 1. You could calculate eax yourself, or you could set a breakpoint for after the calculcation and inspect eax to let the program do the heavy-lifting for you.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/396](https://play.picoctf.org/practice/challenge/396)
+Challenge link: [https://learn.cylabacademy.org/library/396](https://learn.cylabacademy.org/library/396)
 
 ## Solution
 
@@ -84,6 +85,9 @@ Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
 
 Breakpoint 1, 0x0000000000401141 in main ()
 ```
+
+> [!NOTE]  
+> Commands in GDB can be shortened as long as they are unambiguous. Therefore, 'run' can be shortened to 'r'.
 
 Then print the value of EAX.
 
