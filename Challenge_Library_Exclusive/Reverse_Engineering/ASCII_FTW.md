@@ -1,7 +1,8 @@
 # ASCII FTW
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [Manual Solution](#manual-solution)
+- [Scripted Solution](#scripted-solution)
 - [References](#references)
 
 ## Challenge information
@@ -23,7 +24,7 @@ Hints:
 
 Challenge link: [https://learn.cylabacademy.org/library/389](https://learn.cylabacademy.org/library/389)
 
-## Solution
+## Manual Solution
 
 Import the file in [Ghidra](https://ghidra-sre.org/) and analyze it with the default settings.  
 Double-click on the `main` function to show the decompiled version of it.
@@ -83,6 +84,68 @@ The result then looks like this:
 
 Finally, manually create the flag by going down the listing line by line.
 
+## Scripted Solution
+
+Alternatively, we can script the flag extraction with [PyGhidra](https://pypi.org/project/pyghidra/).
+
+First, we need to make sure PyGhidra is installed and configured:
+
+- Install Python 3.12 if needed
+- Install PyGhidra with `pip install pyghidra`
+- Make sure you have an environment variable called `GHIDRA_INSTALL_DIR` pointing to your Ghidra-directory
+- Start Ghidra with `python.exe -m pyghidra --gui --install-dir "<Ghidra_install_dir>"` to launch Ghidra with PyGhidra activated
+
+Then we select `Script Manager` in the `Window`-menu in Ghidra and click the `Create New Script`-button.
+
+Select the `PyGhidra` script type
+
+![Create PyGhidra Script](Images/Create_PyGhidra_Script.png)
+
+Name the script something like `flag.extract.py`
+
+```python
+# Script to extract the flag from the picoCTF-challenge ASCII FTW
+#@author Cajac
+#@category _NEW_
+#@keybinding 
+#@menupath 
+#@toolbar 
+#@runtime PyGhidra
+
+def extract_flag():
+    addr_factory = currentProgram.getAddressFactory()
+    start_addr = addr_factory.getAddress("00101175")
+    end_addr   = addr_factory.getAddress("00101200")
+
+    listing = currentProgram.getListing()
+    instruction = listing.getInstructionAt(start_addr)
+
+    flag_chars = []
+
+    while instruction is not None and instruction.getAddress().compareTo(end_addr) < 0:
+        if instruction.getMnemonicString() == "MOV":
+            op_objects = instruction.getOpObjects(1)
+
+            if op_objects and len(op_objects) > 0:
+                scalar = op_objects[0]
+                if hasattr(scalar, 'getValue'):
+                    flag_chars.append(chr(int(scalar.getValue())))
+
+        instruction = listing.getInstructionAfter(instruction.getAddress())
+
+    print("Flag:", ''.join(flag_chars))
+
+extract_flag()
+```
+
+![Ghidra Script Manager](Images/Ghidra_Script_Manager.png)
+
+Finally, click the `Run Script`-button.
+
+The flag will be shown in the `Script Console` in the main Ghidra window:
+
+![Ghidra Script Output](Images/Ghidra_Script_Output.png)
+
 For additional information, please see the references below.
 
 ## References
@@ -90,3 +153,7 @@ For additional information, please see the references below.
 - [ASCII Table](https://www.asciitable.com/)
 - [ASCII - Wikipedia](https://en.wikipedia.org/wiki/ASCII)
 - [Ghidra - Homepage](https://ghidra-sre.org/)
+- [Ghidra - Kali Tools](https://www.kali.org/tools/ghidra/)
+- [Ghidra - Wikipedia](https://en.wikipedia.org/wiki/Ghidra)
+- [PyGhidra - README - Ghidra Docs](https://www.ghidradocs.com/12.1.2_PUBLIC/Ghidra/Features/PyGhidra/pypkg/README.html)
+- [pyghidra - PyPI Module](https://pypi.org/project/pyghidra/)
