@@ -57,6 +57,8 @@ flag.png: PNG image data, 99 x 99, 1-bit colormap, non-interlaced
 We have a [PNG-file](https://en.wikipedia.org/wiki/PNG) which is a [QR-code](https://en.wikipedia.org/wiki/QR_code).  
 Use a tool such as `eog` of `feh` to view it on Linux.
 
+![QR Code Flag](Images/QR_Code_Flag.png)
+
 ### Get the flag
 
 To get the flag we can use the `zbar-tools` package as described in one of the hints.  
