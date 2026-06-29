@@ -81,6 +81,8 @@ If we open the file with `feh` we can see the first part of the flag.
 [1] 8105
 ```
 
+![PNG Flag Part](Images/PNG_Flag_Part.png)
+
 However, looking at the end of the file we can see that it is also a [PDF-file](https://en.wikipedia.org/wiki/PDF).
 
 ```bash
@@ -140,13 +142,15 @@ However, looking at the end of the file we can see that it is also a [PDF-file](
 
 Files that contains valid forms of multiple formats at the same time are called [polyglots](https://en.wikipedia.org/wiki/Polyglot_(computing)). Hence, the challenge name.
 
-Opening the file in a web browser such as `firefox` gives us the second part of the flag.
+Opening the file in a web browser such as `firefox` and scrolling down a bit on the page gives us the second part of the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2024/Forensics/Secret_of_the_Polyglot]
 └─$ firefox flag2of2-final.pdf &
 [1] 8604
 ```
+
+![PDF Flag Part](Images/PDF_Flag_Part.png)
 
 Finally, we manually append the two parts to get the entire flag.
 
