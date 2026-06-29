@@ -114,7 +114,7 @@ Name the script something like `flag.extract.py`
 
 def extract_flag():
     addr_factory = currentProgram.getAddressFactory()
-    start_addr = addr_factory.getAddress("00101175")
+    start_addr = addr_factory.getAddress("00101184")
     end_addr   = addr_factory.getAddress("00101200")
 
     listing = currentProgram.getListing()
