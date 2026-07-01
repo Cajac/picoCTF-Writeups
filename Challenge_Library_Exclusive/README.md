@@ -15,6 +15,7 @@
 
 ### Medium Forensics Challenges
 
+- [DISKO 2](Forensics/DISKO_2.md)
 - [WPA-ing Out](Forensics/WPA-ing_Out.md)
 
 ## General Skills Challenges
