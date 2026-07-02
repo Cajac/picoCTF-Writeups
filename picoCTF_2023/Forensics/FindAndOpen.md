@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 200
 Tags: picoCTF 2023, Forensics
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MUBARAK MIKAIL
@@ -21,7 +22,7 @@ Hints:
 2. Don't try to use a password cracking tool, there are easier ways here.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/348](https://play.picoctf.org/practice/challenge/348)
+Challenge link: [https://learn.cylabacademy.org/library/348](https://learn.cylabacademy.org/library/348)
 
 ## Solution
 
@@ -81,8 +82,9 @@ For additional information, please see the references below.
 
 - [base64 - Linux manual page](https://man7.org/linux/man-pages/man1/base64.1.html)
 - [Base64 - Wikipedia](https://en.wikipedia.org/wiki/Base64)
+- [pcap - Wikipedia](https://en.wikipedia.org/wiki/Pcap)
+- [tshark - Manual page - Wireshark](https://www.wireshark.org/docs/man-pages/tshark.html)
 - [uniq - Linux manual page](https://man7.org/linux/man-pages/man1/uniq.1.html)
 - [unzip - Linux manual page](https://linux.die.net/man/1/unzip)
 - [xxd - Linux manual page](https://linux.die.net/man/1/xxd)
 - [Wireshark - Home page](https://www.wireshark.org/)
-- [Wireshark - tshark](https://www.wireshark.org/docs/man-pages/tshark.html)

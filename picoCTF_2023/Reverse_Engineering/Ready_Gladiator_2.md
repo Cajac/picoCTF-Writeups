@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 400
 Tags: picoCTF 2023, Reverse Engineering, CoreWars
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -25,7 +26,7 @@ Hints:
  1. If your warrior is close, try again, it may work on subsequent tries... why is that?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/370](https://play.picoctf.org/practice/challenge/370)
+Challenge link: [https://learn.cylabacademy.org/library/370](https://learn.cylabacademy.org/library/370)
 
 ## Solution
 

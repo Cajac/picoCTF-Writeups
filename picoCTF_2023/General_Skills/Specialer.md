@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 400
 Tags: picoCTF 2023, General Skills, bash, ssh
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES, ET AL.
@@ -29,7 +30,7 @@ Hints:
 1. What programs do you have access to?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/378](https://play.picoctf.org/practice/challenge/378)
+Challenge link: [https://learn.cylabacademy.org/library/378](https://learn.cylabacademy.org/library/378)
 
 ## Solution
 

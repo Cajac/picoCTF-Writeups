@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2023, Reverse Engineering, CoreWars
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -25,7 +26,7 @@ Hints:
  2. Experiment with input to the CoreWars handler or create a self-defeating bot
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/368](https://play.picoctf.org/practice/challenge/368)
+Challenge link: [https://learn.cylabacademy.org/library/368](https://learn.cylabacademy.org/library/368)
 
 ## Solution
 

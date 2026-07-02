@@ -8,6 +8,7 @@
 
 ```text
 Level: Hard
+Points: 300
 Tags: picoCTF 2023, Forensics, steganography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -25,7 +26,7 @@ Hints:
 2. How's the image quality?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/354](https://play.picoctf.org/practice/challenge/354)
+Challenge link: [https://learn.cylabacademy.org/library/354](https://learn.cylabacademy.org/library/354)
 
 ## Solution
 

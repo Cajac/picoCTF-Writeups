@@ -10,6 +10,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2023, Reverse Engineering
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MUBARAK MIKAIL
@@ -23,7 +24,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/372](https://play.picoctf.org/practice/challenge/372)
+Challenge link: [https://learn.cylabacademy.org/library/372](https://learn.cylabacademy.org/library/372)
 
 There are several ways to solve this challenge. Here are three solutions presented in increasing difficulty.
 

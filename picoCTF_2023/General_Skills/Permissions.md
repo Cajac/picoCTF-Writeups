@@ -9,6 +9,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2023, General Skills, vim
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: GEOFFREY NJOGU
@@ -23,10 +24,10 @@ Password: pEN9KN1qYm
 Can you login and read the root file?
 
 Hints:
-(None)
+1. What permissions do you have?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/363](https://play.picoctf.org/practice/challenge/363)
+Challenge link: [https://learn.cylabacademy.org/library/363](https://learn.cylabacademy.org/library/363)
 
 ## The likely intended solution
 
@@ -113,7 +114,7 @@ User picoplayer may run the following commands on challenge:
 
 ```
 
-Ah, all users can run the `vi` text editor as root. This means we can read the /root directory as a file with it.
+Ah, all users can run the `vi` text editor as root. This means we can read the `/root` directory as a file with it.
 Run `sudo vi /root` and you get
 
 ```text
@@ -200,4 +201,5 @@ For additional information, please see the references below.
 
 - [File-system permissions - Wikipedia](https://en.wikipedia.org/wiki/File-system_permissions)
 - [Root directory - Wikipedia](https://en.wikipedia.org/wiki/Root_directory)
+- [sudo - Linux manual page](https://man7.org/linux/man-pages/man8/sudo.8.html)
 - [sudo - Wikipedia](https://en.wikipedia.org/wiki/Sudo)

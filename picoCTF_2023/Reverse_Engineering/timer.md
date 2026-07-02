@@ -9,6 +9,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2023, Reverse Engineering, android
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MUBARAK MIKAIL
@@ -23,7 +24,7 @@ Hints:
 2. mobsf or jadx
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/381](https://play.picoctf.org/practice/challenge/381)
+Challenge link: [https://learn.cylabacademy.org/library/381](https://learn.cylabacademy.org/library/381)
 
 There are several ways to solve this challenge. Here are two solutions presented in increasing difficulty.
 

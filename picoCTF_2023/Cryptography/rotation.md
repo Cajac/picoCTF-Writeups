@@ -9,6 +9,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2023, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LOIC SHEMA
@@ -22,12 +23,14 @@ Hints:
 1. Sometimes rotation is right
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/373](https://play.picoctf.org/practice/challenge/373)
+Challenge link: [https://learn.cylabacademy.org/library/373](https://learn.cylabacademy.org/library/373)
 
 ## CyberChef solution
 
 Open the file in [CyberChef](https://gchq.github.io/CyberChef/) and use the 'ROT13' recipe.  
 The default rotation is 13 steps. Change the amount until you find the flag. The correct amount is 18.
+
+![CyberChef ROT18](Images/CyberChef_ROT18.png)
 
 ## Python solution
 

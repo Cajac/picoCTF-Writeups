@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 200
 Tags: picoCTF 2023, Reverse Engineering, CoreWars
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -25,7 +26,7 @@ Hints:
  1. You may be able to find a viable warrior in beginner docs
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/369](https://play.picoctf.org/practice/challenge/369)
+Challenge link: [https://learn.cylabacademy.org/library/369](https://learn.cylabacademy.org/library/369)
 
 ## Solution
 

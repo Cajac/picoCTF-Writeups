@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2023, Reverse Engineering, Analog
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -25,7 +26,7 @@ Hints:
    Can you model the mathematical relationship between red and blue?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/385](https://play.picoctf.org/practice/challenge/385)
+Challenge link: [https://learn.cylabacademy.org/library/385](https://learn.cylabacademy.org/library/385)
 
 ## Solution
 
@@ -39,12 +40,12 @@ Then in the `File` menu, choose `Import` and `Collada (.dae)`.  Select the `Virt
 
 Zoom in and you should see the "black box" machine
 
-![The Black Box in Blender](The_Black_Box_in_Blender.png)
+![The Black Box in Blender](Images/The_Black_Box_in_Blender.png)
 
 Now you need to dismantle the black box by selecting components and moving them away.
 The navigation is a bit wierd and this takes time.
 
-You need to isolated the red and blue gearwheels good enough to be able to count their number of cogs.
+You need to isolated the red and blue gear wheels good enough to be able to count their number of cogs.
 
 The blue gear has 8 cogs and the red gear has 40 cogs.
 

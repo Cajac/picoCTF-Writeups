@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2023, Forensics, pcap
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MUBARAK MIKAIL
@@ -20,7 +21,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/362](https://play.picoctf.org/practice/challenge/362)
+Challenge link: [https://learn.cylabacademy.org/library/362](https://learn.cylabacademy.org/library/362)
 
 ## Solution
 
@@ -29,6 +30,8 @@ Open the PCAP-file in [Wireshark](https://www.wireshark.org/) and let's take the
 Set a display filter of `tcp.payload contains "picoCTF"` and press Enter.
 
 Ah, only one packet matches and the flag is indeed visible in the ASCII details of the packet.
+
+![Wireshark with Flag](Images/Wireshark_with_Flag.png)
 
 ## References
 

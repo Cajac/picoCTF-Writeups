@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2023, General Skills, linux
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MUBARAK MIKAIL
@@ -25,7 +26,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/347](https://play.picoctf.org/practice/challenge/347)
+Challenge link: [https://learn.cylabacademy.org/library/347](https://learn.cylabacademy.org/library/347)
 
 ## Solution
 
@@ -125,5 +126,7 @@ For additional information, please see the references below.
 ## References
 
 - [cron - Wikipedia](https://en.wikipedia.org/wiki/Cron)
+- [crontab(1) - Linux manual page](https://man7.org/linux/man-pages/man1/crontab.1.html)
+- [crontab(5) - Linux manual page](https://man7.org/linux/man-pages/man5/crontab.5.html)
 - [Secure Shell - Wikipedia](https://en.wikipedia.org/wiki/Secure_Shell)
 - [ssh - Linux manual page](https://man7.org/linux/man-pages/man1/ssh.1.html)

@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2023, Forensics, steganography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: GEOFFREY NJOGU
@@ -22,7 +23,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/350](https://play.picoctf.org/practice/challenge/350)
+Challenge link: [https://learn.cylabacademy.org/library/350](https://learn.cylabacademy.org/library/350)
 
 ## Solution
 
@@ -132,14 +133,16 @@ drwxrwxrwx 1 root root    0 Jul 26 01:46 ..
 -rwxrwxrwx 1 root root 3029 Mar 15 22:01 flag.png
 ```
 
-Ah, in the secrets subdirectory there is indeed a flag.png file.
+Ah, in the secrets subdirectory there is indeed a `flag.png` file.
 
 ### Get the flag
 
 To view the flag.png file in Kali linux you need a program such as `feh` or `eog`.
-These were not installed in the version I was using and needed to be installed (with 'sudo apt install xxx').
+These were not installed in the version of Kali I was using and needed to be installed (with 'sudo apt install xxx').
 
 Viewing the flag.png file reveals the flag.
+
+![Embedded Flag](Images/Embedded_Flag.png)
 
 For additional information, please see the references below.
 

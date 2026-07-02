@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 300
 Tags: picoCTF 2023, General Skills, bash, ssh
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -29,7 +30,7 @@ Hints:
 1. Experiment with different shell syntax
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/377](https://play.picoctf.org/practice/challenge/377)
+Challenge link: [https://learn.cylabacademy.org/library/377](https://learn.cylabacademy.org/library/377)
 
 ## Solution
 

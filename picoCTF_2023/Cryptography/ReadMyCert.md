@@ -10,6 +10,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2023, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SUNDAY JACOB NWANYIM
@@ -23,7 +24,7 @@ Hints:
 1. Download the certificate signing request and try to read it.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/367](https://play.picoctf.org/practice/challenge/367)
+Challenge link: [https://learn.cylabacademy.org/library/367](https://learn.cylabacademy.org/library/367)
 
 There are several ways to solve this challenge. Below are three of them.
 
@@ -59,6 +60,8 @@ Copy the long base64 string but leave out the lines with `BEGIN CERTIFICATE REQU
 
 Most of the output is garbage but you will see the flag in the first line.
 
+![CyberChef Read Cert](Images/CyberChef_Read_Cert.png)
+
 ## Use an online CSR site solution
 
 A neater way to read the flag is to use a CSR online site such as [digicert's certcentral](https://www.digicert.com/ssltools/view-csr/).
@@ -66,6 +69,8 @@ A neater way to read the flag is to use a CSR online site such as [digicert's ce
 Please note that this time you should copy ALL of the lines into the text field.
 
 The flag is visible in the `Common name` field of the certificate.
+
+![DigiCert CSR](Images/DigiCert_CSR.png)
 
 ## Openssl solution
 
@@ -98,4 +103,6 @@ For additional information, please see the references below.
 ## References
 
 - [Certificate signing request - Wikipedia](https://en.wikipedia.org/wiki/Certificate_signing_request)
+- [CyberChef - GitHub](https://github.com/gchq/CyberChef)
+- [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
 - [openssl - Linux manual page](https://linux.die.net/man/1/openssl)

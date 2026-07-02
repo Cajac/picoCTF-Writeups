@@ -11,6 +11,7 @@
 
 ```text
 Level: Medium
+Points: 200
 Tags: picoCTF 2023, Forensics, steganography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -24,7 +25,7 @@ Hints:
 1. What's causing the 'corruption' of the image?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/359](https://play.picoctf.org/practice/challenge/359)
+Challenge link: [https://learn.cylabacademy.org/library/359](https://learn.cylabacademy.org/library/359)
 
 ## Basic file analysis
 
@@ -229,7 +230,7 @@ The MSB-bit is bit 7 so select for Red, Green and Blue. The rest of the settings
 The press the `Preview`-button.
 
 The result should look like this  
-![Data extraction in StegSolve](StegSolve_MSB_data_extraction.png)
+![Data extraction in StegSolve](Images/StegSolve_MSB_data_extraction.png)
 
 We can see readable text which is highly promising but browsing through the text we find no flag.  
 This is because the text shown is only a subset of all the data.  

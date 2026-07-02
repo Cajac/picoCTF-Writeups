@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2023, General Skills, man
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LOIC SHEMA
@@ -27,7 +28,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/384](https://play.picoctf.org/practice/challenge/384)
+Challenge link: [https://learn.cylabacademy.org/library/384](https://learn.cylabacademy.org/library/384)
 
 ## Solution
 
@@ -109,7 +110,7 @@ else
 fi
 ```
 
-Hhm, no flag there. But there is an instruction to read the manual and the challenge is also tagged with `man` so let's try that
+Hhm, no flag there. But there is an instruction to `read the manual` and the challenge is also tagged with `man` so let's try that
 
 ```bash
 picoplayer@challenge:~$ man useless
@@ -140,7 +141,6 @@ Authors
      This script was designed and developed by Cylab Africa
 
      picoCTF{<REDACTED>}
-
 ```
 
 Ah, the flag is included at the bottom of the man page.
@@ -149,6 +149,7 @@ For additional information, please see the references below.
 
 ## References
 
+- [man - Linux manual page](https://man7.org/linux/man-pages/man1/man.1.html)
 - [man page - Wikipedia](https://en.wikipedia.org/wiki/Man_page)
 - [Secure Shell - Wikipedia](https://en.wikipedia.org/wiki/Secure_Shell)
 - [Shell script - Wikipedia](https://en.wikipedia.org/wiki/Shell_script)

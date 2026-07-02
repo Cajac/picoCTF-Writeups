@@ -9,6 +9,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2023, Reverse Engineering
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MUBARAK MIKAIL
@@ -23,7 +24,7 @@ Hints:
 1. Download and try to decompile the file.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/375](https://play.picoctf.org/practice/challenge/375)
+Challenge link: [https://learn.cylabacademy.org/library/375](https://learn.cylabacademy.org/library/375)
 
 There are several ways to solve this challenge. Here are two solutions presented in increasing difficulty.
 
@@ -62,6 +63,7 @@ For additional information, please see the references below.
 ## References
 
 - [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
+- [Java (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Java_(programming_language))
 - [JD-GUI - GitHub](https://github.com/java-decompiler/jd-gui)
 - [String (computer science) - Wikipedia](https://en.wikipedia.org/wiki/String_(computer_science))
 - [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)

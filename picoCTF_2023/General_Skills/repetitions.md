@@ -1,13 +1,16 @@
 # repetitions
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [CyberChef Solution](#cyberchef-solution)
+- [Python Solution](#python-solution)
+- [Bash Solution](#bash-solution)
 - [References](#references)
 
 ## Challenge information
 
 ```text
 Level: Easy
+Points: 100
 Tags: picoCTF 2023, General Skills, base64
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: THEONESTE BYAGUTANGAZA
@@ -21,9 +24,9 @@ Hints:
 1. Multiple decoding is always good.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/371](https://play.picoctf.org/practice/challenge/371)
+Challenge link: [https://learn.cylabacademy.org/library/371](https://learn.cylabacademy.org/library/371)
 
-## Solution
+## CyberChef Solution
 
 One of the tags already gave it away. The contents of the file is [base64 encoded data](https://en.wikipedia.org/wiki/Base64).
 
@@ -43,7 +46,15 @@ aGkKYlRrelZERldUMkpzUWxWTlJYTkxDZz09Cg==
 
 Both the challenge name and the hint suggests that we need to do a number of decoding levels to get our flag.
 
-We probably could get away with manually applying a number of ['From Base64' recipes in CyberChef](https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)) but let's write a little Python script called `solve.py` instead that automatically finds the flag in any number of base64 layers.
+We can manually apply a number of ['From Base64' recipes in CyberChef](https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)) until we get the flag like this:
+
+![CyberChef Multiple Base64](Images/CyberChef_Multiple_Base64.png)
+
+Six levels are needed.
+
+## Python Solution
+
+Alternatively, we can write a little Python script called `solve.py` that automatically finds the flag in any number of base64 layers.
 
 ```python
 #!/usr/bin/python
@@ -68,6 +79,43 @@ Then make the script executable and run it
 
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2023/General_Skills/repetitions]
 └─$ ./solve.py       
+picoCTF{<REDACTED>}
+```
+
+## Bash Solution
+
+Finally, we can manually add `base64 -d` in Bash until we get the flag
+
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/General_Skills/repetitions]
+└─$ cat enc_flag | base64 -d                       
+VjFSQ2EyTXlSblJUV0dSVllrWmFWRmx0TlZOalJtUlhZVVU1YVZKVVZuaFdWekZoWVZkR2NrNVVX
+bUZTVmtwUVdWUkdibVZXVm5WUgpiSEJzWVRCd2VWVXhXbXBOUlRWSFdqTnNWZ3BYUjFKeVZGZHdW
+MlZzVWxaVmJFNW9UVVJDTlZaWE1XRlVaM0JPWWtkemQxWkdXbXRYCmF6QjRZa2hTVjJGdGVFVlhi
+bTkzVDFWT2JsQlVNRXNLCg==
+
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/General_Skills/repetitions]
+└─$ cat enc_flag | base64 -d | base64 -d 
+V1RCa2MyRnRTWGRVYkZaVFltNVNjRmRXYUU5aVJUVnhWVzFhYVdGck5UWmFSVkpQWVRGbmVWVnVR
+bHBsYTBweVUxWmpNRTVHWjNsVgpXR1JyVFdwV2VsUlZVbE5oTURCNVZXMWFUZ3BOYkdzd1ZGWmtX
+azB4YkhSV2FteEVXbm93T1VOblBUMEsK
+
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/General_Skills/repetitions]
+└─$ cat enc_flag | base64 -d | base64 -d | base64 -d
+WTBkc2FtSXdUbFZTYm5ScFdWaE9iRTVxVW1aaWFrNTZaRVJPYTFneVVuQlpla0pyU1ZjME5GZ3lV
+WGRrTWpWelRVUlNhMDB5VW1aTgpNbGswVFZkWk0xbHRWamxEWnowOUNnPT0K
+
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/General_Skills/repetitions]
+└─$ cat enc_flag | base64 -d | base64 -d | base64 -d | base64 -d
+Y0dsamIwTlVSbnRpWVhObE5qUmZiak56ZEROa1gyUnBZekJrSVc0NFgyUXdkMjVzTURSa00yUmZN
+Mlk0TVdZM1ltVjlDZz09Cg==
+
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/General_Skills/repetitions]
+└─$ cat enc_flag | base64 -d | base64 -d | base64 -d | base64 -d | base64 -d
+cGljb0NURntiYXNlNjRfbjNzdDNkX2RpYzBkIW44X2Qwd25sMDRkM2RfM2Y4MWY3YmV9Cg==
+
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2023/General_Skills/repetitions]
+└─$ cat enc_flag | base64 -d | base64 -d | base64 -d | base64 -d | base64 -d | base64 -d
 picoCTF{<REDACTED>}
 ```
 

@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2023, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SUNDAY JACOB NWANYIM
@@ -21,7 +22,7 @@ Hints:
 1. Download the image and try to extract it.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/351](https://play.picoctf.org/practice/challenge/351)
+Challenge link: [https://learn.cylabacademy.org/library/351](https://learn.cylabacademy.org/library/351)
 
 ## Solution
 
@@ -143,8 +144,10 @@ Ah, a flag most likely scrambled with the Atbash cipher.
 
 To view the flag in plaintext you can use one of these sites
 
-- The [Atbash cipher recipe from CyberChef](https://cyberchef.org/#recipe=Atbash_Cipher())
+- The [Atbash cipher recipe from CyberChef](https://gchq.github.io/CyberChef/#recipe=Atbash_Cipher())
 - The [Atbash cipher function at Crypto Corner](https://crypto.interactive-maths.com/atbash-cipher.html)
+
+![CyberChef Atbash](Images/CyberChef_Atbash.png)
 
 For additional information, please see the references below.
 
@@ -153,6 +156,8 @@ For additional information, please see the references below.
 - [Atbash - Wikipedia](https://en.wikipedia.org/wiki/Atbash)
 - [Binwalk - GitHub](https://github.com/ReFirmLabs/binwalk)
 - [Binwalk - Kali Tools](https://www.kali.org/tools/binwalk/)
+- [CyberChef - GitHub](https://github.com/gchq/CyberChef)
+- [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
 - [Exif - Wikipedia](https://en.wikipedia.org/wiki/Exif)
 - [ExifTool - Homepage](https://exiftool.org/)
 - [exiftool - Linux manual page](https://linux.die.net/man/1/exiftool)
