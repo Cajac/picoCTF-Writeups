@@ -53,9 +53,9 @@ y%7-id`j
 └─$ 
 ```
 
-### Unpack the binary
-
 We can confirm that the binary is [packed](https://en.wikipedia.org/wiki/Executable_compression) with [UPX](https://upx.github.io/).
+
+### Unpack the binary
 
 This packing is reversible and we can unpack the binary with `upx -d`.
 
