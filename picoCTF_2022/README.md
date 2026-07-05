@@ -50,6 +50,7 @@
 - [patchme.py](Reverse_Engineering/patchme.py.md)
 - [Safe Opener](Reverse_Engineering/Safe_Opener.md)
 - [unpackme.py](Reverse_Engineering/unpackme.py.md)
+- [unpackme](Reverse_Engineering/unpackme.md)
 
 ## Web Exploitation Challenges
 
