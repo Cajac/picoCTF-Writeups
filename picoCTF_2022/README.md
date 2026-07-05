@@ -10,6 +10,7 @@
 - [buffer overflow 2](Binary_Exploitation/buffer_overflow_2.md)
 - [CVE-XXXX-XXXX](Binary_Exploitation/CVE-XXXX-XXXX.md)
 - [RPS](Binary_Exploitation/RPS.md)
+- [x-sixty-what](Binary_Exploitation/x-sixty-what.md)
 
 ## Cryptography Challenges
 
