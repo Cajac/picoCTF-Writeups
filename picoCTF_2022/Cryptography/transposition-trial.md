@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2022, Cryptography, cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: WILL HONG
@@ -23,7 +24,7 @@ Hints:
 1. Split the message up into blocks of 3 and see how the first block is scrambled
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/312](https://play.picoctf.org/practice/challenge/312)
+Challenge link: [https://learn.cylabacademy.org/library/312](https://learn.cylabacademy.org/library/312)
 
 ## Solution
 
@@ -33,7 +34,7 @@ The message given looks like this
 heTfl g as iicpCTo{7F4NRP051N5_16_35P3X51N3_V091B0AE}2
 ```
 
-It looks like in each block of three characters the first is shifted to the end of the block.
+It looks like in each block of three characters the first was shifted to the end of the block.
 
 Let's write a small Python script called `solve.py` to decode this
 

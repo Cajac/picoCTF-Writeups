@@ -8,18 +8,19 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2022, Forensics, svg
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
  
 Description:
 Download this image file and find the flag.
- 
+
 Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/265](https://play.picoctf.org/practice/challenge/265)
+Challenge link: [https://learn.cylabacademy.org/library/265](https://learn.cylabacademy.org/library/265)
 
 ## Solution
 

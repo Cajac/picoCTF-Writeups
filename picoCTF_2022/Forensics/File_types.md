@@ -8,10 +8,11 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2022, Forensics
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: GEOFFREY NJOGU
- 
+
 Description:
 This file was found among some files marked confidential but my pdf reader cannot read it, 
 maybe yours can.
@@ -22,7 +23,7 @@ Hints:
 1. Remember that some file types can contain and nest other files
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/268](https://play.picoctf.org/practice/challenge/268)
+Challenge link: [https://learn.cylabacademy.org/library/268](https://learn.cylabacademy.org/library/268)
 
 ## Solution
 

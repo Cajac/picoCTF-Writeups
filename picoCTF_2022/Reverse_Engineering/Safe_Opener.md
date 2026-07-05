@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2022, Reverse Engineering
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MUBARAK MIKAIL
@@ -25,7 +26,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/294](https://play.picoctf.org/practice/challenge/294)
+Challenge link: [https://learn.cylabacademy.org/library/294](https://learn.cylabacademy.org/library/294)
 
 ## Solution
 
@@ -81,12 +82,24 @@ an encodedkey that looks like a [base64](https://en.wikipedia.org/wiki/Base64) e
 
 I used [CyberChef's 'From Base64' recipe](https://gchq.github.io/CyberChef/#recipe=From_Base64('A-Za-z0-9%2B/%3D',true,false)) to decode the password.
 
+![CyberChef Base64 Decoding](Images/CyberChef_Base64_Decoding.png)
+
+If you prefer a commandline tool instead of CyberChef, we can decode with `base64 -d`
+
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Reverse_Engineering/Safe_Opener]
+└─$ echo 'cGwzYXMzX2wzdF9tM18xbnQwX3RoM19zYWYz' | base64 -d
+pl<REDACTED>f3 
+```
+
 Finally, follow the instructions in the challenge description to create the flag.
 
 For additional information, please see the references below.
 
 ## References
 
+- [base64 - Linux manual page](https://man7.org/linux/man-pages/man1/base64.1.html)
 - [Base64 - Wikipedia](https://en.wikipedia.org/wiki/Base64)
 - [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
+- [echo - Linux manual page](https://man7.org/linux/man-pages/man1/echo.1.html)
 - [Java (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Java_(programming_language))

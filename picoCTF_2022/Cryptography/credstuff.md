@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2022, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: WILL HONG / LT 'SYREAL' JONES
@@ -25,7 +26,7 @@ Hints:
 1. Maybe other passwords will have hints about the leak?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/261](https://play.picoctf.org/practice/challenge/261)
+Challenge link: [https://learn.cylabacademy.org/library/261](https://learn.cylabacademy.org/library/261)
 
 ## Solution
 
@@ -122,7 +123,6 @@ Finally, run the script to get the flag
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Cryptography/Credstuff]
 └─$ ./bf.py 
 ROT-13: picoCTF{<REDACTED>}
-
 ```
 
 This time it was standard ROT-13.
@@ -134,6 +134,7 @@ For additional information, please see the references below.
 - [cut - Linux manual page](https://man7.org/linux/man-pages/man1/cut.1.html)
 - [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
 - [head - Linux manual page](https://man7.org/linux/man-pages/man1/head.1.html)
+- [Modulo - Wikipedia](https://en.wikipedia.org/wiki/Modulo)
 - [python - Linux manual page](https://linux.die.net/man/1/python)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [ROT13 - Wikipedia](https://en.wikipedia.org/wiki/ROT13)

@@ -9,6 +9,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2022, Cryptography, Substitution
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: WILL HONG
@@ -23,7 +24,7 @@ Hints:
 1. Try a frequency attack. An online tool might help.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/307](https://play.picoctf.org/practice/challenge/307)
+Challenge link: [https://learn.cylabacademy.org/library/307](https://learn.cylabacademy.org/library/307)
 
 The message we were given looks like this
 
@@ -58,6 +59,8 @@ As suggested in the hint we can use an online tool such as [quipqiup](https://qu
 Input the entire message in the `Puzzle` text field and press `Solve` (with the default setting).
 
 After a short while, you have the flag at the top of the possible solutions.
+
+![QuipQiup Decoding](Images/QuipQiup_Decoding.png)
 
 ## Python solution
 
@@ -122,9 +125,13 @@ For additional information, please see the references below.
 
 ## References
 
+- [chmod - Linux manual page](https://man7.org/linux/man-pages/man1/chmod.1.html)
 - [Frequency analysis - Wikipedia](https://en.wikipedia.org/wiki/Frequency_analysis)
+- [index - string method - Python Docs](https://docs.python.org/3/library/stdtypes.html#str.index)
 - [Letter frequency - Wikipedia](https://en.wikipedia.org/wiki/Letter_frequency)
+- [lower - string method - Python Docs](https://docs.python.org/3/library/stdtypes.html#str.lower)
 - [python - Linux manual page](https://linux.die.net/man/1/python)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [Quipqiup - A fast and automated cryptogram solver](https://quipqiup.com/)
 - [Substitution cipher - Wikipedia](https://en.wikipedia.org/wiki/Substitution_cipher)
+- [upper - string method - Python Docs](https://docs.python.org/3/library/stdtypes.html#str.upper)

@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2022, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: WILL HONG
@@ -25,20 +26,23 @@ Hints:
 1. Once you've understood how the cipher works, it's best to draw it out yourself on paper
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/289](https://play.picoctf.org/practice/challenge/289)
+Challenge link: [https://learn.cylabacademy.org/library/289](https://learn.cylabacademy.org/library/289)
 
 ## Solution
 
 Rather than solving this manually I used [this online service at Planet Calc](https://planetcalc.com/6946/).
 
-It "brute-forces" the number of rails up to a maximum number (with a default of 10).
+It brute-forces the number of rails up to a maximum number (with a default of 10).
 
 Enter the given encoded text in the `Encoded message` text box and press 'CALCULATE'.  
 And you will get the flag in the output with 4 rails in the `Decode table`.
+
+![Rail Fence Decoding](Images/Rail_Fence_Decoding.png)
 
 For additional information, please see the references below.
 
 ## References
 
 - [Rail fence cipher - Wikipedia](https://en.wikipedia.org/wiki/Rail_fence_cipher)
+- [Rail fence cipher decoder - PlanetCalc](https://planetcalc.com/6946/)
 - [Transposition cipher - Wikipedia](https://en.wikipedia.org/wiki/Transposition_cipher)

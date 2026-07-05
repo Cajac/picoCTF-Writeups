@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 200
 Tags: picoCTF 2022, Reverse Engineering, obfuscation
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -16,12 +17,12 @@ Description:
 Can you get the flag?
 
 Run this Python program in the same directory as this encrypted flag.
- 
+
 Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/256](https://play.picoctf.org/practice/challenge/256)
+Challenge link: [https://learn.cylabacademy.org/library/256](https://learn.cylabacademy.org/library/256)
 
 ## Solution
 

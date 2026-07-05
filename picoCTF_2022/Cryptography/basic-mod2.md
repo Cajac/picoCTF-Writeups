@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2022, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: WILL HONG
@@ -28,7 +29,7 @@ Hints:
 3. It's recommended to use a tool to find the modular inverses
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/254](https://play.picoctf.org/practice/challenge/254)
+Challenge link: [https://learn.cylabacademy.org/library/254](https://learn.cylabacademy.org/library/254)
 
 ## Solution
 
@@ -76,6 +77,11 @@ For additional information, please see the references below.
 
 ## References
 
+- [chmod - Linux manual page](https://man7.org/linux/man-pages/man1/chmod.1.html)
+- [chr function - Python Docs](https://docs.python.org/3/library/functions.html#chr)
+- [join - string method - Python Docs](https://docs.python.org/3/library/stdtypes.html#str.join)
+- [map function - Python Docs](https://docs.python.org/3/library/functions.html#map)
+- [Modular multiplicative inverse function in Python - Stack Overflow](https://stackoverflow.com/questions/4798654/modular-multiplicative-inverse-function-in-python)
 - [Modulo - Wikipedia](https://en.wikipedia.org/wiki/Modulo)
 - [python - Linux manual page](https://linux.die.net/man/1/python)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))

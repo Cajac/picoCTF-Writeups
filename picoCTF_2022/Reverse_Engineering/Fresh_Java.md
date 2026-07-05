@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 200
 Tags: picoCTF 2022, Reverse Engineering, Java
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -20,7 +21,7 @@ Hints:
 1. Use a decompiler for Java!
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/271](https://play.picoctf.org/practice/challenge/271)
+Challenge link: [https://learn.cylabacademy.org/library/271](https://learn.cylabacademy.org/library/271)
 
 ## Solution
 
@@ -42,7 +43,7 @@ This can be done in Linux with `jadx-gui`. Install with `sudo apt install jadx` 
 Start `jadx-gui` and open the `KeygenMe.class` file.  
 Then navigate to `main` in the hierarchy to the left. It should look something like this:
 
-![Jadx-gui decompilation](jadx-gui_decompilation.png)
+![Jadx-gui decompilation](Images/jadx-gui_decompilation.png)
 
 The full source code looks like this
 
@@ -140,7 +141,7 @@ We can see that the program checks the key character by character in reverse ord
 ### Get the flag
 
 We can rather easily create the flag manually but let's not do that.  
-Instead we will use builtin commandline tools like `grep`, `sort` and `cut` to extract the flag for us.
+Instead we will use builtin Linux commandline tools like `grep`, `sort` and `cut` to extract the flag for us.
 
 Start by copying the source to a file named `KeygenMe_main.java`.
 

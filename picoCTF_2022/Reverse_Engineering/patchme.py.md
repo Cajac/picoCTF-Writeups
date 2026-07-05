@@ -1,13 +1,15 @@
 # patchme.py
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [Password Solution](#password-solution)
+- [Patching Solution](#patching-solution)
 - [References](#references)
 
 ## Challenge information
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2022, Reverse Engineering
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -21,9 +23,9 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/287](https://play.picoctf.org/practice/challenge/287)
+Challenge link: [https://learn.cylabacademy.org/library/287](https://learn.cylabacademy.org/library/287)
 
-## Solution
+## Password Solution
 
 Let's start by looking at the Python source code (with some empty lines removed)
 
@@ -69,10 +71,52 @@ Welcome back... your flag, user:
 picoCTF{<REDACTED>}
 ```
 
+## Patching Solution
+
+A likely more intended solution based on the challenge name is to modify the source and remove the password check.
+
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Reverse_Engineering/Patchme.py]
+└─$ cp patchme.flag.py patchme.patched.py                                                       
+
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Reverse_Engineering/Patchme.py]
+└─$ vi patchme.patched.py 
+
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Reverse_Engineering/Patchme.py]
+└─$ cat patchme.patched.py 
+### THIS FUNCTION WILL NOT HELP YOU FIND THE FLAG --LT ########################
+def str_xor(secret, key):
+    #extend key to secret length
+    new_key = key
+    i = 0
+    while len(new_key) < len(secret):
+        new_key = new_key + key[i]
+        i = (i + 1) % len(key)        
+    return "".join([chr(ord(secret_c) ^ ord(new_key_c)) for (secret_c,new_key_c) in zip(secret,new_key)])
+###############################################################################
+
+
+flag_enc = open('flag.txt.enc', 'rb').read()
+
+print("Welcome back... your flag, user:")
+decryption = str_xor(flag_enc.decode(), "utilitarian")
+print(decryption)
+```
+
+Then we run the modified script to get the flag
+
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Reverse_Engineering/Patchme.py]
+└─$ python patchme.patched.py
+Welcome back... your flag, user:
+picoCTF{<REDACTED>}
+```
+
 For additional information, please see the references below.
 
 ## References
 
+- [Patch (computing) - Wikipedia](https://en.wikipedia.org/wiki/Patch_(computing))
 - [python - Linux manual page](https://linux.die.net/man/1/python)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [Python Tutorial - 7 Ways to Concatenate Strings in Python](https://www.pythontutorial.net/python-string-methods/python-string-concatenation/)

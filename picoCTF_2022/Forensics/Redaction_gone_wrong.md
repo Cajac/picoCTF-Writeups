@@ -7,6 +7,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2022, Forensics
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MUBARAK MIKAIL
@@ -21,13 +22,18 @@ Hints:
 1. How can you be sure of the redaction?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/290](https://play.picoctf.org/practice/challenge/290)
+Challenge link: [https://learn.cylabacademy.org/library/290](https://learn.cylabacademy.org/library/290)
 
 ## Solution
 
-Open up the PDF-document in any PDF-reader that enables you to select and copy all text in the document.
+Open up the PDF-document in any PDF-reader that enables you to select and copy all text in the document.  
+Why not use the keyboard shortcuts `CTRL`+ `A` to select all text and the `CTRL` + `C` to copy it?
 
-Then paste it into a text editor and you will get (apart from the flag redacted here)
+Here, I opened the document in the Firefox web browser.
+
+![Firefox with PDF-document](Images/Firefox_with_PDF-document.png)
+
+Then paste the text into a text editor and you will get (apart from the flag redacted here)
 
 ```text
 Financial Report for ABC Labs, Kigali, Rwanda for the year 2021.

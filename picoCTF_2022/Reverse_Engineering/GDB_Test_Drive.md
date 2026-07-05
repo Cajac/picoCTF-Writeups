@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2022, Reverse Engineering, binary, gdb
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -29,7 +30,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/273](https://play.picoctf.org/practice/challenge/273)
+Challenge link: [https://learn.cylabacademy.org/library/273](https://learn.cylabacademy.org/library/273)
 
 ## Solution
 
@@ -68,7 +69,7 @@ When we issue `layout asm` we get a text based GUI-like window
 (gdb) layout asm
 ```
 
-![GDB Layout Asm View](GDB_Layout_Asm.png)
+![GDB Layout Asm View](Images/GDB_Layout_Asm.png)
 
 Then we set a breakpoint on sleep and run the program
 
@@ -78,11 +79,13 @@ Then we set a breakpoint on sleep and run the program
 ```
 
 The program is now sleeping but we can force it out of the sleep by setting the instruction pointer  
-to the next instruction after the sleep. This will continue the program and print the flag (not shown here).
+to the next instruction after the sleep. This will continue the program and print the flag.
 
 ```text
 (gdb) jump *(main+104)
 ```
+
+![GDB Layout Asm View with Flag](Images/GDB_Layout_Asm_with_Flag.png)
 
 For more information on GDB, please see the references below.
 
@@ -91,5 +94,7 @@ For more information on GDB, please see the references below.
 - [chmod - Linux manual page](https://man7.org/linux/man-pages/man1/chmod.1.html)
 - [Debugger - Wikipedia](https://en.wikipedia.org/wiki/Debugger)
 - [gdb - Linux manual page](https://man7.org/linux/man-pages/man1/gdb.1.html)
+- [GDB (The GNU Project Debugger) - Documentation](https://sourceware.org/gdb/documentation/)
+- [GDB (The GNU Project Debugger) - Homepage](https://sourceware.org/gdb/)
 - [GNU Debugger Tutorial - Tutorials Point](https://www.tutorialspoint.com/gnu_debugger/index.htm)
 - [The GDB developer's GNU Debugger tutorial, Part 1: Getting started with the debugger](https://developers.redhat.com/blog/2021/04/30/the-gdb-developers-gnu-debugger-tutorial-part-1-getting-started-with-the-debugger)

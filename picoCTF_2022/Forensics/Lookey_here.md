@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2022, Forensics, grep
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES / MUBARAK MIKAIL
@@ -21,7 +22,7 @@ Hints:
 1. Download the file and search for the flag based on the known prefix.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/279](https://play.picoctf.org/practice/challenge/279)
+Challenge link: [https://learn.cylabacademy.org/library/279](https://learn.cylabacademy.org/library/279)
 
 ## Solution
 

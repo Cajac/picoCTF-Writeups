@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2022, Forensics, sleuthkit
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -26,7 +27,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/301](https://play.picoctf.org/practice/challenge/301)
+Challenge link: [https://learn.cylabacademy.org/library/301](https://learn.cylabacademy.org/library/301)
 
 ## Solution
 
@@ -104,7 +105,7 @@ Seemed to work fine and the size of the Linux partition is `202752` sectors.
 
 ### Connecting to the server
 
-Now we can connect to the server and get our flag
+Now we can connect to the server with netcat and get our flag
 
 ```bash
 ┌──(kali㉿kali)-[/picoCTF/picoCTF_2022/Forensics/Sleuthkit_Intro]
@@ -122,4 +123,7 @@ For additional information, please see the references below.
 
 - [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
 - [gzip - Linux manual page](https://linux.die.net/man/1/gzip)
+- [Mmls - The Sleuth Kit](https://wiki.sleuthkit.org/Mmls/)
+- [nc - Linux manual page](https://linux.die.net/man/1/nc)
+- [netcat - Wikipedia](https://en.wikipedia.org/wiki/Netcat)
 - [The Sleuth Kit commands](https://wiki.sleuthkit.org/index.php?title=The_Sleuth_Kit_commands)

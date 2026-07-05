@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2022, Cryptography, Substitution
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: WILL HONG
@@ -23,7 +24,7 @@ Hints:
 1. Try refining your frequency attack, maybe analyzing groups of letters would improve your results?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/309](https://play.picoctf.org/practice/challenge/309)
+Challenge link: [https://learn.cylabacademy.org/library/309](https://learn.cylabacademy.org/library/309)
 
 ## Solution
 
@@ -44,6 +45,8 @@ After a short while, you have what seems to be a solution at the top of the sugg
 ```text
 there exist several other well established high school computer security competitions including cyber patriot and us cyber challenge these competitions focus primarily on systems administration fundamentals which are very useful and marketable skills however we believe the proper purpose of a high school computer security competition is not only to teach valuable skills but also to get students interested in and excited about computer science defensive competitions are often laborious affairs and come down to running checklists and executing config scripts offense on the other hand is heavily focused on exploration and improvisation and often has elements of play we believe a competition touching on the offensive elements of computer security is therefore a better vehicle for tech evangelism to students in american high schools further we believe that an understanding of offensive techniques is essential for mounting an effective defense and that the tools and configuration focus encountered in defensive competitions does not lead students to know their enemy as effectively as teaching them to actively think like an attacker pico c t f is an offensively oriented high school computer security competition that seeks to generate interest in computer science among high schoolers teaching them enough about computer security to pique their curiosity motivating them to explore on their own and enabling them to better defend their machines the flag is pico c t f n r m ny duff c 
 ```
+
+![QuipQiup Decoding 3](Images/QuipQiup_Decoding_3.png)
 
 But wait, the flag isn't complete (`flag is pico c t f n r m ny duff c`). There are no digits or underscores. Sigh...
 
@@ -191,6 +194,12 @@ print(decrypted_msg)
 ```
 
 Running it gave me the flag.
+
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2022/Cryptography/Substitution2]
+└─$ ./solve.py    
+efendtheirmachinestheflagispicoCTF{<REDACTED>}
+```
 
 For additional information, please see the references below.
 

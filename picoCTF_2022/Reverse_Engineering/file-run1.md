@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2022, Reverse Engineering
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: WILL HONG
@@ -22,7 +23,7 @@ Hints:
 2. Try running it by adding a '.' in front of the path to the file (i.e. $ ./run)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/266](https://play.picoctf.org/practice/challenge/266)
+Challenge link: [https://learn.cylabacademy.org/library/266](https://learn.cylabacademy.org/library/266)
 
 ## Solution
 
@@ -41,5 +42,6 @@ If you need more information, please see the references below.
 
 ## References
 
+- [chmod - Linux manual page](https://man7.org/linux/man-pages/man1/chmod.1.html)
 - [Linux path environment variable](https://linuxconfig.org/linux-path-environment-variable)
 - [Linux file permissions explained](https://www.redhat.com/sysadmin/linux-file-permissions-explained)

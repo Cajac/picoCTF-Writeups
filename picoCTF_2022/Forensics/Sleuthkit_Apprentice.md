@@ -12,6 +12,7 @@
 
 ```text
 Level: Medium
+Points: 200
 Tags: picoCTF 2022, Forensics, sleuthkit
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -26,7 +27,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/300](https://play.picoctf.org/practice/challenge/300)
+Challenge link: [https://learn.cylabacademy.org/library/300](https://learn.cylabacademy.org/library/300)
 
 ## Unpacking and basic file analysis
 
@@ -65,8 +66,8 @@ Units are in 512-byte sectors
 
 There are two possible partitions where the flag could be:
 
-- The Linux partition which starts on sector `2048`
-- The Linux partition which starts on sector `360448`
+- The Linux partition which starts at sector `2048`
+- The Linux partition which starts at sector `360448`
 
 ## Strings and grep solution
 
@@ -214,7 +215,7 @@ Finally, click the `flag.uni.txt` file in the `File List` to view the contents o
 
 It should look something like this:
 
-![Disk_mounted_in_FTK_Imager](Disk_mounted_in_FTK_Imager.png)
+![Disk mounted in FTK Imager](Images/Disk_mounted_in_FTK_Imager.png)
 
 ## Sleuth Kit solution
 
@@ -246,11 +247,13 @@ For additional information, please see the references below.
 
 ## References
 
-- [Endianness - Wikipedia](https://en.wikipedia.org/wiki/Endianness)
 - [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
 - [find - Linux manual page](https://man7.org/linux/man-pages/man1/find.1.html)
+- [fls - The Sleuth Kit](https://wiki.sleuthkit.org/fls/)
 - [FTK Imager - Homepage](https://www.exterro.com/ftk-imager)
 - [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
+- [icat - The Sleuth Kit](https://wiki.sleuthkit.org/icat/)
+- [Mmls - The Sleuth Kit](https://wiki.sleuthkit.org/Mmls/)
 - [mount - Linux manual page](https://man7.org/linux/man-pages/man8/mount.8.html)
 - [String (computer science) - Wikipedia](https://en.wikipedia.org/wiki/String_(computer_science))
 - [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)

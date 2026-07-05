@@ -9,6 +9,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2022, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MUBARAK MIKAIL
@@ -22,7 +23,7 @@ Hints:
 1. https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/316](https://play.picoctf.org/practice/challenge/316)
+Challenge link: [https://learn.cylabacademy.org/library/316](https://learn.cylabacademy.org/library/316)
 
 The message given looks like this
 
@@ -38,6 +39,8 @@ You can use an online solver such as [Rumkin](https://rumkin.com/tools/cipher/vi
 
 Set the 'Operating Mode' to `Decrypt` and set the 'Cipher key' to `CYLAB`.  
 Then enter the cipher text in the large text field and you get the flag at the bottom of the window.
+
+![Rumkin Decoding](Images/Rumkin_Decoding.png)
 
 ## Python solution
 
@@ -91,6 +94,10 @@ For additional information, please see the references below.
 
 ## References
 
+- [chmod - Linux manual page](https://man7.org/linux/man-pages/man1/chmod.1.html)
+- [index - string method - Python Docs](https://docs.python.org/3/library/stdtypes.html#str.index)
+- [Modulo - Wikipedia](https://en.wikipedia.org/wiki/Modulo)
 - [python - Linux manual page](https://linux.die.net/man/1/python)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [Vigenère cipher - Wikipedia](https://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
+- [Vigenère - Rumkin](https://rumkin.com/tools/cipher/vigenere/)
