@@ -8,6 +8,7 @@
 
 ```text
 Level: Hard
+Points: 150
 Tags: picoMini by redpwn, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: BOOLEAN
@@ -19,7 +20,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/209](https://play.picoctf.org/practice/challenge/209)
+Challenge link: [https://learn.cylabacademy.org/library/209](https://learn.cylabacademy.org/library/209)
 
 ## Solution
 
@@ -189,7 +190,7 @@ third = decrypt(second, p, q, e)
 print(bytes.fromhex(format(third, 'x')).decode())
 ```
 
-### References
+## References
 
 - [f-Strings: A New and Improved Way to Format Strings in Python](https://realpython.com/python-f-strings/)
 - [FactorDB - Homepage](https://factordb.com/)
@@ -197,5 +198,6 @@ print(bytes.fromhex(format(third, 'x')).decode())
 - [gmpy2 - GitHub](https://github.com/gmpy2/gmpy2)
 - [gmpy2 - PyPI](https://pypi.org/project/gmpy2/)
 - [Greatest common divisor - Wikipedia](https://en.wikipedia.org/wiki/Greatest_common_divisor)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [RSA (cryptosystem) - Wikipedia](https://en.wikipedia.org/wiki/RSA_(cryptosystem))

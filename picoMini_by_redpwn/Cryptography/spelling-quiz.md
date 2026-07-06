@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoMini by redpwn, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: BROWNIEINMOTION
@@ -20,7 +21,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/210](https://play.picoctf.org/practice/challenge/210)
+Challenge link: [https://learn.cylabacademy.org/library/210](https://learn.cylabacademy.org/library/210)
 
 ## Solution
 
@@ -184,7 +185,7 @@ Finally, time to get the plain text (with its ending redacted)
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoMini_by_redpwn/Cryptography/spelling-quiz]
 └─$ ~/python_venvs/subbreaker/bin/subbreaker decode --key pcubfwhvjknairmetszdxygolq --ciphertext flag.txt
-perhaps_the_dog_<REDACTED>
+perhaps_<REDACTED>
 ```
 
 For additional information, please see the references below.
@@ -194,6 +195,7 @@ For additional information, please see the references below.
 - [head - Linux manual page](https://man7.org/linux/man-pages/man1/head.1.html)
 - [os.path — Common pathname manipulations](https://docs.python.org/3/library/os.path.html)
 - [os.walk function](https://docs.python.org/3/library/os.html#os.walk)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [random module — Python](https://docs.python.org/3/library/random.html)
 - [SubstitutionBreaker](https://gitlab.com/guballa/SubstitutionBreaker)

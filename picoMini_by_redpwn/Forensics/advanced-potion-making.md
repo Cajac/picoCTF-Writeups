@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoMini by redpwn, Forensics
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: BIGC
@@ -20,7 +21,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/205](https://play.picoctf.org/practice/challenge/205)
+Challenge link: [https://learn.cylabacademy.org/library/205](https://learn.cylabacademy.org/library/205)
 
 ## Solution
 
@@ -62,7 +63,7 @@ Hhm, let's check it in hex form and see if we can recognise anything interesting
 ```
 
 I recognise `IHDR` and `IEND` as chunk types of PNG picture files.  
-They normally begin with these 8 bytes `89 50 4E 47 0D 0A 1A 0A`.
+These files normally begin with these 8 bytes `89 50 4E 47 0D 0A 1A 0A`.
 
 ### Fix the image file
 
@@ -95,11 +96,15 @@ The beginning of the file now looks like this
 
 And voila, the file is now viewable. But only a solid red "background" is shown.
 
+![Viewing Fixed Image](Images/Viewing_Fixed_Image.png)
+
 ### Get the flag
 
 Time to bring out the stego tools. I used [StegSolve](https://github.com/Giotino/stegsolve/releases) which is also available as an [online service](https://georgeom.net/StegOnline/upload).
 
 The flag can be found encoded in `Red plane 0`.
+
+![StegSolve Partial Flag](Images/StegSolve_Partial_Flag.png)
 
 For additional information, please see the references below.
 

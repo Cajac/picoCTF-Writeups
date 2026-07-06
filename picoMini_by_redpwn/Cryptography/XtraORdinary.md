@@ -8,6 +8,7 @@
 
 ```text
 Level: Hard
+Points: 150
 Tags: picoMini by redpwn, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: BOOLEAN
@@ -20,7 +21,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/208](https://play.picoctf.org/practice/challenge/208)
+Challenge link: [https://learn.cylabacademy.org/library/208](https://learn.cylabacademy.org/library/208)
 
 ## Solution
 
@@ -227,7 +228,7 @@ picoCTF{<REDACTED>}
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Exclusive or - Wikipedia](https://en.wikipedia.org/wiki/Exclusive_or)
 - [itertools module - Python](https://docs.python.org/3/library/itertools.html)

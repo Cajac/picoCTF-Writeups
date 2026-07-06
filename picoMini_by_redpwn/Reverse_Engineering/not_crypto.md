@@ -8,6 +8,7 @@
 
 ```text
 Level: Hard
+Points: 150
 Tags: picoMini by redpwn, Reverse Engineering
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: ASPHYXIA
@@ -19,7 +20,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/222](https://play.picoctf.org/practice/challenge/222)
+Challenge link: [https://learn.cylabacademy.org/library/222](https://learn.cylabacademy.org/library/222)
 
 ## Solution
 
@@ -167,7 +168,7 @@ No new information from that unfortunately.
 
 ### Decompile the file in Ghidra
 
-Then let's decompile the file in [Ghidra](https://ghidra-sre.org/) and study the code. Import the file in Ghidra and analyze it with the default settings. Double-click on each function to show the decompiled version of it.
+Then let's decompile the file in [Ghidra](https://github.com/NationalSecurityAgency/ghidra) and study the code. Import the file in Ghidra and analyze it with the default settings. Double-click on each function to show the decompiled version of it.
 
 The most promising function is this one `FUN_00101070`
 
@@ -680,14 +681,17 @@ gef➤  x/s $rdi
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
+- [gdb - Linux manual page](https://man7.org/linux/man-pages/man1/gdb.1.html)
 - [GDB (The GNU Project Debugger) - Documentation](https://sourceware.org/gdb/documentation/)
 - [GDB (The GNU Project Debugger) - Homepage](https://sourceware.org/gdb/)
 - [GEF (GDB Enhanced Features) - Documentation](https://hugsy.github.io/gef/)
 - [GEF (GDB Enhanced Features) - GitHub](https://github.com/hugsy/gef)
-- [Ghidra - Homepage](https://ghidra-sre.org/)
+- [Ghidra - GitHub](https://github.com/NationalSecurityAgency/ghidra)
+- [Ghidra - Kali Tools](https://www.kali.org/tools/ghidra/)
+- [Ghidra - Wikipedia](https://en.wikipedia.org/wiki/Ghidra)
 - [Position-independent code - Wikipedia](https://en.wikipedia.org/wiki/Position-independent_code)
 - [strace - Linux manual page](https://man7.org/linux/man-pages/man1/strace.1.html)
 - [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)
