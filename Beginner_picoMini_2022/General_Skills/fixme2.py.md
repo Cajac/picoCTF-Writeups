@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 25
 Tags: Beginner picoMini 2022, General Skills, Python
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -24,7 +25,7 @@ Hints:
 4. The str_xor function does not need to be reverse engineered for this challenge.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/241](https://play.picoctf.org/practice/challenge/241)
+Challenge link: [https://learn.cylabacademy.org/library/241](https://learn.cylabacademy.org/library/241)
 
 ## Solution
 
@@ -52,8 +53,9 @@ That is correct! Here's your flag: picoCTF{<REDACTED>}
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Operator - Python](https://docs.python.org/3/library/operator.html)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [Python Operators - W3Schools](https://www.w3schools.com/python/python_operators.asp)

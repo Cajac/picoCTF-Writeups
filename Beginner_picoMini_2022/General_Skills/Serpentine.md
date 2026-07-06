@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 50
 Tags: Beginner picoMini 2022, General Skills, Python
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -24,7 +25,7 @@ Hints:
 4. The str_xor function does not need to be reverse engineered for this challenge.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/251](https://play.picoctf.org/practice/challenge/251)
+Challenge link: [https://learn.cylabacademy.org/library/251](https://learn.cylabacademy.org/library/251)
 
 ## Solution
 
@@ -168,7 +169,7 @@ c) Quit
 What would you like to do? (a/b/c) c
 ```
 
-### References
+## References
 
 - [python - Linux manual page](https://linux.die.net/man/1/python)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))

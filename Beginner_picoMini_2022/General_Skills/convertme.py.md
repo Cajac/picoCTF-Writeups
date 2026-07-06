@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 15
 Tags: Beginner picoMini 2022, General Skills, base, Python
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -28,7 +29,7 @@ Hints:
 6. Finally, to run the script, type everything after the dollar sign and then press enter: $ python3 convertme.py
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/239](https://play.picoctf.org/practice/challenge/239)
+Challenge link: [https://learn.cylabacademy.org/library/239](https://learn.cylabacademy.org/library/239)
 
 ## Solution
 
@@ -87,9 +88,10 @@ That is correct! Here's your flag: picoCTF{<REDACTED>}
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [bc - Linux manual page](https://man7.org/linux/man-pages/man1/bc.1p.html)
 - [Binary number - Wikipedia](https://en.wikipedia.org/wiki/Binary_number)
 - [echo - Linux manual page](https://man7.org/linux/man-pages/man1/echo.1.html)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))

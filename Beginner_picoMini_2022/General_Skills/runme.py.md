@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 5
 Tags: Beginner picoMini 2022, General Skills, Python
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SUJEET KUMAR
@@ -28,7 +29,7 @@ Hints:
    $ python3 runme.py You should have the flag now!
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/250](https://play.picoctf.org/practice/challenge/250)
+Challenge link: [https://learn.cylabacademy.org/library/250](https://learn.cylabacademy.org/library/250)
 
 ## Solution
 
@@ -65,7 +66,7 @@ Or by making sure it is executable and then run it stand-alone
 picoCTF{<REDACTED>}
 ```
 
-### References
+## References
 
 - [chmod - Linux manual page](https://man7.org/linux/man-pages/man1/chmod.1.html)
 - [python - Linux manual page](https://linux.die.net/man/1/python)

@@ -8,10 +8,11 @@
 
 ```text
 Level: Medium
+Points: 75
 Tags: Beginner picoMini 2022, General Skills, password_cracking, hashing
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
-  
+
 Description:
 Can you crack the password to get the flag?
 
@@ -24,7 +25,7 @@ Hints:
 2. The str_xor function does not need to be reverse engineered for this challenge.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/247](https://play.picoctf.org/practice/challenge/247)
+Challenge link: [https://learn.cylabacademy.org/library/247](https://learn.cylabacademy.org/library/247)
 
 ## Solution
 
@@ -84,7 +85,7 @@ So lets try that. Get the hash
 
 But if you Google for it, you are probably not going to find the answer. The challenge creator was too smart for that.
 
-So lets write a brute forcer by changing the `level_3_pw_check` function slightly
+So let's write a brute forcer by changing the `level_3_pw_check` function slightly
 
 ```python
 def level_3_pw_check(user_pw):
@@ -132,7 +133,7 @@ That password is incorrect
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Brute-force attack - Wikipedia](https://en.wikipedia.org/wiki/Brute-force_attack)
 - [Exclusive or - Wikipedia](https://en.wikipedia.org/wiki/Exclusive_or)

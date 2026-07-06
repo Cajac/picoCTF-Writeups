@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 30
 Tags: Beginner picoMini 2022, General Skills, nc, shell, Python
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -23,11 +24,11 @@ Hints:
 3. Press Ctrl and c on your keyboard to close your connection and return to the command prompt.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/242](https://play.picoctf.org/practice/challenge/242)
+Challenge link: [https://learn.cylabacademy.org/library/242](https://learn.cylabacademy.org/library/242)
 
 ## Solution
 
-Connect to the flag printing service
+Connect to the flag printing service with netcat
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/Beginner_picoMini_2022/General_Skills/Glitch_Cat]
@@ -53,7 +54,7 @@ Numbers preceded with '0x' are in hexadecimal.
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [ASCII - Wikipedia](https://en.wikipedia.org/wiki/ASCII)
 - [chr()-function - Python](https://docs.python.org/3/library/functions.html#chr)

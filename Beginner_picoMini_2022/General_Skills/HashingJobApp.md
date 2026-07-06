@@ -1,13 +1,15 @@
 # HashingJobApp
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [Manual Solution](#manual-solution)
+- [Automated solution with pwntools](#automated-solution-with-pwntools)
 - [References](#references)
 
 ## Challenge information
 
 ```text
 Level: Easy
+Points: 40
 Tags: Beginner picoMini 2022, General Skills, hashing, nc, shell, Python
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -22,11 +24,9 @@ Hints:
 2. Press Ctrl and c on your keyboard to close your connection and return to the command prompt.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/243](https://play.picoctf.org/practice/challenge/243)
+Challenge link: [https://learn.cylabacademy.org/library/243](https://learn.cylabacademy.org/library/243)
 
-## Solution
-
-### Manual solution
+## Manual solution
 
 Let's start by connecting to the server
 
@@ -64,7 +64,7 @@ After you have been disconnected, new text will be randomly selected.
 
 After three correct hashes are provided, you get the flag.
 
-### Automated solution with pwntools
+## Automated solution with pwntools
 
 A timed challenge like this is nice to automate with [pwntools](https://docs.pwntools.com/en/stable/index.html).
 
@@ -110,7 +110,7 @@ picoCTF{<REDACTED>}
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [echo - Linux man page](https://linux.die.net/man/1/echo)
 - [hashlib module - Python](https://docs.python.org/3/library/hashlib.html)
@@ -120,4 +120,5 @@ For additional information, please see the references below.
 - [netcat - Wikipedia](https://en.wikipedia.org/wiki/Netcat)
 - [pwntools - Documentation](https://docs.pwntools.com/en/stable/index.html)
 - [pwntools - GitHub](https://github.com/Gallopsled/pwntools)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))

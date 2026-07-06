@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 25
 Tags: Beginner picoMini 2022, General Skills, Python
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -24,7 +25,7 @@ Hints:
 4. The str_xor function does not need to be reverse engineered for this challenge.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/240](https://play.picoctf.org/practice/challenge/240)
+Challenge link: [https://learn.cylabacademy.org/library/240](https://learn.cylabacademy.org/library/240)
 
 ## Solution
 
@@ -63,8 +64,9 @@ That is correct! Here's your flag: picoCTF{<REDACTED>}
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Indentation style - Wikipedia](https://en.wikipedia.org/wiki/Indentation_style)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [Python Indentation - W3Schools](https://www.w3schools.com/python/gloss_python_indentation.asp)

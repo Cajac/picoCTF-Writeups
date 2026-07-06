@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 85
 Tags: Beginner picoMini 2022, General Skills, password_cracking, hashing
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -24,7 +25,7 @@ Hints:
 2. The str_xor function does not need to be reverse engineered for this challenge.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/248](https://play.picoctf.org/practice/challenge/248)
+Challenge link: [https://learn.cylabacademy.org/library/248](https://learn.cylabacademy.org/library/248)
 
 ## Solution
 
@@ -109,7 +110,7 @@ picoCTF{<REDACTED>}
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Brute-force attack - Wikipedia](https://en.wikipedia.org/wiki/Brute-force_attack)
 - [Exclusive or - Wikipedia](https://en.wikipedia.org/wiki/Exclusive_or)

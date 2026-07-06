@@ -8,10 +8,11 @@
 
 ```text
 Level: Easy
+Points: 25
 Tags: Beginner picoMini 2022, General Skills, password_cracking
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
-  
+
 Description:
 Can you crack the password to get the flag?
 
@@ -23,7 +24,7 @@ Hints:
 3. The str_xor function does not need to be reverse engineered for this challenge.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/245](https://play.picoctf.org/practice/challenge/245)
+Challenge link: [https://learn.cylabacademy.org/library/245](https://learn.cylabacademy.org/library/245)
 
 ## Solution
 
@@ -80,9 +81,10 @@ picoCTF{<REDACTED>}
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [Exclusive or - Wikipedia](https://en.wikipedia.org/wiki/Exclusive_or)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [Python - List Comprehension - W3Schools](https://www.w3schools.com/python/python_lists_comprehension.asp)
 - [XOR cipher - Wikipedia](https://en.wikipedia.org/wiki/XOR_cipher)

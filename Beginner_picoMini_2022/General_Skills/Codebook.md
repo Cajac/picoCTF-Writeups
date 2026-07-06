@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 20
 Tags: Beginner picoMini 2022, General Skills, shell, Python
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: LT 'SYREAL' JONES
@@ -23,7 +24,7 @@ Hints:
 2. The str_xor function does not need to be reverse engineered for this challenge.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/238](https://play.picoctf.org/practice/challenge/238)
+Challenge link: [https://learn.cylabacademy.org/library/238](https://learn.cylabacademy.org/library/238)
 
 ## Solution
 
@@ -67,10 +68,11 @@ picoCTF{<REDACTED>}
 
 For additional information, please see the references below.
 
-### References
+## References
 
 - [chmod — Linux manual page](https://man7.org/linux/man-pages/man1/chmod.1.html)
 - [Executing Python Scripts With a Shebang - Real Python](https://realpython.com/python-shebang/)
 - [head — Linux manual page](https://man7.org/linux/man-pages/man1/head.1.html)
+- [python - Linux manual page](https://linux.die.net/man/1/python)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [Shebang (Unix) - Wikipedia](https://en.wikipedia.org/wiki/Shebang_(Unix))
