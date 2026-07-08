@@ -1,13 +1,15 @@
 # Pixelated
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [Stegsolve Solution](#stegsolve-solution)
+- [Python Solution](#python-solution)
 - [References](#references)
 
 ## Challenge information
 
 ```text
 Level: Medium
+Points: 200
 Tags: picoCTF 2021, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SARA
@@ -22,21 +24,22 @@ Hints:
 2. Think of different ways you can "stack" images
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/100](https://play.picoctf.org/practice/challenge/100)
-
-## Solution
+Challenge link: [https://learn.cylabacademy.org/library/100](https://learn.cylabacademy.org/library/100)
 
 There are several ways to solve this challenge and here are two of them.
 
-### Stegsolve solution
+## Stegsolve Solution
 
 You can use [StegSolve](https://github.com/Giotino/stegsolve) to combine the pictures. However, I never got the current 1.4 version to work and used the former [1.3 version](http://www.caesum.com/handbook/stego.htm) instead.
 
-In StegSolve 1.3, open the `scrambled1.png` file. Then, in the `Analyse`-menu select `Image Combiner` and select the `scrambled2.png` file. A new window opens where you can step through various ways to combine the images: XOR, OR, AND, ADD, SUB, etc.
+In StegSolve 1.3, open the `scrambled1.png` file. Then, in the `Analyse`-menu select `Image Combiner` and select the `scrambled2.png` file.
 
+A new window opens where you can step through various ways to combine the images: XOR, OR, AND, ADD, SUB, etc.  
 You will find the flag with the `ADD`-method.
 
-### Write a Python script
+![StegSolve ADDing Images](Images/StegSolve_ADDing_Images.png)
+
+## Python Solution
 
 An alternative way to solve this challenge is to write a Python script with the help of the [Python Imaging Library - Pillow](https://pypi.org/project/Pillow/) and [numpy](https://pypi.org/project/numpy/)
 

@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 40
 Tags: picoCTF 2021, Forensics
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: DANNY
@@ -20,7 +21,7 @@ Hints:
 1. Weird that it won't display right...
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/112](https://play.picoctf.org/practice/challenge/112)
+Challenge link: [https://learn.cylabacademy.org/library/112](https://learn.cylabacademy.org/library/112)
 
 ## Solution
 
@@ -34,7 +35,7 @@ Let's start with checking the file type with `file`
 tunn3l_v1s10n: data
 ```
 
-Hhm, not much help there. Lets check the first bytes with `xxd`
+Hhm, not much help there. Let's check the first bytes with `xxd`
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/tunn3l_v1s10n]
@@ -58,10 +59,10 @@ Fixing the header is made considerably easier with this help:
 
 Reading from the beginning of the header the following values seems corrupt/wrong:
 
-**The offset** on offset 0xA-0xD, should be `36 00 00 00` instead of `BA D0 00 00`.
+**The offset** on offset 0xA to 0xD, should be `36 00 00 00` instead of `BA D0 00 00`.
 Without additional headers the offset should be 0x36 or decimal 54.
 
-**The header size** on offset 0xE-0x11, should be `28 00 00 00` instead of `BA D0 00 00`.
+**The header size** on offset 0xE to 0x11, should be `28 00 00 00` instead of `BA D0 00 00`.
 The is standard according to the specification.
 
 I didn't see it first but the fields actually says `BAD`...
@@ -86,12 +87,16 @@ tunn3l_v1s10n.bmp: PC bitmap, Windows 3.x format, 1134 x 306 x 24, image size 28
 
 The image can now be viewed but only contains a fake flag (`notaflag{sorry}`).
 
+![Tunnel Vision First Try](Images/Tunnel_Vision_First_Try.png)
+
 ### Get the flag
 
-Let's try to increase the height of the image by changing offset 0x16 - 0x19 to `52 03 00 00` instead of `32 01 00 00`.
+Let's try to increase the height of the image by changing offset 0x16 to 0x19 to `52 03 00 00` instead of `32 01 00 00`.
 This increases the height to decimal 850 from decimal 306.
 
 Viewing the modified image displays a real flag at the top of the image.
+
+![Tunnel Vision Flag](Images/Tunnel_Vision_Flag.png)
 
 For additional information, please see the references below.
 

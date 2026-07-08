@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 30
 Tags: picoCTF 2021, Forensics
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SUSIE/PANDU
@@ -23,7 +24,7 @@ Hints:
 2. Make sure to submit the flag as picoCTF{XXXXX}
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/129](https://play.picoctf.org/practice/challenge/129)
+Challenge link: [https://learn.cylabacademy.org/library/129](https://learn.cylabacademy.org/library/129)
 
 ## Solution
 

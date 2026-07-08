@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 60
 Tags: picoCTF 2021, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MADSTACKS
@@ -24,13 +25,13 @@ Hints:
 2. Even though the letters are split up, the same paradigms still apply
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/158](https://play.picoctf.org/practice/challenge/158)
+Challenge link: [https://learn.cylabacademy.org/library/158](https://learn.cylabacademy.org/library/158)
 
 ## Solution
 
 ### Analyze the cipher
 
-Let's start by looking at the python source
+Let's start by looking at the Python source
 
 ```python
 import string

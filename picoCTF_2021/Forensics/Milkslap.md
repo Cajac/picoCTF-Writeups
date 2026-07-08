@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 200
 Tags: picoCTF 2021, Forensics
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: JAMES LYNCH
@@ -19,7 +20,7 @@ Hints:
 1. Look at the problem category
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/139](https://play.picoctf.org/practice/challenge/139)
+Challenge link: [https://learn.cylabacademy.org/library/139](https://learn.cylabacademy.org/library/139)
 
 ## Solution
 

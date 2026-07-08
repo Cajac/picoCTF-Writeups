@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 100
 Tags: picoCTF 2021, Forensics
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: DYLAN
@@ -15,13 +16,13 @@ Author: DYLAN
 Description:
 Can you find the flag? 
 shark2.pcapng.
- 
+
 Hints:
 1. Did you really find _the_ flag?
 2. Look for traffic that seems suspicious.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/110](https://play.picoctf.org/practice/challenge/110)
+Challenge link: [https://learn.cylabacademy.org/library/110](https://learn.cylabacademy.org/library/110)
 
 ## Solution
 

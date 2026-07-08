@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 20
 Tags: picoCTF 2021, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SARA
@@ -20,7 +21,7 @@ Hints:
 1. Bits are expensive, I used only a little bit over 100 to save money
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/162](https://play.picoctf.org/practice/challenge/162)
+Challenge link: [https://learn.cylabacademy.org/library/162](https://learn.cylabacademy.org/library/162)
 
 ## Solution
 
@@ -58,7 +59,7 @@ p, q = f.get_factor_list()
 print(f"p = {p} and q = {q}")
 ```
 
-Let's make sure its working before continuing
+Let's make sure it's working before continuing
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Cryptography/Mind_your_Ps_and_Qs]

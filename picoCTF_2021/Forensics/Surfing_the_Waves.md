@@ -8,6 +8,7 @@
 
 ```text
 Level: Hard
+Points: 150
 Tags: picoCTF 2021, Forensics
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: WILLIAM BATISTA
@@ -21,7 +22,7 @@ Hints:
 2. Look deep below the surface
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/117](https://play.picoctf.org/practice/challenge/117)
+Challenge link: [https://learn.cylabacademy.org/library/117](https://learn.cylabacademy.org/library/117)
 
 ## Solution
 

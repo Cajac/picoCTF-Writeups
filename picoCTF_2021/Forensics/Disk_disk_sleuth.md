@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 110
 Tags: picoCTF 2021, Forensics
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
@@ -24,7 +25,7 @@ Hints:
 4. Using your own computer, you could use qemu to boot from this disk!
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/113](https://play.picoctf.org/practice/challenge/113)
+Challenge link: [https://learn.cylabacademy.org/library/113](https://learn.cylabacademy.org/library/113)
 
 ## Solution
 
@@ -65,7 +66,7 @@ For additional information, please see the references below.
 - [gunzip - Linux manual page](https://linux.die.net/man/1/gunzip)
 - [Sleuthkit - Homepage](https://www.sleuthkit.org/sleuthkit/)
 - [Sleuthkit - Kali Tools](https://www.kali.org/tools/sleuthkit/)
-- [Sleuthkit - Tool Overview](https://wiki.sleuthkit.org/index.php?title=TSK_Tool_Overview)
+- [Sleuthkit - Tool Overview](https://wiki.sleuthkit.org/TSK-Tool-Overview/)
 - [srch_strings - Linux manual page](https://manpages.ubuntu.com/manpages/jammy/man1/srch_strings.1.html)
 - [srch_strings - Kali Tools](https://www.kali.org/tools/sleuthkit/#srch_strings)
 - [String (computer science) - Wikipedia](https://en.wikipedia.org/wiki/String_(computer_science))

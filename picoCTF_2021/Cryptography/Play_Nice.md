@@ -8,6 +8,7 @@
 
 ```text
 Level: Hard
+Points: 110
 Tags: picoCTF 2021, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MADSTACKS
@@ -23,7 +24,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/114](https://play.picoctf.org/practice/challenge/114)
+Challenge link: [https://learn.cylabacademy.org/library/114](https://learn.cylabacademy.org/library/challenge/114)
 
 ## Solution
 
@@ -121,6 +122,8 @@ We can solve this online at [dCode.fr](https://www.dcode.fr/playfair-cipher).
 2. Set grid size as 6x6 and press `RESIZE`
 3. Set `meiktp6yh4wxruavj9no13fb8d027c5glzsq` as alphabet under the matrix
 4. Click `DECRYPT PLAYFAIR`
+
+![PlayFair Cipher Decode](Images/PlayFair_Cipher_Decode.png)
 
 The result is uppercase letters and the site expects lowercase letters so we need to convert them is an interactive python session or something similar
 

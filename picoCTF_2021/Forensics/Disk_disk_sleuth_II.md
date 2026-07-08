@@ -2,13 +2,14 @@
 
 - [Challenge information](#challenge-information)
 - [Sleuthkit Solution](#sleuthkit-solution)
-- [Boot in Qemu solution](#boot-in-qemu-solution)
+- [Boot in QEMU Solution](#boot-in-qemu-solution)
 - [References](#references)
 
 ## Challenge information
 
 ```text
 Level: Medium
+Points: 130
 Tags: picoCTF 2021, Forensics
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
@@ -23,9 +24,9 @@ Hints:
 3. This disk can also be booted with qemu!
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/137](https://play.picoctf.org/practice/challenge/137)
+Challenge link: [https://learn.cylabacademy.org/library/137](https://learn.cylabacademy.org/library/137)
 
-## Sleuthkit solution
+## Sleuthkit Solution
 
 ### Unpack the image file
 
@@ -131,7 +132,7 @@ Let's use some command-line kung-fu to get the flag in a more easily readable fo
 picoCTF{<REDACTED>}
 ```
 
-## Boot in Qemu solution
+## Boot in QEMU Solution
 
 Alternatively we can boot the disk in [QEMU](https://www.qemu.org/) as suggested in one of the hints.  
 Install with `sudo apt install qemu-system-x86` if needed.
@@ -149,7 +150,7 @@ Login with username `root` and password `root`.
 The home directory is `/root` were the file is located. So you can just `cat` the file to get the flag.  
 When you are done use `poweroff` to shutdown the virtual machine.
 
-![Booting disk in Qemu](Booting_disk_in_Qemu.png)
+![Booting disk in Qemu](Images/Booting_disk_in_Qemu.png)
 
 For additional information, please see the references below.
 
@@ -159,9 +160,10 @@ For additional information, please see the references below.
 - [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
 - [gunzip - Linux manual page](https://linux.die.net/man/1/gunzip)
 - [inode - Wikipedia](https://en.wikipedia.org/wiki/Inode)
+- [Master boot record - Wikipedia](https://en.wikipedia.org/wiki/Master_boot_record)
 - [Sleuthkit - Homepage](https://www.sleuthkit.org/sleuthkit/)
 - [Sleuthkit - Kali Tools](https://www.kali.org/tools/sleuthkit/)
-- [Sleuthkit - Tool Overview](https://wiki.sleuthkit.org/index.php?title=TSK_Tool_Overview)
+- [Sleuthkit - Tool Overview](https://wiki.sleuthkit.org/TSK-Tool-Overview/)
 - [tr - Linux manual page](https://man7.org/linux/man-pages/man1/tr.1.html)
 - [QEMU - Home page](https://www.qemu.org/)
 - [QEMU - Wikipedia](https://en.wikipedia.org/wiki/QEMU)

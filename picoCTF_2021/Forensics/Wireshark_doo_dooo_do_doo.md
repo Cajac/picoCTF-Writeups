@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 50
 Tags: picoCTF 2021, Forensics
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: DYLAN
@@ -20,7 +21,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/115](https://play.picoctf.org/practice/challenge/115)
+Challenge link: [https://learn.cylabacademy.org/library/115](https://learn.cylabacademy.org/library/115)
 
 ## Solution
 
@@ -37,7 +38,7 @@ Here we see the stream content displayed in the same sequence as it appeared on 
 
 Down in the lower right corner of the window you can step through the streams by increasing or decreasing the stream number.
 
-At stream #5 we find this content
+At **stream #5** we find this content
 
 ```text
 GET / HTTP/1.1

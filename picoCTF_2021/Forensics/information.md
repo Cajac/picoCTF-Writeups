@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 10
 Tags: picoCTF 2021, Forensics
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SUSIE
@@ -21,11 +22,11 @@ Hints:
 2. Make sure to submit the flag as picoCTF{XXXXX}
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/186](https://play.picoctf.org/practice/challenge/186)
+Challenge link: [https://learn.cylabacademy.org/library/186](https://learn.cylabacademy.org/library/186)
 
 ## Solution
 
-In steganography oriented forensics challenges there are a number of checks that are more or less "standard practice".  
+In [steganography](https://en.wikipedia.org/wiki/Steganography) oriented forensics challenges there are a number of checks that are more or less "standard practice".  
 These include:
 
 1. Checking for metadata with [ExifTool](https://exiftool.org/)
@@ -77,6 +78,8 @@ It is long, contains only letters and numbers and could be [Base64 encoded data]
 
 To decode the flag we could use an online site such as [CyberChef](https://gchq.github.io/CyberChef/) with the 'From Base64' recipe. Enter 'base64' in the `Operations` search bar, then drag and drop it to the `Recipe`. Copy the license data to the `Input` pane and press `BAKE`.
 
+![CyberChef Base64 Decode](Images/CyberChef_Base64_Decode.png)
+
 Alternatively, you can use the `base64` tool like this
 
 ```bash
@@ -100,5 +103,6 @@ For additional information, please see the references below.
 - [ExifTool - Homepage](https://exiftool.org/)
 - [exiftool - Linux manual page](https://linux.die.net/man/1/exiftool)
 - [ExifTool - Wikipedia](https://en.wikipedia.org/wiki/ExifTool)
+- [Steganography - Wikipedia](https://en.wikipedia.org/wiki/Steganography)
 - [String (computer science) - Wikipedia](https://en.wikipedia.org/wiki/String_(computer_science))
 - [strings - Linux manual page](https://man7.org/linux/man-pages/man1/strings.1.html)

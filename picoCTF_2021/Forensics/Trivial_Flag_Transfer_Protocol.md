@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 90
 Tags: picoCTF 2021, Forensics
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: DANNY
@@ -19,7 +20,7 @@ Hints:
 1. What are some other ways to hide data?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/103](https://play.picoctf.org/practice/challenge/103)
+Challenge link: [https://learn.cylabacademy.org/library/103](https://learn.cylabacademy.org/library/103)
 
 ## Solution
 
@@ -29,6 +30,21 @@ Open up the PCAP-file in [Wireshark](https://www.wireshark.org/).
 
 Wireshark can extract any files transfered with TFTP for us. In the `File`-menu, select `Export Objects -> TFTP`.  
 Then click `Save All`.
+
+![Wireshark Export TFTP](Images/Wireshark_Export_TFTP.png)
+
+> [!WARNING]
+> It seems later versions of Wireshark doesn't extract the `instructions.txt` file correctly.  
+> You might need manually extract its contents from packet #3 with tshark and xxd.
+
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Trivial_Flag_Transfer_Protocol]
+└─$ tshark -r tftp.pcapng -Y "frame.number == 3" -T fields -e data.data | xxd -r -p
+GSGCQBRFAGRAPELCGBHEGENSSVPFBJRZHFGQVFTHVFRBHESYNTGENAFSRE.SVTHERBHGNJNLGBUVQRGURSYNTNAQVJVYYPURPXONPXSBEGURCYNA
+
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Forensics/Trivial_Flag_Transfer_Protocol]
+└─$ tshark -r tftp.pcapng -Y "frame.number == 3" -T fields -e data.data | xxd -r -p > instructions.txt
+```
 
 ### Analyse the transfered files
 
@@ -235,4 +251,6 @@ For additional information, please see the references below.
 - [steghide - Kali Tools](https://www.kali.org/tools/steghide/)
 - [tar - Linux manual page](https://man7.org/linux/man-pages/man1/tar.1.html)
 - [Trivial File Transfer Protocol - Wikipedia](https://en.wikipedia.org/wiki/Trivial_File_Transfer_Protocol)
+- [tshark - Manual page - Wireshark](https://www.wireshark.org/docs/man-pages/tshark.html)
 - [Wireshark - Homepage](https://www.wireshark.org/)
+- [xxd - Linux manual page](https://linux.die.net/man/1/xxd)

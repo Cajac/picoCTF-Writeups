@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 90
 Tags: picoCTF 2021, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SARA
@@ -22,7 +23,7 @@ Hints:
 1. What can you do with a different pair of ciphertext and plaintext? What if it is not so different after all...
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/154](https://play.picoctf.org/practice/challenge/154)
+Challenge link: [https://learn.cylabacademy.org/library/154](https://learn.cylabacademy.org/library/challenge/154)
 
 ## Solution
 

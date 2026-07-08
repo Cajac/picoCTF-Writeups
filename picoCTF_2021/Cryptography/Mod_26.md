@@ -1,13 +1,16 @@
 # Mod 26
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [CyberChef Solution](#cyberchef-solution)
+- [ROT13 Tool Solution](#rot13-tool-solution)
+- [Tr Tool Solution](#tr-tool-solution)
 - [References](#references)
 
 ## Challenge information
 
 ```text
 Level: Easy
+Points: 10
 Tags: picoCTF 2021, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: PANDU
@@ -21,20 +24,22 @@ Hints:
 1. This can be solved online if you don't want to do it by hand!
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/144](https://play.picoctf.org/practice/challenge/144)
-
-## Solution
+Challenge link: [https://learn.cylabacademy.org/library/144](https://learn.cylabacademy.org/library/144)
 
 There are several ways to solve this challenge and here are some of them.
 
-### CyberChef solution
+## CyberChef Solution
 
 As the hint suggested you can use an online site such as [CyberChef](https://gchq.github.io/CyberChef/) and use the 'ROT13' recipe.
 
 Enter 'rot13' in the `Operations` search bar, then drag and drop it to the `Recipe`.  
 Copy the scrambled flag to the `Input` pane and press `BAKE`.
 
-### Use a rot13 commandline tool in Linux
+![CyberChef ROT13](Images/CyberChef_ROT13.png)
+
+## ROT13 Tool Solution
+
+Alternatively, we can use a rot13 commandline tool in Linux.
 
 There are at least two sets of packages that contains prepacked `rot13` tools:
 
@@ -55,9 +60,9 @@ After one of these tools have been installed you can run
 picoCTF{next_time_<REDACTED>}
 ```
 
-### Use the tr tool in Linux
+## Tr Tool Solution
 
-Alternatively, you can use the `tr` tool to "manually" do the decoding
+Finally, we can use the `tr` tool to "manually" do the decoding
 
 ```bash
 ┌──(kali㉿kali)-[~]

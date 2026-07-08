@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 40
 Tags: picoCTF 2021, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MADSTACKS
@@ -22,7 +23,7 @@ Hints:
 1. Maybe there's a way to make this a 2x pad.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/125](https://play.picoctf.org/practice/challenge/125)
+Challenge link: [https://learn.cylabacademy.org/library/125](https://learn.cylabacademy.org/library/125)
 
 ## Solution
 

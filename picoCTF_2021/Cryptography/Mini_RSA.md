@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 70
 Tags: picoCTF 2021, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SARA
@@ -26,7 +27,7 @@ Hints:
 5. pico is in the flag, but not at the beginning
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/188](https://play.picoctf.org/practice/challenge/188)
+Challenge link: [https://learn.cylabacademy.org/library/188](https://learn.cylabacademy.org/library/188)
 
 ## Solution
 
@@ -43,7 +44,7 @@ ciphertext (c): 1220012318588871886132524757898884422174534558055593713309088304
 
 So we have a modulus number `N`,  the public key exponent `e`, and the cipher text `c`.
 
-Remember that in RSA `M**3 mod n = c`. We can rewrite this as `M**3 = i*n + c`  for some value of `i`.  
+Remember that in RSA `M**3 mod n = c`. We can rewrite this as `M**3 = i*n + c` for some value of `i`.  
 This means that `M = iroot(i*n+c, 3)` for some `i`. We just need to find the correct `i` value.
 
 We will use the `iroot` function from [gmpy2 module](https://pypi.org/project/gmpy2/).  

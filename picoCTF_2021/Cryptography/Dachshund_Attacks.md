@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 89
 Tags: picoCTF 2021, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SARA
@@ -21,7 +22,7 @@ Hints:
 1. What do you think about my pet? dachshund.jpg
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/159](https://play.picoctf.org/practice/challenge/159)
+Challenge link: [https://learn.cylabacademy.org/library/159](https://learn.cylabacademy.org/library/159)
 
 ## Solution
 
@@ -29,7 +30,7 @@ Challenge link: [https://play.picoctf.org/practice/challenge/159](https://play.p
 
 If you google for `rsa attack small d` you will get [Wiener's attack](https://en.wikipedia.org/wiki/Wiener%27s_attack) as one of the top results. So let's aim for that.
 
-Let's connect to the site with netcat
+We connect to the site with netcat
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Cryptography/Dachshund_Attacks]
@@ -40,7 +41,7 @@ n: 11163507377528299256043693227942292789271836843004664211105438445143743009295
 c: 49549647784920592050303228298573648607199952049322535252620035695093329607635490577905002304862913428592143243603580186617698394894233841091360060436848920174536652319109898564887300408227123623221892942454805819870355745462215546218568019618578258052103881221284377372054554879956764482279714539463062518411
 ```
 
-After a few seconds we get:
+And after a few seconds we get:
 
 - the public key exponent `e`
 - the modulus number `n` and

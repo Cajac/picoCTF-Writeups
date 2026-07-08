@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 60
 Tags: picoCTF 2021, Forensics
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MADSTACKS
@@ -20,11 +21,11 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/130](https://play.picoctf.org/practice/challenge/130)
+Challenge link: [https://learn.cylabacademy.org/library/130](https://learn.cylabacademy.org/library/130)
 
 ## Solution
 
-The pptm (rather than just ppt) file extension and the name of the challenge hints that there are macros involved so let's check that first.
+The pptm (rather than just pptx) file extension and the name of the challenge hints that there are macros involved so let's check that first.
 
 ### Checking for macros
 
