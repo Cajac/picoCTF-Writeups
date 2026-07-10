@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 5
 Tags: picoCTF 2021, General Skills
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
@@ -24,7 +25,7 @@ Hints:
 3. $ man cat
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/147](https://play.picoctf.org/practice/challenge/147)
+Challenge link: [https://learn.cylabacademy.org/library/147](https://learn.cylabacademy.org/library/147)
 
 ## Solution
 

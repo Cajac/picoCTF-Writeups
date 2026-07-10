@@ -1,13 +1,15 @@
 # Shop
 
 - [Challenge information](#challenge-information)
-- [Solutions](#solutions)
+- [Manual Solution](#manual-solution)
+- [Pwntools Solution](#pwntools-solution)
 - [References](#references)
 
 ## Challenge information
 
 ```text
 Level: Medium
+Points: 50
 Tags: picoCTF 2021, Reverse Engineering
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: THELSHELL
@@ -22,9 +24,9 @@ Hints:
 1. Always check edge cases when programming
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/134](https://play.picoctf.org/practice/challenge/134)
+Challenge link: [https://learn.cylabacademy.org/library/134](https://learn.cylabacademy.org/library/134)
 
-## Solutions
+## Manual Solution
 
 ### Analyze the given information
 
@@ -48,7 +50,6 @@ We also check if the flag is available as a plain text string
 
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/Shop]
 └─$ strings -a -n 8 -e S source | grep -i picoCTF
-
 ```
 
 Nope, not that easy!
@@ -135,6 +136,8 @@ Enter 'decimal' in the `Operations` search bar, then drag and drop `From Decimal
 Copy the numbers to the `Input` pane and press `BAKE`.  
 The flag will be shown in the `Output` pane.
 
+![CyberChef Decoding](Images/CyberChef_Decoding.png)
+
 Alternativly, we can use an interactive Python session
 
 ```bash
@@ -145,12 +148,12 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> num_array = "112 105 99 111 67 84 70 123 98 52 100 95 98 114 111 103 114 97 109 109 101 114 95 55 57 55 98 50 57 50 99 125 13 10".split()
 >>> int_array = map(int, num_array)
 >>> ''.join(map(chr,int_array))
-'picoCTF{b4d_<REDACTED>}\r\n'
+'picoCTF{<REDACTED>}\r\n'
 ```
 
-### Automate everything with pwntools
+## Pwntools Solution
 
-We can use [pwntools](https://docs.pwntools.com/en/stable/index.html) to automate this with a Python script
+We can also use [pwntools](https://docs.pwntools.com/en/stable/index.html) to automate this with a Python script
 
 ```python
 #!/usr/bin/python
@@ -183,7 +186,7 @@ And run the script to get the flag
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/Reverse_Engineering/Shop]
 └─$ ~/python_venvs/pwntools/bin/python get_flag.py
-picoCTF{b4d_<REDACTED>}
+picoCTF{<REDACTED>}
 ```
 
 For additional information, please see the references below.

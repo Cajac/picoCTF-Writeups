@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 70
 Tags: picoCTF 2021, Reverse Engineering
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: PRANAY GARG
@@ -23,7 +24,7 @@ Hints:
 1. Shifts
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/111](https://play.picoctf.org/practice/challenge/111)
+Challenge link: [https://learn.cylabacademy.org/library/111](https://learn.cylabacademy.org/library/111)
 
 ## Solutions
 
@@ -70,6 +71,8 @@ Next we brute force the answer
 ```
 
 I first tried only the first 1000 numbers but that wasn't enought so I increased it to 10000.
+
+Remember to convert the flag to hex before submitting the flag.
 
 ### Solution #2 - Manual analysis
 

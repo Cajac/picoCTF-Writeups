@@ -1,13 +1,14 @@
 # keygenme-py
 
 - [Challenge information](#challenge-information)
-- [Solutions](#solutions)
+- [Solution](#solution)
 - [References](#references)
 
 ## Challenge information
 
 ```text
 Level: Medium
+Points: 30
 Tags: picoCTF 2021, Reverse Engineering
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
@@ -20,9 +21,9 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/121](https://play.picoctf.org/practice/challenge/121)
+Challenge link: [https://learn.cylabacademy.org/library/121](https://learn.cylabacademy.org/library/121)
 
-## Solutions
+## Solution
 
 ### Analyze the Python script
 

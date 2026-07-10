@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 20
 Tags: picoCTF 2021, Reverse Engineering
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: MADSTACKS
@@ -21,7 +22,7 @@ Hints:
 1. You may find some decoders online
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/104](https://play.picoctf.org/practice/challenge/104)
+Challenge link: [https://learn.cylabacademy.org/library/104](https://learn.cylabacademy.org/library/104)
 
 ## Solutions
 
@@ -50,6 +51,8 @@ Enter 'text' in the `Operations` search bar, then drag and drop `Encode text` to
 Change the Encoding to `UTF-16BE (1201)`, copy the scrambled flag to the `Input` pane and press `BAKE`.
 
 The flag will be shown in the `Output` pane.
+
+![CyberChef Encoding](Images/CyberChef_Encoding.png)
 
 ### Python reverse decoder
 
@@ -83,7 +86,7 @@ And we have that flag again.
 
 ### Python encoding brute forcer
 
-Finally, we can assume that a standing encoding scheme was used and just brute force all combinations
+Finally, we can assume that a standard encoding scheme was used and just brute force all combinations
 
 ```python
 #!/usr/bin/python

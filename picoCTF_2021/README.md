@@ -59,10 +59,13 @@
 - [Magikarp Ground Mission](General_Skills/Magikarp_Ground_Mission.md)
 - [Nice netcat...](General_Skills/Nice_netcat.md)
 - [Obedient Cat](General_Skills/Obedient_Cat.md)
-- [Python Wrangling](General_Skills/Python_Wrangling.md)
 - [Static ain't always noise](General_Skills/Static_aint_always_noise.md)
 - [Tab, Tab, Attack](General_Skills/Tab_Tab_Attack.md)
 - [Wave a flag](General_Skills/Wave_a_flag.md)
+
+### Medium General Skills Challenges
+
+- [Python Wrangling](General_Skills/Python_Wrangling.md)
 
 ## Reverse Engineering Challenges
 
@@ -74,8 +77,6 @@
 
 - [ARMssembly 0](Reverse_Engineering/ARMssembly_0.md)
 - [ARMssembly 1](Reverse_Engineering/ARMssembly_1.md)
-- [ARMssembly 2](Reverse_Engineering/ARMssembly_2.md)
-- [ARMssembly 3](Reverse_Engineering/ARMssembly_3.md)
 - [crackme-py](Reverse_Engineering/crackme-py.md)
 - [keygenme-py](Reverse_Engineering/keygenme-py.md)
 - [Shop](Reverse_Engineering/Shop.md)
@@ -83,6 +84,8 @@
 
 ### Hard Reverse Engineering Challenges
 
+- [ARMssembly 2](Reverse_Engineering/ARMssembly_2.md)
+- [ARMssembly 3](Reverse_Engineering/ARMssembly_3.md)
 - [ARMssembly 4](Reverse_Engineering/ARMssembly_4.md)
 
 ## Web Exploitation Challenges

@@ -1,13 +1,15 @@
 # Nice netcat...
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [Manual Solution](#manual-solution)
+- [Scripted Solution](#scripted-solution)
 - [References](#references)
 
 ## Challenge information
 
 ```text
 Level: Easy
+Points: 15
 Tags: picoCTF 2021, General Skills
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
@@ -21,13 +23,11 @@ Hints:
 2. You can practice reading and writing ASCII with this picoGym problem: Let's Warm Up
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/156](https://play.picoctf.org/practice/challenge/156)
-
-## Solution
+Challenge link: [https://learn.cylabacademy.org/library/156](https://learn.cylabacademy.org/library/156)
 
 Below I offer two possible solutions: one manual with netcat and CyberChef and one fully automated with Python and pwntools.
 
-### Solution #1 - netcat and CyberChef
+## Manual Solution
 
 Let's start with connecting to the server with `nc`
 
@@ -90,7 +90,9 @@ Change the Delimiter to `Line feed`, copy the numbers to the `Input` pane and pr
 
 The flag will be shown in the `Output` pane.
 
-### Solution #2 - Python and pwntools
+![CyberChef Decoding](Images/CyberChef_Decoding.png)
+
+## Scripted Solution
 
 Alternatively, we can script everything with the help of [pwntools](https://docs.pwntools.com/en/stable/index.html)
 

@@ -8,10 +8,11 @@
 
 ```text
 Level: Easy
+Points: 20
 Tags: picoCTF 2021, General Skills
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
-  
+
 Description:
 Can you look at the data in this binary: static? 
 This BASH script might help!
@@ -20,7 +21,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/163](https://play.picoctf.org/practice/challenge/163)
+Challenge link: [https://learn.cylabacademy.org/library/163](https://learn.cylabacademy.org/library/163)
 
 ## Solution
 

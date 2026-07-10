@@ -1,13 +1,15 @@
 # Tab, Tab, Attack
 
 - [Challenge information](#challenge-information)
-- [Solution](#solution)
+- [Tab Solution](#tab-solution)
+- [Smart Unpack Solution](#smart-unpack-solution)
 - [References](#references)
 
 ## Challenge information
 
 ```text
 Level: Easy
+Points: 20
 Tags: picoCTF 2021, General Skills
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
@@ -20,11 +22,11 @@ Hints:
 1. After `unzip`ing, this problem can be solved with 11 button-presses...(mostly Tab)...
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/176](https://play.picoctf.org/practice/challenge/176)
+Challenge link: [https://learn.cylabacademy.org/library/176](https://learn.cylabacademy.org/library/176)
 
 ## Solution
 
-### Likely intented solution
+## Tab Solution
 
 Based on the challenge name this is the likely intended solution. The challenge is mainly an exercise in how to use [tab completion](https://en.wikipedia.org/wiki/Command-line_completion).
 
@@ -44,7 +46,7 @@ Archive:  Addadshashanammu.zip
   inflating: Addadshashanammu/Almurbalarammi/Ashalmimilkala/Assurnabitashpi/Maelkashishi/Onnissiralis/Ularradallaku/fang-of-haynekhtnamet  
 ```
 
-Then we need to change directory with `cd` to the find the file
+Then we need to change directory with `cd` to the find the file. Use `TAB` twice to automatically complete the directory names.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2021/General_Skills/Tab_Tab_Attack]
@@ -75,7 +77,7 @@ Why not run it?
 
 And there is the flag!
 
-### The smarter solution
+## Smart Unpack Solution
 
 A smarter solution is to unpack the zip-file without recreating the directory structure (`-j` parameter)
 

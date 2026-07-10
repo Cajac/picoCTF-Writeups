@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 10
 Tags: picoCTF 2021, General Skills
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
@@ -27,7 +28,7 @@ Hints:
 5. Not every program implements help features like -h and --help.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/170](https://play.picoctf.org/practice/challenge/170)
+Challenge link: [https://learn.cylabacademy.org/library/170](https://learn.cylabacademy.org/library/170)
 
 ## Solution
 

@@ -8,6 +8,7 @@
 
 ```text
 Level: Easy
+Points: 30
 Tags: picoCTF 2021, General Skills
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
@@ -23,7 +24,7 @@ Hints:
 1. Finding a cheatsheet for bash would be really helpful!
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/189](https://play.picoctf.org/practice/challenge/189)
+Challenge link: [https://learn.cylabacademy.org/library/189](https://learn.cylabacademy.org/library/189)
 
 ## Solution
 
@@ -125,7 +126,7 @@ Lets append the middle part to our `full_flag.txt` file
 ctf-player@pico-chall$ cat 2of3.flag.txt >> /tmp/full_flag.txt
 ```
 
-Then we follow the instructions for the middle part of the flag
+Next we follow the instructions for the middle part of the flag
 
 ```bash
 ctf-player@pico-chall$ cat instructions-to-3of3.txt 
@@ -158,7 +159,7 @@ picoCTF{xxsh_
 
 Ah, how annoying. There were newlines in the flag files.
 
-Lets remove them with `tr`
+Let's remove them with `tr`
 
 ```bash
 ctf-player@pico-chall$ cat /tmp/full_flag.txt | tr -d '\n'
@@ -172,6 +173,7 @@ For additional information, please see the references below.
 - [cat - Linux manual page](https://man7.org/linux/man-pages/man1/cat.1.html)
 - [cd - Linux manual page](https://man7.org/linux/man-pages/man1/cd.1p.html)
 - [ls - Linux manual page](https://man7.org/linux/man-pages/man1/ls.1.html)
+- [Redirections - Bash Reference Manual](https://www.gnu.org/software/bash/manual/bash.html#Redirections)
 - [Secure Shell - Wikipedia](https://en.wikipedia.org/wiki/Secure_Shell)
 - [ssh - Linux manual page](https://man7.org/linux/man-pages/man1/ssh.1.html)
 - [tr - Linux manual page](https://man7.org/linux/man-pages/man1/tr.1.html)

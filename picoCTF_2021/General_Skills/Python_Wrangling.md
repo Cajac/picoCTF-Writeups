@@ -7,7 +7,8 @@
 ## Challenge information
 
 ```text
-Level: Easy
+Level: Medium
+Points: 10
 Tags: picoCTF 2021, General Skills
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
@@ -22,7 +23,7 @@ Hints:
 2. $ man python
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/166](https://play.picoctf.org/practice/challenge/166)
+Challenge link: [https://learn.cylabacademy.org/library/166](https://learn.cylabacademy.org/library/166)
 
 ## Solution
 
@@ -69,5 +70,7 @@ For additional information, please see the references below.
 ## References
 
 - [cat - Linux manual page](https://man7.org/linux/man-pages/man1/cat.1.html)
+- [Encryption - Wikipedia](https://en.wikipedia.org/wiki/Encryption)
+- [man - Linux manual page](https://man7.org/linux/man-pages/man1/man.1.html)
 - [python - Linux manual page](https://linux.die.net/man/1/python)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))

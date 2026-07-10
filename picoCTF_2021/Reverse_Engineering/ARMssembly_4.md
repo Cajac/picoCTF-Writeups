@@ -1,13 +1,14 @@
 # ARMssembly 4
 
 - [Challenge information](#challenge-information)
-- [Solutions](#solutions)
+- [Solution](#solution)
 - [References](#references)
 
 ## Challenge information
 
 ```text
 Level: Hard
+Points: 170
 Tags: picoCTF 2021, Reverse Engineering
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: DYLAN MCGUIRE
@@ -23,9 +24,9 @@ Hints:
 1. Switching things up
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/183](https://play.picoctf.org/practice/challenge/183)
+Challenge link: [https://learn.cylabacademy.org/library/183](https://learn.cylabacademy.org/library/183)
 
-## Solutions
+## Solution
 
 As in the previous challenges, we compile the assembly code and then emulate the program to find out what the answer is.
 

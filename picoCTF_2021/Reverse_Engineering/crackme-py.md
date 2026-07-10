@@ -1,17 +1,18 @@
 # crackme-py
 
 - [Challenge information](#challenge-information)
-- [Solutions](#solutions)
+- [Solution](#solution)
 - [References](#references)
 
 ## Challenge information
 
 ```text
 Level: Medium
+Points: 30
 Tags: picoCTF 2021, Reverse Engineering
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
-  
+
 Description:
 
 crackme.py
@@ -20,9 +21,9 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/175](https://play.picoctf.org/practice/challenge/175)
+Challenge link: [https://learn.cylabacademy.org/library/175](https://learn.cylabacademy.org/library/175)
 
-## Solutions
+## Solution
 
 ### Analyze the Python script
 

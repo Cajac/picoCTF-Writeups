@@ -8,6 +8,7 @@
 
 ```text
 Level: Medium
+Points: 40
 Tags: picoCTF 2021, Reverse Engineering
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: DYLAN MCGUIRE
@@ -22,7 +23,7 @@ Hints:
 1. Simple compare
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/160](https://play.picoctf.org/practice/challenge/160)
+Challenge link: [https://learn.cylabacademy.org/library/160](https://learn.cylabacademy.org/library/160)
 
 ## Solutions
 

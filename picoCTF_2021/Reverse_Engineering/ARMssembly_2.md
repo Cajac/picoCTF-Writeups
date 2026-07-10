@@ -7,7 +7,8 @@
 ## Challenge information
 
 ```text
-Level: Medium
+Level: Hard
+Points: 90
 Tags: picoCTF 2021, Reverse Engineering
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: DYLAN MCGUIRE
@@ -23,7 +24,7 @@ Hints:
 1. Loops
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/150](https://play.picoctf.org/practice/challenge/150)
+Challenge link: [https://learn.cylabacademy.org/library/150](https://learn.cylabacademy.org/library/150)
 
 ## Solutions
 

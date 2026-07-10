@@ -1,13 +1,14 @@
 # speeds and feeds
 
 - [Challenge information](#challenge-information)
-- [Solutions](#solutions)
+- [Solution](#solution)
 - [References](#references)
 
 ## Challenge information
 
 ```text
 Level: Medium
+Points: ??
 Tags: picoCTF 2021, Reverse Engineering
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: RYAN RAMSEYER
@@ -20,9 +21,9 @@ Hints:
 1. What language does a CNC machine use?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/116](https://play.picoctf.org/practice/challenge/116)
+Challenge link: [https://learn.cylabacademy.org/library/116](https://learn.cylabacademy.org/library/116)
 
-## Solutions
+## Solution
 
 ### Analyze the output
 
@@ -76,7 +77,7 @@ Then click the `PLOT` button.
 
 The result should look something like this:
 
-<img src="The_flag_in_NC_Viewer.png" alt="Part of the flag in NC Viewer" style="width:700px;"/>
+<img src="Images/The_flag_in_NC_Viewer.png" alt="Part of the flag in NC Viewer" style="width:700px;"/>
 
 Zoom out and re-position the grid and you have the whole flag.
 
