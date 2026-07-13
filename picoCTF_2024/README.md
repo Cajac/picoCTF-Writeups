@@ -67,6 +67,7 @@
 ### Medium Reverse Engineering Challenges
 
 - [FactCheck](Reverse_Engineering/FactCheck.md)
+- [WinAntiDbg0x100](Reverse_Engineering/WinAntiDbg0x100.md)
 
 ## Web Exploitation Challenges
 
