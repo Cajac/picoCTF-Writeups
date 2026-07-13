@@ -12,6 +12,7 @@
 ### Medium Binary Exploitation Challenges
 
 - [format string 2](Binary_Exploitation/format_string_2.md)
+- [format string 3](Binary_Exploitation/format_string_3.md)
 - [heap 2](Binary_Exploitation/heap_2.md)
 
 ## Cryptography Challenges
