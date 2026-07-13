@@ -9,6 +9,7 @@
 
 ```text
 Level: Medium
+Points: 250
 Tags: picoCTF 2020 Mini-Competition, Forensics
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SYREAL
@@ -25,7 +26,7 @@ Hints:
    disk space phenomenon...
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/87](https://play.picoctf.org/practice/challenge/87)
+Challenge link: [https://learn.cylabacademy.org/library/87](https://learn.cylabacademy.org/library/87)
 
 ## Sleuth Kit Solution
 
@@ -202,4 +203,4 @@ For additional information, please see the references below.
 - [rev - Linux manual page](https://man7.org/linux/man-pages/man1/rev.1.html)
 - [Sleuthkit - Homepage](https://www.sleuthkit.org/sleuthkit/)
 - [Sleuthkit - Kali Tools](https://www.kali.org/tools/sleuthkit/)
-- [Sleuthkit - Tool Overview](https://wiki.sleuthkit.org/index.php?title=TSK_Tool_Overview)
+- [Sleuthkit - Tool Overview](https://wiki.sleuthkit.org/TSK-Tool-Overview/)
