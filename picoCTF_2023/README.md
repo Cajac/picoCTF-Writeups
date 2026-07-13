@@ -65,6 +65,7 @@
 ### Medium Web Exploitation Challenges
 
 - [findme](Web_Exploitation/findme.md)
+- [Java Code Analysis!?!](Forensics/Java_Code_Analysis.md)
 - [MatchTheRegex](Web_Exploitation/MatchTheRegex.md)
 - [More SQLi](Web_Exploitation/More_SQLi.md)
 - [SOAP](Web_Exploitation/SOAP.md)

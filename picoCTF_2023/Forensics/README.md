@@ -4,6 +4,7 @@
 
 - [FindAndOpen](FindAndOpen.md)
 - [hideme](hideme.md)
+- [Java Code Analysis](Java_Code_Analysis.md)
 - [MSB](MSB.md)
 - [PcapPoisoning](PcapPoisoning.md)
 
