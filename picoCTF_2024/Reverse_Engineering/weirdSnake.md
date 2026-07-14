@@ -208,6 +208,14 @@ input_list[1] = 54
 
 The `>>` markers are **jump targets** and they mark loop tops/bottoms and branch destinations, which is a cue for while/for/if-statements.
 
+### About Python bytecode
+
+Python bytecode works on a [stack]((https://en.wikipedia.org/wiki/Stack_(abstract_data_type))) and the operations either *Pushes* (adds) or *Pops* (removes) things from the stack.
+
+- Each `LOAD_*` pushes
+- Each `BINARY_*`  and `CALL_*` pops operands and pushes a result
+- Each `STORE_*` pops into a variable
+
 ### Build a Python script
 
 I'm not aware of any tool(s) that "reverse" the above output back to Python code so I used a manual approach backup up by [Claude](https://claude.ai/) for some deep dives in the interpretation of the output.
@@ -353,5 +361,6 @@ For additional information, please see the references below.
 - [ord function - Python Docs](https://docs.python.org/3.4/library/functions.html#ord)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [Shebang (Unix) - Wikipedia](https://en.wikipedia.org/wiki/Shebang_(Unix))
+- [Stack (abstract data type) - Wikipedia](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
 - [zip function - Python Docs](https://docs.python.org/3.4/library/functions.html#zip)
 - [XOR cipher - Wikipedia](https://en.wikipedia.org/wiki/XOR_cipher)
