@@ -357,4 +357,3 @@ For additional information, please see the references below.
 - [Shebang (Unix) - Wikipedia](https://en.wikipedia.org/wiki/Shebang_(Unix))
 - [zip function - Python Docs](https://docs.python.org/3.4/library/functions.html#zip)
 - [XOR cipher - Wikipedia](https://en.wikipedia.org/wiki/XOR_cipher)
-
