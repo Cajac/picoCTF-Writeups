@@ -356,3 +356,5 @@ For additional information, please see the references below.
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [Shebang (Unix) - Wikipedia](https://en.wikipedia.org/wiki/Shebang_(Unix))
 - [zip function - Python Docs](https://docs.python.org/3.4/library/functions.html#zip)
+- [XOR cipher - Wikipedia](https://en.wikipedia.org/wiki/XOR_cipher)
+
