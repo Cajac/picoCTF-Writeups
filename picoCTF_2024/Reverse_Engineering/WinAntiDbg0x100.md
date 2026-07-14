@@ -204,7 +204,8 @@ Select `Run to user code` in the `Debug`-menu or use `Alt`+`F9`.
 
 ![x32dbg Usercode](Images/x32dbg_Usercode.png)
 
-We can use the same string search in the debugger and navigate to the function above by double-clicking on the string.
+We can use a string search as in the decompiler and navigate to the function above by double-clicking on the string.  
+Press the `Az`-icon to `Find Strings`.
 
 Let's set a breakpoint on the call to `IsDebuggerPresent` and `Run` the code with `F9`.
 
