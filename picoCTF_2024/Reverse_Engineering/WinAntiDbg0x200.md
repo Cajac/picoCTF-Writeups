@@ -235,7 +235,8 @@ LAB_004018de:
 }
 ```
 
-In function `FUN_004011d0`, which we rename to `Fork_function`, we find a call to `CreateProcessA`
+In function `FUN_004011d0`, which we rename to `Fork_function`, we find a call to `CreateProcessA`.  
+We find this function from the `Unable to create the child process.` string.
 
 ```c
 undefined1 Fork_function(void)
