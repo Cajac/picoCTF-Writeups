@@ -220,8 +220,6 @@ Line 1 corresponds to an `input_list` and is rather straight forward
 input_list = [4,54,41,0,112,32,25,49,33,3,0,0,57,32,108,23,48,4,9,70,7,110,36,8,108,7,49,10,4,86,43,105,114,91,0,71,106,124,93,78]
 ```
 
-But for unclear reasons some values are set multiple times. For example `input_list[0] = 4` is present at bytecode offset 0, 34 and 56.
-
 #### Line 2 - 6
 
 Lines 2 through 6 sets the `key_str` variable.
@@ -261,7 +259,7 @@ Disassembly of <code object <listcomp> at 0x7f0be3d36d40, file "snake.py", line 
 <---snip--->
 ```
 
-Note the matching line number and hexadecimal address.
+Note the matching line numbers and hexadecimal address.
 
 The corresponding Python code is
 
