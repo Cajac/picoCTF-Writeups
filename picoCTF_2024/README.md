@@ -69,6 +69,7 @@
 - [FactCheck](Reverse_Engineering/FactCheck.md)
 - [WinAntiDbg0x100](Reverse_Engineering/WinAntiDbg0x100.md)
 - [WinAntiDbg0x200](Reverse_Engineering/WinAntiDbg0x200.md)
+- [weirdSnake](Reverse_Engineering/weirdSnake.md)
 
 ## Web Exploitation Challenges
 
