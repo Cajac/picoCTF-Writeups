@@ -6,6 +6,10 @@
 
 - [PIE TIME](Binary_Exploitation/PIE_TIME.md)
 
+### Medium Binary Exploitation Challenges
+
+- [PIE TIME 2](Binary_Exploitation/PIE_TIME_2.md)
+
 ## Cryptography Challenges
 
 ### Easy Cryptography Challenges
