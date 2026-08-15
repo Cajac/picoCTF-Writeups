@@ -39,8 +39,8 @@ When you are stuck, have already tried different solutions on your own, and don'
 Don't look at them to soon though. It's always good to develop your ["Try harder"-mindset](https://www.offsec.com/blog/what-it-means-to-try-harder/)!
 
 **Scenario #2**:  
-When you have already solved the challenge on your own but what to see if you can learn different methods, tools or approaches.  
-Are there different and perhaps smarter ways to solve the challenge?
+When you have already solved the challenge on your own but want to see if you can learn different methods, tools or approaches.  
+Are there different and perhaps smarter ways to solve this challenge?
 
 ## Support my work
 
