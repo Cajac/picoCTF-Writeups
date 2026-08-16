@@ -10,10 +10,11 @@ In May 2026 the web site rebranded and is now called **CyLab Security Academy**.
 
 These writeups are mainly a documentation for myself but I hope others will benefit from them as well.
 
-In total you will find more than 250 challenge solutions here.
+In total you will find more than **250 challenge solutions** here.
 
 ## Challenges
 
+- [picoMini by CMU-Africa Challenges](picoMini_by_CMU-Africa/README.md)
 - [picoCTF 2025 Challenges](picoCTF_2025/README.md)
 - [picoCTF 2024 Challenges](picoCTF_2024/README.md)
 - [picoCTF 2023 Challenges](picoCTF_2023/README.md)
@@ -39,8 +40,8 @@ When you are stuck, have already tried different solutions on your own, and don'
 Don't look at them to soon though. It's always good to develop your ["Try harder"-mindset](https://www.offsec.com/blog/what-it-means-to-try-harder/)!
 
 **Scenario #2**:  
-When you have already solved the challenge on your own but what to see if you can learn different methods, tools or approaches.  
-Are there different and perhaps smarter ways to solve the challenge?
+When you have already solved the challenge on your own but want to see if you can learn different methods, tools or approaches.
+Are there different and perhaps smarter ways to solve this challenge?
 
 ## Support my work
 
@@ -60,3 +61,4 @@ Some of the solutions were inspired by writeups and walkthroughs from these guys
 - [Hayden Housen](https://github.com/HHousen)
 - [John Hammond](https://www.youtube.com/@_JohnHammond)
 - [Martin Carlisle](https://www.youtube.com/@carlislemc)
+- [picoCTF Solutions](https://picoctfsolutions.com/)
