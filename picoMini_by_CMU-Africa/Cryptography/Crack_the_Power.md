@@ -48,7 +48,7 @@ As noted in the challenge hint, the `e` exponent is small.
 Remember that in RSA `M**e mod n = c`. We can rewrite this as `M**e = i*n + c` for some value of `i`.
 
 But if `e` is small and the message `M` is short, then `M**e` may be less than `n` meaning that no reduction mod `n` took place and `M**e = c` exactly.  
-That is `i` is `0` in the above general case.
+That is `i` = `0` in the above general case.
 
 ### Write a solve script
 
