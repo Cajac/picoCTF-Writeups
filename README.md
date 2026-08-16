@@ -10,7 +10,7 @@ In May 2026 the web site rebranded and is now called **CyLab Security Academy**.
 
 These writeups are mainly a documentation for myself but I hope others will benefit from them as well.
 
-In total you will find more than **250 challenge solutions** here.
+In total you will find more than **275 challenge solutions** here.
 
 ## Challenges
 
