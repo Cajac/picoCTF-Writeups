@@ -12,6 +12,8 @@ These writeups are mainly a documentation for myself but I hope others will bene
 
 In total you will find more than **275 challenge solutions** here.
 
+This repository is part of my evolving efforts to [build](https://www.buildingasecondbrain.com/) my [second](https://fortelabs.com/blog/basboverview/) [brain](https://fortelabs.com/blog/the-7-benefits-of-building-a-second-brain/).
+
 ## Challenges
 
 - [picoMini by CMU-Africa Challenges](picoMini_by_CMU-Africa/README.md)
