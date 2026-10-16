@@ -126,7 +126,7 @@ Node 1: 10.0.0.12:8888
 ===================================================================
 ```
 
-Then we `grep` the hexadecimal flag values only with a [regular expressionj](https://en.wikipedia.org/wiki/Regular_expression).
+Then we `grep` the hexadecimal flag values only with a [regular expression](https://en.wikipedia.org/wiki/Regular_expression).
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Shark_on_wire_1]
