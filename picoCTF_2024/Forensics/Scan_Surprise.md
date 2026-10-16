@@ -59,9 +59,21 @@ Use a tool such as `eog` of `feh` to view it on Linux.
 
 ![QR Code Flag](Images/QR_Code_Flag.png)
 
-### Get the flag
+### Get the flag with CyberChef
 
-To get the flag we can use the `zbar-tools` package as described in one of the hints.  
+To decode the QR code we can use [CyberChef](https://gchq.github.io/CyberChef/).
+
+Open the `flag.png` file as input with the icon looking like an arrow pointing into a square.
+
+![CyberChef QR Code Decoding 1](Images/CyberChef_QR_Code_Decoding_1.png)
+
+Then enter `qr` in the Operations search bar and double-click on `Parse QR Code` to add the operation to the Recipe.
+
+![CyberChef QR Code Decoding 2](Images/CyberChef_QR_Code_Decoding_2.png)
+
+### Get the flag with zbar-tools
+
+Alternatively we can use the `zbar-tools` package as described in one of the hints.  
 Use `sudo apt install zbar-tools` to install it if needed.
 
 ```bash
@@ -75,6 +87,11 @@ For additional information, please see the references below.
 
 ## References
 
+- [CyberChef - GitHub](https://github.com/gchq/CyberChef)
+- [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
+- [feh - Linux manual page](https://linux.die.net/man/1/feh)
+- [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
 - [PNG - Wikipedia](https://en.wikipedia.org/wiki/PNG)
 - [QR code - Wikipedia](https://en.wikipedia.org/wiki/QR_code)
+- [unzip - Linux manual page](https://linux.die.net/man/1/unzip)
 - [zbarimg - Linux manual page](https://linux.die.net/man/1/zbarimg)
