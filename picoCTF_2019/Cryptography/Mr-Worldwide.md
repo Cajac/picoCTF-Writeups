@@ -19,11 +19,11 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/40](https://play.picoctf.org/practice/challenge/40)
+Challenge link: [https://learn.cylabacademy.org/library/40](https://learn.cylabacademy.org/library/40)
 
 ## Solution
 
-Let's start by checking the contents of the message
+Let's start by checking the contents of the message.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/Mr_Worldwide]
@@ -33,7 +33,7 @@ picoCTF{(35.028309, 135.753082)(46.469391, 30.740883)(39.758949, -84.191605)(41.
 
 Ah, this could be [longitude](https://en.wikipedia.org/wiki/Longitude) and [latitude](https://en.wikipedia.org/wiki/Latitude) coordinates for places around the world.
 
-Lets use [Google Maps](https://www.google.com/maps/) to find out what place each coordinate corresponds to.
+Let's use [Google Maps](https://www.google.com/maps/) to find out what place each coordinate corresponds to.
 
 |Coordinate|City|
 |----|----|

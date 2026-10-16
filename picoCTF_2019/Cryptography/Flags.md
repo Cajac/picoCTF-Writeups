@@ -19,7 +19,7 @@ Hints:
 1. The flag is in the format PICOCTF{}
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/31](https://play.picoctf.org/practice/challenge/31)
+Challenge link: [https://learn.cylabacademy.org/library/31](https://learn.cylabacademy.org/library/31)
 
 ## Solution
 

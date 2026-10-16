@@ -7,7 +7,7 @@
 ## Challenge information
 
 ```text
-Level: Medium
+Level: Hard
 Tags: picoCTF 2019, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: WPARKS/NMONTIERTH
@@ -21,11 +21,11 @@ Hints:
 1. RSA info
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/61](https://play.picoctf.org/practice/challenge/61)
+Challenge link: [https://learn.cylabacademy.org/library/61](https://learn.cylabacademy.org/library/61)
 
 ## Solution
 
-I wrote a Python script that uses [pwntools](https://docs.pwntools.com/en/stable/index.html) to automate this
+I wrote a Python script that uses [pwntools](https://docs.pwntools.com/en/stable/index.html) to automate this.
 
 ```python
 #!/usr/bin/python
@@ -157,7 +157,7 @@ io.close()
 
 ### Get the flag
 
-Then we run the script to get the flag
+Then we run the script to get the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/Rsa-pop-quiz]

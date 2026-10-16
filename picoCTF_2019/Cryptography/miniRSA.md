@@ -7,7 +7,7 @@
 ## Challenge information
 
 ```text
-Level: Medium
+Level: Hard
 Tags: picoCTF 2019, Cryptography
 Meta Tags: Walkthrough, Walk-through, Write-up, Writeup
 Author: SPEEEDAY/DANNY
@@ -21,13 +21,13 @@ Hints:
 3. Make sure you don't lose precision, the numbers are pretty big (besides the e value)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/73](https://play.picoctf.org/practice/challenge/73)
+Challenge link: [https://learn.cylabacademy.org/library/73](https://learn.cylabacademy.org/library/73)
 
 ## Solution
 
 ### Analyse the setup
 
-Let's start by analysing what we have
+Let's start by analysing what we have.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/miniRSA]
@@ -39,7 +39,7 @@ e: 3
 ciphertext (c): 2205316413931134031074603746928247799030155221252519872649613686408884798530321139183194114380675760980675288213509494488928149890378350358245536745970253162283534968545300178396900226131454240625540026296473434895830304509610598192929125 
 ```
 
-So we have a modulus number `N`,  the public key exponent `e`, and the cipher text `c`.
+So we have a modulus number `N`, the public key exponent `e`, and the cipher text `c`.
 
 Remember that in RSA `M**3 mod n = c`. We can rewrite this as `M**3 = i*n + c` for some value of `i`.  
 This means that `M = iroot(i*n+c, 3)` for some `i`. We just need to find the correct `i` value.
@@ -55,7 +55,7 @@ From the [manpage](https://manpages.ubuntu.com/manpages/trusty/man3/gmpy2.3.html
 
 ### Write a solve script
 
-This Python script will search for the correct value of `i`
+This Python script will search for the correct value of `i`.
 
 ```python
 #!/usr/bin/python
@@ -78,7 +78,7 @@ for i in range(5000):
 
 ### Get the flag
 
-The we run the script to get the flag
+The we run the script to get the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/miniRSA]

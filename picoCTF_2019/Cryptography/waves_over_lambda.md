@@ -21,11 +21,11 @@ Hints:
 1. Flag is not in the usual flag format
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/38](https://play.picoctf.org/practice/challenge/38)
+Challenge link: [https://learn.cylabacademy.org/library/38](https://learn.cylabacademy.org/library/38)
 
 ## Solution
 
-First we connect to the server to get the ciphertext
+First we connect to the server to get the ciphertext. For convenience we also store it in a file called `ciphertext.txt`.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/Waves_over_lambda]

@@ -19,11 +19,14 @@
 - [Easy1](Cryptography/Easy1.md)
 - [Flags](Cryptography/Flags.md)
 - [la cifra de](Cryptography/la_cifra_de.md)
-- [miniRSA](Cryptography/miniRSA.md)
 - [Mr-Worldwide](Cryptography/Mr-Worldwide.md)
-- [rsa-pop-quiz](Cryptography/rsa-pop-quiz.md)
 - [Tapping](Cryptography/Tapping.md)
 - [waves over lambda](Cryptography/waves_over_lambda.md)
+
+### Hard Cryptography Challenges
+
+- [miniRSA](Cryptography/miniRSA.md)
+- [rsa-pop-quiz](Cryptography/rsa-pop-quiz.md)
 
 ## Forensics Challenges
 

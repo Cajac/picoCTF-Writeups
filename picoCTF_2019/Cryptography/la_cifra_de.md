@@ -22,13 +22,13 @@ Hints:
 2. Perhaps looking at history will help
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/3](https://play.picoctf.org/practice/challenge/3)
+Challenge link: [https://learn.cylabacademy.org/library/3](https://learn.cylabacademy.org/library/3)
 
 ## Solution
 
 ### Connect to the server to get the cipher text
 
-Let's start by connecting to the server with netcat and see what we get
+Let's start by connecting to the server with netcat and see what we get:
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/La_cifra_de]

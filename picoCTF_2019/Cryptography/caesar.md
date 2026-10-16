@@ -19,11 +19,11 @@ Hints:
 1. caesar cipher tutorial
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/64](https://play.picoctf.org/practice/challenge/64)
+Challenge link: [https://learn.cylabacademy.org/library/64](https://learn.cylabacademy.org/library/64)
 
 ## Solution
 
-If we look at the ciphertext we can see that it is only partially encrypted
+If we look at the ciphertext we can see that it is only partially encrypted.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/Caesar]
@@ -43,6 +43,8 @@ Then copy and paste the text within the curly braces (that is `tifjjzexkyvilsztf
 Neither the standard amount of `13` for `ROT13` or `3`, which is the default `caesar` rotation, makes sense though.  
 Select the `Auto Bake` check box and start changing the amount until you can recognize some English words.  
 With an `Amount` of `9` you get the correct flag part.
+
+![CyberChef ROT13 Decoding 2](Images/CyberChef_ROT13_Decoding_2.png)
 
 To get the complete flag you need to add 'picoCTF{' and '}' to the decrypted data.
 
@@ -92,4 +94,6 @@ For additional information, please see the references below.
 - [Caesar cipher - Wikipedia](https://en.wikipedia.org/wiki/Caesar_cipher)
 - [CyberChef - GitHub](https://github.com/gchq/CyberChef)
 - [CyberChef - Homepage](https://gchq.github.io/CyberChef/)
+- [echo - Linux manual page](https://man7.org/linux/man-pages/man1/echo.1.html)
 - [Modulo - Wikipedia](https://en.wikipedia.org/wiki/Modulo)
+- [seq - Linux manual page](https://man7.org/linux/man-pages/man1/seq.1.html)

@@ -25,7 +25,7 @@ Hints:
 2. Please use all caps for the message.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/43](https://play.picoctf.org/practice/challenge/43)
+Challenge link: [https://learn.cylabacademy.org/library/43](https://learn.cylabacademy.org/library/43)
 
 ## Solution
 
@@ -37,7 +37,9 @@ You can use an online decoder service such as [Braingle](https://www.braingle.co
 
 In Braingle, use `UFJKXQZQUNB` as `PLAINTEXT / CIPHERTEXT` and `SOLVECRYPTO` as `ONE-TIME PAD`. Click `Decipher` to get the flag.
 
-In Rumkim, set `Operating mode` to `Decrypt`, set `SOLVECRYPTO` as `The pad` and `UFJKXQZQUNB` as `Text to encode or decode`.
+In Rumkim, set `Operating mode` to `Decrypt`, set `SOLVECRYPTO` as `Pad` and `UFJKXQZQUNB` as `Text to encode or decode`.
+
+![Rumki _Decoding](Images/Rumkin_Decoding.png)
 
 ### Write a Python decoder
 

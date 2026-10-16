@@ -22,13 +22,13 @@ Hints:
 2. The flag is in the format PICOCTF{}
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/21](https://play.picoctf.org/practice/challenge/21)
+Challenge link: [https://learn.cylabacademy.org/library/21](https://learn.cylabacademy.org/library/21)
 
 ## Solution
 
 Tapping, dashes and dots - that ought to mean [morse code](https://en.wikipedia.org/wiki/Morse_code).
 
-Let's connect to the server and find out
+Let's connect to the server and find out.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/Tapping]
@@ -42,6 +42,8 @@ To decode it we can use an online service such as the one from [OnlineConversion
 
 Copy and paste the output above to the lower part of the web site under `Convert morse code back into English`.  
 Then press `Translate!` and the flag will be shown.
+
+![Morse Code Decoding](Images/Morse_Code_Decoding.png)
 
 For additional information, please see the references below.
 

@@ -19,7 +19,7 @@ Hints:
 1. The flag is in the format PICOCTF{}
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/68](https://play.picoctf.org/practice/challenge/68)
+Challenge link: [https://learn.cylabacademy.org/library/68](https://learn.cylabacademy.org/library/68)
 
 ## Solution
 
@@ -32,28 +32,40 @@ We can use [CyberChef](https://gchq.github.io/CyberChef/) and the `Magic` recipe
 Write the numbers before the '{' character (that is `16 9 3 15 3 20 6`) with spaces in between in the `Input` pane of CyberChef. Don't end with a space!
 
 Click the 'Magic Wand' icon at the `Output` pane.
+
+![CyberChef A1Z26 Decoding 1](Images/CyberChef_A1Z26_Decoding_1.png)
+
 If you don't get an icon, you need to type 'magic' in the `Operations` search bar, then drag and drop it to the `Recipe` and press `BAKE`.
 
-Cyberchef recognizes the encoding as `A1Z26`.  
+Cyberchef recognizes the encoding as `A1Z26`.
+
+![CyberChef A1Z26 Decoding 2](Images/CyberChef_A1Z26_Decoding_2.png)
+
 Unfortunately, CyberChef can't handle the '{' and '}' characters so you need to leave them out.
 
 Then add the rest of the number in the `Input` pane (`20 8 5 14 21 13 2 5 18 19 13 1 19 15 14`).
 
 Finally, add the `To Upper case` recipe as instructed in the hint.
 
-You need to manually add the '{' and '}' characters before submitting the flag.
+![CyberChef A1Z26 Decoding 3](Images/CyberChef_A1Z26_Decoding_3.png)
+
+You need to manually add the '{' and '}' characters before submitting the flag!
 
 ### Use an online A1Z26 decoder service
 
 You can also use an online A1Z26 decoder service such as [Boxentriq](https://www.boxentriq.com/code-breaking/a1z26).
 
-Add the numbers in the `Numbers` text field and you get the result in the `Letters` text field.
+First, select the `Numbers to text` mode.
+
+Then add the numbers in the `Numbers` text field and you get the result in the `Letters` text field.
+
+![Boxentriq A1Z26 Decoding](Images/Boxentriq_A1Z26_Decoding.png)
 
 Again, you need to add the '{' and '}' characters before submitting the flag.
 
 ### Write a Python decoder
 
-Alternatively, you can write a Python script to do the decoding
+Alternatively, you can write a Python script to do the decoding.
 
 ```python
 #!/usr/bin/python
@@ -73,7 +85,7 @@ for num in enc_flag:
 print(flag)
 ```
 
-Then we make sure the script is executable and run it to get the flag
+Then we make sure the script is executable and run it to get the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Cryptography/The_Numbers]
