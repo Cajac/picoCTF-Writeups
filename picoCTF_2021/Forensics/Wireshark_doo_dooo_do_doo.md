@@ -73,6 +73,8 @@ To decode the flag we could use an online site such as [CyberChef](https://gchq.
 Enter 'rot' in the `Operations` search bar, then drag and drop `ROT13` to the `Recipe`.  
 Copy the encoded flag to the `Input` pane and press `BAKE`.
 
+![CyberChef ROT13 Decoding](Images/CyberChef_ROT13_Decoding.png)
+
 ### Decode the flag with a rot13 tool
 
 Alternatively, we can use a prepackaged `rot13` tool.  
