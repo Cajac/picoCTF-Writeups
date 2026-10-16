@@ -20,7 +20,7 @@ Hints:
 2. Make sure to submit the flag as picoCTF{XXXXX}
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/52](https://play.picoctf.org/practice/challenge/52)
+Challenge link: [https://learn.cylabacademy.org/library/52](https://learn.cylabacademy.org/library/52)
 
 ## Solution
 

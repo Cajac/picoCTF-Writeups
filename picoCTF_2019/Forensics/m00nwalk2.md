@@ -20,7 +20,7 @@ Hints:
 1. Use the clues to extract the another flag from the .wav file
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/28](https://play.picoctf.org/practice/challenge/28)
+Challenge link: [https://learn.cylabacademy.org/library/28](https://learn.cylabacademy.org/library/28)
 
 ## Solution
 
@@ -28,7 +28,7 @@ The setup is the same as in the [previous moonwalk challenge](m00nwalk.md).
 
 ### Decode the clues
 
-First we decode the clue wav-files
+First we decode the clue wav-files.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/M00nwalk2]
@@ -66,7 +66,7 @@ Googling the last clue points to this [Steganographic Decoder](https://futureboy
 
 ### Get the flag
 
-Lets run `steghide` with the password from clue #1
+Lets run `steghide` with the password from clue #1.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/M00nwalk2]

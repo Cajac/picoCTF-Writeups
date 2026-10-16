@@ -20,7 +20,7 @@ Hints:
 2. Ever heard of metadata?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/19](https://play.picoctf.org/practice/challenge/19)
+Challenge link: [https://learn.cylabacademy.org/library/19](https://learn.cylabacademy.org/library/19)
 
 ## Solution
 
@@ -35,7 +35,7 @@ Let's start checking them one by one until we find the flag.
 
 ### Checking for metadata
 
-First, check for metadata with `exiftool`
+First, check for metadata with `exiftool`.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/So_Meta]

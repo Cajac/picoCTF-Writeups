@@ -20,13 +20,13 @@ Hints:
 2. What is the CMU mascot?, that might help select a RX option
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/26](https://play.picoctf.org/practice/challenge/26)
+Challenge link: [https://learn.cylabacademy.org/library/26](https://learn.cylabacademy.org/library/26)
 
 ## Solution
 
 After some googling I understood that this is [SSTV (Slow-scan television)](https://en.wikipedia.org/wiki/Slow-scan_television) and there is a [SSTV Deocoder](https://github.com/colaclanth/sstv) available.
 
-After installing the decoder we run it like this
+After installing the decoder we run it like this.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/M00nwalk]
@@ -40,7 +40,7 @@ After installing the decoder we run it like this
 
 The program automatically detects the SSTV mode as `Scottie 1` for us.
 
-Then we just view the resulting image
+Then we just view the resulting image.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/M00nwalk]

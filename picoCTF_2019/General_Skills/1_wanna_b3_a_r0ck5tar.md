@@ -20,13 +20,13 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/82](https://play.picoctf.org/practice/challenge/82)
+Challenge link: [https://learn.cylabacademy.org/library/82](https://learn.cylabacademy.org/library/82)
 
 ## Solution
 
 This challenge is a continuation of the [mus1c challenge](mus1c.md).
 
-Let's start by checking the contents of the `lyrics.txt` file
+Let's start by checking the contents of the `lyrics.txt` file.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/1_wanna_b3_a_r0ck5tar]
@@ -63,7 +63,7 @@ Break it down
 
 If we try to run the program in the [online emulator](https://codewithrockstar.com/online) we get a popup window expecting input. Entering something like `test` doesn't produce any output at all.
 
-Time to study the [language documentation](https://codewithrockstar.com/docs).
+Time to study the [language documentation](https://codewithrockstar.com/docs) to learn more.
 
 Going through the script line by line gave me the following understanding of what happens
 
@@ -141,7 +141,7 @@ ascii = [66, 79, 78, 74, 79, 86, 73]
 print(f"picoCTF{{{''.join(map(chr, ascii))}}}")
 ```
 
-Finally we run the script to get the flag
+Finally we run the script to get the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/1_wanna_b3_a_r0ck5tar]

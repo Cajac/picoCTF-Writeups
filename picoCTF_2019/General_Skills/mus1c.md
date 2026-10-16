@@ -19,11 +19,11 @@ Hints:
 1. Do you think you can master rockstar?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/15](https://play.picoctf.org/practice/challenge/15)
+Challenge link: [https://learn.cylabacademy.org/library/15](https://learn.cylabacademy.org/library/15)
 
 ## Solution
 
-Let's start by checking the contents of the file
+Let's start by checking the contents of the file.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Mus1c]
@@ -108,7 +108,7 @@ You get the following in the output pane:
 Program completed in 168 ms
 ```
 
-This looks like [ASCII-values](https://en.wikipedia.org/wiki/ASCII) and a short Python-script can compile the flag for us
+This looks like [ASCII-values](https://en.wikipedia.org/wiki/ASCII) and a short Python-script can compile the flag for us.
 
 ```python
 #!/usr/bin/python
@@ -118,7 +118,7 @@ ascii = [114, 114, 114, 111, 99, 107, 110, 114, 110, 48, 49, 49, 51, 114]
 print(f"picoCTF{{{''.join(map(chr, ascii))}}}")
 ```
 
-Finally we run the script to get the flag
+Finally we run the script to get the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Mus1c]

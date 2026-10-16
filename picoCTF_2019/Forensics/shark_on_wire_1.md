@@ -20,7 +20,7 @@ Hints:
 2. What are streams?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/30](https://play.picoctf.org/practice/challenge/30)
+Challenge link: [https://learn.cylabacademy.org/library/30](https://learn.cylabacademy.org/library/30)
 
 ## Solution
 
@@ -32,7 +32,7 @@ The second hint suggests we should look for streams but before that let's get an
 
 In the GUI-version this can be found in the `Statistics` menu and then `Protocol Hierarchy`.
 
-Alternatively, you can use the commandline [tshark](https://www.wireshark.org/docs/man-pages/tshark.html) version like this
+Alternatively, you can use the commandline [tshark](https://www.wireshark.org/docs/man-pages/tshark.html) version like this:
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Shark_on_wire_1]
@@ -72,7 +72,7 @@ We see that there are both IPv4 and IPv6 traffic and more UDP than TCP traffic f
 
 ### Follow UDP streams
 
-Lets follow the UDP streams and look for the flag.
+Let's follow the UDP streams and look for the flag.
 
 In the GUI, right-click on any UDP-packet and then select `Follow -> UDP Stream`.  
 
@@ -81,12 +81,102 @@ In the new window we see the stream content displayed in the same sequence as it
 Down in the lower right corner of the window you can step through the streams by increasing or decreasing the stream number.  
 Stream #6 contains the flag.
 
+![Wireshark UDP Stream 6](Images/Wireshark_UDP_Stream_6.png)
+
+We can also do this in `tshark` with a bit of command-line kung-fu.
+
+First, we follow UDP-stream #6 and set the output format to `raw`.
+
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Shark_on_wire_1]
+└─$ tshark -q -z "follow,udp,raw,6" -r capture.pcap   
+
+===================================================================
+Follow: udp,raw
+Filter: udp.stream eq 6
+Node 0: 10.0.0.2:5000
+Node 1: 10.0.0.12:8888
+70
+69
+63
+6f
+43
+54
+46
+7b
+53
+74
+61
+54
+33
+31
+33
+35
+35
+5f
+36
+33
+36
+66
+36
+65
+36
+65
+7d
+===================================================================
+```
+
+Then we `grep` the hexadecimal flag values only with a [regular expressionj](https://en.wikipedia.org/wiki/Regular_expression).
+
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Shark_on_wire_1]
+└─$ tshark -q -z "follow,udp,raw,6" -r capture.pcap | grep -E '^[0-9a-f]{2}$'
+70
+69
+63
+6f
+43
+54
+46
+7b
+53
+74
+61
+54
+33
+31
+33
+35
+35
+5f
+36
+33
+36
+66
+36
+65
+36
+65
+7d
+```
+
+And finally, we convert the hex values to ASCII with `xxd`.
+
+```bash
+┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Shark_on_wire_1]
+└─$ tshark -q -z "follow,udp,raw,6" -r capture.pcap | grep -E '^[0-9a-f]{2}$' | xxd -r -p
+picoCTF{<REDACTED>}
+```
+
 For additional information, please see the references below.
 
 ## References
 
+- [grep - Linux manual page](https://man7.org/linux/man-pages/man1/grep.1.html)
 - [pcap - Wikipedia](https://en.wikipedia.org/wiki/Pcap)
+- [Regular expression - Wikipedia](https://en.wikipedia.org/wiki/Regular_expression)
 - [Wireshark - Documentation](https://gitlab.com/wireshark/wireshark/-/wikis/home)
 - [Wireshark - Homepage](https://www.wireshark.org/)
 - [Wireshark - tshark](https://www.wireshark.org/docs/man-pages/tshark.html)
 - [Wireshark - Wikipedia](https://en.wikipedia.org/wiki/Wireshark)
+- [xxd - Linux manual page](https://linux.die.net/man/1/xxd)

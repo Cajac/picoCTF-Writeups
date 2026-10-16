@@ -19,13 +19,13 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/51](https://play.picoctf.org/practice/challenge/51)
+Challenge link: [https://learn.cylabacademy.org/library/51](https://learn.cylabacademy.org/library/51)
 
 ## Solution
 
 ### Analyse the setup
 
-Let's start by checking the file
+Let's start by checking the file.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/WhitePages]
@@ -49,7 +49,7 @@ It is somewhat hard to see but the file consists of two types of Unicode [whites
 - Normal SPACE (U+0020, hex `20`)
 - EM SPACE (U+2003, hex `e2 80 83`)
 
-Converting hex values to Unicode code points can be done with
+Converting hex values to Unicode code points can be done with:
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/WhitePages]
@@ -57,7 +57,7 @@ Converting hex values to Unicode code points can be done with
 2003                                        ...
 ```
 
-And converting code point to hex values can be done with
+And converting code point to hex values can be done with:
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/WhitePages]
@@ -67,7 +67,7 @@ And converting code point to hex values can be done with
 
 ### Write a Python decoder
 
-Lets write a Python script that assumes these spaces form a binary string of ascii characters
+Let's write a Python script that assumes these spaces form a binary string of ascii characters.
 
 ```python
 #!/usr/bin/python
@@ -96,7 +96,7 @@ print(flag)
 
 ### Get the flag
 
-Then we run the script to get the flag
+Then we run the script to get the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/WhitePages]

@@ -21,11 +21,11 @@ Hints:
 1. grep tutorial
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/85](https://play.picoctf.org/practice/challenge/85)
+Challenge link: [https://learn.cylabacademy.org/library/85](https://learn.cylabacademy.org/library/85)
 
 ## Solution
 
-This is basically a very easy tutorial for `grep`
+This is basically a very easy tutorial for `grep`.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/First_Grep]

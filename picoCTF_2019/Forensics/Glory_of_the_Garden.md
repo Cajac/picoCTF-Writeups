@@ -19,7 +19,7 @@ Hints:
 1. What is a hex editor?
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/44](https://play.picoctf.org/practice/challenge/44)
+Challenge link: [https://learn.cylabacademy.org/library/44](https://learn.cylabacademy.org/library/44)
 
 ## Solution
 
@@ -34,7 +34,7 @@ Lets start checking them one by one until we find the flag.
 
 ### Checking for metadata
 
-First, check for metadata with `exiftool`
+First, check for metadata with `exiftool`.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Glory_of_the_Garden]
@@ -107,7 +107,7 @@ Lots of information but nothing that looks like a flag.
 
 ### Checking for embedded strings
 
-Next, lets check for strings and `grep` for the flag
+Next, lets check for strings and `grep` for the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Glory_of_the_Garden]

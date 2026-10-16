@@ -24,11 +24,11 @@ Hints:
 2. It might help to have multiple windows open.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/35](https://play.picoctf.org/practice/challenge/35)
+Challenge link: [https://learn.cylabacademy.org/library/35](https://learn.cylabacademy.org/library/35)
 
 ## Solution
 
-Let's connect to the server and see what happens
+Let's connect to the server and see what happens:
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Based]
@@ -43,7 +43,7 @@ Input:
 Too slow!
 ```
 
-Solving this manually will be tedious so lets automate it with the help of [pwntools](https://docs.pwntools.com/en/stable/index.html).
+Solving this manually will be tedious so let's automate it with the help of [pwntools](https://docs.pwntools.com/en/stable/index.html).
 Also note the 5 letter word `light` is printed before the question. This looks like a bug that print the correct answer!
 
 ### Write a Python script
@@ -96,7 +96,7 @@ io.close()
 
 ### Get the flag
 
-Then we run the script to get the flag
+Then we run the script to get the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Based]

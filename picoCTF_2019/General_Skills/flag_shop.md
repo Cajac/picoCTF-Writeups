@@ -21,13 +21,13 @@ Hints:
 1. Two's compliment can do some weird things when numbers get really big!
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/49](https://play.picoctf.org/practice/challenge/49)
+Challenge link: [https://learn.cylabacademy.org/library/49](https://learn.cylabacademy.org/library/49)
 
 ## Solution
 
 ### Analyse the setup
 
-Let's start by checking the C source code
+Let's start by checking the C source code.
 
 ```c
 #include <stdio.h>
@@ -124,7 +124,7 @@ So if we buy `(2**31 - 1 - 1100 + 100000) // 900` flags we ought to wrap around.
 
 ### Write a python script
 
-We can use [pwntools](https://docs.pwntools.com/en/stable/index.html) to automate this with a Python script
+We can use [pwntools](https://docs.pwntools.com/en/stable/index.html) to automate this with a Python script.
 
 ```python
 #!/usr/bin/python
@@ -159,7 +159,7 @@ io.close()
 
 ### Get the flag
 
-Then we run the script to get the flag
+Then we run the script to get the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Flag_shop]

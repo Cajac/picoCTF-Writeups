@@ -19,7 +19,7 @@ Hints:
 (None)
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/84](https://play.picoctf.org/practice/challenge/84)
+Challenge link: [https://learn.cylabacademy.org/library/84](https://learn.cylabacademy.org/library/84)
 
 ## Solution
 
@@ -41,7 +41,7 @@ Also, UDP Stream #32 contains the text `start`. And after that a number of strea
 
 These connections are all between source `10.0.0.66` and destination `10.0.0.1`, except for the `end` connection which has a source of `10.0.0.80`. All connections also have a destination port of `22`.
 
-Lets analyse these connections further
+Let's analyse these connections further:
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Shark_on_wire_2]
@@ -85,7 +85,7 @@ Lets analyse these connections further
 
 These transmissions could be the flag but how is it encoded?  
 
-The source port seems to be changing and if we subtract `5000` we get
+The source port seems to be changing and if we subtract `5000` we get:
 
 |Source port|Src port - 5000|ASCII char|
 |----|----|----|
@@ -98,7 +98,7 @@ The source port seems to be changing and if we subtract `5000` we get
 
 This looks really good!
 
-Lets write a small Python decoder script with the help of [Scapy](https://pypi.org/project/scapy/)
+Let's write a small Python decoder script with the help of [Scapy](https://pypi.org/project/scapy/)
 
 ```python
 #!/usr/bin/python
@@ -115,7 +115,7 @@ for packet in packets:
 print(flag)
 ```
 
-Then we run the script to get the flag
+Then we run the script to get the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Shark_on_wire_2]

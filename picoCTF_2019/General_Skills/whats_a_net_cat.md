@@ -21,11 +21,11 @@ Hints:
 1. nc tutorial
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/34](https://play.picoctf.org/practice/challenge/34)
+Challenge link: [https://learn.cylabacademy.org/library/34](https://learn.cylabacademy.org/library/34)
 
 ## Solution
 
-This is basically a tutorial in the basic usage of `nc`
+This is basically a tutorial in the basic usage of `nc` (i.e. netcat).
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/What's_a_net_cat]

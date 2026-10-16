@@ -24,11 +24,11 @@ Hints:
 2. What's a pipe? No not that kind of pipe... This kind
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/48](https://play.picoctf.org/practice/challenge/48)
+Challenge link: [https://learn.cylabacademy.org/library/48](https://learn.cylabacademy.org/library/48)
 
 ## Solution
 
-Let's connect to the server with `nc` and see what we get
+Let's connect to the server with `nc` and see what we get:
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Plumbing]
@@ -52,7 +52,7 @@ Not a flag either
 <---snip--->
 ```
 
-OK, too much output. Lets `grep` for the flag
+OK, too much output. Let's `grep` for the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Plumbing]

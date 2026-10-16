@@ -22,13 +22,13 @@ Hints:
 3. A hex editor may be helpful
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/27](https://play.picoctf.org/practice/challenge/27)
+Challenge link: [https://learn.cylabacademy.org/library/27](https://learn.cylabacademy.org/library/27)
 
 ## Solution
 
 ### Analysing the files
 
-Let's start by checking the image files
+Let's start by checking the image files:
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Investigating_Reversing_1]
@@ -139,7 +139,7 @@ As in the [previous challenge](Investigative_Reversing_0.md), there are flag dat
 0001e870: 4260 8269 6354 3074 6861 5f              B`.icT0tha_
 ```
 
-Next, let's check the binary
+Next, let's check the binary.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Investigating_Reversing_1]
@@ -211,7 +211,7 @@ We can see that the program opens the flag file and appends an encoded version o
 
 ### Write a Python decoder
 
-We can write a python script to reverse these operations
+We can write a python script to reverse these operations.
 
 ```python
 #!/usr/bin/python
@@ -282,7 +282,7 @@ print(flag.decode())
 
 ### Get the flag
 
-Then we run the script to get the flag
+Then we run the script to get the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Investigating_Reversing_1]

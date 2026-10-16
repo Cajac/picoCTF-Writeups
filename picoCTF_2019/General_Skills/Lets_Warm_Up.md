@@ -20,11 +20,11 @@ Hints:
    you would submit 'picoCTF{hello}' as the flag.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/22](https://play.picoctf.org/practice/challenge/22)
+Challenge link: [https://learn.cylabacademy.org/library/22](https://learn.cylabacademy.org/library/22)
 
 ## Solution
 
-We can either manually lookup the answer is an [ASCII table](https://www.ascii-code.com/) or use an interactive Python session to do the work for us with the [chr function](https://docs.python.org/3/library/functions.html#chr)
+We can either manually lookup the answer is an [ASCII table](https://www.ascii-code.com/) or use an interactive Python session to do the work for us with the [chr function](https://docs.python.org/3/library/functions.html#chr).
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Lets_Warm_Up]

@@ -19,7 +19,7 @@ Hints:
 1. There is data encoded somewhere... there might be an online decoder.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/74](https://play.picoctf.org/practice/challenge/74)
+Challenge link: [https://learn.cylabacademy.org/library/74](https://learn.cylabacademy.org/library/74)
 
 ## Solution
 
@@ -33,7 +33,7 @@ Click `Choose File` and select the file. Then press the `Decode` button to get t
 
 ### Using zsteg
 
-We can also use [zsteg](https://github.com/zed-0xff/zsteg) to solve this
+We can also use [zsteg](https://github.com/zed-0xff/zsteg) to solve this.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/What_Lies_Within]

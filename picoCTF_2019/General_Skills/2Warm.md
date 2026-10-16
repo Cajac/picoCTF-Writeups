@@ -20,13 +20,13 @@ Hints:
    you would submit 'picoCTF{11111}' as the flag.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/86](https://play.picoctf.org/practice/challenge/86)
+Challenge link: [https://learn.cylabacademy.org/library/86](https://learn.cylabacademy.org/library/86)
 
 ## Solution
 
 ### Convert in Python
 
-We can use an interactive Python session to do the work for us with the [bin function](https://docs.python.org/3/library/functions.html#bin)
+We can use an interactive Python session to do the work for us with the [bin function](https://docs.python.org/3/library/functions.html#bin).
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/2Warm]

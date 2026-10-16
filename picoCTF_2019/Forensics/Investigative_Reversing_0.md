@@ -22,7 +22,7 @@ Hints:
 3. A hex editor may be helpful
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/70](https://play.picoctf.org/practice/challenge/70)
+Challenge link: [https://learn.cylabacademy.org/library/70](https://learn.cylabacademy.org/library/70)
 
 ## Solution
 
@@ -74,7 +74,7 @@ Megapixels                      : 0.914
 There are some flag data appended at the end of the PNG image. Be aware that `xxd` shows all non 7-bit ascii-data as `.` (dots).  
 So `0x80` in the flag data is shown as `.` rather than `€`.
 
-Next, let's check the binary
+Next, let's check the binary.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Investigating_Reversing_0]
@@ -140,7 +140,7 @@ void main(void)
 ```
 
 We see that the program opens the flag file and puts an encoded version of it at the end of the image file.  
-The encoding consists of these lines of code
+The encoding consists of these lines of code:
 
 ```c
   for (local_54 = 6; local_54 < 0xf; local_54 = local_54 + 1) {
@@ -154,7 +154,7 @@ The rest of the bytes are copied 'as is'.
 
 ### Write a Python decoder
 
-We can write a python script to reverse these operations
+We can write a python script to reverse these operations.
 
 ```python
 #!/usr/bin/python
@@ -189,7 +189,7 @@ print(flag)
 
 ### Get the flag
 
-Then we run the script to get the flag
+Then we run the script to get the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Forensics/Investigating_Reversing_0]

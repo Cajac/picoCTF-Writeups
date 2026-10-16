@@ -20,13 +20,13 @@ Hints:
    you would submit 'picoCTF{22}' as the flag.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/58](https://play.picoctf.org/practice/challenge/58)
+Challenge link: [https://learn.cylabacademy.org/library/58](https://learn.cylabacademy.org/library/58)
 
 ## Solution
 
 ### Convert in Python
 
-We can use an interactive Python session to do the work for us with the [str function](https://docs.python.org/3/library/functions.html#func-str) and the fact that Python understands [hexadecimal numbers](https://en.wikipedia.org/wiki/Hexadecimal)
+We can use an interactive Python session to do the work for us with the [str function](https://docs.python.org/3/library/functions.html#func-str) and the fact that Python understands [hexadecimal numbers](https://en.wikipedia.org/wiki/Hexadecimal).
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Warmed_Up]

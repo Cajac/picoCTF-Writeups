@@ -22,7 +22,7 @@ Hints:
    you would submit 'picoCTF{hello}' as the flag.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/67](https://play.picoctf.org/practice/challenge/67)
+Challenge link: [https://learn.cylabacademy.org/library/67](https://learn.cylabacademy.org/library/67)
 
 ## Solution
 
@@ -36,11 +36,13 @@ Then copy and paste `bDNhcm5fdGgzX3IwcDM1` to the `Input` pane.
 Finally, press `BAKE` if you don't have `Auto Bake` selected already.
 The result is shown in the `Output` pane.
 
+![CyberChef Base64 Decoding](Images/CyberChef_Base64_Decoding.png)
+
 To get the full flag you need to add the 'picoCTF{' and '}' parts as instructed in the hint.
 
 ### Use the base64 commandline tool
 
-Alternatively, you can use the `base64` tool like this
+Alternatively, you can use the `base64` tool like this:
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Bases]
@@ -65,7 +67,7 @@ decoded = b64decode(enc).decode()
 print(f"picoCTF{{{decoded}}}")
 ```
 
-Then we make sure the script is executable and run it to get the flag
+Then we make sure the script is executable and run it to get the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Bases]

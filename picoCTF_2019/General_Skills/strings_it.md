@@ -19,11 +19,11 @@ Hints:
 1. strings
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/37](https://play.picoctf.org/practice/challenge/37)
+Challenge link: [https://learn.cylabacademy.org/library/37](https://learn.cylabacademy.org/library/37)
 
 ## Solution
 
-This is basically a tutorial to usage of `strings` and `grep`
+This is basically a tutorial to usage of `strings` and `grep`.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/General_Skills/Strings_it]
