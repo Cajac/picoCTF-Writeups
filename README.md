@@ -61,7 +61,7 @@ Some of the solutions were inspired by writeups and walkthroughs from these guys
 - [Martin Carlisle](https://www.youtube.com/@carlislemc)
 - [picoCTF Solutions](https://picoctfsolutions.com/)
 
-## Disclamimers
+## Disclaimers
 
 ### Hindsight bias
 
