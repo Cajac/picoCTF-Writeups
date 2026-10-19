@@ -16,6 +16,7 @@ This repository is part of my evolving efforts to [build](https://www.buildingas
 
 ## Challenges
 
+- [picoCTF 2026 Challenges](picoCTF_2026/README.md)
 - [picoMini by CMU-Africa Challenges](picoMini_by_CMU-Africa/README.md)
 - [picoCTF 2025 Challenges](picoCTF_2025/README.md)
 - [picoCTF 2024 Challenges](picoCTF_2024/README.md)
