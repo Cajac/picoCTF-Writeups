@@ -4,6 +4,8 @@
 
 ### Easy Binary Exploitation Challenges
 
+- [Quizploit](Binary_Exploitation/Quizploit.md)
+
 ## Cryptography Challenges
 
 ### Easy Cryptography Challenges
@@ -34,3 +36,5 @@
 ## Web Exploitation Challenges
 
 ### Easy Web Exploitation Challenges
+
+- [Old Sessions](Web_Exploitation/Old_Sessions.md)
