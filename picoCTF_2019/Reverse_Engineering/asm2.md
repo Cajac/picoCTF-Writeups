@@ -25,7 +25,7 @@ Hints:
 1. assembly conditions
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/16](https://play.picoctf.org/practice/challenge/16)
+Challenge link: [https://learn.cylabacademy.org/library/16](https://learn.cylabacademy.org/library/16)
 
 ## Solutions
 
@@ -46,7 +46,7 @@ In this challenge we need to remember the general stack layout in 32-bit mode af
 |ebp+0xc|Parameter 2|
 |ebp+0x10|Parameter 3|
 
-Now, lets look at the assembly source of the `asm2` function
+Now, lets look at the assembly source of the `asm2` function.
 
 ```text
 asm2:
@@ -69,7 +69,7 @@ asm2:
 
 It it not obvious what the value of `EAX` it when the function returns.
 
-Lets create a small Python script that does the calculation for us
+Let's create a small Python script that does the calculation for us:
 
 ```python
 #!/usr/bin/python
@@ -84,7 +84,7 @@ while (LV2 <= 0xA3D3):
 print(hex(LV1))
 ```
 
-When we run it
+When we run it.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Asm2]
@@ -98,7 +98,7 @@ we see that the value is `0x105`.
 
 An alternative solution is to build, run and debug the code as in the [previous challenge](asm1.md).
 
-The re-worked assembly code looks like this
+The re-worked assembly code looks like this:
 
 ```text
 .text 
@@ -135,7 +135,7 @@ The re-worked assembly code looks like this
         nop
 ```
 
-Next, we assemble the file with `as`, link it with `ld` and verify the result with `file`
+Next, we assemble the file with `as`, link it with `ld` and verify the result with `file`.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Asm2]
@@ -149,7 +149,7 @@ Next, we assemble the file with `as`, link it with `ld` and verify the result wi
 asm2: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, not stripped
 ```
 
-Now we start debugging with `gdb` and set a breakpoint at the `nop` instruction
+Now we start debugging with `gdb` and set a breakpoint at the `nop` instruction.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Asm2]
@@ -170,7 +170,7 @@ Breakpoint 1 at 0x8049036: file test_wrapper.s, line 32.
 
 In case you are wondering about the prompt, I have [GEF (GDB Enhanced Features)](https://github.com/hugsy/gef) installed.
 
-Time to execute the program
+Time to execute the program.
 
 ```bash
 gef➤  run

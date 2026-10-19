@@ -25,7 +25,7 @@ Hints:
 1. assembly conditions
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/20](https://play.picoctf.org/practice/challenge/20)
+Challenge link: [https://learn.cylabacademy.org/library/20](https://learn.cylabacademy.org/library/20)
 
 ## Solutions
 
@@ -158,21 +158,21 @@ The result looks like this
 
 The final `nop` (No operation) instruction is just a dummy instruction where we will set our breakpoint later.
 
-Next, we assemble the file (`test_wrapper.s`) with `as` as 32-bit and with debug information
+Next, we assemble the file (`test_wrapper.s`) with `as` as 32-bit and with debug information.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Asm1]
 └─$ as -g --gstabs --32 -o test.o test_wrapper.s
 ```
 
-Then we link with `ld` as 32-bit ELF
+Then we link with `ld` as 32-bit ELF.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Asm1]
 └─$ ld -m elf_i386 -o test test.o 
 ```
 
-Now we start debugging with `gdb` and set a breakpoint at the `nop` instruction
+Now we start debugging with `gdb` and set a breakpoint at the `nop` instruction.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Asm1]
@@ -195,7 +195,7 @@ Breakpoint 1 at 0x8049048: file test_wrapper.s, line 42.
 In case you are wondering about the prompt, I have [GEF (GDB Enhanced Features)](https://github.com/hugsy/gef) installed.
 I have also added additional empty line for improved readability.
 
-Time to execute the program
+Time to execute the program.
 
 ```bash
 gef➤  run

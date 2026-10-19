@@ -20,11 +20,11 @@ Hints:
 2. https://developer.android.com/studio
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/11](https://play.picoctf.org/practice/challenge/11)
+Challenge link: [https://learn.cylabacademy.org/library/11](https://learn.cylabacademy.org/library/11)
 
 ## Solutions
 
-First let's check the SDK-version from the `AndroidManifest.xml` file
+First let's check the SDK-version from the `AndroidManifest.xml` file:
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Droids0]
@@ -62,7 +62,7 @@ Then open the `zero.apk` file in [Android Studio](https://developer.android.com/
 
 Now, we run/emulate the application on a virtual device with SDK-version 29. My virtual device was a `Pixel_3_XL_API_29` device. Select `Run 'zero'` from the `Run`-menu in Android Studio.
 
-I had a lot of trouble getting Android Studio to understand I wanted to use SDK-version 29. I got a `Error: Please select Android SDK` and also a notifaction saying
+I had a lot of trouble getting Android Studio to understand I wanted to use SDK-version 29. I got a `Error: Please select Android SDK` and also a notification saying:
 
 ```text
 SDK not found
@@ -73,10 +73,10 @@ Install missing platform and fix project
 The last notification line was a clickable link and when clicked the SDK was downloaded and I was able to run the application.  
 Input anything in the text field (such as `test`) and click the `HELLO, I AM A BUTTON`-button.
 
-![Emulating the Droids0 application](Droids0_Emulation.png)
+![Emulating the Droids0 application](Images/Droids0_Emulation.png)
 
 Then go back to Android Studio and click the `logcat` tab. Each time you press the button a message will be printed here with the flag included  
-`PICO   com.hellocmu.picoctf   I  picoCTF{<REDACTED>}`
+`PICO   com.hellocmu.picoctf   I  picoCTF{<REDACTED>}`.
 
 For additional information, please see the references below.
 

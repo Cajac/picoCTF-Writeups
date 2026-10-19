@@ -22,11 +22,11 @@ Hints:
 2. You will also need to know the difference between octal, decimal, and hexadecimal numbers.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/71](https://play.picoctf.org/practice/challenge/71)
+Challenge link: [https://learn.cylabacademy.org/library/71](https://learn.cylabacademy.org/library/71)
 
 ## Solutions
 
-The java source code looks like this
+The java source code looks like this:
 
 ```java
 import java.util.*;
@@ -105,7 +105,7 @@ print(f"Flag: picoCTF{{{result}}}")
 
 ### Get the flag
 
-Then we run the script to get the flag
+Then we run the script to get the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Vault-door-4]

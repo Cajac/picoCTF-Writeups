@@ -21,11 +21,11 @@ Hints:
 1. Look up the charAt() method online.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/12](https://play.picoctf.org/practice/challenge/12)
+Challenge link: [https://learn.cylabacademy.org/library/12](https://learn.cylabacademy.org/library/12)
 
 ## Solutions
 
-The source code looks like this
+The source code looks like this:
 
 ```java
 import java.util.*;
@@ -91,7 +91,7 @@ In the `checkPassword` method we see a lot of [charAt](https://www.javatpoint.co
 
 We want to extract the characters and append them in a sorted order. We need to use a number of commandline tools to achieve this.
 
-First we `grep` all the lines with charAt
+First we `grep` all the lines with charAt.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Vault-door-1]
@@ -130,7 +130,7 @@ First we `grep` all the lines with charAt
                password.charAt(31) == '0';
 ```
 
-Next we use `cut` with a delimmiter of '('
+Next we use `cut` with a delimmiter of '('.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Vault-door-1]
@@ -169,7 +169,7 @@ Next we use `cut` with a delimmiter of '('
 31) == '0';
 ```
 
-Then we `sort` numerically
+Then we `sort` numerically.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Vault-door-1]
@@ -208,7 +208,7 @@ Then we `sort` numerically
 31) == '0';
 ```
 
-Next we `cut` again but with a delimiter of "'"
+Next we `cut` again but with a delimiter of "'".
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Vault-door-1]
@@ -247,7 +247,7 @@ b
 0
 ```
 
-Finally, we remove newlines with `tr`
+Finally, we remove newlines with `tr`.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Vault-door-1]

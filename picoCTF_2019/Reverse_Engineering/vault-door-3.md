@@ -21,11 +21,11 @@ Hints:
 1. Make a table that contains each value of the loop variables and the corresponding buffer index that it writes to.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/60](https://play.picoctf.org/practice/challenge/60)
+Challenge link: [https://learn.cylabacademy.org/library/60](https://learn.cylabacademy.org/library/60)
 
 ## Solutions
 
-The source code looks like this
+The source code looks like this:
 
 ```java
 import java.util.*;
@@ -76,7 +76,7 @@ class VaultDoor3 {
 
 In the `checkPassword` method we see that flag characters are scrambled out of order.
 
-Let's write a small python script to re-create the flag
+Let's write a small python script to re-create the flag.
 
 ```python
 #!/usr/bin/python
@@ -100,7 +100,7 @@ flag = ''.join(password)
 print(f"Flag: picoCTF{{{flag}}}")
 ```
 
-Then we run the script to get the flag
+Then we run the script to get the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Vault-door-3]

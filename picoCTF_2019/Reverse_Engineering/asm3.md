@@ -25,7 +25,7 @@ Hints:
 1. more(?) registers
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/72](https://play.picoctf.org/practice/challenge/72)
+Challenge link: [https://learn.cylabacademy.org/library/72](https://learn.cylabacademy.org/library/72)
 
 ## Solutions
 
@@ -42,7 +42,7 @@ The situation is mostly the same for the other general purpose-registers. In tot
 - Eight 16-bit registers: ax, bx, cx, dx, si, di, bp, sp.
 - Eight 8-bit registers: ah, al, bh, bl, ch, cl, dh, dl.
 
-Now, lets look at the assembly source of the `asm3` function
+Now, let's look at the assembly source of the `asm3` function:
 
 ```text
 asm3:
@@ -60,14 +60,14 @@ asm3:
 ```
 
 We certainly could analyse this code manually but that would be too tedious.  
-Lets build, run and debug the code as described in the [asm1 challenge](asm1.md) instead.
+Let's build, run and debug the code as described in the [asm1 challenge](asm1.md) instead.
 
 Two things to note though:
 
 1. `xor eax, eax` will zero-out (clear) the EAX-register. Anything XORed with itself is zero.
 2. `SHL` is a new instruction - Shift Left - which is essentially a multiplication by 2 the specified number of times.
 
-The re-worked assembly code looks like this
+The re-worked assembly code looks like this:
 
 ```text
 .text 
@@ -98,7 +98,7 @@ The re-worked assembly code looks like this
         nop
 ```
 
-Next, we assemble the file with `as`, link it with `ld` and verify the result with `file`
+Next, we assemble the file with `as`, link it with `ld` and verify the result with `file`.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Asm3]
@@ -112,7 +112,7 @@ Next, we assemble the file with `as`, link it with `ld` and verify the result wi
 asm3: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, not stripped
 ```
 
-Now we start debugging with `gdb` and set a breakpoint at the `nop` instruction
+Now we start debugging with `gdb` and set a breakpoint at the `nop` instruction.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Asm3]
@@ -134,7 +134,7 @@ Breakpoint 1 at 0x804902d: file asm3.s, line 26.
 
 In case you are wondering about the prompt, I have [GEF (GDB Enhanced Features)](https://github.com/hugsy/gef) installed.
 
-Time to execute the program
+Time to execute the program.
 
 ```bash
 gef➤  run

@@ -19,11 +19,11 @@ Hints:
 1. If X ^ Y = Z, then Z ^ Y = X. Write a program that decrypts the flag based on this fact.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/45](https://play.picoctf.org/practice/challenge/45)
+Challenge link: [https://learn.cylabacademy.org/library/45](https://learn.cylabacademy.org/library/45)
 
 ## Solutions
 
-The java source code looks like this
+The java source code looks like this:
 
 ```java
 import java.util.*;
@@ -74,7 +74,7 @@ In the `checkPassword` method we see that flag characters are [XORed](https://en
 
 ### Write a Python decoder
 
-Let's write a small python script to re-create the flag
+Let's write a small python script to re-create the flag.
 
 ```python
 #!/usr/bin/python
@@ -97,7 +97,7 @@ print(f"picoCTF{{{result}}}")
 
 ### Get the flag
 
-Then we run the script to get the flag
+Then we run the script to get the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Vault-door-6]

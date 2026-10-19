@@ -26,11 +26,11 @@ Hints:
 1. The password is revealed in the program's source code.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/7](https://play.picoctf.org/practice/challenge/7)
+Challenge link: [https://learn.cylabacademy.org/library/7](https://learn.cylabacademy.org/library/7)
 
 ## Solutions
 
-The source code looks like this
+The source code looks like this:
 
 ```java
 import java.util.*;
@@ -61,7 +61,9 @@ class VaultDoorTraining {
 }
 ```
 
-We see that a [substring](https://www.javatpoint.com/java-string-substring) of the `userInput` is extracted and later compared with [equals](https://www.javatpoint.com/java-string-equals) in the `checkPassword` method where most of the flag is visible in plain text.
+We see that a [substring](https://www.javatpoint.com/java-string-substring) of the `userInput` is extracted and later compared with the password using [equals](https://www.javatpoint.com/java-string-equals) in the `checkPassword` method where most of the flag is visible in plain text.
+
+All we need to do is to add `picoCTF{` and `}` to the password string shown.
 
 For additional information, please see the references below.
 

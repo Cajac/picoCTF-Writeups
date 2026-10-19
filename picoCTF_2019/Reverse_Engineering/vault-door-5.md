@@ -23,11 +23,11 @@ Hints:
 2. Read the wikipedia articles on URL encoding and base 64 encoding to understand how they work and what the results look like.
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/77](https://play.picoctf.org/practice/challenge/77)
+Challenge link: [https://learn.cylabacademy.org/library/77](https://learn.cylabacademy.org/library/77)
 
 ## Solutions
 
-The java source code looks like this
+The java source code looks like this:
 
 ```java
 import java.net.URLDecoder;
@@ -85,7 +85,7 @@ In the `checkPassword` method we see that flag characters are both [URL-encoded]
 
 ### Write a Python decoder
 
-Let's write a small python script to re-create the flag
+Let's write a small python script to re-create the flag.
 
 ```python
 #!/usr/bin/python
@@ -102,7 +102,7 @@ print(f"Flag: picoCTF{{{result}}}")
 
 ### Get the flag
 
-Then we run the script to get the flag
+Then we run the script to get the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Vault-door-5]

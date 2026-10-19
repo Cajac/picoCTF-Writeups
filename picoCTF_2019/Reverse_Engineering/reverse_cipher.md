@@ -19,13 +19,13 @@ Hints:
 1. objdump and Gihdra are some tools that could assist with this
 ```
 
-Challenge link: [https://play.picoctf.org/practice/challenge/79](https://play.picoctf.org/practice/challenge/79)
+Challenge link: [https://learn.cylabacademy.org/library/79](https://learn.cylabacademy.org/library/79)
 
 ## Solution
 
 ### Analyse the setup
 
-Let's start by checking what we were given
+Let's start by checking what we were given.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Reverse_cipher]
@@ -107,7 +107,7 @@ We can see that the code loops through the flag data and makes some minor modifi
 
 ### Write a Python decoder
 
-Let's write a small python script to re-create the flag
+Let's write a small python script to re-create the flag:
 
 ```python
 #!/usr/bin/python
@@ -146,7 +146,7 @@ print(flag)
 
 ### Get the flag
 
-Then we run the script to get the flag
+Then we run the script to get the flag.
 
 ```bash
 ┌──(kali㉿kali)-[/mnt/…/picoCTF/picoCTF_2019/Reverse_Engineering/Reverse_cipher]
@@ -159,5 +159,7 @@ For additional information, please see the references below.
 ## References
 
 - [file - Linux manual page](https://man7.org/linux/man-pages/man1/file.1.html)
-- [Ghidra - Homepage](https://ghidra-sre.org/)
+- [Ghidra - GitHub](https://github.com/NationalSecurityAgency/ghidra)
+- [Ghidra - Kali Tools](https://www.kali.org/tools/ghidra/)
+- [Ghidra - Wikipedia](https://en.wikipedia.org/wiki/Ghidra)
 - [Python (programming language) - Wikipedia](https://en.wikipedia.org/wiki/Python_(programming_language))
